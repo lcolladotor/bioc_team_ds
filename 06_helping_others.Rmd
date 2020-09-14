@@ -2,6 +2,19 @@
 
 Instructions & tips for those helping others
 
-## Data Science guidance tips for sessions
+## DSGS: as a guide
+
+Data Science guidance sessions
+
+### Guide training
+
+### Common responses
+
+### Internal session log
 
 ## Bioconductor Support website
+
+Help someone per week / motivation
+
+### Steps to follow
+

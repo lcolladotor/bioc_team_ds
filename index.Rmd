@@ -40,6 +40,8 @@ This book was last updated on `r Sys.time()`.
 Details on the R version used for making this book. The source code is available at [`lcolladotor/bioc_team_ds`](https://github.com/lcolladotor/bioc_team_ds).
 
 ```{r session_info}
+library("sessioninfo")
+
 ## Reproducibility information
 print('Reproducibility information:')
 Sys.time()
