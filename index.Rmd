@@ -1,0 +1,36 @@
+---
+title: "R/Bioconductor-powered Team Data Science"
+author: "Leonardo Collado-Torres"
+site: bookdown::bookdown_site
+documentclass: book
+output:
+  bookdown::gitbook: default
+---
+
+# Overview {-}
+
+**R/Bioconductor-powered Team Data Science** by [Leonardo Collado Torres](http://lcolladotor.github.io) and team members.
+
+With lessons learned from former mentors [Jeffrey T. Leek](https://github.com/jtleek) and [Andrew E. Jaffe](https://github.com/andrewejaffe).
+
+## Team members {-}
+
+* [Arta Seyedian](https://github.com/aseyedia)
+* [Brenda Pardo](https://github.com/bpardo99)
+* [Joshua M. Stolz](https://github.com/joshstolz)
+* [Louise Huuki](https://github.com/lahuuki)
+* [Nicholas J. Eagles](https://github.com/Nick-Eagles)
+
+### Alumni {-}
+
+* [Amy Peterson](https://github.com/Ashkaunr)
+* [Ashkaun Razmara](https://github.com/amy-peterson)
+
+## Acknowledgements {-}
+
+The contents of this book have been refined thanks to feedback from:
+
+* [Keri Martinowich](https://github.com/kmartinow)
+* [Kristen R. Maynard](https://github.com/kmaynard12)
+
+This book was last updated on `r Sys.time()`.

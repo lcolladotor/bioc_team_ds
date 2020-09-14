@@ -1,0 +1,5 @@
+# Introduction
+
+The purpose of this book is to serve as a guide for training new team members and colleagues on how we do R/Bioconductor-powered Team Data Science. 
+
+As a team, we run [Data Science guidance sessions](#data-science-guidance-sessions) where we help others navigate the world of data science. Through those sessions we identify concepts that we might need to explain better and this book is where we concentrate all our knowledge. Thus it is continuously modified and expanded. We often refer others to this specific chapters of this book, which in a way is a gloried collection of bookmarks with some of our own explanations.

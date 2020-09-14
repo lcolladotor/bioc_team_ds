@@ -1,0 +1,13 @@
+# How to contribute
+
+## bookdown
+
+## LIBD rstats club website
+
+### blogdown
+
+## GitHub Actions
+
+## LIBD R/Bioconductor packages
+
+### `biocthis`
