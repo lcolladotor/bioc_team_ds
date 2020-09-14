@@ -1,0 +1,22 @@
+# Team meetings
+
+Every week we meet for about an hour 20 minutes. The team meeting has three sections:
+
+* Papers & software: we discuss either a paper or some software. The discussion is lead by a team member and the presentation is made public while the discussion is kept private.
+* Data Science guidance sessions: we talk about our sessions and provide internal feedback.
+* Help requests: we give open the floor to discuss anything we need help on from the rest of the team.
+
+## Papers & software
+
+Each week, we rotate team members randomly using `jaffelab::lab_presenters()` as shown on [this Google Spreadsheet](https://docs.google.com/spreadsheets/d/1r6552ySisg7_KpmJmChOvLHVWdMmss3bncEf2jqIM9k/edit?usp=sharing). That team member is in charge of finding a paper or a software of interest and notifying the group about it one week ahead. They are also in charge of preparing a few slides to explain the main concepts to us. We record that portion of our meeting and make it publicly available through TODO. We then discuss privately our thoughts on the paper or software. 
+
+If you are randomly assigned a date that does not work for you, please get in touch with other team members and find someone who can switch with you. Thank you!
+
+## DSGS: feedback
+
+TODO
+
+## Team help
+
+TODO
+

@@ -8,6 +8,22 @@
 
 ## GitHub Actions
 
+### R packages
+
+`biocthis`
+
+### Bookdown
+
+`SPEAQeasy`, this book
+
+### R Markdown websites
+
+`twitter-stats` example
+
+### Blogdown
+
+Could figure this one out =)
+
 ## LIBD R/Bioconductor packages
 
 ### `biocthis`
