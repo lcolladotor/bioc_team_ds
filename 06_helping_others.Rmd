@@ -1,18 +1,98 @@
 # Helping others
 
-Instructions & tips for those helping others
+Part of our job is helping others understand what we are doing. In my experience, we can use three different communication languages and different combinations of them are useful by others, given that everyone is different. These languages are:
+
+* **written text**/words
+* **drawings** and graphs
+* **math** equations
+
+## Linear regression example
+
+For example, if we have a linear regression
+
+$$ Y = \beta_0 + \beta_1 X + \epsilon $$
+
+with 
+
+$$ \epsilon \sim N(0, \sigma^2) $$
+
+and we want to explain the meaning of the coefficient $\beta_1$ then we can explain it as:
+
+* **Text**: $\beta_1$ is the average change in our outcome $Y$ for a one unit increase in our explanatory variable $X$
+  - The language here is quite precise and it can be hard to understand the implications of every word. This is the typical starting point for many questions: what does this mean?
+* **Drawings**: ![Linear regression drawing](images/lin-reg.png) [image source](https://godatadriven.com/blog/the-linear-algebra-behind-linear-regression/)
+  - We have three data points ($x_1$, $y_1$), ($x_2$, $y_2$) and ($x_3$, $y_3$) and we draw a line that shows the relationship between our $X$ and $Y$ variables (each on its own axis). 
+  - This line that we have drawn (shown in red) has two components that can be summarized by a small triangle (shown in green).
+  - The triangle has one vertex that touches the Y axis, this is the _intercept_, also known as $\beta_0$. Then it has a side of length **1** on the x-axis, and $\beta_1$ is length of the vertical side of the triangle that starts at $Y = \beta_0$ and ends at our diagonal line. That is, $\beta_1$ is the height of the green triangle when the length is equal to 1 on the x-axis.
+  - This visual representation can be useful for understanding the words we started off with.
+* **Math**:
+  - First, notice that our linear model is $E[Y] = \beta_0 + \beta_1 X$, then we provide two values for $X$: little $x$ and little $x$ plus one, and compute the difference between them. That leads to the following equations (show further below).
+  - It can be very useful here to explain how the math on that first equation translates to the written text we started off with.
+
+$$ E [Y | X = x + 1] - E[Y | X = x] $$
+$$ = ( \beta_0 + \beta_1 (x + 1) ) - (\beta_0 + \beta_1 x ) $$
+$$ = \beta_0 + \beta_1 x + \beta_1 - \beta_0 - \beta_1 x $$
+$$ = (\beta_0 - \beta_0) + (\beta_1 x - \beta_1 x) + \beta_1 $$
+$$ = \beta_1 $$
+
 
 ## DSgs guides
 
-[Data Science guidance sessions](#data-science-guidance-sessions) (DSgs)
+As [DSgs-guides](#dsgs-guide-team-members) for the [Data Science guidance sessions](#data-science-guidance-sessions) (DSgs), our role involves:
+
+* **Explaining a concept creatively**. For example, the person asking the question might have been confused by a lecture or the documentation of a function, and we have to explain those written words using a combination of: other words, drawings, and/or math.
+* **Google searching**. We might be more familiar with some useful keywords that can lead us to a more precise answer, or given our experience we might be able to tease apart faster possible answers from say a help forum to identify the answer that best matches our scenario.
+* **Providing ideas**. If some code is not working, we can provide ideas on how to troubleshoot that problem as well as identify potential key components of an error message. For a given analysis path, we can also provide options on what routes to take including potential useful graphs to create.
+* **Baseline platform**. We can help others get used to our baseline platform of tools we use. Hence why we go through the bootcamps to have a common knowledgebase and set of courses, workshops and books that we refer others to.
+
+We can also be a bouncing board for others to discuss their ideas, and sometimes help with our feedback.
 
 ### DSgs-guide training
+
+Accomplishing our role as [DSgs-guides](#dsgs-guide-team-members) can be a bit scary since others will expect us to know the answers to many different questions. They might also be under intense pressure and might try to offload some of that pressure on to us. In other words, human interactions are complex. To deal with this, we have defined a set of [Interaction rules](#interaction-rules) to protect us. But we also need some training.
+
+First of all, remember that **it's OK to not know the answer**. Simply communicate that you don't know the answer instead of trying to hide it. You can then:
+
+* search for an answer prior to your next DSgs session with the person asking the question
+* bring that question up during our [DSgs: feedback](#dsgs-feedback) weekly session
+* request that someone else take over the question ^[Then study their answer from our sessions log, so that way you learn too and increase your personal knowledgebase.]
+
+Remember that some questions are very challenging! After all, at LIBD we are trying to answer complicated biological questions that no one has an answer to.
+
+During my time as a [Teaching Assistant at JHBSPH: Biostatistics](http://lcolladotor.github.io/#teaching), we had an activity called the _Teaching Assistant Training Day_, which I have adapted for our purpose. This involves:
+
+* Being a DSgs-guide
+* Skits and games
+* Role playing
+* Characteristics of teaching
+
+I recommend also reading the following papers:
+
+* Irwin D. J. Bross (1974) The Role of the Statistician: Scientist or Shoe Clerk, The American Statistician, 28:4, 126-127, DOI: [10.1080/00031305.1974.10479092](https://doi.org/10.1080/00031305.1974.10479092)
+* Lurie, William. “THE IMPERTINENT QUESTIONER: THE SCIENTIST'S GUIDE TO THE STATISTICIAN'S MIND.” American Scientist, vol. 46, no. 1, 1958, pp. 57–61. JSTOR, [jstor.org/stable/27827055](http://www.jstor.org/stable/27827055).
+* Finney, D.J. (1982), The questioning statistician. Statist. Med., 1: 5-13. doi: [10.1002/sim.4780010103](https://doi.org/10.1002/sim.4780010103)
+
 
 ### Common responses
 
 ### Internal sessions log
 
-## Bioconductor Support website
+In order to make our job easier the next time we get a similar question, we have an internal sessions log where we record:
+
+* the question we got asked
+* the links we referred anyone to or that we used during the session
+* example code we used
+
+This log also helps us refresh our memory so we can remember what are the links we've told someone else to use and see their trajectory. The sessions log also enables [DSgs-guides](#dsgs-guide-team-members) to learn from each other.
+
+It's best to fill out an entry on the sessions log immediately after a session. That way your memory is fresh. That's why we recommend planning for 10 minutes after a session to fill out your entry in the log and to send a message with the links from the session to the person who requested it ^[You might want to have a template email where you can just copy the same links and code from the session into it.]
+
+## Bioconductor Support: practice grounds
+
+We use [Bioconductor](http://bioconductor.org/) R packages basically every day for our work and the main venue for asking for help related to Bioconductor is the [Bioconductor Support website](#bioconductor-support-website) as mentioned in a previous chapter. A great to learn is by helping others. So, [DSgs-guides](#dsgs-guide-team-members) should try to help one person per week on the Bioconductor Support website. By doing so, they'll learn more about Bioconductor, practice helping others, and also learn what information the person helping needs. Then, the next time the guides ask questions themselves, they'll know what information they need to provide in order to help others help them.
+
+
+
 
 Help someone per week / motivation
 
