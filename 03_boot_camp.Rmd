@@ -1,8 +1,10 @@
+# (PART) Bootcamps {-}
+
 # R/Bioconductor Data Science bootcamps
 
 Concepts that will help you be more efficient when working with R
 
-## R
+# R
 
 ### Tidyverse
 

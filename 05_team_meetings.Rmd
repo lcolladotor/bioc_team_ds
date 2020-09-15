@@ -1,3 +1,5 @@
+# (PART) Internal {-}
+
 # Team meetings
 
 Every week we meet for about an hour 20 minutes. The team meeting has three sections:
