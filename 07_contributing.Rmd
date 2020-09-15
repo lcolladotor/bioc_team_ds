@@ -24,3 +24,10 @@ Could figure this one out =)
 
 ## LIBD R/Bioconductor packages
 
+## GitHub
+
+### Issues template
+
+### Contributing
+
+### 

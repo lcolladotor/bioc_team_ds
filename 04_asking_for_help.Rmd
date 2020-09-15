@@ -1,5 +1,7 @@
 # How to ask for help
 
+## Learning from our search history
+
 ## Bioconductor Support website
 
 ## RStudio Community website
@@ -7,3 +9,39 @@
 ## GitHub issues
 
 ## Slack
+
+### JHU/LIBD
+
+#### JHU Genomics Collective
+
+#### Martinowich
+
+#### LIBD Neuropathology
+
+### Bioconductor
+
+### R-Ladies Baltimore
+
+### Misc
+
+#### JHU Biostatistics
+
+#### rOpenSci
+
+#### The CSCCE
+
+#### CDSB
+
+#### LatinR
+
+## Mailing lists
+
+### bithelp
+
+### bitsupport
+
+### Bioc-devel
+
+### R-Sig-Mac
+
+
