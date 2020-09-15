@@ -20,12 +20,13 @@ Code of conduct + more things
 
 ## Become a DSgs guide
 
-Non-team members are welcome to join the [DSgs-guides](#dsgs-guide-team-members). This involves a significant time commitment (~ `r round((4 * (25 + 15 + 10) + 30 + 2 * 60) / 60 + 0.5, 0)` hours per week) and you need to discuss this with your supervisor. These commitments are:
+Non-team members are welcome to join the [DSgs-guides](#dsgs-guide-team-members). This involves a significant time commitment (~ `r round((4 * (25 + 15 + 10) + 30 + 2 * 60 + 30) / 60 + 0.5, 0)` hours per week) and you need to discuss this with your supervisor. These commitments are:
 
 * helping others through DSgs sessions ~ `r 4 * (25 + 15 + 10)` minutes per week ^[We recommend four 25 minute sessions, each with 15 minutes of preparation and 10 minutes of post-meeting wrap up.]
 * a weekly 30 minute meeting as explained in [DSgs: feedback](#dsgs-feedback)
 * attending the LIBD rstats club (1 hour per week)
 * time for self-learning and/or building common resources (~ 1 hour per week)
+* (recommended) practice and learn how to help others through the [Bioconductor Support: practice grounds](#bioconductor-support-practice-grounds) (~ 30 min per week)
 
 Additionally, we might have some additional training sessions.
 
