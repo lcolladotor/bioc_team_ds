@@ -2,21 +2,41 @@
 
 Every week we meet for about an hour 20 minutes. The team meeting has three sections:
 
-* Papers & software: we discuss either a paper or some software. The discussion is lead by a team member and the presentation is made public while the discussion is kept private.
-* Data Science guidance sessions: we talk about our sessions and provide internal feedback.
-* Help requests: we give open the floor to discuss anything we need help on from the rest of the team.
+* [30 min] **Papers & software**: we discuss either a paper or some software. The discussion is lead by a team member and the presentation is made public while the discussion is kept private.
+* [30 min] **Data Science guidance sessions**: we talk about our sessions and provide internal feedback.
+* [20 min] **Help requests**: we give open the floor to discuss anything we need help on from the rest of the team.
 
 ## Papers & software
 
-Each week, we rotate team members randomly using `jaffelab::lab_presenters()` as shown on [this Google Spreadsheet](https://docs.google.com/spreadsheets/d/1r6552ySisg7_KpmJmChOvLHVWdMmss3bncEf2jqIM9k/edit?usp=sharing). That team member is in charge of finding a paper or a software of interest and notifying the group about it one week ahead. They are also in charge of preparing a few slides to explain the main concepts to us. We record that portion of our meeting and make it publicly available through TODO. We then discuss privately our thoughts on the paper or software. 
+Each week, we rotate team members randomly using `jaffelab::lab_presenters()` as shown on [this Google Spreadsheet](https://docs.google.com/spreadsheets/d/1r6552ySisg7_KpmJmChOvLHVWdMmss3bncEf2jqIM9k/edit?usp=sharing). That team member is in charge of:
 
-If you are randomly assigned a date that does not work for you, please get in touch with other team members and find someone who can switch with you. Thank you!
+1. finding a paper or a software of interest
+2. notifying the group about it one week ahead on Slack
+3. preparing a few slides to explain the main concepts to us (plan for a 15 minute presentation)
 
-## DSGS: feedback
+We record that portion of our meeting and make it publicly available through **TODO**. We then discuss privately our thoughts on the paper or software. 
 
-TODO
+### Notes
+
+* If you are randomly assigned a date that does not work for you, please get in touch with other team members and find someone who can switch with you. Thank you!
+* If you are interested in joining us, please check our [code of conduct](TODO), and get in touch with Leonardo.
+
+## DSgs: feedback
+
+Every week, the DSgs-guides meet to discuss recent guidance sessions with the following objectives:
+
+1. identify common topics that can be addressed in other venues such as the LIBD rstats club, this book, blog posts, etc
+2. ensure consistency of our responses to similar questions
+3. identify and address issues with our [DSgs interaction rules](#interaction-rules)
+
+We might identify topics that we need to either train the DSgs-guides on or our LIBD/JHU colleagues, as well as useful R functions/packages that we can write to help us and others.
+
+### Notes
+
+* You don't have to be a part of Leonardo's team to be a DSgs-guide and thus join this meeting.
+* 
 
 ## Team help
 
-TODO
+While each team member has an individual weekly meeting, sometimes some problems can be solved with other/fresh eyes looking at them as well as new ideas. If you are having one such problem, this is a great venue to get help for it. This space and time can also be used for asking some quick questions as well as addressing any administration announcements.
 
