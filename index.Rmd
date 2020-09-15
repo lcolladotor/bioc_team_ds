@@ -35,7 +35,7 @@ The contents of this book have been refined thanks to feedback from:
 
 This book was last updated on `r Sys.time()`.
 
-## R session information
+## R session information {-}
 
 Details on the R version used for making this book. The source code is available at [`lcolladotor/bioc_team_ds`](https://github.com/lcolladotor/bioc_team_ds).
 
