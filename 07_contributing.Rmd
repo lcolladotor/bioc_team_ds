@@ -1,7 +1,5 @@
 # How to contribute
 
-## bookdown
-
 ## LIBD rstats club website
 
 ### blogdown
@@ -26,4 +24,3 @@ Could figure this one out =)
 
 ## LIBD R/Bioconductor packages
 
-### `biocthis`
