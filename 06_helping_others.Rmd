@@ -2,15 +2,15 @@
 
 Instructions & tips for those helping others
 
-## DSGS: as a guide
+## DSgs guides
 
-Data Science guidance sessions
+[Data Science guidance sessions](#data-science-guidance-sessions) (DSgs)
 
-### Guide training
+### DSgs-guide training
 
 ### Common responses
 
-### Internal session log
+### Internal sessions log
 
 ## Bioconductor Support website
 

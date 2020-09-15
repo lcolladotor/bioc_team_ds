@@ -1,5 +1,7 @@
 # Data Science guidance sessions
 
+Or DSgs for short
+
 ## Sign up
 
 ## Help us help you
@@ -10,4 +12,25 @@
 
 ## Interaction rules
 
+Code of conduct + more things
 
+## DSgs session reports
+
+**TODO**: some type of anonymous automatic weekly report that pulls data from our session logs, might use GitHub Actions & R Markdown websites to build it
+
+## Become a DSgs guide
+
+Non-team members are welcome to join the [DSgs-guides](#dsgs-guide-team-members). This involves a significant time commitment (~ `r round((4 * (25 + 15 + 10) + 30 + 2 * 60) / 60 + 0.5, 0)` hours per week) and you need to discuss this with your supervisor. These commitments are:
+
+* helping others through DSgs sessions ~ `r 4 * (25 + 15 + 10)` minutes per week ^[We recommend four 25 minute sessions, each with 15 minutes of preparation and 10 minutes of post-meeting wrap up.]
+* a weekly 30 minute meeting as explained in [DSgs: feedback](#dsgs-feedback)
+* attending the LIBD rstats club (1 hour per week)
+* time for self-learning and/or building common resources (~ 1 hour per week)
+
+Additionally, we might have some additional training sessions.
+
+Some potential advantages are:
+
+* access to all our training material, explained in detail at [DSgs-guides](#dsgs-guides)
+* a common structure for helping others at LIBD/JHU
+* recognition through our DSgs session reports

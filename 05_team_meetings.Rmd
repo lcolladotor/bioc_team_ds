@@ -19,11 +19,11 @@ We record that portion of our meeting and make it publicly available through **T
 ### Notes
 
 * If you are randomly assigned a date that does not work for you, please get in touch with other team members and find someone who can switch with you. Thank you!
-* If you are interested in joining us, please check our [code of conduct](TODO), and get in touch with Leonardo.
+* If you are interested in joining us, please check our [code of conduct](TODO), and get in touch with [Leonardo](..).
 
 ## DSgs: feedback
 
-Every week, the DSgs-guides meet to discuss recent guidance sessions with the following objectives:
+Every week, the [DSgs-guides](#dsgs-guide-team-members) meet to discuss recent guidance sessions with the following objectives:
 
 1. identify common topics that can be addressed in other venues such as the LIBD rstats club, this book, blog posts, etc
 2. ensure consistency of our responses to similar questions

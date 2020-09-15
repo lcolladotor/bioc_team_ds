@@ -26,6 +26,15 @@ With lessons learned from former mentors [Jeffrey T. Leek](https://github.com/jt
 * [Amy Peterson](https://github.com/Ashkaunr)
 * [Ashkaun Razmara](https://github.com/amy-peterson)
 
+## DSgs-guide team members {-}
+
+* [Arta Seyedian](https://github.com/aseyedia)
+* [Joshua M. Stolz](https://github.com/joshstolz)
+* [Louise Huuki](https://github.com/lahuuki)
+* [Nicholas J. Eagles](https://github.com/Nick-Eagles)
+
+_Check [Become a DSgs guide](#become-a-dsgs-guide) to join the DSgs-guide team_.
+
 ## Acknowledgements {-}
 
 The contents of this book have been refined thanks to feedback from:
@@ -39,7 +48,8 @@ This book was last updated on `r Sys.time()`.
 
 Details on the R version used for making this book. The source code is available at [`lcolladotor/bioc_team_ds`](https://github.com/lcolladotor/bioc_team_ds).
 
-```{r session_info}
+```{r session_info_chunk, eval = FALSE}
+## Load the package at the top of your script
 library("sessioninfo")
 
 ## Reproducibility information
@@ -48,5 +58,9 @@ Sys.time()
 proc.time()
 options(width = 120)
 session_info()
+```
+
+```{r session_info, echo = FALSE}
+<<session_info_chunk>>
 ```
 
