@@ -8,6 +8,16 @@
 
 ## GitHub issues
 
+## Mailing lists
+
+### bithelp
+
+### bitsupport
+
+### Bioc-devel
+
+### R-Sig-Mac
+
 ## Slack
 
 ### JHU/LIBD
@@ -76,15 +86,4 @@ This is the LIBD Slack workspace used by the Neuropathology team. We use it to i
 #### CDSB
 
 #### LatinR
-
-## Mailing lists
-
-### bithelp
-
-### bitsupport
-
-### Bioc-devel
-
-### R-Sig-Mac
-
 
