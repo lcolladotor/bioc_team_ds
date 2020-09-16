@@ -32,6 +32,7 @@ With lessons learned from former mentors [Jeffrey T. Leek](https://github.com/jt
 * [Joshua M. Stolz](https://github.com/joshstolz)
 * [Louise Huuki](https://github.com/lahuuki)
 * [Nicholas J. Eagles](https://github.com/Nick-Eagles)
+* [Madhavi Tippani](https://github.com/madhavitippani)
 
 _Check [Become a DSgs guide](#become-a-dsgs-guide) to join the DSgs-guide team_.
 

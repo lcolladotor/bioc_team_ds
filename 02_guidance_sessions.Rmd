@@ -4,6 +4,34 @@ Or DSgs for short
 
 ## Sign up
 
+If you are interested in a 25 minute Data Science guidance session, please sign up through [this website](TODO) with a session with one of our guides. If this is the first time you are using this or might need more general guidance, sign up with Leo. 
+
+* [Leonardo Collado-Torres](https://github.com/lcolladotor) ([BioC Support](https://support.bioconductor.org/u/6526/))
+  - Research interests: RNA-seq, spatial transcriptomics, un-annotated transcriptome.
+  - Technologies I use: R/Bioconductor, GitHub, SGE/JHPCE.
+  - Learning about: team management, spatial transcriptomics.
+* [Arta Seyedian](https://github.com/aseyedia) ([BioC Support](https://support.bioconductor.org/u/YOUR_PROFILE_NUMBER/))
+  - Research interests: xx, yy, zz.
+  - Technologies I use: aa, bb, cc.
+  - Learning about: uu, ii, oo.
+* [Joshua M. Stolz](https://github.com/joshstolz) ([BioC Support](https://support.bioconductor.org/u/YOUR_PROFILE_NUMBER/))
+  - Research interests: xx, yy, zz.
+  - Technologies I use: aa, bb, cc.
+  - Learning about: uu, ii, oo.
+* [Louise Huuki](https://github.com/lahuuki) ([BioC Support](https://support.bioconductor.org/u/YOUR_PROFILE_NUMBER/))
+  - Research interests: xx, yy, zz.
+  - Technologies I use: aa, bb, cc.
+  - Learning about: uu, ii, oo.
+* [Nicholas J. Eagles](https://github.com/Nick-Eagles) ([BioC Support](https://support.bioconductor.org/u/YOUR_PROFILE_NUMBER/))
+  - Research interests: xx, yy, zz.
+  - Technologies I use: aa, bb, cc.
+  - Learning about: uu, ii, oo.
+* [Madhavi Tippani](https://github.com/madhavitippani) ([BioC Support](https://support.bioconductor.org/u/YOUR_PROFILE_NUMBER/))
+  - Research interests: xx, yy, zz.
+  - Technologies I use: aa, bb, cc.
+  - Learning about: uu, ii, oo.
+
+
 ## Help us help you
 
 ### Framing a question

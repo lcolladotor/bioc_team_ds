@@ -72,7 +72,6 @@ I recommend also reading the following papers:
 * Lurie, William. “THE IMPERTINENT QUESTIONER: THE SCIENTIST'S GUIDE TO THE STATISTICIAN'S MIND.” American Scientist, vol. 46, no. 1, 1958, pp. 57–61. JSTOR, [jstor.org/stable/27827055](http://www.jstor.org/stable/27827055).
 * Finney, D.J. (1982), The questioning statistician. Statist. Med., 1: 5-13. doi: [10.1002/sim.4780010103](https://doi.org/10.1002/sim.4780010103)
 
-
 ### Common responses
 
 ### Internal sessions log
@@ -87,6 +86,41 @@ This log also helps us refresh our memory so we can remember what are the links 
 
 It's best to fill out an entry on the sessions log immediately after a session. That way your memory is fresh. That's why we recommend planning for 10 minutes after a session to fill out your entry in the log and to send a message with the links from the session to the person who requested it ^[You might want to have a template email where you can just copy the same links and code from the session into it.]
 
+### Getting started
+
+If you just joined the [DSgs-guides](#dsgs-guide-team-members) team, then we need you to setup your Calendly account and provide a brief description of who you are and what you are interested in helping others with.
+
+#### Calendly
+
+[Calendly](https://calendly.com/?utm_campaign=sign_up&utm_medium=badge&utm_source=invitee) is a service that allows others to sign up for meetings with you. The free service lets you connect it with a single calendar, say your LIBD calendar ^[Though I use my LIBD and my Gmail calendars and thus need to pay for Calendly's more advanced features.]. With the free account you can then [specify a type of event](https://calendly.com/event_types/user/me) which you can use to create a `25 min data science guidance session` event like mine:
+
+![Calendly event description](images/calendly_event_description.PNG)
+
+  > Meet with Leonardo for a 25 minute session where he'll try his best to guide you in your data science project or related question. Please provide information in advance that might be useful for preparing for this session based on https://lcolladotor.github.io/bioc_team_ds/data-science-guidance-sessions.html#help-us-help-you. Thank you!
+  
+I customized my event with:
+
+* duration: 25 min
+* date range: over a period of rolling days; 6 business days
+* availability increments: 15 min
+* minimum scheduling notice: 24 hrs ^[You want to have enough time to check the question someone asked and come prepared to the DSgs session.]
+* event buffers: before (5 min), after (10 min)
+
+To control the number of sessions per week, I only opened my availability for 4 days of the week ^[You can choose what hours of the day you make yourself available to others.] and specified 1 for the "event max per day" advanced setting ^[I'm not 100% sure that this works on the free account.]. Choose your settings wisely such that you can avoid as much as possible having to reschedule meetings for others, that is, be careful with the expectations you create in others.
+
+Once you are done, we'll need your public Calendly event link to add it to the [DSgs sign up](#sign-up) page.
+
+#### Description
+
+We need a short description of who you are and what type of questions you are interested in helping others with. Since you'll be learning while you help others, you might want to specify areas that you are actively learning more about. Below is a small template, but you might simply want to check the [DSgs sign up](#sign-up) page.
+
+```
+* [YOUR NAME](https://github.com/YOUR-USERNAME) ([BioC Support](https://support.bioconductor.org/u/YOUR_PROFILE_NUMBER/))
+  - Research interests: xx, yy, zz.
+  - Technologies I use: aa, bb, cc.
+  - Learning about: uu, ii, oo.
+```
+
 ## Bioconductor Support: practice grounds
 
 We use [Bioconductor](http://bioconductor.org/) R packages basically every day for our work and the main venue for asking for help related to Bioconductor is the [Bioconductor Support website](#bioconductor-support-website) as mentioned in a previous chapter. A great to learn is by helping others. So, [DSgs-guides](#dsgs-guide-team-members) should try to help one person per week on the Bioconductor Support website. By doing so, they'll learn more about Bioconductor, practice helping others, and also learn what information the person helping needs. Then, the next time the guides ask questions themselves, they'll know what information they need to provide in order to help others help them.
@@ -97,4 +131,6 @@ To keep track of who we have helped please fill add an entry to the following [G
 Help someone per week / motivation
 
 ### Steps to follow
+
+
 
