@@ -24,10 +24,8 @@ Could figure this one out =)
 
 ## LIBD R/Bioconductor packages
 
-## GitHub
+## GitHub templates
 
-### Issues template
+### Issues
 
 ### Contributing
-
-### 
