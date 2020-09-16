@@ -46,7 +46,7 @@ There are also a set of public channels that we use frequently:
 * **jhpce**: JHPCE users, though also check the [`bithelp`](#bithelp) and [`bitsupport`](#bitsupport) mailing lists
 * **jhu_papers**: where we announce papers with JHU authors
 * **joint_group_meeting**: a JHU bi-weekly meeting led by Steven Salzberg and JHU colleagues. This is a great meeting to learn about methods work being done across Hopkins for genomics data analysis.
-* **lngmead_rss**: a channel where Ben Langmead shares papers he's interested in
+* **langmead_rss**: a channel where Ben Langmead shares papers he's interested in
 * **papers**: general papers of interest
 * **r-ladies**
 * **random**
