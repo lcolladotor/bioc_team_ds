@@ -123,14 +123,36 @@ We need a short description of who you are and what type of questions you are in
 
 ## Bioconductor Support: practice grounds
 
-We use [Bioconductor](http://bioconductor.org/) R packages basically every day for our work and the main venue for asking for help related to Bioconductor is the [Bioconductor Support website](#bioconductor-support-website) as mentioned in a previous chapter. A great to learn is by helping others. So, [DSgs-guides](#dsgs-guide-team-members) should try to help one person per week on the Bioconductor Support website. By doing so, they'll learn more about Bioconductor, practice helping others, and also learn what information the person helping needs. Then, the next time the guides ask questions themselves, they'll know what information they need to provide in order to help others help them.
-
-To keep track of who we have helped please fill add an entry to the following [Google Sheet](TODO).
-
-
-Help someone per week / motivation
+We use [Bioconductor](http://bioconductor.org/) R packages basically every day for our work and the main venue for asking for help related to Bioconductor is the [Bioconductor Support website](#bioconductor-support-website) as mentioned in a previous chapter. A great way to learn is by helping others. So, [DSgs-guides](#dsgs-guide-team-members) should try to help one person per week on the Bioconductor Support website. By doing so, they'll learn more about Bioconductor, practice helping others, and also learn what information helpers need. Then, the next time the guides ask questions themselves, they'll know what information they need to provide in order to help others help them. 
 
 ### Steps to follow
 
+To keep track of who we have helped please fill add an entry to the following [Google Sheet](TODO). ^[Hm.... I guess that BioC profiles might be enough and more automated.]
+
+Briefly, you need to:
+
+* find a question you are interested in answering
+* decide whether to reply as a comment or answer
+* remember to be friendly ^[Sometimes people are unkind on the web or voice their frustrations. It's hard not to take it personal at times, but try to remain as friendly as possible. Also, you don't owe them anything and you should feel free to ignore unfriendly folks.]
+
+The Bioconductor Support website uses a "tags" mechanism where each tag is actually the name of a package in lower case. So, when you are searching for questions to answer, you might want to [start with the tag](https://support.bioconductor.org/t/) for a package that you are interested in learning more about or that you are interested in. You might also want to look at the [latest questions](https://support.bioconductor.org/t/Latest/) and maybe start with those that have no answers. Some questions are quite common, like issues with installing Bioconductor packages, so in a way, that could be a low hanging fruit. Note that you can also edit your profile and add **watched** tags which you can check on the top menu under ["following"](https://support.bioconductor.org/t/following/).
+
+Once you have chosen an interesting question, you can either write an **answer** or a **comment**. Comments are useful when you need more information from the person asking the question. For example, you might need them to provide their R session information, which will help you figure out what version of R and Bioconductor they are using ^[Many times, the solution is to upgrade to the latest Bioc-release version.]. Comments and answers support Markdown replies, which can be quite helpful for formatting your answer ^[There is a limit in length, which is why I sometimes use public [gists](https://gist.github.com/) on my replies. Gists are automatically embedded in answers. This is useful if you want to include a long output from your own `sessioninfo::session_info()`.]. Here's a template you can start using.
 
 
+```
+Hi xx,
+
+~~ answer ~~
+
+Best,
+YOUR-NAME
+
+PS I'm actively [learning how to help others](https://lcolladotor.github.io/bioc_team_ds/helping-others.html#bioconductor-support-practice-grounds), so please be patient with me. Thanks!
+
+## R session information
+
+`sessioninfo::session_info()` output
+```
+
+Remember that questions can have multiple answers, so other Bioconductor Community members might contribute their solutions, which is a great way to learn. Also, we are doing this as volunteers really, so if a question gets complicated, it's OK to notify the person who asked it that you don't have the time to help them further.
