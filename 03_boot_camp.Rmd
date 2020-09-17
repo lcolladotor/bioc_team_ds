@@ -2,33 +2,89 @@
 
 # R/Bioconductor Data Science bootcamps
 
-In order to have a common set of external references and R knowledge that we use for the [Data Science guidance sessions](#data-science-guidance-sessions) as well as our work, we have a series of R and Bioconductor bootcamps. Most of the material these bootcamps are based on is freely available or can be purchased for a small fee. Thus, we can feel confident that our LIBD and JHU collaborators will be able to access the material, as well as really anyone else in the world.
+In order to have a common set of external references and R knowledge that we use for the [Data Science guidance sessions](#data-science-guidance-sessions) as well as our work, we have a series of R and Bioconductor bootcamps. Most of the material these bootcamps are based on is freely available or can be purchased for a small fee ^[A lot of the resources listed are available through [Leanpub](https://leanpub.com/) which is a publishing platform for books and courses. Authors get to set a recommended price, but also a minimum price that can be as low as $0, thus making their materials free to use.]. Thus, we can feel confident that our LIBD and JHU collaborators will be able to access the material, as well as anyone else in the world.
+
+## LIBD bootcamps
+
+We have organized accessible bootcamps that have biologists in mind. If you spend most of your time coding, check the [Team bootcamps](#team-bootcamps) further below. For all of these bootcamps, you should have the latest [R](https://cran.r-project.org/) and [RStudio Desktop](https://rstudio.com/products/rstudio/download/) installed. You will typically need a computer with at least 8 GB of RAM.
+
+| Session | Time | Prerequisites | Topic |
+| --- | --- | --- | --- |
+| 1 | 2020-10-05 3-5 pm | R + RStudio | Differential expression analysis (LIBD-style) |
+| 2 | 2020-10-06 3-5 pm | R + RStudio | Differential expression analysis (LIBD-style) |
+| 3 | 2020-10-07 1-3 pm | R + RStudio | Differential expression analysis (LIBD-style) |
+
 
 ## Team bootcamps
 
-The first iteration of these bootcamps were run on September 2020 with the following schedule. For all of them, you should have the latest R and RStudio versions installed in your computer and be familiar with the R programming language. You will probably need to spend time self-learning and practicing some of the material beyond these videos. 
+The team bootcamps are really for our team members and other more advanced R/programming members and collaborators. However, the material we cover is within reach of everyone as long as you practice using R/Bioconductor here and there. The concepts covered are of use to all of us who work with R, but we understand that you might not have as much time to learn these materials. If that's the case, please feel free to sign up for our [Data Science guidance sessions](#data-science-guidance-sessions) and we'll help you learn these concepts at your own pace.
+
+The first iteration of these bootcamps were run on September 2020 with the following schedule. For all of them, you should have the latest R and RStudio versions installed in your computer and be familiar with the R programming language. For a more structured working environment, we might use [JHPCE](https://jhpce.jhu.edu/)'s computational resources while running RStudio on our computers and running code through a Linux terminal ^[Check our LIBD rstats club videos on how to configure your macOS or Windows computer to work with JHPCE.]. You will probably need to spend time self-learning and practicing some of the material beyond these videos. If you just started learning about R, then these bootcamps will be quite challenging.
 
 
 | Session | Time | Prerequisites | Topic |
 | --- | --- | --- | --- |
 | 1 | 2020-09-21 3-5 pm | NA | How to be a modern scientist |
 | 2 | 2020-09-22 3-5 pm | R + RStudio | What they forgot to teach you about R |
-| 3 | 2020-09-23 1-3 pm | R + RStudio  | What they forgot to teach you about R |
+| 3 | 2020-09-23 1-3 pm | R + RStudio | What they forgot to teach you about R |
 | 4 | 2020-09-24 3-5 pm | R + RStudio | The Elements of Data Analytic Style + CBDS |
 | 5 | 2020-09-28 3-5 pm | R + RStudio | The Elements of Data Analytic Style + CBDS |
 | 6 | 2020-09-29 3-5 pm | Be a part of the [DSgs-guides](#dsgs-guide-team-members) team | [DSgs-guide training](#dsgs-guide-training) |
 | 7 | 2020-09-30 1-3 pm | RStudio + R functions | Building Tidy Tools |
 | 8 | 2020-10-01 3-5 pm | RStudio + R functions | Building Tidy Tools |
 
+## Bootcamp source materials
 
-## LIBD bootcamps
+There are tons of resources that are useful for learning about R, Bioconductor, and data science in general. We have selected some of those resources because:
 
-We also have organized more general bootcamps
+* we are familiar with them
+* they are freely available or can be purchased for a small fee
+* we have heard good things about them
 
-| Session | Time | Prerequisites | Topic |
-| --- | --- | --- | --- |
-| 1 | 2020-10-05 3-5 pm | R + RStudio | Differential expression analysis (LIBD-style) |
+### Main materials
 
+There are more materials out there than those that we've had a chance to learn about, and with time, this list will change. Here is our latest list.
+
+* Introductory level
+  - _course_ [**Cloud Based Data Science**](https://leanpub.com/universities/set/jhu/cloud-based-data-science) by [Jeff Leek](https://twitter.com/jtleek), [Aboozar Hadavand](https://twitter.com/ahdvnd), [Shannon Ellis](https://twitter.com/Shannon_E_Ellis), [Leslie Myint](https://twitter.com/lesliemyint), [Sarah McClymont](https://twitter.com/sarahmcclymont0), [Leah Jager](https://twitter.com/JagerLeah), and others.
+* Advanced
+  - _book_ [**R for Data Science**](https://r4ds.had.co.nz/) by [Garrett Grolemund](https://twitter.com/StatGarrett) and [Hadley Wickham](https://twitter.com/hadleywickham). Useful for learning about the [tidyverse](https://www.tidyverse.org/), which is supported by [RStudio](https://rstudio.com/).
+  - _workshop_ **What they forgot to teach you about R** [2020 version](https://rstudio-conf-2020.github.io/what-they-forgot/) by [Kara Woo](https://twitter.com/kara_woo), [Jenny Bryan](https://twitter.com/JennyBryan), and [Jim Hester](https://twitter.com/jimhester_).
+  - _workshop_ **Building Tidy Tools** [2020 version](https://github.com/rstudio-conf-2020/build-tidy-tools) by [Charlotte Wickham](https://twitter.com/CVWickham) and Hadley Wickham.
+* General
+  - _book_ [**The Elements of Data Analytic Style**](https://leanpub.com/datastyle) by Jeff Leek.
+  - _book_ [**How to be a modern scientist**](https://leanpub.com/modernscientist) by Jeff Leek.
+* Statistics
+  - _book_ [**Data Analysis for the Life Sciences**](https://leanpub.com/dataanalysisforthelifesciences) by [Rafael A Irizarry](https://twitter.com/rafalab) and [Michael I Love](https://twitter.com/mikelove).
+  - _book_ [**Modern Statistics for Modern Biology**](http://web.stanford.edu/class/bios221/book/) by [Susan Holmes](https://twitter.com/SherlockpHolmes) and [Wolfgang Huber](https://twitter.com/wolfgangkhuber).
+* Bioconductor
+  - _book_ [**Orchestrating Single-Cell Analysis with Bioconductor**](https://osca.bioconductor.org/) by [Aaron Lun](https://scholar.google.com/citations?hl=en&user=usux2yUAAAAJ), [Robert Amezquita](https://twitter.com/robamezquita), [Stephanie Hicks](https://twitter.com/stephaniehicks), and [Raphael Gottardo](https://twitter.com/raphg).
+    - _workshop_ [**WEHI scRNA-seq course** (2020)](https://drive.google.com/drive/folders/1cn5d-Ey7-kkMiex8-74qxvxtCQT6o72h) by [Peter Hickey](https://twitter.com/PeteHaitch) based on the OSCA book.
+  - _workflows_ [**Bioconductor Common Workflows**](http://bioconductor.org/packages/release/BiocViews.html#___Workflow). There's over 25 of them from many authors.
+  
+We also highly recommend keeping an eye open for any new work from:
+
+* [Alison Presmanes Hill](https://twitter.com/apreshill). Just look at her awesome [projects website](https://alison.rbind.io/projects/)!
+* [Desirée De Leon](https://twitter.com/dcossyle). Note that Desirée started as an intern working with Alison, so it's no surprise that her [projects website](https://desiree.rbind.io/project_landing/) is excellent.
+* [Allison Horst](https://twitter.com/allison_horst) and in particular her [stats-illustrations](https://github.com/allisonhorst/stats-illustrations) which are widely used and are very helpful when teaching statistical and R concepts.
+  
+### Courses
+    
+Our colleagues at Hopkins have also created Coursera courses (MOOCs) which you might be interested in, though they might involve other fees. These are:
+
+* [Genomic Data Science Specialization](https://www.coursera.org/specializations/genomic-data-science) by [Steven Salzberg](https://twitter.com/StevenSalzberg1), Jeff Leek, [James Taylor](https://twitter.com/jxtx) ([1979-2020](https://galaxyproject.org/jxtx/)), [Mihaela Pertea](https://twitter.com/elapertea), [Ben Langmead](https://twitter.com/BenLangmead), [Jacob Pritt](https://twitter.com/jacob_pritt), [Liliana Florea](https://scholar.google.com/citations?user=s0AZ_6IAAAAJ&hl=en), [Kasper Daniel Hansen](https://twitter.com/KasperDHansen). Actually, LIBD is an "industry partner" for this specialization.
+* [Data Science Specialization](https://www.coursera.org/specializations/jhu-data-science) by Jeff Leek, [Roger D. Peng](https://twitter.com/rdpeng), and [Brian Caffo](https://scholar.google.com/citations?hl=en&user=Ff81yEQAAAAJ).
+* [Data Science: Foundations using R Specialization](https://www.coursera.org/specializations/data-science-foundations-r) by Jeff Leek, Roger D. Peng, and Brian Caffo.
+* [Executive Data Science Specialization](https://www.coursera.org/specializations/executive-data-science) by Jeff Leek, Roger D. Peng, and Brian Caffo.
+* [The Unix Workbench](https://www.coursera.org/learn/unix) by [Sean Kross](https://twitter.com/seankross), Jeff Leek, Roger D. Peng, and Brian Caffo.
+
+Rafael Irizarry and [his lab](http://rafalab.github.io/) have also generated free [teaching materials](http://rafalab.github.io/pages/teaching.html). A former postdoc with Rafael, Michael I Love also has [teaching materials](https://mikelove.github.io/pages/teaching.html). Between them they have courses on:
+
+* Introduction to Data Science (at least 8 college-level courses)
+* Data Analysis for the Life Sciences (at least 4 graduate level courses)
+* Genomics Data Analysis (at least 3 graduate level courses)
+
+They have lots of YouTube links organized [on their old harvardx website](http://rafalab.github.io/pages/harvardx.html), whose layout is based on Kasper Daniel Hansen's [Bioconductor for Genomic Data Science](https://kasperdanielhansen.github.io/genbioconductor/) course.
 
 
 # R

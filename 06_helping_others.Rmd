@@ -156,3 +156,8 @@ PS I'm actively [learning how to help others](https://lcolladotor.github.io/bioc
 ```
 
 Remember that questions can have multiple answers, so other Bioconductor Community members might contribute their solutions, which is a great way to learn. Also, we are doing this as volunteers really, so if a question gets complicated, it's OK to notify the person who asked it that you don't have the time to help them further.
+
+
+## RStudio Education
+
+If you want to go even further, you might be interested in the [RStudio Education: learn to teach](https://education.rstudio.com/teach/how-to-teach/) website.
