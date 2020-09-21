@@ -1,0 +1,3 @@
+# What they forgot to teach you about R
+
+https://rstudio-conf-2020.github.io/what-they-forgot/

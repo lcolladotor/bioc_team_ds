@@ -1,0 +1,5 @@
+# The Elements of Data Analytic Style + CBDS
+
+https://leanpub.com/datastyle
+
+https://leanpub.com/u/jtleek 
