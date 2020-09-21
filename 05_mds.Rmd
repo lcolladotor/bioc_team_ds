@@ -28,3 +28,5 @@ The full list of chapters is:
 * About the author
 
 We do everything in this book, though to different degrees. This book is actually a key part of our _internal scientific communication_. I've also done several of the things Jeff advises **not** to do ;) and maybe that's why they are listed there hehe. Hopefully I've learned over the years though.
+
+<script async class="speakerdeck-embed" data-id="12480a82259a48fc82ad528cfe62b30c" data-ratio="1.77777777777778" src="//speakerdeck.com/assets/embed.js"></script>
