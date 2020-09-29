@@ -40,7 +40,7 @@ $$ = \beta_1 $$
 
 As [DSgs-guides](#dsgs-guide-team-members) for the [Data Science guidance sessions](#data-science-guidance-sessions) (DSgs), our role involves:
 
-* **Explaining a concept creatively**. For example, the person asking the question might have been confused by a lecture or the documentation of a function, and we have to explain those written words using a combination of: other words, drawings, and/or math.
+* **Explaining a concept creatively**. For example, the person asking the question might have been confused by a lecture or the documentation of a function, and we have to explain those written words using a combination of: other words, drawings, and/or math ^[Use the [Remember to use the main materials](#main_materials), such as the illustrations by Allison Horst, to avoid having to reinvent the wheel and for quick access to great illustrations. ]
 * **Google searching**. We might be more familiar with some useful keywords that can lead us to a more precise answer, or given our experience we might be able to tease apart faster possible answers from say a help forum to identify the answer that best matches our scenario.
 * **Providing ideas**. If some code is not working, we can provide ideas on how to troubleshoot that problem as well as identify potential key components of an error message. For a given analysis path, we can also provide options on what routes to take including potential useful graphs to create.
 * **Baseline platform**. We can help others get used to our baseline platform of tools we use. Hence why we go through the bootcamps to have a common knowledgebase and set of courses, workshops and books that we refer others to.
