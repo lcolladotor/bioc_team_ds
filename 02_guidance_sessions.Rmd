@@ -4,32 +4,38 @@ Or DSgs for short
 
 ## Sign up
 
-If you are interested in a 25 minute Data Science guidance session, please sign up through [this website](TODO) with a session with one of our guides. If this is the first time you are using this or might need more general guidance, sign up with Leo. 
+If you are interested in a 25 minute Data Science guidance session, please sign up through the Calendly links below with a session with one of our guides. If this is the first time you are using this or might need more general guidance, sign up with Leo. 
 
 * [Leonardo Collado-Torres](https://github.com/lcolladotor) ([BioC Support](https://support.bioconductor.org/u/6526/))
   - Research interests: RNA-seq, spatial transcriptomics, un-annotated transcriptome.
   - Technologies I use: R/Bioconductor, GitHub, SGE/JHPCE.
   - Learning about: team management, spatial transcriptomics.
+  - [Calendly](https://calendly.com/lcolladotor/ds-guidance)
 * [Arta Seyedian](https://github.com/aseyedia) ([BioC Support](https://support.bioconductor.org/u/YOUR_PROFILE_NUMBER/))
   - Research interests: xx, yy, zz.
   - Technologies I use: aa, bb, cc.
   - Learning about: uu, ii, oo.
+  - [Calendly](https://calendly.com/aseyedia/20-minute-meeting)
 * [Joshua M. Stolz](https://github.com/joshstolz) ([BioC Support](https://support.bioconductor.org/u/YOUR_PROFILE_NUMBER/))
   - Research interests: xx, yy, zz.
   - Technologies I use: aa, bb, cc.
   - Learning about: uu, ii, oo.
+  - [Calendly](https://calendly.com/)
 * [Louise Huuki](https://github.com/lahuuki) ([BioC Support](https://support.bioconductor.org/u/YOUR_PROFILE_NUMBER/))
   - Research interests: xx, yy, zz.
   - Technologies I use: aa, bb, cc.
   - Learning about: uu, ii, oo.
+  - [Calendly](https://calendly.com/lahuuki/25-min-data-science-guidance-session)
 * [Nicholas J. Eagles](https://github.com/Nick-Eagles) ([BioC Support](https://support.bioconductor.org/u/YOUR_PROFILE_NUMBER/))
   - Research interests: xx, yy, zz.
   - Technologies I use: aa, bb, cc.
   - Learning about: uu, ii, oo.
+  - [Calendly](https://calendly.com/)
 * [Madhavi Tippani](https://github.com/madhavitippani) ([BioC Support](https://support.bioconductor.org/u/YOUR_PROFILE_NUMBER/))
   - Research interests: xx, yy, zz.
   - Technologies I use: aa, bb, cc.
   - Learning about: uu, ii, oo.
+  - [Calendly](https://calendly.com/madhavitippani)
 
 
 ## Help us help you
@@ -44,7 +50,13 @@ Code of conduct + more things
 
 ## DSgs session reports
 
-**TODO**: some type of anonymous automatic weekly report that pulls data from our session logs, might use GitHub Actions & R Markdown websites to build it
+If you are interested in public information from our past sessions, check [**DSgs_logs**](https://lcolladotor.github.io/DSgs_logs/), and in particular, some of our [**graphs**](https://lcolladotor.github.io/DSgs_logs/graphs.html).
+
+<img src="https://lcolladotor.github.io/DSgs_logs/_main_files/figure-html/graph_total-1.png" width="800px" align="center">
+
+<img src="https://raw.githubusercontent.com/lcolladotor/DSgs_logs/gh-pages/_main_files/figure-html/graph_total-1.png" width="800px" align="center">
+
+TODO: check if the first figure works (gh-pages has some issues right now)
 
 ## Become a DSgs guide
 

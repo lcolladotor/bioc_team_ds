@@ -76,13 +76,13 @@ I recommend also reading the following papers:
 
 ### Internal sessions log
 
-In order to make our job easier the next time we get a similar question, we have an internal sessions log where we record:
+In order to make our job easier the next time we get a similar question, we have an [**internal sessions log**](https://docs.google.com/spreadsheets/d/1FrOKBI_lTYLNRAfzNi8nTMAXNH3DtL9bUwpVzDjFp9Q/edit?usp=sharing) where we record:
 
 * the question we got asked
 * the links we referred anyone to or that we used during the session
 * example code we used
 
-This log also helps us refresh our memory so we can remember what are the links we've told someone else to use and see their trajectory. The sessions log also enables [DSgs-guides](#dsgs-guide-team-members) to learn from each other.
+This log also helps us refresh our memory so we can remember what are the links we've told someone else to use and see their trajectory. The sessions log also enables [DSgs-guides](#dsgs-guide-team-members) to learn from each other. The internal sessions log is then used to populate the content of the [**DSgs_logs**](https://lcolladotor.github.io/DSgs_logs/) website.
 
 It's best to fill out an entry on the sessions log immediately after a session. That way your memory is fresh. That's why we recommend planning for 10 minutes after a session to fill out your entry in the log and to send a message with the links from the session to the person who requested it ^[You might want to have a template email where you can just copy the same links and code from the session into it.]
 
