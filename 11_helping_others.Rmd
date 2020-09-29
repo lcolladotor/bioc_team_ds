@@ -117,6 +117,7 @@ We need a short description of who you are and what type of questions you are in
   - Research interests: xx, yy, zz.
   - Technologies I use: aa, bb, cc.
   - Learning about: uu, ii, oo.
+  - [Calendly](https://calendly.com/)
 ```
 
 ## Bioconductor Support: practice grounds
