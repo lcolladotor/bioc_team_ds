@@ -61,10 +61,8 @@ Remember that some questions are very challenging! After all, at LIBD we are try
 
 During my time as a [Teaching Assistant at JHBSPH: Biostatistics](http://lcolladotor.github.io/#teaching), we had an activity called the _Teaching Assistant Training Day_, which I have adapted for our purpose. This involves:
 
-* Being a DSgs-guide
-* Skits and games
-* Role playing
-* Characteristics of teaching
+* [Being a DSgs-guide](https://docs.google.com/presentation/d/1yGD71r80xfTRRL4oACLPiWisgM_K6byB5U2ibxbNtuo/edit?usp=sharing)
+* [Classify characteristics](https://docs.google.com/document/d/1vbIUDZnw6GAuRGht_wtUWtAAoZvf7xvuBx0wRtamHjU/edit?usp=sharing)
 
 I recommend also reading the following papers:
 
