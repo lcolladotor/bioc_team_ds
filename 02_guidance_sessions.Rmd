@@ -26,11 +26,11 @@ If you are interested in a 25 minute Data Science guidance session, please sign 
   - Technologies I use: R (tidyverse, ggplot, dplyr), Python, GitHub.
   - Learning about: Bioconductor.
   - [Calendly](https://calendly.com/lahuuki/25-min-data-science-guidance-session)
-* [Nicholas J. Eagles](https://github.com/Nick-Eagles) ([BioC Support](https://support.bioconductor.org/u/YOUR_PROFILE_NUMBER/))
-  - Research interests: xx, yy, zz.
-  - Technologies I use: aa, bb, cc.
-  - Learning about: uu, ii, oo.
-  - [Calendly](https://calendly.com/)
+* [Nicholas J. Eagles](https://github.com/Nick-Eagles) ([BioC Support](https://support.bioconductor.org/u/24264/))
+  - Research interests: RNA-seq, whole-genome bisulfite sequencing (WGBS), building computational pipelines.
+  - Technologies I use: R/Bioconductor, GitHub, Nextflow.
+  - Learning about: data visualization, deep learning.
+  - [Calendly](https://calendly.com/nick-eagles)
 * [Madhavi Tippani](https://github.com/madhavitippani) ([BioC Support](https://support.bioconductor.org/u/YOUR_PROFILE_NUMBER/))
   - Research interests: xx, yy, zz.
   - Technologies I use: aa, bb, cc.
