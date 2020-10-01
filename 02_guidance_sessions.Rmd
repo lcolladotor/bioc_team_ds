@@ -17,9 +17,9 @@ If you are interested in a 25 minute Data Science guidance session, please sign 
   - Learning about: uu, ii, oo.
   - [Calendly](https://calendly.com/aseyedia/20-minute-meeting)
 * [Joshua M. Stolz](https://github.com/joshstolz) ([BioC Support](https://support.bioconductor.org/u/YOUR_PROFILE_NUMBER/))
-  - Research interests: xx, yy, zz.
-  - Technologies I use: aa, bb, cc.
-  - Learning about: uu, ii, oo.
+  - Research interests: RNA-seq,gene-networks,data processing/pipeline building.
+  - Technologies I use: R, Bioconductor.
+  - Learning about: spatial-transcriptomics, machine-learning, building R packages.
   - [Calendly](https://calendly.com/)
 * [Louise Huuki](https://github.com/lahuuki) ([BioC Support](https://support.bioconductor.org/u/24238/))
   - Research interests: RNA-seq, data visulization.
