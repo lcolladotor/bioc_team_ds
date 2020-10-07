@@ -32,9 +32,9 @@ If you are interested in a 25 minute Data Science guidance session, please sign 
   - Learning about: data visualization, deep learning.
   - [Calendly](https://calendly.com/nick-eagles)
 * [Madhavi Tippani](https://github.com/madhavitippani) ([BioC Support](https://support.bioconductor.org/u/YOUR_PROFILE_NUMBER/))
-  - Research interests: xx, yy, zz.
-  - Technologies I use: aa, bb, cc.
-  - Learning about: uu, ii, oo.
+  - Research interests: spatial transcriptomics, calcium imaging, RNAscope, medical image processing.
+  - Technologies I use: Matlab, R, GitHub, SGE/JHPCE.
+  - Learning about: Machine Learning, spatial transcriptomics, statistical analysis.
   - [Calendly](https://calendly.com/madhavitippani)
 
 
