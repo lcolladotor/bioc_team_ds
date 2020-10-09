@@ -11,11 +11,11 @@ If you are interested in a 25 minute Data Science guidance session, please sign 
   - Technologies I use: R/Bioconductor, GitHub, SGE/JHPCE.
   - Learning about: team management, spatial transcriptomics.
   - [Calendly](https://calendly.com/lcolladotor/ds-guidance)
-* [Arta Seyedian](https://github.com/aseyedia) ([BioC Support](https://support.bioconductor.org/u/YOUR_PROFILE_NUMBER/))
+* [Arta Seyedian](https://github.com/aseyedia) ([BioC Support](https://support.bioconductor.org/u/24249//))
   - Research interests: transcriptomics, human evolutionary genomics.
   - Technologies I use: R, Bioconductor, Snakemake.
   - Learning about: ML, project management, building R packages, statistical analysis.
-  - [Calendly](https://calendly.com/aseyedia/20-minute-meeting)
+  - [Calendly](https://calendly.com/aseyedia/25-minute-meeting)
 * [Joshua M. Stolz](https://github.com/joshstolz) ([BioC Support](https://support.bioconductor.org/u/YOUR_PROFILE_NUMBER/))
   - Research interests: RNA-seq,gene-networks,data processing/pipeline building.
   - Technologies I use: R, Bioconductor.
