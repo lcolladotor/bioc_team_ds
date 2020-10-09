@@ -1,6 +1,32 @@
 # Data Science guidance sessions
 
-Or DSgs for short
+Data is abundant in many aspects of our research work thanks to high-throughput experimental assays. While some analyses will require a significant amount of time from people who primarily do that type of work, we know that many of us are interested in learning more about working with data. As such, as a team, we provide **Data Science guidance sessions** (DSgs). These are 25 minute sessions where we'll try our best to help you, teach you, troubleshoot with you, and overall guide you as much as we can. DSgs sessions are particularly helpful if you want to work on a data problem or gain some data skills across a period of weeks or months. Working with data and programming languages can have a steep learning curve and it can feel daunting. As a team, we have trained ourselves to have a common baseline and can help you get familiarized with the concept of a project-oriented workflow. This involves tools such as RStudio, git/GitHub, how to organize your code, how to ask for help, and overall tools to make your work more reproducible. These ideas when put into practice are very helpful for finding why things are not working, as we all inevitably encounter errors in our code and the open source software we rely on. Sometimes we won't know the answer either, but maybe we can help you construct more specific Google search terms.
+
+## Interaction rules
+
+In order for DSgs sessions to run smoothly, it's important that we have **clear expectations** of what we'll do. DSgs sessions **are not consulting sessions**. We will help you as much as we can during the session, but after it's over, we won't spend time writing new code for you. That is, we will not take requests for work you need help finishing regardless of how important it is. That's why we recommend planning ahead and even having weekly DSgs sessions if you have a deadline in mind instead of approaching us for help the week the project is due. We are most helpful early in a project cycle than at the end.
+
+We understand that you might be stressed or under significant pressure, but please follow our [code of conduct](http://research.libd.org/rstatsclub/#.X4CHhtBKguU) ^[We will update the code of conduct once Bioconductor publishes their latest code of conduct in the fall of 2020.]. Otherwise, we will refrain from meeting with you.
+
+## Help us help you
+
+When you sign up for a session, you will fill a small form where you can provide some information about why you want to meet. We will spend up to 15 minutes preparing for a session, and in order to make better use of that time, it is important that you provide us enough information so we can do a better job helping you.
+
+### Framing a question
+
+Instead of saying "I need help", it will be useful for us if you can **be more specific**. For example, "I need help with `jaffelab::cleaningY()`" or "I need help installing the Bioconductor package `SummarizedExperiment` on a Windows machine". The first example lets us know that exact function you need help with, so we can revise the documentation before hand and come prepared to the meeting. The second example mentions a specific R package, where to find it (Bioconductor), and what operating system you are using. 
+
+### Useful information
+
+As problems get more specific, we will require more information. If you are encountering an R error that you need help with, providing a small reproducible example will make the whole experience much smoother. The R package that is very useful for providing such examples is `r BiocStyle::CRANpkg("reprex")`. You can watch our LIBD rstats club [video on `reprex`](https://youtu.be/8bBo3B7N8YQ) to get more familiarized with this package.
+
+To share code with us,
+
+* Please create a [`gist`](https://gist.github.com/) which can be either public or private. In the `gist` include all the commands you ran and the output you got. Or provide the `reprex` code (preferred option).
+* If you are already using GitHub for version controlling your code, then include the **link to the script** you are running.
+* If you have a companion log file at JHPCE, please share the **full path to the log file** ^[You might want to use the `r BiocStyle::Githubpkg("LieberInstitute/sgejogs")` package for helping you create such log files.]
+* Ideally include the R session information which you can generate using `options(width = 120); sessioninfo::session_info()`. This information will be particularly useful for solving issues with cutting edge R/Bioconductor/GitHub packages.
+
 
 ## Sign up
 
@@ -37,29 +63,6 @@ If you are interested in a 25 minute Data Science guidance session, please sign 
   - Learning about: Machine Learning, spatial transcriptomics, statistical analysis.
   - [Calendly](https://calendly.com/madhavitippani)
 
-
-## Help us help you
-
-When you sign up for a session, you will fill a small form where you can provide some information about why you want to meet. We will spend up to 15 minutes preparing for a session, and in order to make better use of that time, it is important that you provide us enough information so we can do a better job helping you.
-
-### Framing a question
-
-Instead of saying "I need help", it will be useful for us if you can **be more specific**. For example, "I need help with `jaffelab::cleaningY()`" or "I need help installing the Bioconductor package `SummarizedExperiment` on a Windows machine". The first example lets us know that exact function you need help with, so we can revise the documentation before hand and come prepared to the meeting. The second example mentions a specific R package, where to find it (Bioconductor), and what operating system you are using. 
-
-### Useful information
-
-As problems get more specific, we will require more information. If you are encountering an R error that you need help with, providing a small reproducible example will make the whole experience much smoother. The R package that is very useful for providing such examples is `r BiocStyle::CRANpkg("reprex")`. You can watch our LIBD rstats club [video on `reprex`](https://youtu.be/8bBo3B7N8YQ) to get more familiarized with this package.
-
-To share code with us,
-
-* Please create a [`gist`](https://gist.github.com/) which can be either public or private. In the `gist` include all the commands you ran and the output you got. Or provide the `reprex` code (preferred option).
-* If you are already using GitHub for version controlling your code, then include the **link to the script** you are running.
-* If you have a companion log file at JHPCE, please share the **full path to the log file** ^[You might want to use the `r BiocStyle::Githubpkg("LieberInstitute/sgejogs")` package for helping you create such log files.]
-* Ideally include the R session information which you can generate using `options(width = 120); sessioninfo::session_info()`. This information will be particularly useful for solving issues with cutting edge R/Bioconductor/GitHub packages.
-
-## Interaction rules
-
-Code of conduct + more things
 
 ## DSgs session reports
 
