@@ -181,7 +181,7 @@ jobs:
         run: |
           ## For building the website & getting the R session info
           ## Edit as necessary with other packages in the future
-          BiocManager::install(c("bookdown", "sessioninfo"))
+          BiocManager::install(c("bookdown", "sessioninfo", "BiocStyle"))
         shell: Rscript {0}
 
       - name: Session info
