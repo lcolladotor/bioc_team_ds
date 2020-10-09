@@ -61,7 +61,7 @@ If you are interested in a 25 minute Data Science guidance session, please sign 
   - Technologies I use: R, Bioconductor, Snakemake.
   - Learning about: ML, project management, building R packages, statistical analysis.
   - [Calendly](https://calendly.com/aseyedia/25-minute-meeting)
-* [Joshua M. Stolz](https://github.com/joshstolz) ([BioC Support](https://support.bioconductor.org/u/YOUR_PROFILE_NUMBER/))
+* [Joshua M. Stolz](https://github.com/joshstolz) ([BioC Support](https://support.bioconductor.org/u/24318/))
   - Research interests: RNA-seq,gene-networks,data processing/pipeline building.
   - Technologies I use: R, Bioconductor.
   - Learning about: spatial-transcriptomics, machine-learning, building R packages.
