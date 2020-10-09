@@ -65,7 +65,7 @@ If you are interested in a 25 minute Data Science guidance session, please sign 
   - Research interests: RNA-seq,gene-networks,data processing/pipeline building.
   - Technologies I use: R, Bioconductor.
   - Learning about: spatial-transcriptomics, machine-learning, building R packages.
-  - [Calendly](https://calendly.com/josh-stolz/30min)
+  - [Calendly](https://calendly.com/josh-stolz/25-minute-meeting)
 * [Louise Huuki](https://github.com/lahuuki) ([BioC Support](https://support.bioconductor.org/u/24238/))
   - Research interests: RNA-seq, data visualization.
   - Technologies I use: R (tidyverse, ggplot, dplyr), Python, GitHub.
