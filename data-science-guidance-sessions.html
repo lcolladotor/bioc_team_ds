@@ -241,25 +241,40 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
             <section class="normal" id="section-">
 <div id="data-science-guidance-sessions" class="section level1">
 <h1><span class="header-section-number">2</span> Data Science guidance sessions</h1>
-<p>Data is abundant in many aspects of our research work thanks to high-throughput experimental assays. While some analyses will require a significant amount of time from people who primarily do that type of work, we know that many of us are interested in learning more about working with data. As such, as a team, we provide <strong>Data Science guidance sessions</strong> (DSgs). These are 25 minute sessions where we’ll try our best to help you, teach you, troubleshoot with you, and overall guide you as much as we can. DSgs sessions are particularly helpful if you want to work on a data problem or gain some data skills across a period of weeks or months. Working with data and programming languages can have a steep learning curve and it can feel daunting. As a team, we have trained ourselves to have a common baseline and can help you get familiarized with the concept of a project-oriented workflow. This involves tools such as RStudio, git/GitHub, how to organize your code, how to ask for help, and overall tools to make your work more reproducible. These ideas when put into practice are very helpful for finding why things are not working, as we all inevitably encounter errors in our code and the open source software we rely on. Sometimes we won’t know the answer either, but maybe we can help you construct more specific Google search terms.</p>
+<p>Data is abundant in many aspects of our research work thanks to high-throughput experimental assays. While some analyses will require a significant amount of time from people who primarily do that type of work, we know that many of us are interested in learning more about working with data. As such, as a team, the <a href="index.html#dsgs-guide-team-members">DSgs-guides</a> will provide <strong>Data Science guidance sessions</strong> (DSgs).</p>
+<p>These are 25 minute sessions where we’ll try our best to help you, teach you, troubleshoot with you, and overall guide you as much as we can. <strong>DSgs sessions are particularly helpful</strong> if you want to work on a data problem or gain some data skills <strong>across a period of weeks or months</strong>. Working with data and programming languages can have a steep learning curve and it can feel daunting. As a team, we have trained ourselves to have a common baseline and can help you get familiarized with the concept of a project-oriented workflow. This involves tools such as RStudio, git/GitHub, how to organize your code, how to ask for help, and overall tools to make your work more reproducible. These ideas when put into practice are very helpful for finding why things are not working, as we all inevitably encounter errors in our code and the open source software we rely on. Sometimes we won’t know the answer either, but maybe we can help you construct more specific Google search terms.</p>
+<p>Check the following slides for some of the initial ideas behind these sessions.</p>
+<script async class="speakerdeck-embed" data-id="c6c779d808e142d4999bf1c0bbe4e2ee" data-ratio="1.77777777777778" src="//speakerdeck.com/assets/embed.js"></script>
 <div id="interaction-rules" class="section level2">
 <h2><span class="header-section-number">2.1</span> Interaction rules</h2>
-<p>In order for DSgs sessions to run smoothly, it’s important that we have <strong>clear expectations</strong> of what we’ll do. DSgs sessions <strong>are not consulting sessions</strong>. We will help you as much as we can during the session, but after it’s over, we won’t spend time writing new code for you. That is, we will not take requests for work you need help finishing regardless of how important it is. That’s why we recommend planning ahead and even having weekly DSgs sessions if you have a deadline in mind instead of approaching us for help the week the project is due. We are most helpful early in a project cycle than at the end.</p>
-<p>We understand that you might be stressed or under significant pressure, but please follow our <a href="http://research.libd.org/rstatsclub/#.X4CHhtBKguU">code of conduct</a> <a href="#fn1" class="footnote-ref" id="fnref1"><sup>1</sup></a>. Otherwise, we will refrain from meeting with you.</p>
+<p>In order for DSgs sessions to run smoothly, it’s important that we have <strong>clear expectations</strong> of what we’ll do. DSgs sessions <strong>are not consulting sessions</strong>. We will help you as much as we can during the session, but after it’s over, we won’t spend time writing new code for you. That is, we will not take requests for work you need help finishing regardless of how important it is. That’s why <strong>we recommend planning ahead</strong> and even having weekly DSgs sessions if you have a deadline in mind instead of approaching us for help the week the project is due. We are most helpful early in a project cycle than at the end.</p>
+<p>We understand that you might be stressed or under significant pressure, but please follow our <a href="http://research.libd.org/rstatsclub/#.X4CHhtBKguU">code of conduct</a> <a href="#fn1" class="footnote-ref" id="fnref1"><sup>1</sup></a>. Otherwise, we will forced to stop meeting with you.</p>
 </div>
 <div id="help-us-help-you" class="section level2">
 <h2><span class="header-section-number">2.2</span> Help us help you</h2>
 <p>When you sign up for a session, you will fill a small form where you can provide some information about why you want to meet. We will spend up to 15 minutes preparing for a session, and in order to make better use of that time, it is important that you provide us enough information so we can do a better job helping you.</p>
 <div id="framing-a-question" class="section level3">
 <h3><span class="header-section-number">2.2.1</span> Framing a question</h3>
-<p>Instead of saying “I need help”, it will be useful for us if you can <strong>be more specific</strong>. For example, “I need help with <code>jaffelab::cleaningY()</code>” or “I need help installing the Bioconductor package <code>SummarizedExperiment</code> on a Windows machine”. The first example lets us know that exact function you need help with, so we can revise the documentation before hand and come prepared to the meeting. The second example mentions a specific R package, where to find it (Bioconductor), and what operating system you are using.</p>
+<p>Instead of saying “I need help”, it will be useful for us if you can <strong>be more specific</strong>. For example, “I need help with <code>jaffelab::cleaningY()</code>” or “I need help installing the Bioconductor package <code>SummarizedExperiment</code> on a Windows machine”. The first example lets us know that exact function you need help with, so we can revise the documentation before hand and come prepared to the meeting. The second example mentions a specific R package, where to find it (Bioconductor), and what operating system you are using. Here are some more example help requests:</p>
+<ul>
+<li>I want to learn how to use R, where should I start?</li>
+<li>I finished the CBDS lesson on using GitHub but I need help using git at JHPCE.</li>
+<li>I have some data that I generated and want to explore it. Which plots should I make?</li>
+<li>A collaborator suggested a specific linear regression model (<code>~ age * brain region</code>), can you explain to me how to interpret the results?</li>
+<li>Which R package should I use for performing a gene ontology enrichment analysis?</li>
+<li>I’m interesting in using software <code>xx</code> you wrote, can you help me understand how to do <code>yy</code> with it?</li>
+<li>I like the visualization you made for project <code>xx</code>, can you help me make a similar one with my data?</li>
+<li>I want to adapt code <code>xx</code> your team wrote in the past and use it in my project, can you help me get started?</li>
+</ul>
 </div>
 <div id="useful-information" class="section level3">
 <h3><span class="header-section-number">2.2.2</span> Useful information</h3>
 <p>As problems get more specific, we will require more information. If you are encountering an R error that you need help with, providing a small reproducible example will make the whole experience much smoother. The R package that is very useful for providing such examples is <em><a href="https://CRAN.R-project.org/package=reprex">reprex</a></em>. You can watch our LIBD rstats club <a href="https://youtu.be/8bBo3B7N8YQ">video on <code>reprex</code></a> to get more familiarized with this package.</p>
+<iframe width="560" height="315" src="https://www.youtube.com/embed/8bBo3B7N8YQ" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen>
+</iframe>
 <p>To share code with us,</p>
 <ul>
-<li>Please create a <a href="https://gist.github.com/"><code>gist</code></a> which can be either public or private. In the <code>gist</code> include all the commands you ran and the output you got. Or provide the <code>reprex</code> code (preferred option).</li>
+<li>Please create a <a href="https://gist.github.com/"><strong><code>gist</code></strong></a> which can be either public or private. In the <code>gist</code> include all the commands you ran and the output you got. Or provide the <code>reprex</code> code (preferred option).</li>
 <li>If you are already using GitHub for version controlling your code, then include the <strong>link to the script</strong> you are running.</li>
 <li>If you have a companion log file at JHPCE, please share the <strong>full path to the log file</strong> <a href="#fn2" class="footnote-ref" id="fnref2"><sup>2</sup></a></li>
 <li>Ideally include the R session information which you can generate using <code>options(width = 120); sessioninfo::session_info()</code>. This information will be particularly useful for solving issues with cutting edge R/Bioconductor/GitHub packages.</li>
@@ -317,9 +332,7 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <div id="dsgs-session-reports" class="section level2">
 <h2><span class="header-section-number">2.4</span> DSgs session reports</h2>
 <p>If you are interested in public information from our past sessions, check <a href="https://lcolladotor.github.io/DSgs_logs/"><strong>DSgs_logs</strong></a>, and in particular, some of our <a href="https://lcolladotor.github.io/DSgs_logs/graphs.html"><strong>graphs</strong></a>.</p>
-<p><img src="https://lcolladotor.github.io/DSgs_logs/_main_files/figure-html/graph_total-1.png" width="800px" align="center"></p>
 <p><img src="https://raw.githubusercontent.com/lcolladotor/DSgs_logs/gh-pages/_main_files/figure-html/graph_total-1.png" width="800px" align="center"></p>
-<p>TODO: check if the first figure works (gh-pages has some issues right now)</p>
 </div>
 <div id="become-a-dsgs-guide" class="section level2">
 <h2><span class="header-section-number">2.5</span> Become a DSgs guide</h2>
@@ -344,7 +357,7 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <div class="footnotes">
 <hr />
 <ol start="1">
-<li id="fn1"><p>We will update the code of conduct once Bioconductor publishes their latest code of conduct in the fall of 2020.<a href="data-science-guidance-sessions.html#fnref1" class="footnote-back">↩︎</a></p></li>
+<li id="fn1"><p>We will update the code of conduct once Bioconductor publishes their latest code of conduct in the Fall of 2020.<a href="data-science-guidance-sessions.html#fnref1" class="footnote-back">↩︎</a></p></li>
 <li id="fn2"><p>You might want to use the <em><a href="https://github.com/LieberInstitute/sgejogs">sgejogs</a></em> package for helping you create such log files.<a href="data-science-guidance-sessions.html#fnref2" class="footnote-back">↩︎</a></p></li>
 <li id="fn3"><p>We recommend four 25 minute sessions, each with 15 minutes of preparation and 10 minutes of post-meeting wrap up.<a href="data-science-guidance-sessions.html#fnref3" class="footnote-back">↩︎</a></p></li>
 </ol>
