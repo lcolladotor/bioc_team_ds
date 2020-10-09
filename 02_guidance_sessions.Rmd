@@ -29,7 +29,9 @@ Instead of saying "I need help", it will be useful for us if you can **be more s
 * Which R package should I use for performing a gene ontology enrichment analysis?
 * I'm interesting in using software `xx` you wrote, can you help me understand how to do `yy` with it?
 * I like the visualization you made for project `xx`, can you help me make a similar one with my data?
-* I want to adapt code `xx` your team wrote in the past and use it in my project, can you help me get started?
+* I want to adapt code `xx` your team wrote in the past and use it in my project, can you help me get started
+
+Note that we'll use the information you provided us for our [DSgs session reports](#dsgs-session-reports). We will keep your name anonymous and remove any private information.
 
 ### Useful information
 
