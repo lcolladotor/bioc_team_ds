@@ -80,7 +80,7 @@ If you are interested in a 25 minute Data Science guidance session, please sign 
   - Research interests: spatial transcriptomics, calcium imaging, RNAscope, medical image processing.
   - Technologies I use: Matlab, R, GitHub, SGE/JHPCE.
   - Learning about: Machine Learning, spatial transcriptomics, statistical analysis.
-  - [Calendly](https://calendly.com/madhavitippani)
+  - [Calendly](https://calendly.com/madhavitippani/25-minute-data-science-guidance-session)
 
 
 ## DSgs session reports
