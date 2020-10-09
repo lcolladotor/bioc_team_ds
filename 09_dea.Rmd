@@ -1,1 +1,5 @@
 # Differential expression analysis
+
+Below you can watch the videos of our training sessions.
+
+TODO embed video

@@ -1,3 +1,19 @@
 # What they forgot to teach you about R
 
-https://rstudio-conf-2020.github.io/what-they-forgot/
+[Jenny Bryan](https://twitter.com/JennyBryan), [Jim Hester](https://twitter.com/jimhester_), [Kara Woo](https://twitter.com/kara_woo) and others have spent a significant amount of effort thinking about organizing R projects and developing tools that facilitate this process. They have written papers describing their ideas, trained others on how to implement their ideas through workshops, and written free books.
+
+Two of the main books related to these ideas are:
+
+* [What They Forgot to Teach You About R](https://rstats.wtf/)
+* [Happy Git and GitHub for the useR](https://happygitwithr.com/)
+
+In these books, they teach how to use R, RStudio, git/GitHub, and overall how to organize your code and projects. As I'm writing this, their most recent workshop was at `rstudio::conf(2020)` which is publicly available through [**rstudio-conf-2020.github.io**](https://rstudio-conf-2020.github.io/what-they-forgot/).
+
+## Bootcamp sessions
+
+Using the _what they forgot_ (WTF) `rstudio::conf(2020)` materials, we spent two bootcamps sessions (each 2 hours long) learning these ideas and examining how they can help us for our work. We aim to implement the organization principles in our work because of the value they bring and to have a common baseline. We will teach others these concepts more slowly through [Data Science guidance sessions](#data-science-guidance-sessions).
+
+Below you can watch the videos of our training sessions.
+
+* TODO embed video session 1
+* TODO embed video session 2

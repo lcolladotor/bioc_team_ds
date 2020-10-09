@@ -1,5 +1,40 @@
-# The Elements of Data Analytic Style + CBDS
+# The Elements of Data Analytic Style 
 
-https://leanpub.com/datastyle
+[Jeff Leek](https://twitter.com/jtleek) is world renowned for his efforts in data science education and become widely known through the [JHU Data Science Specialization Coursera](https://www.coursera.org/specializations/jhu-data-science) courses as well as the [Simply Statitics](https://simplystatistics.org/) blog. Over the years, Jeff has shared his ideas through multiple venues including GitHub repositories such as [`jtleek/reviews`](https://github.com/jtleek/reviews) which provides a guide for reviewing papers.
 
-https://leanpub.com/u/jtleek 
+Around 2016, Jeff re-organized his ideas related to learning and applying data science to create a book called [**The Elements of Data Analytic Style**](https://leanpub.com/datastyle) that you can buy for a small amount or even get it free through [Leanpub](https://leanpub.com/datastyle). This book is about 90 pages long and is organized in chapters that cover topics such as:
+
+1. The data analytic question
+1. Tidying the data
+1. Checking the data
+1. Exploratory analysis
+1. Statistical modeling and inference
+1. Prediction and machine learning
+1. Causality
+1. Written analyses
+1. Creating figures
+1. Presenting data
+1. Reproducibility
+1. A few matters of form
+1. The data analysis checklist
+
+## Bootcamp session
+
+We spent one of our bootcamp sessions going over this book and getting familiarized with some Jeff's ideas as well as identifying sections that we can refer others to during our [Data Science guidance sessions](#data-science-guidance-sessions). 
+
+Below you can watch the video of our training session.
+
+TODO embed video
+
+For more information about Jeff's Leanpub materials, check this [link](https://leanpub.com/u/jtleek).
+
+# CBDS
+
+
+
+
+## Bootcamp session
+
+Below you can watch the video of our training session.
+
+TODO embed video
