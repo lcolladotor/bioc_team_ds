@@ -36,3 +36,5 @@ We do everything in this book, though to different degrees. This book is actuall
 Below you can watch the video of our training session.
 
 TODO embed video
+
+For more information about Jeff's Leanpub materials, check this [link](https://leanpub.com/u/jtleek).
