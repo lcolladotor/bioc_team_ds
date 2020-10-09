@@ -139,12 +139,12 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 </ul></li>
 <li class="chapter" data-level="1" data-path="introduction.html"><a href="introduction.html"><i class="fa fa-check"></i><b>1</b> Introduction</a></li>
 <li class="chapter" data-level="2" data-path="data-science-guidance-sessions.html"><a href="data-science-guidance-sessions.html"><i class="fa fa-check"></i><b>2</b> Data Science guidance sessions</a><ul>
-<li class="chapter" data-level="2.1" data-path="data-science-guidance-sessions.html"><a href="data-science-guidance-sessions.html#sign-up"><i class="fa fa-check"></i><b>2.1</b> Sign up</a></li>
+<li class="chapter" data-level="2.1" data-path="data-science-guidance-sessions.html"><a href="data-science-guidance-sessions.html#interaction-rules"><i class="fa fa-check"></i><b>2.1</b> Interaction rules</a></li>
 <li class="chapter" data-level="2.2" data-path="data-science-guidance-sessions.html"><a href="data-science-guidance-sessions.html#help-us-help-you"><i class="fa fa-check"></i><b>2.2</b> Help us help you</a><ul>
 <li class="chapter" data-level="2.2.1" data-path="data-science-guidance-sessions.html"><a href="data-science-guidance-sessions.html#framing-a-question"><i class="fa fa-check"></i><b>2.2.1</b> Framing a question</a></li>
 <li class="chapter" data-level="2.2.2" data-path="data-science-guidance-sessions.html"><a href="data-science-guidance-sessions.html#useful-information"><i class="fa fa-check"></i><b>2.2.2</b> Useful information</a></li>
 </ul></li>
-<li class="chapter" data-level="2.3" data-path="data-science-guidance-sessions.html"><a href="data-science-guidance-sessions.html#interaction-rules"><i class="fa fa-check"></i><b>2.3</b> Interaction rules</a></li>
+<li class="chapter" data-level="2.3" data-path="data-science-guidance-sessions.html"><a href="data-science-guidance-sessions.html#sign-up"><i class="fa fa-check"></i><b>2.3</b> Sign up</a></li>
 <li class="chapter" data-level="2.4" data-path="data-science-guidance-sessions.html"><a href="data-science-guidance-sessions.html#dsgs-session-reports"><i class="fa fa-check"></i><b>2.4</b> DSgs session reports</a></li>
 <li class="chapter" data-level="2.5" data-path="data-science-guidance-sessions.html"><a href="data-science-guidance-sessions.html#become-a-dsgs-guide"><i class="fa fa-check"></i><b>2.5</b> Become a DSgs guide</a></li>
 </ul></li>
@@ -241,9 +241,33 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
             <section class="normal" id="section-">
 <div id="data-science-guidance-sessions" class="section level1">
 <h1><span class="header-section-number">2</span> Data Science guidance sessions</h1>
-<p>Or DSgs for short</p>
+<p>Data is abundant in many aspects of our research work thanks to high-throughput experimental assays. While some analyses will require a significant amount of time from people who primarily do that type of work, we know that many of us are interested in learning more about working with data. As such, as a team, we provide <strong>Data Science guidance sessions</strong> (DSgs). These are 25 minute sessions where we’ll try our best to help you, teach you, troubleshoot with you, and overall guide you as much as we can. DSgs sessions are particularly helpful if you want to work on a data problem or gain some data skills across a period of weeks or months. Working with data and programming languages can have a steep learning curve and it can feel daunting. As a team, we have trained ourselves to have a common baseline and can help you get familiarized with the concept of a project-oriented workflow. This involves tools such as RStudio, git/GitHub, how to organize your code, how to ask for help, and overall tools to make your work more reproducible. These ideas when put into practice are very helpful for finding why things are not working, as we all inevitably encounter errors in our code and the open source software we rely on. Sometimes we won’t know the answer either, but maybe we can help you construct more specific Google search terms.</p>
+<div id="interaction-rules" class="section level2">
+<h2><span class="header-section-number">2.1</span> Interaction rules</h2>
+<p>In order for DSgs sessions to run smoothly, it’s important that we have <strong>clear expectations</strong> of what we’ll do. DSgs sessions <strong>are not consulting sessions</strong>. We will help you as much as we can during the session, but after it’s over, we won’t spend time writing new code for you. That is, we will not take requests for work you need help finishing regardless of how important it is. That’s why we recommend planning ahead and even having weekly DSgs sessions if you have a deadline in mind instead of approaching us for help the week the project is due. We are most helpful early in a project cycle than at the end.</p>
+<p>We understand that you might be stressed or under significant pressure, but please follow our <a href="http://research.libd.org/rstatsclub/#.X4CHhtBKguU">code of conduct</a> <a href="#fn1" class="footnote-ref" id="fnref1"><sup>1</sup></a>. Otherwise, we will refrain from meeting with you.</p>
+</div>
+<div id="help-us-help-you" class="section level2">
+<h2><span class="header-section-number">2.2</span> Help us help you</h2>
+<p>When you sign up for a session, you will fill a small form where you can provide some information about why you want to meet. We will spend up to 15 minutes preparing for a session, and in order to make better use of that time, it is important that you provide us enough information so we can do a better job helping you.</p>
+<div id="framing-a-question" class="section level3">
+<h3><span class="header-section-number">2.2.1</span> Framing a question</h3>
+<p>Instead of saying “I need help”, it will be useful for us if you can <strong>be more specific</strong>. For example, “I need help with <code>jaffelab::cleaningY()</code>” or “I need help installing the Bioconductor package <code>SummarizedExperiment</code> on a Windows machine”. The first example lets us know that exact function you need help with, so we can revise the documentation before hand and come prepared to the meeting. The second example mentions a specific R package, where to find it (Bioconductor), and what operating system you are using.</p>
+</div>
+<div id="useful-information" class="section level3">
+<h3><span class="header-section-number">2.2.2</span> Useful information</h3>
+<p>As problems get more specific, we will require more information. If you are encountering an R error that you need help with, providing a small reproducible example will make the whole experience much smoother. The R package that is very useful for providing such examples is <em><a href="https://CRAN.R-project.org/package=reprex">reprex</a></em>. You can watch our LIBD rstats club <a href="https://youtu.be/8bBo3B7N8YQ">video on <code>reprex</code></a> to get more familiarized with this package.</p>
+<p>To share code with us,</p>
+<ul>
+<li>Please create a <a href="https://gist.github.com/"><code>gist</code></a> which can be either public or private. In the <code>gist</code> include all the commands you ran and the output you got. Or provide the <code>reprex</code> code (preferred option).</li>
+<li>If you are already using GitHub for version controlling your code, then include the <strong>link to the script</strong> you are running.</li>
+<li>If you have a companion log file at JHPCE, please share the <strong>full path to the log file</strong> <a href="#fn2" class="footnote-ref" id="fnref2"><sup>2</sup></a></li>
+<li>Ideally include the R session information which you can generate using <code>options(width = 120); sessioninfo::session_info()</code>. This information will be particularly useful for solving issues with cutting edge R/Bioconductor/GitHub packages.</li>
+</ul>
+</div>
+</div>
 <div id="sign-up" class="section level2">
-<h2><span class="header-section-number">2.1</span> Sign up</h2>
+<h2><span class="header-section-number">2.3</span> Sign up</h2>
 <p>If you are interested in a 25 minute Data Science guidance session, please sign up through the Calendly links below with a session with one of our guides. If this is the first time you are using this or might need more general guidance, sign up with Leo.</p>
 <ul>
 <li><a href="https://github.com/lcolladotor">Leonardo Collado-Torres</a> (<a href="https://support.bioconductor.org/u/6526/">BioC Support</a>)
@@ -269,7 +293,7 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 </ul></li>
 <li><a href="https://github.com/lahuuki">Louise Huuki</a> (<a href="https://support.bioconductor.org/u/24238/">BioC Support</a>)
 <ul>
-<li>Research interests: RNA-seq, data visulization.</li>
+<li>Research interests: RNA-seq, data visualization.</li>
 <li>Technologies I use: R (tidyverse, ggplot, dplyr), Python, GitHub.</li>
 <li>Learning about: Bioconductor.</li>
 <li><a href="https://calendly.com/lahuuki/25-min-data-science-guidance-session">Calendly</a></li>
@@ -290,19 +314,6 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 </ul></li>
 </ul>
 </div>
-<div id="help-us-help-you" class="section level2">
-<h2><span class="header-section-number">2.2</span> Help us help you</h2>
-<div id="framing-a-question" class="section level3">
-<h3><span class="header-section-number">2.2.1</span> Framing a question</h3>
-</div>
-<div id="useful-information" class="section level3">
-<h3><span class="header-section-number">2.2.2</span> Useful information</h3>
-</div>
-</div>
-<div id="interaction-rules" class="section level2">
-<h2><span class="header-section-number">2.3</span> Interaction rules</h2>
-<p>Code of conduct + more things</p>
-</div>
 <div id="dsgs-session-reports" class="section level2">
 <h2><span class="header-section-number">2.4</span> DSgs session reports</h2>
 <p>If you are interested in public information from our past sessions, check <a href="https://lcolladotor.github.io/DSgs_logs/"><strong>DSgs_logs</strong></a>, and in particular, some of our <a href="https://lcolladotor.github.io/DSgs_logs/graphs.html"><strong>graphs</strong></a>.</p>
@@ -314,7 +325,7 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <h2><span class="header-section-number">2.5</span> Become a DSgs guide</h2>
 <p>Non-team members are welcome to join the <a href="index.html#dsgs-guide-team-members">DSgs-guides</a>. This involves a significant time commitment (~ 7 hours per week) and you need to discuss this with your supervisor. These commitments are:</p>
 <ul>
-<li>helping others through DSgs sessions ~ 200 minutes per week <a href="#fn1" class="footnote-ref" id="fnref1"><sup>1</sup></a></li>
+<li>helping others through DSgs sessions ~ 200 minutes per week <a href="#fn3" class="footnote-ref" id="fnref3"><sup>3</sup></a></li>
 <li>a weekly 30 minute meeting as explained in <a href="team-meetings.html#dsgs-feedback">DSgs: feedback</a></li>
 <li>attending the LIBD rstats club (1 hour per week)</li>
 <li>time for self-learning and/or building common resources (~ 1 hour per week)</li>
@@ -333,7 +344,9 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <div class="footnotes">
 <hr />
 <ol start="1">
-<li id="fn1"><p>We recommend four 25 minute sessions, each with 15 minutes of preparation and 10 minutes of post-meeting wrap up.<a href="data-science-guidance-sessions.html#fnref1" class="footnote-back">↩︎</a></p></li>
+<li id="fn1"><p>We will update the code of conduct once Bioconductor publishes their latest code of conduct in the fall of 2020.<a href="data-science-guidance-sessions.html#fnref1" class="footnote-back">↩︎</a></p></li>
+<li id="fn2"><p>You might want to use the <em><a href="https://github.com/LieberInstitute/sgejogs">sgejogs</a></em> package for helping you create such log files.<a href="data-science-guidance-sessions.html#fnref2" class="footnote-back">↩︎</a></p></li>
+<li id="fn3"><p>We recommend four 25 minute sessions, each with 15 minutes of preparation and 10 minutes of post-meeting wrap up.<a href="data-science-guidance-sessions.html#fnref3" class="footnote-back">↩︎</a></p></li>
 </ol>
 </div>
             </section>
