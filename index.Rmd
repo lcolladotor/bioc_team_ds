@@ -2,9 +2,16 @@
 title: "R/Bioconductor-powered Team Data Science"
 author: "Leonardo Collado-Torres"
 site: bookdown::bookdown_site
+apple-touch-sin: "icon_192.png"
+apple-touch-icon-size: 192
+favicon: "icon_32.png"
+github-repo: "lcolladotor/bioc_team_ds"
 documentclass: book
 output:
-  bookdown::gitbook: default
+  bookdown::gitbook:
+    includes:
+      after_body: map_and_ga.html
+    
 ---
 
 # Overview {-}
