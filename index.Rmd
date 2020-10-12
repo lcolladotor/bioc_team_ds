@@ -11,6 +11,7 @@ output:
   bookdown::gitbook:
     includes:
       after_body: map_and_ga.html
+    css: "style.css"
     
 ---
 
