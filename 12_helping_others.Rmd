@@ -70,6 +70,10 @@ I recommend also reading the following papers:
 * Lurie, William. “THE IMPERTINENT QUESTIONER: THE SCIENTIST'S GUIDE TO THE STATISTICIAN'S MIND.” American Scientist, vol. 46, no. 1, 1958, pp. 57–61. JSTOR, [jstor.org/stable/27827055](http://www.jstor.org/stable/27827055).
 * Finney, D.J. (1982), The questioning statistician. Statist. Med., 1: 5-13. doi: [10.1002/sim.4780010103](https://doi.org/10.1002/sim.4780010103)
 
+Below you can watch the video of our training session.
+
+<iframe width="560" height="315" src="https://www.youtube.com/embed/wrdbOl_zbLs" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+
 ### Common responses
 
 ### Internal sessions log

@@ -12,6 +12,6 @@ To get ourselves familiarized with CBDS and the courses provided by it, we spent
 
 Below you can watch the video of our training session.
 
-TODO embed video
+<iframe width="560" height="315" src="https://www.youtube.com/embed/_kyfiQePLDk" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 
 For more information about Jeff's Leanpub materials, check this [link](https://leanpub.com/u/jtleek).

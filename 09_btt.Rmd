@@ -6,4 +6,4 @@ https://github.com/rstudio-conf-2020/build-tidy-tools
 
 Below you can watch the videos of our training sessions.
 
-TODO embed video
+<iframe width="560" height="315" src="https://www.youtube.com/embed/F0i0E1L4-6k" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>

@@ -15,5 +15,6 @@ Using the _what they forgot_ (WTF) `rstudio::conf(2020)` materials, we spent two
 
 Below you can watch the videos of our training sessions.
 
-* TODO embed video session 1
-* TODO embed video session 2
+<iframe width="560" height="315" src="https://www.youtube.com/embed/6g327STtD0Q" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+
+<iframe width="560" height="315" src="https://www.youtube.com/embed/DDsOaNabDRE" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
