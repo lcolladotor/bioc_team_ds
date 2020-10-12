@@ -1,5 +1,10 @@
 # Differential expression analysis
 
+To learn about differential expression analysis we used the data from the [`SPEAQeasy-example`](http://research.libd.org/SPEAQeasy-example/) website we made. This involves work mostly by [Nicholas J. Eagles](https://github.com/Nick-Eagles), [Joshua M. Stolz](https://github.com/joshstolz), and [Louise Huuki](https://github.com/lahuuki). In particular, we followed the set of activities described in detail at [**SPEAQeasy-example/bootcamp_intro**](http://research.libd.org/SPEAQeasy-example/bootcamp_intro). There are several Bioconductor [workflows](http://bioconductor.org/packages/release/BiocViews.html#___Workflow) that also explain how to do differential expression analyses. However, we used the data from `SPEAQeasy-example` because it has specific properties that are common to the processed data we generate at LIBD, given that we've processed a lot of RNA-seq data using [`SPEAQeasy`](http://research.libd.org/SPEAQeasy/). Having said that, for more in depth explanations, you might want to check the [`RNAseq123`](http://bioconductor.org/packages/release/workflows/vignettes/RNAseq123/inst/doc/limmaWorkflow.html) and the [`rnaseqGene`](http://bioconductor.org/packages/release/workflows/vignettes/rnaseqGene/inst/doc/rnaseqGene.html) Bioconductor workflows that explain how to use packages such as `r BiocStyle::Biocpkg("limma")` and `r BiocStyle::Biocpkg("DESeq2")`.
+
+
+## Bootcamp sessions
+
 Below you can watch the videos of our training sessions.
 
 TODO embed video
