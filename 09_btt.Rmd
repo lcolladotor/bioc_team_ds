@@ -11,3 +11,5 @@ The _Building Tidy Tools_ workshop is very useful if you want to transition from
 This workshop involves several exercises, which we highly recommend that you try to solve. One of our solutions is [`lahuuki/foofactors2`](https://github.com/lahuuki/foofactors2). Below you can watch the videos of our training sessions.
 
 <iframe width="560" height="315" src="https://www.youtube.com/embed/F0i0E1L4-6k" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+
+<iframe width="560" height="315" src="https://www.youtube.com/embed/yqyVovQYmxo" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
