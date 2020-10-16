@@ -136,5 +136,5 @@ I'm a part of a few more Slack workspaces, though not all of them are public.
 * **rOpenSci**: for members of [rOpenSci](https://ropensci.org/)
 * **CSCCE**: from the [Center for Scientific Collaboration and Community Engagement](https://www.cscce.org/) which is useful if you want to learn more about community engagement
 * **CDSB**: the [Community of Bioinformatics Software Developers](https://comunidadbioinfo.github.io/) (in Spanish) which I co-founded in 2018 and through which we organize R workshops to help grow the community of R/Bioconductor developers in Latin America
-* ***LatinR**: a public Slack workspace related to the [LatinR conference and community](https://latin-r.com/en), whose goals are overlaping with those from CDSB
+* **LatinR**: a public Slack workspace related to the [LatinR conference and community](https://latin-r.com/en), whose goals are overlaping with those from CDSB
 
