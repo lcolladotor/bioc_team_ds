@@ -116,17 +116,25 @@ This is the LIBD Slack workspace used by the Neuropathology team. We use it to i
 
 ### Bioconductor
 
+One very useful public Slack workspace is the Bioconductor one. You can join for free through [bioc-community.herokuapp.com/](https://bioc-community.herokuapp.com/). If you join this Slack workspace, please introduce yourself on the **introductions** channel. You mgith also be interested in channels such as:
+
+* **biocYYYY** where `YYYY` is the given year, which is the main channel for that year's Bioconductor conference. For example, `bioc2020`.
+* **containers** to learn more about the Bioconductor Docker images
+* **developers_forum** for learning about the Bioconductor Developer's forum (typically held once per month)
+* **jobs** for job announcements
+* **spatial** for spatial transcriptomics and related technologies
+
 ### R-Ladies Baltimore
 
-### Misc
+Another public Slack workspace is the one run by [R-Ladies Baltimore](https://rladies-baltimore.github.io/), a local chapter from R-Ladies Global. This Slack workspace is mostly active during the meetup sessions. Check out their [Meetup page](https://www.meetup.com/rladies-baltimore/) for more information.
 
-#### JHU Biostatistics
+### Miscellaneous
 
-#### rOpenSci
+I'm a part of a few more Slack workspaces, though not all of them are public.
 
-#### The CSCCE
-
-#### CDSB
-
-#### LatinR
+* **JHU Biostatistics**: for members and alumni of the JHBSPH Biostatistics department. 
+* **rOpenSci**: for members of [rOpenSci](https://ropensci.org/)
+* **CSCCE**: from the [Center for Scientific Collaboration and Community Engagement](https://www.cscce.org/) which is useful if you want to learn more about community engagement
+* **CDSB**: the [Community of Bioinformatics Software Developers](https://comunidadbioinfo.github.io/) (in Spanish) which I co-founded in 2018 and through which we organize R workshops to help grow the community of R/Bioconductor developers in Latin America
+* ***LatinR**: a public Slack workspace related to the [LatinR conference and community](https://latin-r.com/en), whose goals are overlaping with those from CDSB
 
