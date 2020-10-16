@@ -6,7 +6,7 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge" />
   <title>10 Differential expression analysis | R/Bioconductor-powered Team Data Science</title>
   <meta name="description" content="10 Differential expression analysis | R/Bioconductor-powered Team Data Science" />
-  <meta name="generator" content="bookdown 0.21 and GitBook 2.6.7" />
+  <meta name="generator" content="bookdown 0.20 and GitBook 2.6.7" />
 
   <meta property="og:title" content="10 Differential expression analysis | R/Bioconductor-powered Team Data Science" />
   <meta property="og:type" content="book" />
@@ -164,7 +164,7 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <li class="chapter" data-level="3.6.1" data-path="how-to-ask-for-help.html"><a href="how-to-ask-for-help.html#jhulibd"><i class="fa fa-check"></i><b>3.6.1</b> JHU/LIBD</a></li>
 <li class="chapter" data-level="3.6.2" data-path="how-to-ask-for-help.html"><a href="how-to-ask-for-help.html#bioconductor"><i class="fa fa-check"></i><b>3.6.2</b> Bioconductor</a></li>
 <li class="chapter" data-level="3.6.3" data-path="how-to-ask-for-help.html"><a href="how-to-ask-for-help.html#r-ladies-baltimore"><i class="fa fa-check"></i><b>3.6.3</b> R-Ladies Baltimore</a></li>
-<li class="chapter" data-level="3.6.4" data-path="how-to-ask-for-help.html"><a href="how-to-ask-for-help.html#misc"><i class="fa fa-check"></i><b>3.6.4</b> Misc</a></li>
+<li class="chapter" data-level="3.6.4" data-path="how-to-ask-for-help.html"><a href="how-to-ask-for-help.html#miscellaneous"><i class="fa fa-check"></i><b>3.6.4</b> Miscellaneous</a></li>
 </ul></li>
 </ul></li>
 <li class="part"><span><b>I Bootcamps</b></span></li>
@@ -183,16 +183,16 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <li class="chapter" data-level="6.1" data-path="what-they-forgot-to-teach-you-about-r.html"><a href="what-they-forgot-to-teach-you-about-r.html#bootcamp-sessions"><i class="fa fa-check"></i><b>6.1</b> Bootcamp sessions</a></li>
 </ul></li>
 <li class="chapter" data-level="7" data-path="the-elements-of-data-analytic-style.html"><a href="the-elements-of-data-analytic-style.html"><i class="fa fa-check"></i><b>7</b> The Elements of Data Analytic Style</a><ul>
-<li class="chapter" data-level="7.1" data-path="the-elements-of-data-analytic-style.html"><a href="the-elements-of-data-analytic-style.html#bootcamp-session-1"><i class="fa fa-check"></i><b>7.1</b> Bootcamp session</a></li>
+<li class="chapter" data-level="7.1" data-path="how-to-be-a-modern-scientist.html"><a href="how-to-be-a-modern-scientist.html#bootcamp-session"><i class="fa fa-check"></i><b>7.1</b> Bootcamp session</a></li>
 </ul></li>
 <li class="chapter" data-level="8" data-path="cbds.html"><a href="cbds.html"><i class="fa fa-check"></i><b>8</b> CBDS</a><ul>
-<li class="chapter" data-level="8.1" data-path="cbds.html"><a href="cbds.html#bootcamp-session-2"><i class="fa fa-check"></i><b>8.1</b> Bootcamp session</a></li>
+<li class="chapter" data-level="8.1" data-path="how-to-be-a-modern-scientist.html"><a href="how-to-be-a-modern-scientist.html#bootcamp-session"><i class="fa fa-check"></i><b>8.1</b> Bootcamp session</a></li>
 </ul></li>
 <li class="chapter" data-level="9" data-path="building-tidy-tools.html"><a href="building-tidy-tools.html"><i class="fa fa-check"></i><b>9</b> Building Tidy Tools</a><ul>
-<li class="chapter" data-level="9.1" data-path="building-tidy-tools.html"><a href="building-tidy-tools.html#bootcamp-sessions-1"><i class="fa fa-check"></i><b>9.1</b> Bootcamp sessions</a></li>
+<li class="chapter" data-level="9.1" data-path="what-they-forgot-to-teach-you-about-r.html"><a href="what-they-forgot-to-teach-you-about-r.html#bootcamp-sessions"><i class="fa fa-check"></i><b>9.1</b> Bootcamp sessions</a></li>
 </ul></li>
 <li class="chapter" data-level="10" data-path="differential-expression-analysis.html"><a href="differential-expression-analysis.html"><i class="fa fa-check"></i><b>10</b> Differential expression analysis</a><ul>
-<li class="chapter" data-level="10.1" data-path="differential-expression-analysis.html"><a href="differential-expression-analysis.html#bootcamp-sessions-2"><i class="fa fa-check"></i><b>10.1</b> Bootcamp sessions</a></li>
+<li class="chapter" data-level="10.1" data-path="what-they-forgot-to-teach-you-about-r.html"><a href="what-they-forgot-to-teach-you-about-r.html#bootcamp-sessions"><i class="fa fa-check"></i><b>10.1</b> Bootcamp sessions</a></li>
 </ul></li>
 <li class="part"><span><b>II Internal</b></span></li>
 <li class="chapter" data-level="11" data-path="team-meetings.html"><a href="team-meetings.html"><i class="fa fa-check"></i><b>11</b> Team meetings</a><ul>
@@ -256,7 +256,7 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <div id="differential-expression-analysis" class="section level1">
 <h1><span class="header-section-number">10</span> Differential expression analysis</h1>
 <p>To learn about differential expression analysis we used the data from the <a href="http://research.libd.org/SPEAQeasy-example/"><code>SPEAQeasy-example</code></a> website we made. This involves work mostly by <a href="https://github.com/Nick-Eagles">Nicholas J. Eagles</a>, <a href="https://github.com/joshstolz">Joshua M. Stolz</a>, and <a href="https://github.com/lahuuki">Louise Huuki</a>. In particular, we followed the set of activities described in detail at <a href="http://research.libd.org/SPEAQeasy-example/bootcamp_intro"><strong>SPEAQeasy-example/bootcamp_intro</strong></a>. There are several Bioconductor <a href="http://bioconductor.org/packages/release/BiocViews.html#___Workflow">workflows</a> that also explain how to do differential expression analyses. However, we used the data from <code>SPEAQeasy-example</code> because it has specific properties that are common to the processed data we generate at LIBD, given that we’ve processed a lot of RNA-seq data using <a href="http://research.libd.org/SPEAQeasy/"><code>SPEAQeasy</code></a>. Having said that, for more in depth explanations, you might want to check the <a href="http://bioconductor.org/packages/release/workflows/vignettes/RNAseq123/inst/doc/limmaWorkflow.html"><code>RNAseq123</code></a> and the <a href="http://bioconductor.org/packages/release/workflows/vignettes/rnaseqGene/inst/doc/rnaseqGene.html"><code>rnaseqGene</code></a> Bioconductor workflows that explain how to use packages such as <em><a href="https://bioconductor.org/packages/3.12/limma">limma</a></em> and <em><a href="https://bioconductor.org/packages/3.12/DESeq2">DESeq2</a></em>.</p>
-<div id="bootcamp-sessions-2" class="section level2">
+<div id="bootcamp-sessions" class="section level2">
 <h2><span class="header-section-number">10.1</span> Bootcamp sessions</h2>
 <p>Below you can watch the videos of our training sessions.</p>
 <iframe width="560" height="315" src="https://www.youtube.com/embed/-tUHQd4o33Y" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen>
