@@ -20,7 +20,7 @@ You should try your best to follow those guidelines in order to make it easier f
 
 Since we use R so much, we also use R packages developed by RStudio developers. One great and friendly website for asking for help with all things that are related to R (but maybe not so much related to Bioconductor) is the [**RStudio Community website**](https://community.rstudio.com/). This website is particularly useful if you have questions about RStudio itself or the `tidyverse` R packages.
 
-If you want to get a summary of new posts that might be relevant to you, you can sign up for weekly email updates. On this website, there's a strong preference for using the `r BiocStyle::CRANpkg("reprex')` package for making small reproducible examples. Check our LIBD rstats club session on `reprex` to learn more about it.
+If you want to get a summary of new posts that might be relevant to you, you can sign up for weekly email updates. On this website, there's a strong preference for using the `r BiocStyle::CRANpkg("reprex")` package for making small reproducible examples. Check our LIBD rstats club session on `reprex` to learn more about it.
 
 <iframe width="560" height="315" src="https://www.youtube.com/embed/8bBo3B7N8YQ" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 
