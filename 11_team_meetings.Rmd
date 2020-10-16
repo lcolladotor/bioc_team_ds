@@ -10,13 +10,19 @@ Every week we meet for about an hour 20 minutes. The team meeting has three sect
 
 ## Papers & software
 
-Each week, we rotate team members randomly using `jaffelab::lab_presenters()` as shown on [this Google Spreadsheet](https://docs.google.com/spreadsheets/d/1r6552ySisg7_KpmJmChOvLHVWdMmss3bncEf2jqIM9k/edit?usp=sharing). That team member is in charge of:
+Each week, we rotate team members randomly using `jaffelab::lab_presenters()` as shown on [this presenters Google Spreadsheet](https://docs.google.com/spreadsheets/d/1r6552ySisg7_KpmJmChOvLHVWdMmss3bncEf2jqIM9k/edit?usp=sharing). That team member is in charge of:
 
 1. finding a paper or a software of interest
 2. notifying the group about it one week ahead on Slack
 3. preparing a few slides to explain the main concepts to us (plan for a 15 minute presentation)
 
-We record that portion of our meeting and make it publicly available through **TODO**. We then discuss privately our thoughts on the paper or software. 
+We record that portion of our meeting and make it publicly available through [the presenters Google Spreadsheet](https://docs.google.com/spreadsheets/d/1r6552ySisg7_KpmJmChOvLHVWdMmss3bncEf2jqIM9k/edit?usp=sharing). We then discuss privately our thoughts on the paper or software. Here's our first video:
+
+<iframe width="560" height="315" src="https://www.youtube.com/embed/wuPLVfdZ92Q" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+
+You can also find the rest of them under the **team lcolladotor** playlist at [LeonardoColladoTorres/playlists](https://www.youtube.com/c/LeonardoColladoTorres/playlists).
+
+
 
 ### Notes
 
