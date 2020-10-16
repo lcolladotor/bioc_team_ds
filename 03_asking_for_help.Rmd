@@ -1,24 +1,60 @@
 # How to ask for help
 
+In our area of work, we will frequently run into code error messages as well as work with concepts that span multiple research fields including neuroscience, genomics, and bioinformatics. Thus, it is completely natural that we'll need to ask others for help. We do this so frequently, that we end up developing skills for searching for the information that we need. Most of the times, we can spend a bit of time ourselves searching for a solution as described in more detail in ["you must try, and then must ask"](https://blogs.akamai.com/2013/10/you-must-try-and-then-you-must-ask.html). Though at some point, we will ask others for their direct input.
+
+Many of the communication tools we use for asking for help are text-based. It can be hard to convey jokes, so sometimes it's best to refrain from making jokes in order to prioritize a clear exchange of ideas. You should also be respectful of everyone's time and with the words you choose.
+
 ## Learning from our search history
+
+We have occasionally used a team activity called "learning from our search history" described [in this blog post](https://lcolladotor.github.io/2020/02/12/learning-from-our-search-history/). One of the goals of this activity was to learn some search skills each of us has that are typically not taught. Another goal was to show that we all search for more information all the time because no one, not matter how experienced, knows all the answers.
 
 ## Bioconductor Support website
 
+We use [Bioconductor](http://bioconductor.org/) R packages for most of our work because they contain a lot of useful functions for the type of work we do. Bioconductor packages can be under active development and changing frequently. Plus, some are challenging to understand how to use. For these and other reasons, Bioconductor has a [**BioC Support Website**](https://support.bioconductor.org/).
+
+You will need to make an account before you can ask (or answer) a question. Once you do, you will need to use [tags](https://support.bioconductor.org/t/) for labeling your question: typically with the tag that matches the Bioconductor package you are using. When you start to ask a new question, you will see a link to the new [posts guide](http://bioconductor.org/help/support/posting-guide/#composing) and the [tutorial for asking questions](https://support.bioconductor.org/p/117436/).
+
+You should try your best to follow those guidelines in order to make it easier for others to help you. Remember that you should follow the [Bioconductor code of conduct](http://bioconductor.org/about/code-of-conduct/).
+
 ## RStudio Community website
+
+Since we use R so much, we also use R packages developed by RStudio developers. One great and friendly website for asking for help with all things that are related to R (but maybe not so much related to Bioconductor) is the [**RStudio Community website**](https://community.rstudio.com/). This website is particularly useful if you have questions about RStudio itself or the `tidyverse` R packages.
+
+If you want to get a summary of new posts that might be relevant to you, you can sign up for weekly email updates. On this website, there's a strong preference for using the `r BiocStyle::CRANpkg("reprex')` package for making small reproducible examples. Check our LIBD rstats club session on `reprex` to learn more about it.
+
+<iframe width="560" height="315" src="https://www.youtube.com/embed/8bBo3B7N8YQ" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 
 ## GitHub issues
 
+Frequently, we work with software that is cutting edge and under active development. Many people share their code through websites like [Bitbucket](https://bitbucket.org/), [GitLab](https://about.gitlab.com/), and most frequently, through [**GitHub**](https://github.com/). Most open source projects on GitHub have an **issues** page where you can interact directly with the developers of the software you are using. Note that most open source software developers are not payed to provide support, and their time might be very limited. As such, you should try very hard to provide all the information the developers need in order to help you. This is a time consuming process, but it can help you learn more too, and sometimes even resolve the problem yourself.
+
+Some GitHub repositories have _issue templates_ such as [`lcolladotor/biocthis`](https://github.com/lcolladotor/biocthis/issues/new?assignees=&labels=&template=issue_template.md&title=%5BBUG%5D+Your+bug+or+feature+request) that will tell you a bit more of what information you should provide to make it easier for others to help you out. Others like [`rstudio/blogdown`](https://github.com/rstudio/blogdown/issues/new) will ask you to fill a few checkmarks before submitting your question.
+
 ## Mailing lists
+
+Eventually, you might need to ask for help through specific e-mail mailing lists. This is more common the closer you get to source code. Some of the mailing lists we use frequently are listed below.
 
 ### bithelp
 
+This is the main mailing list for asking for help with all things related to [JHPCE](https://jhpce.jhu.edu/). The JHPCE admins plus some JHPCE users such as myself and Kasper Daniel Hansen receive these emails and might reply back. You can sign up to receive these emails too if you want. Or if you want to check the previous emails, check the [**bithelp website**](https://lists.johnshopkins.edu/sympa/arc/bithelp). Before you ask for help, check the JHPCE website since there are several guides there already that might answer the question you have in mind.
+
 ### bitsupport
+
+This is the main mailing list for all things related to [**JHPCE admin**](https://jhpce.jhu.edu/contact/) requests. For example, if you need help with getting your password reset or changing your default JHPCE user group.
 
 ### Bioc-devel
 
+This is the mailing list where all Bioconductor package authors are subscribed to. It's sole purpose is to help current and new Bioconductor package authors. If you have questions about how to use a Bioconductor R package, use the Bioconductor Support website **only**. However, if you do have questions about R package development, then check out [**bioc-devel**](https://stat.ethz.ch/mailman/listinfo/bioc-devel) and its archives.
+
 ### R-Sig-Mac
 
+Some mailing lists are very specific to what they serve. There are several of these mailing lists related to the R source itself, for sample [**R-SIG-Mac**](https://stat.ethz.ch/mailman/listinfo/r-sig-mac) which is useful if you are compiling R in macOS, and only for questions related to that. This is a rare situation for us, but for some situations, this is where you can find the latest information and reach the experts on this topic.
+
 ## Slack
+
+Within our team and collaborators, we use [Slack](https://slack.com/) extensively. If you are new to Slack, you might want to read this [blog post](http://lcolladotor.github.io/2018/06/19/using-slack-for-academic-departmental-communication/#.X4nr0NBKguU) that I co-authored with [Stephanie C Hicks](https://twitter.com/stephaniehicks). In that blog post, we talk about some important Slack settings that will make it easier to keep your work-life balance in check.
+
+Slack is organized in _Workspaces_. Each of them is either free or payed, depending on the group. We mostly use the JHU Genomics Collective Slack workspace, which is a payed workspace. Meaning that we have access to all Slack-related goodies, like integrations with GitHub, Google Calendar, Google Docs, email, etc. Below you can find more information about the differnet Slack workspaces we use.
 
 ### JHU/LIBD
 
@@ -38,6 +74,7 @@ The remaining main Slack channels are:
 
 * **libd_alumni**: for all LIBD past and current members
 * **libd_dsgs**: for the [DSgs-guides](#dsgs-guide-team-members) 
+* **libd_general**: for all current LIBD members that are on the JHU Genomics Slack workspace
 * **libd_genomics_martinowich**: a shared channel with the Martinowich lab Slack workspace
 * **libd_lunchtrain**: for random topics as well as organizing lunch outings ^[Or remote lunch Zoom sessions.] using the `/lunchtrain` Slack command ^[Start typing the command on Slack and you'll see the help menu pop up for this command which specifies the syntax for using `/lunchtrain`.]
 * **libd_pkgs**: for software (mostly R packages) we are making that is not specific to a particular project
@@ -66,6 +103,12 @@ There are also a set of public channels that we use frequently:
 #### Martinowich
 
 This is the LIBD Slack workspace used by Keri Martinowich's team. Several of us work closely with her, Kristen Maynard, Stephanie Page and other Martinowich team projects.
+
+Some Slack channels of interest here are:
+
+* **comm_labmeeting**: for any communications related to the Martinowich lab meeting
+* **helpdesk_general_drybench**: a channel that was inspired by **libd_helpdesk** on the JHU Genomics Slack
+* **helpdesk_figuregeneration_and_manuscriptwriting**: it says it all in the name ;)
 
 #### LIBD Neuropathology
 
