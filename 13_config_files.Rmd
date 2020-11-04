@@ -14,7 +14,17 @@ Here are some of my configuration files for working R and JHPCE.
  https://cran.r-project.org/
 * Bioconductor-devel docker image: http://bioconductor.org/help/docker/
 
+Additional software:
+
+- Both: [Notion](https://www.notion.so/desktop), [Slack](https://slack.com/downloads)
+- Windows: [WinSCP](https://sourceforge.net/projects/winscp/), [Git bash](https://gitforwindows.org/), [PuTTY](https://www.putty.org/), [Notepad++](https://notepad-plus-plus.org/downloads/), [NppToR](https://sourceforge.net/projects/npptor/)
+- macOS: [Cyberduck](https://cyberduck.io/), [iTerm2](https://www.iterm2.com/), [Alfred](https://www.alfredapp.com/), [TextMate2](https://macromates.com/download)
+
+You might also be interested in checking out our older [onboarding setup materials](http://research.libd.org/jaffe_onboarding/setup.html).
+
 ### R packages
+
+The following R code installs all the packages I have installed currently as my _base_. As I explore packages, I might try new ones that are not in this list.
 
 ```{r "install_from_scratch", eval = FALSE}
 ## Install from scratch
@@ -102,7 +112,7 @@ remotes::install_github(c(
     "gadenbuie/xaringanExtra"
 ))
 
-## Private packages
+## Private packages (you likely won't have access to them)
 remotes::install_github(c(
     "LieberInstitute/LIBDpheno",
     "LieberInstitute/libdRSE"
@@ -110,6 +120,8 @@ remotes::install_github(c(
 ```
 
 #### Previously installed
+
+As I described in [my blog post on updating R](http://lcolladotor.github.io/2017/05/04/updating-r/#.X6ICiIhKguU), I also like to saved my list of currently installed packages.
 
 ```{r "previously_installed", eval = FALSE}
 installed_path <- "/Users/lcollado/Dropbox/Computing/R"
