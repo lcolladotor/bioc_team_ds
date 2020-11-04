@@ -16,7 +16,7 @@ Here are some of my configuration files for working R and JHPCE.
 
 ### R packages
 
-```{r}
+```{r "install_from_scratch", eval = FALSE}
 ## Install from scratch
 if (!requireNamespace("remotes", quietly = TRUE))
     install.packages("remotes")
