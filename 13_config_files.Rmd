@@ -188,6 +188,25 @@ options(
 ## For biocthis
 options("biocthis.pkgdown" = TRUE)
 options("biocthis.testthat" = TRUE)
+
+## From https://www.garrickadenbuie.com/project/rsthemes/
+if (interactive() && requireNamespace("rsthemes", quietly = TRUE)) {
+    # Set preferred themes if not handled elsewhere..
+    rsthemes::set_theme_light("Solarized Light {rsthemes}")  # light theme
+    rsthemes::set_theme_dark("base16 Monokai {rsthemes}") # dark theme
+    rsthemes::set_theme_favorite(c(
+        "Solarized Light {rsthemes}",
+        "base16 Monokai {rsthemes}",
+        "One Dark {rsthemes}"
+    ))
+
+    # Whenever the R session restarts inside RStudio...
+    setHook("rstudio.sessionInit", function(isNewSession) {
+        # Automatically choose the correct theme based on time of day
+        ## Used rsthemes::geolocate() once
+        rsthemes::use_theme_auto(lat = 39.2891, lon = -76.5583)
+    }, action = "append")
+}
 ```
 
 ### `~/.Renviron`
