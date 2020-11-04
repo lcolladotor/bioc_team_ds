@@ -1,0 +1,814 @@
+<!DOCTYPE html>
+<html lang="" xml:lang="">
+<head>
+
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <title>13 Config files | R/Bioconductor-powered Team Data Science</title>
+  <meta name="description" content="13 Config files | R/Bioconductor-powered Team Data Science" />
+  <meta name="generator" content="bookdown 0.21 and GitBook 2.6.7" />
+
+  <meta property="og:title" content="13 Config files | R/Bioconductor-powered Team Data Science" />
+  <meta property="og:type" content="book" />
+  
+  
+  
+  <meta name="github-repo" content="lcolladotor/bioc_team_ds" />
+
+  <meta name="twitter:card" content="summary" />
+  <meta name="twitter:title" content="13 Config files | R/Bioconductor-powered Team Data Science" />
+  
+  
+  
+
+<meta name="author" content="Leonardo Collado-Torres" />
+
+
+
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="apple-mobile-web-app-capable" content="yes" />
+  <meta name="apple-mobile-web-app-status-bar-style" content="black" />
+  
+  <link rel="shortcut icon" href="icon_32.png" type="image/x-icon" />
+<link rel="prev" href="helping-others.html"/>
+<link rel="next" href="how-to-contribute.html"/>
+<script src="libs/jquery-2.2.3/jquery.min.js"></script>
+<link href="libs/gitbook-2.6.7/css/style.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-table.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-bookdown.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-highlight.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-search.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-fontsettings.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-clipboard.css" rel="stylesheet" />
+
+
+
+
+
+
+
+
+
+<script src="libs/accessible-code-block-0.0.1/empty-anchor.js"></script>
+<link href="libs/anchor-sections-1.0/anchor-sections.css" rel="stylesheet" />
+<script src="libs/anchor-sections-1.0/anchor-sections.js"></script>
+
+
+<style type="text/css">
+code.sourceCode > span { display: inline-block; line-height: 1.25; }
+code.sourceCode > span { color: inherit; text-decoration: inherit; }
+code.sourceCode > span:empty { height: 1.2em; }
+.sourceCode { overflow: visible; }
+code.sourceCode { white-space: pre; position: relative; }
+pre.sourceCode { margin: 0; }
+@media screen {
+div.sourceCode { overflow: auto; }
+}
+@media print {
+code.sourceCode { white-space: pre-wrap; }
+code.sourceCode > span { text-indent: -5em; padding-left: 5em; }
+}
+pre.numberSource code
+  { counter-reset: source-line 0; }
+pre.numberSource code > span
+  { position: relative; left: -4em; counter-increment: source-line; }
+pre.numberSource code > span > a:first-child::before
+  { content: counter(source-line);
+    position: relative; left: -1em; text-align: right; vertical-align: baseline;
+    border: none; display: inline-block;
+    -webkit-touch-callout: none; -webkit-user-select: none;
+    -khtml-user-select: none; -moz-user-select: none;
+    -ms-user-select: none; user-select: none;
+    padding: 0 4px; width: 4em;
+    color: #aaaaaa;
+  }
+pre.numberSource { margin-left: 3em; border-left: 1px solid #aaaaaa;  padding-left: 4px; }
+div.sourceCode
+  {   }
+@media screen {
+code.sourceCode > span > a:first-child::before { text-decoration: underline; }
+}
+code span.al { color: #ff0000; font-weight: bold; } /* Alert */
+code span.an { color: #60a0b0; font-weight: bold; font-style: italic; } /* Annotation */
+code span.at { color: #7d9029; } /* Attribute */
+code span.bn { color: #40a070; } /* BaseN */
+code span.bu { } /* BuiltIn */
+code span.cf { color: #007020; font-weight: bold; } /* ControlFlow */
+code span.ch { color: #4070a0; } /* Char */
+code span.cn { color: #880000; } /* Constant */
+code span.co { color: #60a0b0; font-style: italic; } /* Comment */
+code span.cv { color: #60a0b0; font-weight: bold; font-style: italic; } /* CommentVar */
+code span.do { color: #ba2121; font-style: italic; } /* Documentation */
+code span.dt { color: #902000; } /* DataType */
+code span.dv { color: #40a070; } /* DecVal */
+code span.er { color: #ff0000; font-weight: bold; } /* Error */
+code span.ex { } /* Extension */
+code span.fl { color: #40a070; } /* Float */
+code span.fu { color: #06287e; } /* Function */
+code span.im { } /* Import */
+code span.in { color: #60a0b0; font-weight: bold; font-style: italic; } /* Information */
+code span.kw { color: #007020; font-weight: bold; } /* Keyword */
+code span.op { color: #666666; } /* Operator */
+code span.ot { color: #007020; } /* Other */
+code span.pp { color: #bc7a00; } /* Preprocessor */
+code span.sc { color: #4070a0; } /* SpecialChar */
+code span.ss { color: #bb6688; } /* SpecialString */
+code span.st { color: #4070a0; } /* String */
+code span.va { color: #19177c; } /* Variable */
+code span.vs { color: #4070a0; } /* VerbatimString */
+code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warning */
+</style>
+
+<link rel="stylesheet" href="style.css" type="text/css" />
+</head>
+
+<body>
+
+
+
+  <div class="book without-animation with-summary font-size-2 font-family-1" data-basepath=".">
+
+    <div class="book-summary">
+      <nav role="navigation">
+
+<ul class="summary">
+<li class="chapter" data-level="" data-path="index.html"><a href="index.html"><i class="fa fa-check"></i>Overview</a><ul>
+<li class="chapter" data-level="" data-path="index.html"><a href="index.html#team-members"><i class="fa fa-check"></i>Team members</a><ul>
+<li class="chapter" data-level="" data-path="index.html"><a href="index.html#alumni"><i class="fa fa-check"></i>Alumni</a></li>
+</ul></li>
+<li class="chapter" data-level="" data-path="index.html"><a href="index.html#dsgs-guide-team-members"><i class="fa fa-check"></i>DSgs-guide team members</a></li>
+<li class="chapter" data-level="" data-path="index.html"><a href="index.html#acknowledgements"><i class="fa fa-check"></i>Acknowledgements</a></li>
+<li class="chapter" data-level="" data-path="index.html"><a href="index.html#r-session-information"><i class="fa fa-check"></i>R session information</a></li>
+</ul></li>
+<li class="chapter" data-level="1" data-path="introduction.html"><a href="introduction.html"><i class="fa fa-check"></i><b>1</b> Introduction</a></li>
+<li class="chapter" data-level="2" data-path="data-science-guidance-sessions.html"><a href="data-science-guidance-sessions.html"><i class="fa fa-check"></i><b>2</b> Data Science guidance sessions</a><ul>
+<li class="chapter" data-level="2.1" data-path="data-science-guidance-sessions.html"><a href="data-science-guidance-sessions.html#interaction-rules"><i class="fa fa-check"></i><b>2.1</b> Interaction rules</a></li>
+<li class="chapter" data-level="2.2" data-path="data-science-guidance-sessions.html"><a href="data-science-guidance-sessions.html#help-us-help-you"><i class="fa fa-check"></i><b>2.2</b> Help us help you</a><ul>
+<li class="chapter" data-level="2.2.1" data-path="data-science-guidance-sessions.html"><a href="data-science-guidance-sessions.html#framing-a-question"><i class="fa fa-check"></i><b>2.2.1</b> Framing a question</a></li>
+<li class="chapter" data-level="2.2.2" data-path="data-science-guidance-sessions.html"><a href="data-science-guidance-sessions.html#useful-information"><i class="fa fa-check"></i><b>2.2.2</b> Useful information</a></li>
+</ul></li>
+<li class="chapter" data-level="2.3" data-path="data-science-guidance-sessions.html"><a href="data-science-guidance-sessions.html#sign-up"><i class="fa fa-check"></i><b>2.3</b> Sign up</a></li>
+<li class="chapter" data-level="2.4" data-path="data-science-guidance-sessions.html"><a href="data-science-guidance-sessions.html#dsgs-session-reports"><i class="fa fa-check"></i><b>2.4</b> DSgs session reports</a></li>
+<li class="chapter" data-level="2.5" data-path="data-science-guidance-sessions.html"><a href="data-science-guidance-sessions.html#become-a-dsgs-guide"><i class="fa fa-check"></i><b>2.5</b> Become a DSgs guide</a></li>
+</ul></li>
+<li class="chapter" data-level="3" data-path="how-to-ask-for-help.html"><a href="how-to-ask-for-help.html"><i class="fa fa-check"></i><b>3</b> How to ask for help</a><ul>
+<li class="chapter" data-level="3.1" data-path="how-to-ask-for-help.html"><a href="how-to-ask-for-help.html#learning-from-our-search-history"><i class="fa fa-check"></i><b>3.1</b> Learning from our search history</a></li>
+<li class="chapter" data-level="3.2" data-path="how-to-ask-for-help.html"><a href="how-to-ask-for-help.html#bioconductor-support-website"><i class="fa fa-check"></i><b>3.2</b> Bioconductor Support website</a></li>
+<li class="chapter" data-level="3.3" data-path="how-to-ask-for-help.html"><a href="how-to-ask-for-help.html#rstudio-community-website"><i class="fa fa-check"></i><b>3.3</b> RStudio Community website</a></li>
+<li class="chapter" data-level="3.4" data-path="how-to-ask-for-help.html"><a href="how-to-ask-for-help.html#github-issues"><i class="fa fa-check"></i><b>3.4</b> GitHub issues</a></li>
+<li class="chapter" data-level="3.5" data-path="how-to-ask-for-help.html"><a href="how-to-ask-for-help.html#mailing-lists"><i class="fa fa-check"></i><b>3.5</b> Mailing lists</a><ul>
+<li class="chapter" data-level="3.5.1" data-path="how-to-ask-for-help.html"><a href="how-to-ask-for-help.html#bithelp"><i class="fa fa-check"></i><b>3.5.1</b> bithelp</a></li>
+<li class="chapter" data-level="3.5.2" data-path="how-to-ask-for-help.html"><a href="how-to-ask-for-help.html#bitsupport"><i class="fa fa-check"></i><b>3.5.2</b> bitsupport</a></li>
+<li class="chapter" data-level="3.5.3" data-path="how-to-ask-for-help.html"><a href="how-to-ask-for-help.html#bioc-devel"><i class="fa fa-check"></i><b>3.5.3</b> Bioc-devel</a></li>
+<li class="chapter" data-level="3.5.4" data-path="how-to-ask-for-help.html"><a href="how-to-ask-for-help.html#r-sig-mac"><i class="fa fa-check"></i><b>3.5.4</b> R-Sig-Mac</a></li>
+</ul></li>
+<li class="chapter" data-level="3.6" data-path="how-to-ask-for-help.html"><a href="how-to-ask-for-help.html#slack"><i class="fa fa-check"></i><b>3.6</b> Slack</a><ul>
+<li class="chapter" data-level="3.6.1" data-path="how-to-ask-for-help.html"><a href="how-to-ask-for-help.html#jhulibd"><i class="fa fa-check"></i><b>3.6.1</b> JHU/LIBD</a></li>
+<li class="chapter" data-level="3.6.2" data-path="how-to-ask-for-help.html"><a href="how-to-ask-for-help.html#bioconductor"><i class="fa fa-check"></i><b>3.6.2</b> Bioconductor</a></li>
+<li class="chapter" data-level="3.6.3" data-path="how-to-ask-for-help.html"><a href="how-to-ask-for-help.html#r-ladies-baltimore"><i class="fa fa-check"></i><b>3.6.3</b> R-Ladies Baltimore</a></li>
+<li class="chapter" data-level="3.6.4" data-path="how-to-ask-for-help.html"><a href="how-to-ask-for-help.html#miscellaneous"><i class="fa fa-check"></i><b>3.6.4</b> Miscellaneous</a></li>
+</ul></li>
+</ul></li>
+<li class="part"><span><b>I Bootcamps</b></span></li>
+<li class="chapter" data-level="4" data-path="rbioconductor-data-science-bootcamps.html"><a href="rbioconductor-data-science-bootcamps.html"><i class="fa fa-check"></i><b>4</b> R/Bioconductor Data Science bootcamps</a><ul>
+<li class="chapter" data-level="4.1" data-path="rbioconductor-data-science-bootcamps.html"><a href="rbioconductor-data-science-bootcamps.html#libd-bootcamps"><i class="fa fa-check"></i><b>4.1</b> LIBD bootcamps</a></li>
+<li class="chapter" data-level="4.2" data-path="rbioconductor-data-science-bootcamps.html"><a href="rbioconductor-data-science-bootcamps.html#team-bootcamps"><i class="fa fa-check"></i><b>4.2</b> Team bootcamps</a></li>
+<li class="chapter" data-level="4.3" data-path="rbioconductor-data-science-bootcamps.html"><a href="rbioconductor-data-science-bootcamps.html#bootcamp-source-materials"><i class="fa fa-check"></i><b>4.3</b> Bootcamp source materials</a><ul>
+<li class="chapter" data-level="4.3.1" data-path="rbioconductor-data-science-bootcamps.html"><a href="rbioconductor-data-science-bootcamps.html#main-materials"><i class="fa fa-check"></i><b>4.3.1</b> Main materials</a></li>
+<li class="chapter" data-level="4.3.2" data-path="rbioconductor-data-science-bootcamps.html"><a href="rbioconductor-data-science-bootcamps.html#courses"><i class="fa fa-check"></i><b>4.3.2</b> Courses</a></li>
+</ul></li>
+</ul></li>
+<li class="chapter" data-level="5" data-path="how-to-be-a-modern-scientist.html"><a href="how-to-be-a-modern-scientist.html"><i class="fa fa-check"></i><b>5</b> How to be a modern scientist</a><ul>
+<li class="chapter" data-level="5.1" data-path="how-to-be-a-modern-scientist.html"><a href="how-to-be-a-modern-scientist.html#bootcamp-session"><i class="fa fa-check"></i><b>5.1</b> Bootcamp session</a></li>
+</ul></li>
+<li class="chapter" data-level="6" data-path="what-they-forgot-to-teach-you-about-r.html"><a href="what-they-forgot-to-teach-you-about-r.html"><i class="fa fa-check"></i><b>6</b> What they forgot to teach you about R</a><ul>
+<li class="chapter" data-level="6.1" data-path="what-they-forgot-to-teach-you-about-r.html"><a href="what-they-forgot-to-teach-you-about-r.html#bootcamp-sessions"><i class="fa fa-check"></i><b>6.1</b> Bootcamp sessions</a></li>
+</ul></li>
+<li class="chapter" data-level="7" data-path="the-elements-of-data-analytic-style.html"><a href="the-elements-of-data-analytic-style.html"><i class="fa fa-check"></i><b>7</b> The Elements of Data Analytic Style</a><ul>
+<li class="chapter" data-level="7.1" data-path="the-elements-of-data-analytic-style.html"><a href="the-elements-of-data-analytic-style.html#bootcamp-session-1"><i class="fa fa-check"></i><b>7.1</b> Bootcamp session</a></li>
+</ul></li>
+<li class="chapter" data-level="8" data-path="cbds.html"><a href="cbds.html"><i class="fa fa-check"></i><b>8</b> CBDS</a><ul>
+<li class="chapter" data-level="8.1" data-path="cbds.html"><a href="cbds.html#bootcamp-session-2"><i class="fa fa-check"></i><b>8.1</b> Bootcamp session</a></li>
+</ul></li>
+<li class="chapter" data-level="9" data-path="building-tidy-tools.html"><a href="building-tidy-tools.html"><i class="fa fa-check"></i><b>9</b> Building Tidy Tools</a><ul>
+<li class="chapter" data-level="9.1" data-path="building-tidy-tools.html"><a href="building-tidy-tools.html#bootcamp-sessions-1"><i class="fa fa-check"></i><b>9.1</b> Bootcamp sessions</a></li>
+</ul></li>
+<li class="chapter" data-level="10" data-path="differential-expression-analysis.html"><a href="differential-expression-analysis.html"><i class="fa fa-check"></i><b>10</b> Differential expression analysis</a><ul>
+<li class="chapter" data-level="10.1" data-path="differential-expression-analysis.html"><a href="differential-expression-analysis.html#bootcamp-sessions-2"><i class="fa fa-check"></i><b>10.1</b> Bootcamp sessions</a></li>
+</ul></li>
+<li class="part"><span><b>II Internal</b></span></li>
+<li class="chapter" data-level="11" data-path="team-meetings.html"><a href="team-meetings.html"><i class="fa fa-check"></i><b>11</b> Team meetings</a><ul>
+<li class="chapter" data-level="11.1" data-path="team-meetings.html"><a href="team-meetings.html#papers-software"><i class="fa fa-check"></i><b>11.1</b> Papers &amp; software</a><ul>
+<li class="chapter" data-level="11.1.1" data-path="team-meetings.html"><a href="team-meetings.html#notes"><i class="fa fa-check"></i><b>11.1.1</b> Notes</a></li>
+</ul></li>
+<li class="chapter" data-level="11.2" data-path="team-meetings.html"><a href="team-meetings.html#dsgs-feedback"><i class="fa fa-check"></i><b>11.2</b> DSgs: feedback</a><ul>
+<li class="chapter" data-level="11.2.1" data-path="team-meetings.html"><a href="team-meetings.html#notes-1"><i class="fa fa-check"></i><b>11.2.1</b> Notes</a></li>
+</ul></li>
+<li class="chapter" data-level="11.3" data-path="team-meetings.html"><a href="team-meetings.html#team-help"><i class="fa fa-check"></i><b>11.3</b> Team help</a></li>
+</ul></li>
+<li class="chapter" data-level="12" data-path="helping-others.html"><a href="helping-others.html"><i class="fa fa-check"></i><b>12</b> Helping others</a><ul>
+<li class="chapter" data-level="12.1" data-path="helping-others.html"><a href="helping-others.html#linear-regression-example"><i class="fa fa-check"></i><b>12.1</b> Linear regression example</a></li>
+<li class="chapter" data-level="12.2" data-path="helping-others.html"><a href="helping-others.html#dsgs-guides"><i class="fa fa-check"></i><b>12.2</b> DSgs guides</a><ul>
+<li class="chapter" data-level="12.2.1" data-path="helping-others.html"><a href="helping-others.html#dsgs-guide-training"><i class="fa fa-check"></i><b>12.2.1</b> DSgs-guide training</a></li>
+<li class="chapter" data-level="12.2.2" data-path="helping-others.html"><a href="helping-others.html#common-responses"><i class="fa fa-check"></i><b>12.2.2</b> Common responses</a></li>
+<li class="chapter" data-level="12.2.3" data-path="helping-others.html"><a href="helping-others.html#internal-sessions-log"><i class="fa fa-check"></i><b>12.2.3</b> Internal sessions log</a></li>
+<li class="chapter" data-level="12.2.4" data-path="helping-others.html"><a href="helping-others.html#getting-started"><i class="fa fa-check"></i><b>12.2.4</b> Getting started</a></li>
+</ul></li>
+<li class="chapter" data-level="12.3" data-path="helping-others.html"><a href="helping-others.html#bioconductor-support-practice-grounds"><i class="fa fa-check"></i><b>12.3</b> Bioconductor Support: practice grounds</a><ul>
+<li class="chapter" data-level="12.3.1" data-path="helping-others.html"><a href="helping-others.html#steps-to-follow"><i class="fa fa-check"></i><b>12.3.1</b> Steps to follow</a></li>
+</ul></li>
+<li class="chapter" data-level="12.4" data-path="helping-others.html"><a href="helping-others.html#rstudio-education"><i class="fa fa-check"></i><b>12.4</b> RStudio Education</a></li>
+</ul></li>
+<li class="chapter" data-level="13" data-path="config-files.html"><a href="config-files.html"><i class="fa fa-check"></i><b>13</b> Config files</a><ul>
+<li class="chapter" data-level="13.1" data-path="config-files.html"><a href="config-files.html#r-setup"><i class="fa fa-check"></i><b>13.1</b> R setup</a><ul>
+<li class="chapter" data-level="13.1.1" data-path="config-files.html"><a href="config-files.html#r-packages"><i class="fa fa-check"></i><b>13.1.1</b> R packages</a></li>
+</ul></li>
+<li class="chapter" data-level="13.2" data-path="config-files.html"><a href="config-files.html#r-config-files"><i class="fa fa-check"></i><b>13.2</b> R config files</a><ul>
+<li class="chapter" data-level="13.2.1" data-path="config-files.html"><a href="config-files.html#rprofile"><i class="fa fa-check"></i><b>13.2.1</b> <code>~/.Rprofile</code></a></li>
+<li class="chapter" data-level="13.2.2" data-path="config-files.html"><a href="config-files.html#renviron"><i class="fa fa-check"></i><b>13.2.2</b> <code>~/.Renviron</code></a></li>
+<li class="chapter" data-level="13.2.3" data-path="config-files.html"><a href="config-files.html#rmakevars"><i class="fa fa-check"></i><b>13.2.3</b> <code>~/.R/Makevars</code></a></li>
+</ul></li>
+<li class="chapter" data-level="13.3" data-path="config-files.html"><a href="config-files.html#git-config-files"><i class="fa fa-check"></i><b>13.3</b> Git config files</a><ul>
+<li class="chapter" data-level="13.3.1" data-path="config-files.html"><a href="config-files.html#gitconfig"><i class="fa fa-check"></i><b>13.3.1</b> <code>~/.gitconfig</code></a></li>
+<li class="chapter" data-level="13.3.2" data-path="config-files.html"><a href="config-files.html#gitignore_global"><i class="fa fa-check"></i><b>13.3.2</b> <code>~/.gitignore_global</code></a></li>
+</ul></li>
+<li class="chapter" data-level="13.4" data-path="config-files.html"><a href="config-files.html#jhpce-files"><i class="fa fa-check"></i><b>13.4</b> JHPCE files</a><ul>
+<li class="chapter" data-level="13.4.1" data-path="config-files.html"><a href="config-files.html#sge_request"><i class="fa fa-check"></i><b>13.4.1</b> <code>~/.sge_request</code></a></li>
+<li class="chapter" data-level="13.4.2" data-path="config-files.html"><a href="config-files.html#bashrc"><i class="fa fa-check"></i><b>13.4.2</b> <code>~/.bashrc</code></a></li>
+<li class="chapter" data-level="13.4.3" data-path="config-files.html"><a href="config-files.html#bash_profile"><i class="fa fa-check"></i><b>13.4.3</b> <code>~/.bash_profile</code></a></li>
+<li class="chapter" data-level="13.4.4" data-path="config-files.html"><a href="config-files.html#inputrc"><i class="fa fa-check"></i><b>13.4.4</b> <code>~/.inputrc</code></a></li>
+</ul></li>
+</ul></li>
+<li class="chapter" data-level="14" data-path="how-to-contribute.html"><a href="how-to-contribute.html"><i class="fa fa-check"></i><b>14</b> How to contribute</a><ul>
+<li class="chapter" data-level="14.1" data-path="how-to-contribute.html"><a href="how-to-contribute.html#libd-rstats-club-website"><i class="fa fa-check"></i><b>14.1</b> LIBD rstats club website</a><ul>
+<li class="chapter" data-level="14.1.1" data-path="how-to-contribute.html"><a href="how-to-contribute.html#blogdown"><i class="fa fa-check"></i><b>14.1.1</b> blogdown</a></li>
+</ul></li>
+<li class="chapter" data-level="14.2" data-path="how-to-contribute.html"><a href="how-to-contribute.html#github-actions"><i class="fa fa-check"></i><b>14.2</b> GitHub Actions</a><ul>
+<li class="chapter" data-level="14.2.1" data-path="how-to-contribute.html"><a href="how-to-contribute.html#r-packages-1"><i class="fa fa-check"></i><b>14.2.1</b> R packages</a></li>
+<li class="chapter" data-level="14.2.2" data-path="how-to-contribute.html"><a href="how-to-contribute.html#bookdown"><i class="fa fa-check"></i><b>14.2.2</b> Bookdown</a></li>
+<li class="chapter" data-level="14.2.3" data-path="how-to-contribute.html"><a href="how-to-contribute.html#r-markdown-websites"><i class="fa fa-check"></i><b>14.2.3</b> R Markdown websites</a></li>
+<li class="chapter" data-level="14.2.4" data-path="how-to-contribute.html"><a href="how-to-contribute.html#blogdown-1"><i class="fa fa-check"></i><b>14.2.4</b> Blogdown</a></li>
+</ul></li>
+<li class="chapter" data-level="14.3" data-path="how-to-contribute.html"><a href="how-to-contribute.html#libd-rbioconductor-packages"><i class="fa fa-check"></i><b>14.3</b> LIBD R/Bioconductor packages</a></li>
+<li class="chapter" data-level="14.4" data-path="how-to-contribute.html"><a href="how-to-contribute.html#github-templates"><i class="fa fa-check"></i><b>14.4</b> GitHub templates</a><ul>
+<li class="chapter" data-level="14.4.1" data-path="how-to-contribute.html"><a href="how-to-contribute.html#issues"><i class="fa fa-check"></i><b>14.4.1</b> Issues</a></li>
+<li class="chapter" data-level="14.4.2" data-path="how-to-contribute.html"><a href="how-to-contribute.html#contributing"><i class="fa fa-check"></i><b>14.4.2</b> Contributing</a></li>
+</ul></li>
+</ul></li>
+<li class="chapter" data-level="15" data-path="career-growth.html"><a href="career-growth.html"><i class="fa fa-check"></i><b>15</b> Career growth</a><ul>
+<li class="chapter" data-level="15.1" data-path="career-growth.html"><a href="career-growth.html#career-planning-session"><i class="fa fa-check"></i><b>15.1</b> Career planning session</a></li>
+</ul></li>
+</ul>
+
+      </nav>
+    </div>
+
+    <div class="book-body">
+      <div class="body-inner">
+        <div class="book-header" role="navigation">
+          <h1>
+            <i class="fa fa-circle-o-notch fa-spin"></i><a href="./">R/Bioconductor-powered Team Data Science</a>
+          </h1>
+        </div>
+
+        <div class="page-wrapper" tabindex="-1" role="main">
+          <div class="page-inner">
+
+            <section class="normal" id="section-">
+<div id="config-files" class="section level1">
+<h1><span class="header-section-number">13</span> Config files</h1>
+<p>Here are some of my configuration files for working R and JHPCE.</p>
+<div id="r-setup" class="section level2">
+<h2><span class="header-section-number">13.1</span> R setup</h2>
+<ul>
+<li>RStudio Desktop <em>Preview</em> version: <a href="https://rstudio.com/products/rstudio/download/preview/" class="uri">https://rstudio.com/products/rstudio/download/preview/</a></li>
+<li>R: latest versions that match Bioconductor release and devel
+<ul>
+<li>macOS: you can download the latest “branch” and “devel” from <a href="https://mac.r-project.org/" class="uri">https://mac.r-project.org/</a></li>
+<li>Windows: <a href="https://cran.r-project.org/" class="uri">https://cran.r-project.org/</a>, also needs Rtools40 <a href="https://cran.r-project.org/bin/windows/Rtools/" class="uri">https://cran.r-project.org/bin/windows/Rtools/</a></li>
+</ul></li>
+<li>RSwitch
+<ul>
+<li>macOS: <a href="https://rud.is/rswitch/" class="uri">https://rud.is/rswitch/</a></li>
+<li>Windows: I install the R versions in two different folders and switch them using RStudio’s global configuration options
+<a href="https://cran.r-project.org/" class="uri">https://cran.r-project.org/</a></li>
+</ul></li>
+<li>Bioconductor-devel docker image: <a href="http://bioconductor.org/help/docker/" class="uri">http://bioconductor.org/help/docker/</a></li>
+</ul>
+<div id="r-packages" class="section level3">
+<h3><span class="header-section-number">13.1.1</span> R packages</h3>
+<div class="sourceCode" id="cb8"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb8-1"><a href="config-files.html#cb8-1"></a><span class="co">## Install from scratch</span></span>
+<span id="cb8-2"><a href="config-files.html#cb8-2"></a><span class="cf">if</span> (<span class="op">!</span><span class="kw">requireNamespace</span>(<span class="st">&quot;remotes&quot;</span>, <span class="dt">quietly =</span> <span class="ot">TRUE</span>))</span>
+<span id="cb8-3"><a href="config-files.html#cb8-3"></a>    <span class="kw">install.packages</span>(<span class="st">&quot;remotes&quot;</span>)</span>
+<span id="cb8-4"><a href="config-files.html#cb8-4"></a>remotes<span class="op">::</span><span class="kw">install_cran</span>(<span class="st">&quot;BiocManager&quot;</span>)</span>
+<span id="cb8-5"><a href="config-files.html#cb8-5"></a>BiocManager<span class="op">::</span><span class="kw">version</span>()</span>
+<span id="cb8-6"><a href="config-files.html#cb8-6"></a></span>
+<span id="cb8-7"><a href="config-files.html#cb8-7"></a><span class="co">## Rprofile packages</span></span>
+<span id="cb8-8"><a href="config-files.html#cb8-8"></a>remotes<span class="op">::</span><span class="kw">install_github</span>(<span class="kw">c</span>(</span>
+<span id="cb8-9"><a href="config-files.html#cb8-9"></a>    <span class="st">&quot;jalvesaq/colorout&quot;</span></span>
+<span id="cb8-10"><a href="config-files.html#cb8-10"></a>))</span>
+<span id="cb8-11"><a href="config-files.html#cb8-11"></a>remotes<span class="op">::</span><span class="kw">install_cran</span>(<span class="kw">c</span>(</span>
+<span id="cb8-12"><a href="config-files.html#cb8-12"></a>    <span class="st">&quot;devtools&quot;</span>,</span>
+<span id="cb8-13"><a href="config-files.html#cb8-13"></a>    <span class="st">&quot;usethis&quot;</span></span>
+<span id="cb8-14"><a href="config-files.html#cb8-14"></a>))</span>
+<span id="cb8-15"><a href="config-files.html#cb8-15"></a></span>
+<span id="cb8-16"><a href="config-files.html#cb8-16"></a><span class="co">## Temporary for now due to https://github.com/ropensci/RefManageR/issues/79</span></span>
+<span id="cb8-17"><a href="config-files.html#cb8-17"></a>remotes<span class="op">::</span><span class="kw">install_github</span>(<span class="kw">c</span>(</span>
+<span id="cb8-18"><a href="config-files.html#cb8-18"></a>    <span class="st">&quot;ropensci/bibtex&quot;</span>,</span>
+<span id="cb8-19"><a href="config-files.html#cb8-19"></a>    <span class="st">&quot;ropensci/RefManageR&quot;</span>,</span>
+<span id="cb8-20"><a href="config-files.html#cb8-20"></a>    <span class="st">&quot;cboettig/knitcitations&quot;</span></span>
+<span id="cb8-21"><a href="config-files.html#cb8-21"></a>))</span>
+<span id="cb8-22"><a href="config-files.html#cb8-22"></a></span>
+<span id="cb8-23"><a href="config-files.html#cb8-23"></a><span class="co">## Main packages</span></span>
+<span id="cb8-24"><a href="config-files.html#cb8-24"></a>BiocManager<span class="op">::</span><span class="kw">install</span>(<span class="kw">c</span>(</span>
+<span id="cb8-25"><a href="config-files.html#cb8-25"></a>    <span class="st">&quot;biocthis&quot;</span>,</span>
+<span id="cb8-26"><a href="config-files.html#cb8-26"></a>    <span class="st">&quot;brainflowprobes&quot;</span>,</span>
+<span id="cb8-27"><a href="config-files.html#cb8-27"></a>    <span class="st">&quot;derfinder&quot;</span>,</span>
+<span id="cb8-28"><a href="config-files.html#cb8-28"></a>    <span class="st">&quot;derfinderPlot&quot;</span>,</span>
+<span id="cb8-29"><a href="config-files.html#cb8-29"></a>    <span class="st">&quot;GenomicState&quot;</span>,</span>
+<span id="cb8-30"><a href="config-files.html#cb8-30"></a>    <span class="st">&quot;megadepth&quot;</span>,</span>
+<span id="cb8-31"><a href="config-files.html#cb8-31"></a>    <span class="st">&quot;recount&quot;</span>,</span>
+<span id="cb8-32"><a href="config-files.html#cb8-32"></a>    <span class="st">&quot;recountWorkflow&quot;</span>,</span>
+<span id="cb8-33"><a href="config-files.html#cb8-33"></a>    <span class="st">&quot;recount3&quot;</span>,</span>
+<span id="cb8-34"><a href="config-files.html#cb8-34"></a>    <span class="st">&quot;regutools&quot;</span>,</span>
+<span id="cb8-35"><a href="config-files.html#cb8-35"></a>    <span class="st">&quot;regionReport&quot;</span>,</span>
+<span id="cb8-36"><a href="config-files.html#cb8-36"></a>    <span class="st">&quot;spatialLIBD&quot;</span></span>
+<span id="cb8-37"><a href="config-files.html#cb8-37"></a>), <span class="dt">dependencies =</span> <span class="ot">TRUE</span>, <span class="dt">update =</span> <span class="ot">FALSE</span>)</span>
+<span id="cb8-38"><a href="config-files.html#cb8-38"></a></span>
+<span id="cb8-39"><a href="config-files.html#cb8-39"></a><span class="co">## LIBD packages</span></span>
+<span id="cb8-40"><a href="config-files.html#cb8-40"></a>remotes<span class="op">::</span><span class="kw">install_github</span>(<span class="kw">c</span>(</span>
+<span id="cb8-41"><a href="config-files.html#cb8-41"></a>    <span class="st">&quot;LieberInstitute/jaffelab&quot;</span>,</span>
+<span id="cb8-42"><a href="config-files.html#cb8-42"></a>    <span class="st">&quot;LieberInstitute/recount.bwtool&quot;</span>,</span>
+<span id="cb8-43"><a href="config-files.html#cb8-43"></a>    <span class="st">&quot;LieberInstitute/sgejobs&quot;</span>,</span>
+<span id="cb8-44"><a href="config-files.html#cb8-44"></a>    <span class="st">&quot;LieberInstitute/shinycsv&quot;</span></span>
+<span id="cb8-45"><a href="config-files.html#cb8-45"></a>), <span class="dt">dependencies =</span> <span class="ot">TRUE</span>)</span>
+<span id="cb8-46"><a href="config-files.html#cb8-46"></a></span>
+<span id="cb8-47"><a href="config-files.html#cb8-47"></a><span class="co">## CRAN packages</span></span>
+<span id="cb8-48"><a href="config-files.html#cb8-48"></a>remotes<span class="op">::</span><span class="kw">install_cran</span>(<span class="kw">c</span>(</span>
+<span id="cb8-49"><a href="config-files.html#cb8-49"></a>    <span class="st">&quot;ari&quot;</span>,</span>
+<span id="cb8-50"><a href="config-files.html#cb8-50"></a>    <span class="st">&quot;clue&quot;</span>,</span>
+<span id="cb8-51"><a href="config-files.html#cb8-51"></a>    <span class="st">&quot;corrplot&quot;</span>,</span>
+<span id="cb8-52"><a href="config-files.html#cb8-52"></a>    <span class="st">&quot;getopt&quot;</span>,</span>
+<span id="cb8-53"><a href="config-files.html#cb8-53"></a>    <span class="st">&quot;ggthemes&quot;</span>,</span>
+<span id="cb8-54"><a href="config-files.html#cb8-54"></a>    <span class="st">&quot;googlesheets4&quot;</span>,</span>
+<span id="cb8-55"><a href="config-files.html#cb8-55"></a>    <span class="st">&quot;MatrixEQTL&quot;</span>,</span>
+<span id="cb8-56"><a href="config-files.html#cb8-56"></a>    <span class="st">&quot;pagedown&quot;</span>,</span>
+<span id="cb8-57"><a href="config-files.html#cb8-57"></a>    <span class="st">&quot;patchwork&quot;</span>,</span>
+<span id="cb8-58"><a href="config-files.html#cb8-58"></a>    <span class="st">&quot;reprex&quot;</span>,</span>
+<span id="cb8-59"><a href="config-files.html#cb8-59"></a>    <span class="st">&quot;rtweet&quot;</span>,</span>
+<span id="cb8-60"><a href="config-files.html#cb8-60"></a>    <span class="st">&quot;suncalc&quot;</span>,</span>
+<span id="cb8-61"><a href="config-files.html#cb8-61"></a>    <span class="st">&quot;tidyverse&quot;</span>,</span>
+<span id="cb8-62"><a href="config-files.html#cb8-62"></a>    <span class="st">&quot;xaringan&quot;</span>,</span>
+<span id="cb8-63"><a href="config-files.html#cb8-63"></a>    <span class="st">&quot;xaringanthemer&quot;</span>,</span>
+<span id="cb8-64"><a href="config-files.html#cb8-64"></a>    <span class="st">&quot;VennDiagram&quot;</span></span>
+<span id="cb8-65"><a href="config-files.html#cb8-65"></a>))</span>
+<span id="cb8-66"><a href="config-files.html#cb8-66"></a></span>
+<span id="cb8-67"><a href="config-files.html#cb8-67"></a><span class="co">## Bioc packages</span></span>
+<span id="cb8-68"><a href="config-files.html#cb8-68"></a>BiocManager<span class="op">::</span><span class="kw">install</span>(<span class="kw">c</span>(</span>
+<span id="cb8-69"><a href="config-files.html#cb8-69"></a>    <span class="st">&quot;BiocCheck&quot;</span>,</span>
+<span id="cb8-70"><a href="config-files.html#cb8-70"></a>    <span class="st">&quot;ComplexHeatmap&quot;</span>,</span>
+<span id="cb8-71"><a href="config-files.html#cb8-71"></a>    <span class="st">&quot;ExploreModelMatrix&quot;</span>,</span>
+<span id="cb8-72"><a href="config-files.html#cb8-72"></a>    <span class="st">&quot;iSEE&quot;</span>,</span>
+<span id="cb8-73"><a href="config-files.html#cb8-73"></a>    <span class="st">&quot;scater&quot;</span>,</span>
+<span id="cb8-74"><a href="config-files.html#cb8-74"></a>    <span class="st">&quot;scran&quot;</span>,</span>
+<span id="cb8-75"><a href="config-files.html#cb8-75"></a>    <span class="st">&quot;sva&quot;</span>,</span>
+<span id="cb8-76"><a href="config-files.html#cb8-76"></a>    <span class="st">&quot;variancePartition&quot;</span></span>
+<span id="cb8-77"><a href="config-files.html#cb8-77"></a>), <span class="dt">update =</span> <span class="ot">FALSE</span>)</span>
+<span id="cb8-78"><a href="config-files.html#cb8-78"></a></span>
+<span id="cb8-79"><a href="config-files.html#cb8-79"></a><span class="co">## GitHub packages</span></span>
+<span id="cb8-80"><a href="config-files.html#cb8-80"></a>remotes<span class="op">::</span><span class="kw">install_github</span>(<span class="kw">c</span>(</span>
+<span id="cb8-81"><a href="config-files.html#cb8-81"></a>    <span class="st">&quot;cloudyr/rmote&quot;</span>,</span>
+<span id="cb8-82"><a href="config-files.html#cb8-82"></a>    <span class="st">&quot;gadenbuie/rsthemes&quot;</span>,</span>
+<span id="cb8-83"><a href="config-files.html#cb8-83"></a>    <span class="st">&quot;gadenbuie/xaringanExtra&quot;</span></span>
+<span id="cb8-84"><a href="config-files.html#cb8-84"></a>))</span>
+<span id="cb8-85"><a href="config-files.html#cb8-85"></a></span>
+<span id="cb8-86"><a href="config-files.html#cb8-86"></a><span class="co">## Private packages</span></span>
+<span id="cb8-87"><a href="config-files.html#cb8-87"></a>remotes<span class="op">::</span><span class="kw">install_github</span>(<span class="kw">c</span>(</span>
+<span id="cb8-88"><a href="config-files.html#cb8-88"></a>    <span class="st">&quot;LieberInstitute/LIBDpheno&quot;</span>,</span>
+<span id="cb8-89"><a href="config-files.html#cb8-89"></a>    <span class="st">&quot;LieberInstitute/libdRSE&quot;</span></span>
+<span id="cb8-90"><a href="config-files.html#cb8-90"></a>), <span class="dt">dependencies =</span> <span class="ot">TRUE</span>)</span></code></pre></div>
+<div id="previously-installed" class="section level4">
+<h4><span class="header-section-number">13.1.1.1</span> Previously installed</h4>
+<div class="sourceCode" id="cb9"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb9-1"><a href="config-files.html#cb9-1"></a>installed_path &lt;-<span class="st"> &quot;/Users/lcollado/Dropbox/Computing/R&quot;</span></span>
+<span id="cb9-2"><a href="config-files.html#cb9-2"></a>installed &lt;-<span class="st"> </span><span class="kw">dir</span>(<span class="kw">.libPaths</span>())</span>
+<span id="cb9-3"><a href="config-files.html#cb9-3"></a><span class="kw">save</span>(installed, <span class="dt">file =</span> <span class="kw">file.path</span>(installed_path, <span class="kw">paste0</span>(<span class="kw">Sys.Date</span>(), <span class="st">&#39;-installed.Rdata&#39;</span>)))</span></code></pre></div>
+<div class="sourceCode" id="cb10"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb10-1"><a href="config-files.html#cb10-1"></a><span class="co">## Load previous &quot;installed&quot; packaages</span></span>
+<span id="cb10-2"><a href="config-files.html#cb10-2"></a>previous &lt;-<span class="st"> </span><span class="kw">dir</span>(<span class="dt">path =</span> installed_path, <span class="dt">pattern =</span> <span class="st">&#39;installed.Rdata&#39;</span>)</span>
+<span id="cb10-3"><a href="config-files.html#cb10-3"></a><span class="kw">load</span>(<span class="kw">file.path</span>(installed_path, previous[<span class="kw">length</span>(previous)]), <span class="dt">verbose =</span> <span class="ot">TRUE</span>)</span>
+<span id="cb10-4"><a href="config-files.html#cb10-4"></a></span>
+<span id="cb10-5"><a href="config-files.html#cb10-5"></a><span class="co">## Locate current pacakges</span></span>
+<span id="cb10-6"><a href="config-files.html#cb10-6"></a>current &lt;-<span class="st"> </span><span class="kw">dir</span>(<span class="kw">.libPaths</span>())</span>
+<span id="cb10-7"><a href="config-files.html#cb10-7"></a><span class="co">## Missing</span></span>
+<span id="cb10-8"><a href="config-files.html#cb10-8"></a>installed[<span class="op">!</span>installed <span class="op">%in%</span><span class="st"> </span>current]</span>
+<span id="cb10-9"><a href="config-files.html#cb10-9"></a></span>
+<span id="cb10-10"><a href="config-files.html#cb10-10"></a><span class="co">## Install missing packages</span></span>
+<span id="cb10-11"><a href="config-files.html#cb10-11"></a>BiocManager<span class="op">::</span><span class="kw">install</span>(installed[<span class="op">!</span>installed <span class="op">%in%</span><span class="st"> </span>current])</span>
+<span id="cb10-12"><a href="config-files.html#cb10-12"></a></span>
+<span id="cb10-13"><a href="config-files.html#cb10-13"></a><span class="co">## New</span></span>
+<span id="cb10-14"><a href="config-files.html#cb10-14"></a>current[<span class="op">!</span>current <span class="op">%in%</span><span class="st"> </span>installed]</span></code></pre></div>
+</div>
+</div>
+</div>
+<div id="r-config-files" class="section level2">
+<h2><span class="header-section-number">13.2</span> R config files</h2>
+<div id="rprofile" class="section level3">
+<h3><span class="header-section-number">13.2.1</span> <code>~/.Rprofile</code></h3>
+<p>Edit it with <code>usethis::edit_r_profile()</code>. Don’t add any analysis packages here as discussed in the “what they forgot to teach you about R” workshop.</p>
+<div class="sourceCode" id="cb11"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb11-1"><a href="config-files.html#cb11-1"></a><span class="co">## Change colors</span></span>
+<span id="cb11-2"><a href="config-files.html#cb11-2"></a><span class="co"># Source https://github.com/jalvesaq/colorout</span></span>
+<span id="cb11-3"><a href="config-files.html#cb11-3"></a><span class="cf">if</span>(<span class="kw">Sys.getenv</span>(<span class="st">&#39;TERM&#39;</span>) <span class="op">%in%</span><span class="st"> </span><span class="kw">c</span>(<span class="st">&quot;term&quot;</span>, <span class="st">&quot;xterm-256color&quot;</span>, <span class="st">&quot;cygwin&quot;</span>)) {</span>
+<span id="cb11-4"><a href="config-files.html#cb11-4"></a>    <span class="cf">if</span> (<span class="op">!</span><span class="kw">requireNamespace</span>(<span class="st">&quot;colorout&quot;</span>, <span class="dt">quietly =</span> <span class="ot">TRUE</span>) <span class="op">&amp;</span><span class="st"> </span>.Platform<span class="op">$</span>OS.type <span class="op">!=</span><span class="st"> &#39;windows&#39;</span>) {</span>
+<span id="cb11-5"><a href="config-files.html#cb11-5"></a>        <span class="kw">cat</span>(<span class="st">&#39;To install colorout use: remotes::install_github(&quot;jalvesaq/colorout&quot;)</span><span class="ch">\n</span><span class="st">&#39;</span>)</span>
+<span id="cb11-6"><a href="config-files.html#cb11-6"></a>    }</span>
+<span id="cb11-7"><a href="config-files.html#cb11-7"></a>}</span>
+<span id="cb11-8"><a href="config-files.html#cb11-8"></a></span>
+<span id="cb11-9"><a href="config-files.html#cb11-9"></a><span class="co"># https://bookdown.org/yihui/blogdown/global-options.html</span></span>
+<span id="cb11-10"><a href="config-files.html#cb11-10"></a><span class="kw">options</span>(<span class="dt">blogdown.author =</span> <span class="st">&#39;L. Collado-Torres&#39;</span>)</span>
+<span id="cb11-11"><a href="config-files.html#cb11-11"></a><span class="kw">options</span>(<span class="dt">blogdown.ext =</span> <span class="st">&#39;.Rmd&#39;</span>)</span>
+<span id="cb11-12"><a href="config-files.html#cb11-12"></a><span class="kw">options</span>(<span class="dt">blogdown.insertimage.usebaseurl =</span> <span class="ot">TRUE</span>)</span>
+<span id="cb11-13"><a href="config-files.html#cb11-13"></a></span>
+<span id="cb11-14"><a href="config-files.html#cb11-14"></a><span class="co">## From RStudio::conf 2019 Building Tidy Tools</span></span>
+<span id="cb11-15"><a href="config-files.html#cb11-15"></a><span class="cf">if</span> (<span class="kw">interactive</span>()) {</span>
+<span id="cb11-16"><a href="config-files.html#cb11-16"></a>    <span class="kw">suppressMessages</span>(<span class="kw">require</span>(<span class="st">&quot;devtools&quot;</span>))</span>
+<span id="cb11-17"><a href="config-files.html#cb11-17"></a>    <span class="kw">suppressMessages</span>(<span class="kw">require</span>(<span class="st">&quot;usethis&quot;</span>))</span>
+<span id="cb11-18"><a href="config-files.html#cb11-18"></a>    <span class="kw">suppressMessages</span>(<span class="kw">require</span>(<span class="st">&quot;testthat&quot;</span>))</span>
+<span id="cb11-19"><a href="config-files.html#cb11-19"></a>    </span>
+<span id="cb11-20"><a href="config-files.html#cb11-20"></a>    <span class="kw">options</span>(</span>
+<span id="cb11-21"><a href="config-files.html#cb11-21"></a>        <span class="dt">warnPartialMatchArgs =</span> <span class="ot">TRUE</span>,</span>
+<span id="cb11-22"><a href="config-files.html#cb11-22"></a>        <span class="dt">warnPartialMatchDollar =</span> <span class="ot">TRUE</span>,</span>
+<span id="cb11-23"><a href="config-files.html#cb11-23"></a>        <span class="dt">warnPartialMatchAttr =</span> <span class="ot">TRUE</span></span>
+<span id="cb11-24"><a href="config-files.html#cb11-24"></a>    )</span>
+<span id="cb11-25"><a href="config-files.html#cb11-25"></a>}</span>
+<span id="cb11-26"><a href="config-files.html#cb11-26"></a></span>
+<span id="cb11-27"><a href="config-files.html#cb11-27"></a><span class="co">## https://blog.rstudio.com/2013/06/10/rstudio-cran-mirror/</span></span>
+<span id="cb11-28"><a href="config-files.html#cb11-28"></a><span class="kw">options</span>(<span class="dt">repos =</span> <span class="kw">c</span>(<span class="dt">CRAN =</span> <span class="st">&quot;https://cloud.r-project.org/&quot;</span>))</span>
+<span id="cb11-29"><a href="config-files.html#cb11-29"></a></span>
+<span id="cb11-30"><a href="config-files.html#cb11-30"></a><span class="co">## For usethis::use_git()</span></span>
+<span id="cb11-31"><a href="config-files.html#cb11-31"></a><span class="kw">options</span>(<span class="dt">usethis.protocol =</span> <span class="st">&quot;ssh&quot;</span>)</span>
+<span id="cb11-32"><a href="config-files.html#cb11-32"></a></span>
+<span id="cb11-33"><a href="config-files.html#cb11-33"></a><span class="co">## For usethis</span></span>
+<span id="cb11-34"><a href="config-files.html#cb11-34"></a><span class="kw">options</span>(</span>
+<span id="cb11-35"><a href="config-files.html#cb11-35"></a>    <span class="dt">usethis.full_name =</span> <span class="st">&quot;Leonardo Collado-Torres&quot;</span>,</span>
+<span id="cb11-36"><a href="config-files.html#cb11-36"></a>    <span class="dt">usethis.description =</span> <span class="kw">list</span>(</span>
+<span id="cb11-37"><a href="config-files.html#cb11-37"></a>        <span class="st">`</span><span class="dt">Authors@R</span><span class="st">`</span> =<span class="st"> &#39;c(</span></span>
+<span id="cb11-38"><a href="config-files.html#cb11-38"></a><span class="st">    person(&quot;Leonardo&quot;, &quot;Collado-Torres&quot;, role = c(&quot;aut&quot;, &quot;cre&quot;),</span></span>
+<span id="cb11-39"><a href="config-files.html#cb11-39"></a><span class="st">    email = &quot;lcolladotor@gmail.com&quot;, comment = c(ORCID = &quot;0000-0003-2140-308X&quot;))</span></span>
+<span id="cb11-40"><a href="config-files.html#cb11-40"></a><span class="st">    )&#39;</span></span>
+<span id="cb11-41"><a href="config-files.html#cb11-41"></a>    )</span>
+<span id="cb11-42"><a href="config-files.html#cb11-42"></a>)</span>
+<span id="cb11-43"><a href="config-files.html#cb11-43"></a></span>
+<span id="cb11-44"><a href="config-files.html#cb11-44"></a><span class="co">## For biocthis</span></span>
+<span id="cb11-45"><a href="config-files.html#cb11-45"></a><span class="kw">options</span>(<span class="st">&quot;biocthis.pkgdown&quot;</span> =<span class="st"> </span><span class="ot">TRUE</span>)</span>
+<span id="cb11-46"><a href="config-files.html#cb11-46"></a><span class="kw">options</span>(<span class="st">&quot;biocthis.testthat&quot;</span> =<span class="st"> </span><span class="ot">TRUE</span>)</span></code></pre></div>
+</div>
+<div id="renviron" class="section level3">
+<h3><span class="header-section-number">13.2.2</span> <code>~/.Renviron</code></h3>
+<p>Edit it with <code>usethis::edit_r_environ()</code>. Here you can keep personal access tokens (PATs).</p>
+<div class="sourceCode" id="cb12"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb12-1"><a href="config-files.html#cb12-1"></a>GITHUB_PAT=something_provite</span>
+<span id="cb12-2"><a href="config-files.html#cb12-2"></a>TWITTER_PAT=a_private_file_path</span></code></pre></div>
+</div>
+<div id="rmakevars" class="section level3">
+<h3><span class="header-section-number">13.2.3</span> <code>~/.R/Makevars</code></h3>
+<p>I don’t have anything in this file since R 4.0 on my macOS laptop.</p>
+</div>
+</div>
+<div id="git-config-files" class="section level2">
+<h2><span class="header-section-number">13.3</span> Git config files</h2>
+<div id="gitconfig" class="section level3">
+<h3><span class="header-section-number">13.3.1</span> <code>~/.gitconfig</code></h3>
+<p>Edit it with <code>usethis::edit_git_config()</code>. Note that my editor is TextMate2 on macOS which can be accessed through the <code>mate -w</code> command.</p>
+<pre><code>[user]
+    name = Leonardo Collado Torres
+    email = lcolladotor@gmail.com
+[core]
+    excludesfile = /Users/lcollado/.gitignore_global
+    excludesfiles = /Users/lcollado/.gitignore_global
+    editor = mate -w
+    ignorecase = true
+[difftool &quot;sourcetree&quot;]
+    cmd = opendiff \&quot;$LOCAL\&quot; \&quot;$REMOTE\&quot;
+    path = 
+[mergetool &quot;sourcetree&quot;]
+    cmd = /Applications/SourceTree.app/Contents/Resources/opendiff-w.sh \&quot;$LOCAL\&quot; \&quot;$REMOTE\&quot; -ancestor \&quot;$BASE\&quot; -merge \&quot;$MERGED\&quot;
+    trustExitCode = true
+[alias]
+    ci = commit
+    st = status
+    br = branch
+    co = checkout
+    last = log -1 HEAD
+    visual = gitk
+[push]
+    default = simple
+[svn]
+    rmdir = true
+[commit]</code></pre>
+</div>
+<div id="gitignore_global" class="section level3">
+<h3><span class="header-section-number">13.3.2</span> <code>~/.gitignore_global</code></h3>
+<p>Edit it with <code>usethis::edit_git_ignore()</code>. These files are ignored by default by git on my computer.</p>
+<pre><code>*~
+
+## More at
+## https://help.github.com/articles/ignoring-files
+
+# R history #
+#############
+.Rapp.history
+.Rhistory
+
+# LaTeX stuff #
+###############
+*.aux
+*.out
+
+
+# Compiled source #
+###################
+*.com
+*.class
+*.dll
+*.exe
+*.o
+*.so
+
+# Packages #
+############
+# it&#39;s better to unpack these files and commit the raw source
+# git has its own built in compression methods
+*.7z
+*.dmg
+*.gz
+*.iso
+*.jar
+*.rar
+*.tar
+*.zip
+
+# Logs and databases #
+######################
+*.log
+*.sql
+*.sqlite
+
+# OS generated files #
+######################
+.DS_Store
+.DS_Store?
+._*
+.Spotlight-V100
+.Trashes
+Icon?
+ehthumbs.db
+Thumbs.db</code></pre>
+</div>
+</div>
+<div id="jhpce-files" class="section level2">
+<h2><span class="header-section-number">13.4</span> JHPCE files</h2>
+<div id="sge_request" class="section level3">
+<h3><span class="header-section-number">13.4.1</span> <code>~/.sge_request</code></h3>
+<p>This file configures the default SGE requests under <code>qsub</code> and <code>qrsh</code>.</p>
+<div class="sourceCode" id="cb15"><pre class="sourceCode bash"><code class="sourceCode bash"><span id="cb15-1"><a href="config-files.html#cb15-1"></a><span class="co"># Check http://www.biostat.jhsph.edu/bit/cluster-usage.html for more instructions</span></span>
+<span id="cb15-2"><a href="config-files.html#cb15-2"></a><span class="co">#</span></span>
+<span id="cb15-3"><a href="config-files.html#cb15-3"></a><span class="co"># Set defaults for mem_free and h_vmem</span></span>
+<span id="cb15-4"><a href="config-files.html#cb15-4"></a><span class="ex">-l</span> mem_free=12G,h_vmem=12G</span>
+<span id="cb15-5"><a href="config-files.html#cb15-5"></a><span class="co">#</span></span>
+<span id="cb15-6"><a href="config-files.html#cb15-6"></a><span class="co"># Set the standard value for stack size limit</span></span>
+<span id="cb15-7"><a href="config-files.html#cb15-7"></a><span class="co"># (needed for some programs to run properly when h_vmem is set)</span></span>
+<span id="cb15-8"><a href="config-files.html#cb15-8"></a><span class="ex">-l</span> h_stack=512M</span>
+<span id="cb15-9"><a href="config-files.html#cb15-9"></a><span class="co">#</span></span>
+<span id="cb15-10"><a href="config-files.html#cb15-10"></a><span class="co"># Set a default maximum file size that an SGE job can create</span></span>
+<span id="cb15-11"><a href="config-files.html#cb15-11"></a><span class="ex">-l</span> h_fsize=100G</span>
+<span id="cb15-12"><a href="config-files.html#cb15-12"></a><span class="co"># Define my email</span></span>
+<span id="cb15-13"><a href="config-files.html#cb15-13"></a><span class="ex">-M</span> YOUR_EMAIL@gmail.com</span>
+<span id="cb15-14"><a href="config-files.html#cb15-14"></a><span class="co"># To get an email on a job use -m e</span></span></code></pre></div>
+</div>
+<div id="bashrc" class="section level3">
+<h3><span class="header-section-number">13.4.2</span> <code>~/.bashrc</code></h3>
+<p>This is the main configuration file for JHPCE, but it’s really for any linux system. Some of the commands have to change when working on macOS.</p>
+<div class="sourceCode" id="cb16"><pre class="sourceCode bash"><code class="sourceCode bash"><span id="cb16-1"><a href="config-files.html#cb16-1"></a><span class="co"># .bashrc</span></span>
+<span id="cb16-2"><a href="config-files.html#cb16-2"></a></span>
+<span id="cb16-3"><a href="config-files.html#cb16-3"></a><span class="co"># Source global definitions</span></span>
+<span id="cb16-4"><a href="config-files.html#cb16-4"></a><span class="kw">if</span><span class="bu"> [</span> <span class="ot">-f</span> /etc/bashrc<span class="bu"> ]</span>; <span class="kw">then</span></span>
+<span id="cb16-5"><a href="config-files.html#cb16-5"></a>    <span class="bu">.</span> <span class="ex">/etc/bashrc</span></span>
+<span id="cb16-6"><a href="config-files.html#cb16-6"></a><span class="kw">fi</span></span>
+<span id="cb16-7"><a href="config-files.html#cb16-7"></a></span>
+<span id="cb16-8"><a href="config-files.html#cb16-8"></a><span class="co"># User specific aliases and functions</span></span>
+<span id="cb16-9"><a href="config-files.html#cb16-9"></a><span class="co"># Auto-complete command from history</span></span>
+<span id="cb16-10"><a href="config-files.html#cb16-10"></a><span class="co"># http://lindesk.com/2009/04/customize-terminal-configuration-setting-bash-cli-power-user/</span></span>
+<span id="cb16-11"><a href="config-files.html#cb16-11"></a><span class="bu">export</span> <span class="va">INPUTRC=</span>~/.inputrc</span>
+<span id="cb16-12"><a href="config-files.html#cb16-12"></a><span class="co"># http://www.biostat.jhsph.edu/~afisher/ComputingClub/webfiles/KasperHansenPres/IntermediateUnix.p</span></span>
+<span id="cb16-13"><a href="config-files.html#cb16-13"></a><span class="fu">df</span></span>
+<span id="cb16-14"><a href="config-files.html#cb16-14"></a><span class="co"># https://unix.stackexchange.com/questions/48713/how-can-i-remove-duplicates-in-my-bash-history-pr</span></span>
+<span id="cb16-15"><a href="config-files.html#cb16-15"></a><span class="ex">eserving-order</span></span>
+<span id="cb16-16"><a href="config-files.html#cb16-16"></a><span class="bu">export</span> <span class="va">HISTCONTROL=</span>ignoreboth:erasedups</span>
+<span id="cb16-17"><a href="config-files.html#cb16-17"></a><span class="bu">export</span> <span class="va">HISTSIZE=</span>20000</span>
+<span id="cb16-18"><a href="config-files.html#cb16-18"></a><span class="bu">shopt</span> -s histappend</span>
+<span id="cb16-19"><a href="config-files.html#cb16-19"></a><span class="bu">shopt</span> -s cmdhist</span>
+<span id="cb16-20"><a href="config-files.html#cb16-20"></a></span>
+<span id="cb16-21"><a href="config-files.html#cb16-21"></a><span class="co"># http://superuser.com/questions/384769/alias-rm-rm-i-considered-harmful</span></span>
+<span id="cb16-22"><a href="config-files.html#cb16-22"></a><span class="bu">alias</span> rmi=<span class="st">&#39;rm -i&#39;</span></span>
+<span id="cb16-23"><a href="config-files.html#cb16-23"></a></span>
+<span id="cb16-24"><a href="config-files.html#cb16-24"></a><span class="co"># Change command prompt</span></span>
+<span id="cb16-25"><a href="config-files.html#cb16-25"></a><span class="co"># http://www.cyberciti.biz/tips/howto-linux-unix-bash-shell-setup-prompt.html</span></span>
+<span id="cb16-26"><a href="config-files.html#cb16-26"></a><span class="co"># http://www.cyberciti.biz/faq/bash-shell-change-the-color-of-my-shell-prompt-under-linux-or-unix/</span></span>
+<span id="cb16-27"><a href="config-files.html#cb16-27"></a><span class="co"># https://bbs.archlinux.org/viewtopic.php?id=48910</span></span>
+<span id="cb16-28"><a href="config-files.html#cb16-28"></a><span class="co"># previous in enigma2: &quot;[\u@\h \W]\$ &quot;</span></span>
+<span id="cb16-29"><a href="config-files.html#cb16-29"></a><span class="co"># previously in mac: &quot;\h:\W \u\$ &quot;</span></span>
+<span id="cb16-30"><a href="config-files.html#cb16-30"></a><span class="bu">export</span> <span class="va">PS1=</span><span class="st">&quot;\[\e[0;33m\]\A \W </span><span class="dt">\$</span><span class="st"> \[\e[m\]&quot;</span></span>
+<span id="cb16-31"><a href="config-files.html#cb16-31"></a></span>
+<span id="cb16-32"><a href="config-files.html#cb16-32"></a><span class="co"># LIDB projects</span></span>
+<span id="cb16-33"><a href="config-files.html#cb16-33"></a><span class="bu">alias</span> labold=<span class="st">&quot;cd /dcl01/lieber/ajaffe/lab&quot;</span></span>
+<span id="cb16-34"><a href="config-files.html#cb16-34"></a><span class="bu">alias</span> lab=<span class="st">&quot;cd /dcl01/ajaffe/data/lab&quot;</span></span>
+<span id="cb16-35"><a href="config-files.html#cb16-35"></a></span>
+<span id="cb16-36"><a href="config-files.html#cb16-36"></a><span class="co">## Creating modules</span></span>
+<span id="cb16-37"><a href="config-files.html#cb16-37"></a><span class="co"># https://lmod.readthedocs.io/en/latest/050_lua_modulefiles.html</span></span>
+<span id="cb16-38"><a href="config-files.html#cb16-38"></a><span class="bu">alias</span> modsrc=<span class="st">&quot;cd /jhpce/shared/jhpce/libd&quot;</span></span>
+<span id="cb16-39"><a href="config-files.html#cb16-39"></a><span class="bu">alias</span> modlua=<span class="st">&quot;cd /jhpce/shared/jhpce/modulefiles/libd&quot;</span></span>
+<span id="cb16-40"><a href="config-files.html#cb16-40"></a></span>
+<span id="cb16-41"><a href="config-files.html#cb16-41"></a><span class="co"># colors</span></span>
+<span id="cb16-42"><a href="config-files.html#cb16-42"></a><span class="co"># http://norbauer.com/notebooks/code/notes/ls-colors-and-terminal-app</span></span>
+<span id="cb16-43"><a href="config-files.html#cb16-43"></a><span class="co"># used BSD pattern ExGxFxDxBxEgEdxbxgxhxd on http://geoff.greer.fm/lscolors/</span></span>
+<span id="cb16-44"><a href="config-files.html#cb16-44"></a><span class="co"># that tool does not specify the colors, which I did by looking manually at</span></span>
+<span id="cb16-45"><a href="config-files.html#cb16-45"></a><span class="co"># http://blog.twistedcode.org/2008/04/lscolors-explained.html</span></span>
+<span id="cb16-46"><a href="config-files.html#cb16-46"></a><span class="co"># and the norbauer.com site previously mentioned</span></span>
+<span id="cb16-47"><a href="config-files.html#cb16-47"></a><span class="bu">alias</span> ls=<span class="st">&quot;ls --color=auto&quot;</span></span>
+<span id="cb16-48"><a href="config-files.html#cb16-48"></a><span class="co">#export LS_COLORS=&quot;di=1;34;40:ln=1;36;40:so=1;35;40:pi=1;93;40:ex=1;31;40:bd=1;34;46:cd=1;34;43:su</span></span>
+<span id="cb16-49"><a href="config-files.html#cb16-49"></a>=<span class="ex">0</span><span class="kw">;</span><span class="ex">41</span>:sg=0<span class="kw">;</span><span class="ex">46</span>:tw=0<span class="kw">;</span><span class="ex">47</span>:ow=0<span class="kw">;</span><span class="ex">43</span><span class="st">&quot;</span></span>
+<span id="cb16-50"><a href="config-files.html#cb16-50"></a><span class="st">## After switching to RStudio:</span></span>
+<span id="cb16-51"><a href="config-files.html#cb16-51"></a><span class="st"># https://askubuntu.com/questions/466198/how-do-i-change-the-color-for-directories-with-ls-in-the-</span></span>
+<span id="cb16-52"><a href="config-files.html#cb16-52"></a><span class="st">console</span></span>
+<span id="cb16-53"><a href="config-files.html#cb16-53"></a><span class="st">export LS_COLORS=&quot;</span>di=0<span class="kw">;</span><span class="ex">32</span>:ln=0<span class="kw">;</span><span class="ex">36</span>:so=0<span class="kw">;</span><span class="ex">35</span>:pi=0<span class="kw">;</span><span class="ex">93</span>:ex=0<span class="kw">;</span><span class="ex">31</span>:bd=0<span class="kw">;</span><span class="ex">34</span><span class="kw">;</span><span class="ex">46</span>:cd=0<span class="kw">;</span><span class="ex">34</span><span class="kw">;</span><span class="ex">43</span>:su=0<span class="kw">;</span><span class="ex">41</span>:sg=0<span class="kw">;</span><span class="ex">46</span>:tw</span>
+<span id="cb16-54"><a href="config-files.html#cb16-54"></a>=<span class="ex">0</span><span class="kw">;</span><span class="ex">47</span>:ow=0<span class="kw">;</span><span class="ex">43</span>:fi=0<span class="kw">;</span><span class="ex">33</span><span class="st">&quot;</span></span>
+<span id="cb16-55"><a href="config-files.html#cb16-55"></a></span>
+<span id="cb16-56"><a href="config-files.html#cb16-56"></a><span class="st"># Uncomment below for Mac and comment the two previous commands</span></span>
+<span id="cb16-57"><a href="config-files.html#cb16-57"></a><span class="st">#export CLICOLOR=1</span></span>
+<span id="cb16-58"><a href="config-files.html#cb16-58"></a><span class="st">#export LSCOLORS=&quot;</span>ExGxFxDxBxEgEdxbxgxhxd<span class="st">&quot;</span></span>
+<span id="cb16-59"><a href="config-files.html#cb16-59"></a></span>
+<span id="cb16-60"><a href="config-files.html#cb16-60"></a><span class="st">## For setup:</span></span>
+<span id="cb16-61"><a href="config-files.html#cb16-61"></a><span class="st"># http://erniemiller.org/2011/12/12/textmate-2-rmate-awesome/</span></span>
+<span id="cb16-62"><a href="config-files.html#cb16-62"></a><span class="st">## For laptop config:</span></span>
+<span id="cb16-63"><a href="config-files.html#cb16-63"></a><span class="st"># http://jonsimpson.co.uk/log/2011/rmate-ssh-remoteforward</span></span>
+<span id="cb16-64"><a href="config-files.html#cb16-64"></a><span class="st">## rmate port</span></span>
+<span id="cb16-65"><a href="config-files.html#cb16-65"></a><span class="st"># https://github.com/textmate/rmate</span></span>
+<span id="cb16-66"><a href="config-files.html#cb16-66"></a><span class="st">export RMATE_PORT=&quot;</span>SOME_PORT_YOU_CHOOSE<span class="st">&quot;</span></span>
+<span id="cb16-67"><a href="config-files.html#cb16-67"></a></span>
+<span id="cb16-68"><a href="config-files.html#cb16-68"></a><span class="st">## Load the git module by default when qrsh/qsub</span></span>
+<span id="cb16-69"><a href="config-files.html#cb16-69"></a><span class="st">## thanks to Jiong Yang</span></span>
+<span id="cb16-70"><a href="config-files.html#cb16-70"></a><span class="st">if [[ </span><span class="va">$HOSTNAME</span><span class="st"> == compute-* ]] || [[ </span><span class="va">$HOSTNAME</span><span class="st"> == transfer-* ]]; then</span></span>
+<span id="cb16-71"><a href="config-files.html#cb16-71"></a><span class="st">    echo &quot;</span>Adding LIBD modules<span class="st">&quot;</span></span>
+<span id="cb16-72"><a href="config-files.html#cb16-72"></a><span class="st">    module use /jhpce/shared/jhpce/modulefiles/libd</span></span>
+<span id="cb16-73"><a href="config-files.html#cb16-73"></a><span class="st">    echo &quot;</span>Loading git<span class="st">&quot;</span></span>
+<span id="cb16-74"><a href="config-files.html#cb16-74"></a><span class="st">    module load git</span></span>
+<span id="cb16-75"><a href="config-files.html#cb16-75"></a><span class="st">    module load git-status-size/github</span></span>
+<span id="cb16-76"><a href="config-files.html#cb16-76"></a><span class="st">    module load git-lfs/2.8.0</span></span>
+<span id="cb16-77"><a href="config-files.html#cb16-77"></a><span class="st">    module load rmate/1.5.9</span></span>
+<span id="cb16-78"><a href="config-files.html#cb16-78"></a><span class="st">    module load conda_R/4.0</span></span>
+<span id="cb16-79"><a href="config-files.html#cb16-79"></a><span class="st">fi</span></span>
+<span id="cb16-80"><a href="config-files.html#cb16-80"></a></span>
+<span id="cb16-81"><a href="config-files.html#cb16-81"></a><span class="st">## To deal with running nextflow without requesting much more memory</span></span>
+<span id="cb16-82"><a href="config-files.html#cb16-82"></a><span class="st">## https://jhpce.jhu.edu/question/why-do-i-get-memory-errors-when-running-java/</span></span>
+<span id="cb16-83"><a href="config-files.html#cb16-83"></a><span class="st">export _JAVA_OPTIONS=&quot;</span>-Xms5g -Xmx6g<span class="st">&quot;</span></span>
+<span id="cb16-84"><a href="config-files.html#cb16-84"></a></span>
+<span id="cb16-85"><a href="config-files.html#cb16-85"></a><span class="st">## From https://twitter.com/fellgernon/status/1258455434073124865?s=20</span></span>
+<span id="cb16-86"><a href="config-files.html#cb16-86"></a><span class="st">## and https://www.cyberciti.biz/tips/understanding-linux-unix-umask-value-usage.html</span></span>
+<span id="cb16-87"><a href="config-files.html#cb16-87"></a><span class="st">umask u=rwx,g=rwx,o= ## equivalent to umask 007</span></span></code></pre></div>
+</div>
+<div id="bash_profile" class="section level3">
+<h3><span class="header-section-number">13.4.3</span> <code>~/.bash_profile</code></h3>
+<p>This file is basically empty, since all the information is contained in the <code>~/.bashrc</code>. That was the recommended setup a few years ago when I asked JHPCE’s admins.</p>
+<div class="sourceCode" id="cb17"><pre class="sourceCode bash"><code class="sourceCode bash"><span id="cb17-1"><a href="config-files.html#cb17-1"></a><span class="co"># .bash_profile</span></span>
+<span id="cb17-2"><a href="config-files.html#cb17-2"></a></span>
+<span id="cb17-3"><a href="config-files.html#cb17-3"></a><span class="co"># Get the aliases and functions</span></span>
+<span id="cb17-4"><a href="config-files.html#cb17-4"></a><span class="kw">if</span><span class="bu"> [</span> <span class="ot">-f</span> ~/.bashrc<span class="bu"> ]</span>; <span class="kw">then</span></span>
+<span id="cb17-5"><a href="config-files.html#cb17-5"></a>    <span class="bu">.</span> <span class="ex">~/.bashrc</span></span>
+<span id="cb17-6"><a href="config-files.html#cb17-6"></a><span class="kw">fi</span></span></code></pre></div>
+</div>
+<div id="inputrc" class="section level3">
+<h3><span class="header-section-number">13.4.4</span> <code>~/.inputrc</code></h3>
+<p>Useful for altering the behavior of the up and down arrow keys. See the companion lines on the <code>~/.bashrc</code> file.</p>
+<div class="sourceCode" id="cb18"><pre class="sourceCode bash"><code class="sourceCode bash"><span id="cb18-1"><a href="config-files.html#cb18-1"></a><span class="co">#Page up/page down</span></span>
+<span id="cb18-2"><a href="config-files.html#cb18-2"></a><span class="st">&quot;\e[B&quot;</span>: <span class="ex">history-search-forward</span></span>
+<span id="cb18-3"><a href="config-files.html#cb18-3"></a><span class="st">&quot;\e[A&quot;</span>: <span class="ex">history-search-backward</span></span>
+<span id="cb18-4"><a href="config-files.html#cb18-4"></a></span>
+<span id="cb18-5"><a href="config-files.html#cb18-5"></a><span class="va">$include</span> <span class="ex">/etc/inputrc</span></span></code></pre></div>
+
+</div>
+</div>
+</div>
+<div class="container">
+    <footer class="site-footer">
+
+      <center>
+<p class="powered-by">
+© 2011-2020. All thoughts and opinions here are my own. The icon was designed by <a href="https://www.linkedin.com/in/mauricio-guzman-6529b551/">Mauricio Guzmán</a> and is inspired by <a href="https://en.wikipedia.org/wiki/Huichol">Huichol culture</a>; it represents my community building interests.
+</p>
+
+<p class="powered-by copyright-license-text">
+This work is licensed under <a href="https://creativecommons.org/licenses/by-nc-sa/4.0" rel="noopener noreferrer" target="_blank">CC BY NC SA 4.0</a>
+</p>
+
+<p class="powered-by footer-license-icons">
+    <a href="https://creativecommons.org/licenses/by-nc-sa/4.0" rel="noopener noreferrer" target="_blank">
+      <img src="https://search.creativecommons.org/static/img/cc_icon.svg" alt="CC icon" width="32px">
+      <img src="https://search.creativecommons.org/static/img/cc-by_icon.svg" alt="CC by icon" width="32px">
+      <img src="https://search.creativecommons.org/static/img/cc-nc_icon.svg" alt="CC NC icon" width="32px">
+      <img src="https://search.creativecommons.org/static/img/cc-sa_icon.svg" alt="CC SA icon" width="32px">
+    </a>
+</p>
+
+<div id="clustrmaps-widget"></div><script type='text/javascript' id='clustrmaps' src='//cdn.clustrmaps.com/map_v2.js?cl=ffffff&w=300&t=m&d=Zo-deincaJGsqhqjIWsujtdoNOMJsnnZLefKmxDKVv8&co=124b73&cmo=dd53ff&cmn=4ec724'></script>
+
+<p class="powered-by">
+Published with <a href="https://bookdown.org/" target="_blank" rel="noopener">Bookdown</a>
+</p>
+
+</center>
+
+
+
+<!-- Global site tag (gtag.js) - Google Analytics -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=UA-45299226-1"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'UA-45299226-1');
+</script>
+
+</footer>
+</div>
+            </section>
+
+          </div>
+        </div>
+      </div>
+<a href="helping-others.html" class="navigation navigation-prev " aria-label="Previous page"><i class="fa fa-angle-left"></i></a>
+<a href="how-to-contribute.html" class="navigation navigation-next " aria-label="Next page"><i class="fa fa-angle-right"></i></a>
+    </div>
+  </div>
+<script src="libs/gitbook-2.6.7/js/app.min.js"></script>
+<script src="libs/gitbook-2.6.7/js/lunr.js"></script>
+<script src="libs/gitbook-2.6.7/js/clipboard.min.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-search.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-sharing.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-fontsettings.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-bookdown.js"></script>
+<script src="libs/gitbook-2.6.7/js/jquery.highlight.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-clipboard.js"></script>
+<script>
+gitbook.require(["gitbook"], function(gitbook) {
+gitbook.start({
+"sharing": {
+"github": false,
+"facebook": true,
+"twitter": true,
+"linkedin": false,
+"weibo": false,
+"instapaper": false,
+"vk": false,
+"all": ["facebook", "twitter", "linkedin", "weibo", "instapaper"]
+},
+"fontsettings": {
+"theme": "white",
+"family": "sans",
+"size": 2
+},
+"edit": {
+"link": null,
+"text": null
+},
+"history": {
+"link": null,
+"text": null
+},
+"view": {
+"link": null,
+"text": null
+},
+"download": null,
+"toc": {
+"collapse": "subsection"
+}
+});
+});
+</script>
+
+<!-- dynamically load mathjax for compatibility with self-contained -->
+<script>
+  (function () {
+    var script = document.createElement("script");
+    script.type = "text/javascript";
+    var src = "true";
+    if (src === "" || src === "true") src = "https://mathjax.rstudio.com/latest/MathJax.js?config=TeX-MML-AM_CHTML";
+    if (location.protocol !== "file:")
+      if (/^https?:/.test(src))
+        src = src.replace(/^https?:/, '');
+    script.src = src;
+    document.getElementsByTagName("head")[0].appendChild(script);
+  })();
+</script>
+</body>
+
+</html>
