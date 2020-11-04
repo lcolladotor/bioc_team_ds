@@ -48,3 +48,7 @@ We might identify topics that we need to either train the DSgs-guides on or our 
 
 While each team member has an individual weekly meeting, sometimes some problems can be solved with other/fresh eyes looking at them as well as new ideas. If you are having one such problem, this is a great venue to get help for it. This space and time can also be used for asking some quick questions as well as addressing any administration announcements.
 
+## Notion updates
+
+We recently started using [Notion](https://www.notion.so/) that you can [sign up here](https://www.notion.so/signup) and get a free "Personal Pro" account when you sign up with an `edu` email. Let Leo know your `edu` email once you sign up so he can add you to the team "page". On it, you can find "epics" which are major projects and "tasks". We meet on Mondays at 3:30 pm and Fridays at 9:30 am to discuss our progress as a team with our epics & tasks.
+
