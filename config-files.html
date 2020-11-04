@@ -296,8 +296,16 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 </ul></li>
 <li>Bioconductor-devel docker image: <a href="http://bioconductor.org/help/docker/" class="uri">http://bioconductor.org/help/docker/</a></li>
 </ul>
+<p>Additional software:</p>
+<ul>
+<li>Both: <a href="https://www.notion.so/desktop">Notion</a>, <a href="https://slack.com/downloads">Slack</a></li>
+<li>Windows: <a href="https://sourceforge.net/projects/winscp/">WinSCP</a>, <a href="https://gitforwindows.org/">Git bash</a>, <a href="https://www.putty.org/">PuTTY</a>, <a href="https://notepad-plus-plus.org/downloads/">Notepad++</a>, <a href="https://sourceforge.net/projects/npptor/">NppToR</a></li>
+<li>macOS: <a href="https://cyberduck.io/">Cyberduck</a>, <a href="https://www.iterm2.com/">iTerm2</a>, <a href="https://www.alfredapp.com/">Alfred</a>, <a href="https://macromates.com/download">TextMate2</a></li>
+</ul>
+<p>You might also be interested in checking out our older <a href="http://research.libd.org/jaffe_onboarding/setup.html">onboarding setup materials</a>.</p>
 <div id="r-packages" class="section level3">
 <h3><span class="header-section-number">13.1.1</span> R packages</h3>
+<p>The following R code installs all the packages I have installed currently as my <em>base</em>. As I explore packages, I might try new ones that are not in this list.</p>
 <div class="sourceCode" id="cb8"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb8-1"><a href="config-files.html#cb8-1"></a><span class="co">## Install from scratch</span></span>
 <span id="cb8-2"><a href="config-files.html#cb8-2"></a><span class="cf">if</span> (<span class="op">!</span><span class="kw">requireNamespace</span>(<span class="st">&quot;remotes&quot;</span>, <span class="dt">quietly =</span> <span class="ot">TRUE</span>))</span>
 <span id="cb8-3"><a href="config-files.html#cb8-3"></a>    <span class="kw">install.packages</span>(<span class="st">&quot;remotes&quot;</span>)</span>
@@ -383,13 +391,14 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <span id="cb8-83"><a href="config-files.html#cb8-83"></a>    <span class="st">&quot;gadenbuie/xaringanExtra&quot;</span></span>
 <span id="cb8-84"><a href="config-files.html#cb8-84"></a>))</span>
 <span id="cb8-85"><a href="config-files.html#cb8-85"></a></span>
-<span id="cb8-86"><a href="config-files.html#cb8-86"></a><span class="co">## Private packages</span></span>
+<span id="cb8-86"><a href="config-files.html#cb8-86"></a><span class="co">## Private packages (you likely won&#39;t have access to them)</span></span>
 <span id="cb8-87"><a href="config-files.html#cb8-87"></a>remotes<span class="op">::</span><span class="kw">install_github</span>(<span class="kw">c</span>(</span>
 <span id="cb8-88"><a href="config-files.html#cb8-88"></a>    <span class="st">&quot;LieberInstitute/LIBDpheno&quot;</span>,</span>
 <span id="cb8-89"><a href="config-files.html#cb8-89"></a>    <span class="st">&quot;LieberInstitute/libdRSE&quot;</span></span>
 <span id="cb8-90"><a href="config-files.html#cb8-90"></a>), <span class="dt">dependencies =</span> <span class="ot">TRUE</span>)</span></code></pre></div>
 <div id="previously-installed" class="section level4">
 <h4><span class="header-section-number">13.1.1.1</span> Previously installed</h4>
+<p>As I described in <a href="http://lcolladotor.github.io/2017/05/04/updating-r/#.X6ICiIhKguU">my blog post on updating R</a>, I also like to saved my list of currently installed packages.</p>
 <div class="sourceCode" id="cb9"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb9-1"><a href="config-files.html#cb9-1"></a>installed_path &lt;-<span class="st"> &quot;/Users/lcollado/Dropbox/Computing/R&quot;</span></span>
 <span id="cb9-2"><a href="config-files.html#cb9-2"></a>installed &lt;-<span class="st"> </span><span class="kw">dir</span>(<span class="kw">.libPaths</span>())</span>
 <span id="cb9-3"><a href="config-files.html#cb9-3"></a><span class="kw">save</span>(installed, <span class="dt">file =</span> <span class="kw">file.path</span>(installed_path, <span class="kw">paste0</span>(<span class="kw">Sys.Date</span>(), <span class="st">&#39;-installed.Rdata&#39;</span>)))</span></code></pre></div>
