@@ -76,6 +76,7 @@ remotes::install_github(c(
 ## CRAN packages
 remotes::install_cran(c(
     "ari",
+    "blogdown",
     "clue",
     "corrplot",
     "getopt",
