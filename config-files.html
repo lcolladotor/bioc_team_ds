@@ -355,47 +355,48 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <span id="cb8-47"><a href="config-files.html#cb8-47"></a><span class="co">## CRAN packages</span></span>
 <span id="cb8-48"><a href="config-files.html#cb8-48"></a>remotes<span class="op">::</span><span class="kw">install_cran</span>(<span class="kw">c</span>(</span>
 <span id="cb8-49"><a href="config-files.html#cb8-49"></a>    <span class="st">&quot;ari&quot;</span>,</span>
-<span id="cb8-50"><a href="config-files.html#cb8-50"></a>    <span class="st">&quot;clue&quot;</span>,</span>
-<span id="cb8-51"><a href="config-files.html#cb8-51"></a>    <span class="st">&quot;corrplot&quot;</span>,</span>
-<span id="cb8-52"><a href="config-files.html#cb8-52"></a>    <span class="st">&quot;getopt&quot;</span>,</span>
-<span id="cb8-53"><a href="config-files.html#cb8-53"></a>    <span class="st">&quot;ggthemes&quot;</span>,</span>
-<span id="cb8-54"><a href="config-files.html#cb8-54"></a>    <span class="st">&quot;googlesheets4&quot;</span>,</span>
-<span id="cb8-55"><a href="config-files.html#cb8-55"></a>    <span class="st">&quot;MatrixEQTL&quot;</span>,</span>
-<span id="cb8-56"><a href="config-files.html#cb8-56"></a>    <span class="st">&quot;pagedown&quot;</span>,</span>
-<span id="cb8-57"><a href="config-files.html#cb8-57"></a>    <span class="st">&quot;patchwork&quot;</span>,</span>
-<span id="cb8-58"><a href="config-files.html#cb8-58"></a>    <span class="st">&quot;reprex&quot;</span>,</span>
-<span id="cb8-59"><a href="config-files.html#cb8-59"></a>    <span class="st">&quot;rtweet&quot;</span>,</span>
-<span id="cb8-60"><a href="config-files.html#cb8-60"></a>    <span class="st">&quot;suncalc&quot;</span>,</span>
-<span id="cb8-61"><a href="config-files.html#cb8-61"></a>    <span class="st">&quot;tidyverse&quot;</span>,</span>
-<span id="cb8-62"><a href="config-files.html#cb8-62"></a>    <span class="st">&quot;xaringan&quot;</span>,</span>
-<span id="cb8-63"><a href="config-files.html#cb8-63"></a>    <span class="st">&quot;xaringanthemer&quot;</span>,</span>
-<span id="cb8-64"><a href="config-files.html#cb8-64"></a>    <span class="st">&quot;VennDiagram&quot;</span></span>
-<span id="cb8-65"><a href="config-files.html#cb8-65"></a>))</span>
-<span id="cb8-66"><a href="config-files.html#cb8-66"></a></span>
-<span id="cb8-67"><a href="config-files.html#cb8-67"></a><span class="co">## Bioc packages</span></span>
-<span id="cb8-68"><a href="config-files.html#cb8-68"></a>BiocManager<span class="op">::</span><span class="kw">install</span>(<span class="kw">c</span>(</span>
-<span id="cb8-69"><a href="config-files.html#cb8-69"></a>    <span class="st">&quot;BiocCheck&quot;</span>,</span>
-<span id="cb8-70"><a href="config-files.html#cb8-70"></a>    <span class="st">&quot;ComplexHeatmap&quot;</span>,</span>
-<span id="cb8-71"><a href="config-files.html#cb8-71"></a>    <span class="st">&quot;ExploreModelMatrix&quot;</span>,</span>
-<span id="cb8-72"><a href="config-files.html#cb8-72"></a>    <span class="st">&quot;iSEE&quot;</span>,</span>
-<span id="cb8-73"><a href="config-files.html#cb8-73"></a>    <span class="st">&quot;scater&quot;</span>,</span>
-<span id="cb8-74"><a href="config-files.html#cb8-74"></a>    <span class="st">&quot;scran&quot;</span>,</span>
-<span id="cb8-75"><a href="config-files.html#cb8-75"></a>    <span class="st">&quot;sva&quot;</span>,</span>
-<span id="cb8-76"><a href="config-files.html#cb8-76"></a>    <span class="st">&quot;variancePartition&quot;</span></span>
-<span id="cb8-77"><a href="config-files.html#cb8-77"></a>), <span class="dt">update =</span> <span class="ot">FALSE</span>)</span>
-<span id="cb8-78"><a href="config-files.html#cb8-78"></a></span>
-<span id="cb8-79"><a href="config-files.html#cb8-79"></a><span class="co">## GitHub packages</span></span>
-<span id="cb8-80"><a href="config-files.html#cb8-80"></a>remotes<span class="op">::</span><span class="kw">install_github</span>(<span class="kw">c</span>(</span>
-<span id="cb8-81"><a href="config-files.html#cb8-81"></a>    <span class="st">&quot;cloudyr/rmote&quot;</span>,</span>
-<span id="cb8-82"><a href="config-files.html#cb8-82"></a>    <span class="st">&quot;gadenbuie/rsthemes&quot;</span>,</span>
-<span id="cb8-83"><a href="config-files.html#cb8-83"></a>    <span class="st">&quot;gadenbuie/xaringanExtra&quot;</span></span>
-<span id="cb8-84"><a href="config-files.html#cb8-84"></a>))</span>
-<span id="cb8-85"><a href="config-files.html#cb8-85"></a></span>
-<span id="cb8-86"><a href="config-files.html#cb8-86"></a><span class="co">## Private packages (you likely won&#39;t have access to them)</span></span>
-<span id="cb8-87"><a href="config-files.html#cb8-87"></a>remotes<span class="op">::</span><span class="kw">install_github</span>(<span class="kw">c</span>(</span>
-<span id="cb8-88"><a href="config-files.html#cb8-88"></a>    <span class="st">&quot;LieberInstitute/LIBDpheno&quot;</span>,</span>
-<span id="cb8-89"><a href="config-files.html#cb8-89"></a>    <span class="st">&quot;LieberInstitute/libdRSE&quot;</span></span>
-<span id="cb8-90"><a href="config-files.html#cb8-90"></a>), <span class="dt">dependencies =</span> <span class="ot">TRUE</span>)</span></code></pre></div>
+<span id="cb8-50"><a href="config-files.html#cb8-50"></a>    <span class="st">&quot;blogdown&quot;</span>,</span>
+<span id="cb8-51"><a href="config-files.html#cb8-51"></a>    <span class="st">&quot;clue&quot;</span>,</span>
+<span id="cb8-52"><a href="config-files.html#cb8-52"></a>    <span class="st">&quot;corrplot&quot;</span>,</span>
+<span id="cb8-53"><a href="config-files.html#cb8-53"></a>    <span class="st">&quot;getopt&quot;</span>,</span>
+<span id="cb8-54"><a href="config-files.html#cb8-54"></a>    <span class="st">&quot;ggthemes&quot;</span>,</span>
+<span id="cb8-55"><a href="config-files.html#cb8-55"></a>    <span class="st">&quot;googlesheets4&quot;</span>,</span>
+<span id="cb8-56"><a href="config-files.html#cb8-56"></a>    <span class="st">&quot;MatrixEQTL&quot;</span>,</span>
+<span id="cb8-57"><a href="config-files.html#cb8-57"></a>    <span class="st">&quot;pagedown&quot;</span>,</span>
+<span id="cb8-58"><a href="config-files.html#cb8-58"></a>    <span class="st">&quot;patchwork&quot;</span>,</span>
+<span id="cb8-59"><a href="config-files.html#cb8-59"></a>    <span class="st">&quot;reprex&quot;</span>,</span>
+<span id="cb8-60"><a href="config-files.html#cb8-60"></a>    <span class="st">&quot;rtweet&quot;</span>,</span>
+<span id="cb8-61"><a href="config-files.html#cb8-61"></a>    <span class="st">&quot;suncalc&quot;</span>,</span>
+<span id="cb8-62"><a href="config-files.html#cb8-62"></a>    <span class="st">&quot;tidyverse&quot;</span>,</span>
+<span id="cb8-63"><a href="config-files.html#cb8-63"></a>    <span class="st">&quot;xaringan&quot;</span>,</span>
+<span id="cb8-64"><a href="config-files.html#cb8-64"></a>    <span class="st">&quot;xaringanthemer&quot;</span>,</span>
+<span id="cb8-65"><a href="config-files.html#cb8-65"></a>    <span class="st">&quot;VennDiagram&quot;</span></span>
+<span id="cb8-66"><a href="config-files.html#cb8-66"></a>))</span>
+<span id="cb8-67"><a href="config-files.html#cb8-67"></a></span>
+<span id="cb8-68"><a href="config-files.html#cb8-68"></a><span class="co">## Bioc packages</span></span>
+<span id="cb8-69"><a href="config-files.html#cb8-69"></a>BiocManager<span class="op">::</span><span class="kw">install</span>(<span class="kw">c</span>(</span>
+<span id="cb8-70"><a href="config-files.html#cb8-70"></a>    <span class="st">&quot;BiocCheck&quot;</span>,</span>
+<span id="cb8-71"><a href="config-files.html#cb8-71"></a>    <span class="st">&quot;ComplexHeatmap&quot;</span>,</span>
+<span id="cb8-72"><a href="config-files.html#cb8-72"></a>    <span class="st">&quot;ExploreModelMatrix&quot;</span>,</span>
+<span id="cb8-73"><a href="config-files.html#cb8-73"></a>    <span class="st">&quot;iSEE&quot;</span>,</span>
+<span id="cb8-74"><a href="config-files.html#cb8-74"></a>    <span class="st">&quot;scater&quot;</span>,</span>
+<span id="cb8-75"><a href="config-files.html#cb8-75"></a>    <span class="st">&quot;scran&quot;</span>,</span>
+<span id="cb8-76"><a href="config-files.html#cb8-76"></a>    <span class="st">&quot;sva&quot;</span>,</span>
+<span id="cb8-77"><a href="config-files.html#cb8-77"></a>    <span class="st">&quot;variancePartition&quot;</span></span>
+<span id="cb8-78"><a href="config-files.html#cb8-78"></a>), <span class="dt">update =</span> <span class="ot">FALSE</span>)</span>
+<span id="cb8-79"><a href="config-files.html#cb8-79"></a></span>
+<span id="cb8-80"><a href="config-files.html#cb8-80"></a><span class="co">## GitHub packages</span></span>
+<span id="cb8-81"><a href="config-files.html#cb8-81"></a>remotes<span class="op">::</span><span class="kw">install_github</span>(<span class="kw">c</span>(</span>
+<span id="cb8-82"><a href="config-files.html#cb8-82"></a>    <span class="st">&quot;cloudyr/rmote&quot;</span>,</span>
+<span id="cb8-83"><a href="config-files.html#cb8-83"></a>    <span class="st">&quot;gadenbuie/rsthemes&quot;</span>,</span>
+<span id="cb8-84"><a href="config-files.html#cb8-84"></a>    <span class="st">&quot;gadenbuie/xaringanExtra&quot;</span></span>
+<span id="cb8-85"><a href="config-files.html#cb8-85"></a>))</span>
+<span id="cb8-86"><a href="config-files.html#cb8-86"></a></span>
+<span id="cb8-87"><a href="config-files.html#cb8-87"></a><span class="co">## Private packages (you likely won&#39;t have access to them)</span></span>
+<span id="cb8-88"><a href="config-files.html#cb8-88"></a>remotes<span class="op">::</span><span class="kw">install_github</span>(<span class="kw">c</span>(</span>
+<span id="cb8-89"><a href="config-files.html#cb8-89"></a>    <span class="st">&quot;LieberInstitute/LIBDpheno&quot;</span>,</span>
+<span id="cb8-90"><a href="config-files.html#cb8-90"></a>    <span class="st">&quot;LieberInstitute/libdRSE&quot;</span></span>
+<span id="cb8-91"><a href="config-files.html#cb8-91"></a>), <span class="dt">dependencies =</span> <span class="ot">TRUE</span>)</span></code></pre></div>
 <div id="previously-installed" class="section level4">
 <h4><span class="header-section-number">13.1.1.1</span> Previously installed</h4>
 <p>As I described in <a href="http://lcolladotor.github.io/2017/05/04/updating-r/#.X6ICiIhKguU">my blog post on updating R</a>, I also like to saved my list of currently installed packages.</p>
