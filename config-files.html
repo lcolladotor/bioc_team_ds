@@ -205,6 +205,7 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <li class="chapter" data-level="11.2.1" data-path="team-meetings.html"><a href="team-meetings.html#notes-1"><i class="fa fa-check"></i><b>11.2.1</b> Notes</a></li>
 </ul></li>
 <li class="chapter" data-level="11.3" data-path="team-meetings.html"><a href="team-meetings.html#team-help"><i class="fa fa-check"></i><b>11.3</b> Team help</a></li>
+<li class="chapter" data-level="11.4" data-path="team-meetings.html"><a href="team-meetings.html#notion-updates"><i class="fa fa-check"></i><b>11.4</b> Notion updates</a></li>
 </ul></li>
 <li class="chapter" data-level="12" data-path="helping-others.html"><a href="helping-others.html"><i class="fa fa-check"></i><b>12</b> Helping others</a><ul>
 <li class="chapter" data-level="12.1" data-path="helping-others.html"><a href="helping-others.html#linear-regression-example"><i class="fa fa-check"></i><b>12.1</b> Linear regression example</a></li>
@@ -459,7 +460,26 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <span id="cb11-43"><a href="config-files.html#cb11-43"></a></span>
 <span id="cb11-44"><a href="config-files.html#cb11-44"></a><span class="co">## For biocthis</span></span>
 <span id="cb11-45"><a href="config-files.html#cb11-45"></a><span class="kw">options</span>(<span class="st">&quot;biocthis.pkgdown&quot;</span> =<span class="st"> </span><span class="ot">TRUE</span>)</span>
-<span id="cb11-46"><a href="config-files.html#cb11-46"></a><span class="kw">options</span>(<span class="st">&quot;biocthis.testthat&quot;</span> =<span class="st"> </span><span class="ot">TRUE</span>)</span></code></pre></div>
+<span id="cb11-46"><a href="config-files.html#cb11-46"></a><span class="kw">options</span>(<span class="st">&quot;biocthis.testthat&quot;</span> =<span class="st"> </span><span class="ot">TRUE</span>)</span>
+<span id="cb11-47"><a href="config-files.html#cb11-47"></a></span>
+<span id="cb11-48"><a href="config-files.html#cb11-48"></a><span class="co">## From https://www.garrickadenbuie.com/project/rsthemes/</span></span>
+<span id="cb11-49"><a href="config-files.html#cb11-49"></a><span class="cf">if</span> (<span class="kw">interactive</span>() <span class="op">&amp;&amp;</span><span class="st"> </span><span class="kw">requireNamespace</span>(<span class="st">&quot;rsthemes&quot;</span>, <span class="dt">quietly =</span> <span class="ot">TRUE</span>)) {</span>
+<span id="cb11-50"><a href="config-files.html#cb11-50"></a>    <span class="co"># Set preferred themes if not handled elsewhere..</span></span>
+<span id="cb11-51"><a href="config-files.html#cb11-51"></a>    rsthemes<span class="op">::</span><span class="kw">set_theme_light</span>(<span class="st">&quot;Solarized Light {rsthemes}&quot;</span>)  <span class="co"># light theme</span></span>
+<span id="cb11-52"><a href="config-files.html#cb11-52"></a>    rsthemes<span class="op">::</span><span class="kw">set_theme_dark</span>(<span class="st">&quot;base16 Monokai {rsthemes}&quot;</span>) <span class="co"># dark theme</span></span>
+<span id="cb11-53"><a href="config-files.html#cb11-53"></a>    rsthemes<span class="op">::</span><span class="kw">set_theme_favorite</span>(<span class="kw">c</span>(</span>
+<span id="cb11-54"><a href="config-files.html#cb11-54"></a>        <span class="st">&quot;Solarized Light {rsthemes}&quot;</span>,</span>
+<span id="cb11-55"><a href="config-files.html#cb11-55"></a>        <span class="st">&quot;base16 Monokai {rsthemes}&quot;</span>,</span>
+<span id="cb11-56"><a href="config-files.html#cb11-56"></a>        <span class="st">&quot;One Dark {rsthemes}&quot;</span></span>
+<span id="cb11-57"><a href="config-files.html#cb11-57"></a>    ))</span>
+<span id="cb11-58"><a href="config-files.html#cb11-58"></a></span>
+<span id="cb11-59"><a href="config-files.html#cb11-59"></a>    <span class="co"># Whenever the R session restarts inside RStudio...</span></span>
+<span id="cb11-60"><a href="config-files.html#cb11-60"></a>    <span class="kw">setHook</span>(<span class="st">&quot;rstudio.sessionInit&quot;</span>, <span class="cf">function</span>(isNewSession) {</span>
+<span id="cb11-61"><a href="config-files.html#cb11-61"></a>        <span class="co"># Automatically choose the correct theme based on time of day</span></span>
+<span id="cb11-62"><a href="config-files.html#cb11-62"></a>        <span class="co">## Used rsthemes::geolocate() once</span></span>
+<span id="cb11-63"><a href="config-files.html#cb11-63"></a>        rsthemes<span class="op">::</span><span class="kw">use_theme_auto</span>(<span class="dt">lat =</span> <span class="fl">39.2891</span>, <span class="dt">lon =</span> <span class="fl">-76.5583</span>)</span>
+<span id="cb11-64"><a href="config-files.html#cb11-64"></a>    }, <span class="dt">action =</span> <span class="st">&quot;append&quot;</span>)</span>
+<span id="cb11-65"><a href="config-files.html#cb11-65"></a>}</span></code></pre></div>
 </div>
 <div id="renviron" class="section level3">
 <h3><span class="header-section-number">13.2.2</span> <code>~/.Renviron</code></h3>
