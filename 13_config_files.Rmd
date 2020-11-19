@@ -346,7 +346,7 @@ This file configures the default SGE requests under `qsub` and `qrsh`.
 #
 # Set the standard value for stack size limit
 # (needed for some programs to run properly when h_vmem is set)
--l h_stack=512M
+-l h_stack=256M
 #
 # Set a default maximum file size that an SGE job can create
 -l h_fsize=100G
