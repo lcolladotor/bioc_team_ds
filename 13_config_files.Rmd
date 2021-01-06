@@ -220,6 +220,15 @@ if (interactive() && requireNamespace("rsthemes", quietly = TRUE)) {
         rsthemes::use_theme_auto(lat = 39.2891, lon = -76.5583)
     }, action = "append")
 }
+
+## From https://twitter.com/hadleywickham/status/1113542388033699840
+if(interactive()) {
+    if (!requireNamespace("prompt", quietly = TRUE)) {
+        cat('To install prompt use: remotes::install_github("gaborcsardi/prompt")\n')
+    } else {
+        prompt::set_prompt(prompt::prompt_git)
+    }
+}
 ```
 
 ### `~/.Renviron`
