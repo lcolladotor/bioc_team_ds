@@ -487,7 +487,16 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <span id="cb11-62"><a href="config-files.html#cb11-62"></a>        <span class="co">## Used rsthemes::geolocate() once</span></span>
 <span id="cb11-63"><a href="config-files.html#cb11-63"></a>        rsthemes<span class="op">::</span><span class="kw">use_theme_auto</span>(<span class="dt">lat =</span> <span class="fl">39.2891</span>, <span class="dt">lon =</span> <span class="fl">-76.5583</span>)</span>
 <span id="cb11-64"><a href="config-files.html#cb11-64"></a>    }, <span class="dt">action =</span> <span class="st">&quot;append&quot;</span>)</span>
-<span id="cb11-65"><a href="config-files.html#cb11-65"></a>}</span></code></pre></div>
+<span id="cb11-65"><a href="config-files.html#cb11-65"></a>}</span>
+<span id="cb11-66"><a href="config-files.html#cb11-66"></a></span>
+<span id="cb11-67"><a href="config-files.html#cb11-67"></a><span class="co">## From https://twitter.com/hadleywickham/status/1113542388033699840</span></span>
+<span id="cb11-68"><a href="config-files.html#cb11-68"></a><span class="cf">if</span>(<span class="kw">interactive</span>()) {</span>
+<span id="cb11-69"><a href="config-files.html#cb11-69"></a>    <span class="cf">if</span> (<span class="op">!</span><span class="kw">requireNamespace</span>(<span class="st">&quot;prompt&quot;</span>, <span class="dt">quietly =</span> <span class="ot">TRUE</span>)) {</span>
+<span id="cb11-70"><a href="config-files.html#cb11-70"></a>        <span class="kw">cat</span>(<span class="st">&#39;To install prompt use: remotes::install_github(&quot;gaborcsardi/prompt&quot;)</span><span class="ch">\n</span><span class="st">&#39;</span>)</span>
+<span id="cb11-71"><a href="config-files.html#cb11-71"></a>    } <span class="cf">else</span> {</span>
+<span id="cb11-72"><a href="config-files.html#cb11-72"></a>        prompt<span class="op">::</span><span class="kw">set_prompt</span>(prompt<span class="op">::</span>prompt_git)</span>
+<span id="cb11-73"><a href="config-files.html#cb11-73"></a>    }</span>
+<span id="cb11-74"><a href="config-files.html#cb11-74"></a>}</span></code></pre></div>
 </div>
 <div id="renviron" class="section level3">
 <h3><span class="header-section-number">13.2.2</span> <code>~/.Renviron</code></h3>
