@@ -658,58 +658,64 @@ Thumbs.db</code></pre>
 <span id="cb16-33"><a href="config-files.html#cb16-33"></a><span class="bu">alias</span> labold=<span class="st">&quot;cd /dcl01/lieber/ajaffe/lab&quot;</span></span>
 <span id="cb16-34"><a href="config-files.html#cb16-34"></a><span class="bu">alias</span> lab=<span class="st">&quot;cd /dcl01/ajaffe/data/lab&quot;</span></span>
 <span id="cb16-35"><a href="config-files.html#cb16-35"></a></span>
-<span id="cb16-36"><a href="config-files.html#cb16-36"></a><span class="co">## Creating modules</span></span>
-<span id="cb16-37"><a href="config-files.html#cb16-37"></a><span class="co"># https://lmod.readthedocs.io/en/latest/050_lua_modulefiles.html</span></span>
-<span id="cb16-38"><a href="config-files.html#cb16-38"></a><span class="bu">alias</span> modsrc=<span class="st">&quot;cd /jhpce/shared/jhpce/libd&quot;</span></span>
-<span id="cb16-39"><a href="config-files.html#cb16-39"></a><span class="bu">alias</span> modlua=<span class="st">&quot;cd /jhpce/shared/jhpce/modulefiles/libd&quot;</span></span>
-<span id="cb16-40"><a href="config-files.html#cb16-40"></a></span>
-<span id="cb16-41"><a href="config-files.html#cb16-41"></a><span class="co"># colors</span></span>
-<span id="cb16-42"><a href="config-files.html#cb16-42"></a><span class="co"># http://norbauer.com/notebooks/code/notes/ls-colors-and-terminal-app</span></span>
-<span id="cb16-43"><a href="config-files.html#cb16-43"></a><span class="co"># used BSD pattern ExGxFxDxBxEgEdxbxgxhxd on http://geoff.greer.fm/lscolors/</span></span>
-<span id="cb16-44"><a href="config-files.html#cb16-44"></a><span class="co"># that tool does not specify the colors, which I did by looking manually at</span></span>
-<span id="cb16-45"><a href="config-files.html#cb16-45"></a><span class="co"># http://blog.twistedcode.org/2008/04/lscolors-explained.html</span></span>
-<span id="cb16-46"><a href="config-files.html#cb16-46"></a><span class="co"># and the norbauer.com site previously mentioned</span></span>
-<span id="cb16-47"><a href="config-files.html#cb16-47"></a><span class="bu">alias</span> ls=<span class="st">&quot;ls --color=auto&quot;</span></span>
-<span id="cb16-48"><a href="config-files.html#cb16-48"></a><span class="co">#export LS_COLORS=&quot;di=1;34;40:ln=1;36;40:so=1;35;40:pi=1;93;40:ex=1;31;40:bd=1;34;46:cd=1;34;43:su</span></span>
-<span id="cb16-49"><a href="config-files.html#cb16-49"></a>=<span class="ex">0</span><span class="kw">;</span><span class="ex">41</span>:sg=0<span class="kw">;</span><span class="ex">46</span>:tw=0<span class="kw">;</span><span class="ex">47</span>:ow=0<span class="kw">;</span><span class="ex">43</span><span class="st">&quot;</span></span>
-<span id="cb16-50"><a href="config-files.html#cb16-50"></a><span class="st">## After switching to RStudio:</span></span>
-<span id="cb16-51"><a href="config-files.html#cb16-51"></a><span class="st"># https://askubuntu.com/questions/466198/how-do-i-change-the-color-for-directories-with-ls-in-the-</span></span>
-<span id="cb16-52"><a href="config-files.html#cb16-52"></a><span class="st">console</span></span>
-<span id="cb16-53"><a href="config-files.html#cb16-53"></a><span class="st">export LS_COLORS=&quot;</span>di=0<span class="kw">;</span><span class="ex">32</span>:ln=0<span class="kw">;</span><span class="ex">36</span>:so=0<span class="kw">;</span><span class="ex">35</span>:pi=0<span class="kw">;</span><span class="ex">93</span>:ex=0<span class="kw">;</span><span class="ex">31</span>:bd=0<span class="kw">;</span><span class="ex">34</span><span class="kw">;</span><span class="ex">46</span>:cd=0<span class="kw">;</span><span class="ex">34</span><span class="kw">;</span><span class="ex">43</span>:su=0<span class="kw">;</span><span class="ex">41</span>:sg=0<span class="kw">;</span><span class="ex">46</span>:tw</span>
-<span id="cb16-54"><a href="config-files.html#cb16-54"></a>=<span class="ex">0</span><span class="kw">;</span><span class="ex">47</span>:ow=0<span class="kw">;</span><span class="ex">43</span>:fi=0<span class="kw">;</span><span class="ex">33</span><span class="st">&quot;</span></span>
-<span id="cb16-55"><a href="config-files.html#cb16-55"></a></span>
-<span id="cb16-56"><a href="config-files.html#cb16-56"></a><span class="st"># Uncomment below for Mac and comment the two previous commands</span></span>
-<span id="cb16-57"><a href="config-files.html#cb16-57"></a><span class="st">#export CLICOLOR=1</span></span>
-<span id="cb16-58"><a href="config-files.html#cb16-58"></a><span class="st">#export LSCOLORS=&quot;</span>ExGxFxDxBxEgEdxbxgxhxd<span class="st">&quot;</span></span>
-<span id="cb16-59"><a href="config-files.html#cb16-59"></a></span>
-<span id="cb16-60"><a href="config-files.html#cb16-60"></a><span class="st">## For setup:</span></span>
-<span id="cb16-61"><a href="config-files.html#cb16-61"></a><span class="st"># http://erniemiller.org/2011/12/12/textmate-2-rmate-awesome/</span></span>
-<span id="cb16-62"><a href="config-files.html#cb16-62"></a><span class="st">## For laptop config:</span></span>
-<span id="cb16-63"><a href="config-files.html#cb16-63"></a><span class="st"># http://jonsimpson.co.uk/log/2011/rmate-ssh-remoteforward</span></span>
-<span id="cb16-64"><a href="config-files.html#cb16-64"></a><span class="st">## rmate port</span></span>
-<span id="cb16-65"><a href="config-files.html#cb16-65"></a><span class="st"># https://github.com/textmate/rmate</span></span>
-<span id="cb16-66"><a href="config-files.html#cb16-66"></a><span class="st">export RMATE_PORT=&quot;</span>SOME_PORT_YOU_CHOOSE<span class="st">&quot;</span></span>
-<span id="cb16-67"><a href="config-files.html#cb16-67"></a></span>
-<span id="cb16-68"><a href="config-files.html#cb16-68"></a><span class="st">## Load the git module by default when qrsh/qsub</span></span>
-<span id="cb16-69"><a href="config-files.html#cb16-69"></a><span class="st">## thanks to Jiong Yang</span></span>
-<span id="cb16-70"><a href="config-files.html#cb16-70"></a><span class="st">if [[ </span><span class="va">$HOSTNAME</span><span class="st"> == compute-* ]] || [[ </span><span class="va">$HOSTNAME</span><span class="st"> == transfer-* ]]; then</span></span>
-<span id="cb16-71"><a href="config-files.html#cb16-71"></a><span class="st">    echo &quot;</span>Adding LIBD modules<span class="st">&quot;</span></span>
-<span id="cb16-72"><a href="config-files.html#cb16-72"></a><span class="st">    module use /jhpce/shared/jhpce/modulefiles/libd</span></span>
-<span id="cb16-73"><a href="config-files.html#cb16-73"></a><span class="st">    echo &quot;</span>Loading git<span class="st">&quot;</span></span>
-<span id="cb16-74"><a href="config-files.html#cb16-74"></a><span class="st">    module load git</span></span>
-<span id="cb16-75"><a href="config-files.html#cb16-75"></a><span class="st">    module load git-status-size/github</span></span>
-<span id="cb16-76"><a href="config-files.html#cb16-76"></a><span class="st">    module load git-lfs/2.8.0</span></span>
-<span id="cb16-77"><a href="config-files.html#cb16-77"></a><span class="st">    module load rmate/1.5.9</span></span>
-<span id="cb16-78"><a href="config-files.html#cb16-78"></a><span class="st">    module load conda_R/4.0.x</span></span>
-<span id="cb16-79"><a href="config-files.html#cb16-79"></a><span class="st">fi</span></span>
-<span id="cb16-80"><a href="config-files.html#cb16-80"></a></span>
-<span id="cb16-81"><a href="config-files.html#cb16-81"></a><span class="st">## To deal with running nextflow without requesting much more memory</span></span>
-<span id="cb16-82"><a href="config-files.html#cb16-82"></a><span class="st">## https://jhpce.jhu.edu/question/why-do-i-get-memory-errors-when-running-java/</span></span>
-<span id="cb16-83"><a href="config-files.html#cb16-83"></a><span class="st">export _JAVA_OPTIONS=&quot;</span>-Xms5g -Xmx6g<span class="st">&quot;</span></span>
-<span id="cb16-84"><a href="config-files.html#cb16-84"></a></span>
-<span id="cb16-85"><a href="config-files.html#cb16-85"></a><span class="st">## From https://twitter.com/fellgernon/status/1258455434073124865?s=20</span></span>
-<span id="cb16-86"><a href="config-files.html#cb16-86"></a><span class="st">## and https://www.cyberciti.biz/tips/understanding-linux-unix-umask-value-usage.html</span></span>
-<span id="cb16-87"><a href="config-files.html#cb16-87"></a><span class="st">umask u=rwx,g=rwx,o= ## equivalent to umask 007</span></span></code></pre></div>
+<span id="cb16-36"><a href="config-files.html#cb16-36"></a><span class="co">## 10X genomics</span></span>
+<span id="cb16-37"><a href="config-files.html#cb16-37"></a><span class="bu">alias</span> single=<span class="st">&quot;cd /dcl01/ajaffe/data/lab/singleCell&quot;</span></span>
+<span id="cb16-38"><a href="config-files.html#cb16-38"></a><span class="bu">alias</span> spatialold=<span class="st">&quot;cd /dcl02/lieber/ajaffe/SpatialTranscriptomics/HumanPilot&quot;</span></span>
+<span id="cb16-39"><a href="config-files.html#cb16-39"></a><span class="bu">alias</span> spatial=<span class="st">&quot;cd /dcl02/lieber/ajaffe/SpatialTranscriptomics/LIBD&quot;</span></span>
+<span id="cb16-40"><a href="config-files.html#cb16-40"></a><span class="bu">alias</span> matt=<span class="st">&quot;cd /dcl01/lieber/ajaffe/Matt/MNT_thesis/snRNAseq/10x_pilot_FINAL&quot;</span></span>
+<span id="cb16-41"><a href="config-files.html#cb16-41"></a></span>
+<span id="cb16-42"><a href="config-files.html#cb16-42"></a><span class="co">## Creating modules</span></span>
+<span id="cb16-43"><a href="config-files.html#cb16-43"></a><span class="co"># https://lmod.readthedocs.io/en/latest/050_lua_modulefiles.html</span></span>
+<span id="cb16-44"><a href="config-files.html#cb16-44"></a><span class="bu">alias</span> modsrc=<span class="st">&quot;cd /jhpce/shared/jhpce/libd&quot;</span></span>
+<span id="cb16-45"><a href="config-files.html#cb16-45"></a><span class="bu">alias</span> modlua=<span class="st">&quot;cd /jhpce/shared/jhpce/modulefiles/libd&quot;</span></span>
+<span id="cb16-46"><a href="config-files.html#cb16-46"></a></span>
+<span id="cb16-47"><a href="config-files.html#cb16-47"></a><span class="co"># colors</span></span>
+<span id="cb16-48"><a href="config-files.html#cb16-48"></a><span class="co"># http://norbauer.com/notebooks/code/notes/ls-colors-and-terminal-app</span></span>
+<span id="cb16-49"><a href="config-files.html#cb16-49"></a><span class="co"># used BSD pattern ExGxFxDxBxEgEdxbxgxhxd on http://geoff.greer.fm/lscolors/</span></span>
+<span id="cb16-50"><a href="config-files.html#cb16-50"></a><span class="co"># that tool does not specify the colors, which I did by looking manually at</span></span>
+<span id="cb16-51"><a href="config-files.html#cb16-51"></a><span class="co"># http://blog.twistedcode.org/2008/04/lscolors-explained.html</span></span>
+<span id="cb16-52"><a href="config-files.html#cb16-52"></a><span class="co"># and the norbauer.com site previously mentioned</span></span>
+<span id="cb16-53"><a href="config-files.html#cb16-53"></a><span class="bu">alias</span> ls=<span class="st">&quot;ls --color=auto&quot;</span></span>
+<span id="cb16-54"><a href="config-files.html#cb16-54"></a><span class="co">#export LS_COLORS=&quot;di=1;34;40:ln=1;36;40:so=1;35;40:pi=1;93;40:ex=1;31;40:bd=1;34;46:cd=1;34;43:su</span></span>
+<span id="cb16-55"><a href="config-files.html#cb16-55"></a>=<span class="ex">0</span><span class="kw">;</span><span class="ex">41</span>:sg=0<span class="kw">;</span><span class="ex">46</span>:tw=0<span class="kw">;</span><span class="ex">47</span>:ow=0<span class="kw">;</span><span class="ex">43</span><span class="st">&quot;</span></span>
+<span id="cb16-56"><a href="config-files.html#cb16-56"></a><span class="st">## After switching to RStudio:</span></span>
+<span id="cb16-57"><a href="config-files.html#cb16-57"></a><span class="st"># https://askubuntu.com/questions/466198/how-do-i-change-the-color-for-directories-with-ls-in-the-</span></span>
+<span id="cb16-58"><a href="config-files.html#cb16-58"></a><span class="st">console</span></span>
+<span id="cb16-59"><a href="config-files.html#cb16-59"></a><span class="st">export LS_COLORS=&quot;</span>di=0<span class="kw">;</span><span class="ex">32</span>:ln=0<span class="kw">;</span><span class="ex">36</span>:so=0<span class="kw">;</span><span class="ex">35</span>:pi=0<span class="kw">;</span><span class="ex">93</span>:ex=0<span class="kw">;</span><span class="ex">31</span>:bd=0<span class="kw">;</span><span class="ex">34</span><span class="kw">;</span><span class="ex">46</span>:cd=0<span class="kw">;</span><span class="ex">34</span><span class="kw">;</span><span class="ex">43</span>:su=0<span class="kw">;</span><span class="ex">41</span>:sg=0<span class="kw">;</span><span class="ex">46</span>:tw</span>
+<span id="cb16-60"><a href="config-files.html#cb16-60"></a>=<span class="ex">0</span><span class="kw">;</span><span class="ex">47</span>:ow=0<span class="kw">;</span><span class="ex">43</span>:fi=0<span class="kw">;</span><span class="ex">33</span><span class="st">&quot;</span></span>
+<span id="cb16-61"><a href="config-files.html#cb16-61"></a></span>
+<span id="cb16-62"><a href="config-files.html#cb16-62"></a><span class="st"># Uncomment below for Mac and comment the two previous commands</span></span>
+<span id="cb16-63"><a href="config-files.html#cb16-63"></a><span class="st">#export CLICOLOR=1</span></span>
+<span id="cb16-64"><a href="config-files.html#cb16-64"></a><span class="st">#export LSCOLORS=&quot;</span>ExGxFxDxBxEgEdxbxgxhxd<span class="st">&quot;</span></span>
+<span id="cb16-65"><a href="config-files.html#cb16-65"></a></span>
+<span id="cb16-66"><a href="config-files.html#cb16-66"></a><span class="st">## For setup:</span></span>
+<span id="cb16-67"><a href="config-files.html#cb16-67"></a><span class="st"># http://erniemiller.org/2011/12/12/textmate-2-rmate-awesome/</span></span>
+<span id="cb16-68"><a href="config-files.html#cb16-68"></a><span class="st">## For laptop config:</span></span>
+<span id="cb16-69"><a href="config-files.html#cb16-69"></a><span class="st"># http://jonsimpson.co.uk/log/2011/rmate-ssh-remoteforward</span></span>
+<span id="cb16-70"><a href="config-files.html#cb16-70"></a><span class="st">## rmate port</span></span>
+<span id="cb16-71"><a href="config-files.html#cb16-71"></a><span class="st"># https://github.com/textmate/rmate</span></span>
+<span id="cb16-72"><a href="config-files.html#cb16-72"></a><span class="st">export RMATE_PORT=&quot;</span>SOME_PORT_YOU_CHOOSE<span class="st">&quot;</span></span>
+<span id="cb16-73"><a href="config-files.html#cb16-73"></a></span>
+<span id="cb16-74"><a href="config-files.html#cb16-74"></a><span class="st">## Load the git module by default when qrsh/qsub</span></span>
+<span id="cb16-75"><a href="config-files.html#cb16-75"></a><span class="st">## thanks to Jiong Yang</span></span>
+<span id="cb16-76"><a href="config-files.html#cb16-76"></a><span class="st">if [[ </span><span class="va">$HOSTNAME</span><span class="st"> == compute-* ]] || [[ </span><span class="va">$HOSTNAME</span><span class="st"> == transfer-* ]]; then</span></span>
+<span id="cb16-77"><a href="config-files.html#cb16-77"></a><span class="st">    echo &quot;</span>Adding LIBD modules<span class="st">&quot;</span></span>
+<span id="cb16-78"><a href="config-files.html#cb16-78"></a><span class="st">    module use /jhpce/shared/jhpce/modulefiles/libd</span></span>
+<span id="cb16-79"><a href="config-files.html#cb16-79"></a><span class="st">    echo &quot;</span>Loading git<span class="st">&quot;</span></span>
+<span id="cb16-80"><a href="config-files.html#cb16-80"></a><span class="st">    module load git</span></span>
+<span id="cb16-81"><a href="config-files.html#cb16-81"></a><span class="st">    module load git-status-size/github</span></span>
+<span id="cb16-82"><a href="config-files.html#cb16-82"></a><span class="st">    module load git-lfs/2.8.0</span></span>
+<span id="cb16-83"><a href="config-files.html#cb16-83"></a><span class="st">    module load rmate/1.5.9</span></span>
+<span id="cb16-84"><a href="config-files.html#cb16-84"></a><span class="st">    module load conda_R/4.0.x</span></span>
+<span id="cb16-85"><a href="config-files.html#cb16-85"></a><span class="st">fi</span></span>
+<span id="cb16-86"><a href="config-files.html#cb16-86"></a></span>
+<span id="cb16-87"><a href="config-files.html#cb16-87"></a><span class="st">## To deal with running nextflow without requesting much more memory</span></span>
+<span id="cb16-88"><a href="config-files.html#cb16-88"></a><span class="st">## https://jhpce.jhu.edu/question/why-do-i-get-memory-errors-when-running-java/</span></span>
+<span id="cb16-89"><a href="config-files.html#cb16-89"></a><span class="st">export _JAVA_OPTIONS=&quot;</span>-Xms5g -Xmx6g<span class="st">&quot;</span></span>
+<span id="cb16-90"><a href="config-files.html#cb16-90"></a></span>
+<span id="cb16-91"><a href="config-files.html#cb16-91"></a><span class="st">## From https://twitter.com/fellgernon/status/1258455434073124865?s=20</span></span>
+<span id="cb16-92"><a href="config-files.html#cb16-92"></a><span class="st">## and https://www.cyberciti.biz/tips/understanding-linux-unix-umask-value-usage.html</span></span>
+<span id="cb16-93"><a href="config-files.html#cb16-93"></a><span class="st">umask u=rwx,g=rwx,o= ## equivalent to umask 007</span></span></code></pre></div>
 </div>
 <div id="bash_profile" class="section level3">
 <h3><span class="header-section-number">13.4.3</span> <code>~/.bash_profile</code></h3>
