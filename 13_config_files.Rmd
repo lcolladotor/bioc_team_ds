@@ -405,6 +405,12 @@ export PS1="\[\e[0;33m\]\A \W \$ \[\e[m\]"
 alias labold="cd /dcl01/lieber/ajaffe/lab"
 alias lab="cd /dcl01/ajaffe/data/lab"
 
+## 10X genomics
+alias single="cd /dcl01/ajaffe/data/lab/singleCell"
+alias spatialold="cd /dcl02/lieber/ajaffe/SpatialTranscriptomics/HumanPilot"
+alias spatial="cd /dcl02/lieber/ajaffe/SpatialTranscriptomics/LIBD"
+alias matt="cd /dcl01/lieber/ajaffe/Matt/MNT_thesis/snRNAseq/10x_pilot_FINAL"
+
 ## Creating modules
 # https://lmod.readthedocs.io/en/latest/050_lua_modulefiles.html
 alias modsrc="cd /jhpce/shared/jhpce/libd"
