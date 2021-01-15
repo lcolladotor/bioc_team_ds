@@ -49,6 +49,7 @@ notes
 dsgs-feedback
 notes-1
 team-help
+individual-updates
 notion-updates
 helping-others
 linear-regression-example
