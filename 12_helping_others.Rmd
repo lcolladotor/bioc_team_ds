@@ -35,6 +35,7 @@ $$ = \beta_0 + \beta_1 x + \beta_1 - \beta_0 - \beta_1 x $$
 $$ = (\beta_0 - \beta_0) + (\beta_1 x - \beta_1 x) + \beta_1 $$
 $$ = \beta_1 $$
 
+<blockquote class="twitter-tweet"><p lang="en" dir="ltr"><a href="https://twitter.com/lcolladotor?ref_src=twsrc%5Etfw">@lcolladotor</a> adopts old-school tools during a virtual workshop on SPEAQeasy to explain how to identify RNA- DNA sample swaps. <a href="https://twitter.com/hashtag/EuroBioc2020?src=hash&amp;ref_src=twsrc%5Etfw">#EuroBioc2020</a> workshops, slides are available from <a href="https://t.co/bh3Afbub70">https://t.co/bh3Afbub70</a><a href="https://twitter.com/Bioconductor?ref_src=twsrc%5Etfw">@Bioconductor</a> <a href="https://twitter.com/hashtag/rstats?src=hash&amp;ref_src=twsrc%5Etfw">#rstats</a> <a href="https://t.co/dtqsfImOTz">pic.twitter.com/dtqsfImOTz</a></p>&mdash; Aedin Culhane (@AedinCulhane) <a href="https://twitter.com/AedinCulhane/status/1339424245726793734?ref_src=twsrc%5Etfw">December 17, 2020</a></blockquote> <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
 
 ## DSgs guides
 
@@ -130,7 +131,7 @@ We use [Bioconductor](http://bioconductor.org/) R packages basically every day f
 
 ### Steps to follow
 
-To keep track of who we have helped please fill add an entry to the following [Google Sheet](TODO). ^[Hm.... I guess that BioC profiles might be enough and more automated.]
+To keep track of who we have helped please fill add an entry to the following [Google Sheet](https://docs.google.com/spreadsheets/d/1FrOKBI_lTYLNRAfzNi8nTMAXNH3DtL9bUwpVzDjFp9Q/edit?usp=sharing).
 
 Briefly, you need to:
 

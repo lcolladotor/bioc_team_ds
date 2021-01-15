@@ -23,6 +23,7 @@ With lessons learned from former mentors [Jeffrey T. Leek](https://github.com/jt
 
 ## Team members {-}
 
+* [Abby Spangler](https://github.com/abspangler13)
 * [Arta Seyedian](https://github.com/aseyedia)
 * [Brenda Pardo](https://github.com/bpardo99)
 * [Joshua M. Stolz](https://github.com/joshstolz)

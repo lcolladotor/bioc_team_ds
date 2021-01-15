@@ -1,5 +1,7 @@
 # How to contribute
 
+TODO
+
 ## LIBD rstats club website
 
 ### blogdown
