@@ -157,7 +157,7 @@ Edit it with `usethis::edit_r_profile()`. Don't add any analysis packages here a
 ```{r "r_profile", eval = FALSE}
 ## Change colors
 # Source https://github.com/jalvesaq/colorout
-if(Sys.getenv('TERM') %in% c("term", "xterm-256color", "cygwin")) {
+if(Sys.getenv('TERM') %in% c("term", "xterm-256color", "cygwin", "screen")) {
     if (!requireNamespace("colorout", quietly = TRUE) & .Platform$OS.type != 'windows') {
         cat('To install colorout use: remotes::install_github("jalvesaq/colorout")\n')
     }
