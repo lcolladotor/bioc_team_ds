@@ -85,9 +85,9 @@ If you are interested in a 25 minute Data Science guidance session, please sign 
 
 ## DSgs session reports
 
-If you are interested in public information from our past sessions, check [**DSgs_logs**](https://lcolladotor.github.io/DSgs_logs/), and in particular, some of our [**graphs**](https://lcolladotor.github.io/DSgs_logs/graphs.html).
+If you are interested in public information from our past sessions, check [**DSgs_logs**](https://lcolladotor.github.io/DSgs_logs/), and in particular, some of our [**graphs**](https://lcolladotor.github.io/DSgs_logs/index.html#graphs).
 
-<img src="https://raw.githubusercontent.com/lcolladotor/DSgs_logs/gh-pages/_main_files/figure-html/graph_total-1.png" width="800px" align="center">
+<img src="https://lcolladotor.github.io/DSgs_logs/_main_files/figure-html/graph_total-1.png" width="800px" align="center">
 
 ## Become a DSgs guide
 
