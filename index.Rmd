@@ -17,9 +17,19 @@ output:
 
 # Overview {-}
 
-**R/Bioconductor-powered Team Data Science** by [Leonardo Collado Torres](http://lcolladotor.github.io) and team members.
+Welcome to the **R/Bioconductor-powered Team Data Science** group by [Leonardo Collado Torres](http://lcolladotor.github.io) and team members! The purpose of this website is to serve as a guide for training new team members and colleagues on how we do R/Bioconductor-powered Team Data Science. 
 
-With lessons learned from former mentors [Jeffrey T. Leek](https://github.com/jtleek) and [Andrew E. Jaffe](https://github.com/andrewejaffe).
+<img src="icon_192.png"/>
+
+As a team, we run [Data Science guidance sessions](#data-science-guidance-sessions) where we help others navigate the world of data science. Through those sessions we identify concepts that we might need to explain better and this book is where we concentrate all our knowledge. Thus it is continuously modified and expanded. We often refer others to this specific chapters of this book, which in a way is a gloried collection of bookmarks with some of our own explanations.
+
+We constantly create new content to share what we are learning or working on, which you might be interested in. In particular, we:
+
+* run the [LIBD rstats club](http://research.libd.org/rstatsclub/) which you can find on Twitter as [LIBDrstats](https://twitter.com/LIBDrstats) (check the [rstats club schedule](https://docs.google.com/spreadsheets/d/1is8dZSd0FZ9Qi1Zvq1uRhm-P1McnJRd_zxdAfCRoMfA/edit?usp=sharing))
+* discuss papers and software in our [team meetings](#team-meetings) (check our [schedule](https://docs.google.com/spreadsheets/d/1r6552ySisg7_KpmJmChOvLHVWdMmss3bncEf2jqIM9k/edit?usp=sharing))
+* organize R/Bioconductor data science [bootcamps](#rbioconductor-data-science-bootcamps)
+
+You can find our videos on **YouTube** at [LeonardoColladoTorres/playlists](https://www.youtube.com/c/LeonardoColladoTorres/playlists).
 
 ## Team members {-}
 
@@ -52,25 +62,14 @@ The contents of this book have been refined thanks to feedback from:
 * [Keri Martinowich](https://github.com/kmartinow)
 * [Kristen R. Maynard](https://github.com/kmaynard12)
 
-This book was last updated on `r Sys.time()`.
+With lessons learned from former mentors [Jeffrey T. Leek](https://github.com/jtleek) and [Andrew E. Jaffe](https://github.com/andrewejaffe).
 
-## R session information {-}
+## Join the team {-}
 
-Details on the R version used for making this book. The source code is available at [`lcolladotor/bioc_team_ds`](https://github.com/lcolladotor/bioc_team_ds).
+If you are interested in joining the **R/Bioconductor-powered Team Data Science** group, please check our open positions at the [LIBD career opportunities website](https://www.libd.org/careers/).
 
-```{r session_info_chunk, eval = FALSE}
-## Load the package at the top of your script
-library("sessioninfo")
+If we don't have any open positions, please reach out to Leonardo with your CV, GitHub/GitLab/etc profile with open-source software, and a short description of why you are interested in our team.
 
-## Reproducibility information
-print('Reproducibility information:')
-Sys.time()
-proc.time()
-options(width = 120)
-session_info()
-```
+## Twitter {-}
 
-```{r session_info, echo = FALSE}
-<<session_info_chunk>>
-```
-
+<a class="twitter-timeline" href="https://twitter.com/LIBDrstats?ref_src=twsrc%5Etfw">Tweets by LIBDrstats</a> <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
