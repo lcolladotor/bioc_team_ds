@@ -1,0 +1,15 @@
+# Organizing your work
+
+In the team anonymous survey from 2021-03 [several responses](https://lcolladotor.github.io/team_surveys/survey-2021-03.html#how-easy-is-it-easy-to-locate-things-in-at-jhpce-github) revealed that as a team we have some work to do to be more organized at JHPCE / GitHub as well in documenting our work. This chapter attempts to clarify what you can do to get feedback.
+
+## JHPCE file organization
+
+TODO
+
+## Project organization
+
+TODO
+
+## Project documentation
+
+TODO
