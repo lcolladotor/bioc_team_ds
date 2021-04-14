@@ -56,3 +56,14 @@ On Mondays at 11 am everyone meets with Leo sequentially for 10-15 min to discus
 
 We recently started using [Notion](https://www.notion.so/) that you can [sign up here](https://www.notion.so/signup) and get a free "Personal Pro" account when you sign up with an `edu` email. Let Leo know your `edu` email once you sign up so he can add you to the team "page". On it, you can find "epics" which are major projects and "tasks". We meet on Fridays at 9:30 am to discuss our progress as a team with our epics & tasks.
 
+## Project meetings
+
+Here's the list of project meetings and who should attend them:
+
+* recount3: Leo. Geo or Nick might join in the future.
+* Moods: Louise, Leo. Arta when discussing TWAS.
+* spatialLIBD updates: Abby, Brenda, Leo.
+* spatial journal club: it's optional, though many of you can benefit from it.
+* spatial team meeting: Abby, Brenda, Leo. Optionally Arta and Nick could benefit from it.
+* LIBD rstats club: everyone.
+* CHESS-BRAIN: Leo, Geo and Arta (have not started yet).
