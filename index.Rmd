@@ -31,6 +31,10 @@ We constantly create new content to share what we are learning or working on, wh
 
 You can find our videos on **YouTube** at [LeonardoColladoTorres/playlists](https://www.youtube.com/c/LeonardoColladoTorres/playlists).
 
+## Code of conduct {-}
+
+We follow the LIBD conduct policies as well the [Bioconductor code of conduct](http://bioconductor.org/about/code-of-conduct/). The [LIBD rstats club code of conduct](http://research.libd.org/rstatsclub/#coc) is currently outdated and will be updated based on the Bioconductor code of conduct.
+
 ## Team members {-}
 
 * [Abby Spangler](https://github.com/abspangler13)
