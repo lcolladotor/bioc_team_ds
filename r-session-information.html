@@ -32,6 +32,7 @@
   <link rel="shortcut icon" href="icon_32.png" type="image/x-icon" />
 <link rel="prev" href="career-growth.html"/>
 
+<script src="libs/header-attrs-2.6/header-attrs.js"></script>
 <script src="libs/jquery-2.2.3/jquery.min.js"></script>
 <link href="libs/gitbook-2.6.7/css/style.css" rel="stylesheet" />
 <link href="libs/gitbook-2.6.7/css/plugin-table.css" rel="stylesheet" />
@@ -49,22 +50,21 @@
 
 
 
-<script src="libs/accessible-code-block-0.0.1/empty-anchor.js"></script>
 
 
 <style type="text/css">
-code.sourceCode > span { display: inline-block; line-height: 1.25; }
-code.sourceCode > span { color: inherit; text-decoration: inherit; }
-code.sourceCode > span:empty { height: 1.2em; }
+pre > code.sourceCode { white-space: pre; position: relative; }
+pre > code.sourceCode > span { display: inline-block; line-height: 1.25; }
+pre > code.sourceCode > span:empty { height: 1.2em; }
 .sourceCode { overflow: visible; }
-code.sourceCode { white-space: pre; position: relative; }
+code.sourceCode > span { color: inherit; text-decoration: inherit; }
 pre.sourceCode { margin: 0; }
 @media screen {
 div.sourceCode { overflow: auto; }
 }
 @media print {
-code.sourceCode { white-space: pre-wrap; }
-code.sourceCode > span { text-indent: -5em; padding-left: 5em; }
+pre > code.sourceCode { white-space: pre-wrap; }
+pre > code.sourceCode > span { text-indent: -5em; padding-left: 5em; }
 }
 pre.numberSource code
   { counter-reset: source-line 0; }
@@ -84,7 +84,7 @@ pre.numberSource { margin-left: 3em; border-left: 1px solid #aaaaaa;  padding-le
 div.sourceCode
   {   }
 @media screen {
-code.sourceCode > span > a:first-child::before { text-decoration: underline; }
+pre > code.sourceCode > span > a:first-child::before { text-decoration: underline; }
 }
 code span.al { color: #ff0000; font-weight: bold; } /* Alert */
 code span.an { color: #60a0b0; font-weight: bold; font-style: italic; } /* Annotation */
@@ -130,8 +130,11 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
       <nav role="navigation">
 
 <ul class="summary">
-<li class="chapter" data-level="" data-path="index.html"><a href="index.html"><i class="fa fa-check"></i>Overview</a><ul>
-<li class="chapter" data-level="" data-path="index.html"><a href="index.html#team-members"><i class="fa fa-check"></i>Team members</a><ul>
+<li class="chapter" data-level="" data-path="index.html"><a href="index.html"><i class="fa fa-check"></i>Overview</a>
+<ul>
+<li class="chapter" data-level="" data-path="index.html"><a href="index.html#code-of-conduct"><i class="fa fa-check"></i>Code of conduct</a></li>
+<li class="chapter" data-level="" data-path="index.html"><a href="index.html#team-members"><i class="fa fa-check"></i>Team members</a>
+<ul>
 <li class="chapter" data-level="" data-path="index.html"><a href="index.html#alumni"><i class="fa fa-check"></i>Alumni</a></li>
 </ul></li>
 <li class="chapter" data-level="" data-path="index.html"><a href="index.html#dsgs-guide-team-members"><i class="fa fa-check"></i>DSgs-guide team members</a></li>
@@ -139,9 +142,11 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <li class="chapter" data-level="" data-path="index.html"><a href="index.html#join-the-team"><i class="fa fa-check"></i>Join the team</a></li>
 <li class="chapter" data-level="" data-path="index.html"><a href="index.html#twitter"><i class="fa fa-check"></i>Twitter</a></li>
 </ul></li>
-<li class="chapter" data-level="1" data-path="data-science-guidance-sessions.html"><a href="data-science-guidance-sessions.html"><i class="fa fa-check"></i><b>1</b> Data Science guidance sessions</a><ul>
+<li class="chapter" data-level="1" data-path="data-science-guidance-sessions.html"><a href="data-science-guidance-sessions.html"><i class="fa fa-check"></i><b>1</b> Data Science guidance sessions</a>
+<ul>
 <li class="chapter" data-level="1.1" data-path="data-science-guidance-sessions.html"><a href="data-science-guidance-sessions.html#interaction-rules"><i class="fa fa-check"></i><b>1.1</b> Interaction rules</a></li>
-<li class="chapter" data-level="1.2" data-path="data-science-guidance-sessions.html"><a href="data-science-guidance-sessions.html#help-us-help-you"><i class="fa fa-check"></i><b>1.2</b> Help us help you</a><ul>
+<li class="chapter" data-level="1.2" data-path="data-science-guidance-sessions.html"><a href="data-science-guidance-sessions.html#help-us-help-you"><i class="fa fa-check"></i><b>1.2</b> Help us help you</a>
+<ul>
 <li class="chapter" data-level="1.2.1" data-path="data-science-guidance-sessions.html"><a href="data-science-guidance-sessions.html#framing-a-question"><i class="fa fa-check"></i><b>1.2.1</b> Framing a question</a></li>
 <li class="chapter" data-level="1.2.2" data-path="data-science-guidance-sessions.html"><a href="data-science-guidance-sessions.html#useful-information"><i class="fa fa-check"></i><b>1.2.2</b> Useful information</a></li>
 </ul></li>
@@ -149,18 +154,21 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <li class="chapter" data-level="1.4" data-path="data-science-guidance-sessions.html"><a href="data-science-guidance-sessions.html#dsgs-session-reports"><i class="fa fa-check"></i><b>1.4</b> DSgs session reports</a></li>
 <li class="chapter" data-level="1.5" data-path="data-science-guidance-sessions.html"><a href="data-science-guidance-sessions.html#become-a-dsgs-guide"><i class="fa fa-check"></i><b>1.5</b> Become a DSgs guide</a></li>
 </ul></li>
-<li class="chapter" data-level="2" data-path="how-to-ask-for-help.html"><a href="how-to-ask-for-help.html"><i class="fa fa-check"></i><b>2</b> How to ask for help</a><ul>
+<li class="chapter" data-level="2" data-path="how-to-ask-for-help.html"><a href="how-to-ask-for-help.html"><i class="fa fa-check"></i><b>2</b> How to ask for help</a>
+<ul>
 <li class="chapter" data-level="2.1" data-path="how-to-ask-for-help.html"><a href="how-to-ask-for-help.html#learning-from-our-search-history"><i class="fa fa-check"></i><b>2.1</b> Learning from our search history</a></li>
 <li class="chapter" data-level="2.2" data-path="how-to-ask-for-help.html"><a href="how-to-ask-for-help.html#bioconductor-support-website"><i class="fa fa-check"></i><b>2.2</b> Bioconductor Support website</a></li>
 <li class="chapter" data-level="2.3" data-path="how-to-ask-for-help.html"><a href="how-to-ask-for-help.html#rstudio-community-website"><i class="fa fa-check"></i><b>2.3</b> RStudio Community website</a></li>
 <li class="chapter" data-level="2.4" data-path="how-to-ask-for-help.html"><a href="how-to-ask-for-help.html#github-issues"><i class="fa fa-check"></i><b>2.4</b> GitHub issues</a></li>
-<li class="chapter" data-level="2.5" data-path="how-to-ask-for-help.html"><a href="how-to-ask-for-help.html#mailing-lists"><i class="fa fa-check"></i><b>2.5</b> Mailing lists</a><ul>
+<li class="chapter" data-level="2.5" data-path="how-to-ask-for-help.html"><a href="how-to-ask-for-help.html#mailing-lists"><i class="fa fa-check"></i><b>2.5</b> Mailing lists</a>
+<ul>
 <li class="chapter" data-level="2.5.1" data-path="how-to-ask-for-help.html"><a href="how-to-ask-for-help.html#bithelp"><i class="fa fa-check"></i><b>2.5.1</b> bithelp</a></li>
 <li class="chapter" data-level="2.5.2" data-path="how-to-ask-for-help.html"><a href="how-to-ask-for-help.html#bitsupport"><i class="fa fa-check"></i><b>2.5.2</b> bitsupport</a></li>
 <li class="chapter" data-level="2.5.3" data-path="how-to-ask-for-help.html"><a href="how-to-ask-for-help.html#bioc-devel"><i class="fa fa-check"></i><b>2.5.3</b> Bioc-devel</a></li>
 <li class="chapter" data-level="2.5.4" data-path="how-to-ask-for-help.html"><a href="how-to-ask-for-help.html#r-sig-mac"><i class="fa fa-check"></i><b>2.5.4</b> R-Sig-Mac</a></li>
 </ul></li>
-<li class="chapter" data-level="2.6" data-path="how-to-ask-for-help.html"><a href="how-to-ask-for-help.html#slack"><i class="fa fa-check"></i><b>2.6</b> Slack</a><ul>
+<li class="chapter" data-level="2.6" data-path="how-to-ask-for-help.html"><a href="how-to-ask-for-help.html#slack"><i class="fa fa-check"></i><b>2.6</b> Slack</a>
+<ul>
 <li class="chapter" data-level="2.6.1" data-path="how-to-ask-for-help.html"><a href="how-to-ask-for-help.html#jhulibd"><i class="fa fa-check"></i><b>2.6.1</b> JHU/LIBD</a></li>
 <li class="chapter" data-level="2.6.2" data-path="how-to-ask-for-help.html"><a href="how-to-ask-for-help.html#bioconductor"><i class="fa fa-check"></i><b>2.6.2</b> Bioconductor</a></li>
 <li class="chapter" data-level="2.6.3" data-path="how-to-ask-for-help.html"><a href="how-to-ask-for-help.html#r-ladies-baltimore"><i class="fa fa-check"></i><b>2.6.3</b> R-Ladies Baltimore</a></li>
@@ -168,95 +176,134 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 </ul></li>
 </ul></li>
 <li class="part"><span><b>I Bootcamps</b></span></li>
-<li class="chapter" data-level="3" data-path="rbioconductor-data-science-bootcamps.html"><a href="rbioconductor-data-science-bootcamps.html"><i class="fa fa-check"></i><b>3</b> R/Bioconductor Data Science bootcamps</a><ul>
+<li class="chapter" data-level="3" data-path="rbioconductor-data-science-bootcamps.html"><a href="rbioconductor-data-science-bootcamps.html"><i class="fa fa-check"></i><b>3</b> R/Bioconductor Data Science bootcamps</a>
+<ul>
 <li class="chapter" data-level="3.1" data-path="rbioconductor-data-science-bootcamps.html"><a href="rbioconductor-data-science-bootcamps.html#libd-bootcamps"><i class="fa fa-check"></i><b>3.1</b> LIBD bootcamps</a></li>
 <li class="chapter" data-level="3.2" data-path="rbioconductor-data-science-bootcamps.html"><a href="rbioconductor-data-science-bootcamps.html#team-bootcamps"><i class="fa fa-check"></i><b>3.2</b> Team bootcamps</a></li>
-<li class="chapter" data-level="3.3" data-path="rbioconductor-data-science-bootcamps.html"><a href="rbioconductor-data-science-bootcamps.html#bootcamp-source-materials"><i class="fa fa-check"></i><b>3.3</b> Bootcamp source materials</a><ul>
+<li class="chapter" data-level="3.3" data-path="rbioconductor-data-science-bootcamps.html"><a href="rbioconductor-data-science-bootcamps.html#bootcamp-source-materials"><i class="fa fa-check"></i><b>3.3</b> Bootcamp source materials</a>
+<ul>
 <li class="chapter" data-level="3.3.1" data-path="rbioconductor-data-science-bootcamps.html"><a href="rbioconductor-data-science-bootcamps.html#main-materials"><i class="fa fa-check"></i><b>3.3.1</b> Main materials</a></li>
 <li class="chapter" data-level="3.3.2" data-path="rbioconductor-data-science-bootcamps.html"><a href="rbioconductor-data-science-bootcamps.html#courses"><i class="fa fa-check"></i><b>3.3.2</b> Courses</a></li>
 </ul></li>
 </ul></li>
-<li class="chapter" data-level="4" data-path="how-to-be-a-modern-scientist.html"><a href="how-to-be-a-modern-scientist.html"><i class="fa fa-check"></i><b>4</b> How to be a modern scientist</a><ul>
+<li class="chapter" data-level="4" data-path="how-to-be-a-modern-scientist.html"><a href="how-to-be-a-modern-scientist.html"><i class="fa fa-check"></i><b>4</b> How to be a modern scientist</a>
+<ul>
 <li class="chapter" data-level="4.1" data-path="how-to-be-a-modern-scientist.html"><a href="how-to-be-a-modern-scientist.html#bootcamp-session"><i class="fa fa-check"></i><b>4.1</b> Bootcamp session</a></li>
 </ul></li>
-<li class="chapter" data-level="5" data-path="what-they-forgot-to-teach-you-about-r.html"><a href="what-they-forgot-to-teach-you-about-r.html"><i class="fa fa-check"></i><b>5</b> What they forgot to teach you about R</a><ul>
+<li class="chapter" data-level="5" data-path="what-they-forgot-to-teach-you-about-r.html"><a href="what-they-forgot-to-teach-you-about-r.html"><i class="fa fa-check"></i><b>5</b> What they forgot to teach you about R</a>
+<ul>
 <li class="chapter" data-level="5.1" data-path="what-they-forgot-to-teach-you-about-r.html"><a href="what-they-forgot-to-teach-you-about-r.html#bootcamp-sessions"><i class="fa fa-check"></i><b>5.1</b> Bootcamp sessions</a></li>
 </ul></li>
-<li class="chapter" data-level="6" data-path="the-elements-of-data-analytic-style.html"><a href="the-elements-of-data-analytic-style.html"><i class="fa fa-check"></i><b>6</b> The Elements of Data Analytic Style</a><ul>
+<li class="chapter" data-level="6" data-path="the-elements-of-data-analytic-style.html"><a href="the-elements-of-data-analytic-style.html"><i class="fa fa-check"></i><b>6</b> The Elements of Data Analytic Style</a>
+<ul>
 <li class="chapter" data-level="6.1" data-path="the-elements-of-data-analytic-style.html"><a href="the-elements-of-data-analytic-style.html#bootcamp-session-1"><i class="fa fa-check"></i><b>6.1</b> Bootcamp session</a></li>
 </ul></li>
-<li class="chapter" data-level="7" data-path="cbds.html"><a href="cbds.html"><i class="fa fa-check"></i><b>7</b> CBDS</a><ul>
+<li class="chapter" data-level="7" data-path="cbds.html"><a href="cbds.html"><i class="fa fa-check"></i><b>7</b> CBDS</a>
+<ul>
 <li class="chapter" data-level="7.1" data-path="cbds.html"><a href="cbds.html#bootcamp-session-2"><i class="fa fa-check"></i><b>7.1</b> Bootcamp session</a></li>
 </ul></li>
-<li class="chapter" data-level="8" data-path="building-tidy-tools.html"><a href="building-tidy-tools.html"><i class="fa fa-check"></i><b>8</b> Building Tidy Tools</a><ul>
+<li class="chapter" data-level="8" data-path="building-tidy-tools.html"><a href="building-tidy-tools.html"><i class="fa fa-check"></i><b>8</b> Building Tidy Tools</a>
+<ul>
 <li class="chapter" data-level="8.1" data-path="building-tidy-tools.html"><a href="building-tidy-tools.html#bootcamp-sessions-1"><i class="fa fa-check"></i><b>8.1</b> Bootcamp sessions</a></li>
 </ul></li>
-<li class="chapter" data-level="9" data-path="differential-expression-analysis.html"><a href="differential-expression-analysis.html"><i class="fa fa-check"></i><b>9</b> Differential expression analysis</a><ul>
+<li class="chapter" data-level="9" data-path="differential-expression-analysis.html"><a href="differential-expression-analysis.html"><i class="fa fa-check"></i><b>9</b> Differential expression analysis</a>
+<ul>
 <li class="chapter" data-level="9.1" data-path="differential-expression-analysis.html"><a href="differential-expression-analysis.html#bootcamp-sessions-2"><i class="fa fa-check"></i><b>9.1</b> Bootcamp sessions</a></li>
 </ul></li>
 <li class="part"><span><b>II Internal</b></span></li>
-<li class="chapter" data-level="10" data-path="team-meetings.html"><a href="team-meetings.html"><i class="fa fa-check"></i><b>10</b> Team meetings</a><ul>
-<li class="chapter" data-level="10.1" data-path="team-meetings.html"><a href="team-meetings.html#papers-software"><i class="fa fa-check"></i><b>10.1</b> Papers &amp; software</a><ul>
+<li class="chapter" data-level="10" data-path="team-meetings.html"><a href="team-meetings.html"><i class="fa fa-check"></i><b>10</b> Team meetings</a>
+<ul>
+<li class="chapter" data-level="10.1" data-path="team-meetings.html"><a href="team-meetings.html#papers-software"><i class="fa fa-check"></i><b>10.1</b> Papers &amp; software</a>
+<ul>
 <li class="chapter" data-level="10.1.1" data-path="team-meetings.html"><a href="team-meetings.html#notes"><i class="fa fa-check"></i><b>10.1.1</b> Notes</a></li>
 </ul></li>
-<li class="chapter" data-level="10.2" data-path="team-meetings.html"><a href="team-meetings.html#dsgs-feedback"><i class="fa fa-check"></i><b>10.2</b> DSgs: feedback</a><ul>
+<li class="chapter" data-level="10.2" data-path="team-meetings.html"><a href="team-meetings.html#dsgs-feedback"><i class="fa fa-check"></i><b>10.2</b> DSgs: feedback</a>
+<ul>
 <li class="chapter" data-level="10.2.1" data-path="team-meetings.html"><a href="team-meetings.html#notes-1"><i class="fa fa-check"></i><b>10.2.1</b> Notes</a></li>
 </ul></li>
 <li class="chapter" data-level="10.3" data-path="team-meetings.html"><a href="team-meetings.html#team-help"><i class="fa fa-check"></i><b>10.3</b> Team help</a></li>
 <li class="chapter" data-level="10.4" data-path="team-meetings.html"><a href="team-meetings.html#individual-updates"><i class="fa fa-check"></i><b>10.4</b> Individual updates</a></li>
 <li class="chapter" data-level="10.5" data-path="team-meetings.html"><a href="team-meetings.html#notion-updates"><i class="fa fa-check"></i><b>10.5</b> Notion updates</a></li>
+<li class="chapter" data-level="10.6" data-path="team-meetings.html"><a href="team-meetings.html#project-meetings"><i class="fa fa-check"></i><b>10.6</b> Project meetings</a></li>
 </ul></li>
-<li class="chapter" data-level="11" data-path="helping-others.html"><a href="helping-others.html"><i class="fa fa-check"></i><b>11</b> Helping others</a><ul>
+<li class="chapter" data-level="11" data-path="helping-others.html"><a href="helping-others.html"><i class="fa fa-check"></i><b>11</b> Helping others</a>
+<ul>
 <li class="chapter" data-level="11.1" data-path="helping-others.html"><a href="helping-others.html#linear-regression-example"><i class="fa fa-check"></i><b>11.1</b> Linear regression example</a></li>
-<li class="chapter" data-level="11.2" data-path="helping-others.html"><a href="helping-others.html#dsgs-guides"><i class="fa fa-check"></i><b>11.2</b> DSgs guides</a><ul>
+<li class="chapter" data-level="11.2" data-path="helping-others.html"><a href="helping-others.html#dsgs-guides"><i class="fa fa-check"></i><b>11.2</b> DSgs guides</a>
+<ul>
 <li class="chapter" data-level="11.2.1" data-path="helping-others.html"><a href="helping-others.html#dsgs-guide-training"><i class="fa fa-check"></i><b>11.2.1</b> DSgs-guide training</a></li>
 <li class="chapter" data-level="11.2.2" data-path="helping-others.html"><a href="helping-others.html#common-responses"><i class="fa fa-check"></i><b>11.2.2</b> Common responses</a></li>
 <li class="chapter" data-level="11.2.3" data-path="helping-others.html"><a href="helping-others.html#internal-sessions-log"><i class="fa fa-check"></i><b>11.2.3</b> Internal sessions log</a></li>
 <li class="chapter" data-level="11.2.4" data-path="helping-others.html"><a href="helping-others.html#getting-started"><i class="fa fa-check"></i><b>11.2.4</b> Getting started</a></li>
 </ul></li>
-<li class="chapter" data-level="11.3" data-path="helping-others.html"><a href="helping-others.html#bioconductor-support-practice-grounds"><i class="fa fa-check"></i><b>11.3</b> Bioconductor Support: practice grounds</a><ul>
+<li class="chapter" data-level="11.3" data-path="helping-others.html"><a href="helping-others.html#bioconductor-support-practice-grounds"><i class="fa fa-check"></i><b>11.3</b> Bioconductor Support: practice grounds</a>
+<ul>
 <li class="chapter" data-level="11.3.1" data-path="helping-others.html"><a href="helping-others.html#steps-to-follow"><i class="fa fa-check"></i><b>11.3.1</b> Steps to follow</a></li>
 </ul></li>
 <li class="chapter" data-level="11.4" data-path="helping-others.html"><a href="helping-others.html#rstudio-education"><i class="fa fa-check"></i><b>11.4</b> RStudio Education</a></li>
 </ul></li>
-<li class="chapter" data-level="12" data-path="config-files.html"><a href="config-files.html"><i class="fa fa-check"></i><b>12</b> Config files</a><ul>
-<li class="chapter" data-level="12.1" data-path="config-files.html"><a href="config-files.html#r-setup"><i class="fa fa-check"></i><b>12.1</b> R setup</a><ul>
-<li class="chapter" data-level="12.1.1" data-path="config-files.html"><a href="config-files.html#r-packages"><i class="fa fa-check"></i><b>12.1.1</b> R packages</a></li>
+<li class="chapter" data-level="12" data-path="project-feedback.html"><a href="project-feedback.html"><i class="fa fa-check"></i><b>12</b> Project feedback</a>
+<ul>
+<li class="chapter" data-level="12.1" data-path="project-feedback.html"><a href="project-feedback.html#slack-1"><i class="fa fa-check"></i><b>12.1</b> Slack</a></li>
+<li class="chapter" data-level="12.2" data-path="project-feedback.html"><a href="project-feedback.html#meetings"><i class="fa fa-check"></i><b>12.2</b> Meetings</a></li>
+<li class="chapter" data-level="12.3" data-path="project-feedback.html"><a href="project-feedback.html#code-review"><i class="fa fa-check"></i><b>12.3</b> Code review</a></li>
 </ul></li>
-<li class="chapter" data-level="12.2" data-path="config-files.html"><a href="config-files.html#r-config-files"><i class="fa fa-check"></i><b>12.2</b> R config files</a><ul>
-<li class="chapter" data-level="12.2.1" data-path="config-files.html"><a href="config-files.html#rprofile"><i class="fa fa-check"></i><b>12.2.1</b> <code>~/.Rprofile</code></a></li>
-<li class="chapter" data-level="12.2.2" data-path="config-files.html"><a href="config-files.html#renviron"><i class="fa fa-check"></i><b>12.2.2</b> <code>~/.Renviron</code></a></li>
-<li class="chapter" data-level="12.2.3" data-path="config-files.html"><a href="config-files.html#rmakevars"><i class="fa fa-check"></i><b>12.2.3</b> <code>~/.R/Makevars</code></a></li>
+<li class="chapter" data-level="13" data-path="organizing-your-work.html"><a href="organizing-your-work.html"><i class="fa fa-check"></i><b>13</b> Organizing your work</a>
+<ul>
+<li class="chapter" data-level="13.1" data-path="organizing-your-work.html"><a href="organizing-your-work.html#jhpce-file-organization"><i class="fa fa-check"></i><b>13.1</b> JHPCE file organization</a></li>
+<li class="chapter" data-level="13.2" data-path="organizing-your-work.html"><a href="organizing-your-work.html#project-organization"><i class="fa fa-check"></i><b>13.2</b> Project organization</a></li>
+<li class="chapter" data-level="13.3" data-path="organizing-your-work.html"><a href="organizing-your-work.html#project-documentation"><i class="fa fa-check"></i><b>13.3</b> Project documentation</a></li>
 </ul></li>
-<li class="chapter" data-level="12.3" data-path="config-files.html"><a href="config-files.html#git-config-files"><i class="fa fa-check"></i><b>12.3</b> Git config files</a><ul>
-<li class="chapter" data-level="12.3.1" data-path="config-files.html"><a href="config-files.html#gitconfig"><i class="fa fa-check"></i><b>12.3.1</b> <code>~/.gitconfig</code></a></li>
-<li class="chapter" data-level="12.3.2" data-path="config-files.html"><a href="config-files.html#gitignore_global"><i class="fa fa-check"></i><b>12.3.2</b> <code>~/.gitignore_global</code></a></li>
+<li class="chapter" data-level="14" data-path="writing-papers.html"><a href="writing-papers.html"><i class="fa fa-check"></i><b>14</b> Writing papers</a></li>
+<li class="chapter" data-level="15" data-path="authorship.html"><a href="authorship.html"><i class="fa fa-check"></i><b>15</b> Authorship</a></li>
+<li class="chapter" data-level="16" data-path="config-files.html"><a href="config-files.html"><i class="fa fa-check"></i><b>16</b> Config files</a>
+<ul>
+<li class="chapter" data-level="16.1" data-path="config-files.html"><a href="config-files.html#r-setup"><i class="fa fa-check"></i><b>16.1</b> R setup</a>
+<ul>
+<li class="chapter" data-level="16.1.1" data-path="config-files.html"><a href="config-files.html#r-packages"><i class="fa fa-check"></i><b>16.1.1</b> R packages</a></li>
 </ul></li>
-<li class="chapter" data-level="12.4" data-path="config-files.html"><a href="config-files.html#jhpce-files"><i class="fa fa-check"></i><b>12.4</b> JHPCE files</a><ul>
-<li class="chapter" data-level="12.4.1" data-path="config-files.html"><a href="config-files.html#sge_request"><i class="fa fa-check"></i><b>12.4.1</b> <code>~/.sge_request</code></a></li>
-<li class="chapter" data-level="12.4.2" data-path="config-files.html"><a href="config-files.html#bashrc"><i class="fa fa-check"></i><b>12.4.2</b> <code>~/.bashrc</code></a></li>
-<li class="chapter" data-level="12.4.3" data-path="config-files.html"><a href="config-files.html#bash_profile"><i class="fa fa-check"></i><b>12.4.3</b> <code>~/.bash_profile</code></a></li>
-<li class="chapter" data-level="12.4.4" data-path="config-files.html"><a href="config-files.html#inputrc"><i class="fa fa-check"></i><b>12.4.4</b> <code>~/.inputrc</code></a></li>
+<li class="chapter" data-level="16.2" data-path="config-files.html"><a href="config-files.html#r-config-files"><i class="fa fa-check"></i><b>16.2</b> R config files</a>
+<ul>
+<li class="chapter" data-level="16.2.1" data-path="config-files.html"><a href="config-files.html#rprofile"><i class="fa fa-check"></i><b>16.2.1</b> <code>~/.Rprofile</code></a></li>
+<li class="chapter" data-level="16.2.2" data-path="config-files.html"><a href="config-files.html#renviron"><i class="fa fa-check"></i><b>16.2.2</b> <code>~/.Renviron</code></a></li>
+<li class="chapter" data-level="16.2.3" data-path="config-files.html"><a href="config-files.html#rmakevars"><i class="fa fa-check"></i><b>16.2.3</b> <code>~/.R/Makevars</code></a></li>
+</ul></li>
+<li class="chapter" data-level="16.3" data-path="config-files.html"><a href="config-files.html#git-config-files"><i class="fa fa-check"></i><b>16.3</b> Git config files</a>
+<ul>
+<li class="chapter" data-level="16.3.1" data-path="config-files.html"><a href="config-files.html#gitconfig"><i class="fa fa-check"></i><b>16.3.1</b> <code>~/.gitconfig</code></a></li>
+<li class="chapter" data-level="16.3.2" data-path="config-files.html"><a href="config-files.html#gitignore_global"><i class="fa fa-check"></i><b>16.3.2</b> <code>~/.gitignore_global</code></a></li>
+</ul></li>
+<li class="chapter" data-level="16.4" data-path="config-files.html"><a href="config-files.html#jhpce-files"><i class="fa fa-check"></i><b>16.4</b> JHPCE files</a>
+<ul>
+<li class="chapter" data-level="16.4.1" data-path="config-files.html"><a href="config-files.html#sge_request"><i class="fa fa-check"></i><b>16.4.1</b> <code>~/.sge_request</code></a></li>
+<li class="chapter" data-level="16.4.2" data-path="config-files.html"><a href="config-files.html#bashrc"><i class="fa fa-check"></i><b>16.4.2</b> <code>~/.bashrc</code></a></li>
+<li class="chapter" data-level="16.4.3" data-path="config-files.html"><a href="config-files.html#bash_profile"><i class="fa fa-check"></i><b>16.4.3</b> <code>~/.bash_profile</code></a></li>
+<li class="chapter" data-level="16.4.4" data-path="config-files.html"><a href="config-files.html#inputrc"><i class="fa fa-check"></i><b>16.4.4</b> <code>~/.inputrc</code></a></li>
 </ul></li>
 </ul></li>
-<li class="chapter" data-level="13" data-path="how-to-contribute.html"><a href="how-to-contribute.html"><i class="fa fa-check"></i><b>13</b> How to contribute</a><ul>
-<li class="chapter" data-level="13.1" data-path="how-to-contribute.html"><a href="how-to-contribute.html#libd-rstats-club-website"><i class="fa fa-check"></i><b>13.1</b> LIBD rstats club website</a><ul>
-<li class="chapter" data-level="13.1.1" data-path="how-to-contribute.html"><a href="how-to-contribute.html#blogdown"><i class="fa fa-check"></i><b>13.1.1</b> blogdown</a></li>
+<li class="chapter" data-level="17" data-path="how-to-contribute.html"><a href="how-to-contribute.html"><i class="fa fa-check"></i><b>17</b> How to contribute</a>
+<ul>
+<li class="chapter" data-level="17.1" data-path="how-to-contribute.html"><a href="how-to-contribute.html#libd-rstats-club-website"><i class="fa fa-check"></i><b>17.1</b> LIBD rstats club website</a>
+<ul>
+<li class="chapter" data-level="17.1.1" data-path="how-to-contribute.html"><a href="how-to-contribute.html#blogdown"><i class="fa fa-check"></i><b>17.1.1</b> blogdown</a></li>
 </ul></li>
-<li class="chapter" data-level="13.2" data-path="how-to-contribute.html"><a href="how-to-contribute.html#github-actions"><i class="fa fa-check"></i><b>13.2</b> GitHub Actions</a><ul>
-<li class="chapter" data-level="13.2.1" data-path="how-to-contribute.html"><a href="how-to-contribute.html#r-packages-1"><i class="fa fa-check"></i><b>13.2.1</b> R packages</a></li>
-<li class="chapter" data-level="13.2.2" data-path="how-to-contribute.html"><a href="how-to-contribute.html#bookdown"><i class="fa fa-check"></i><b>13.2.2</b> Bookdown</a></li>
-<li class="chapter" data-level="13.2.3" data-path="how-to-contribute.html"><a href="how-to-contribute.html#r-markdown-websites"><i class="fa fa-check"></i><b>13.2.3</b> R Markdown websites</a></li>
-<li class="chapter" data-level="13.2.4" data-path="how-to-contribute.html"><a href="how-to-contribute.html#blogdown-1"><i class="fa fa-check"></i><b>13.2.4</b> Blogdown</a></li>
+<li class="chapter" data-level="17.2" data-path="how-to-contribute.html"><a href="how-to-contribute.html#github-actions"><i class="fa fa-check"></i><b>17.2</b> GitHub Actions</a>
+<ul>
+<li class="chapter" data-level="17.2.1" data-path="how-to-contribute.html"><a href="how-to-contribute.html#r-packages-1"><i class="fa fa-check"></i><b>17.2.1</b> R packages</a></li>
+<li class="chapter" data-level="17.2.2" data-path="how-to-contribute.html"><a href="how-to-contribute.html#bookdown"><i class="fa fa-check"></i><b>17.2.2</b> Bookdown</a></li>
+<li class="chapter" data-level="17.2.3" data-path="how-to-contribute.html"><a href="how-to-contribute.html#r-markdown-websites"><i class="fa fa-check"></i><b>17.2.3</b> R Markdown websites</a></li>
+<li class="chapter" data-level="17.2.4" data-path="how-to-contribute.html"><a href="how-to-contribute.html#blogdown-1"><i class="fa fa-check"></i><b>17.2.4</b> Blogdown</a></li>
 </ul></li>
-<li class="chapter" data-level="13.3" data-path="how-to-contribute.html"><a href="how-to-contribute.html#libd-rbioconductor-packages"><i class="fa fa-check"></i><b>13.3</b> LIBD R/Bioconductor packages</a></li>
-<li class="chapter" data-level="13.4" data-path="how-to-contribute.html"><a href="how-to-contribute.html#github-templates"><i class="fa fa-check"></i><b>13.4</b> GitHub templates</a><ul>
-<li class="chapter" data-level="13.4.1" data-path="how-to-contribute.html"><a href="how-to-contribute.html#issues"><i class="fa fa-check"></i><b>13.4.1</b> Issues</a></li>
-<li class="chapter" data-level="13.4.2" data-path="how-to-contribute.html"><a href="how-to-contribute.html#contributing"><i class="fa fa-check"></i><b>13.4.2</b> Contributing</a></li>
+<li class="chapter" data-level="17.3" data-path="how-to-contribute.html"><a href="how-to-contribute.html#libd-rbioconductor-packages"><i class="fa fa-check"></i><b>17.3</b> LIBD R/Bioconductor packages</a></li>
+<li class="chapter" data-level="17.4" data-path="how-to-contribute.html"><a href="how-to-contribute.html#github-templates"><i class="fa fa-check"></i><b>17.4</b> GitHub templates</a>
+<ul>
+<li class="chapter" data-level="17.4.1" data-path="how-to-contribute.html"><a href="how-to-contribute.html#issues"><i class="fa fa-check"></i><b>17.4.1</b> Issues</a></li>
+<li class="chapter" data-level="17.4.2" data-path="how-to-contribute.html"><a href="how-to-contribute.html#contributing"><i class="fa fa-check"></i><b>17.4.2</b> Contributing</a></li>
 </ul></li>
 </ul></li>
-<li class="chapter" data-level="14" data-path="career-growth.html"><a href="career-growth.html"><i class="fa fa-check"></i><b>14</b> Career growth</a><ul>
-<li class="chapter" data-level="14.1" data-path="career-growth.html"><a href="career-growth.html#career-planning-session"><i class="fa fa-check"></i><b>14.1</b> Career planning session</a></li>
+<li class="chapter" data-level="18" data-path="career-growth.html"><a href="career-growth.html"><i class="fa fa-check"></i><b>18</b> Career growth</a>
+<ul>
+<li class="chapter" data-level="18.1" data-path="career-growth.html"><a href="career-growth.html#career-planning-session"><i class="fa fa-check"></i><b>18.1</b> Career planning session</a></li>
 </ul></li>
 <li class="chapter" data-level="" data-path="r-session-information.html"><a href="r-session-information.html"><i class="fa fa-check"></i>R session information</a></li>
 </ul>
@@ -279,55 +326,55 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <div id="r-session-information" class="section level1 unnumbered">
 <h1>R session information</h1>
 <p>If you find any typos or issues, please let us know through <a href="https://github.com/lcolladotor/bioc_team_ds/issues">github.com/lcolladotor/bioc_team_ds</a>. Thank you!</p>
-<p>This book was last updated on 2021-03-12 23:44:22.</p>
+<p>This book was last updated on 2021-04-14 19:37:03.</p>
 <p>Details on the R version used for making this book. The source code is available at <a href="https://github.com/lcolladotor/bioc_team_ds"><code>lcolladotor/bioc_team_ds</code></a>.</p>
-<div class="sourceCode" id="cb14"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb14-1"><a href="r-session-information.html#cb14-1"></a><span class="co">## Load the package at the top of your script</span></span>
-<span id="cb14-2"><a href="r-session-information.html#cb14-2"></a><span class="kw">library</span>(<span class="st">&quot;sessioninfo&quot;</span>)</span>
-<span id="cb14-3"><a href="r-session-information.html#cb14-3"></a></span>
-<span id="cb14-4"><a href="r-session-information.html#cb14-4"></a><span class="co">## Reproducibility information</span></span>
-<span id="cb14-5"><a href="r-session-information.html#cb14-5"></a><span class="kw">print</span>(<span class="st">&#39;Reproducibility information:&#39;</span>)</span></code></pre></div>
+<div class="sourceCode" id="cb14"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb14-1"><a href="r-session-information.html#cb14-1" aria-hidden="true" tabindex="-1"></a><span class="do">## Load the package at the top of your script</span></span>
+<span id="cb14-2"><a href="r-session-information.html#cb14-2" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(<span class="st">&quot;sessioninfo&quot;</span>)</span>
+<span id="cb14-3"><a href="r-session-information.html#cb14-3" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb14-4"><a href="r-session-information.html#cb14-4" aria-hidden="true" tabindex="-1"></a><span class="do">## Reproducibility information</span></span>
+<span id="cb14-5"><a href="r-session-information.html#cb14-5" aria-hidden="true" tabindex="-1"></a><span class="fu">print</span>(<span class="st">&#39;Reproducibility information:&#39;</span>)</span></code></pre></div>
 <pre><code>## [1] &quot;Reproducibility information:&quot;</code></pre>
-<div class="sourceCode" id="cb16"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb16-1"><a href="r-session-information.html#cb16-1"></a><span class="kw">Sys.time</span>()</span></code></pre></div>
-<pre><code>## [1] &quot;2021-03-12 23:44:22 UTC&quot;</code></pre>
-<div class="sourceCode" id="cb18"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb18-1"><a href="r-session-information.html#cb18-1"></a><span class="kw">proc.time</span>()</span></code></pre></div>
+<div class="sourceCode" id="cb16"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb16-1"><a href="r-session-information.html#cb16-1" aria-hidden="true" tabindex="-1"></a><span class="fu">Sys.time</span>()</span></code></pre></div>
+<pre><code>## [1] &quot;2021-04-14 19:37:03 UTC&quot;</code></pre>
+<div class="sourceCode" id="cb18"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb18-1"><a href="r-session-information.html#cb18-1" aria-hidden="true" tabindex="-1"></a><span class="fu">proc.time</span>()</span></code></pre></div>
 <pre><code>##    user  system elapsed 
-##   0.673   0.131   0.800</code></pre>
-<div class="sourceCode" id="cb20"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb20-1"><a href="r-session-information.html#cb20-1"></a><span class="kw">options</span>(<span class="dt">width =</span> <span class="dv">120</span>)</span>
-<span id="cb20-2"><a href="r-session-information.html#cb20-2"></a><span class="kw">session_info</span>()</span></code></pre></div>
+##   0.637   0.095   0.596</code></pre>
+<div class="sourceCode" id="cb20"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb20-1"><a href="r-session-information.html#cb20-1" aria-hidden="true" tabindex="-1"></a><span class="fu">options</span>(<span class="at">width =</span> <span class="dv">120</span>)</span>
+<span id="cb20-2"><a href="r-session-information.html#cb20-2" aria-hidden="true" tabindex="-1"></a><span class="fu">session_info</span>()</span></code></pre></div>
 <pre><code>## ─ Session info ───────────────────────────────────────────────────────────────────────────────────────────────────────
 ##  setting  value                       
 ##  version  R version 4.0.3 (2020-10-10)
-##  os       Ubuntu 20.04.1 LTS          
+##  os       Ubuntu 20.04 LTS            
 ##  system   x86_64, linux-gnu           
 ##  ui       X11                         
 ##  language (EN)                        
 ##  collate  en_US.UTF-8                 
 ##  ctype    en_US.UTF-8                 
 ##  tz       Etc/UTC                     
-##  date     2021-03-12                  
+##  date     2021-04-14                  
 ## 
 ## ─ Packages ───────────────────────────────────────────────────────────────────────────────────────────────────────────
 ##  package     * version date       lib source        
-##  assertthat    0.2.1   2019-03-21 [2] RSPM (R 4.0.0)
-##  BiocManager * 1.30.10 2019-11-16 [2] CRAN (R 4.0.3)
+##  assertthat    0.2.1   2019-03-21 [2] RSPM (R 4.0.3)
+##  BiocManager   1.30.10 2019-11-16 [1] RSPM (R 4.0.0)
 ##  BiocStyle     2.18.1  2020-11-24 [1] Bioconductor  
 ##  bookdown      0.21    2020-10-13 [1] RSPM (R 4.0.2)
-##  cli           2.3.1   2021-02-23 [2] RSPM (R 4.0.3)
+##  cli           2.3.0   2021-01-31 [2] RSPM (R 4.0.3)
 ##  digest        0.6.27  2020-10-24 [2] RSPM (R 4.0.3)
-##  evaluate      0.14    2019-05-28 [2] RSPM (R 4.0.0)
-##  glue          1.4.2   2020-08-27 [2] RSPM (R 4.0.2)
+##  evaluate      0.14    2019-05-28 [2] RSPM (R 4.0.3)
+##  glue          1.4.2   2020-08-27 [2] RSPM (R 4.0.3)
 ##  htmltools     0.5.1.1 2021-01-22 [2] RSPM (R 4.0.3)
 ##  knitr         1.31    2021-01-27 [2] RSPM (R 4.0.3)
 ##  magrittr      2.0.1   2020-11-17 [2] RSPM (R 4.0.3)
 ##  rlang         0.4.10  2020-12-30 [2] RSPM (R 4.0.3)
-##  rmarkdown     2.7     2021-02-19 [1] RSPM (R 4.0.3)
+##  rmarkdown     2.6     2020-12-14 [1] RSPM (R 4.0.3)
 ##  rstudioapi    0.13    2020-11-12 [2] RSPM (R 4.0.3)
 ##  sessioninfo * 1.1.1   2018-11-05 [1] RSPM (R 4.0.3)
-##  stringi       1.5.3   2020-09-09 [2] RSPM (R 4.0.2)
-##  stringr       1.4.0   2019-02-10 [2] RSPM (R 4.0.0)
+##  stringi       1.5.3   2020-09-09 [2] RSPM (R 4.0.3)
+##  stringr       1.4.0   2019-02-10 [2] RSPM (R 4.0.3)
 ##  withr         2.4.1   2021-01-26 [2] RSPM (R 4.0.3)
 ##  xfun          0.21    2021-02-10 [2] RSPM (R 4.0.3)
-##  yaml          2.2.1   2020-02-01 [2] RSPM (R 4.0.0)
+##  yaml          2.2.1   2020-02-01 [2] RSPM (R 4.0.3)
 ## 
 ## [1] /__w/_temp/Library
 ## [2] /usr/local/lib/R/site-library

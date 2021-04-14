@@ -50,6 +50,7 @@ notes-1
 team-help
 individual-updates
 notion-updates
+project-meetings
 helping-others
 linear-regression-example
 dsgs-guides
@@ -62,6 +63,16 @@ description
 bioconductor-support-practice-grounds
 steps-to-follow
 rstudio-education
+project-feedback
+slack-1
+meetings
+code-review
+organizing-your-work
+jhpce-file-organization
+project-organization
+project-documentation
+writing-papers
+authorship
 config-files
 r-setup
 r-packages
