@@ -66,7 +66,7 @@ With lessons learned from former mentors [Jeffrey T. Leek](https://github.com/jt
 
 ## Join the team {-}
 
-If you are interested in joining the **R/Bioconductor-powered Team Data Science** group, please check our open positions at the [LIBD career opportunities website](https://www.libd.org/careers/).
+If you are interested in joining the **R/Bioconductor-powered Team Data Science** group, please check our open positions at the [LIBD career opportunities website](https://www.libd.org/careers/). You might be interested in checking our [anonymous team survey results](https://lcolladotor.github.io/team_surveys/), which highlights some strengths but also some weaknesses and areas we can improve.
 
 If we don't have any open positions, please reach out to Leonardo with your CV, GitHub/GitLab/etc profile with open-source software, and a short description of why you are interested in our team.
 
