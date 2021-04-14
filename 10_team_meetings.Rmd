@@ -15,6 +15,7 @@ Each week, we rotate team members as shown on [this presenters Google Spreadshee
 1. finding a paper or a software of interest
 2. notifying the group about it one week ahead on Slack
 3. preparing a few slides to explain the main concepts to us (plan for a 15 minute presentation)
+4. add some quick notes or short summary on the Google Spreadsheet
 
 We record that portion of our meeting and make it publicly available through [the presenters Google Spreadsheet](https://docs.google.com/spreadsheets/d/1r6552ySisg7_KpmJmChOvLHVWdMmss3bncEf2jqIM9k/edit?usp=sharing). We then discuss privately our thoughts on the paper or software. Here's our first video:
 
@@ -42,7 +43,6 @@ We might identify topics that we need to either train the DSgs-guides on or our 
 ### Notes
 
 * You don't have to be a part of Leonardo's team to be a DSgs-guide and thus join this meeting.
-* 
 
 ## Team help
 
