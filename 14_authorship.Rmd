@@ -1,0 +1,11 @@
+# Authorship
+
+At any point if you have questions about authorship in a project, it's best to bring it up rather than to assume. I feel that it's best to communicate frequently as authorship for a given project evolves over time given that projects are always in flux.
+
+In general though, if you helped with any role as specified by the [CRediT contributor roles taxonomy](https://casrai.org/credit/), you will be invited to be a co-author of the resulting publication. While we prepare a draft for a manuscript before we submit it to bioRxiv/medRxiv, and if you think that you should be considered a co-author but are not listed, **please** let us know! Sometimes projects get very large and it can be hard to remember who contributed to it so we might make unintentional mistakes.
+
+Ultimately, we don't make promises about authorship positions before a project is done. We aspire to be fair and evaluate contributions when the project has been completed based solely on the project described and not other projects. We thus tend to complete the author list on a given manuscript once most of the draft has been written.
+
+Note that we frequently use co-first authors to indicate that multiple people contributed equally to a project. It's up to you to make sure that you highlight this on your CV, particularly when you are the 2nd co-first author, given that automatic citation tools by default on mention the last name of the first author.
+
+Finally, we are generous with authorship. Though we do expect you to read the paper and provide feedback in a timely fashion before we submit it regardless of your position in the author list.
