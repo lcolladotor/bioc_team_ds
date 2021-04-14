@@ -1,0 +1,27 @@
+# Project feedback
+
+In the team anonymous survey from 2021-03 [several responses](https://lcolladotor.github.io/team_surveys/survey-2021-03.html#do-you-feel-you-have-enough-feedback-on-your-project) revealed a need to provide more structure for project feedback. This chapter attempts to clarify what you can do to get feedback.
+
+## Slack
+
+As specified at [How to ask for help](#how-to-ask-for-help), we have several Slack channels that you can use to ask for help. This includes asking clarifying questions about concepts, acronyms, software, or terms that might be new to you. Please use these help channels to your own benefit.
+
+Furthermore, each project will have a Slack channel. There will also be a GitHub project that will sync updates automatically to the Slack project channel. You **should** use the project Slack channel to document your progress and ask questions instead of _direct messages_ (DMs). If you use the project channel, other people can jump in and answer your questions. Furthermore, it enables me to see how the communication among team members is evolving and identify if the are misunderstandings I can clarify or identify if there's a need to schedule a meeting or ask someone else to explain some concepts. Just like asking questions by email instead of public forums is heavily discouraged at [how to ask for help](#how-to-ask-for-help), asking questions on DMs is heavily discouraged over asking questions on channels. DMs among project members are also heavily discouraged. Having said that, it's ok to ask personal questions on DMs such as "can I take XX day off?" or to use DMs among project members for things like "hey, can we change our meeting from 1pm to 2pm today?". Remember to follow the [code of conduct](#code-of-conduct) to make sure everyone feels welcome and safe to participate in our Slack channels.
+
+Overall, we are doing team science which involves many areas of expertise. I don't have the answers to all the questions, so there's no point in funneling all questions through me via DMs.
+
+Some of you prefer to turn on Slack notifications (pings) for their main project channel(s). For channels that you are in but where you are not actively working on, feel free to mute the channel. We'll tag you if necessary.
+
+## Meetings
+
+We have several [weekly meetings](#team-meetings) where you can get feedback on your project. Some of them are 1 on 1, some of them are with other team members, some of them are with colleagues. Those meetings provide a baseline. However, you can also use Calendly to request 1 on 1 meetings with team members or myself.
+
+After any meeting, it can be quite beneficial for everyone involved to post a bullet point summary on the main project Slack channel. Doing so helps everyone keep track of the main action items as well as progress made along the way. Big picture items can then be added to Notion while more detailed action items could be made as GitHub issues on the main project repository.
+
+## Code review
+
+We have discussed having formal code reviews. My impression was that the team was in favor of having _on demand_ code reviews instead of pre-scheduled code review sessions. I would love it if people asked each other to review their code through Calendly. I think that it be highly beneficial to explain your code to someone else. You might realize that some step is not well documented, or that your script could be split into two or more scripts, as well as identify potential code chunks that could become functions (or even packages). You could also find a potential bug or get feedback on how to do things differently.
+
+Prior to a code review session, you might want to standardize your code using `styler` and `biocthis` with code similar to [this one](https://github.com/lcolladotor/biocthis/blob/master/dev/04_update.R#L15-L22) or [this one](https://github.com/LieberInstitute/spatialDLPFC/blob/main/analysis/02_marker_genes.R#L2-L5).
+
+We have the infrastructure setup, it's just a matter of using it =)
