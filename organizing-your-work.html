@@ -383,11 +383,10 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 │           │   ├── sample1.fastq.gz
 │           │   └── sample2.fastq.gz
 │           ├── README.md
-│           ├── big_file1
-│           ├── big_file2
-│           └── images
-│               ├── sample1_raw.tiff
-│               └── sample2_raw.tiff
+│           ├── images
+│           │   ├── sample1_raw.tiff
+│           │   └── sample2_raw.tiff
+│           └── sample_phenotype.csv
 └── group_home_disk2
     ├── backup_projectName_grantNumber
     │   ├── code
@@ -397,7 +396,7 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
     ├── projectHello_grantRANDOM14515
     └── projectTest_grantRANDOM0123
 
-24 directories, 20 files</code></pre>
+24 directories, 19 files</code></pre>
 <p>In this example, <code>/group_home_disk1/projectName_grantNumber</code> has been backed up across JHPCE disks to <code>/group_home_disk2/backup_projectName_grantNumber</code>. Not shown in this view above, the backup will not be group-writable unlike the original location. For some projects we might just backup the raw data, for others we’ll back up the code, plots and processed-data. <code>/group_home_disk2</code> also contains it’s own unique projects that are not backed up at <code>/group_home_disk1</code> (<code>projectHello_grantRANDOM14515</code> and <code>projectTest_grantRANDOM0123</code>).</p>
 <p><code>/group_home_disk1/projectName_grantNumber</code> has several components.</p>
 <ul>
@@ -410,7 +409,7 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 </ul></li>
 <li><code>plots</code>: contains a directory matching the directory names used in <code>code</code> such that it is clear what code generate what plot. Here for <code>plots/02_another_analysis/hello.pdf</code> we can identify that the code for this plot lives at <code>code/02_another_analysis/02_plot_hello.R</code>.</li>
 <li><code>processed-data</code>: also contains a directory matching the directory names used in <code>code</code>.</li>
-<li><code>raw-data</code>: contains the raw data for the project. If the raw data is backed up elsewhere, then we can use symbolic links to point to the location of the data. For example, <code>/group_home_disk1/projectName_grantNumber/raw-data/FASTQ</code> could be a soft link to <code>/dcl02/lieber/ajaffe/Nina/Joel_R01/Year1/fastq</code>. This will be helpful to differentiate what is the raw data our group is responsible for backing up against the raw data the LIBD RNA-seq core facility or other entities are responsible for backing up.</li>
+<li><code>raw-data</code>: contains the raw data for the project. If the raw data is backed up elsewhere, then we can use symbolic links to point to the location of the data. For example, <code>/group_home_disk1/projectName_grantNumber/raw-data/FASTQ</code> could be a soft link to <code>/dcl02/lieber/ajaffe/Nina/Joel_R01/Year1/fastq</code>. This will be helpful to differentiate what is the raw data our group is responsible for backing up against the raw data the LIBD RNA-seq core facility or other entities are responsible for backing up. It also contains the sample phenotype information such as <code>/group_home_disk1/projectName_grantNumber/raw-data/sample_phenotype.csv</code> that is required for any analyses of the raw data.</li>
 <li><code>projectName_grantNumber.Rproj</code> an RStudio project file, which makes it easier to write R code.</li>
 </ul>
 <p>The project organization detailed shown above enables us to write code inside a project in such a way that if the disk where we store the project changes, none of the code has to change. That’s because we can use the <code>here</code> package as illustrated in the 2020-04-17 LIBD rstats club session (<a href="https://docs.google.com/document/d/1oAW3z9eo0LRAPeEqqm4VyPfOz8NF0vhfd76jwcJkkog/edit?usp=sharing">notes</a>).</p>
