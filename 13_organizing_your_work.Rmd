@@ -62,11 +62,10 @@ jhpce $ tree -a
 │           │   ├── sample1.fastq.gz
 │           │   └── sample2.fastq.gz
 │           ├── README.md
-│           ├── big_file1
-│           ├── big_file2
-│           └── images
-│               ├── sample1_raw.tiff
-│               └── sample2_raw.tiff
+│           ├── images
+│           │   ├── sample1_raw.tiff
+│           │   └── sample2_raw.tiff
+│           └── sample_phenotype.csv
 └── group_home_disk2
     ├── backup_projectName_grantNumber
     │   ├── code
@@ -76,7 +75,7 @@ jhpce $ tree -a
     ├── projectHello_grantRANDOM14515
     └── projectTest_grantRANDOM0123
 
-24 directories, 20 files
+24 directories, 19 files
 ```
 
 In this example, `/group_home_disk1/projectName_grantNumber` has been backed up across JHPCE disks to `/group_home_disk2/backup_projectName_grantNumber`. Not shown in this view above, the backup will not be group-writable unlike the original location. For some projects we might just backup the raw data, for others we'll back up the code, plots and processed-data. `/group_home_disk2` also contains it's own unique projects that are not backed up at `/group_home_disk1` (`projectHello_grantRANDOM14515` and `projectTest_grantRANDOM0123`).
@@ -90,7 +89,7 @@ In this example, `/group_home_disk1/projectName_grantNumber` has been backed up 
   - `01_some_analysis` and `02_another_analysis`: contain scripts also using a two digit leading ID to help organize the files in the order they should be used for re-generating the processed data and plots.
 * `plots`: contains a directory matching the directory names used in `code` such that it is clear what code generate what plot. Here for `plots/02_another_analysis/hello.pdf` we can identify that the code for this plot lives at `code/02_another_analysis/02_plot_hello.R`.
 * `processed-data`: also contains a directory matching the directory names used in `code`.
-* `raw-data`: contains the raw data for the project. If the raw data is backed up elsewhere, then we can use symbolic links to point to the location of the data. For example, `/group_home_disk1/projectName_grantNumber/raw-data/FASTQ` could be a soft link to `/dcl02/lieber/ajaffe/Nina/Joel_R01/Year1/fastq`. This will be helpful to differentiate what is the raw data our group is responsible for backing up against the raw data the LIBD RNA-seq core facility or other entities are responsible for backing up.
+* `raw-data`: contains the raw data for the project. If the raw data is backed up elsewhere, then we can use symbolic links to point to the location of the data. For example, `/group_home_disk1/projectName_grantNumber/raw-data/FASTQ` could be a soft link to `/dcl02/lieber/ajaffe/Nina/Joel_R01/Year1/fastq`. This will be helpful to differentiate what is the raw data our group is responsible for backing up against the raw data the LIBD RNA-seq core facility or other entities are responsible for backing up. It also contains the sample phenotype information such as `/group_home_disk1/projectName_grantNumber/raw-data/sample_phenotype.csv` that is required for any analyses of the raw data.
 * `projectName_grantNumber.Rproj` an RStudio project file, which makes it easier to write R code.
 
 The project organization detailed shown above enables us to write code inside a project in such a way that if the disk where we store the project changes, none of the code has to change. That's because we can use the `here` package as illustrated in the 2020-04-17 LIBD rstats club session ([notes](https://docs.google.com/document/d/1oAW3z9eo0LRAPeEqqm4VyPfOz8NF0vhfd76jwcJkkog/edit?usp=sharing)).
