@@ -1,4 +1,65 @@
 # Writing papers
 
 
-TODO
+<iframe width="560" height="315" src="https://www.youtube.com/embed/jbXkulDnn9g" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+
+On 2020-04-06 I presented at [how to write papers using Google Docs](https://docs.google.com/document/d/1yumuVwZmpoE_SpcM-9AsU0U6D9R051vU8s_AGhoqh7Y/edit?usp=sharing). The video and notes mostly highlight these tools including [Sciwheel](https://twitter.com/Sciwheel).
+
+
+<iframe width="560" height="315" src="https://www.youtube.com/embed/m6f6D3r1h7U" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+
+
+Most recently I presented at the [LIBD rstats club](https://twitter.com/LIBDrstats) more ideas behind writing papers. Here are the [notes](https://docs.google.com/document/d/1V7hTQvWTurHqEm24Ufz9oVAPQy2ssyDPuPxJm5yills/edit?usp=sharing).
+
+## Things to keep in mind
+
+While you'll want to check those videos and notes, a lot of it comes down to being organized and using the right tool for the job.
+
+In more detail, you'll want to keep track of software versions as you develop your project so you have the information readily available when you write the methods. You'll want to use big font sizes and consistent colors across your figures so you don't have to re-make them later. Once you have a journal in mind, you'll want to check the guidelines from that journal and potentially use their LaTeX template in Overleaf, although for a general journal, [Google Docs](https://twitter.com/googledocs) works quite well and is easier to use by everyone. With both [Overleaf](https://twitter.com/overleaf) or Google Docs, you'll definitely want to use automatic figure, table, equation, and citation numbers so you can easily re-arrange them and avoid having to manually update all numbers which is quite painful. Most journals will also require that you cite figures and tables in order of appearance and that all supplementary materials are referred to in the main text (introduction, results, discussion sections) or even be linked to a main figure/table. Funding is quite important too, so make sure that you check with all co-authors that all their funding sources are listed. Once the authors are defined, you'll want to have their email, affiliation name(s), affiliation address(es), and [ORCiD](https://orcid.org/) so you can fill that information in the journal website ^[Note that bioRxiv has an [author information template table](https://github.com/lcolladotor/bioc_team_ds/blob/master/author_template.tsv) that you can use.]. Similarly, you and the team will want to think about potential reviewers which involves getting their emails and affiliations.
+
+A paper has a lot of components and you'll need to check that the information provided is consistent, include small things such as (A) vs (a) in the figures. So it takes a while to write a paper and it's best to subdivide it into many small tasks so you don't feel overwhelmed. That way you can check off items off your list. If "write the paper" is the item in your list, it'll feel like it never ends.
+
+## Writing process
+
+When we start a paper, we like to write bullet points for the different sections or results we want to show, as well as write in text the figures we would like to make. This makes it easier to then write one short paragraph at a time and to grow the paper that way while keeping an overall idea of the flow of the paper in mind.
+
+Editing is also easier to do than writing from scratch. So you can expect to receive edits ^[Likely using _suggestion mode_ in Google Docs. Also note that both Google Docs and Overleaf allow you to name versions, which makes it easier to refer back to them and compare against them.] in the process of writing a paper. Other labs ask the first (co-first) to write a full draft. We prefer to write the paper together, although the lead writers might write most of the first versions for each paragraph while others will mostly edit. Given this style we use, it's useful to re-read the final draft to make sure that we are consistent throughout the paper. For example, _data set_ vs _dataset_. 
+
+Also, don't be shy with the methods and supplementary material. Typically, journals allow us to include as many details as we want. That way, you'll be able to refer back to sections of you paper in the future when people ask you how you did X or Y part of the paper.
+
+In a similar sense, don't be shy about tagging others in your paper in case you need feedback on a section you just wrote or you need others to help you write. We are a team in the end and are in this together =)
+
+## Details
+
+
+Here are more details:
+
+* Title: check character limits.
+* Author list: affiliations numbers have to appear in order.
+* Affiliations: include zip code and country.
+* Abstract / summary: check word limits, don't include citations.
+* Introduction: motivate the problem we are trying to solve and give an short summary of what we did. Remember to define any acronyms.
+* Results: describe what we found. For how we did things, refer to the appropriate methods section. 
+* Discussion: any speculation goes here as well as potential drawbacks to the work we did. You'll also want to highlight the main results and conclusions from our work.
+* Acknowledgements: information about the donors as well as any requests from consortiums like GTEx.
+* Funding: include full grant IDs and who they supported.
+* Author contributions: use the [CRediT contributor roles taxonomy](https://casrai.org/credit/)
+* Conflicts of interest: in case any authors worked for companies, list that info here.
+* Figure/table legends: figure/table number and figure/table title should be in bold font. Then the description in plain text. I also like to use (__A__) instead of (A) whenever the description of a sub-panel begins. Some journals will ask that you also link to all supplementary figure/tables from the main figures.
+* Methods: use sub-sections for the different parts of the work and sort them in order of appearance from the Results section. Use version numbers and a different font style for software / functions to make it easier to identify those words as names of tools. Cite every single software you used! Don't interpret results here, that should be in the Results section.
+* Data and software availability: link to GitHub and cite using Zenodo which provides DOIs for GitHub repositories as shown in [this guide](https://guides.github.com/activities/citable-code/). Note that we start most of our GitHub repositories as private, but we make them public by the time we post a pre-print. You'll want to have a high quality README.md in your repository that shows how the work should be cited and guides visitors to the different components included in the repository. Several journals will require to you also complete more detailed forms such as this [Reporting Summary](https://static-content.springer.com/esm/art%3A10.1038%2Fs41593-020-00787-0/MediaObjects/41593_2020_787_MOESM2_ESM.pdf) example from one of our papers. 
+
+In Dropbox, use a directory like `submission_01` for the first submission as there will be multiple rounds for any paper. Inside each submission directory include directories:
+
+* `manuscript`: for the PDF/docx version of the manuscript and other files required by the journal (like the table describing software and methods used)
+* `Figures`: include a directory for every single Figure such that we can keep all files related to that figure in that directory and use Adobe Illustrator to link the different panels together.
+* `Tables`: if the tables are small, consider combining them into a single Excel file where you include one sheet with the table legends. Keep the advice from Karl Broman and Kara Woo in mind (DOI [10.1080/00031305.2017.1375989](https://doi.org/10.1080/00031305.2017.1375989)) when making the table files.
+
+When responding to reviewers, make a new Google Doc where the feedback from the reviewers is in bold or some other font, and add placeholders for responses. You can then tag the co-author(s) that can help the most with the response for each point.
+
+As examples, check:
+
+* the [BrainSEQ Phase II Google Doc](https://docs.google.com/document/d/1GLB4aVrzXhSZNT6br7m_JvvzjRUCixBKgwrZUTIwZyA/edit?usp=sharing) with code at [LieberInstitute/brainseq_phase2](https://github.com/LieberInstitute/brainseq_phase2) as well through Zenodo. The final version is available at DOI [10.1016/j.neuron.2019.05.013](https://doi.org/10.1016/j.neuron.2019.05.013).
+* the [spatialLIBD project Google Doc](https://docs.google.com/document/d/1mHf2gDtQAwCqxplh5NV-nAcLxzv5LdXR7MhFdo6QLl8/edit?usp=sharing) with code at [LieberInstitute/HumanPilot](https://github.com/LieberInstitute/HumanPilot) as well as through Zenodo. The final version is available at DOI [10.1038/s41593-020-00787-0](https://doi.org/10.1038/s41593-020-00787-0). For an Overleaf example, check the [spatialLIBD software paper](https://www.overleaf.com/read/tqvgjssdckqv).
+
+Finally, feel free to sign up for a [Data Science guidance session](#data-science-guidance-sessions) with anyone in the team that recently wrote a paper.
