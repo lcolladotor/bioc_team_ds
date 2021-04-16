@@ -1,33 +1,65 @@
 # How to contribute
 
-TODO
+You can play a very important role in improving the projects from the group. While we write software with the hope that others will use it, we are the first users and thus any questions we have are very likely to be questions external users will have. The earlier we fix these issues the better as more people will benefit from the improvements. Overall, there are many ways in you can help. Below is a list of some areas you might be interested in contributing to.
 
-## LIBD rstats club website
 
-### blogdown
+## GitHub Issues
+
+Given that we use GitHub for most of our projects, one of the most direct ways to start contributing is by raising issues. There are many things we can do with issues as highlighted by [this guide](https://guides.github.com/features/issues/). However, their main use is to help us improve our own code and documentation. For example, maybe the help file for a function in one of our packages has a typo, is not clear, or assumes a lot of background knowledge. Letting the team know that that's the case is the first step. 
+
+Let's say that we want to write an issue about the `jaffelab::expression_cutoff()` function. What I would do is go to the GitHub repository for `jaffelab` which is https://github.com/LieberInstitute/jaffelab. Then I would find the latest commit from https://github.com/LieberInstitute/jaffelab/commits/master, which right now is https://github.com/LieberInstitute/jaffelab/commit/6a1c61bb3748aeb73890c1ab2aa59e5cc20bc08b. THen I would click on "browse files" which takes me to https://github.com/LieberInstitute/jaffelab/tree/6a1c61bb3748aeb73890c1ab2aa59e5cc20bc08b. There, you can navigate to the file of interest, in this case, https://github.com/LieberInstitute/jaffelab/blob/6a1c61bb3748aeb73890c1ab2aa59e5cc20bc08b/R/expression_cutoff.R. Next you can higlight the relevant lines. In this case, we think that the definition of the `expr` argument can be improved. So that corresponds to https://github.com/LieberInstitute/jaffelab/blob/6a1c61bb3748aeb73890c1ab2aa59e5cc20bc08b/R/expression_cutoff.R#L13-L14. Next we can go to the issues page at https://github.com/LieberInstitute/jaffelab/issues and click on "New issue" and write the description of the problem we found while linking to the exact lines of code we think need to change. GitHub will then automatically show the code in the final issue and our issue will be protected in the sense that if the code at `R/expression_cutoff.R` changes and the lines we wanted to link to move around, our link will not be affected since we are linking to a specific past version of the code. Here's the result https://github.com/LieberInstitute/jaffelab/issues/7 which was then resolved by [this commit](https://github.com/LieberInstitute/jaffelab/compare/6a1c61bb3748...f1e483ebf032).
+
+Once an issue has been raised, others or even yourself might want to address the request and make the necessary changes to resolve the issue.
+
+A well documented issue makes everyone's job easier and will help us improve our code and documentation. 
+
+
+## Team websites
+
+You are definitely welcome to contribute to the several team websites such as this one. Here's a non-comprehensive list of these repositories:
+
+* https://github.com/lcolladotor/bioc_team_ds
+* https://github.com/lcolladotor/DSgs_logs
+* https://github.com/lcolladotor/team_surveys
+
+The above repositories are configured to update automatically using GitHub Actions and `bookdown`.
+
+### LIBD rstats club website
+
+One of the main contributions you might be interested in contributing is blog posts. This involves two repositories as described in this [blog post](http://research.libd.org/rstatsclub/2018/03/09/contributing-to-the-libd-rstats-club/#.YHmnNBRKgdk). Since that blog post was written a few things have changed, although the overall idea remains. That is, we have two repositories:
+
+* https://github.com/LieberInstitute/rstatsclubsource
+* https://github.com/LieberInstitute/rstatsclub
+
+I basically control the second one and your contributions should be at https://github.com/LieberInstitute/rstatsclubsource, which is how we setup things to keep blog post authors anonymous. You'll likely contribute an Rmd and an html file inside the `content/post` directory. You might also want to add information about yourself at `content/authors`.
+
+I recommend reading the blog post on how to contribute to this website and then meet with one of the recent blog post authors for a [Data Science guidance session](#data-science-guidance-sessions).
 
 ## GitHub Actions
 
+GitHub Actions are quite powerful and we are increasingly using them in several of our projects. The basic idea is that they enable us to use free computers for up to 6 hours to run some code whenever we make a GitHub push. So they are ideal for running code in standarized environments that would otherwise take us time to run in our local computers. For example, automatic R package checks or rendering the HTML files for a website.
+
 ### R packages
 
-`biocthis`
+`biocthis` is the R/Bioconductor package I developed for using GitHub Actions to test R packages in a Bioconductor-friendly way. In 2020-09-10 I presented `biocthis` to the Ryten lab and you can see the video and recording below. Ultimately, you'll likely be interested in checking the documentation at https://lcolladotor.github.io/biocthis/ which includes a vignette describing the whole process for making this package. The main functions you'll be interested in are `biocthis::use_bioc_pkg_templates()` as well as `biocthis::use_bioc_github_action()`.
 
-### Bookdown
+<iframe width="560" height="315" src="https://www.youtube.com/embed/aMTxkYsM-8o" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 
-`SPEAQeasy`, this book
+<script async class="speakerdeck-embed" data-id="f2e58b59b83244179f062c2852af25ff" data-ratio="1.77777777777778" src="//speakerdeck.com/assets/embed.js"></script>
 
-### R Markdown websites
+### Websites
 
-`twitter-stats` example
+For rendering websites, I've edited the `biocthis` GitHub action workflow to render websites using `bookdown` or regular R markdown. Some additional repositories beyond the ones listed earlier that implement these workflows are:
 
-### Blogdown
-
-Could figure this one out =)
+* https://github.com/LieberInstitute/SPEAQeasy (`bookdown`)
+* https://github.com/LieberInstitute/SPEAQeasy-example (`bookdown`)
+* https://github.com/LieberInstitute/VisiumLIBD (`bookdown`)
+https://github.com/LieberInstitute/recount3-docs (`bookdown` and `postcards`)
+* https://github.com/lcolladotor/twitter-stats (`rmarkdown`)
 
 ## LIBD R/Bioconductor packages
 
-## GitHub templates
+As a group we have many R/Bioconductor packages. I've created a list of the ones I'm involved in at [lcolladotor.github.io/pkgs/](https://lcolladotor.github.io/pkgs/) which might have errors or open issues that need to be addressed. If you want to help with any of them or with other LIBD R/Bioconductor R packages, the most direct way to get involved is to open a new issue to start communicating with the maintainer(s) of the package.
 
-### Issues
+For external R/Bioconductor packages, at some point in the LIBD rstats club we'll have a session on how to make a pull request (TODO).
 
-### Contributing
