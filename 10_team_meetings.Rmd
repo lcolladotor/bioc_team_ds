@@ -13,7 +13,7 @@ Every week we meet for about an hour 20 minutes. The team meeting has three sect
 Each week, we rotate team members as shown on [this presenters Google Spreadsheet](https://docs.google.com/spreadsheets/d/1r6552ySisg7_KpmJmChOvLHVWdMmss3bncEf2jqIM9k/edit?usp=sharing). That team member is in charge of:
 
 1. finding a paper or a software of interest
-2. notifying the group about it one week ahead on Slack
+2. notifying the group about it at least one week ahead on Slack
 3. preparing a few slides to explain the main concepts to us (plan for a 15 minute presentation)
 4. add some quick notes or short summary on the Google Spreadsheet
 
@@ -65,5 +65,6 @@ Here's the list of project meetings and who should attend them:
 * spatialLIBD updates: Abby, Brenda, Leo.
 * spatial journal club: it's optional, though many of you can benefit from it.
 * spatial team meeting: Abby, Brenda, Leo. Optionally Arta and Nick could benefit from it.
+* deconvolution: Louise and Leo. Anyone interested in learning about deconvolution is free to join.
 * LIBD rstats club: everyone.
 * CHESS-BRAIN: Leo, Geo and Arta (have not started yet).
