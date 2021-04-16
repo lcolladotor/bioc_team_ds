@@ -72,6 +72,9 @@ jhpce-file-organization
 project-organization
 project-documentation
 writing-papers
+things-to-keep-in-mind
+writing-process
+details
 authorship
 config-files
 r-setup
