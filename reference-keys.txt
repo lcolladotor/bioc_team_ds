@@ -69,7 +69,8 @@ meetings
 code-review
 organizing-your-work
 jhpce-file-organization
-project-organization
+background-history
+organization-since-2021
 project-documentation
 writing-papers
 things-to-keep-in-mind
