@@ -8,6 +8,11 @@ You can also find the videos of all our bootcamps on **YouTube** at [LeonardoCol
 
 <blockquote class="twitter-tweet"><p lang="en" dir="ltr">It&#39;s been ~4 weeks. We spent the first 3 learning more about <a href="https://twitter.com/hashtag/rstats?src=hash&amp;ref_src=twsrc%5Etfw">#rstats</a> <a href="https://twitter.com/hashtag/bioinformatics?src=hash&amp;ref_src=twsrc%5Etfw">#bioinformatics</a> &amp; <a href="https://twitter.com/Bioconductor?ref_src=twsrc%5Etfw">@Bioconductor</a>. If you are interested in our bootcamp sessions, you can find the videos at <a href="https://t.co/uBVqZMfgkP">https://t.co/uBVqZMfgkP</a><br><br>and in general at<a href="https://t.co/JjZMQZsY1S">https://t.co/JjZMQZsY1S</a><a href="https://twitter.com/LieberInstitute?ref_src=twsrc%5Etfw">@LieberInstitute</a> <a href="https://twitter.com/LIBDrstats?ref_src=twsrc%5Etfw">@LIBDrstats</a> ✌️🏽 <a href="https://t.co/uujaBguHMi">https://t.co/uujaBguHMi</a></p>&mdash; 🇲🇽 Leonardo Collado-Torres (@lcolladotor) <a href="https://twitter.com/lcolladotor/status/1317106878934061056?ref_src=twsrc%5Etfw">October 16, 2020</a></blockquote> <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
 
+
+Here are the videos from [YouTube](https://youtube.com/playlist?list=PLNNI62fcZPdCnAbQPmMZkRKPF4RTSFSSZ).
+
+<iframe width="560" height="315" src="https://www.youtube.com/embed/videoseries?list=PLNNI62fcZPdCnAbQPmMZkRKPF4RTSFSSZ" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+
 ## LIBD bootcamps
 
 We have organized accessible bootcamps that have biologists in mind. If you spend most of your time coding, check the [Team bootcamps](#team-bootcamps) further below. For all of these bootcamps, you should have the latest [R](https://cran.r-project.org/) and [RStudio Desktop](https://rstudio.com/products/rstudio/download/) installed. You will typically need a computer with at least 8 GB of RAM.

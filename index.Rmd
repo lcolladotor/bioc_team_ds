@@ -29,7 +29,21 @@ We constantly create new content to share what we are learning or working on, wh
 * discuss papers and software in our [team meetings](#team-meetings) (check our [schedule](https://docs.google.com/spreadsheets/d/1r6552ySisg7_KpmJmChOvLHVWdMmss3bncEf2jqIM9k/edit?usp=sharing))
 * organize R/Bioconductor data science [bootcamps](#rbioconductor-data-science-bootcamps)
 
-You can find our videos on **YouTube** at [LeonardoColladoTorres/playlists](https://www.youtube.com/c/LeonardoColladoTorres/playlists).
+## YouTube {-}
+
+You can find our videos on **YouTube** at [LeonardoColladoTorres/playlists](https://www.youtube.com/c/LeonardoColladoTorres/playlists). Some of our main video playlists are show below.
+
+### LIBD rstats club {-}
+
+<iframe width="560" height="315" src="https://www.youtube.com/embed/videoseries?list=PLNNI62fcZPdB3G8Nl87gUlAQTEe2EH5K4" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+
+### Team journal club {-}
+
+<iframe width="560" height="315" src="https://www.youtube.com/embed/videoseries?list=PLNNI62fcZPdANO2noI0o5xPfr3vWeg0bR" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+
+### LIBD and team bootcamps {-}
+
+<iframe width="560" height="315" src="https://www.youtube.com/embed/videoseries?list=PLNNI62fcZPdCnAbQPmMZkRKPF4RTSFSSZ" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 
 ## Code of conduct {-}
 
@@ -75,5 +89,15 @@ If you are interested in joining the **R/Bioconductor-powered Team Data Science*
 If we don't have any open positions, please reach out to Leonardo with your CV, GitHub/GitLab/etc profile with open-source software, and a short description of why you are interested in our team.
 
 ## Twitter {-}
+
+You can find us on Twitter through the [LIBD rstats club account](https://twitter.com/LIBDrstats) and our own accounts where we share our work.
+
+* [Abby Spangler](https://twitter.com/abspangler)
+* [Arta Seyedian](https://twitter.com/artaseyedian)
+* [Brenda Pardo](https://twitter.com/PardoBree)
+* [Joshua M. Stolz](https://twitter.com/JoshStolz2)
+* [Leonardo Collado Torres](https://twitter.com/lcolladotor)
+* [Louise Huuki](https://twitter.com/lahuuki)
+* Nicholas J. Eagles
 
 <a class="twitter-timeline" href="https://twitter.com/LIBDrstats?ref_src=twsrc%5Etfw">Tweets by LIBDrstats</a> <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
