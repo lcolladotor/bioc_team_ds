@@ -6,6 +6,10 @@ Many of the communication tools we use for asking for help are text-based. It ca
 
 <blockquote class="twitter-tweet"><p lang="en" dir="ltr">Take time⌚️to think about your issue titles!!!<br><br> xyz is broken<br><br>vs<br><br> xyz fails with malformed input<br><br>The former puts the maintainers in a foul mood 😡<br><br>Issues should be requests 💐 rather than demands 🔨</p>&mdash; Jim Hester (@jimhester_) <a href="https://twitter.com/jimhester_/status/1348742632491646976?ref_src=twsrc%5Etfw">January 11, 2021</a></blockquote> <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
 
+Actually, Jim Hester keeps providing excellent advice, so you might want to check this table he made and shared on [Twitter](https://twitter.com/jimhester_/status/1390021499797577731?s=20).
+
+<script src="https://gist.github.com/jimhester/9b5461108f93162e15c42684076de82f.js"></script>
+
 Ultimately, some coding issues are complex. Here are some tips on some strategies for resolving complex coding problems.
 
 <iframe width="560" height="315" src="https://www.youtube.com/embed/xUSEippbXBc" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
