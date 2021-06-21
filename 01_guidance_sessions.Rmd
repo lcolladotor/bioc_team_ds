@@ -51,6 +51,8 @@ To share code with us,
 
 If you are interested in a 25 minute Data Science guidance session, please sign up through the Calendly links below with a session with one of our guides. If this is the first time you are using this or might need more general guidance, sign up with Leo. 
 
+If you have a Zoom account, please add the Zoom details to the calendar invitation ^[If you are using Google Calendar, there is a Google Calendar Zoom integration. The Outlook version LIBD uses does not support the Zoom integration, so you'll have to add the information manually to the calendar invitation.]. Thanks!
+
 * [Leonardo Collado-Torres](https://github.com/lcolladotor) ([BioC Support](https://support.bioconductor.org/u/6526/))
   - Research interests: RNA-seq, spatial transcriptomics, un-annotated transcriptome.
   - Technologies I use: R/Bioconductor, GitHub, SGE/JHPCE.
