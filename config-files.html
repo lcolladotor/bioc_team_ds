@@ -721,58 +721,63 @@ Thumbs.db</code></pre>
 <span id="cb12-39"><a href="config-files.html#cb12-39" aria-hidden="true" tabindex="-1"></a><span class="bu">alias</span> spatial=<span class="st">&quot;cd /dcl02/lieber/ajaffe/SpatialTranscriptomics/LIBD&quot;</span></span>
 <span id="cb12-40"><a href="config-files.html#cb12-40" aria-hidden="true" tabindex="-1"></a><span class="bu">alias</span> matt=<span class="st">&quot;cd /dcl01/lieber/ajaffe/Matt/MNT_thesis/snRNAseq/10x_pilot_FINAL&quot;</span></span>
 <span id="cb12-41"><a href="config-files.html#cb12-41" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb12-42"><a href="config-files.html#cb12-42" aria-hidden="true" tabindex="-1"></a><span class="co">## Creating modules</span></span>
-<span id="cb12-43"><a href="config-files.html#cb12-43" aria-hidden="true" tabindex="-1"></a><span class="co"># https://lmod.readthedocs.io/en/latest/050_lua_modulefiles.html</span></span>
-<span id="cb12-44"><a href="config-files.html#cb12-44" aria-hidden="true" tabindex="-1"></a><span class="bu">alias</span> modsrc=<span class="st">&quot;cd /jhpce/shared/jhpce/libd&quot;</span></span>
-<span id="cb12-45"><a href="config-files.html#cb12-45" aria-hidden="true" tabindex="-1"></a><span class="bu">alias</span> modlua=<span class="st">&quot;cd /jhpce/shared/jhpce/modulefiles/libd&quot;</span></span>
+<span id="cb12-42"><a href="config-files.html#cb12-42" aria-hidden="true" tabindex="-1"></a><span class="co">## Team home directories</span></span>
+<span id="cb12-43"><a href="config-files.html#cb12-43" aria-hidden="true" tabindex="-1"></a><span class="bu">alias</span> dcl01=<span class="st">&quot;cd /dcl01/lieber/lcolladotor&quot;</span></span>
+<span id="cb12-44"><a href="config-files.html#cb12-44" aria-hidden="true" tabindex="-1"></a><span class="bu">alias</span> dcl02=<span class="st">&quot;cd /dcl02/lieber/lcolladotor&quot;</span></span>
+<span id="cb12-45"><a href="config-files.html#cb12-45" aria-hidden="true" tabindex="-1"></a><span class="bu">alias</span> dcs04=<span class="st">&quot;cd /dcs04/lieber/lcolladotor&quot;</span></span>
 <span id="cb12-46"><a href="config-files.html#cb12-46" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb12-47"><a href="config-files.html#cb12-47" aria-hidden="true" tabindex="-1"></a><span class="co"># colors</span></span>
-<span id="cb12-48"><a href="config-files.html#cb12-48" aria-hidden="true" tabindex="-1"></a><span class="co"># http://norbauer.com/notebooks/code/notes/ls-colors-and-terminal-app</span></span>
-<span id="cb12-49"><a href="config-files.html#cb12-49" aria-hidden="true" tabindex="-1"></a><span class="co"># used BSD pattern ExGxFxDxBxEgEdxbxgxhxd on http://geoff.greer.fm/lscolors/</span></span>
-<span id="cb12-50"><a href="config-files.html#cb12-50" aria-hidden="true" tabindex="-1"></a><span class="co"># that tool does not specify the colors, which I did by looking manually at</span></span>
-<span id="cb12-51"><a href="config-files.html#cb12-51" aria-hidden="true" tabindex="-1"></a><span class="co"># http://blog.twistedcode.org/2008/04/lscolors-explained.html</span></span>
-<span id="cb12-52"><a href="config-files.html#cb12-52" aria-hidden="true" tabindex="-1"></a><span class="co"># and the norbauer.com site previously mentioned</span></span>
-<span id="cb12-53"><a href="config-files.html#cb12-53" aria-hidden="true" tabindex="-1"></a><span class="bu">alias</span> ls=<span class="st">&quot;ls --color=auto&quot;</span></span>
-<span id="cb12-54"><a href="config-files.html#cb12-54" aria-hidden="true" tabindex="-1"></a><span class="co">#export LS_COLORS=&quot;di=1;34;40:ln=1;36;40:so=1;35;40:pi=1;93;40:ex=1;31;40:bd=1;34;46:cd=1;34;43:su</span></span>
-<span id="cb12-55"><a href="config-files.html#cb12-55" aria-hidden="true" tabindex="-1"></a><span class="ex">=0</span><span class="kw">;</span><span class="ex">41:sg=0</span><span class="kw">;</span><span class="ex">46:tw=0</span><span class="kw">;</span><span class="ex">47:ow=0</span><span class="kw">;</span><span class="ex">43</span><span class="st">&quot;</span></span>
-<span id="cb12-56"><a href="config-files.html#cb12-56" aria-hidden="true" tabindex="-1"></a><span class="st">## After switching to RStudio:</span></span>
-<span id="cb12-57"><a href="config-files.html#cb12-57" aria-hidden="true" tabindex="-1"></a><span class="st"># https://askubuntu.com/questions/466198/how-do-i-change-the-color-for-directories-with-ls-in-the-</span></span>
-<span id="cb12-58"><a href="config-files.html#cb12-58" aria-hidden="true" tabindex="-1"></a><span class="st">console</span></span>
-<span id="cb12-59"><a href="config-files.html#cb12-59" aria-hidden="true" tabindex="-1"></a><span class="st">export LS_COLORS=&quot;</span><span class="ex">di=0</span><span class="kw">;</span><span class="ex">32:ln=0</span><span class="kw">;</span><span class="ex">36:so=0</span><span class="kw">;</span><span class="ex">35:pi=0</span><span class="kw">;</span><span class="ex">93:ex=0</span><span class="kw">;</span><span class="ex">31:bd=0</span><span class="kw">;</span><span class="ex">34</span><span class="kw">;</span><span class="ex">46:cd=0</span><span class="kw">;</span><span class="ex">34</span><span class="kw">;</span><span class="ex">43:su=0</span><span class="kw">;</span><span class="ex">41:sg=0</span><span class="kw">;</span><span class="ex">46:tw</span></span>
-<span id="cb12-60"><a href="config-files.html#cb12-60" aria-hidden="true" tabindex="-1"></a><span class="ex">=0</span><span class="kw">;</span><span class="ex">47:ow=0</span><span class="kw">;</span><span class="ex">43:fi=0</span><span class="kw">;</span><span class="ex">33</span><span class="st">&quot;</span></span>
-<span id="cb12-61"><a href="config-files.html#cb12-61" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb12-62"><a href="config-files.html#cb12-62" aria-hidden="true" tabindex="-1"></a><span class="st"># Uncomment below for Mac and comment the two previous commands</span></span>
-<span id="cb12-63"><a href="config-files.html#cb12-63" aria-hidden="true" tabindex="-1"></a><span class="st">#export CLICOLOR=1</span></span>
-<span id="cb12-64"><a href="config-files.html#cb12-64" aria-hidden="true" tabindex="-1"></a><span class="st">#export LSCOLORS=&quot;</span><span class="ex">ExGxFxDxBxEgEdxbxgxhxd</span><span class="st">&quot;</span></span>
-<span id="cb12-65"><a href="config-files.html#cb12-65" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb12-66"><a href="config-files.html#cb12-66" aria-hidden="true" tabindex="-1"></a><span class="st">## For setup:</span></span>
-<span id="cb12-67"><a href="config-files.html#cb12-67" aria-hidden="true" tabindex="-1"></a><span class="st"># http://erniemiller.org/2011/12/12/textmate-2-rmate-awesome/</span></span>
-<span id="cb12-68"><a href="config-files.html#cb12-68" aria-hidden="true" tabindex="-1"></a><span class="st">## For laptop config:</span></span>
-<span id="cb12-69"><a href="config-files.html#cb12-69" aria-hidden="true" tabindex="-1"></a><span class="st"># http://jonsimpson.co.uk/log/2011/rmate-ssh-remoteforward</span></span>
-<span id="cb12-70"><a href="config-files.html#cb12-70" aria-hidden="true" tabindex="-1"></a><span class="st">## rmate port</span></span>
-<span id="cb12-71"><a href="config-files.html#cb12-71" aria-hidden="true" tabindex="-1"></a><span class="st"># https://github.com/textmate/rmate</span></span>
-<span id="cb12-72"><a href="config-files.html#cb12-72" aria-hidden="true" tabindex="-1"></a><span class="st">export RMATE_PORT=&quot;</span><span class="ex">SOME_PORT_YOU_CHOOSE</span><span class="st">&quot;</span></span>
-<span id="cb12-73"><a href="config-files.html#cb12-73" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb12-74"><a href="config-files.html#cb12-74" aria-hidden="true" tabindex="-1"></a><span class="st">## Load the git module by default when qrsh/qsub</span></span>
-<span id="cb12-75"><a href="config-files.html#cb12-75" aria-hidden="true" tabindex="-1"></a><span class="st">## thanks to Jiong Yang</span></span>
-<span id="cb12-76"><a href="config-files.html#cb12-76" aria-hidden="true" tabindex="-1"></a><span class="st">if [[ </span><span class="va">$HOSTNAME</span><span class="st"> == compute-* ]] || [[ </span><span class="va">$HOSTNAME</span><span class="st"> == transfer-* ]]; then</span></span>
-<span id="cb12-77"><a href="config-files.html#cb12-77" aria-hidden="true" tabindex="-1"></a><span class="st">    echo &quot;</span><span class="ex">Adding</span> LIBD modules<span class="st">&quot;</span></span>
-<span id="cb12-78"><a href="config-files.html#cb12-78" aria-hidden="true" tabindex="-1"></a><span class="st">    module use /jhpce/shared/jhpce/modulefiles/libd</span></span>
-<span id="cb12-79"><a href="config-files.html#cb12-79" aria-hidden="true" tabindex="-1"></a><span class="st">    echo &quot;</span>Loading git<span class="st">&quot;</span></span>
-<span id="cb12-80"><a href="config-files.html#cb12-80" aria-hidden="true" tabindex="-1"></a><span class="st">    module load git</span></span>
-<span id="cb12-81"><a href="config-files.html#cb12-81" aria-hidden="true" tabindex="-1"></a><span class="st">    module load git-status-size/github</span></span>
-<span id="cb12-82"><a href="config-files.html#cb12-82" aria-hidden="true" tabindex="-1"></a><span class="st">    module load git-lfs/2.8.0</span></span>
-<span id="cb12-83"><a href="config-files.html#cb12-83" aria-hidden="true" tabindex="-1"></a><span class="st">    module load rmate/1.5.9</span></span>
-<span id="cb12-84"><a href="config-files.html#cb12-84" aria-hidden="true" tabindex="-1"></a><span class="st">    module load conda_R/4.1</span></span>
-<span id="cb12-85"><a href="config-files.html#cb12-85" aria-hidden="true" tabindex="-1"></a><span class="st">fi</span></span>
-<span id="cb12-86"><a href="config-files.html#cb12-86" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb12-87"><a href="config-files.html#cb12-87" aria-hidden="true" tabindex="-1"></a><span class="st">## To deal with running nextflow without requesting much more memory</span></span>
-<span id="cb12-88"><a href="config-files.html#cb12-88" aria-hidden="true" tabindex="-1"></a><span class="st">## https://jhpce.jhu.edu/question/why-do-i-get-memory-errors-when-running-java/</span></span>
-<span id="cb12-89"><a href="config-files.html#cb12-89" aria-hidden="true" tabindex="-1"></a><span class="st">export _JAVA_OPTIONS=&quot;</span>-Xms5g <span class="at">-Xmx6g</span><span class="st">&quot;</span></span>
-<span id="cb12-90"><a href="config-files.html#cb12-90" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb12-91"><a href="config-files.html#cb12-91" aria-hidden="true" tabindex="-1"></a><span class="st">## From https://twitter.com/fellgernon/status/1258455434073124865?s=20</span></span>
-<span id="cb12-92"><a href="config-files.html#cb12-92" aria-hidden="true" tabindex="-1"></a><span class="st">## and https://www.cyberciti.biz/tips/understanding-linux-unix-umask-value-usage.html</span></span>
-<span id="cb12-93"><a href="config-files.html#cb12-93" aria-hidden="true" tabindex="-1"></a><span class="st">umask u=rwx,g=rwx,o= ## equivalent to umask 007</span></span></code></pre></div>
+<span id="cb12-47"><a href="config-files.html#cb12-47" aria-hidden="true" tabindex="-1"></a><span class="co">## Creating modules</span></span>
+<span id="cb12-48"><a href="config-files.html#cb12-48" aria-hidden="true" tabindex="-1"></a><span class="co"># https://lmod.readthedocs.io/en/latest/050_lua_modulefiles.html</span></span>
+<span id="cb12-49"><a href="config-files.html#cb12-49" aria-hidden="true" tabindex="-1"></a><span class="bu">alias</span> modsrc=<span class="st">&quot;cd /jhpce/shared/jhpce/libd&quot;</span></span>
+<span id="cb12-50"><a href="config-files.html#cb12-50" aria-hidden="true" tabindex="-1"></a><span class="bu">alias</span> modlua=<span class="st">&quot;cd /jhpce/shared/jhpce/modulefiles/libd&quot;</span></span>
+<span id="cb12-51"><a href="config-files.html#cb12-51" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb12-52"><a href="config-files.html#cb12-52" aria-hidden="true" tabindex="-1"></a><span class="co"># colors</span></span>
+<span id="cb12-53"><a href="config-files.html#cb12-53" aria-hidden="true" tabindex="-1"></a><span class="co"># http://norbauer.com/notebooks/code/notes/ls-colors-and-terminal-app</span></span>
+<span id="cb12-54"><a href="config-files.html#cb12-54" aria-hidden="true" tabindex="-1"></a><span class="co"># used BSD pattern ExGxFxDxBxEgEdxbxgxhxd on http://geoff.greer.fm/lscolors/</span></span>
+<span id="cb12-55"><a href="config-files.html#cb12-55" aria-hidden="true" tabindex="-1"></a><span class="co"># that tool does not specify the colors, which I did by looking manually at</span></span>
+<span id="cb12-56"><a href="config-files.html#cb12-56" aria-hidden="true" tabindex="-1"></a><span class="co"># http://blog.twistedcode.org/2008/04/lscolors-explained.html</span></span>
+<span id="cb12-57"><a href="config-files.html#cb12-57" aria-hidden="true" tabindex="-1"></a><span class="co"># and the norbauer.com site previously mentioned</span></span>
+<span id="cb12-58"><a href="config-files.html#cb12-58" aria-hidden="true" tabindex="-1"></a><span class="bu">alias</span> ls=<span class="st">&quot;ls --color=auto&quot;</span></span>
+<span id="cb12-59"><a href="config-files.html#cb12-59" aria-hidden="true" tabindex="-1"></a><span class="co">#export LS_COLORS=&quot;di=1;34;40:ln=1;36;40:so=1;35;40:pi=1;93;40:ex=1;31;40:bd=1;34;46:cd=1;34;43:su</span></span>
+<span id="cb12-60"><a href="config-files.html#cb12-60" aria-hidden="true" tabindex="-1"></a><span class="ex">=0</span><span class="kw">;</span><span class="ex">41:sg=0</span><span class="kw">;</span><span class="ex">46:tw=0</span><span class="kw">;</span><span class="ex">47:ow=0</span><span class="kw">;</span><span class="ex">43</span><span class="st">&quot;</span></span>
+<span id="cb12-61"><a href="config-files.html#cb12-61" aria-hidden="true" tabindex="-1"></a><span class="st">## After switching to RStudio:</span></span>
+<span id="cb12-62"><a href="config-files.html#cb12-62" aria-hidden="true" tabindex="-1"></a><span class="st"># https://askubuntu.com/questions/466198/how-do-i-change-the-color-for-directories-with-ls-in-the-</span></span>
+<span id="cb12-63"><a href="config-files.html#cb12-63" aria-hidden="true" tabindex="-1"></a><span class="st">console</span></span>
+<span id="cb12-64"><a href="config-files.html#cb12-64" aria-hidden="true" tabindex="-1"></a><span class="st">export LS_COLORS=&quot;</span><span class="ex">di=0</span><span class="kw">;</span><span class="ex">32:ln=0</span><span class="kw">;</span><span class="ex">36:so=0</span><span class="kw">;</span><span class="ex">35:pi=0</span><span class="kw">;</span><span class="ex">93:ex=0</span><span class="kw">;</span><span class="ex">31:bd=0</span><span class="kw">;</span><span class="ex">34</span><span class="kw">;</span><span class="ex">46:cd=0</span><span class="kw">;</span><span class="ex">34</span><span class="kw">;</span><span class="ex">43:su=0</span><span class="kw">;</span><span class="ex">41:sg=0</span><span class="kw">;</span><span class="ex">46:tw</span></span>
+<span id="cb12-65"><a href="config-files.html#cb12-65" aria-hidden="true" tabindex="-1"></a><span class="ex">=0</span><span class="kw">;</span><span class="ex">47:ow=0</span><span class="kw">;</span><span class="ex">43:fi=0</span><span class="kw">;</span><span class="ex">33</span><span class="st">&quot;</span></span>
+<span id="cb12-66"><a href="config-files.html#cb12-66" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb12-67"><a href="config-files.html#cb12-67" aria-hidden="true" tabindex="-1"></a><span class="st"># Uncomment below for Mac and comment the two previous commands</span></span>
+<span id="cb12-68"><a href="config-files.html#cb12-68" aria-hidden="true" tabindex="-1"></a><span class="st">#export CLICOLOR=1</span></span>
+<span id="cb12-69"><a href="config-files.html#cb12-69" aria-hidden="true" tabindex="-1"></a><span class="st">#export LSCOLORS=&quot;</span><span class="ex">ExGxFxDxBxEgEdxbxgxhxd</span><span class="st">&quot;</span></span>
+<span id="cb12-70"><a href="config-files.html#cb12-70" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb12-71"><a href="config-files.html#cb12-71" aria-hidden="true" tabindex="-1"></a><span class="st">## For setup:</span></span>
+<span id="cb12-72"><a href="config-files.html#cb12-72" aria-hidden="true" tabindex="-1"></a><span class="st"># http://erniemiller.org/2011/12/12/textmate-2-rmate-awesome/</span></span>
+<span id="cb12-73"><a href="config-files.html#cb12-73" aria-hidden="true" tabindex="-1"></a><span class="st">## For laptop config:</span></span>
+<span id="cb12-74"><a href="config-files.html#cb12-74" aria-hidden="true" tabindex="-1"></a><span class="st"># http://jonsimpson.co.uk/log/2011/rmate-ssh-remoteforward</span></span>
+<span id="cb12-75"><a href="config-files.html#cb12-75" aria-hidden="true" tabindex="-1"></a><span class="st">## rmate port</span></span>
+<span id="cb12-76"><a href="config-files.html#cb12-76" aria-hidden="true" tabindex="-1"></a><span class="st"># https://github.com/textmate/rmate</span></span>
+<span id="cb12-77"><a href="config-files.html#cb12-77" aria-hidden="true" tabindex="-1"></a><span class="st">export RMATE_PORT=&quot;</span><span class="ex">SOME_PORT_YOU_CHOOSE</span><span class="st">&quot;</span></span>
+<span id="cb12-78"><a href="config-files.html#cb12-78" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb12-79"><a href="config-files.html#cb12-79" aria-hidden="true" tabindex="-1"></a><span class="st">## Load the git module by default when qrsh/qsub</span></span>
+<span id="cb12-80"><a href="config-files.html#cb12-80" aria-hidden="true" tabindex="-1"></a><span class="st">## thanks to Jiong Yang</span></span>
+<span id="cb12-81"><a href="config-files.html#cb12-81" aria-hidden="true" tabindex="-1"></a><span class="st">if [[ </span><span class="va">$HOSTNAME</span><span class="st"> == compute-* ]] || [[ </span><span class="va">$HOSTNAME</span><span class="st"> == transfer-* ]]; then</span></span>
+<span id="cb12-82"><a href="config-files.html#cb12-82" aria-hidden="true" tabindex="-1"></a><span class="st">    echo &quot;</span><span class="ex">Adding</span> LIBD modules<span class="st">&quot;</span></span>
+<span id="cb12-83"><a href="config-files.html#cb12-83" aria-hidden="true" tabindex="-1"></a><span class="st">    module use /jhpce/shared/jhpce/modulefiles/libd</span></span>
+<span id="cb12-84"><a href="config-files.html#cb12-84" aria-hidden="true" tabindex="-1"></a><span class="st">    echo &quot;</span>Loading git<span class="st">&quot;</span></span>
+<span id="cb12-85"><a href="config-files.html#cb12-85" aria-hidden="true" tabindex="-1"></a><span class="st">    module load git</span></span>
+<span id="cb12-86"><a href="config-files.html#cb12-86" aria-hidden="true" tabindex="-1"></a><span class="st">    module load git-status-size/github</span></span>
+<span id="cb12-87"><a href="config-files.html#cb12-87" aria-hidden="true" tabindex="-1"></a><span class="st">    module load git-lfs/2.8.0</span></span>
+<span id="cb12-88"><a href="config-files.html#cb12-88" aria-hidden="true" tabindex="-1"></a><span class="st">    module load rmate/1.5.9</span></span>
+<span id="cb12-89"><a href="config-files.html#cb12-89" aria-hidden="true" tabindex="-1"></a><span class="st">    module load conda_R/4.1</span></span>
+<span id="cb12-90"><a href="config-files.html#cb12-90" aria-hidden="true" tabindex="-1"></a><span class="st">fi</span></span>
+<span id="cb12-91"><a href="config-files.html#cb12-91" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb12-92"><a href="config-files.html#cb12-92" aria-hidden="true" tabindex="-1"></a><span class="st">## To deal with running nextflow without requesting much more memory</span></span>
+<span id="cb12-93"><a href="config-files.html#cb12-93" aria-hidden="true" tabindex="-1"></a><span class="st">## https://jhpce.jhu.edu/question/why-do-i-get-memory-errors-when-running-java/</span></span>
+<span id="cb12-94"><a href="config-files.html#cb12-94" aria-hidden="true" tabindex="-1"></a><span class="st">export _JAVA_OPTIONS=&quot;</span>-Xms5g <span class="at">-Xmx6g</span><span class="st">&quot;</span></span>
+<span id="cb12-95"><a href="config-files.html#cb12-95" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb12-96"><a href="config-files.html#cb12-96" aria-hidden="true" tabindex="-1"></a><span class="st">## From https://twitter.com/fellgernon/status/1258455434073124865?s=20</span></span>
+<span id="cb12-97"><a href="config-files.html#cb12-97" aria-hidden="true" tabindex="-1"></a><span class="st">## and https://www.cyberciti.biz/tips/understanding-linux-unix-umask-value-usage.html</span></span>
+<span id="cb12-98"><a href="config-files.html#cb12-98" aria-hidden="true" tabindex="-1"></a><span class="st">umask u=rwx,g=rwx,o= ## equivalent to umask 007</span></span></code></pre></div>
 </div>
 <div id="bash_profile" class="section level3" number="16.4.3">
 <h3><span class="header-section-number">16.4.3</span> <code>~/.bash_profile</code></h3>
