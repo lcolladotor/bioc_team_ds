@@ -411,6 +411,11 @@ alias spatialold="cd /dcl02/lieber/ajaffe/SpatialTranscriptomics/HumanPilot"
 alias spatial="cd /dcl02/lieber/ajaffe/SpatialTranscriptomics/LIBD"
 alias matt="cd /dcl01/lieber/ajaffe/Matt/MNT_thesis/snRNAseq/10x_pilot_FINAL"
 
+## Team home directories
+alias dcl01="cd /dcl01/lieber/lcolladotor"
+alias dcl02="cd /dcl02/lieber/lcolladotor"
+alias dcs04="cd /dcs04/lieber/lcolladotor"
+
 ## Creating modules
 # https://lmod.readthedocs.io/en/latest/050_lua_modulefiles.html
 alias modsrc="cd /jhpce/shared/jhpce/libd"
