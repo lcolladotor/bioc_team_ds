@@ -61,10 +61,8 @@ We recently started using [Notion](https://www.notion.so/) that you can [sign up
 Here's the list of project meetings and who should attend them:
 
 * recount3: Leo. Geo or Nick might join in the future.
-* Moods: Louise, Leo. Arta when discussing TWAS.
-* spatialLIBD updates: Abby, Brenda, Leo.
-* spatial journal club: it's optional, though many of you can benefit from it.
-* spatial team meeting: Abby, Brenda, Leo. Optionally Arta and Nick could benefit from it.
+* Moods: Louise, Leo.
+* spatial team meeting: Abby, Nick, Leo.
 * deconvolution: Louise and Leo. Anyone interested in learning about deconvolution is free to join.
 * LIBD rstats club: everyone.
-* CHESS-BRAIN: Leo, Geo and Arta (have not started yet).
+* CHESS-BRAIN: Leo, Geo.

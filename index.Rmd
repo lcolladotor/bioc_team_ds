@@ -52,8 +52,6 @@ We follow the LIBD conduct policies as well the [Bioconductor code of conduct](h
 ## Team members {-}
 
 * [Abby Spangler](https://github.com/abspangler13)
-* [Arta Seyedian](https://github.com/aseyedia)
-* [Brenda Pardo](https://github.com/bpardo99)
 * [Joshua M. Stolz](https://github.com/joshstolz)
 * [Louise Huuki](https://github.com/lahuuki)
 * [Nicholas J. Eagles](https://github.com/Nick-Eagles)
@@ -61,11 +59,12 @@ We follow the LIBD conduct policies as well the [Bioconductor code of conduct](h
 ### Alumni {-}
 
 * [Amy Peterson](https://github.com/Ashkaunr)
+* [Arta Seyedian](https://github.com/aseyedia)
 * [Ashkaun Razmara](https://github.com/amy-peterson)
+* [Brenda Pardo](https://github.com/bpardo99)
 
 ## DSgs-guide team members {-}
 
-* [Arta Seyedian](https://github.com/aseyedia)
 * [Joshua M. Stolz](https://github.com/joshstolz)
 * [Louise Huuki](https://github.com/lahuuki)
 * [Nicholas J. Eagles](https://github.com/Nick-Eagles)
