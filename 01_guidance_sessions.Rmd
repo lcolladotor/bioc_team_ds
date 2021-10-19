@@ -65,7 +65,7 @@ Finally, please sign up for a **maximum of two sessions per week**. This will he
   - Technologies I use: R, Bioconductor.
   - Learning about: spatial-transcriptomics, machine-learning, building R packages.
   - [Calendly](https://calendly.com/josh-stolz/25-minute-meeting)
-* [Louise Huuki](https://github.com/lahuuki) ([BioC Support](https://support.bioconductor.org/u/24238/))
+* [Louise A. Huuki-Myers](https://github.com/lahuuki) ([BioC Support](https://support.bioconductor.org/u/24238/))
   - Research interests: RNA-seq, data visualization.
   - Technologies I use: R (tidyverse, ggplot, dplyr), Python, GitHub, Synapse upload.
   - Learning about: Bioconductor.
