@@ -14,6 +14,34 @@ Ultimately, some coding issues are complex. Here are some tips on some strategie
 
 <iframe width="560" height="315" src="https://www.youtube.com/embed/xUSEippbXBc" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 
+## General guidelines
+
+In general, please follow these [Bioconductor composing guidelines](http://bioconductor.org/help/support/posting-guide/#composing).
+
+### Avoid screenshots
+
+While a screenshot might convey a lot of information, it is challenging to extract the relevant code in order to reproduce the error being described. Thus text is strongly encouraged over screenshots.
+
+### Reproducible code
+
+The function call and the associated error message are frequently not informative enough for others to determine the root of the problem. You should aim to include the `traceback()` information in R or equivalent in other languages which provides more detail on what happened. However, even the `traceback()` information might not be enough, which is why you should definitely include the code for re-creating any objects you used in the function call. One simple way to do so is to include a _permalink_ to a script you have version controlled on GitHub.
+
+### Use reprex
+
+Use the `r BiocStyle::CRANpkg("reprex")` package for making small reproducible examples. Check our LIBD rstats club session on `reprex` to learn more about it.
+
+<iframe width="560" height="315" src="https://www.youtube.com/embed/8bBo3B7N8YQ" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+
+### Use Markdown syntax
+
+Either on Slack or GitHub, you can use some Markdown syntax features. In particular, you can use in line code formatting (1 back tick) and multi-line code formatting (3 backt icks). On GitHub, you can also use the html code tags `<details>` and `</details>` to hide long output, which is useful for showing the R session information. That is, the output from `r BiocStyle::CRANpkg("sessioninfo")`. As an example, check [this `BayesSpace` issue](https://github.com/edward130603/BayesSpace/issues/71#issue-1123372304).
+
+
+### R session information
+
+Use the `r BiocStyle::CRANpkg("sessioninfo")` package to provide the full details of your R session. Some errors might have already been addressed in newer versions of R packages or R versions. Providing that information makes it easier for others to help you.
+
+
 ## Learning from our search history
 
 We have occasionally used a team activity called "learning from our search history" described [in this blog post](https://lcolladotor.github.io/2020/02/12/learning-from-our-search-history/). One of the goals of this activity was to learn some search skills each of us has that are typically not taught. Another goal was to show that we all search for more information all the time because no one, not matter how experienced, knows all the answers.
@@ -78,40 +106,38 @@ This is our main Slack workspace. Just like `git` commit messages, channels are 
 
 If you need help use:
 
-* **libd_helpdesk**: for asking general questions to all team members and LIBD collaborators
+* [**libd_helpdesk**](https://jhu-genomics.slack.com/archives/CUYHWV7AA): for asking general questions to all team members and LIBD collaborators
 
 For team logistics, our channel is:
 
-* **libd_team_lcollado**: meeting reminders, papers we'll discuss and other team logistics
+* [**libd_team_lcolladotor**](https://jhu-genomics.slack.com/archives/C01AD6PQHNW): meeting reminders, papers we'll discuss and other team logistics
 
 The remaining main Slack channels are:
 
-* **libd_alumni**: for all LIBD past and current members
-* **libd_dsgs**: for the [DSgs-guides](#dsgs-guide-team-members) 
-* **libd_general**: for all current LIBD members that are on the JHU Genomics Slack workspace
-* **libd_genomics_martinowich**: a shared channel with the Martinowich lab Slack workspace
-* **libd_lunchtrain**: for random topics as well as organizing lunch outings ^[Or remote lunch Zoom sessions.] using the `/lunchtrain` Slack command ^[Start typing the command on Slack and you'll see the help menu pop up for this command which specifies the syntax for using `/lunchtrain`.]
-* **libd_pkgs**: for software (mostly R packages) we are making that is not specific to a particular project
-* **libd_rstats_club**: for the LIBD rstats club
-* **libd_wfg**: for the LIBD Writing Fellowship Group (WFG) which is a type of writing accountability group or writing agraphia group (WAG)
+* [**libd_alumni**](https://jhu-genomics.slack.com/archives/C01BHLRSPGQ): for all LIBD past and current members
+* [**libd_dsgs**](https://jhu-genomics.slack.com/archives/C01AJSG6MSA): for the [DSgs-guides](#dsgs-guide-team-members) 
+* [**libd_general**](https://jhu-genomics.slack.com/archives/G01BNQHMTGX): for all current LIBD members that are on the JHU Genomics Slack workspace
+* [**libd_genomics_martinowich**](https://jhu-genomics.slack.com/archives/C015GNM7JSC): a shared channel with the Martinowich lab Slack workspace
+* [**libd_lunchtrain**](https://jhu-genomics.slack.com/archives/CAHTURRT3): for random topics as well as organizing lunch outings ^[Or remote lunch Zoom sessions.] using the `/lunchtrain` Slack command ^[Start typing the command on Slack and you'll see the help menu pop up for this command which specifies the syntax for using `/lunchtrain`.]
+* [**libd_pkgs**](https://jhu-genomics.slack.com/archives/C2G0ZFDSR): for software (mostly R packages) we are making that is not specific to a particular project
+* [**libd_rstats_club**](https://jhu-genomics.slack.com/archives/C9KTKPEGM): for the LIBD rstats club
 
 There are also a set of public channels that we use frequently:
 
-* **conferences**
-* **containers**: `docker`, `singularity`, etc
-* **diversity**
-* **funding**
-* **general**
-* **genomics_journal_club**: a student-run journal club
-* **genomics_seminar**: [Genomics at JHU seminars](https://twitter.com/GenomicsAtJHU?s=20)
-* **jhpce**: JHPCE users, though also check the [`bithelp`](#bithelp) and [`bitsupport`](#bitsupport) mailing lists
-* **jhu_papers**: where we announce papers with JHU authors
-* **joint_group_meeting**: a JHU bi-weekly meeting led by Steven Salzberg and JHU colleagues. This is a great meeting to learn about methods work being done across Hopkins for genomics data analysis.
-* **langmead_rss**: a channel where Ben Langmead shares papers he's interested in
-* **papers**: general papers of interest
-* **r-ladies**
-* **random**
-* **rstats**: major R announcements and other goodies
+* [**conferences**](https://jhu-genomics.slack.com/archives/C0703QKUN)
+* [**containers**](https://jhu-genomics.slack.com/archives/C8P5AJEFR): `docker`, `singularity`, etc
+* [**diversity**](https://jhu-genomics.slack.com/archives/C9HQ7LGJJ)
+* [**funding**](https://jhu-genomics.slack.com/archives/C02R11TTD)
+* [**general**](https://jhu-genomics.slack.com/archives/C029RHR0F)
+* [**genomics_journal_club**](https://jhu-genomics.slack.com/archives/C5L1BUH7A): a student-run journal club
+* [**genomics_seminar**](https://jhu-genomics.slack.com/archives/C08MZFZKJ): [Genomics at JHU seminars](https://twitter.com/GenomicsAtJHU?s=20)
+* [**jhpce**](https://jhu-genomics.slack.com/archives/C074W8800): JHPCE users, though also check the [`bithelp`](#bithelp) and [`bitsupport`](#bitsupport) mailing lists
+* [**jhu_papers**](https://jhu-genomics.slack.com/archives/C9JGFTKT2): where we announce papers with JHU authors
+* [**joint_group_meeting**](https://jhu-genomics.slack.com/archives/CC4C0BYGH): a JHU bi-weekly meeting led by Steven Salzberg and JHU colleagues. This is a great meeting to learn about methods work being done across Hopkins for genomics data analysis.
+* [**langmead_rss**](https://jhu-genomics.slack.com/archives/C0BSV0KHT): a channel where Ben Langmead shares papers he's interested in
+* [**r-ladies**](https://jhu-genomics.slack.com/archives/CAV89BNFK)
+* [**random**](https://jhu-genomics.slack.com/archives/C029RHR0H)
+* [**rstats**](https://jhu-genomics.slack.com/archives/C0DAQFGMU): major R announcements and other goodies
 
 
 #### Martinowich
@@ -120,9 +146,9 @@ This is the LIBD Slack workspace used by Keri Martinowich's team. Several of us 
 
 Some Slack channels of interest here are:
 
-* **comm_labmeeting**: for any communications related to the Martinowich lab meeting
-* **helpdesk_general_drybench**: a channel that was inspired by **libd_helpdesk** on the JHU Genomics Slack
-* **helpdesk_figuregeneration_and_manuscriptwriting**: it says it all in the name ;)
+* [**comm_labmeeting**](https://neuralplasticity.slack.com/archives/CLW4ZCDBK): for any communications related to the Martinowich lab meeting
+* [**helpdesk_general_drybench**](https://neuralplasticity.slack.com/archives/C010NFSQS48): a channel that was inspired by [**libd_helpdesk**](https://jhu-genomics.slack.com/archives/CUYHWV7AA) on the JHU Genomics Slack
+* [**helpdesk_figuregeneration_and_manuscriptwriting**](https://neuralplasticity.slack.com/archives/C01AZRVDYDR): it says it all in the name ;)
 
 #### LIBD Neuropathology
 
@@ -133,10 +159,10 @@ This is the LIBD Slack workspace used by the Neuropathology team. We use it to i
 One very useful public Slack workspace is the Bioconductor one. You can join for free through [bioc-community.herokuapp.com/](https://bioc-community.herokuapp.com/). If you join this Slack workspace, please introduce yourself on the **introductions** channel. You mgith also be interested in channels such as:
 
 * **biocYYYY** where `YYYY` is the given year, which is the main channel for that year's Bioconductor conference. For example, `bioc2020`.
-* **containers** to learn more about the Bioconductor Docker images
-* **developers_forum** for learning about the Bioconductor Developer's forum (typically held once per month)
-* **jobs** for job announcements
-* **spatial** for spatial transcriptomics and related technologies
+* [**containers**](https://community-bioc.slack.com/archives/CH9H1QX5W) to learn more about the Bioconductor Docker images
+* [**developers_forum**](https://community-bioc.slack.com/archives/CLUJWDQF4) for learning about the Bioconductor Developer's forum (typically held once per month)
+* [**jobs**](https://community-bioc.slack.com/archives/CMC6T5KJ8) for job announcements
+* [**spatial**](https://community-bioc.slack.com/archives/CR1BLV821) for spatial transcriptomics and related technologies
 
 ### R-Ladies Baltimore
 
