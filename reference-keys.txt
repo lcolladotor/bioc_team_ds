@@ -7,6 +7,12 @@ sign-up
 dsgs-session-reports
 become-a-dsgs-guide
 how-to-ask-for-help
+general-guidelines
+avoid-screenshots
+reproducible-code
+use-reprex
+use-markdown-syntax
+r-session-information
 learning-from-our-search-history
 bioconductor-support-website
 rstudio-community-website

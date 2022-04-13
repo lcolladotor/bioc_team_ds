@@ -6,11 +6,10 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge" />
   <title>11 Helping others | R/Bioconductor-powered Team Data Science</title>
   <meta name="description" content="11 Helping others | R/Bioconductor-powered Team Data Science" />
-  <meta name="generator" content="bookdown 0.21 and GitBook 2.6.7" />
+  <meta name="generator" content="bookdown 0.25 and GitBook 2.6.7" />
 
   <meta property="og:title" content="11 Helping others | R/Bioconductor-powered Team Data Science" />
   <meta property="og:type" content="book" />
-  
   
   
   <meta name="github-repo" content="lcolladotor/bioc_team_ds" />
@@ -32,8 +31,8 @@
   <link rel="shortcut icon" href="icon_32.png" type="image/x-icon" />
 <link rel="prev" href="team-meetings.html"/>
 <link rel="next" href="project-feedback.html"/>
-<script src="libs/header-attrs-2.6/header-attrs.js"></script>
-<script src="libs/jquery-2.2.3/jquery.min.js"></script>
+<script src="libs/jquery-3.6.0/jquery-3.6.0.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/fuse.js@6.4.6/dist/fuse.min.js"></script>
 <link href="libs/gitbook-2.6.7/css/style.css" rel="stylesheet" />
 <link href="libs/gitbook-2.6.7/css/plugin-table.css" rel="stylesheet" />
 <link href="libs/gitbook-2.6.7/css/plugin-bookdown.css" rel="stylesheet" />
@@ -49,7 +48,9 @@
 
 
 
-
+<link href="libs/anchor-sections-1.1.0/anchor-sections.css" rel="stylesheet" />
+<link href="libs/anchor-sections-1.1.0/anchor-sections-hash.css" rel="stylesheet" />
+<script src="libs/anchor-sections-1.1.0/anchor-sections.js"></script>
 
 
 <style type="text/css">
@@ -117,6 +118,7 @@ code span.vs { color: #4070a0; } /* VerbatimString */
 code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warning */
 </style>
 
+
 <link rel="stylesheet" href="style.css" type="text/css" />
 </head>
 
@@ -130,190 +132,198 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
       <nav role="navigation">
 
 <ul class="summary">
-<li class="chapter" data-level="" data-path="index.html"><a href="index.html"><i class="fa fa-check"></i>Overview</a>
+<li><a href="index.html#overview">Overview<span></span></a>
 <ul>
-<li class="chapter" data-level="" data-path="index.html"><a href="index.html#youtube"><i class="fa fa-check"></i>YouTube</a>
+<li><a href="index.html#youtube">YouTube<span></span></a>
 <ul>
-<li class="chapter" data-level="" data-path="index.html"><a href="index.html#libd-rstats-club"><i class="fa fa-check"></i>LIBD rstats club</a></li>
-<li class="chapter" data-level="" data-path="index.html"><a href="index.html#team-journal-club"><i class="fa fa-check"></i>Team journal club</a></li>
-<li class="chapter" data-level="" data-path="index.html"><a href="index.html#libd-and-team-bootcamps"><i class="fa fa-check"></i>LIBD and team bootcamps</a></li>
+<li><a href="index.html#libd-rstats-club">LIBD rstats club<span></span></a></li>
+<li><a href="index.html#team-journal-club">Team journal club<span></span></a></li>
+<li><a href="index.html#libd-and-team-bootcamps">LIBD and team bootcamps<span></span></a></li>
 </ul></li>
-<li class="chapter" data-level="" data-path="index.html"><a href="index.html#code-of-conduct"><i class="fa fa-check"></i>Code of conduct</a></li>
-<li class="chapter" data-level="" data-path="index.html"><a href="index.html#team-members"><i class="fa fa-check"></i>Team members</a>
+<li><a href="index.html#code-of-conduct">Code of conduct<span></span></a></li>
+<li><a href="index.html#team-members">Team members<span></span></a>
 <ul>
-<li class="chapter" data-level="" data-path="index.html"><a href="index.html#alumni"><i class="fa fa-check"></i>Alumni</a></li>
+<li><a href="index.html#alumni">Alumni<span></span></a></li>
 </ul></li>
-<li class="chapter" data-level="" data-path="index.html"><a href="index.html#dsgs-guide-team-members"><i class="fa fa-check"></i>DSgs-guide team members</a></li>
-<li class="chapter" data-level="" data-path="index.html"><a href="index.html#acknowledgements"><i class="fa fa-check"></i>Acknowledgements</a></li>
-<li class="chapter" data-level="" data-path="index.html"><a href="index.html#join-the-team"><i class="fa fa-check"></i>Join the team</a></li>
-<li class="chapter" data-level="" data-path="index.html"><a href="index.html#twitter"><i class="fa fa-check"></i>Twitter</a></li>
+<li><a href="index.html#dsgs-guide-team-members">DSgs-guide team members<span></span></a></li>
+<li><a href="index.html#acknowledgements">Acknowledgements<span></span></a></li>
+<li><a href="index.html#join-the-team">Join the team<span></span></a></li>
+<li><a href="index.html#twitter">Twitter<span></span></a></li>
 </ul></li>
-<li class="chapter" data-level="1" data-path="data-science-guidance-sessions.html"><a href="data-science-guidance-sessions.html"><i class="fa fa-check"></i><b>1</b> Data Science guidance sessions</a>
+<li class="chapter" data-level="1" data-path="data-science-guidance-sessions.html"><a href="data-science-guidance-sessions.html"><i class="fa fa-check"></i><b>1</b> Data Science guidance sessions<span></span></a>
 <ul>
-<li class="chapter" data-level="1.1" data-path="data-science-guidance-sessions.html"><a href="data-science-guidance-sessions.html#interaction-rules"><i class="fa fa-check"></i><b>1.1</b> Interaction rules</a></li>
-<li class="chapter" data-level="1.2" data-path="data-science-guidance-sessions.html"><a href="data-science-guidance-sessions.html#help-us-help-you"><i class="fa fa-check"></i><b>1.2</b> Help us help you</a>
+<li class="chapter" data-level="1.1" data-path="data-science-guidance-sessions.html"><a href="data-science-guidance-sessions.html#interaction-rules"><i class="fa fa-check"></i><b>1.1</b> Interaction rules<span></span></a></li>
+<li class="chapter" data-level="1.2" data-path="data-science-guidance-sessions.html"><a href="data-science-guidance-sessions.html#help-us-help-you"><i class="fa fa-check"></i><b>1.2</b> Help us help you<span></span></a>
 <ul>
-<li class="chapter" data-level="1.2.1" data-path="data-science-guidance-sessions.html"><a href="data-science-guidance-sessions.html#framing-a-question"><i class="fa fa-check"></i><b>1.2.1</b> Framing a question</a></li>
-<li class="chapter" data-level="1.2.2" data-path="data-science-guidance-sessions.html"><a href="data-science-guidance-sessions.html#useful-information"><i class="fa fa-check"></i><b>1.2.2</b> Useful information</a></li>
+<li class="chapter" data-level="1.2.1" data-path="data-science-guidance-sessions.html"><a href="data-science-guidance-sessions.html#framing-a-question"><i class="fa fa-check"></i><b>1.2.1</b> Framing a question<span></span></a></li>
+<li class="chapter" data-level="1.2.2" data-path="data-science-guidance-sessions.html"><a href="data-science-guidance-sessions.html#useful-information"><i class="fa fa-check"></i><b>1.2.2</b> Useful information<span></span></a></li>
 </ul></li>
-<li class="chapter" data-level="1.3" data-path="data-science-guidance-sessions.html"><a href="data-science-guidance-sessions.html#sign-up"><i class="fa fa-check"></i><b>1.3</b> Sign up</a></li>
-<li class="chapter" data-level="1.4" data-path="data-science-guidance-sessions.html"><a href="data-science-guidance-sessions.html#dsgs-session-reports"><i class="fa fa-check"></i><b>1.4</b> DSgs session reports</a></li>
-<li class="chapter" data-level="1.5" data-path="data-science-guidance-sessions.html"><a href="data-science-guidance-sessions.html#become-a-dsgs-guide"><i class="fa fa-check"></i><b>1.5</b> Become a DSgs guide</a></li>
+<li class="chapter" data-level="1.3" data-path="data-science-guidance-sessions.html"><a href="data-science-guidance-sessions.html#sign-up"><i class="fa fa-check"></i><b>1.3</b> Sign up<span></span></a></li>
+<li class="chapter" data-level="1.4" data-path="data-science-guidance-sessions.html"><a href="data-science-guidance-sessions.html#dsgs-session-reports"><i class="fa fa-check"></i><b>1.4</b> DSgs session reports<span></span></a></li>
+<li class="chapter" data-level="1.5" data-path="data-science-guidance-sessions.html"><a href="data-science-guidance-sessions.html#become-a-dsgs-guide"><i class="fa fa-check"></i><b>1.5</b> Become a DSgs guide<span></span></a></li>
 </ul></li>
-<li class="chapter" data-level="2" data-path="how-to-ask-for-help.html"><a href="how-to-ask-for-help.html"><i class="fa fa-check"></i><b>2</b> How to ask for help</a>
+<li class="chapter" data-level="2" data-path="how-to-ask-for-help.html"><a href="how-to-ask-for-help.html"><i class="fa fa-check"></i><b>2</b> How to ask for help<span></span></a>
 <ul>
-<li class="chapter" data-level="2.1" data-path="how-to-ask-for-help.html"><a href="how-to-ask-for-help.html#learning-from-our-search-history"><i class="fa fa-check"></i><b>2.1</b> Learning from our search history</a></li>
-<li class="chapter" data-level="2.2" data-path="how-to-ask-for-help.html"><a href="how-to-ask-for-help.html#bioconductor-support-website"><i class="fa fa-check"></i><b>2.2</b> Bioconductor Support website</a></li>
-<li class="chapter" data-level="2.3" data-path="how-to-ask-for-help.html"><a href="how-to-ask-for-help.html#rstudio-community-website"><i class="fa fa-check"></i><b>2.3</b> RStudio Community website</a></li>
-<li class="chapter" data-level="2.4" data-path="how-to-ask-for-help.html"><a href="how-to-ask-for-help.html#github-issues"><i class="fa fa-check"></i><b>2.4</b> GitHub issues</a></li>
-<li class="chapter" data-level="2.5" data-path="how-to-ask-for-help.html"><a href="how-to-ask-for-help.html#mailing-lists"><i class="fa fa-check"></i><b>2.5</b> Mailing lists</a>
+<li class="chapter" data-level="2.1" data-path="how-to-ask-for-help.html"><a href="how-to-ask-for-help.html#general-guidelines"><i class="fa fa-check"></i><b>2.1</b> General guidelines<span></span></a>
 <ul>
-<li class="chapter" data-level="2.5.1" data-path="how-to-ask-for-help.html"><a href="how-to-ask-for-help.html#bithelp"><i class="fa fa-check"></i><b>2.5.1</b> bithelp</a></li>
-<li class="chapter" data-level="2.5.2" data-path="how-to-ask-for-help.html"><a href="how-to-ask-for-help.html#bitsupport"><i class="fa fa-check"></i><b>2.5.2</b> bitsupport</a></li>
-<li class="chapter" data-level="2.5.3" data-path="how-to-ask-for-help.html"><a href="how-to-ask-for-help.html#bioc-devel"><i class="fa fa-check"></i><b>2.5.3</b> Bioc-devel</a></li>
-<li class="chapter" data-level="2.5.4" data-path="how-to-ask-for-help.html"><a href="how-to-ask-for-help.html#r-sig-mac"><i class="fa fa-check"></i><b>2.5.4</b> R-Sig-Mac</a></li>
+<li class="chapter" data-level="2.1.1" data-path="how-to-ask-for-help.html"><a href="how-to-ask-for-help.html#avoid-screenshots"><i class="fa fa-check"></i><b>2.1.1</b> Avoid screenshots<span></span></a></li>
+<li class="chapter" data-level="2.1.2" data-path="how-to-ask-for-help.html"><a href="how-to-ask-for-help.html#reproducible-code"><i class="fa fa-check"></i><b>2.1.2</b> Reproducible code<span></span></a></li>
+<li class="chapter" data-level="2.1.3" data-path="how-to-ask-for-help.html"><a href="how-to-ask-for-help.html#use-reprex"><i class="fa fa-check"></i><b>2.1.3</b> Use reprex<span></span></a></li>
+<li class="chapter" data-level="2.1.4" data-path="how-to-ask-for-help.html"><a href="how-to-ask-for-help.html#use-markdown-syntax"><i class="fa fa-check"></i><b>2.1.4</b> Use Markdown syntax<span></span></a></li>
+<li class="chapter" data-level="2.1.5" data-path="how-to-ask-for-help.html"><a href="how-to-ask-for-help.html#r-session-information"><i class="fa fa-check"></i><b>2.1.5</b> R session information<span></span></a></li>
 </ul></li>
-<li class="chapter" data-level="2.6" data-path="how-to-ask-for-help.html"><a href="how-to-ask-for-help.html#slack"><i class="fa fa-check"></i><b>2.6</b> Slack</a>
+<li class="chapter" data-level="2.2" data-path="how-to-ask-for-help.html"><a href="how-to-ask-for-help.html#learning-from-our-search-history"><i class="fa fa-check"></i><b>2.2</b> Learning from our search history<span></span></a></li>
+<li class="chapter" data-level="2.3" data-path="how-to-ask-for-help.html"><a href="how-to-ask-for-help.html#bioconductor-support-website"><i class="fa fa-check"></i><b>2.3</b> Bioconductor Support website<span></span></a></li>
+<li class="chapter" data-level="2.4" data-path="how-to-ask-for-help.html"><a href="how-to-ask-for-help.html#rstudio-community-website"><i class="fa fa-check"></i><b>2.4</b> RStudio Community website<span></span></a></li>
+<li class="chapter" data-level="2.5" data-path="how-to-ask-for-help.html"><a href="how-to-ask-for-help.html#github-issues"><i class="fa fa-check"></i><b>2.5</b> GitHub issues<span></span></a></li>
+<li class="chapter" data-level="2.6" data-path="how-to-ask-for-help.html"><a href="how-to-ask-for-help.html#mailing-lists"><i class="fa fa-check"></i><b>2.6</b> Mailing lists<span></span></a>
 <ul>
-<li class="chapter" data-level="2.6.1" data-path="how-to-ask-for-help.html"><a href="how-to-ask-for-help.html#jhulibd"><i class="fa fa-check"></i><b>2.6.1</b> JHU/LIBD</a></li>
-<li class="chapter" data-level="2.6.2" data-path="how-to-ask-for-help.html"><a href="how-to-ask-for-help.html#bioconductor"><i class="fa fa-check"></i><b>2.6.2</b> Bioconductor</a></li>
-<li class="chapter" data-level="2.6.3" data-path="how-to-ask-for-help.html"><a href="how-to-ask-for-help.html#r-ladies-baltimore"><i class="fa fa-check"></i><b>2.6.3</b> R-Ladies Baltimore</a></li>
-<li class="chapter" data-level="2.6.4" data-path="how-to-ask-for-help.html"><a href="how-to-ask-for-help.html#miscellaneous"><i class="fa fa-check"></i><b>2.6.4</b> Miscellaneous</a></li>
+<li class="chapter" data-level="2.6.1" data-path="how-to-ask-for-help.html"><a href="how-to-ask-for-help.html#bithelp"><i class="fa fa-check"></i><b>2.6.1</b> bithelp<span></span></a></li>
+<li class="chapter" data-level="2.6.2" data-path="how-to-ask-for-help.html"><a href="how-to-ask-for-help.html#bitsupport"><i class="fa fa-check"></i><b>2.6.2</b> bitsupport<span></span></a></li>
+<li class="chapter" data-level="2.6.3" data-path="how-to-ask-for-help.html"><a href="how-to-ask-for-help.html#bioc-devel"><i class="fa fa-check"></i><b>2.6.3</b> Bioc-devel<span></span></a></li>
+<li class="chapter" data-level="2.6.4" data-path="how-to-ask-for-help.html"><a href="how-to-ask-for-help.html#r-sig-mac"><i class="fa fa-check"></i><b>2.6.4</b> R-Sig-Mac<span></span></a></li>
 </ul></li>
-</ul></li>
-<li class="part"><span><b>I Bootcamps</b></span></li>
-<li class="chapter" data-level="3" data-path="rbioconductor-data-science-bootcamps.html"><a href="rbioconductor-data-science-bootcamps.html"><i class="fa fa-check"></i><b>3</b> R/Bioconductor Data Science bootcamps</a>
+<li class="chapter" data-level="2.7" data-path="how-to-ask-for-help.html"><a href="how-to-ask-for-help.html#slack"><i class="fa fa-check"></i><b>2.7</b> Slack<span></span></a>
 <ul>
-<li class="chapter" data-level="3.1" data-path="rbioconductor-data-science-bootcamps.html"><a href="rbioconductor-data-science-bootcamps.html#libd-bootcamps"><i class="fa fa-check"></i><b>3.1</b> LIBD bootcamps</a></li>
-<li class="chapter" data-level="3.2" data-path="rbioconductor-data-science-bootcamps.html"><a href="rbioconductor-data-science-bootcamps.html#team-bootcamps"><i class="fa fa-check"></i><b>3.2</b> Team bootcamps</a></li>
-<li class="chapter" data-level="3.3" data-path="rbioconductor-data-science-bootcamps.html"><a href="rbioconductor-data-science-bootcamps.html#bootcamp-source-materials"><i class="fa fa-check"></i><b>3.3</b> Bootcamp source materials</a>
-<ul>
-<li class="chapter" data-level="3.3.1" data-path="rbioconductor-data-science-bootcamps.html"><a href="rbioconductor-data-science-bootcamps.html#main-materials"><i class="fa fa-check"></i><b>3.3.1</b> Main materials</a></li>
-<li class="chapter" data-level="3.3.2" data-path="rbioconductor-data-science-bootcamps.html"><a href="rbioconductor-data-science-bootcamps.html#courses"><i class="fa fa-check"></i><b>3.3.2</b> Courses</a></li>
+<li class="chapter" data-level="2.7.1" data-path="how-to-ask-for-help.html"><a href="how-to-ask-for-help.html#jhulibd"><i class="fa fa-check"></i><b>2.7.1</b> JHU/LIBD<span></span></a></li>
+<li class="chapter" data-level="2.7.2" data-path="how-to-ask-for-help.html"><a href="how-to-ask-for-help.html#bioconductor"><i class="fa fa-check"></i><b>2.7.2</b> Bioconductor<span></span></a></li>
+<li class="chapter" data-level="2.7.3" data-path="how-to-ask-for-help.html"><a href="how-to-ask-for-help.html#r-ladies-baltimore"><i class="fa fa-check"></i><b>2.7.3</b> R-Ladies Baltimore<span></span></a></li>
+<li class="chapter" data-level="2.7.4" data-path="how-to-ask-for-help.html"><a href="how-to-ask-for-help.html#miscellaneous"><i class="fa fa-check"></i><b>2.7.4</b> Miscellaneous<span></span></a></li>
 </ul></li>
 </ul></li>
-<li class="chapter" data-level="4" data-path="how-to-be-a-modern-scientist.html"><a href="how-to-be-a-modern-scientist.html"><i class="fa fa-check"></i><b>4</b> How to be a modern scientist</a>
+<li class="part"><span><b>I Bootcamps<span></span></b></span></li>
+<li class="chapter" data-level="3" data-path="rbioconductor-data-science-bootcamps.html"><a href="rbioconductor-data-science-bootcamps.html"><i class="fa fa-check"></i><b>3</b> R/Bioconductor Data Science bootcamps<span></span></a>
 <ul>
-<li class="chapter" data-level="4.1" data-path="how-to-be-a-modern-scientist.html"><a href="how-to-be-a-modern-scientist.html#bootcamp-session"><i class="fa fa-check"></i><b>4.1</b> Bootcamp session</a></li>
-</ul></li>
-<li class="chapter" data-level="5" data-path="what-they-forgot-to-teach-you-about-r.html"><a href="what-they-forgot-to-teach-you-about-r.html"><i class="fa fa-check"></i><b>5</b> What they forgot to teach you about R</a>
+<li class="chapter" data-level="3.1" data-path="rbioconductor-data-science-bootcamps.html"><a href="rbioconductor-data-science-bootcamps.html#libd-bootcamps"><i class="fa fa-check"></i><b>3.1</b> LIBD bootcamps<span></span></a></li>
+<li class="chapter" data-level="3.2" data-path="rbioconductor-data-science-bootcamps.html"><a href="rbioconductor-data-science-bootcamps.html#team-bootcamps"><i class="fa fa-check"></i><b>3.2</b> Team bootcamps<span></span></a></li>
+<li class="chapter" data-level="3.3" data-path="rbioconductor-data-science-bootcamps.html"><a href="rbioconductor-data-science-bootcamps.html#bootcamp-source-materials"><i class="fa fa-check"></i><b>3.3</b> Bootcamp source materials<span></span></a>
 <ul>
-<li class="chapter" data-level="5.1" data-path="what-they-forgot-to-teach-you-about-r.html"><a href="what-they-forgot-to-teach-you-about-r.html#bootcamp-sessions"><i class="fa fa-check"></i><b>5.1</b> Bootcamp sessions</a></li>
-</ul></li>
-<li class="chapter" data-level="6" data-path="the-elements-of-data-analytic-style.html"><a href="the-elements-of-data-analytic-style.html"><i class="fa fa-check"></i><b>6</b> The Elements of Data Analytic Style</a>
-<ul>
-<li class="chapter" data-level="6.1" data-path="the-elements-of-data-analytic-style.html"><a href="the-elements-of-data-analytic-style.html#bootcamp-session-1"><i class="fa fa-check"></i><b>6.1</b> Bootcamp session</a></li>
-</ul></li>
-<li class="chapter" data-level="7" data-path="cbds.html"><a href="cbds.html"><i class="fa fa-check"></i><b>7</b> CBDS</a>
-<ul>
-<li class="chapter" data-level="7.1" data-path="cbds.html"><a href="cbds.html#bootcamp-session-2"><i class="fa fa-check"></i><b>7.1</b> Bootcamp session</a></li>
-</ul></li>
-<li class="chapter" data-level="8" data-path="building-tidy-tools.html"><a href="building-tidy-tools.html"><i class="fa fa-check"></i><b>8</b> Building Tidy Tools</a>
-<ul>
-<li class="chapter" data-level="8.1" data-path="building-tidy-tools.html"><a href="building-tidy-tools.html#bootcamp-sessions-1"><i class="fa fa-check"></i><b>8.1</b> Bootcamp sessions</a></li>
-</ul></li>
-<li class="chapter" data-level="9" data-path="differential-expression-analysis.html"><a href="differential-expression-analysis.html"><i class="fa fa-check"></i><b>9</b> Differential expression analysis</a>
-<ul>
-<li class="chapter" data-level="9.1" data-path="differential-expression-analysis.html"><a href="differential-expression-analysis.html#bootcamp-sessions-2"><i class="fa fa-check"></i><b>9.1</b> Bootcamp sessions</a></li>
-</ul></li>
-<li class="part"><span><b>II Internal</b></span></li>
-<li class="chapter" data-level="10" data-path="team-meetings.html"><a href="team-meetings.html"><i class="fa fa-check"></i><b>10</b> Team meetings</a>
-<ul>
-<li class="chapter" data-level="10.1" data-path="team-meetings.html"><a href="team-meetings.html#papers-software"><i class="fa fa-check"></i><b>10.1</b> Papers &amp; software</a>
-<ul>
-<li class="chapter" data-level="10.1.1" data-path="team-meetings.html"><a href="team-meetings.html#notes"><i class="fa fa-check"></i><b>10.1.1</b> Notes</a></li>
-</ul></li>
-<li class="chapter" data-level="10.2" data-path="team-meetings.html"><a href="team-meetings.html#dsgs-feedback"><i class="fa fa-check"></i><b>10.2</b> DSgs: feedback</a>
-<ul>
-<li class="chapter" data-level="10.2.1" data-path="team-meetings.html"><a href="team-meetings.html#notes-1"><i class="fa fa-check"></i><b>10.2.1</b> Notes</a></li>
-</ul></li>
-<li class="chapter" data-level="10.3" data-path="team-meetings.html"><a href="team-meetings.html#team-help"><i class="fa fa-check"></i><b>10.3</b> Team help</a></li>
-<li class="chapter" data-level="10.4" data-path="team-meetings.html"><a href="team-meetings.html#individual-updates"><i class="fa fa-check"></i><b>10.4</b> Individual updates</a></li>
-<li class="chapter" data-level="10.5" data-path="team-meetings.html"><a href="team-meetings.html#notion-updates"><i class="fa fa-check"></i><b>10.5</b> Notion updates</a></li>
-<li class="chapter" data-level="10.6" data-path="team-meetings.html"><a href="team-meetings.html#project-meetings"><i class="fa fa-check"></i><b>10.6</b> Project meetings</a></li>
-</ul></li>
-<li class="chapter" data-level="11" data-path="helping-others.html"><a href="helping-others.html"><i class="fa fa-check"></i><b>11</b> Helping others</a>
-<ul>
-<li class="chapter" data-level="11.1" data-path="helping-others.html"><a href="helping-others.html#linear-regression-example"><i class="fa fa-check"></i><b>11.1</b> Linear regression example</a></li>
-<li class="chapter" data-level="11.2" data-path="helping-others.html"><a href="helping-others.html#dsgs-guides"><i class="fa fa-check"></i><b>11.2</b> DSgs guides</a>
-<ul>
-<li class="chapter" data-level="11.2.1" data-path="helping-others.html"><a href="helping-others.html#dsgs-guide-training"><i class="fa fa-check"></i><b>11.2.1</b> DSgs-guide training</a></li>
-<li class="chapter" data-level="11.2.2" data-path="helping-others.html"><a href="helping-others.html#common-responses"><i class="fa fa-check"></i><b>11.2.2</b> Common responses</a></li>
-<li class="chapter" data-level="11.2.3" data-path="helping-others.html"><a href="helping-others.html#internal-sessions-log"><i class="fa fa-check"></i><b>11.2.3</b> Internal sessions log</a></li>
-<li class="chapter" data-level="11.2.4" data-path="helping-others.html"><a href="helping-others.html#getting-started"><i class="fa fa-check"></i><b>11.2.4</b> Getting started</a></li>
-</ul></li>
-<li class="chapter" data-level="11.3" data-path="helping-others.html"><a href="helping-others.html#bioconductor-support-practice-grounds"><i class="fa fa-check"></i><b>11.3</b> Bioconductor Support: practice grounds</a>
-<ul>
-<li class="chapter" data-level="11.3.1" data-path="helping-others.html"><a href="helping-others.html#steps-to-follow"><i class="fa fa-check"></i><b>11.3.1</b> Steps to follow</a></li>
-</ul></li>
-<li class="chapter" data-level="11.4" data-path="helping-others.html"><a href="helping-others.html#rstudio-education"><i class="fa fa-check"></i><b>11.4</b> RStudio Education</a></li>
-</ul></li>
-<li class="chapter" data-level="12" data-path="project-feedback.html"><a href="project-feedback.html"><i class="fa fa-check"></i><b>12</b> Project feedback</a>
-<ul>
-<li class="chapter" data-level="12.1" data-path="project-feedback.html"><a href="project-feedback.html#slack-1"><i class="fa fa-check"></i><b>12.1</b> Slack</a></li>
-<li class="chapter" data-level="12.2" data-path="project-feedback.html"><a href="project-feedback.html#meetings"><i class="fa fa-check"></i><b>12.2</b> Meetings</a></li>
-<li class="chapter" data-level="12.3" data-path="project-feedback.html"><a href="project-feedback.html#code-review"><i class="fa fa-check"></i><b>12.3</b> Code review</a></li>
-</ul></li>
-<li class="chapter" data-level="13" data-path="organizing-your-work.html"><a href="organizing-your-work.html"><i class="fa fa-check"></i><b>13</b> Organizing your work</a>
-<ul>
-<li class="chapter" data-level="13.1" data-path="organizing-your-work.html"><a href="organizing-your-work.html#jhpce-file-organization"><i class="fa fa-check"></i><b>13.1</b> JHPCE file organization</a>
-<ul>
-<li class="chapter" data-level="13.1.1" data-path="organizing-your-work.html"><a href="organizing-your-work.html#background-history"><i class="fa fa-check"></i><b>13.1.1</b> Background history</a></li>
-<li class="chapter" data-level="13.1.2" data-path="organizing-your-work.html"><a href="organizing-your-work.html#organization-since-2021"><i class="fa fa-check"></i><b>13.1.2</b> Organization since 2021</a></li>
-</ul></li>
-<li class="chapter" data-level="13.2" data-path="organizing-your-work.html"><a href="organizing-your-work.html#project-documentation"><i class="fa fa-check"></i><b>13.2</b> Project documentation</a></li>
-</ul></li>
-<li class="chapter" data-level="14" data-path="writing-papers.html"><a href="writing-papers.html"><i class="fa fa-check"></i><b>14</b> Writing papers</a>
-<ul>
-<li class="chapter" data-level="14.1" data-path="writing-papers.html"><a href="writing-papers.html#things-to-keep-in-mind"><i class="fa fa-check"></i><b>14.1</b> Things to keep in mind</a></li>
-<li class="chapter" data-level="14.2" data-path="writing-papers.html"><a href="writing-papers.html#writing-process"><i class="fa fa-check"></i><b>14.2</b> Writing process</a></li>
-<li class="chapter" data-level="14.3" data-path="writing-papers.html"><a href="writing-papers.html#details"><i class="fa fa-check"></i><b>14.3</b> Details</a></li>
-</ul></li>
-<li class="chapter" data-level="15" data-path="authorship.html"><a href="authorship.html"><i class="fa fa-check"></i><b>15</b> Authorship</a></li>
-<li class="chapter" data-level="16" data-path="config-files.html"><a href="config-files.html"><i class="fa fa-check"></i><b>16</b> Config files</a>
-<ul>
-<li class="chapter" data-level="16.1" data-path="config-files.html"><a href="config-files.html#r-setup"><i class="fa fa-check"></i><b>16.1</b> R setup</a>
-<ul>
-<li class="chapter" data-level="16.1.1" data-path="config-files.html"><a href="config-files.html#r-packages"><i class="fa fa-check"></i><b>16.1.1</b> R packages</a></li>
-</ul></li>
-<li class="chapter" data-level="16.2" data-path="config-files.html"><a href="config-files.html#r-config-files"><i class="fa fa-check"></i><b>16.2</b> R config files</a>
-<ul>
-<li class="chapter" data-level="16.2.1" data-path="config-files.html"><a href="config-files.html#rprofile"><i class="fa fa-check"></i><b>16.2.1</b> <code>~/.Rprofile</code></a></li>
-<li class="chapter" data-level="16.2.2" data-path="config-files.html"><a href="config-files.html#renviron"><i class="fa fa-check"></i><b>16.2.2</b> <code>~/.Renviron</code></a></li>
-<li class="chapter" data-level="16.2.3" data-path="config-files.html"><a href="config-files.html#rmakevars"><i class="fa fa-check"></i><b>16.2.3</b> <code>~/.R/Makevars</code></a></li>
-</ul></li>
-<li class="chapter" data-level="16.3" data-path="config-files.html"><a href="config-files.html#git-config-files"><i class="fa fa-check"></i><b>16.3</b> Git config files</a>
-<ul>
-<li class="chapter" data-level="16.3.1" data-path="config-files.html"><a href="config-files.html#gitconfig"><i class="fa fa-check"></i><b>16.3.1</b> <code>~/.gitconfig</code></a></li>
-<li class="chapter" data-level="16.3.2" data-path="config-files.html"><a href="config-files.html#gitignore_global"><i class="fa fa-check"></i><b>16.3.2</b> <code>~/.gitignore_global</code></a></li>
-</ul></li>
-<li class="chapter" data-level="16.4" data-path="config-files.html"><a href="config-files.html#jhpce-files"><i class="fa fa-check"></i><b>16.4</b> JHPCE files</a>
-<ul>
-<li class="chapter" data-level="16.4.1" data-path="config-files.html"><a href="config-files.html#sge_request"><i class="fa fa-check"></i><b>16.4.1</b> <code>~/.sge_request</code></a></li>
-<li class="chapter" data-level="16.4.2" data-path="config-files.html"><a href="config-files.html#bashrc"><i class="fa fa-check"></i><b>16.4.2</b> <code>~/.bashrc</code></a></li>
-<li class="chapter" data-level="16.4.3" data-path="config-files.html"><a href="config-files.html#bash_profile"><i class="fa fa-check"></i><b>16.4.3</b> <code>~/.bash_profile</code></a></li>
-<li class="chapter" data-level="16.4.4" data-path="config-files.html"><a href="config-files.html#inputrc"><i class="fa fa-check"></i><b>16.4.4</b> <code>~/.inputrc</code></a></li>
+<li class="chapter" data-level="3.3.1" data-path="rbioconductor-data-science-bootcamps.html"><a href="rbioconductor-data-science-bootcamps.html#main-materials"><i class="fa fa-check"></i><b>3.3.1</b> Main materials<span></span></a></li>
+<li class="chapter" data-level="3.3.2" data-path="rbioconductor-data-science-bootcamps.html"><a href="rbioconductor-data-science-bootcamps.html#courses"><i class="fa fa-check"></i><b>3.3.2</b> Courses<span></span></a></li>
 </ul></li>
 </ul></li>
-<li class="chapter" data-level="17" data-path="how-to-contribute.html"><a href="how-to-contribute.html"><i class="fa fa-check"></i><b>17</b> How to contribute</a>
+<li class="chapter" data-level="4" data-path="how-to-be-a-modern-scientist.html"><a href="how-to-be-a-modern-scientist.html"><i class="fa fa-check"></i><b>4</b> How to be a modern scientist<span></span></a>
 <ul>
-<li class="chapter" data-level="17.1" data-path="how-to-contribute.html"><a href="how-to-contribute.html#github-issues-1"><i class="fa fa-check"></i><b>17.1</b> GitHub Issues</a></li>
-<li class="chapter" data-level="17.2" data-path="how-to-contribute.html"><a href="how-to-contribute.html#team-websites"><i class="fa fa-check"></i><b>17.2</b> Team websites</a>
+<li class="chapter" data-level="4.1" data-path="how-to-be-a-modern-scientist.html"><a href="how-to-be-a-modern-scientist.html#bootcamp-session"><i class="fa fa-check"></i><b>4.1</b> Bootcamp session<span></span></a></li>
+</ul></li>
+<li class="chapter" data-level="5" data-path="what-they-forgot-to-teach-you-about-r.html"><a href="what-they-forgot-to-teach-you-about-r.html"><i class="fa fa-check"></i><b>5</b> What they forgot to teach you about R<span></span></a>
 <ul>
-<li class="chapter" data-level="17.2.1" data-path="how-to-contribute.html"><a href="how-to-contribute.html#libd-rstats-club-website"><i class="fa fa-check"></i><b>17.2.1</b> LIBD rstats club website</a></li>
+<li class="chapter" data-level="5.1" data-path="what-they-forgot-to-teach-you-about-r.html"><a href="what-they-forgot-to-teach-you-about-r.html#bootcamp-sessions"><i class="fa fa-check"></i><b>5.1</b> Bootcamp sessions<span></span></a></li>
 </ul></li>
-<li class="chapter" data-level="17.3" data-path="how-to-contribute.html"><a href="how-to-contribute.html#github-actions"><i class="fa fa-check"></i><b>17.3</b> GitHub Actions</a>
+<li class="chapter" data-level="6" data-path="the-elements-of-data-analytic-style.html"><a href="the-elements-of-data-analytic-style.html"><i class="fa fa-check"></i><b>6</b> The Elements of Data Analytic Style<span></span></a>
 <ul>
-<li class="chapter" data-level="17.3.1" data-path="how-to-contribute.html"><a href="how-to-contribute.html#r-packages-1"><i class="fa fa-check"></i><b>17.3.1</b> R packages</a></li>
-<li class="chapter" data-level="17.3.2" data-path="how-to-contribute.html"><a href="how-to-contribute.html#websites"><i class="fa fa-check"></i><b>17.3.2</b> Websites</a></li>
+<li class="chapter" data-level="6.1" data-path="the-elements-of-data-analytic-style.html"><a href="the-elements-of-data-analytic-style.html#bootcamp-session-1"><i class="fa fa-check"></i><b>6.1</b> Bootcamp session<span></span></a></li>
 </ul></li>
-<li class="chapter" data-level="17.4" data-path="how-to-contribute.html"><a href="how-to-contribute.html#libd-rbioconductor-packages"><i class="fa fa-check"></i><b>17.4</b> LIBD R/Bioconductor packages</a></li>
-</ul></li>
-<li class="chapter" data-level="18" data-path="career-growth.html"><a href="career-growth.html"><i class="fa fa-check"></i><b>18</b> Career growth</a>
+<li class="chapter" data-level="7" data-path="cbds.html"><a href="cbds.html"><i class="fa fa-check"></i><b>7</b> CBDS<span></span></a>
 <ul>
-<li class="chapter" data-level="18.1" data-path="career-growth.html"><a href="career-growth.html#career-planning-session"><i class="fa fa-check"></i><b>18.1</b> Career planning session</a></li>
+<li class="chapter" data-level="7.1" data-path="cbds.html"><a href="cbds.html#bootcamp-session-2"><i class="fa fa-check"></i><b>7.1</b> Bootcamp session<span></span></a></li>
 </ul></li>
-<li class="chapter" data-level="" data-path="r-session-information.html"><a href="r-session-information.html"><i class="fa fa-check"></i>R session information</a></li>
+<li class="chapter" data-level="8" data-path="building-tidy-tools.html"><a href="building-tidy-tools.html"><i class="fa fa-check"></i><b>8</b> Building Tidy Tools<span></span></a>
+<ul>
+<li class="chapter" data-level="8.1" data-path="building-tidy-tools.html"><a href="building-tidy-tools.html#bootcamp-sessions-1"><i class="fa fa-check"></i><b>8.1</b> Bootcamp sessions<span></span></a></li>
+</ul></li>
+<li class="chapter" data-level="9" data-path="differential-expression-analysis.html"><a href="differential-expression-analysis.html"><i class="fa fa-check"></i><b>9</b> Differential expression analysis<span></span></a>
+<ul>
+<li class="chapter" data-level="9.1" data-path="differential-expression-analysis.html"><a href="differential-expression-analysis.html#bootcamp-sessions-2"><i class="fa fa-check"></i><b>9.1</b> Bootcamp sessions<span></span></a></li>
+</ul></li>
+<li class="part"><span><b>II Internal<span></span></b></span></li>
+<li class="chapter" data-level="10" data-path="team-meetings.html"><a href="team-meetings.html"><i class="fa fa-check"></i><b>10</b> Team meetings<span></span></a>
+<ul>
+<li class="chapter" data-level="10.1" data-path="team-meetings.html"><a href="team-meetings.html#papers-software"><i class="fa fa-check"></i><b>10.1</b> Papers &amp; software<span></span></a>
+<ul>
+<li class="chapter" data-level="10.1.1" data-path="team-meetings.html"><a href="team-meetings.html#notes"><i class="fa fa-check"></i><b>10.1.1</b> Notes<span></span></a></li>
+</ul></li>
+<li class="chapter" data-level="10.2" data-path="team-meetings.html"><a href="team-meetings.html#dsgs-feedback"><i class="fa fa-check"></i><b>10.2</b> DSgs: feedback<span></span></a>
+<ul>
+<li class="chapter" data-level="10.2.1" data-path="team-meetings.html"><a href="team-meetings.html#notes-1"><i class="fa fa-check"></i><b>10.2.1</b> Notes<span></span></a></li>
+</ul></li>
+<li class="chapter" data-level="10.3" data-path="team-meetings.html"><a href="team-meetings.html#team-help"><i class="fa fa-check"></i><b>10.3</b> Team help<span></span></a></li>
+<li class="chapter" data-level="10.4" data-path="team-meetings.html"><a href="team-meetings.html#individual-updates"><i class="fa fa-check"></i><b>10.4</b> Individual updates<span></span></a></li>
+<li class="chapter" data-level="10.5" data-path="team-meetings.html"><a href="team-meetings.html#notion-updates"><i class="fa fa-check"></i><b>10.5</b> Notion updates<span></span></a></li>
+<li class="chapter" data-level="10.6" data-path="team-meetings.html"><a href="team-meetings.html#project-meetings"><i class="fa fa-check"></i><b>10.6</b> Project meetings<span></span></a></li>
+</ul></li>
+<li class="chapter" data-level="11" data-path="helping-others.html"><a href="helping-others.html"><i class="fa fa-check"></i><b>11</b> Helping others<span></span></a>
+<ul>
+<li class="chapter" data-level="11.1" data-path="helping-others.html"><a href="helping-others.html#linear-regression-example"><i class="fa fa-check"></i><b>11.1</b> Linear regression example<span></span></a></li>
+<li class="chapter" data-level="11.2" data-path="helping-others.html"><a href="helping-others.html#dsgs-guides"><i class="fa fa-check"></i><b>11.2</b> DSgs guides<span></span></a>
+<ul>
+<li class="chapter" data-level="11.2.1" data-path="helping-others.html"><a href="helping-others.html#dsgs-guide-training"><i class="fa fa-check"></i><b>11.2.1</b> DSgs-guide training<span></span></a></li>
+<li class="chapter" data-level="11.2.2" data-path="helping-others.html"><a href="helping-others.html#common-responses"><i class="fa fa-check"></i><b>11.2.2</b> Common responses<span></span></a></li>
+<li class="chapter" data-level="11.2.3" data-path="helping-others.html"><a href="helping-others.html#internal-sessions-log"><i class="fa fa-check"></i><b>11.2.3</b> Internal sessions log<span></span></a></li>
+<li class="chapter" data-level="11.2.4" data-path="helping-others.html"><a href="helping-others.html#getting-started"><i class="fa fa-check"></i><b>11.2.4</b> Getting started<span></span></a></li>
+</ul></li>
+<li class="chapter" data-level="11.3" data-path="helping-others.html"><a href="helping-others.html#bioconductor-support-practice-grounds"><i class="fa fa-check"></i><b>11.3</b> Bioconductor Support: practice grounds<span></span></a>
+<ul>
+<li class="chapter" data-level="11.3.1" data-path="helping-others.html"><a href="helping-others.html#steps-to-follow"><i class="fa fa-check"></i><b>11.3.1</b> Steps to follow<span></span></a></li>
+</ul></li>
+<li class="chapter" data-level="11.4" data-path="helping-others.html"><a href="helping-others.html#rstudio-education"><i class="fa fa-check"></i><b>11.4</b> RStudio Education<span></span></a></li>
+</ul></li>
+<li class="chapter" data-level="12" data-path="project-feedback.html"><a href="project-feedback.html"><i class="fa fa-check"></i><b>12</b> Project feedback<span></span></a>
+<ul>
+<li class="chapter" data-level="12.1" data-path="project-feedback.html"><a href="project-feedback.html#slack-1"><i class="fa fa-check"></i><b>12.1</b> Slack<span></span></a></li>
+<li class="chapter" data-level="12.2" data-path="project-feedback.html"><a href="project-feedback.html#meetings"><i class="fa fa-check"></i><b>12.2</b> Meetings<span></span></a></li>
+<li class="chapter" data-level="12.3" data-path="project-feedback.html"><a href="project-feedback.html#code-review"><i class="fa fa-check"></i><b>12.3</b> Code review<span></span></a></li>
+</ul></li>
+<li class="chapter" data-level="13" data-path="organizing-your-work.html"><a href="organizing-your-work.html"><i class="fa fa-check"></i><b>13</b> Organizing your work<span></span></a>
+<ul>
+<li class="chapter" data-level="13.1" data-path="organizing-your-work.html"><a href="organizing-your-work.html#jhpce-file-organization"><i class="fa fa-check"></i><b>13.1</b> JHPCE file organization<span></span></a>
+<ul>
+<li class="chapter" data-level="13.1.1" data-path="organizing-your-work.html"><a href="organizing-your-work.html#background-history"><i class="fa fa-check"></i><b>13.1.1</b> Background history<span></span></a></li>
+<li class="chapter" data-level="13.1.2" data-path="organizing-your-work.html"><a href="organizing-your-work.html#organization-since-2021"><i class="fa fa-check"></i><b>13.1.2</b> Organization since 2021<span></span></a></li>
+</ul></li>
+<li class="chapter" data-level="13.2" data-path="organizing-your-work.html"><a href="organizing-your-work.html#project-documentation"><i class="fa fa-check"></i><b>13.2</b> Project documentation<span></span></a></li>
+</ul></li>
+<li class="chapter" data-level="14" data-path="writing-papers.html"><a href="writing-papers.html"><i class="fa fa-check"></i><b>14</b> Writing papers<span></span></a>
+<ul>
+<li class="chapter" data-level="14.1" data-path="writing-papers.html"><a href="writing-papers.html#things-to-keep-in-mind"><i class="fa fa-check"></i><b>14.1</b> Things to keep in mind<span></span></a></li>
+<li class="chapter" data-level="14.2" data-path="writing-papers.html"><a href="writing-papers.html#writing-process"><i class="fa fa-check"></i><b>14.2</b> Writing process<span></span></a></li>
+<li class="chapter" data-level="14.3" data-path="writing-papers.html"><a href="writing-papers.html#details"><i class="fa fa-check"></i><b>14.3</b> Details<span></span></a></li>
+</ul></li>
+<li class="chapter" data-level="15" data-path="authorship.html"><a href="authorship.html"><i class="fa fa-check"></i><b>15</b> Authorship<span></span></a></li>
+<li class="chapter" data-level="16" data-path="config-files.html"><a href="config-files.html"><i class="fa fa-check"></i><b>16</b> Config files<span></span></a>
+<ul>
+<li class="chapter" data-level="16.1" data-path="config-files.html"><a href="config-files.html#r-setup"><i class="fa fa-check"></i><b>16.1</b> R setup<span></span></a>
+<ul>
+<li class="chapter" data-level="16.1.1" data-path="config-files.html"><a href="config-files.html#r-packages"><i class="fa fa-check"></i><b>16.1.1</b> R packages<span></span></a></li>
+</ul></li>
+<li class="chapter" data-level="16.2" data-path="config-files.html"><a href="config-files.html#r-config-files"><i class="fa fa-check"></i><b>16.2</b> R config files<span></span></a>
+<ul>
+<li class="chapter" data-level="16.2.1" data-path="config-files.html"><a href="config-files.html#rprofile"><i class="fa fa-check"></i><b>16.2.1</b> <code>~/.Rprofile</code><span></span></a></li>
+<li class="chapter" data-level="16.2.2" data-path="config-files.html"><a href="config-files.html#renviron"><i class="fa fa-check"></i><b>16.2.2</b> <code>~/.Renviron</code><span></span></a></li>
+<li class="chapter" data-level="16.2.3" data-path="config-files.html"><a href="config-files.html#rmakevars"><i class="fa fa-check"></i><b>16.2.3</b> <code>~/.R/Makevars</code><span></span></a></li>
+</ul></li>
+<li class="chapter" data-level="16.3" data-path="config-files.html"><a href="config-files.html#git-config-files"><i class="fa fa-check"></i><b>16.3</b> Git config files<span></span></a>
+<ul>
+<li class="chapter" data-level="16.3.1" data-path="config-files.html"><a href="config-files.html#gitconfig"><i class="fa fa-check"></i><b>16.3.1</b> <code>~/.gitconfig</code><span></span></a></li>
+<li class="chapter" data-level="16.3.2" data-path="config-files.html"><a href="config-files.html#gitignore_global"><i class="fa fa-check"></i><b>16.3.2</b> <code>~/.gitignore_global</code><span></span></a></li>
+</ul></li>
+<li class="chapter" data-level="16.4" data-path="config-files.html"><a href="config-files.html#jhpce-files"><i class="fa fa-check"></i><b>16.4</b> JHPCE files<span></span></a>
+<ul>
+<li class="chapter" data-level="16.4.1" data-path="config-files.html"><a href="config-files.html#sge_request"><i class="fa fa-check"></i><b>16.4.1</b> <code>~/.sge_request</code><span></span></a></li>
+<li class="chapter" data-level="16.4.2" data-path="config-files.html"><a href="config-files.html#bashrc"><i class="fa fa-check"></i><b>16.4.2</b> <code>~/.bashrc</code><span></span></a></li>
+<li class="chapter" data-level="16.4.3" data-path="config-files.html"><a href="config-files.html#bash_profile"><i class="fa fa-check"></i><b>16.4.3</b> <code>~/.bash_profile</code><span></span></a></li>
+<li class="chapter" data-level="16.4.4" data-path="config-files.html"><a href="config-files.html#inputrc"><i class="fa fa-check"></i><b>16.4.4</b> <code>~/.inputrc</code><span></span></a></li>
+</ul></li>
+</ul></li>
+<li class="chapter" data-level="17" data-path="how-to-contribute.html"><a href="how-to-contribute.html"><i class="fa fa-check"></i><b>17</b> How to contribute<span></span></a>
+<ul>
+<li class="chapter" data-level="17.1" data-path="how-to-contribute.html"><a href="how-to-contribute.html#github-issues-1"><i class="fa fa-check"></i><b>17.1</b> GitHub Issues<span></span></a></li>
+<li class="chapter" data-level="17.2" data-path="how-to-contribute.html"><a href="how-to-contribute.html#team-websites"><i class="fa fa-check"></i><b>17.2</b> Team websites<span></span></a>
+<ul>
+<li class="chapter" data-level="17.2.1" data-path="how-to-contribute.html"><a href="how-to-contribute.html#libd-rstats-club-website"><i class="fa fa-check"></i><b>17.2.1</b> LIBD rstats club website<span></span></a></li>
+</ul></li>
+<li class="chapter" data-level="17.3" data-path="how-to-contribute.html"><a href="how-to-contribute.html#github-actions"><i class="fa fa-check"></i><b>17.3</b> GitHub Actions<span></span></a>
+<ul>
+<li class="chapter" data-level="17.3.1" data-path="how-to-contribute.html"><a href="how-to-contribute.html#r-packages-1"><i class="fa fa-check"></i><b>17.3.1</b> R packages<span></span></a></li>
+<li class="chapter" data-level="17.3.2" data-path="how-to-contribute.html"><a href="how-to-contribute.html#websites"><i class="fa fa-check"></i><b>17.3.2</b> Websites<span></span></a></li>
+</ul></li>
+<li class="chapter" data-level="17.4" data-path="how-to-contribute.html"><a href="how-to-contribute.html#libd-rbioconductor-packages"><i class="fa fa-check"></i><b>17.4</b> LIBD R/Bioconductor packages<span></span></a></li>
+</ul></li>
+<li class="chapter" data-level="18" data-path="career-growth.html"><a href="career-growth.html"><i class="fa fa-check"></i><b>18</b> Career growth<span></span></a>
+<ul>
+<li class="chapter" data-level="18.1" data-path="career-growth.html"><a href="career-growth.html#career-planning-session"><i class="fa fa-check"></i><b>18.1</b> Career planning session<span></span></a></li>
+</ul></li>
+<li><a href="r-session-information-1.html#r-session-information-1">R session information<span></span></a></li>
 </ul>
 
       </nav>
@@ -331,16 +341,16 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
           <div class="page-inner">
 
             <section class="normal" id="section-">
-<div id="helping-others" class="section level1" number="11">
-<h1><span class="header-section-number">11</span> Helping others</h1>
+<div id="helping-others" class="section level1 hasAnchor" number="11">
+<h1><span class="header-section-number">11</span> Helping others<a href="helping-others.html#helping-others" class="anchor-section" aria-label="Anchor link to header"></a></h1>
 <p>Part of our job is helping others understand what we are doing. In my experience, we can use three different communication languages and different combinations of them are useful by others, given that everyone is different. These languages are:</p>
 <ul>
 <li><strong>written text</strong>/words</li>
 <li><strong>drawings</strong> and graphs</li>
 <li><strong>math</strong> equations</li>
 </ul>
-<div id="linear-regression-example" class="section level2" number="11.1">
-<h2><span class="header-section-number">11.1</span> Linear regression example</h2>
+<div id="linear-regression-example" class="section level2 hasAnchor" number="11.1">
+<h2><span class="header-section-number">11.1</span> Linear regression example<a href="helping-others.html#linear-regression-example" class="anchor-section" aria-label="Anchor link to header"></a></h2>
 <p>For example, if we have a linear regression</p>
 <p><span class="math display">\[ Y = \beta_0 + \beta_1 X + \epsilon \]</span></p>
 <p>with</p>
@@ -377,8 +387,8 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 </blockquote>
 <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
 </div>
-<div id="dsgs-guides" class="section level2" number="11.2">
-<h2><span class="header-section-number">11.2</span> DSgs guides</h2>
+<div id="dsgs-guides" class="section level2 hasAnchor" number="11.2">
+<h2><span class="header-section-number">11.2</span> DSgs guides<a href="helping-others.html#dsgs-guides" class="anchor-section" aria-label="Anchor link to header"></a></h2>
 <p>As <a href="index.html#dsgs-guide-team-members">DSgs-guides</a> for the <a href="data-science-guidance-sessions.html#data-science-guidance-sessions">Data Science guidance sessions</a> (DSgs), our role involves:</p>
 <ul>
 <li><strong>Explaining a concept creatively</strong>. For example, the person asking the question might have been confused by a lecture or the documentation of a function, and we have to explain those written words using a combination of: other words, drawings, and/or math <a href="#fn10" class="footnote-ref" id="fnref10"><sup>10</sup></a></li>
@@ -387,8 +397,8 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <li><strong>Baseline platform</strong>. We can help others get used to our baseline platform of tools we use. Hence why we go through the bootcamps to have a common knowledgebase and set of courses, workshops and books that we refer others to.</li>
 </ul>
 <p>We can also be a bouncing board for others to discuss their ideas, and sometimes help with our feedback.</p>
-<div id="dsgs-guide-training" class="section level3" number="11.2.1">
-<h3><span class="header-section-number">11.2.1</span> DSgs-guide training</h3>
+<div id="dsgs-guide-training" class="section level3 hasAnchor" number="11.2.1">
+<h3><span class="header-section-number">11.2.1</span> DSgs-guide training<a href="helping-others.html#dsgs-guide-training" class="anchor-section" aria-label="Anchor link to header"></a></h3>
 <p>Accomplishing our role as <a href="index.html#dsgs-guide-team-members">DSgs-guides</a> can be a bit scary since others will expect us to know the answers to many different questions. They might also be under intense pressure and might try to offload some of that pressure on to us. In other words, human interactions are complex. To deal with this, we have defined a set of <a href="data-science-guidance-sessions.html#interaction-rules">Interaction rules</a> to protect us. But we also need some training.</p>
 <p>First of all, remember that <strong>it’s OK to not know the answer</strong>. Simply communicate that you don’t know the answer instead of trying to hide it. You can then:</p>
 <ul>
@@ -412,11 +422,11 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <iframe width="560" height="315" src="https://www.youtube.com/embed/wrdbOl_zbLs" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen>
 </iframe>
 </div>
-<div id="common-responses" class="section level3" number="11.2.2">
-<h3><span class="header-section-number">11.2.2</span> Common responses</h3>
+<div id="common-responses" class="section level3 hasAnchor" number="11.2.2">
+<h3><span class="header-section-number">11.2.2</span> Common responses<a href="helping-others.html#common-responses" class="anchor-section" aria-label="Anchor link to header"></a></h3>
 </div>
-<div id="internal-sessions-log" class="section level3" number="11.2.3">
-<h3><span class="header-section-number">11.2.3</span> Internal sessions log</h3>
+<div id="internal-sessions-log" class="section level3 hasAnchor" number="11.2.3">
+<h3><span class="header-section-number">11.2.3</span> Internal sessions log<a href="helping-others.html#internal-sessions-log" class="anchor-section" aria-label="Anchor link to header"></a></h3>
 <p>In order to make our job easier the next time we get a similar question, we have an <a href="https://docs.google.com/spreadsheets/d/1FrOKBI_lTYLNRAfzNi8nTMAXNH3DtL9bUwpVzDjFp9Q/edit?usp=sharing"><strong>internal sessions log</strong></a> where we record:</p>
 <ul>
 <li>the question we got asked</li>
@@ -426,11 +436,11 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <p>This log also helps us refresh our memory so we can remember what are the links we’ve told someone else to use and see their trajectory. The sessions log also enables <a href="index.html#dsgs-guide-team-members">DSgs-guides</a> to learn from each other. The internal sessions log is then used to populate the content of the <a href="https://lcolladotor.github.io/DSgs_logs/"><strong>DSgs_logs</strong></a> website.</p>
 <p>It’s best to fill out an entry on the sessions log immediately after a session. That way your memory is fresh. That’s why we recommend planning for 10 minutes after a session to fill out your entry in the log and to send a message with the links from the session to the person who requested it <a href="#fn12" class="footnote-ref" id="fnref12"><sup>12</sup></a></p>
 </div>
-<div id="getting-started" class="section level3" number="11.2.4">
-<h3><span class="header-section-number">11.2.4</span> Getting started</h3>
+<div id="getting-started" class="section level3 hasAnchor" number="11.2.4">
+<h3><span class="header-section-number">11.2.4</span> Getting started<a href="helping-others.html#getting-started" class="anchor-section" aria-label="Anchor link to header"></a></h3>
 <p>If you just joined the <a href="index.html#dsgs-guide-team-members">DSgs-guides</a> team, then we need you to setup your Calendly account and provide a brief description of who you are and what you are interested in helping others with.</p>
-<div id="calendly" class="section level4" number="11.2.4.1">
-<h4><span class="header-section-number">11.2.4.1</span> Calendly</h4>
+<div id="calendly" class="section level4 hasAnchor" number="11.2.4.1">
+<h4><span class="header-section-number">11.2.4.1</span> Calendly<a href="helping-others.html#calendly" class="anchor-section" aria-label="Anchor link to header"></a></h4>
 <p><a href="https://calendly.com/?utm_campaign=sign_up&amp;utm_medium=badge&amp;utm_source=invitee">Calendly</a> is a service that allows others to sign up for meetings with you. The free service lets you connect it with a single calendar, say your LIBD calendar <a href="#fn13" class="footnote-ref" id="fnref13"><sup>13</sup></a>. With the free account you can then <a href="https://calendly.com/event_types/user/me">specify a type of event</a> which you can use to create a <code>25 min data science guidance session</code> event like mine:</p>
 <div class="figure">
 <img src="images/calendly_event_description.PNG" alt="" />
@@ -450,8 +460,8 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <p>To control the number of sessions per week, I only opened my availability for 4 days of the week <a href="#fn15" class="footnote-ref" id="fnref15"><sup>15</sup></a> and specified 1 for the “event max per day” advanced setting <a href="#fn16" class="footnote-ref" id="fnref16"><sup>16</sup></a>. Choose your settings wisely such that you can avoid as much as possible having to reschedule meetings for others, that is, be careful with the expectations you create in others.</p>
 <p>Once you are done, we’ll need your public Calendly event link to add it to the <a href="data-science-guidance-sessions.html#sign-up">DSgs sign up</a> page.</p>
 </div>
-<div id="description" class="section level4" number="11.2.4.2">
-<h4><span class="header-section-number">11.2.4.2</span> Description</h4>
+<div id="description" class="section level4 hasAnchor" number="11.2.4.2">
+<h4><span class="header-section-number">11.2.4.2</span> Description<a href="helping-others.html#description" class="anchor-section" aria-label="Anchor link to header"></a></h4>
 <p>We need a short description of who you are and what type of questions you are interested in helping others with. Since you’ll be learning while you help others, you might want to specify areas that you are actively learning more about. Below is a small template, but you might simply want to check the <a href="data-science-guidance-sessions.html#sign-up">DSgs sign up</a> page.</p>
 <pre><code>* [YOUR NAME](https://github.com/YOUR-USERNAME) ([BioC Support](https://support.bioconductor.org/u/YOUR_PROFILE_NUMBER/))
   - Research interests: xx, yy, zz.
@@ -461,11 +471,11 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 </div>
 </div>
 </div>
-<div id="bioconductor-support-practice-grounds" class="section level2" number="11.3">
-<h2><span class="header-section-number">11.3</span> Bioconductor Support: practice grounds</h2>
+<div id="bioconductor-support-practice-grounds" class="section level2 hasAnchor" number="11.3">
+<h2><span class="header-section-number">11.3</span> Bioconductor Support: practice grounds<a href="helping-others.html#bioconductor-support-practice-grounds" class="anchor-section" aria-label="Anchor link to header"></a></h2>
 <p>We use <a href="http://bioconductor.org/">Bioconductor</a> R packages basically every day for our work and the main venue for asking for help related to Bioconductor is the <a href="how-to-ask-for-help.html#bioconductor-support-website">Bioconductor Support website</a> as mentioned in a previous chapter. A great way to learn is by helping others. So, <a href="index.html#dsgs-guide-team-members">DSgs-guides</a> should try to help one person per week on the Bioconductor Support website. By doing so, they’ll learn more about Bioconductor, practice helping others, and also learn what information helpers need. Then, the next time the guides ask questions themselves, they’ll know what information they need to provide in order to help others help them.</p>
-<div id="steps-to-follow" class="section level3" number="11.3.1">
-<h3><span class="header-section-number">11.3.1</span> Steps to follow</h3>
+<div id="steps-to-follow" class="section level3 hasAnchor" number="11.3.1">
+<h3><span class="header-section-number">11.3.1</span> Steps to follow<a href="helping-others.html#steps-to-follow" class="anchor-section" aria-label="Anchor link to header"></a></h3>
 <p>To keep track of who we have helped please fill add an entry to the following <a href="https://docs.google.com/spreadsheets/d/1FrOKBI_lTYLNRAfzNi8nTMAXNH3DtL9bUwpVzDjFp9Q/edit?usp=sharing">Google Sheet</a>.</p>
 <p>Briefly, you need to:</p>
 <ul>
@@ -490,8 +500,8 @@ PS I&#39;m actively [learning how to help others](https://lcolladotor.github.io/
 <p>Remember that questions can have multiple answers, so other Bioconductor Community members might contribute their solutions, which is a great way to learn. Also, we are doing this as volunteers really, so if a question gets complicated, it’s OK to notify the person who asked it that you don’t have the time to help them further.</p>
 </div>
 </div>
-<div id="rstudio-education" class="section level2" number="11.4">
-<h2><span class="header-section-number">11.4</span> RStudio Education</h2>
+<div id="rstudio-education" class="section level2 hasAnchor" number="11.4">
+<h2><span class="header-section-number">11.4</span> RStudio Education<a href="helping-others.html#rstudio-education" class="anchor-section" aria-label="Anchor link to header"></a></h2>
 <p>If you want to go even further, you might be interested in the <a href="https://education.rstudio.com/teach/how-to-teach/">RStudio Education: learn to teach</a> website.</p>
 
 </div>
@@ -586,7 +596,6 @@ var addthis_share = {
     </div>
   </div>
 <script src="libs/gitbook-2.6.7/js/app.min.js"></script>
-<script src="libs/gitbook-2.6.7/js/lunr.js"></script>
 <script src="libs/gitbook-2.6.7/js/clipboard.min.js"></script>
 <script src="libs/gitbook-2.6.7/js/plugin-search.js"></script>
 <script src="libs/gitbook-2.6.7/js/plugin-sharing.js"></script>
@@ -605,6 +614,7 @@ gitbook.start({
 "weibo": false,
 "instapaper": false,
 "vk": false,
+"whatsapp": false,
 "all": ["facebook", "twitter", "linkedin", "weibo", "instapaper"]
 },
 "fontsettings": {
@@ -625,6 +635,10 @@ gitbook.start({
 "text": null
 },
 "download": null,
+"search": {
+"engine": "fuse",
+"options": null
+},
 "toc": {
 "collapse": "subsection"
 }
