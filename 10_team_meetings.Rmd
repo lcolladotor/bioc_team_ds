@@ -25,7 +25,7 @@ Each week, we rotate team members as shown on [this presenters Google Spreadshee
 
 The rest of the team members are responsible for reading the main PDF of the paper or software. Optionally, members can read the supplementary material, check the GitHub repository(ies) associated with the paper, or public peer reviews (some journals make them public). If the paper was recorded on [the presenters Google Spreadsheet](https://docs.google.com/spreadsheets/d/1r6552ySisg7_KpmJmChOvLHVWdMmss3bncEf2jqIM9k/edit?usp=sharing) at least a week in advance, then team members are expected to have read the paper regardless of whether the presenter sent a reminder Slack message or not.
 
-Overall, all team members have to contribute and be engaged in our continuous learning activities.
+Overall, all team members have to contribute and be engaged in our continuous learning activities. It is likely useful for everyone to register on Google Sheets for automatic updates ^[I recommend a daily digest instead of an email per update.] from the [the presenters Google Spreadsheet](https://docs.google.com/spreadsheets/d/1r6552ySisg7_KpmJmChOvLHVWdMmss3bncEf2jqIM9k/edit?usp=sharing).
 
 We record that portion of our meeting and make it publicly available through [the presenters Google Spreadsheet](https://docs.google.com/spreadsheets/d/1r6552ySisg7_KpmJmChOvLHVWdMmss3bncEf2jqIM9k/edit?usp=sharing). We then discuss privately our thoughts on the paper or software. Here's our first video:
 
