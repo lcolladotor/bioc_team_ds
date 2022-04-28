@@ -34,9 +34,18 @@ remotes::install_cran("BiocManager")
 BiocManager::version()
 
 ## Rprofile packages
+if (.Platform$OS.type != "windows") {
+    remotes::install_github(
+        "jalvesaq/colorout"
+    )
+}
+remotes::install_github("gaborcsardi/prompt")
+
 remotes::install_github(c(
-    "jalvesaq/colorout"
+    "gadenbuie/rsthemes"
 ))
+remotes::install_cran("suncalc")
+rsthemes::install_rsthemes(include_base16 = TRUE)
 remotes::install_cran(c(
     "devtools",
     "usethis"
@@ -87,7 +96,6 @@ remotes::install_cran(c(
     "reprex",
     "rsconnect",
     "rtweet",
-    "suncalc",
     "tidyverse",
     "xaringan",
     "xaringanthemer",
@@ -110,7 +118,6 @@ BiocManager::install(c(
 ## GitHub packages
 remotes::install_github(c(
     "cloudyr/rmote",
-    "gadenbuie/rsthemes",
     "gadenbuie/xaringanExtra"
 ))
 
