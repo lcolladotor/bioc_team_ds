@@ -57,12 +57,14 @@ BiocManager::install(c(
     "derfinderPlot",
     "GenomicState",
     "megadepth",
+    "qsvaR",
     "recount",
     "recountWorkflow",
     "recount3",
     "regutools",
     "regionReport",
-    "spatialLIBD"
+    "spatialLIBD",
+    "TREG"
 ), dependencies = TRUE, update = FALSE)
 
 ## LIBD packages
