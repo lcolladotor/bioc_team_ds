@@ -42,13 +42,6 @@ remotes::install_cran(c(
     "usethis"
 ))
 
-## Temporary for now due to https://github.com/ropensci/RefManageR/issues/79
-remotes::install_github(c(
-    "ropensci/bibtex",
-    "ropensci/RefManageR",
-    "cboettig/knitcitations"
-))
-
 ## Main packages
 BiocManager::install(c(
     "biocthis",
