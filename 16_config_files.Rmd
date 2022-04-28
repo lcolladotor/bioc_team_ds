@@ -78,21 +78,27 @@ remotes::install_github(c(
 ## CRAN packages
 remotes::install_cran(c(
     "ari",
+    "bookdown",
     "blogdown",
     "clue",
     "corrplot",
     "getopt",
+    "ggpubr",
+    "ggrepel",
     "ggthemes",
     "googlesheets4",
     "MatrixEQTL",
     "pagedown",
     "patchwork",
+    "postcards",
     "reprex",
+    "rsconnect",
     "rtweet",
     "suncalc",
     "tidyverse",
     "xaringan",
     "xaringanthemer",
+    "UpSetR",
     "VennDiagram"
 ))
 
