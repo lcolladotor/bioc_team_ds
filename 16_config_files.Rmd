@@ -207,12 +207,14 @@ options("biocthis.testthat" = TRUE)
 ## From https://www.garrickadenbuie.com/project/rsthemes/
 if (interactive() && requireNamespace("rsthemes", quietly = TRUE)) {
     # Set preferred themes if not handled elsewhere..
-    rsthemes::set_theme_light("Solarized Light {rsthemes}")  # light theme
-    rsthemes::set_theme_dark("base16 Monokai {rsthemes}") # dark theme
+    rsthemes::set_theme_light("base16 Monokai {rsthemes}")  # light theme
+    rsthemes::set_theme_dark("base16 Pop {rsthemes}") # dark theme
     rsthemes::set_theme_favorite(c(
-        "Solarized Light {rsthemes}",
         "base16 Monokai {rsthemes}",
-        "One Dark {rsthemes}"
+        "base16 Pop {rsthemes}",
+        "base16 Brewer {rsthemes}",
+        "One Dark {rsthemes}",
+        "Solarized Light {rsthemes}"
     ))
 
     # Whenever the R session restarts inside RStudio...
