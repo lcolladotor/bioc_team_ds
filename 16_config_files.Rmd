@@ -7,12 +7,14 @@ Here are some of my configuration files for working R and JHPCE.
 * RStudio Desktop _Preview_ version: https://rstudio.com/products/rstudio/download/preview/
 * R: latest versions that match Bioconductor release and devel
   - macOS: you can download the latest "branch" and "devel" from https://mac.r-project.org/
-  - Windows: https://cran.r-project.org/, also needs Rtools40 https://cran.r-project.org/bin/windows/Rtools/
+  - Windows: https://cran.r-project.org/, also needs Rtools42 https://cran.r-project.org/bin/windows/Rtools/
 * RSwitch
   - macOS: https://rud.is/rswitch/
   - Windows: I install the R versions in two different folders and switch them using RStudio's global configuration options
  https://cran.r-project.org/
 * Bioconductor-devel docker image: http://bioconductor.org/help/docker/
+
+<blockquote class="twitter-tweet"><p lang="en" dir="ltr">Do you want to use <a href="https://twitter.com/Bioconductor?ref_src=twsrc%5Etfw">@Bioconductor</a> 3.15? That means that you’ll need to install R 4.2 on your computer from CRAN <a href="https://t.co/11yTIRMqlC">https://t.co/11yTIRMqlC</a><br><br>For macOS users, you might want to use to install 📦 deps for compiling<br><br>sudo R<br>source(&quot;<a href="https://t.co/ATL1ipla0M">https://t.co/ATL1ipla0M</a>&quot;)<br>install.libs(&quot;all&quot;)<a href="https://twitter.com/hashtag/rstats?src=hash&amp;ref_src=twsrc%5Etfw">#rstats</a> <a href="https://t.co/EXUpWINy5T">https://t.co/EXUpWINy5T</a> <a href="https://t.co/X2HEbY1Znm">pic.twitter.com/X2HEbY1Znm</a></p>&mdash; 🇲🇽 Leonardo Collado-Torres (@lcolladotor) <a href="https://twitter.com/lcolladotor/status/1519665235652579328?ref_src=twsrc%5Etfw">April 28, 2022</a></blockquote> <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
 
 Additional software:
 
