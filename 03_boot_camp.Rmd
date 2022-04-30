@@ -13,6 +13,34 @@ Here are the videos from [YouTube](https://youtube.com/playlist?list=PLNNI62fcZP
 
 <iframe width="560" height="315" src="https://www.youtube.com/embed/videoseries?list=PLNNI62fcZPdCnAbQPmMZkRKPF4RTSFSSZ" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 
+## Overview videos
+
+Here are some highlighted overview videos that you might find useful as you get started.
+
+### R and RStudio
+
+If you are new to R and RStudio, you might like this overview video and [companion notes](https://docs.google.com/document/d/1oAW3z9eo0LRAPeEqqm4VyPfOz8NF0vhfd76jwcJkkog/edit).
+
+<iframe width="560" height="315" src="https://www.youtube.com/embed/XTuJ8vGnzBU" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+
+### Bioconductor
+
+Similarly, this overview video and [companion notes](https://docs.google.com/document/d/1VZ4dOesHjbWhrvSIXO8Ne1Qk4ZdGEhAySNviZOHPqjI/edit) on Bioconductor might be useful too.
+
+<iframe width="560" height="315" src="https://www.youtube.com/embed/c0Ch_sXiGDQ" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+
+### ggplot2 R graphics
+
+This video and [companion notes](https://docs.google.com/document/d/13YPVIalTVM-pJ7ldZhiboNzTPJDC_qBySLTTwigE2O4/edit) on [`ggplot2`](https://ggplot2.tidyverse.org/) R graphics could also be useful.
+
+<iframe width="560" height="315" src="https://www.youtube.com/embed/WUROUMklTS8" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+
+### Submitting jobs at JHPCE
+
+This video on how to use [`sgejobs`](http://research.libd.org/sgejobs/) for submitting jobs at JHPCE could be useful too.
+
+<iframe width="560" height="315" src="https://www.youtube.com/embed/mw5aQFX12wQ" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+
 ## LIBD bootcamps
 
 We have organized accessible bootcamps that have biologists in mind. If you spend most of your time coding, check the [Team bootcamps](#team-bootcamps) further below. For all of these bootcamps, you should have the latest [R](https://cran.r-project.org/) and [RStudio Desktop](https://rstudio.com/products/rstudio/download/) installed. You will typically need a computer with at least 8 GB of RAM.
