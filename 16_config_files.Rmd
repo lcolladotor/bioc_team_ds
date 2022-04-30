@@ -176,6 +176,10 @@ BiocManager::install(installed[!installed %in% current])
 current[!current %in% installed]
 ```
 
+You might also benefit from watching this video and checking the [companion notes](https://docs.google.com/document/d/1DD9MUI2e3jp5S8C3PWRulZ4jwbXo94D3UTCQNJl_-Qo/edit?usp=sharing).
+
+<iframe width="560" height="315" src="https://www.youtube.com/embed/D6t2GR7xaTE" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+
 
 ## R config files
 
