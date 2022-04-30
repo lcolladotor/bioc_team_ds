@@ -62,9 +62,17 @@ If you want to get a summary of new posts that might be relevant to you, you can
 
 <iframe width="560" height="315" src="https://www.youtube.com/embed/8bBo3B7N8YQ" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 
+## GitHub
+
+Frequently, we work with software that is cutting edge and under active development. Many people share their code through websites like [Bitbucket](https://bitbucket.org/), [GitLab](https://about.gitlab.com/), and most frequently, through [**GitHub**](https://github.com/).
+
+At LIBD we have a GitHub organization account [github.com/LieberInstitute](https://github.com/LieberInstitute). Think of it as our code library. As described in more detail in this video, you can search our code base, which might be useful to see actual examples on how we've used functions from specific R packages or other tools. If you work at LIBD, email Bill Urich so he can add you to the organization account, thank you!
+
+<iframe width="560" height="315" src="https://www.youtube.com/embed/vI2H59hKdQY" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+
 ## GitHub issues
 
-Frequently, we work with software that is cutting edge and under active development. Many people share their code through websites like [Bitbucket](https://bitbucket.org/), [GitLab](https://about.gitlab.com/), and most frequently, through [**GitHub**](https://github.com/). Most open source projects on GitHub have an **issues** page where you can interact directly with the developers of the software you are using. Note that most open source software developers are not payed to provide support, and their time might be very limited. As such, you should try very hard to provide all the information the developers need in order to help you. This is a time consuming process, but it can help you learn more too, and sometimes even resolve the problem yourself.
+Most open source projects on GitHub have an **issues** page where you can interact directly with the developers of the software you are using. Note that most open source software developers are not payed to provide support, and their time might be very limited. As such, you should try very hard to provide all the information the developers need in order to help you. This is a time consuming process, but it can help you learn more too, and sometimes even resolve the problem yourself.
 
 Some GitHub repositories have _issue templates_ such as [`lcolladotor/biocthis`](https://github.com/lcolladotor/biocthis/issues/new?assignees=&labels=&template=issue_template.md&title=%5BBUG%5D+Your+bug+or+feature+request) that will tell you a bit more of what information you should provide to make it easier for others to help you out. Others like [`rstudio/blogdown`](https://github.com/rstudio/blogdown/issues/new) will ask you to fill a few checkmarks before submitting your question.
 
