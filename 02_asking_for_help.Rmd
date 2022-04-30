@@ -14,6 +14,12 @@ Ultimately, some coding issues are complex. Here are some tips on some strategie
 
 <iframe width="560" height="315" src="https://www.youtube.com/embed/xUSEippbXBc" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 
+## R and RStudio
+
+If you are new to R and RStudio, you might like this overview video and [companion notes](https://docs.google.com/document/d/1oAW3z9eo0LRAPeEqqm4VyPfOz8NF0vhfd76jwcJkkog/edit).
+
+<iframe width="560" height="315" src="https://www.youtube.com/embed/XTuJ8vGnzBU" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+
 ## General guidelines
 
 In general, please follow these [Bioconductor composing guidelines](http://bioconductor.org/help/support/posting-guide/#composing).
