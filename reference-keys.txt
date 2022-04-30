@@ -7,6 +7,7 @@ sign-up
 dsgs-session-reports
 become-a-dsgs-guide
 how-to-ask-for-help
+r-and-rstudio
 general-guidelines
 avoid-screenshots
 reproducible-code
