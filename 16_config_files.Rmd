@@ -38,7 +38,7 @@ You might also be interested in checking out our older [onboarding setup materia
 
 ### R packages
 
-The following R code installs all the packages I have installed currently as my _base_. As I explore packages, I might try new ones that are not in this list.
+The following R code installs all the packages I have installed currently as my _base_. Many of them are packages I have made or contributed to as you can see at [lcolladotor.github.io/pkgs](https://lcolladotor.github.io/pkgs/). As I explore packages, I might try new ones that are not in this list.
 
 ```{r "install_from_scratch", eval = FALSE}
 ## Install from scratch
