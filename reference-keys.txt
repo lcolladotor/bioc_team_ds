@@ -19,6 +19,7 @@ rstudio-community-website
 github
 github-issues
 mailing-lists
+jhpce
 bithelp
 bitsupport
 bioc-devel
