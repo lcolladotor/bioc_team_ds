@@ -84,11 +84,17 @@ Again, [Jim Hester](https://twitter.com/jimhester_) has some useful advice.
 
 Eventually, you might need to ask for help through specific e-mail mailing lists. This is more common the closer you get to source code. Some of the mailing lists we use frequently are listed below.
 
-### bithelp
+### JHPCE
+
+If you need help with R and JHPCE, you might find this video and [companion notes](https://docs.google.com/document/d/14ax6UIlgFGnrZSR1HQ-2vLYhCYLXAGRiib5edMhxLGA/edit) useful.
+
+<iframe width="560" height="315" src="https://www.youtube.com/embed/-6sZyp0hNwU" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+
+#### bithelp
 
 This is the main mailing list for asking for help with all things related to [JHPCE](https://jhpce.jhu.edu/). The JHPCE admins plus some JHPCE users such as myself and Kasper Daniel Hansen receive these emails and might reply back. You can sign up to receive these emails too if you want. Or if you want to check the previous emails, check the [**bithelp website**](https://lists.johnshopkins.edu/sympa/arc/bithelp). Before you ask for help, check the JHPCE website since there are several guides there already that might answer the question you have in mind.
 
-### bitsupport
+#### bitsupport
 
 This is the main mailing list for all things related to [**JHPCE admin**](https://jhpce.jhu.edu/contact/) requests. For example, if you need help with getting your password reset or changing your default JHPCE user group.
 
