@@ -4,6 +4,10 @@ While I would love that the people I've trained continued collaborating with me 
 
 [How to be a modern scientist](https://leanpub.com/modernscientist) by Jeff Leek has a chapter on career planning, which is written with students and postdocs in mind as is an adaptation of [Ben Langmead's postdoc questionnaire](https://github.com/BenLangmead/langmead-lab/blob/master/postdoc_questionnaire.md). However, I still think that most of this chapter applies regardless of your current position. This book is cheap (and you can get it for free) and is part of the recommended material.
 
+You might find this video useful on how to make your own website using [`postcards`](https://github.com/seankross/postcards).
+
+<iframe width="560" height="315" src="https://www.youtube.com/embed/Q6eRD8Nyxfk" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+
 ## Career planning session
 
 If I'm asking you to have a career planning session with me, please do the following:
