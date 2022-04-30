@@ -106,6 +106,10 @@ You might also like this video on some specific feedback about R/Bioconductor pa
 
 <iframe width="560" height="315" src="https://www.youtube.com/embed/boHzS5H2YLc" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 
+If you are getting started with R/Bioconductor package development, then this video explaining [`biocthis`](https://bioconductor.org/packages/biocthis/) might be useful as well. Here are the [slides](https://speakerdeck.com/lcolladotor/making-bioc-packages-with-biocthis).
+
+<iframe width="560" height="315" src="https://www.youtube.com/embed/aMTxkYsM-8o" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+
 ### R-Sig-Mac
 
 Some mailing lists are very specific to what they serve. There are several of these mailing lists related to the R source itself, for sample [**R-SIG-Mac**](https://stat.ethz.ch/mailman/listinfo/r-sig-mac) which is useful if you are compiling R in macOS, and only for questions related to that. This is a rare situation for us, but for some situations, this is where you can find the latest information and reach the experts on this topic.
