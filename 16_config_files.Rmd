@@ -181,6 +181,10 @@ You might also benefit from watching this video and checking the [companion note
 <iframe width="560" height="315" src="https://www.youtube.com/embed/D6t2GR7xaTE" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 
 
+If you want to install multiple R and Bioconductor versions, then you might find this second video and [companion notes](https://docs.google.com/document/d/11_NZrZQTUzMBkwa8pGZ8Qo86bOu5wln_1TE7k7N_tjA/edit) useful.
+
+<iframe width="560" height="315" src="https://www.youtube.com/embed/6knyHlUe1cM" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+
 ## R config files
 
 ### `~/.Rprofile`
