@@ -16,6 +16,18 @@ Here are some of my configuration files for working R and JHPCE.
 
 <blockquote class="twitter-tweet"><p lang="en" dir="ltr">Do you want to use <a href="https://twitter.com/Bioconductor?ref_src=twsrc%5Etfw">@Bioconductor</a> 3.15? That means that you’ll need to install R 4.2 on your computer from CRAN <a href="https://t.co/11yTIRMqlC">https://t.co/11yTIRMqlC</a><br><br>For macOS users, you might want to use to install 📦 deps for compiling<br><br>sudo R<br>source(&quot;<a href="https://t.co/ATL1ipla0M">https://t.co/ATL1ipla0M</a>&quot;)<br>install.libs(&quot;all&quot;)<a href="https://twitter.com/hashtag/rstats?src=hash&amp;ref_src=twsrc%5Etfw">#rstats</a> <a href="https://t.co/EXUpWINy5T">https://t.co/EXUpWINy5T</a> <a href="https://t.co/X2HEbY1Znm">pic.twitter.com/X2HEbY1Znm</a></p>&mdash; 🇲🇽 Leonardo Collado-Torres (@lcolladotor) <a href="https://twitter.com/lcolladotor/status/1519665235652579328?ref_src=twsrc%5Etfw">April 28, 2022</a></blockquote> <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
 
+So in macOS I use:
+
+```{r "macos_bin", eval = FALSE}
+## From https://mac.r-project.org/bin/
+# sudo R
+source("https://mac.R-project.org/bin/install.R")
+install.libs("all")
+```
+
+and on winOS I install Rtools (latest version) from https://cran.r-project.org/bin/windows/Rtools/.
+
+
 Additional software:
 
 - Both: [Notion](https://www.notion.so/desktop), [Slack](https://slack.com/downloads)
@@ -135,25 +147,32 @@ remotes::install_github(c(
 As I described in [my blog post on updating R](http://lcolladotor.github.io/2017/05/04/updating-r/#.X6ICiIhKguU), I also like to saved my list of currently installed packages.
 
 ```{r "previously_installed", eval = FALSE}
-installed_path <- "/Users/lcollado/Dropbox/Computing/R"
+## Save currently installed packages
+installed_path <- ifelse(
+    .Platform$OS.type != "windows",
+    "~/Dropbox/Computing/R",
+    "C:/Users/fellg/Dropbox/Computing/R"
+)
+
 installed <- dir(.libPaths())
 save(installed, file = file.path(installed_path, paste0(Sys.Date(), '-installed.Rdata')))
 ``` 
 
 ```{r "currently_installed", eval = FALSE}
-## Load previous "installed" packaages
+## Load previous "installed" packages
 previous <- dir(path = installed_path, pattern = 'installed.Rdata')
 load(file.path(installed_path, previous[length(previous)]), verbose = TRUE)
 
-## Locate current pacakges
+## Locate current packages
 current <- dir(.libPaths())
-## Missing
+
+## Missing ones
 installed[!installed %in% current]
 
 ## Install missing packages
 BiocManager::install(installed[!installed %in% current])
 
-## New
+## List new R packages
 current[!current %in% installed]
 ```
 
