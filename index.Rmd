@@ -29,6 +29,12 @@ We constantly create new content to share what we are learning or working on, wh
 * discuss papers and software in our [team meetings](#team-meetings) (check our [schedule](https://docs.google.com/spreadsheets/d/1r6552ySisg7_KpmJmChOvLHVWdMmss3bncEf2jqIM9k/edit?usp=sharing))
 * organize R/Bioconductor data science [bootcamps](#rbioconductor-data-science-bootcamps)
 
+For an overview of our recent work, check this video and [companion slides](https://speakerdeck.com/lcolladotor/libd-ds-tldr).
+
+<iframe width="560" height="315" src="https://www.youtube.com/embed/33scakbTNO0" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+
+<script async class="speakerdeck-embed" data-id="3c32410b600740abb4724486e83ebd30" data-ratio="1.77725118483412" src="//speakerdeck.com/assets/embed.js"></script>
+
 ## YouTube {-}
 
 You can find our videos on **YouTube** at [LeonardoColladoTorres/playlists](https://www.youtube.com/c/LeonardoColladoTorres/playlists). Some of our main video playlists are show below.
