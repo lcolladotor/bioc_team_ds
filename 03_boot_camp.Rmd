@@ -41,6 +41,10 @@ This video on how to use [`sgejobs`](http://research.libd.org/sgejobs/) for subm
 
 <iframe width="560" height="315" src="https://www.youtube.com/embed/mw5aQFX12wQ" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 
+For a more advanced video on setting up bash loops and nested `qsub`s, check this second [`sgejobs`](http://research.libd.org/sgejobs/) video.
+
+<iframe width="560" height="315" src="https://www.youtube.com/embed/0_DvP3n2yLc" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+
 ## LIBD bootcamps
 
 We have organized accessible bootcamps that have biologists in mind. If you spend most of your time coding, check the [Team bootcamps](#team-bootcamps) further below. For all of these bootcamps, you should have the latest [R](https://cran.r-project.org/) and [RStudio Desktop](https://rstudio.com/products/rstudio/download/) installed. You will typically need a computer with at least 8 GB of RAM.
