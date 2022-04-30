@@ -102,6 +102,10 @@ This is the main mailing list for all things related to [**JHPCE admin**](https:
 
 This is the mailing list where all Bioconductor package authors are subscribed to. It's sole purpose is to help current and new Bioconductor package authors. If you have questions about how to use a Bioconductor R package, use the Bioconductor Support website **only**. However, if you do have questions about R package development, then check out [**bioc-devel**](https://stat.ethz.ch/mailman/listinfo/bioc-devel) and its archives.
 
+You might also like this video on some specific feedback about R/Bioconductor package development. Here are some [companion notes](https://docs.google.com/document/d/1jrK3av1MZYyovcRLjL6mwI_TUwf067-Wi3oerB3HbA8/edit).
+
+<iframe width="560" height="315" src="https://www.youtube.com/embed/boHzS5H2YLc" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+
 ### R-Sig-Mac
 
 Some mailing lists are very specific to what they serve. There are several of these mailing lists related to the R source itself, for sample [**R-SIG-Mac**](https://stat.ethz.ch/mailman/listinfo/r-sig-mac) which is useful if you are compiling R in macOS, and only for questions related to that. This is a rare situation for us, but for some situations, this is where you can find the latest information and reach the experts on this topic.
