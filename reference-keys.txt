@@ -7,7 +7,6 @@ sign-up
 dsgs-session-reports
 become-a-dsgs-guide
 how-to-ask-for-help
-r-and-rstudio
 general-guidelines
 avoid-screenshots
 reproducible-code
@@ -34,6 +33,11 @@ bioconductor
 r-ladies-baltimore
 miscellaneous
 rbioconductor-data-science-bootcamps
+overview-videos
+r-and-rstudio
+bioconductor-1
+ggplot2-r-graphics
+submitting-jobs-at-jhpce
 libd-bootcamps
 team-bootcamps
 bootcamp-source-materials
