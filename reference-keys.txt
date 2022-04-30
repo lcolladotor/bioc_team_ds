@@ -16,6 +16,7 @@ r-session-information
 learning-from-our-search-history
 bioconductor-support-website
 rstudio-community-website
+github
 github-issues
 mailing-lists
 bithelp
