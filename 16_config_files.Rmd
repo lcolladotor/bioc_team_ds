@@ -444,6 +444,10 @@ export _JAVA_OPTIONS="-Xms5g -Xmx6g"
 umask u=rwx,g=rwx,o= ## equivalent to umask 007
 ```
 
+For more information on `rmate` and `rmote` and how it relates to these configuration files, check this video and [companion notes](https://docs.google.com/document/d/1vj0xa_qZTIgsnooW_9_j44Low1UbSIufnlGXCgL_YCU/edit).
+
+<iframe width="560" height="315" src="https://www.youtube.com/embed/LjWr39C1Z_Q" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+
 ### `~/.bash_profile`
 
 This file is basically empty, since all the information is contained in the `~/.bashrc`. That was the recommended setup a few years ago when I asked JHPCE's admins.
