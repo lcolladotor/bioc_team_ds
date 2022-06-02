@@ -99,6 +99,7 @@ There are more materials out there than those that we've had a chance to learn a
 * General
   - _book_ [**The Elements of Data Analytic Style**](https://leanpub.com/datastyle) by Jeff Leek.
   - _book_ [**How to be a modern scientist**](https://leanpub.com/modernscientist) by Jeff Leek.
+  - _book_ [**The Art of Data Science**](https://bookdown.org/rdpeng/artofdatascience/) by [Roger D. Peng](https://twitter.com/rdpeng) and [Elizabeth Matsui](https://twitter.com/elizabethmatsui).
 * Statistics
   - _book_ [**Data Analysis for the Life Sciences**](https://leanpub.com/dataanalysisforthelifesciences) by [Rafael A Irizarry](https://twitter.com/rafalab) and [Michael I Love](https://twitter.com/mikelove).
   - _book_ [**Modern Statistics for Modern Biology**](http://web.stanford.edu/class/bios221/book/) by [Susan Holmes](https://twitter.com/SherlockpHolmes) and [Wolfgang Huber](https://twitter.com/wolfgangkhuber).
