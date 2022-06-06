@@ -449,7 +449,7 @@ if [[ $HOSTNAME == compute-* ]] || [[ $HOSTNAME == transfer-* ]]; then
     module load git
     module load git-status-size/github
     module load git-lfs/2.8.0
-    module load rmate/1.5.9
+    module load rmate/1.5.10
     module load conda_R/4.1
 fi
 
@@ -469,7 +469,6 @@ For more information on `rmate` and `rmote` and how it relates to these configur
 ### `~/.bash_profile`
 
 This file is basically empty, since all the information is contained in the `~/.bashrc`. That was the recommended setup a few years ago when I asked JHPCE's admins.
-
 ```{bash, eval = FALSE}
 # .bash_profile
 
