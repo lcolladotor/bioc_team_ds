@@ -72,10 +72,9 @@ Here's the list of project meetings and who should attend them:
 
 * recount3: Nick, Leo. Optional: Geo.
 * Moods: Louise, Leo.
-* spatial team meeting: Abby, Nick, Leo.
+* spatial team meeting: Louise, Nick, Leo.
 * deconvolution: Louise, Nick, Leo.
-* habenula: Josh, Louise, Leo.
+* habenula: Louise, Leo.
 * CHESS-BRAIN: Geo, Leo.
-* DNA genotyping: Josh, Geo, Nick.
 * LIBD rstats club: everyone.
 * team meeting: everyone.

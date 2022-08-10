@@ -68,11 +68,6 @@ Finally, please sign up for a **maximum of two sessions per week**. This will he
   - Technologies I use: R/Bioconductor, GitHub, SGE/JHPCE.
   - Learning about: team management, spatial transcriptomics.
   - [Calendly](https://calendly.com/lcolladotor/ds-guidance)
-* [Joshua M. Stolz](https://github.com/joshstolz) ([BioC Support](https://support.bioconductor.org/u/24318/))
-  - Research interests: RNA-seq,gene-networks,data processing/pipeline building.
-  - Technologies I use: R, Bioconductor.
-  - Learning about: spatial-transcriptomics, machine-learning, building R packages.
-  - [Calendly](https://calendly.com/josh-stolz/25-minute-meeting)
 * [Louise A. Huuki-Myers](https://github.com/lahuuki) ([BioC Support](https://support.bioconductor.org/u/24238/))
   - Research interests: RNA-seq, data visualization.
   - Technologies I use: R (tidyverse, ggplot, dplyr), Python, GitHub, Synapse upload.
