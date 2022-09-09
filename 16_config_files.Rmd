@@ -373,10 +373,8 @@ fi
 # Auto-complete command from history
 # http://lindesk.com/2009/04/customize-terminal-configuration-setting-bash-cli-power-user/
 export INPUTRC=~/.inputrc
-# http://www.biostat.jhsph.edu/~afisher/ComputingClub/webfiles/KasperHansenPres/IntermediateUnix.p
-df
-# https://unix.stackexchange.com/questions/48713/how-can-i-remove-duplicates-in-my-bash-history-pr
-eserving-order
+# http://www.biostat.jhsph.edu/~afisher/ComputingClub/webfiles/KasperHansenPres/IntermediateUnix.pdf
+# https://unix.stackexchange.com/questions/48713/how-can-i-remove-duplicates-in-my-bash-history-preserving-order
 export HISTCONTROL=ignoreboth:erasedups
 export HISTSIZE=20000
 shopt -s histappend
@@ -425,8 +423,7 @@ alias ls="ls --color=auto"
 ## After switching to RStudio:
 # https://askubuntu.com/questions/466198/how-do-i-change-the-color-for-directories-with-ls-in-the-
 console
-export LS_COLORS="di=0;32:ln=0;36:so=0;35:pi=0;93:ex=0;31:bd=0;34;46:cd=0;34;43:su=0;41:sg=0;46:tw
-=0;47:ow=0;43:fi=0;33"
+export LS_COLORS="di=0;32:ln=0;36:so=0;35:pi=0;93:ex=0;31:bd=0;34;46:cd=0;34;43:su=0;41:sg=0;46:tw=0;47:ow=0;43:fi=0;33"
 
 # Uncomment below for Mac and comment the two previous commands
 #export CLICOLOR=1
@@ -450,7 +447,7 @@ if [[ $HOSTNAME == compute-* ]] || [[ $HOSTNAME == transfer-* ]]; then
     module load git-status-size/github
     module load git-lfs/2.8.0
     module load rmate/1.5.10
-    module load conda_R/4.devel
+    module load conda_R/4.2
 fi
 
 ## To deal with running nextflow without requesting much more memory
