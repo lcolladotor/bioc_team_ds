@@ -132,14 +132,18 @@ BiocManager::install(c(
 ## GitHub packages
 remotes::install_github(c(
     "cloudyr/rmote",
-    "gadenbuie/xaringanExtra"
+    "gadenbuie/xaringanExtra",
+    "clauswilke/colorblindr",
+    ## Install from GitHub due to https://github.com/immunogenomics/harmony/issues/145
+    "immunogenomics/harmony", 
+    "satijalab/azimuth"
 ))
+ ## Related to https://github.com/gusevlab/fusion_twas/issues/14
+remotes::install_github("carbocation/plink2R/plink2R", ref = "carbocation-permit-r361")
 
-## Private packages (you likely won't have access to them)
-remotes::install_github(c(
-    "LieberInstitute/LIBDpheno",
-    "LieberInstitute/libdRSE"
-), dependencies = TRUE)
+## Packages I only install at JHPCE
+remotes::install_github("muschellij2/clusterRundown")
+remotes::install_github("cloudyr/rmote")
 ```
 
 #### Previously installed
