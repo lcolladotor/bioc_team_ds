@@ -481,14 +481,18 @@ Do you want to use <a href="https://twitter.com/Bioconductor?ref_src=twsrc%5Etfw
 <span id="cb5-89"><a href="config-files.html#cb5-89" aria-hidden="true" tabindex="-1"></a><span class="do">## GitHub packages</span></span>
 <span id="cb5-90"><a href="config-files.html#cb5-90" aria-hidden="true" tabindex="-1"></a>remotes<span class="sc">::</span><span class="fu">install_github</span>(<span class="fu">c</span>(</span>
 <span id="cb5-91"><a href="config-files.html#cb5-91" aria-hidden="true" tabindex="-1"></a>    <span class="st">&quot;cloudyr/rmote&quot;</span>,</span>
-<span id="cb5-92"><a href="config-files.html#cb5-92" aria-hidden="true" tabindex="-1"></a>    <span class="st">&quot;gadenbuie/xaringanExtra&quot;</span></span>
-<span id="cb5-93"><a href="config-files.html#cb5-93" aria-hidden="true" tabindex="-1"></a>))</span>
-<span id="cb5-94"><a href="config-files.html#cb5-94" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb5-95"><a href="config-files.html#cb5-95" aria-hidden="true" tabindex="-1"></a><span class="do">## Private packages (you likely won&#39;t have access to them)</span></span>
-<span id="cb5-96"><a href="config-files.html#cb5-96" aria-hidden="true" tabindex="-1"></a>remotes<span class="sc">::</span><span class="fu">install_github</span>(<span class="fu">c</span>(</span>
-<span id="cb5-97"><a href="config-files.html#cb5-97" aria-hidden="true" tabindex="-1"></a>    <span class="st">&quot;LieberInstitute/LIBDpheno&quot;</span>,</span>
-<span id="cb5-98"><a href="config-files.html#cb5-98" aria-hidden="true" tabindex="-1"></a>    <span class="st">&quot;LieberInstitute/libdRSE&quot;</span></span>
-<span id="cb5-99"><a href="config-files.html#cb5-99" aria-hidden="true" tabindex="-1"></a>), <span class="at">dependencies =</span> <span class="cn">TRUE</span>)</span></code></pre></div>
+<span id="cb5-92"><a href="config-files.html#cb5-92" aria-hidden="true" tabindex="-1"></a>    <span class="st">&quot;gadenbuie/xaringanExtra&quot;</span>,</span>
+<span id="cb5-93"><a href="config-files.html#cb5-93" aria-hidden="true" tabindex="-1"></a>    <span class="st">&quot;clauswilke/colorblindr&quot;</span>,</span>
+<span id="cb5-94"><a href="config-files.html#cb5-94" aria-hidden="true" tabindex="-1"></a>    <span class="do">## Install from GitHub due to https://github.com/immunogenomics/harmony/issues/145</span></span>
+<span id="cb5-95"><a href="config-files.html#cb5-95" aria-hidden="true" tabindex="-1"></a>    <span class="st">&quot;immunogenomics/harmony&quot;</span>, </span>
+<span id="cb5-96"><a href="config-files.html#cb5-96" aria-hidden="true" tabindex="-1"></a>    <span class="st">&quot;satijalab/azimuth&quot;</span></span>
+<span id="cb5-97"><a href="config-files.html#cb5-97" aria-hidden="true" tabindex="-1"></a>))</span>
+<span id="cb5-98"><a href="config-files.html#cb5-98" aria-hidden="true" tabindex="-1"></a> <span class="do">## Related to https://github.com/gusevlab/fusion_twas/issues/14</span></span>
+<span id="cb5-99"><a href="config-files.html#cb5-99" aria-hidden="true" tabindex="-1"></a>remotes<span class="sc">::</span><span class="fu">install_github</span>(<span class="st">&quot;carbocation/plink2R/plink2R&quot;</span>, <span class="at">ref =</span> <span class="st">&quot;carbocation-permit-r361&quot;</span>)</span>
+<span id="cb5-100"><a href="config-files.html#cb5-100" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb5-101"><a href="config-files.html#cb5-101" aria-hidden="true" tabindex="-1"></a><span class="do">## Packages I only install at JHPCE</span></span>
+<span id="cb5-102"><a href="config-files.html#cb5-102" aria-hidden="true" tabindex="-1"></a>remotes<span class="sc">::</span><span class="fu">install_github</span>(<span class="st">&quot;muschellij2/clusterRundown&quot;</span>)</span>
+<span id="cb5-103"><a href="config-files.html#cb5-103" aria-hidden="true" tabindex="-1"></a>remotes<span class="sc">::</span><span class="fu">install_github</span>(<span class="st">&quot;cloudyr/rmote&quot;</span>)</span></code></pre></div>
 <div id="previously-installed" class="section level4 hasAnchor" number="16.1.1.1">
 <h4><span class="header-section-number">16.1.1.1</span> Previously installed<a href="config-files.html#previously-installed" class="anchor-section" aria-label="Anchor link to header"></a></h4>
 <p>As I described in <a href="http://lcolladotor.github.io/2017/05/04/updating-r/#.X6ICiIhKguU">my blog post on updating R</a>, I also like to saved my list of currently installed packages.</p>
