@@ -11,7 +11,7 @@ team-communication
 github
 slack
 team-calendar
-twitter-1
+academic-twitter
 laptop-setup
 jhpce
 jhpce-account
