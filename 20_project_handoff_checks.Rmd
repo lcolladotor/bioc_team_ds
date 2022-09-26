@@ -1,20 +1,20 @@
 # Project code handoff checks
 
-Things to check before someone leaves, to make sure we understand the code and files in the project.
+At some point, it might be time for you to move on to a different opportunity. We will miss you! But before you go, there are some things we should check, to make sure we understand the code and files in the project(s) you were working on.
 
 * Is the code version controlled?
 * Do we have access to the GitHub repository?
   * Is the repository available on the [LieberInstitute](https://github.com/LieberInstitute) organization account?
 * Is the home directory on JHPCE listed on the main `README.md`?
 * Do we have access to the files on JHPCE?
-  * Do we have write access to these files?
+  * Do we have write access to these files? Check with `nfs4_getfacl` and/or `ls -lah`.
 * Is there a clean `git status` output?
 * Are the files organized as specified in ["Organizing your work"](#organizing-your-work.html)?
   * If not, is there one or more `README.md` files explaining how the files are organized and which code was run first, then second, etc?
 * Is there `sessioninfo::session_info()` output on the log files or commented on the R scripts? This is useful for reproducibility and for writing the methods sections of papers.
   * Check if any of the packages were installed from GitHub. If so, ask why GitHub versions were needed. For example, [harmony/issues/145](https://github.com/immunogenomics/harmony/issues/145). Note this on the `README.md` or as a comment on the top of the script.
 * Are the scripts linear? That is, can they be re-run from line 1 till the end linearly?
-  * Ideally: are there companion shell scripts for the R scripts? For example, [`run_all_post_spaceranger.sh`](https://github.com/LieberInstitute/Visium_IF_AD/blob/master/code/run_all_post_spaceranger.sh).
+  * Ideally: are there companion shell scripts for the R scripts? For example, [`Visium_IF_AD/run_all_post_spaceranger.sh`](https://github.com/LieberInstitute/Visium_IF_AD/blob/master/code/run_all_post_spaceranger.sh).
 * Do we know how much RAM or how many cores are required for each script?
   * Ideally: This can be well documented with the companion shell scripts.
   * Less ideal but still good: code comments noting the `qrsh` / `qsub` commands used.
