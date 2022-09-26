@@ -1,0 +1,29 @@
+# Project code handoff checks
+
+Things to check before someone leaves, to make sure we understand the code and files in the project.
+
+* Is the code version controlled?
+* Do we have access to the GitHub repository?
+* Is the home directory on JHPCE listed on the main `README.md`?
+* Do we have access to the files on JHPCE?
+  * Do we have write access to these files?
+* Is there a clean `git status` output?
+* Are the files organized as in https://lcolladotor.github.io/bioc_team_ds/organizing-your-work.html#.YqrlZ-xBya0?
+  * If not, is there one or more `README.md` files explaining how the files are organized and which code was run first, then second, etc?
+* Is there `sessioninfo::session_info()` output on the log files or commented on the R scripts? This is useful for reproducibility and for writing the methods sections of papers.
+  * Check if any of the packages were installed from GitHub. If so, ask why GitHub versions were needed. For example, https://github.com/immunogenomics/harmony/issues/145. Note this on the `README.md` or as a comment on the top of the script.
+* Are the scripts linear? That is, can they be re-run from line 1 till the end linearly?
+  * Ideally: are there companion shell scripts for the R scripts? For example, https://github.com/LieberInstitute/Visium_IF_AD/blob/master/code/run_all_post_spaceranger.sh.
+* Do we know how much RAM or how many cores are required for each script?
+  * Ideally: This can be well documented with the companion shell scripts.
+  * Less ideal but still good: code comments noting the qrsh / qsub commands used.
+* Do we know about any JHPCE modules that need to be loaded for running these scripts?
+  * Ideally: this can be documented on the companion shell scripts.
+* Do the scripts have comments?
+* Do we know which script was used for making each plot or output file?
+  * Sometimes plot names have been duplicated across scripts, leading to ambiguity on which script made which plot.
+* Was `here::here()` used?
+  * If not, do we have access to the full paths used?
+* Is there any `raw-data` that should be backed up that is not backed up right now?
+* Make a list of the main software used and highlight any software that is new to us, in case we need to check more about it before the author of the code leaves.
+* Someone with familiarity of the biological context (e.g. single-cell cell types), does the code make sense?
