@@ -1,0 +1,890 @@
+<!DOCTYPE html>
+<html lang="" xml:lang="">
+<head>
+
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <title>1 Onboarding | R/Bioconductor-powered Team Data Science</title>
+  <meta name="description" content="1 Onboarding | R/Bioconductor-powered Team Data Science" />
+  <meta name="generator" content="bookdown 0.29 and GitBook 2.6.7" />
+
+  <meta property="og:title" content="1 Onboarding | R/Bioconductor-powered Team Data Science" />
+  <meta property="og:type" content="book" />
+  
+  
+  <meta name="github-repo" content="lcolladotor/bioc_team_ds" />
+
+  <meta name="twitter:card" content="summary" />
+  <meta name="twitter:title" content="1 Onboarding | R/Bioconductor-powered Team Data Science" />
+  
+  
+  
+
+<meta name="author" content="Leonardo Collado-Torres" />
+
+
+
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="apple-mobile-web-app-capable" content="yes" />
+  <meta name="apple-mobile-web-app-status-bar-style" content="black" />
+  
+  <link rel="shortcut icon" href="icon_32.png" type="image/x-icon" />
+<link rel="prev" href="index.html"/>
+<link rel="next" href="data-science-guidance-sessions.html"/>
+<script src="libs/jquery-3.6.0/jquery-3.6.0.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/fuse.js@6.4.6/dist/fuse.min.js"></script>
+<link href="libs/gitbook-2.6.7/css/style.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-table.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-bookdown.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-highlight.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-search.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-fontsettings.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-clipboard.css" rel="stylesheet" />
+
+
+
+
+
+
+
+
+<link href="libs/anchor-sections-1.1.0/anchor-sections.css" rel="stylesheet" />
+<link href="libs/anchor-sections-1.1.0/anchor-sections-hash.css" rel="stylesheet" />
+<script src="libs/anchor-sections-1.1.0/anchor-sections.js"></script>
+
+
+<style type="text/css">
+pre > code.sourceCode { white-space: pre; position: relative; }
+pre > code.sourceCode > span { display: inline-block; line-height: 1.25; }
+pre > code.sourceCode > span:empty { height: 1.2em; }
+.sourceCode { overflow: visible; }
+code.sourceCode > span { color: inherit; text-decoration: inherit; }
+pre.sourceCode { margin: 0; }
+@media screen {
+div.sourceCode { overflow: auto; }
+}
+@media print {
+pre > code.sourceCode { white-space: pre-wrap; }
+pre > code.sourceCode > span { text-indent: -5em; padding-left: 5em; }
+}
+pre.numberSource code
+  { counter-reset: source-line 0; }
+pre.numberSource code > span
+  { position: relative; left: -4em; counter-increment: source-line; }
+pre.numberSource code > span > a:first-child::before
+  { content: counter(source-line);
+    position: relative; left: -1em; text-align: right; vertical-align: baseline;
+    border: none; display: inline-block;
+    -webkit-touch-callout: none; -webkit-user-select: none;
+    -khtml-user-select: none; -moz-user-select: none;
+    -ms-user-select: none; user-select: none;
+    padding: 0 4px; width: 4em;
+    color: #aaaaaa;
+  }
+pre.numberSource { margin-left: 3em; border-left: 1px solid #aaaaaa;  padding-left: 4px; }
+div.sourceCode
+  {   }
+@media screen {
+pre > code.sourceCode > span > a:first-child::before { text-decoration: underline; }
+}
+code span.al { color: #ff0000; font-weight: bold; } /* Alert */
+code span.an { color: #60a0b0; font-weight: bold; font-style: italic; } /* Annotation */
+code span.at { color: #7d9029; } /* Attribute */
+code span.bn { color: #40a070; } /* BaseN */
+code span.bu { } /* BuiltIn */
+code span.cf { color: #007020; font-weight: bold; } /* ControlFlow */
+code span.ch { color: #4070a0; } /* Char */
+code span.cn { color: #880000; } /* Constant */
+code span.co { color: #60a0b0; font-style: italic; } /* Comment */
+code span.cv { color: #60a0b0; font-weight: bold; font-style: italic; } /* CommentVar */
+code span.do { color: #ba2121; font-style: italic; } /* Documentation */
+code span.dt { color: #902000; } /* DataType */
+code span.dv { color: #40a070; } /* DecVal */
+code span.er { color: #ff0000; font-weight: bold; } /* Error */
+code span.ex { } /* Extension */
+code span.fl { color: #40a070; } /* Float */
+code span.fu { color: #06287e; } /* Function */
+code span.im { } /* Import */
+code span.in { color: #60a0b0; font-weight: bold; font-style: italic; } /* Information */
+code span.kw { color: #007020; font-weight: bold; } /* Keyword */
+code span.op { color: #666666; } /* Operator */
+code span.ot { color: #007020; } /* Other */
+code span.pp { color: #bc7a00; } /* Preprocessor */
+code span.sc { color: #4070a0; } /* SpecialChar */
+code span.ss { color: #bb6688; } /* SpecialString */
+code span.st { color: #4070a0; } /* String */
+code span.va { color: #19177c; } /* Variable */
+code span.vs { color: #4070a0; } /* VerbatimString */
+code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warning */
+</style>
+
+
+<link rel="stylesheet" href="style.css" type="text/css" />
+</head>
+
+<body>
+
+
+
+  <div class="book without-animation with-summary font-size-2 font-family-1" data-basepath=".">
+
+    <div class="book-summary">
+      <nav role="navigation">
+
+<ul class="summary">
+<li class="chapter" data-level="" data-path="index.html"><a href="index.html"><i class="fa fa-check"></i>Overview</a>
+<ul>
+<li class="chapter" data-level="" data-path="index.html"><a href="index.html#youtube"><i class="fa fa-check"></i>YouTube</a>
+<ul>
+<li class="chapter" data-level="" data-path="index.html"><a href="index.html#libd-rstats-club"><i class="fa fa-check"></i>LIBD rstats club</a></li>
+<li class="chapter" data-level="" data-path="index.html"><a href="index.html#team-journal-club"><i class="fa fa-check"></i>Team journal club</a></li>
+<li class="chapter" data-level="" data-path="index.html"><a href="index.html#libd-and-team-bootcamps"><i class="fa fa-check"></i>LIBD and team bootcamps</a></li>
+</ul></li>
+<li class="chapter" data-level="" data-path="index.html"><a href="index.html#code-of-conduct"><i class="fa fa-check"></i>Code of conduct</a></li>
+<li class="chapter" data-level="" data-path="index.html"><a href="index.html#team-members"><i class="fa fa-check"></i>Team members</a>
+<ul>
+<li class="chapter" data-level="" data-path="index.html"><a href="index.html#alumni"><i class="fa fa-check"></i>Alumni</a></li>
+</ul></li>
+<li class="chapter" data-level="" data-path="index.html"><a href="index.html#acknowledgements"><i class="fa fa-check"></i>Acknowledgements</a></li>
+<li class="chapter" data-level="" data-path="index.html"><a href="index.html#join-the-team"><i class="fa fa-check"></i>Join the team</a></li>
+<li class="chapter" data-level="" data-path="index.html"><a href="index.html#twitter"><i class="fa fa-check"></i>Twitter</a></li>
+</ul></li>
+<li class="chapter" data-level="1" data-path="onboarding.html"><a href="onboarding.html"><i class="fa fa-check"></i><b>1</b> Onboarding</a>
+<ul>
+<li class="chapter" data-level="1.1" data-path="onboarding.html"><a href="onboarding.html#basic-work-expectations"><i class="fa fa-check"></i><b>1.1</b> Basic work expectations</a></li>
+<li class="chapter" data-level="1.2" data-path="onboarding.html"><a href="onboarding.html#background-knowledge"><i class="fa fa-check"></i><b>1.2</b> Background knowledge</a>
+<ul>
+<li class="chapter" data-level="1.2.1" data-path="onboarding.html"><a href="onboarding.html#rna-seq"><i class="fa fa-check"></i><b>1.2.1</b> RNA-seq</a></li>
+<li class="chapter" data-level="1.2.2" data-path="onboarding.html"><a href="onboarding.html#dnam"><i class="fa fa-check"></i><b>1.2.2</b> DNAm</a></li>
+</ul></li>
+<li class="chapter" data-level="1.3" data-path="onboarding.html"><a href="onboarding.html#commonly-used-software"><i class="fa fa-check"></i><b>1.3</b> Commonly used software</a>
+<ul>
+<li class="chapter" data-level="1.3.1" data-path="onboarding.html"><a href="onboarding.html#bash-and-linux"><i class="fa fa-check"></i><b>1.3.1</b> <code>bash</code> and <code>linux</code></a></li>
+<li class="chapter" data-level="1.3.2" data-path="onboarding.html"><a href="onboarding.html#r"><i class="fa fa-check"></i><b>1.3.2</b> <code>R</code></a></li>
+<li class="chapter" data-level="1.3.3" data-path="onboarding.html"><a href="onboarding.html#python"><i class="fa fa-check"></i><b>1.3.3</b> <code>python</code></a></li>
+</ul></li>
+<li class="chapter" data-level="1.4" data-path="onboarding.html"><a href="onboarding.html#team-communication"><i class="fa fa-check"></i><b>1.4</b> Team communication</a>
+<ul>
+<li class="chapter" data-level="1.4.1" data-path="onboarding.html"><a href="onboarding.html#github"><i class="fa fa-check"></i><b>1.4.1</b> GitHub</a></li>
+<li class="chapter" data-level="1.4.2" data-path="onboarding.html"><a href="onboarding.html#slack"><i class="fa fa-check"></i><b>1.4.2</b> Slack</a></li>
+<li class="chapter" data-level="1.4.3" data-path="onboarding.html"><a href="onboarding.html#team-calendar"><i class="fa fa-check"></i><b>1.4.3</b> Team calendar</a></li>
+<li class="chapter" data-level="1.4.4" data-path="onboarding.html"><a href="onboarding.html#twitter-1"><i class="fa fa-check"></i><b>1.4.4</b> Twitter</a></li>
+</ul></li>
+<li class="chapter" data-level="1.5" data-path="onboarding.html"><a href="onboarding.html#laptop-setup"><i class="fa fa-check"></i><b>1.5</b> Laptop setup</a>
+<ul>
+<li class="chapter" data-level="1.5.1" data-path="onboarding.html"><a href="onboarding.html#jhpce"><i class="fa fa-check"></i><b>1.5.1</b> JHPCE</a></li>
+<li class="chapter" data-level="1.5.2" data-path="onboarding.html"><a href="onboarding.html#mac"><i class="fa fa-check"></i><b>1.5.2</b> Mac</a></li>
+<li class="chapter" data-level="1.5.3" data-path="onboarding.html"><a href="onboarding.html#windows"><i class="fa fa-check"></i><b>1.5.3</b> Windows</a></li>
+</ul></li>
+<li class="chapter" data-level="1.6" data-path="onboarding.html"><a href="onboarding.html#commonly-used-software-1"><i class="fa fa-check"></i><b>1.6</b> Commonly used software</a>
+<ul>
+<li class="chapter" data-level="1.6.1" data-path="onboarding.html"><a href="onboarding.html#bioconductor"><i class="fa fa-check"></i><b>1.6.1</b> Bioconductor</a></li>
+<li class="chapter" data-level="1.6.2" data-path="onboarding.html"><a href="onboarding.html#lab-software"><i class="fa fa-check"></i><b>1.6.2</b> Lab software</a></li>
+<li class="chapter" data-level="1.6.3" data-path="onboarding.html"><a href="onboarding.html#writing-papers"><i class="fa fa-check"></i><b>1.6.3</b> Writing papers</a></li>
+</ul></li>
+<li class="chapter" data-level="1.7" data-path="onboarding.html"><a href="onboarding.html#meetings-of-potential-interest"><i class="fa fa-check"></i><b>1.7</b> Meetings of potential interest</a>
+<ul>
+<li class="chapter" data-level="1.7.1" data-path="onboarding.html"><a href="onboarding.html#conferences"><i class="fa fa-check"></i><b>1.7.1</b> Conferences</a></li>
+</ul></li>
+<li class="chapter" data-level="1.8" data-path="onboarding.html"><a href="onboarding.html#eating-nearby"><i class="fa fa-check"></i><b>1.8</b> Eating nearby</a>
+<ul>
+<li class="chapter" data-level="1.8.1" data-path="onboarding.html"><a href="onboarding.html#food-trucks"><i class="fa fa-check"></i><b>1.8.1</b> Food trucks</a></li>
+<li class="chapter" data-level="1.8.2" data-path="onboarding.html"><a href="onboarding.html#other"><i class="fa fa-check"></i><b>1.8.2</b> Other</a></li>
+</ul></li>
+<li class="chapter" data-level="1.9" data-path="onboarding.html"><a href="onboarding.html#baltimore-life"><i class="fa fa-check"></i><b>1.9</b> Baltimore Life</a></li>
+</ul></li>
+<li class="chapter" data-level="2" data-path="data-science-guidance-sessions.html"><a href="data-science-guidance-sessions.html"><i class="fa fa-check"></i><b>2</b> Data Science guidance sessions</a>
+<ul>
+<li class="chapter" data-level="2.1" data-path="data-science-guidance-sessions.html"><a href="data-science-guidance-sessions.html#interaction-rules"><i class="fa fa-check"></i><b>2.1</b> Interaction rules</a></li>
+<li class="chapter" data-level="2.2" data-path="data-science-guidance-sessions.html"><a href="data-science-guidance-sessions.html#help-us-help-you"><i class="fa fa-check"></i><b>2.2</b> Help us help you</a>
+<ul>
+<li class="chapter" data-level="2.2.1" data-path="data-science-guidance-sessions.html"><a href="data-science-guidance-sessions.html#framing-a-question"><i class="fa fa-check"></i><b>2.2.1</b> Framing a question</a></li>
+<li class="chapter" data-level="2.2.2" data-path="data-science-guidance-sessions.html"><a href="data-science-guidance-sessions.html#useful-information"><i class="fa fa-check"></i><b>2.2.2</b> Useful information</a></li>
+</ul></li>
+<li class="chapter" data-level="2.3" data-path="data-science-guidance-sessions.html"><a href="data-science-guidance-sessions.html#sign-up"><i class="fa fa-check"></i><b>2.3</b> Sign up</a></li>
+<li class="chapter" data-level="2.4" data-path="data-science-guidance-sessions.html"><a href="data-science-guidance-sessions.html#dsgs-session-reports"><i class="fa fa-check"></i><b>2.4</b> DSgs session reports</a></li>
+<li class="chapter" data-level="2.5" data-path="data-science-guidance-sessions.html"><a href="data-science-guidance-sessions.html#become-a-dsgs-guide"><i class="fa fa-check"></i><b>2.5</b> Become a DSgs guide</a></li>
+</ul></li>
+<li class="chapter" data-level="3" data-path="how-to-ask-for-help.html"><a href="how-to-ask-for-help.html"><i class="fa fa-check"></i><b>3</b> How to ask for help</a>
+<ul>
+<li class="chapter" data-level="3.1" data-path="how-to-ask-for-help.html"><a href="how-to-ask-for-help.html#general-guidelines"><i class="fa fa-check"></i><b>3.1</b> General guidelines</a>
+<ul>
+<li class="chapter" data-level="3.1.1" data-path="how-to-ask-for-help.html"><a href="how-to-ask-for-help.html#avoid-screenshots"><i class="fa fa-check"></i><b>3.1.1</b> Avoid screenshots</a></li>
+<li class="chapter" data-level="3.1.2" data-path="how-to-ask-for-help.html"><a href="how-to-ask-for-help.html#reproducible-code"><i class="fa fa-check"></i><b>3.1.2</b> Reproducible code</a></li>
+<li class="chapter" data-level="3.1.3" data-path="how-to-ask-for-help.html"><a href="how-to-ask-for-help.html#use-reprex"><i class="fa fa-check"></i><b>3.1.3</b> Use reprex</a></li>
+<li class="chapter" data-level="3.1.4" data-path="how-to-ask-for-help.html"><a href="how-to-ask-for-help.html#use-markdown-syntax"><i class="fa fa-check"></i><b>3.1.4</b> Use Markdown syntax</a></li>
+<li class="chapter" data-level="3.1.5" data-path="how-to-ask-for-help.html"><a href="how-to-ask-for-help.html#r-session-information"><i class="fa fa-check"></i><b>3.1.5</b> R session information</a></li>
+</ul></li>
+<li class="chapter" data-level="3.2" data-path="how-to-ask-for-help.html"><a href="how-to-ask-for-help.html#learning-from-our-search-history"><i class="fa fa-check"></i><b>3.2</b> Learning from our search history</a></li>
+<li class="chapter" data-level="3.3" data-path="how-to-ask-for-help.html"><a href="how-to-ask-for-help.html#bioconductor-support-website"><i class="fa fa-check"></i><b>3.3</b> Bioconductor Support website</a></li>
+<li class="chapter" data-level="3.4" data-path="how-to-ask-for-help.html"><a href="how-to-ask-for-help.html#rstudio-community-website"><i class="fa fa-check"></i><b>3.4</b> RStudio Community website</a></li>
+<li class="chapter" data-level="3.5" data-path="how-to-ask-for-help.html"><a href="how-to-ask-for-help.html#github-1"><i class="fa fa-check"></i><b>3.5</b> GitHub</a></li>
+<li class="chapter" data-level="3.6" data-path="how-to-ask-for-help.html"><a href="how-to-ask-for-help.html#github-issues"><i class="fa fa-check"></i><b>3.6</b> GitHub issues</a></li>
+<li class="chapter" data-level="3.7" data-path="how-to-ask-for-help.html"><a href="how-to-ask-for-help.html#mailing-lists"><i class="fa fa-check"></i><b>3.7</b> Mailing lists</a>
+<ul>
+<li class="chapter" data-level="3.7.1" data-path="how-to-ask-for-help.html"><a href="how-to-ask-for-help.html#jhpce-1"><i class="fa fa-check"></i><b>3.7.1</b> JHPCE</a></li>
+<li class="chapter" data-level="3.7.2" data-path="how-to-ask-for-help.html"><a href="how-to-ask-for-help.html#bioc-devel"><i class="fa fa-check"></i><b>3.7.2</b> Bioc-devel</a></li>
+<li class="chapter" data-level="3.7.3" data-path="how-to-ask-for-help.html"><a href="how-to-ask-for-help.html#r-sig-mac"><i class="fa fa-check"></i><b>3.7.3</b> R-Sig-Mac</a></li>
+</ul></li>
+<li class="chapter" data-level="3.8" data-path="how-to-ask-for-help.html"><a href="how-to-ask-for-help.html#slack-1"><i class="fa fa-check"></i><b>3.8</b> Slack</a>
+<ul>
+<li class="chapter" data-level="3.8.1" data-path="how-to-ask-for-help.html"><a href="how-to-ask-for-help.html#jhulibd"><i class="fa fa-check"></i><b>3.8.1</b> JHU/LIBD</a></li>
+<li class="chapter" data-level="3.8.2" data-path="how-to-ask-for-help.html"><a href="how-to-ask-for-help.html#bioconductor-1"><i class="fa fa-check"></i><b>3.8.2</b> Bioconductor</a></li>
+<li class="chapter" data-level="3.8.3" data-path="how-to-ask-for-help.html"><a href="how-to-ask-for-help.html#r-ladies-baltimore"><i class="fa fa-check"></i><b>3.8.3</b> R-Ladies Baltimore</a></li>
+<li class="chapter" data-level="3.8.4" data-path="how-to-ask-for-help.html"><a href="how-to-ask-for-help.html#miscellaneous"><i class="fa fa-check"></i><b>3.8.4</b> Miscellaneous</a></li>
+</ul></li>
+</ul></li>
+<li class="part"><span><b>I Bootcamps</b></span></li>
+<li class="chapter" data-level="4" data-path="rbioconductor-data-science-bootcamps.html"><a href="rbioconductor-data-science-bootcamps.html"><i class="fa fa-check"></i><b>4</b> R/Bioconductor Data Science bootcamps</a>
+<ul>
+<li class="chapter" data-level="4.1" data-path="rbioconductor-data-science-bootcamps.html"><a href="rbioconductor-data-science-bootcamps.html#overview-videos"><i class="fa fa-check"></i><b>4.1</b> Overview videos</a>
+<ul>
+<li class="chapter" data-level="4.1.1" data-path="rbioconductor-data-science-bootcamps.html"><a href="rbioconductor-data-science-bootcamps.html#r-and-rstudio"><i class="fa fa-check"></i><b>4.1.1</b> R and RStudio</a></li>
+<li class="chapter" data-level="4.1.2" data-path="rbioconductor-data-science-bootcamps.html"><a href="rbioconductor-data-science-bootcamps.html#bioconductor-2"><i class="fa fa-check"></i><b>4.1.2</b> Bioconductor</a></li>
+<li class="chapter" data-level="4.1.3" data-path="rbioconductor-data-science-bootcamps.html"><a href="rbioconductor-data-science-bootcamps.html#ggplot2-r-graphics"><i class="fa fa-check"></i><b>4.1.3</b> ggplot2 R graphics</a></li>
+<li class="chapter" data-level="4.1.4" data-path="rbioconductor-data-science-bootcamps.html"><a href="rbioconductor-data-science-bootcamps.html#submitting-jobs-at-jhpce"><i class="fa fa-check"></i><b>4.1.4</b> Submitting jobs at JHPCE</a></li>
+</ul></li>
+<li class="chapter" data-level="4.2" data-path="rbioconductor-data-science-bootcamps.html"><a href="rbioconductor-data-science-bootcamps.html#libd-bootcamps"><i class="fa fa-check"></i><b>4.2</b> LIBD bootcamps</a></li>
+<li class="chapter" data-level="4.3" data-path="rbioconductor-data-science-bootcamps.html"><a href="rbioconductor-data-science-bootcamps.html#team-bootcamps"><i class="fa fa-check"></i><b>4.3</b> Team bootcamps</a></li>
+<li class="chapter" data-level="4.4" data-path="rbioconductor-data-science-bootcamps.html"><a href="rbioconductor-data-science-bootcamps.html#bootcamp-source-materials"><i class="fa fa-check"></i><b>4.4</b> Bootcamp source materials</a>
+<ul>
+<li class="chapter" data-level="4.4.1" data-path="rbioconductor-data-science-bootcamps.html"><a href="rbioconductor-data-science-bootcamps.html#main-materials"><i class="fa fa-check"></i><b>4.4.1</b> Main materials</a></li>
+<li class="chapter" data-level="4.4.2" data-path="rbioconductor-data-science-bootcamps.html"><a href="rbioconductor-data-science-bootcamps.html#courses"><i class="fa fa-check"></i><b>4.4.2</b> Courses</a></li>
+</ul></li>
+</ul></li>
+<li class="chapter" data-level="5" data-path="how-to-be-a-modern-scientist.html"><a href="how-to-be-a-modern-scientist.html"><i class="fa fa-check"></i><b>5</b> How to be a modern scientist</a>
+<ul>
+<li class="chapter" data-level="5.1" data-path="how-to-be-a-modern-scientist.html"><a href="how-to-be-a-modern-scientist.html#bootcamp-session"><i class="fa fa-check"></i><b>5.1</b> Bootcamp session</a></li>
+</ul></li>
+<li class="chapter" data-level="6" data-path="what-they-forgot-to-teach-you-about-r.html"><a href="what-they-forgot-to-teach-you-about-r.html"><i class="fa fa-check"></i><b>6</b> What they forgot to teach you about R</a>
+<ul>
+<li class="chapter" data-level="6.1" data-path="what-they-forgot-to-teach-you-about-r.html"><a href="what-they-forgot-to-teach-you-about-r.html#bootcamp-sessions"><i class="fa fa-check"></i><b>6.1</b> Bootcamp sessions</a></li>
+</ul></li>
+<li class="chapter" data-level="7" data-path="the-elements-of-data-analytic-style.html"><a href="the-elements-of-data-analytic-style.html"><i class="fa fa-check"></i><b>7</b> The Elements of Data Analytic Style</a>
+<ul>
+<li class="chapter" data-level="7.1" data-path="the-elements-of-data-analytic-style.html"><a href="the-elements-of-data-analytic-style.html#bootcamp-session-1"><i class="fa fa-check"></i><b>7.1</b> Bootcamp session</a></li>
+</ul></li>
+<li class="chapter" data-level="8" data-path="cbds.html"><a href="cbds.html"><i class="fa fa-check"></i><b>8</b> CBDS</a>
+<ul>
+<li class="chapter" data-level="8.1" data-path="cbds.html"><a href="cbds.html#bootcamp-session-2"><i class="fa fa-check"></i><b>8.1</b> Bootcamp session</a></li>
+</ul></li>
+<li class="chapter" data-level="9" data-path="building-tidy-tools.html"><a href="building-tidy-tools.html"><i class="fa fa-check"></i><b>9</b> Building Tidy Tools</a>
+<ul>
+<li class="chapter" data-level="9.1" data-path="building-tidy-tools.html"><a href="building-tidy-tools.html#bootcamp-sessions-1"><i class="fa fa-check"></i><b>9.1</b> Bootcamp sessions</a></li>
+</ul></li>
+<li class="chapter" data-level="10" data-path="differential-expression-analysis.html"><a href="differential-expression-analysis.html"><i class="fa fa-check"></i><b>10</b> Differential expression analysis</a>
+<ul>
+<li class="chapter" data-level="10.1" data-path="differential-expression-analysis.html"><a href="differential-expression-analysis.html#bootcamp-sessions-2"><i class="fa fa-check"></i><b>10.1</b> Bootcamp sessions</a></li>
+</ul></li>
+<li class="part"><span><b>II Internal</b></span></li>
+<li class="chapter" data-level="11" data-path="team-meetings.html"><a href="team-meetings.html"><i class="fa fa-check"></i><b>11</b> Team meetings</a>
+<ul>
+<li class="chapter" data-level="11.1" data-path="team-meetings.html"><a href="team-meetings.html#papers-software"><i class="fa fa-check"></i><b>11.1</b> Papers &amp; software</a>
+<ul>
+<li class="chapter" data-level="11.1.1" data-path="team-meetings.html"><a href="team-meetings.html#notes"><i class="fa fa-check"></i><b>11.1.1</b> Notes</a></li>
+</ul></li>
+<li class="chapter" data-level="11.2" data-path="team-meetings.html"><a href="team-meetings.html#dsgs-feedback"><i class="fa fa-check"></i><b>11.2</b> DSgs: feedback</a>
+<ul>
+<li class="chapter" data-level="11.2.1" data-path="team-meetings.html"><a href="team-meetings.html#notes-1"><i class="fa fa-check"></i><b>11.2.1</b> Notes</a></li>
+</ul></li>
+<li class="chapter" data-level="11.3" data-path="team-meetings.html"><a href="team-meetings.html#team-help"><i class="fa fa-check"></i><b>11.3</b> Team help</a></li>
+<li class="chapter" data-level="11.4" data-path="team-meetings.html"><a href="team-meetings.html#individual-updates"><i class="fa fa-check"></i><b>11.4</b> Individual updates</a></li>
+<li class="chapter" data-level="11.5" data-path="team-meetings.html"><a href="team-meetings.html#project-meetings"><i class="fa fa-check"></i><b>11.5</b> Project meetings</a></li>
+</ul></li>
+<li class="chapter" data-level="12" data-path="helping-others.html"><a href="helping-others.html"><i class="fa fa-check"></i><b>12</b> Helping others</a>
+<ul>
+<li class="chapter" data-level="12.1" data-path="helping-others.html"><a href="helping-others.html#linear-regression-example"><i class="fa fa-check"></i><b>12.1</b> Linear regression example</a></li>
+<li class="chapter" data-level="12.2" data-path="helping-others.html"><a href="helping-others.html#dsgs-guides"><i class="fa fa-check"></i><b>12.2</b> DSgs guides</a>
+<ul>
+<li class="chapter" data-level="12.2.1" data-path="helping-others.html"><a href="helping-others.html#dsgs-guide-training"><i class="fa fa-check"></i><b>12.2.1</b> DSgs-guide training</a></li>
+<li class="chapter" data-level="12.2.2" data-path="helping-others.html"><a href="helping-others.html#common-responses"><i class="fa fa-check"></i><b>12.2.2</b> Common responses</a></li>
+<li class="chapter" data-level="12.2.3" data-path="helping-others.html"><a href="helping-others.html#internal-sessions-log"><i class="fa fa-check"></i><b>12.2.3</b> Internal sessions log</a></li>
+<li class="chapter" data-level="12.2.4" data-path="helping-others.html"><a href="helping-others.html#getting-started"><i class="fa fa-check"></i><b>12.2.4</b> Getting started</a></li>
+</ul></li>
+<li class="chapter" data-level="12.3" data-path="helping-others.html"><a href="helping-others.html#bioconductor-support-practice-grounds"><i class="fa fa-check"></i><b>12.3</b> Bioconductor Support: practice grounds</a>
+<ul>
+<li class="chapter" data-level="12.3.1" data-path="helping-others.html"><a href="helping-others.html#steps-to-follow"><i class="fa fa-check"></i><b>12.3.1</b> Steps to follow</a></li>
+</ul></li>
+<li class="chapter" data-level="12.4" data-path="helping-others.html"><a href="helping-others.html#rstudio-education"><i class="fa fa-check"></i><b>12.4</b> RStudio Education</a></li>
+</ul></li>
+<li class="chapter" data-level="13" data-path="project-feedback.html"><a href="project-feedback.html"><i class="fa fa-check"></i><b>13</b> Project feedback</a>
+<ul>
+<li class="chapter" data-level="13.1" data-path="project-feedback.html"><a href="project-feedback.html#slack-2"><i class="fa fa-check"></i><b>13.1</b> Slack</a></li>
+<li class="chapter" data-level="13.2" data-path="project-feedback.html"><a href="project-feedback.html#meetings"><i class="fa fa-check"></i><b>13.2</b> Meetings</a></li>
+<li class="chapter" data-level="13.3" data-path="project-feedback.html"><a href="project-feedback.html#code-review"><i class="fa fa-check"></i><b>13.3</b> Code review</a></li>
+</ul></li>
+<li class="chapter" data-level="14" data-path="organizing-your-work.html"><a href="organizing-your-work.html"><i class="fa fa-check"></i><b>14</b> Organizing your work</a>
+<ul>
+<li class="chapter" data-level="14.1" data-path="organizing-your-work.html"><a href="organizing-your-work.html#jhpce-file-organization"><i class="fa fa-check"></i><b>14.1</b> JHPCE file organization</a>
+<ul>
+<li class="chapter" data-level="14.1.1" data-path="organizing-your-work.html"><a href="organizing-your-work.html#background-history"><i class="fa fa-check"></i><b>14.1.1</b> Background history</a></li>
+<li class="chapter" data-level="14.1.2" data-path="organizing-your-work.html"><a href="organizing-your-work.html#organization-since-2021"><i class="fa fa-check"></i><b>14.1.2</b> Organization since 2021</a></li>
+</ul></li>
+<li class="chapter" data-level="14.2" data-path="organizing-your-work.html"><a href="organizing-your-work.html#project-documentation"><i class="fa fa-check"></i><b>14.2</b> Project documentation</a></li>
+</ul></li>
+<li class="chapter" data-level="15" data-path="writing-papers-1.html"><a href="writing-papers-1.html"><i class="fa fa-check"></i><b>15</b> Writing papers</a>
+<ul>
+<li class="chapter" data-level="15.1" data-path="writing-papers-1.html"><a href="writing-papers-1.html#things-to-keep-in-mind"><i class="fa fa-check"></i><b>15.1</b> Things to keep in mind</a></li>
+<li class="chapter" data-level="15.2" data-path="writing-papers-1.html"><a href="writing-papers-1.html#writing-process"><i class="fa fa-check"></i><b>15.2</b> Writing process</a></li>
+<li class="chapter" data-level="15.3" data-path="writing-papers-1.html"><a href="writing-papers-1.html#details"><i class="fa fa-check"></i><b>15.3</b> Details</a></li>
+</ul></li>
+<li class="chapter" data-level="16" data-path="authorship.html"><a href="authorship.html"><i class="fa fa-check"></i><b>16</b> Authorship</a></li>
+<li class="chapter" data-level="17" data-path="config-files.html"><a href="config-files.html"><i class="fa fa-check"></i><b>17</b> Config files</a>
+<ul>
+<li class="chapter" data-level="17.1" data-path="config-files.html"><a href="config-files.html#r-setup"><i class="fa fa-check"></i><b>17.1</b> R setup</a>
+<ul>
+<li class="chapter" data-level="17.1.1" data-path="config-files.html"><a href="config-files.html#r-packages"><i class="fa fa-check"></i><b>17.1.1</b> R packages</a></li>
+</ul></li>
+<li class="chapter" data-level="17.2" data-path="config-files.html"><a href="config-files.html#r-config-files"><i class="fa fa-check"></i><b>17.2</b> R config files</a>
+<ul>
+<li class="chapter" data-level="17.2.1" data-path="config-files.html"><a href="config-files.html#rprofile"><i class="fa fa-check"></i><b>17.2.1</b> <code>~/.Rprofile</code></a></li>
+<li class="chapter" data-level="17.2.2" data-path="config-files.html"><a href="config-files.html#renviron"><i class="fa fa-check"></i><b>17.2.2</b> <code>~/.Renviron</code></a></li>
+<li class="chapter" data-level="17.2.3" data-path="config-files.html"><a href="config-files.html#rmakevars"><i class="fa fa-check"></i><b>17.2.3</b> <code>~/.R/Makevars</code></a></li>
+</ul></li>
+<li class="chapter" data-level="17.3" data-path="config-files.html"><a href="config-files.html#git-config-files"><i class="fa fa-check"></i><b>17.3</b> Git config files</a>
+<ul>
+<li class="chapter" data-level="17.3.1" data-path="config-files.html"><a href="config-files.html#gitconfig"><i class="fa fa-check"></i><b>17.3.1</b> <code>~/.gitconfig</code></a></li>
+<li class="chapter" data-level="17.3.2" data-path="config-files.html"><a href="config-files.html#gitignore_global"><i class="fa fa-check"></i><b>17.3.2</b> <code>~/.gitignore_global</code></a></li>
+</ul></li>
+<li class="chapter" data-level="17.4" data-path="config-files.html"><a href="config-files.html#jhpce-files"><i class="fa fa-check"></i><b>17.4</b> JHPCE files</a>
+<ul>
+<li class="chapter" data-level="17.4.1" data-path="config-files.html"><a href="config-files.html#sge_request"><i class="fa fa-check"></i><b>17.4.1</b> <code>~/.sge_request</code></a></li>
+<li class="chapter" data-level="17.4.2" data-path="config-files.html"><a href="config-files.html#bashrc"><i class="fa fa-check"></i><b>17.4.2</b> <code>~/.bashrc</code></a></li>
+<li class="chapter" data-level="17.4.3" data-path="config-files.html"><a href="config-files.html#bash_profile"><i class="fa fa-check"></i><b>17.4.3</b> <code>~/.bash_profile</code></a></li>
+<li class="chapter" data-level="17.4.4" data-path="config-files.html"><a href="config-files.html#inputrc"><i class="fa fa-check"></i><b>17.4.4</b> <code>~/.inputrc</code></a></li>
+</ul></li>
+</ul></li>
+<li class="chapter" data-level="18" data-path="how-to-contribute.html"><a href="how-to-contribute.html"><i class="fa fa-check"></i><b>18</b> How to contribute</a>
+<ul>
+<li class="chapter" data-level="18.1" data-path="how-to-contribute.html"><a href="how-to-contribute.html#github-issues-1"><i class="fa fa-check"></i><b>18.1</b> GitHub Issues</a></li>
+<li class="chapter" data-level="18.2" data-path="how-to-contribute.html"><a href="how-to-contribute.html#team-websites"><i class="fa fa-check"></i><b>18.2</b> Team websites</a>
+<ul>
+<li class="chapter" data-level="18.2.1" data-path="how-to-contribute.html"><a href="how-to-contribute.html#libd-rstats-club-website"><i class="fa fa-check"></i><b>18.2.1</b> LIBD rstats club website</a></li>
+</ul></li>
+<li class="chapter" data-level="18.3" data-path="how-to-contribute.html"><a href="how-to-contribute.html#github-actions"><i class="fa fa-check"></i><b>18.3</b> GitHub Actions</a>
+<ul>
+<li class="chapter" data-level="18.3.1" data-path="how-to-contribute.html"><a href="how-to-contribute.html#r-packages-1"><i class="fa fa-check"></i><b>18.3.1</b> R packages</a></li>
+<li class="chapter" data-level="18.3.2" data-path="how-to-contribute.html"><a href="how-to-contribute.html#websites"><i class="fa fa-check"></i><b>18.3.2</b> Websites</a></li>
+</ul></li>
+<li class="chapter" data-level="18.4" data-path="how-to-contribute.html"><a href="how-to-contribute.html#libd-rbioconductor-packages"><i class="fa fa-check"></i><b>18.4</b> LIBD R/Bioconductor packages</a></li>
+</ul></li>
+<li class="chapter" data-level="19" data-path="career-growth.html"><a href="career-growth.html"><i class="fa fa-check"></i><b>19</b> Career growth</a>
+<ul>
+<li class="chapter" data-level="19.1" data-path="career-growth.html"><a href="career-growth.html#resources"><i class="fa fa-check"></i><b>19.1</b> Resources</a></li>
+<li class="chapter" data-level="19.2" data-path="career-growth.html"><a href="career-growth.html#career-planning-session"><i class="fa fa-check"></i><b>19.2</b> Career planning session</a></li>
+</ul></li>
+<li class="chapter" data-level="20" data-path="project-code-handoff-checks.html"><a href="project-code-handoff-checks.html"><i class="fa fa-check"></i><b>20</b> Project code handoff checks</a></li>
+<li class="chapter" data-level="" data-path="r-session-information-1.html"><a href="r-session-information-1.html"><i class="fa fa-check"></i>R session information</a></li>
+</ul>
+
+      </nav>
+    </div>
+
+    <div class="book-body">
+      <div class="body-inner">
+        <div class="book-header" role="navigation">
+          <h1>
+            <i class="fa fa-circle-o-notch fa-spin"></i><a href="./">R/Bioconductor-powered Team Data Science</a>
+          </h1>
+        </div>
+
+        <div class="page-wrapper" tabindex="-1" role="main">
+          <div class="page-inner">
+
+            <section class="normal" id="section-">
+<div id="onboarding" class="section level1 hasAnchor" number="1">
+<h1><span class="header-section-number">1</span> Onboarding<a href="onboarding.html#onboarding" class="anchor-section" aria-label="Anchor link to header"></a></h1>
+<p>If you are either new to my team or <a href="https://www.libd.org/">LIBD</a>, you might this page useful.</p>
+<p>On your first few weeks, you will be acquiring a lot of information about how we work, how we organize our work, where things are located, scientific background on the topic(s) you will be working on, as well as configuring your computer so you can work efficiently with the resources we have available. As part of this process, you will likely get a LIBD laptop and will need to spend time configuring it before you can do a lot of work.</p>
+<p>Some of the content here comes from <a href="http://research.libd.org/jaffe_onboarding">jaffe_onboarding</a>, which was actively used from Sep 8, 2019 till Sep 2020.</p>
+<p>As you’ll see, there is a lot of information on this page. If you are overwhelmed, schedule a <a href="data-science-guidance-sessions.html#data-science-guidance-sessions">Data Science guidance session</a> and we’ll help you get started by pointing you to the relevant parts appropriate to you. When in doubt, schedule a DSgs! We only list when we are available, so if we are not, you’ll notice it on Calendly. Planning ahead is always useful and you should feel free to ask us for help.</p>
+<div id="basic-work-expectations" class="section level2 hasAnchor" number="1.1">
+<h2><span class="header-section-number">1.1</span> Basic work expectations<a href="onboarding.html#basic-work-expectations" class="anchor-section" aria-label="Anchor link to header"></a></h2>
+<p>This might be your first job experience which is very exciting, but also different from being a student. You will thus need to learn to work in our team and maybe adapt some of your behavior. Ultimately, communication will be your friend to avoid any misunderstandings such as different expectations. There are also some rules you will have to follow, which are aimed at making sure we all are on the same playing field. The following are some team guidelines I have, but you should also follow the LIBD Employee Handbook which you can find through <a href="https://www.paylocity.com/">Paylocity</a> under the “Company” section after you log in.</p>
+<ul>
+<li>Work 40 hours per week. The employee handbook states: <em>The Lieber Institute’s normal business hours are 8:30 a.m. to 5:30 p.m., Monday through Friday with an hour included for lunch and breaks.</em>. That’s exactly 8 work hours per day, and 40 work hours per week.
+<ul>
+<li>You can measure this by installing the free version of <a href="https://www.rescuetime.com/">RescueTime</a>.</li>
+</ul></li>
+<li>Minimize all distractions on the 8 work hours.
+<ul>
+<li>Avoid checking social media or any other lurking activities. You can put your phone in “work mode” (“focus” for iPhone) to silence all notifications as well. If you need to do something else, notify me or request time off through <a href="https://www.paylocity.com/">Paylocity</a> when appropriate.</li>
+</ul></li>
+<li>Aim to achieve a weekly productivity score on <a href="https://www.rescuetime.com/">RescueTime</a> of 70 or above (ideally over 80).
+<ul>
+<li>I have <code>docs.google.com/#document</code>, <code>terminal (iterm2)</code>, and <code>rstudio</code> listed as “very productive”. Then <code>slack</code>, <code>mail.libd.org</code> as “productive”. I have <code>zoom.us</code> as “very distracting” since I’m personally trying to de-incentivize having meetings all day, but for you that might be different.</li>
+</ul></li>
+<li>Independently perform basic job responsibilities without instruction.
+<ul>
+<li>Keep notebook with you to take notes when necessary.</li>
+<li>Maintain ongoing list of daily to do items.</li>
+<li>Optionally post your to dos on the respective Slack channels by 9:30 am each morning (10:30 am when we have 9-10 am meetings). Doing so can help the most in your first few months at the team, so we can identify how to best help you.</li>
+</ul></li>
+<li>Write code daily and version control it on Git/<a href="https://github.com/LieberInstitute">GitHub</a>. If writing academic papers, then post equivalent updates on Slack.
+<ul>
+<li>Make at least 10 commits per day, with 15 per day being the ideal number. That’s from 5 commits per 2 hour coding session as noted at <a href="project-feedback">“project feedback”</a>, with at least 3 such sessions per day.</li>
+<li>If you spend time writing part of an academic manuscript, then post bullet point updates on the respective Slack channel.</li>
+</ul></li>
+<li>If you spend more than 15 minutes trying to solve something and are not making any more progress, ask a question about it on a Slack channel (not direct messages) with as much information needed to help you.
+<ul>
+<li>Don’t use direct messages (DMs) on Slack, as multiple people can very likely help you and they won’t be able to do so through DMs.</li>
+<li>For R code, remember to use <code>reprex</code> like we mention at <a href="how-to-ask-for-help">“how to ask for help”</a>.</li>
+<li>You could also request help sessions from team members through the <a href="data-science-guidance-sessions.html#data-science-guidance-sessions">Data Science guidance sessions</a> system.</li>
+</ul></li>
+<li>Communicate your reasoning and thought process. Respond to your colleagues in appropriate time windows.
+<ul>
+<li>Don’t assume others know what you are thinking: be as verbose as possible. Avoid one liner replies on emails and Slack. Respond to Slack messages within a business hour and to emails from colleagues within a business day. CC me on all replies you send via email.</li>
+</ul></li>
+<li>Write a summary after every 1 on 1 meeting. Doing so reduces the burden on memorization.
+<ul>
+<li>Write a bullet point list or make some GitHub issues after every 1 on 1 meeting you have with me or other colleagues.</li>
+</ul></li>
+<li>Comply with your “at the office” schedule.
+<ul>
+<li>The exact days will depend on which days you are working remotely (if any at all).</li>
+</ul></li>
+<li>Read at least one relevant scientific manuscript per week.
+<ul>
+<li>Write a summary about it on the appropriate Slack channel. Relevant manuscripts are those explaining software/methods you are using, those related to the biological question you are working on, or new software/methods we might want to use for the projects you are working on.</li>
+</ul></li>
+<li>Work on your main projects at least some portion each day.
+<ul>
+<li>Avoid cramming work the day before a meeting for a given project. Working the same amount of hours spread throughout the week allows you to identify questions and problems you might need help with, and to have the time to get the required help.</li>
+<li>I like having blocks of 2 hours where I work on a given project during 1 block of time. Switching projects too frequently is detrimental since it takes some time to refresh your memory and load the relevant data.</li>
+</ul></li>
+</ul>
+</div>
+<div id="background-knowledge" class="section level2 hasAnchor" number="1.2">
+<h2><span class="header-section-number">1.2</span> Background knowledge<a href="onboarding.html#background-knowledge" class="anchor-section" aria-label="Anchor link to header"></a></h2>
+<p>Below is a list of papers that might provide some useful background information for bulk RNA-seq or DNA methylation. We will also give you a more updated list of background papers to read depending on the project you will be working on. You might find some relevant papers and videos on the <a href="https://docs.google.com/spreadsheets/d/1r6552ySisg7_KpmJmChOvLHVWdMmss3bncEf2jqIM9k/edit?usp=sharing"><strong>team presentations schedule</strong></a> and companion YouTube playlist.</p>
+<div id="rna-seq" class="section level3 hasAnchor" number="1.2.1">
+<h3><span class="header-section-number">1.2.1</span> RNA-seq<a href="onboarding.html#rna-seq" class="anchor-section" aria-label="Anchor link to header"></a></h3>
+<ul>
+<li><a href="https://www.nature.com/articles/nrg2484">RNA-Seq: a revolutionary tool for transcriptomics</a></li>
+<li><a href="https://www.nature.com/articles/nbt0510-421">Advancing RNA-Seq analysis</a></li>
+<li><a href="https://www.nature.com/articles/nprot.2012.016">Differential gene and transcript expression analysis of RNA-seq experiments with TopHat and Cufflinks</a></li>
+<li><a href="https://academic.oup.com/bioinformatics/article/25/9/1105/203994">TopHat: discovering splice junctions with RNA-Seq</a></li>
+<li><a href="https://genomebiology.biomedcentral.com/articles/10.1186/gb-2013-14-4-r36">TopHat2: accurate alignment of transcriptomes in the presence of insertions, deletions and gene fusions</a></li>
+<li><a href="https://www.nature.com/articles/nmeth.2722">Systematic evaluation of spliced alignment programs for RNA-seq data</a></li>
+<li><a href="https://www.nature.com/articles/nmeth.2714">Assessment of transcript reconstruction methods for RNA-seq</a></li>
+<li><a href="https://www.nature.com/articles/nature12531">Transcriptome and genome sequencing uncovers functional variation in humans</a></li>
+<li><a href="https://www.nature.com/articles/nbt.2702">Reproducibility of high-throughput mRNA and small RNA sequencing across laboratories</a></li>
+</ul>
+</div>
+<div id="dnam" class="section level3 hasAnchor" number="1.2.2">
+<h3><span class="header-section-number">1.2.2</span> DNAm<a href="onboarding.html#dnam" class="anchor-section" aria-label="Anchor link to header"></a></h3>
+<ul>
+<li><a href="https://genomebiology.biomedcentral.com/articles/10.1186/gb-2013-14-8-r94">Measuring cell-type specific differential methylation in human brain tissue</a></li>
+<li><a href="https://www.nature.com/articles/nrg3405">From promises to practical strategies in epigenetic epidemiology</a></li>
+<li><a href="https://bmcgenomics.biomedcentral.com/articles/10.1186/1471-2164-14-293">A data-driven approach to preprocessing Illumina 450K methylation array data</a></li>
+<li><a href="https://www.nature.com/articles/nature09342">Epigenetic memory in induced pluripotent stem cells</a></li>
+<li><a href="https://www.nature.com/articles/ng.298">The human colon cancer methylome shows similar hypo- and hypermethylation at conserved tissue-specific CpG island shores</a></li>
+<li><a href="https://www.ncbi.nlm.nih.gov/pmc/articles/PMC3304533/">Bump hunting to identify differentially methylated regions in epigenetic epidemiology studies</a></li>
+<li><a href="https://www.nature.com/articles/nrg3273">Analysing and interpreting DNA methylation data</a></li>
+<li><a href="https://www.nature.com/articles/nrg3354">DNA methylation: roles in mammalian development</a></li>
+<li><a href="https://www.nejm.org/doi/full/10.1056/NEJMra1402513">The Key Role of Epigenetics in Human Disease Prevention and Mitigation</a></li>
+<li><a href="https://www.nature.com/articles/nature12433">Charting a dynamic DNA methylation landscape of the human genome</a></li>
+<li><a href="https://science.sciencemag.org/content/341/6146/1237905.long">Global Epigenomic Reconfiguration During Mammalian Brain Development</a></li>
+<li><a href="http://dx.doi.org/10.1186/s13059-019-1805-1">Divergent neuronal DNA methylation patterns across human cortical development: Critical periods and a unique role of CpH methylation</a></li>
+</ul>
+</div>
+</div>
+<div id="commonly-used-software" class="section level2 hasAnchor" number="1.3">
+<h2><span class="header-section-number">1.3</span> Commonly used software<a href="onboarding.html#commonly-used-software" class="anchor-section" aria-label="Anchor link to header"></a></h2>
+<p>We use quite a bit of different software and while we list out some here below, you will want to check the LIBD <a href="https://docs.google.com/spreadsheets/d/1is8dZSd0FZ9Qi1Zvq1uRhm-P1McnJRd_zxdAfCRoMfA/edit?usp=sharing"><strong>rstats club schedule</strong></a> and companion YouTube playlist for more recent videos that might be relevant to your situation.</p>
+<div id="bash-and-linux" class="section level3 hasAnchor" number="1.3.1">
+<h3><span class="header-section-number">1.3.1</span> <code>bash</code> and <code>linux</code><a href="onboarding.html#bash-and-linux" class="anchor-section" aria-label="Anchor link to header"></a></h3>
+<p>You will need to learn the basics of <code>bash</code> and <code>linux</code> as we work a lot with the high performance computing cluster named <a href="https://jhpce.jhu.edu/">JHPCE</a>, which is a <code>linux</code> cluster. A computing cluster is basically a collection of machines (with no monitors) that have more memory than your regular laptop and that you can use for hours/days. That way, you are not limited by the specific properties of your laptop for most of our work.</p>
+<ul>
+<li><a href="https://faculty.ucr.edu/~tgirke/Documents/UNIX/linux_manual.html">Linux essentials</a></li>
+<li><a href="https://seankross.com/the-unix-workbench/">The Unix Workbench</a> by <a href="http://seankross.com">Sean Kross</a>.</li>
+<li><a href="https://www.tecmint.com/rsync-local-remote-file-synchronization-commands/">Rsync (Remote Sync): 10 Practical Examples of Rsync Command in Linux</a>.</li>
+<li><a href="http://windowsbulletin.com/filepermissions/">Linux file permissions</a>.</li>
+<li><a href="https://linuxize.com/post/how-to-use-linux-screen/">How To Use Linux Screen – website 1</a> and <a href="https://www.rackaid.com/blog/linux-screen-tutorial-and-how-to/">How To Use Linux Screen – website 2</a>.</li>
+</ul>
+</div>
+<div id="r" class="section level3 hasAnchor" number="1.3.2">
+<h3><span class="header-section-number">1.3.2</span> <code>R</code><a href="onboarding.html#r" class="anchor-section" aria-label="Anchor link to header"></a></h3>
+<p>We use <code>R</code> quite a bit, and that’s actually how this website was made. Here are some useful resources, though you will eventually want to check the <a href="rbioconductor-data-science-bootcamps.html#rbioconductor-data-science-bootcamps">R/Bioconductor Data Science bootcamps</a> and related resources.</p>
+<ul>
+<li>Download and install <a href="https://cran.r-project.org/">R from CRAN</a>.</li>
+<li><a href="http://research.libd.org/rstatsclub/post/r_101/#.XXfwU5NKi50">R 101</a> LIBD rstats blog post by <a href="https://carriewright11.github.io/">Carrie Wright</a>.</li>
+<li><a href="https://www.rstudio.com/products/rstudio/#Desktop">Download RStudio Desktop</a>.</li>
+<li><a href="https://support.rstudio.com/hc/en-us/articles/115010737148-Using-the-RStudio-Terminal">Using the RStudio Terminal</a>.</li>
+<li>RStudio <a href="https://www.rstudio.com/resources/cheatsheets/">cheatsheets</a> for many things including regular expressions, <code>purrr</code> for functional programming, etc.</li>
+<li><a href="https://rstd.io/tidytools19">Building Tidy Tools workshop materials</a> by Charlotte Wickham and Hadley Wickham for the rstudio 2019 conference. Materials from other workshops is available <a href="https://blog.rstudio.com/2019/02/06/rstudio-conf-2019-workshops/">here</a>.</li>
+<li><a href="https://rmarkdown.rstudio.com/docs/">R Markdown documentation website</a> announced by <a href="https://twitter.com/apreshill/status/1171290891157307392?s=20">Alison Hill</a>.</li>
+<li><a href="https://r-graphics.org/">Cookbook for R graphs, 2nd edition</a> with useful <code>ggplot2</code> code.</li>
+<li><a href="http://lcolladotor.github.io/2017/05/04/updating-r/#.XXf3hZNKi50">Updating R</a> blog post, though also check more recent resources on the LIBD rstats club Google Sheet.</li>
+<li>Tutorial for <a href="http://www.emilyzabor.com/tutorials/rmarkdown_websites_tutorial.html">building R websites</a> by <a href="http://www.emilyzabor.com/">Emily C Zabor</a>. More on R Markdown websites <a href="https://bookdown.org/yihui/rmarkdown/rmarkdown-site.html">here</a>, which is how this website was made.</li>
+</ul>
+</div>
+<div id="python" class="section level3 hasAnchor" number="1.3.3">
+<h3><span class="header-section-number">1.3.3</span> <code>python</code><a href="onboarding.html#python" class="anchor-section" aria-label="Anchor link to header"></a></h3>
+<ul>
+<li>You can use RStudio for Python syntax highlighting and to run code through the integrated terminal window on JHPCE.</li>
+<li><a href="https://rstudio.github.io/reticulate/"><code>reticulate</code></a> might be of interest if you are working with Python from R.</li>
+<li>If you are writing an R package that will use Python internally, check out <a href="https://bioconductor.org/packages/basilisk/"><code>basilisk</code></a>.</li>
+<li>If you want to open <code>SummarizedExperiment</code> objects in Python as <code>AnnData</code> objects, you might be interested in <a href="https://bioconductor.org/packages/zellkonverter/"><code>zellkonverter</code></a>.</li>
+</ul>
+</div>
+</div>
+<div id="team-communication" class="section level2 hasAnchor" number="1.4">
+<h2><span class="header-section-number">1.4</span> Team communication<a href="onboarding.html#team-communication" class="anchor-section" aria-label="Anchor link to header"></a></h2>
+<p>Overall, it’s important to ask for help. We try to follow the advice from the <a href="https://blogs.akamai.com/2013/10/you-must-try-and-then-you-must-ask.html">you must try, and then you must ask</a> blog post. Also try to ask in a Slack channel where others might be able to benefit from your answers in the future. If enough people ask about something, we’ll try to write a blog post as <a href="http://varianceexplained.org/r/start-blog/">advised here</a> by <a href="https://twitter.com/drob">David Robinson</a>. For more details, see the <a href="how-to-ask-for-help"><strong>“how to ask for help”</strong></a> page.</p>
+<div id="github" class="section level3 hasAnchor" number="1.4.1">
+<h3><span class="header-section-number">1.4.1</span> GitHub<a href="onboarding.html#github" class="anchor-section" aria-label="Anchor link to header"></a></h3>
+<ul>
+<li><a href="https://github.com/LieberInstitute/">LieberInstitute</a> is our GitHub organization account. After you’ve made your GitHub account let your PI, <a href="https://www.libd.org/team/Bill-Ulrich/">Bill Ulrich</a> or Leonardo Collado-Torres know about your username through Slack so they can add you to the relevant <a href="https://github.com/orgs/LieberInstitute/teams">teams</a>.</li>
+<li>GitHub issues are a useful way to specify tasks for a given project. As an example, check the <a href="https://github.com/LieberInstitute/libdRSE/issues?utf8=%E2%9C%93&amp;q=">libdRSE project</a>.</li>
+<li><a href="http://research.libd.org/rstatsclub/post/git-to-know-git/#.XXfvXpNKi50">git to know git: an 8 minute introduction</a> LIBD rstats blog post by <a href="http://amy-peterson.github.io/">Amy Peterson</a>.</li>
+<li><a href="https://happygitwithr.com/">Happy Git and GitHub for the useR</a> book by <a href="https://jennybryan.org/">Jenny Bryan</a>, <a href="https://twitter.com/jimhester_">Jim Hester</a> and other TAs.</li>
+<li>Videos by <a href="https://jfiksel.github.io/">Jacob Fiksel</a> on how to use Git for <a href="https://www.youtube.com/watch?v=F_fPEMnr1OQ&amp;feature=youtu.be">Windows</a> and <a href="https://www.youtube.com/watch?v=kbmSZwK0k-A&amp;t">Mac</a>.</li>
+<li><a href="https://rtyley.github.io/bfg-repo-cleaner/">BFG Repo-Cleaner</a> for fixing GitHub repositories that have data files (example, large files) that you want to delete from your history. Use the JHPCE LIBD module for bfg with <code>module load bfg</code>.</li>
+<li><a href="https://github.blog/2018-01-29-commit-together-with-co-authors/">Commit together with co-authors</a> such that everyone gets recognized GitHub activity for joint work.</li>
+<li><a href="https://help.github.com/en/articles/closing-issues-using-keywords">Closing issues using keywords</a> in commit messages.</li>
+<li><a href="https://help.github.com/en/articles/merging-a-pull-request">Merging a pull request</a>. Also check <a href="https://github.com/rstudio/blogdown/issues/269#issuecomment-370818782">this comment by Yihui Xie</a> on how to best submit pull requests. Yihui Xie wrote two blog posts related to that particular series of pull requests <a href="https://yihui.name/en/2018/03/second-pull-request/">here</a>.</li>
+<li><a href="https://help.github.com/en/articles/syncing-a-fork">Syncing a fork</a>.</li>
+<li><a href="https://stackoverflow.com/questions/5473/how-can-i-undo-git-reset-hard-head1">How can I undo git reset –hard HEAD~1?</a>.</li>
+<li><a href="http://research.libd.org/rstatsclub/post/contributing-to-the-libd-rstats-club/#.XXfwBpNKi50">Contributing to the LIBD rstats club</a> blog post if you want to write another LIBD rstats blog post or use <em><a href="https://CRAN.R-project.org/package=blogdown">blogdown</a></em>.</li>
+</ul>
+</div>
+<div id="slack" class="section level3 hasAnchor" number="1.4.2">
+<h3><span class="header-section-number">1.4.2</span> Slack<a href="onboarding.html#slack" class="anchor-section" aria-label="Anchor link to header"></a></h3>
+<ul>
+<li>We have multiple Slack workspaces, though the main one we use is the JHU Genomics Slack which has over 500 members. Ask your PI or Leonardo Collado-Torres to add you to that Slack workspace. Our main team channel is <a href="https://jhu-genomics.slack.com/archives/C01AD6PQHNW"><code>#libd_team_lcolladotor</code></a>.</li>
+<li><a href="http://lcolladotor.github.io/2018/06/19/using-slack-for-academic-departmental-communication/#.XXfVrJNKi50">Using Slack for Academic Departmental Communication</a> blog post written by Leo and <a href="https://www.stephaniehicks.com/">Stephanie Hicks</a>.</li>
+<li>Preferably ask questions on a project channel such that others involved in the project are able to contribute answers. If it’s a more general question, try asking in the <a href="https://jhu-genomics.slack.com/archives/CUYHWV7AA"><code>#libd_helpdesk</code></a> channel. Beyond our team, you might want to ask for R help at <code>#rstats</code> and JHPCE help at <code>#jhpce</code>. You might also want to check out <code>#jobs</code>, <code>#jhu_papers</code>, <code>#general</code>, <code>#funding</code>, <code>#diversity</code>, <code>#conferences</code>, <code>#random</code>, <code>#langmead_rss</code>, among many others.</li>
+<li>For a new project, create a private channel with the prefix <code>libd_</code> then invite the team members who are working on the project or might be able to help.</li>
+<li>To integrate a GitHub repository with a Slack channel type in the channel the command <code>/github subscribe LieberInstitute/RepoName</code>.</li>
+<li>Slack supports Markdown syntax for your messages, in particular we use a lot the backtick for inline code and the code chunk syntax for multi-line code. Examples:</li>
+</ul>
+<pre><code>   `inline code` example
+    
+    ```
+    multi
+    line
+    code
+    example
+    ```</code></pre>
+<p>renders into:</p>
+<p><code>inline code</code> example</p>
+<pre><code>multi
+line
+code
+example</code></pre>
+</div>
+<div id="team-calendar" class="section level3 hasAnchor" number="1.4.3">
+<h3><span class="header-section-number">1.4.3</span> Team calendar<a href="onboarding.html#team-calendar" class="anchor-section" aria-label="Anchor link to header"></a></h3>
+<ul>
+<li>We have a team Google Calendar. Ask Leonardo Collado-Torres via Slack to add you to the calendar with your Google account email address (could be your libd one or could be a gmail account). The calendar is linked to <a href="https://jhu-genomics.slack.com/archives/C01AD6PQHNW"><code>#libd_team_lcolladotor</code></a> and sends reminders to that channel 30 minutes before an event happens.</li>
+</ul>
+</div>
+<div id="twitter-1" class="section level3 hasAnchor" number="1.4.4">
+<h3><span class="header-section-number">1.4.4</span> Twitter<a href="onboarding.html#twitter-1" class="anchor-section" aria-label="Anchor link to header"></a></h3>
+<ul>
+<li><a href="https://biomedicalodyssey.blogs.hopkinsmedicine.org/2019/09/tackling-twitter-as-a-graduate-student/">Tackling Twitter as a Graduate Student</a> blog post.</li>
+</ul>
+</div>
+</div>
+<div id="laptop-setup" class="section level2 hasAnchor" number="1.5">
+<h2><span class="header-section-number">1.5</span> Laptop setup<a href="onboarding.html#laptop-setup" class="anchor-section" aria-label="Anchor link to header"></a></h2>
+<p>The <a href="config-files.html#config-files">“config files”</a> page contains some relevant links that can help you find some software we frequently use or configuration files. Overall, we use frequently:</p>
+<ul>
+<li><a href="https://cran.r-project.org/">R</a></li>
+<li><a href="https://www.rstudio.com/products/rstudio/download/">RStudio</a>: for writing R/Python code, executing it at JHPCE through the integrated terminal</li>
+<li><a href="https://cyberduck.io/">Cyberduck</a> or <a href="https://winscp.net/">WinSCP</a> for browsing JHPCE files and previewing PDF files</li>
+<li>Git: for version controlling files</li>
+<li><a href="https://github.com/LieberInstitute">GitHub</a>: for sharing our code within the team and externally, plus to transfer code between your laptop and JHPCE</li>
+<li><a href="https://macromates.com/">TextMate</a> or <a href="https://www.sublimetext.com/">Sublime Text</a> or some other text editor that has code syntax highlighting. RStudio has this too.</li>
+<li>JHPCE modules: for having a common installation location at JHPCE for software we use. See <a href="https://github.com/LieberInstitute/jhpce_mod_source">jhpce_mod_source</a> and <a href="https://github.com/LieberInstitute/jhpce_module_config">jhpce_module_config</a> for more details.</li>
+</ul>
+<div id="jhpce" class="section level3 hasAnchor" number="1.5.1">
+<h3><span class="header-section-number">1.5.1</span> JHPCE<a href="onboarding.html#jhpce" class="anchor-section" aria-label="Anchor link to header"></a></h3>
+<p>Since most analyses we run involve resources larger than those in our laptops, we typically used a high performance computing environment. Particularly, <a href="https://jhpce.jhu.edu/">JHPCE</a>. One of the first things you’ll do is <a href="https://jhpce.jhu.edu/register/user/">get a JHPCE account</a>. Once you do, you’ll want to get familiarized with many parts of JHPCE. You can see the archive of questions people have asked through <a href="https://lists.johnshopkins.edu/sympa/arc/bithelp"><code>bithelp</code></a> and/or the <a href="https://jhu-genomics.slack.com/archives/C074W8800"><code>#jhpce</code></a> channel.</p>
+<ul>
+<li>Setup password-less login through <a href="https://jhpce.jhu.edu/knowledge-base/authentication/ssh-key-setup/">ssh key pairs</a>.
+<ul>
+<li>One keypair for your laptop to the JHPCE login node</li>
+<li>One keypair from the JHPCE login node to the compute nodes (typically created by JHPCE admins)</li>
+<li>One keypair from your laptop to GitHub; see their <a href="https://docs.github.com/en/authentication/connecting-to-github-with-ssh/generating-a-new-ssh-key-and-adding-it-to-the-ssh-agent">documentation</a></li>
+<li>One keypair from JHPCE to GitHub</li>
+<li>Check the LIBD rstats club videos on JHPCE laptop configuration (macOS and winOS versions)</li>
+</ul></li>
+<li><a href="https://jhpce.jhu.edu/knowledge-base/environment-modules/">Environment modules</a> are useful so you don’t have to install some common software from stratch, such as <code>R</code> which you can load using <code>module load conda_R</code>.</li>
+<li>Use LIBD modules which you can setup following <a href="https://github.com/LieberInstitute/jhpce_module_config#recurrent-usage">these instructions</a>. <a href="https://github.com/LieberInstitute/jhpce_mod_source">jhpce_mod_source</a> and <a href="https://github.com/LieberInstitute/jhpce_module_config">jhpce_module_config</a> are our GitHub repositories for our LIBD modules.</li>
+<li><a href="http://research.libd.org/rstatsclub/post/edit-your-bashrc-file-for-a-nicer-terminal-experience/#.XXfJQ5NKi50">Edit your bashrc file for a nicer terminal experience</a> blog post. See the <a href="config-files.html#config-files">“config files”</a> page for the latest common configuration files we use.</li>
+<li><em><a href="https://github.com/LieberInstitute/sgejobs">sgejobs</a></em> (<a href="http://lieberinstitute.github.io/sgejobs">documentation</a>): contains helper functions for writing and interacting with SGE jobs at JHPCE.</li>
+<li><a href="https://hopstat.wordpress.com/2013/11/05/array-and-sequential-cluster-jobs/">Array and Sequential Cluster Jobs</a>. See also <code>sgejobs::job_single()</code>.</li>
+<li><a href="http://lcolladotor.github.io/2012/08/23/setting-up-your-computer-for/#.XXft2pNKi50">Setting up your computer for bioinformatics/biostatistics and a compedium of resources</a> 2012 blog post. Includes some Mac and Windows tools.</li>
+<li><a href="http://lcolladotor.github.io/2013/12/11/quick-cluster-login-to-interactive-session/#.XXft5JNKi50">Login to the cluster, request a node and change to your project directory in a single command</a> 2013 blog post.</li>
+<li><a href="http://lcolladotor.github.io/2012/11/07/me-bad-rm-dont-delete-stuff-i-didnt-want-to-delete/#.XXft6pNKi50">me: Bad rm, don’t delete stuff I didn’t want to delete! (rm: well, I do what you tell me to do!)</a> 2012 blog post.</li>
+<li><a href="http://lcolladotor.github.io/2014/02/17/colorout/#.XXfu65NKi50">Automatically coloring your R output in the terminal using colorout</a> blog post on <code>colorout</code> which you can access through <a href="https://github.com/jalvesaq/colorout">jalvesaq/colorout</a> nowadays and install with <code>remotes::install_github('jalvesaq/colorout')</code>.</li>
+<li>See <a href="config-files.html#config-files">“config files”</a> page for the latest configuration files <a href="#fn1" class="footnote-ref" id="fnref1"><sup>1</sup></a>.</li>
+</ul>
+<p>There were a lot of miscellaneous things about using the cluster that might save some confusion if you knew now:</p>
+<ul>
+<li>there’s a 100G storage max on your home directory <code>/users/[yourusername]/</code>, which will likely fill up very quickly. Most of us have directories under the <code>/dcs04</code>, <code>/dcl01</code>, and <code>/dcl02</code> filesystems, where there is far more space.</li>
+<li>you generally will want to include the <code>-cwd</code> flag in bash scripts. By default, it will default to dumping output files in your home directory, regardless of where you submit the script.</li>
+<li>for scripts/jobs where you are generating large files, you will need to change the maximum writeable file size. This is the <code>h_fsize</code> flag for bash scripts, which defaults to 10G. See <a href="https://jhpce.jhu.edu/knowledge-base/how-to/" class="uri">https://jhpce.jhu.edu/knowledge-base/how-to/</a> for more details.</li>
+</ul>
+</div>
+<div id="mac" class="section level3 hasAnchor" number="1.5.2">
+<h3><span class="header-section-number">1.5.2</span> Mac<a href="onboarding.html#mac" class="anchor-section" aria-label="Anchor link to header"></a></h3>
+<ul>
+<li><a href="https://cyberduck.io/">Cyberduck</a> for accessing files remotely. With it, you can open any R files at JHPCE with RStudio in your laptop, then open a terminal from RStudio so you can execute your code.</li>
+<li><a href="https://www.alfredapp.com/">Alfred</a> for quickly finding files among many other powerful workflows.</li>
+<li><a href="http://research.libd.org/rstatsclub/post/textmate-setup-mac-only/#.XXfvlZNKi50">Textmate setup (Mac only)</a> LIBD rstats 2018 blog post; it’s an alternative to using RStudio. The blog post also explains <code>rmate</code> which now also exists as a LIBD module that you can load with <code>module load rmate</code> at JHPCE. There’s also a more recent video on this topic on the LIBD rstats club Google Sheet.</li>
+<li><a href="http://criticmarkup.com/">CriticMarkup</a>.</li>
+<li><a href="https://support.apple.com/en-us/HT201236">Mac keyboard shortcuts</a>.</li>
+</ul>
+</div>
+<div id="windows" class="section level3 hasAnchor" number="1.5.3">
+<h3><span class="header-section-number">1.5.3</span> Windows<a href="onboarding.html#windows" class="anchor-section" aria-label="Anchor link to header"></a></h3>
+<ul>
+<li><a href="https://winscp.net/">WinSCP</a> for browsing files.</li>
+<li><a href="https://www.putty.org/">putty</a> (which comes with WinSCP), for accessing JHPCE through a terminal window.</li>
+<li><a href="https://jhpce.jhu.edu/knowledge-base/mobaxterm-configuration/">MobaXTerm</a> combines SSH and SFTP functionality and is fairly simple to set up and use.</li>
+<li><a href="https://gitforwindows.org/">git for windows</a> which includes Git Bash. Check <a href="https://github.com/rstudio/rstudio/issues/2224">rstudio issue 2224</a> for specifics on how to install Git Bash such that it will work with RStudio terminal.</li>
+</ul>
+</div>
+</div>
+<div id="commonly-used-software-1" class="section level2 hasAnchor" number="1.6">
+<h2><span class="header-section-number">1.6</span> Commonly used software<a href="onboarding.html#commonly-used-software-1" class="anchor-section" aria-label="Anchor link to header"></a></h2>
+<p>You will find a lot of more recent videos an materials for the topics below on the LIBD <a href="https://docs.google.com/spreadsheets/d/1is8dZSd0FZ9Qi1Zvq1uRhm-P1McnJRd_zxdAfCRoMfA/edit?usp=sharing"><strong>rstats club schedule</strong></a> / YouTube playlist. See the <a href="https://lcolladotor.github.io/bioc_team_ds/index.html#overview">Overview</a> page for more details.</p>
+<div id="bioconductor" class="section level3 hasAnchor" number="1.6.1">
+<h3><span class="header-section-number">1.6.1</span> Bioconductor<a href="onboarding.html#bioconductor" class="anchor-section" aria-label="Anchor link to header"></a></h3>
+<ul>
+<li><a href="http://lcolladotor.github.io/2014/10/16/startbioc/#.XXf1QZNKi50">Where do I start using Bioconductor?</a> blog post.</li>
+<li><a href="http://lcolladotor.github.io/2017/03/06/how-to-ask-for-help-for-bioconductor-packages/#.XXf1YpNKi50">How to ask for help for Bioconductor packages</a> blog post.</li>
+<li>Bioconductor <a href="https://bioconductor.org/packages/release/BiocViews.html#___Workflow">workflows</a> such as <a href="http://bioconductor.org/packages/release/workflows/vignettes/rnaseqGene/inst/doc/rnaseqGene.html">rnaseqGene</a> and <a href="http://bioconductor.org/packages/release/workflows/vignettes/sequencing/inst/doc/sequencing.html">sequencing</a> are very helpful to get started in the RNA sequencing (RNA-seq) field.</li>
+<li>BioC2019 workshops are available <a href="https://rebrand.ly/biocworkshops2019">here</a>. More recently, you might want to use <a href="http://orchestra.cancerdatasci.org/">Orchestra</a> to find recent workshops and even access them interactively.</li>
+<li><em><a href="https://bioconductor.org/packages/3.14/limma">limma</a></em>: is one of the main packages we use for analyzing data, particularly with the limma-voom method. Check the Bioconductor workflows that explain limma in more detail <a href="https://bioconductor.org/packages/release/BiocViews.html#___Workflow">here</a>.</li>
+<li><em><a href="https://bioconductor.org/packages/3.14/GenomicRanges">GenomicRanges</a></em>: is the package we use for interacting with genomic data across ranges. Check the <a href="http://bioconductor.org/packages/release/bioc/vignettes/GenomicRanges/inst/doc/GenomicRangesIntroduction.html">introduction</a> for more information.</li>
+<li><em><a href="https://bioconductor.org/packages/3.14/SummarizedExperiment">SummarizedExperiment</a></em>: is the package we use for creating and interacting with <code>RangedSummarizedExperiment</code> objects.</li>
+<li><em><a href="https://bioconductor.org/packages/3.14/bsseq">bsseq</a></em>: is highly useful for analyzing DNA methylation data, particularly whole genome bisulfite sequencing (WGBS) data.</li>
+<li><em><a href="https://bioconductor.org/packages/3.14/Biostrings">Biostrings</a></em>: is useful for dealing with sequence information such as the human genome sequence.</li>
+</ul>
+</div>
+<div id="lab-software" class="section level3 hasAnchor" number="1.6.2">
+<h3><span class="header-section-number">1.6.2</span> Lab software<a href="onboarding.html#lab-software" class="anchor-section" aria-label="Anchor link to header"></a></h3>
+<ul>
+<li><em><a href="https://github.com/LieberInstitute/jaffelab">jaffelab</a></em> (<a href="http://lieberinstitute.github.io/jaffelab">documentation</a>): contains several functions we’ve written over the years that we find helpful for different analyses.</li>
+<li><em><a href="https://github.com/LieberInstitute/sgejobs">sgejobs</a></em> (<a href="http://lieberinstitute.github.io/sgejobs">documentation</a>): contains helper functions for writing and interacting with SGE jobs at JHPCE.</li>
+<li><a href="https://github.com/LieberInstitute/jhpce_mod_source">jhpce_mod_source</a> and <a href="https://github.com/LieberInstitute/jhpce_module_config">jhpce_module_config</a> are our GitHub repositories for our LIBD modules.</li>
+<li><em><a href="https://github.com/LieberInstitute/shinycsv">shinycsv</a></em>: allows interactively exploring a table.</li>
+<li><em><a href="https://bioconductor.org/packages/3.14/megadepth">megadepth</a></em> by David Zhang, Christopher Wilks, et al is an R package for dealing with BigWig files. Check also the older <em><a href="https://github.com/LieberInstitute/recount.bwtool">recount.bwtool</a></em>.</li>
+<li>LIBD RNA-seq processing pipeline: <a href="http://research.libd.org/SPEAQeasy/">SPEAQeasy</a>, and <a href="http://research.libd.org/SPEAQeasy-example/">SPEAQeasy-example</a>. See also the <a href="https://github.com/LieberInstitute/RNAseq-pipeline">initial version</a>.</li>
+<li><a href="https://github.com/LieberInstitute/globus"><code>globus</code></a>: our Globus share endpoints such that others can access our data.</li>
+</ul>
+</div>
+<div id="writing-papers" class="section level3 hasAnchor" number="1.6.3">
+<h3><span class="header-section-number">1.6.3</span> Writing papers<a href="onboarding.html#writing-papers" class="anchor-section" aria-label="Anchor link to header"></a></h3>
+<ul>
+<li><a href="https://blog.f1000.com/2019/07/31/how-to-write-academic-documents-with-googledocs-using-f1000workspace/">How to write academic documents with GoogleDocs using F1000Workspace</a> blog post. Check the <a href="http://lcolladotor.github.io/2019/04/02/how-to-write-academic-documents-with-googledocs/#.XXfKcJNKi50">original</a> version for some additional information.</li>
+</ul>
+</div>
+</div>
+<div id="meetings-of-potential-interest" class="section level2 hasAnchor" number="1.7">
+<h2><span class="header-section-number">1.7</span> Meetings of potential interest<a href="onboarding.html#meetings-of-potential-interest" class="anchor-section" aria-label="Anchor link to header"></a></h2>
+<ul>
+<li><a href="http://research.libd.org/rstatsclub/#.XXfxTpNKi50">LIBD rstats club</a> described in more detail on <a href="http://research.libd.org/rstatsclub/post/welcome-to-the-libd-rstats-club/#.XXfEtJNKi50">this blog post</a>.</li>
+<li>Joint genomics meeting: check the <a href="https://jhu-genomics.slack.com/archives/CC4C0BYGH"><code>#joint_group_meeting</code></a> channel for more information about this bi-weekly (every 2 weeks) meeting across multiple JHU labs.</li>
+<li>Baltimore R Ladies: check the <a href="https://jhu-genomics.slack.com/archives/CAV89BNFK"><code>#r-ladies</code></a> Slack channel as well as <a href="https://www.meetup.com/rladies-baltimore/">meetup.com/rladies-baltimore/</a>. They also have a <a href="https://rladies-baltimore.github.io/">website</a> with code from earlier sessions and you can find the <a href="https://github.com/rladies/meetup-presentations_baltimore">slides here</a>.</li>
+<li>JHU Genomics events: check their calendar <a href="http://genomics.jhu.edu/events.html">here</a>. Every year they organize a symposium around October where you can present a poster if you want. They also organize other workshops which you might be interested in signing up for.</li>
+</ul>
+<div id="conferences" class="section level3 hasAnchor" number="1.7.1">
+<h3><span class="header-section-number">1.7.1</span> Conferences<a href="onboarding.html#conferences" class="anchor-section" aria-label="Anchor link to header"></a></h3>
+<ul>
+<li>BioC: announced <a href="http://bioconductor.org/help/events/">here</a>.</li>
+<li>ASHG: <a href="https://www.ashg.org/">website</a>.</li>
+<li>CSHL Biology of Genomes (BoG): through the <a href="https://meetings.cshl.edu/meetingshome.aspx">CSHL website</a>.</li>
+<li>RStudio conf: <a href="https://www.rstudio.com/conference/">website</a>.</li>
+<li>Women in Data Science (has multiple meetings), <a href="https://www.widsconference.org/">website</a>.</li>
+<li>Joint Statistical Meetings (JSM): through the <a href="https://www.amstat.org/asa/meetings/home.aspx">ASA website</a>.</li>
+</ul>
+<p>See the <a href="https://docs.google.com/spreadsheets/d/15toP739T3cGvqz9I2y56USvVT7GU9jkOx1GDKQsbaPY/edit?usp=sharing">conferences/courses of interest</a> Google Sheet for more up to date information.</p>
+</div>
+</div>
+<div id="eating-nearby" class="section level2 hasAnchor" number="1.8">
+<h2><span class="header-section-number">1.8</span> Eating nearby<a href="onboarding.html#eating-nearby" class="anchor-section" aria-label="Anchor link to header"></a></h2>
+<ul>
+<li><strong>North East Market</strong>: it’s on <a href="https://goo.gl/maps/Cy7K5LJ3pZx9p3Mr5">2101 E Monument St</a> which is just a few minutes away walking. You can find a lot of variety there including a Korean stall along the south wall. That stall is pay-by-weight and lots of the dishes are delicious.</li>
+<li>School of Public Health 9th floor salad bar
+<strong><a href="https://www.yelp.com/biz/garden-plate-baltimore">Garden Plate</a></strong>: walk two blocks north to <a href="https://goo.gl/maps/E5yJzcK4EA4mdTB89">615 N Wolfe St</a> or K 3-4 on the <a href="https://www.hopkinsmedicine.org/the_johns_hopkins_hospital/_docs/jhi_visitors_guide.pdf">Hopkins East Baltimore Campus map</a>, then take an elevator on the south side of the building to the 9th floor. The elevators on the north side don’t go all the way up to the 9th floor.</li>
+<li><strong><a href="http://www.helmandkabobi.com/">Kabobi</a></strong>: Afghan food, really quick for take-out. Popular choices are the lamb or chicken rice bowls, chopped salads, and the veggie rice bowls.</li>
+<li><strong>Greenhouse</strong>: This is in neighboring Preclinical Teaching Building (PCTB); it’s on K2 on the <a href="https://www.hopkinsmedicine.org/the_johns_hopkins_hospital/_docs/jhi_visitors_guide.pdf">Hopkins East Baltimore Campus map</a>. Have someone show the inside way - or go outside and it’s just inside the Wolfe/Monument corner entrance. It’s a pay-by-weight buffet with salad bar and hot options. Not amazing but great lower cost option, especially if you are going for the lighter weight foods like salad!</li>
+</ul>
+<div id="food-trucks" class="section level3 hasAnchor" number="1.8.1">
+<h3><span class="header-section-number">1.8.1</span> Food trucks<a href="onboarding.html#food-trucks" class="anchor-section" aria-label="Anchor link to header"></a></h3>
+<ul>
+<li><strong>Koko</strong> - Korean food on Tuesdays and Fridays. A lab favorite! Favorites are bulgogi (beef) and tofu dishes.</li>
+<li><strong>Chowhound</strong> - burgers (incl. veggie).</li>
+<li>Other good ones: Greek truck, Kabob/falafel truck in front of Starbucks</li>
+</ul>
+</div>
+<div id="other" class="section level3 hasAnchor" number="1.8.2">
+<h3><span class="header-section-number">1.8.2</span> Other<a href="onboarding.html#other" class="anchor-section" aria-label="Anchor link to header"></a></h3>
+<ul>
+<li>Food court inside the hospital with Subway, Einstein Bros, and others. It’s on G-H 4 on the <a href="https://www.hopkinsmedicine.org/the_johns_hopkins_hospital/_docs/jhi_visitors_guide.pdf">Hopkins East Baltimore campus map</a>. There’s a second one at I6 on the same map.</li>
+<li>Dunkin, Subway, and Chinese places along Monument St.</li>
+</ul>
+</div>
+</div>
+<div id="baltimore-life" class="section level2 hasAnchor" number="1.9">
+<h2><span class="header-section-number">1.9</span> Baltimore Life<a href="onboarding.html#baltimore-life" class="anchor-section" aria-label="Anchor link to header"></a></h2>
+<ul>
+<li><a href="https://simplystatistics.org/2013/09/13/so-youre-moving-to-baltimore/">“So you’re moving to Baltimore”</a> 2013 blog post by <a href="www.bcaffo.com">Brian Caffo</a>.</li>
+<li>The Baltimore Symphony Orchestra has <a href="https://www.bsomusic.org/calendar/special-offers/">discount tickets</a> which you might be interested in.</li>
+</ul>
+
+</div>
+</div>
+<div class="footnotes">
+<hr />
+<ol start="1">
+<li id="fn1"><p>Outdated: Check Leo’s JHPCE configuration files <a href="https://github.com/lcolladotor/config_jhpce">here</a>.<a href="onboarding.html#fnref1" class="footnote-back">↩︎</a></p></li>
+</ol>
+</div>
+<div class="container">
+    <footer class="site-footer">
+
+      <center>
+<p class="powered-by">
+© 2011-2021. All thoughts and opinions here are my own. The icon was designed by <a href="https://www.linkedin.com/in/mauricio-guzman-6529b551/">Mauricio Guzmán</a> and is inspired by <a href="https://en.wikipedia.org/wiki/Huichol">Huichol culture</a>; it represents my community building interests.
+</p>
+
+<p class="powered-by copyright-license-text">
+This work is licensed under <a href="https://creativecommons.org/licenses/by-nc-sa/4.0" rel="noopener noreferrer" target="_blank">CC BY NC SA 4.0</a>
+</p>
+
+<p class="powered-by footer-license-icons">
+    <a href="https://creativecommons.org/licenses/by-nc-sa/4.0" rel="noopener noreferrer" target="_blank">
+      <img src="https://search.creativecommons.org/static/img/cc_icon.svg" alt="CC icon" width="32px">
+      <img src="https://search.creativecommons.org/static/img/cc-by_icon.svg" alt="CC by icon" width="32px">
+      <img src="https://search.creativecommons.org/static/img/cc-nc_icon.svg" alt="CC NC icon" width="32px">
+      <img src="https://search.creativecommons.org/static/img/cc-sa_icon.svg" alt="CC SA icon" width="32px">
+    </a>
+</p>
+
+<div id="clustrmaps-widget"></div><script type='text/javascript' id='clustrmaps' src='//cdn.clustrmaps.com/map_v2.js?cl=ffffff&w=300&t=m&d=Zo-deincaJGsqhqjIWsujtdoNOMJsnnZLefKmxDKVv8&co=124b73&cmo=dd53ff&cmn=4ec724'></script>
+
+<p class="powered-by">
+Published with <a href="https://bookdown.org/" target="_blank" rel="noopener">Bookdown</a>
+</p>
+
+</center>
+
+
+
+<!-- Global site tag (gtag.js) - Google Analytics -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-3CBVR6GQ07"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-3CBVR6GQ07');
+</script>
+
+<!-- Go to www.addthis.com/dashboard to customize your tools -->
+<script type="text/javascript" src="//s7.addthis.com/js/300/addthis_widget.js#pubid=ra-4ef23e545d41b87c"></script>
+
+<script type="text/javascript">
+var addthis_config = {
+	data_ga_property: 'G-3CBVR6GQ07',
+	data_ga_social : true,
+	data_track_addressbar: true
+};
+var addthis_share = {
+	// ... other options
+	url_transforms : {
+		shorten: {
+			twitter: 'bitly'
+		}
+	},
+	shorteners : {
+		bitly : {}
+	}
+}
+</script>
+
+</footer>
+</div>
+            </section>
+
+          </div>
+        </div>
+      </div>
+<a href="index.html" class="navigation navigation-prev " aria-label="Previous page"><i class="fa fa-angle-left"></i></a>
+<a href="data-science-guidance-sessions.html" class="navigation navigation-next " aria-label="Next page"><i class="fa fa-angle-right"></i></a>
+    </div>
+  </div>
+<script src="libs/gitbook-2.6.7/js/app.min.js"></script>
+<script src="libs/gitbook-2.6.7/js/clipboard.min.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-search.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-sharing.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-fontsettings.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-bookdown.js"></script>
+<script src="libs/gitbook-2.6.7/js/jquery.highlight.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-clipboard.js"></script>
+<script>
+gitbook.require(["gitbook"], function(gitbook) {
+gitbook.start({
+"sharing": {
+"github": false,
+"facebook": true,
+"twitter": true,
+"linkedin": false,
+"weibo": false,
+"instapaper": false,
+"vk": false,
+"whatsapp": false,
+"all": ["facebook", "twitter", "linkedin", "weibo", "instapaper"]
+},
+"fontsettings": {
+"theme": "white",
+"family": "sans",
+"size": 2
+},
+"edit": {
+"link": null,
+"text": null
+},
+"history": {
+"link": null,
+"text": null
+},
+"view": {
+"link": null,
+"text": null
+},
+"download": null,
+"search": {
+"engine": "fuse",
+"options": null
+},
+"toc": {
+"collapse": "subsection"
+}
+});
+});
+</script>
+
+<!-- dynamically load mathjax for compatibility with self-contained -->
+<script>
+  (function () {
+    var script = document.createElement("script");
+    script.type = "text/javascript";
+    var src = "true";
+    if (src === "" || src === "true") src = "https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.9/latest.js?config=TeX-MML-AM_CHTML";
+    if (location.protocol !== "file:")
+      if (/^https?:/.test(src))
+        src = src.replace(/^https?:/, '');
+    script.src = src;
+    document.getElementsByTagName("head")[0].appendChild(script);
+  })();
+</script>
+</body>
+
+</html>
