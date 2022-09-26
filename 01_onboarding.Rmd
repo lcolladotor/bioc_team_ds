@@ -38,6 +38,121 @@ This might be your first job experience which is very exciting, but also differe
   * I like having blocks of 2 hours where I work on a given project during 1 block of time. Switching projects too frequently is detrimental since it takes some time to refresh your memory and load the relevant data.
 
 
+## Basic introduction to common tools
+
+### RNA-seq
+
+* [RNA-Seq: a revolutionary tool for transcriptomics](https://www.nature.com/articles/nrg2484)
+* [Advancing RNA-Seq analysis](https://www.nature.com/articles/nbt0510-421)
+* [Differential gene and transcript expression analysis of RNA-seq experiments with TopHat and Cufflinks](https://www.nature.com/articles/nprot.2012.016)
+* [TopHat: discovering splice junctions with RNA-Seq](https://academic.oup.com/bioinformatics/article/25/9/1105/203994)
+* [TopHat2: accurate alignment of transcriptomes in the presence of insertions, deletions and gene fusions](https://genomebiology.biomedcentral.com/articles/10.1186/gb-2013-14-4-r36)
+* [Systematic evaluation of spliced alignment programs for RNA-seq data](https://www.nature.com/articles/nmeth.2722)
+* [Assessment of transcript reconstruction methods for RNA-seq](https://www.nature.com/articles/nmeth.2714)
+* [Transcriptome and genome sequencing uncovers functional variation in humans](https://www.nature.com/articles/nature12531)
+* [Reproducibility of high-throughput mRNA and small RNA sequencing across laboratories](https://www.nature.com/articles/nbt.2702)
+
+### DNAm
+
+* [Measuring cell-type specific differential methylation in human brain tissue](https://genomebiology.biomedcentral.com/articles/10.1186/gb-2013-14-8-r94)
+* [From promises to practical strategies in epigenetic epidemiology](https://www.nature.com/articles/nrg3405)
+* [A data-driven approach to preprocessing Illumina 450K methylation array data](https://bmcgenomics.biomedcentral.com/articles/10.1186/1471-2164-14-293)
+* [Epigenetic memory in induced pluripotent stem cells](https://www.nature.com/articles/nature09342)
+* [The human colon cancer methylome shows similar hypo- and hypermethylation at conserved tissue-specific CpG island shores](https://www.nature.com/articles/ng.298)
+* [Bump hunting to identify differentially methylated regions in epigenetic epidemiology studies](https://www.ncbi.nlm.nih.gov/pmc/articles/PMC3304533/)
+* [Analysing and interpreting DNA methylation data](https://www.nature.com/articles/nrg3273)
+* [DNA methylation: roles in mammalian development](https://www.nature.com/articles/nrg3354)
+* [The Key Role of Epigenetics in Human Disease Prevention and Mitigation](https://www.nejm.org/doi/full/10.1056/NEJMra1402513)
+* [Charting a dynamic DNA methylation landscape of the human genome](https://www.nature.com/articles/nature12433)
+* [Global Epigenomic Reconfiguration During Mammalian Brain Development](https://science.sciencemag.org/content/341/6146/1237905.long)
+* [Divergent neuronal DNA methylation patterns across human cortical development: Critical periods and a unique role of CpH methylation](https://www.biorxiv.org/content/10.1101/428391v2.full)
+
+### `bash` and `linux`
+
+* [Linux essentials](https://faculty.ucr.edu/~tgirke/Documents/UNIX/linux_manual.html)
+* [The Unix Workbench](https://seankross.com/the-unix-workbench/) by [Sean Kross](http://seankross.com).
+* [Rsync (Remote Sync): 10 Practical Examples of Rsync Command in Linux](https://www.tecmint.com/rsync-local-remote-file-synchronization-commands/).
+* [Linux file permissions](http://windowsbulletin.com/filepermissions/).
+* [How To Use Linux Screen -- website 1](https://linuxize.com/post/how-to-use-linux-screen/) and [How To Use Linux Screen -- website 2](https://www.rackaid.com/blog/linux-screen-tutorial-and-how-to/).
+
+### `R`
+
+* Download and install [R from CRAN](https://cran.r-project.org/).
+* [R 101](http://research.libd.org/rstatsclub/post/r_101/#.XXfwU5NKi50) LIBD rstats blog post by [Carrie Wright](https://carriewright11.github.io/).
+* [Download RStudio Desktop](https://www.rstudio.com/products/rstudio/#Desktop).
+* [Using the RStudio Terminal](https://support.rstudio.com/hc/en-us/articles/115010737148-Using-the-RStudio-Terminal).
+* RStudio [cheatsheets](https://www.rstudio.com/resources/cheatsheets/) for many things including regular expressions, `purrr` for functional programming, etc.
+* [Building Tidy Tools workshop materials](https://rstd.io/tidytools19) by Charlotte Wickham and Hadley Wickham for the rstudio 2019 conference. Materials from other workshops is available [here](https://blog.rstudio.com/2019/02/06/rstudio-conf-2019-workshops/).
+* [R Markdown documentation website](https://rmarkdown.rstudio.com/docs/) announced by [Alison Hill](https://twitter.com/apreshill/status/1171290891157307392?s=20).
+* [Cookbook for R graphs](http://www.cookbook-r.com/Graphs/) with useful `ggplot2` code.
+* [Updating R](http://lcolladotor.github.io/2017/05/04/updating-r/#.XXf3hZNKi50) blog post by Leo.
+* Tutorial for [building R websites](http://www.emilyzabor.com/tutorials/rmarkdown_websites_tutorial.html) by [Emily C Zabor](http://www.emilyzabor.com/) which is how this website was made. More on R Markdown websites [here](https://bookdown.org/yihui/rmarkdown/rmarkdown-site.html).
+
+### `python`
+
+* TODO
+
+## Team communication
+
+Overall, it's important to ask for help. We try to follow the advice from the [you must try, and then you must ask](https://blogs.akamai.com/2013/10/you-must-try-and-then-you-must-ask.html) blog post. Also try to ask in a Slack channel where others might be able to benefit from your answers in the future. If enough people ask about something, we'll try to write a blog post as [advised here](http://varianceexplained.org/r/start-blog/) by [David Robinson](https://twitter.com/drob).
+
+### GitHub
+
+* [LieberInstitute](https://github.com/LieberInstitute/) is our GitHub organization account. After you've made your GitHub account let Andrew E Jaffe or Leonardo Collado-Torres know about your username through Slack so they can add you to our [team](https://github.com/orgs/LieberInstitute/teams/jaffelab).
+* GitHub issues are a useful way to specify tasks for a given project. As an example, check the [libdRSE project](https://github.com/LieberInstitute/libdRSE/issues?utf8=%E2%9C%93&q=).
+* [git to know git: an 8 minute introduction](http://research.libd.org/rstatsclub/post/git-to-know-git/#.XXfvXpNKi50) LIBD rstats blog post by [Amy Peterson](http://amy-peterson.github.io/).
+* [Happy Git and GitHub for the useR](https://happygitwithr.com/) book by [Jenny Bryan](https://jennybryan.org/), [Jim Hester](https://twitter.com/jimhester_?lang=en) and other TAs.
+* Videos by [Jacob Fiksel](https://jfiksel.github.io/) on how to use Git for [Windows](https://www.youtube.com/watch?v=F_fPEMnr1OQ&feature=youtu.be) and [Mac](https://www.youtube.com/watch?v=kbmSZwK0k-A&t).
+* [BFG Repo-Cleaner](https://rtyley.github.io/bfg-repo-cleaner/) for fixing GitHub repositories that have data files (example, large files) that you want to delete from your history. Use the JHPCE LIBD module for bfg with `module load bfg`.
+* [Commit together with co-authors](https://github.blog/2018-01-29-commit-together-with-co-authors/) such that everyone gets recognized GitHub activity for joint work.
+* [Closing issues using keywords](https://help.github.com/en/articles/closing-issues-using-keywords) in commit messages.
+* [Merging a pull request](https://help.github.com/en/articles/merging-a-pull-request). Also check [this comment by Yihui Xie](https://github.com/rstudio/blogdown/issues/269#issuecomment-370818782) on how to best submit pull requests. Yihui Xie wrote two blog posts related to that particular series of pull requests [here](https://yihui.name/en/2018/03/second-pull-request/).
+* [Syncing a fork](https://help.github.com/en/articles/syncing-a-fork).
+* [How can I undo git reset --hard HEAD~1?](https://stackoverflow.com/questions/5473/how-can-i-undo-git-reset-hard-head1).
+* [Contributing to the LIBD rstats club](http://research.libd.org/rstatsclub/post/contributing-to-the-libd-rstats-club/#.XXfwBpNKi50) blog post if you want to write another LIBD rstats blog post or use `r BiocStyle::CRANpkg('blogdown')`.
+
+### Slack
+
+* We have multiple Slack workspaces, though the main one we use is the JHU Genomics Slack. Ask Andrew E Jaffe or Leonardo Collado-Torres to add you to that slack workspace. Our main lab channel is `#jaffe_lab_group`.
+* [Using Slack for Academic Departmental Communication](http://lcolladotor.github.io/2018/06/19/using-slack-for-academic-departmental-communication/#.XXfVrJNKi50) blog post written by Leo and [Stephanie Hicks](https://www.stephaniehicks.com/).
+* Preferably ask questions on a project channel such that others involved in the project are able to contribute answers. If it's a more general question, try asking in the `#jaffe_lab_group` channel. Beyond our lab, you might want to ask for R help at `#rstats` and JHPCE help at `#jhpce`. You might also want to check out `#jobs`, `#jhu_papers`, `#general`, `#funding`, `#diversity`, `#conferences`, `#random`, `#langmead_rss`.
+* For a new project, create a private channel with the prefix `jaffe_` or `libd_` then invite the lab members who are working on the project or might be able to help.
+* To integrate a GitHub repository with a Slack channel type in the channel the command `/github subscribe LieberInstitute/RepoName`.
+* Slack supports Markdown syntax for your messages, in particular we use a lot the backtick for inline code and the code chunk syntax for multi-line code. Examples:
+
+```
+   `inline code` example
+    
+    ```
+    multi
+    line
+    code
+    example
+    ```
+```
+
+renders into:
+
+`inline code` example
+    
+```
+multi
+line
+code
+example
+```
+    
+
+
+### Lab calendar
+
+* We have a Google lab calendar. Ask Emily E Burke or Leonardo Collado-Torres via Slack to add you to the calendar with your Google account email address (could be your libd one or could be a gmail account). The calendar is linked to the `#jaffe_lab_group` Slack channel and sends reminders to that channel 30 minutes before an event happens.
+
+### Twitter
+
+* [Tackling Twitter as a Graduate Student](https://biomedicalodyssey.blogs.hopkinsmedicine.org/2019/09/tackling-twitter-as-a-graduate-student/) blog post.
+
+
 ## Laptop setup
 
 The ["config files"](#config-files) chapter contains some relevant links that can help you find some software we frequently use or configuration files. Overall, we use frequently:
@@ -51,7 +166,123 @@ The ["config files"](#config-files) chapter contains some relevant links that ca
 * JHPCE modules: for having a common installation location at JHPCE for software we use. See [jhpce_mod_source](https://github.com/LieberInstitute/jhpce_mod_source) and [jhpce_module_config](https://github.com/LieberInstitute/jhpce_module_config) for more details. 
 
 
-### JHPCE setup
+## Computer setup
 
-all steps
+### JHPCE
 
+Since most analyses we run involve resources larger than those in our laptops, we typically used a high performance computing environment. Particularly,  [JHPCE](https://jhpce.jhu.edu/). One of the first things you'll do is [get a JHPCE account](https://jhpce.jhu.edu/register/user/). Once you do, you'll want to get familiarized with many parts of JHPCE. You can see the archive of questions people have asked through `bithelp` [here](https://lists.johnshopkins.edu/sympa/arc/bithelp).
+
+* Setup password-less login through [ssh keys](https://jhpce.jhu.edu/knowledge-base/authentication/ssh-key-setup/).
+* [Environment modules](https://jhpce.jhu.edu/knowledge-base/environment-modules/) are useful so you don't have to install some common software from stratch, such as `R` which you can load using `module load conda_R`.
+* Use LIBD modules which you can setup following [these instructions](https://github.com/LieberInstitute/jhpce_module_config#recurrent-usage). [jhpce_mod_source](https://github.com/LieberInstitute/jhpce_mod_source) and [jhpce_module_config](https://github.com/LieberInstitute/jhpce_module_config) are our GitHub repositories for our LIBD modules.
+* [Edit your bashrc file for a nicer terminal experience](http://research.libd.org/rstatsclub/post/edit-your-bashrc-file-for-a-nicer-terminal-experience/#.XXfJQ5NKi50) blog post.
+* `r BiocStyle::Githubpkg('LieberInstitute/sgejobs')` ([documentation](http://lieberinstitute.github.io/sgejobs)): contains helper functions for writing and interacting with SGE jobs at JHPCE.
+* [Array and Sequential Cluster Jobs](https://hopstat.wordpress.com/2013/11/05/array-and-sequential-cluster-jobs/). See also `sgejobs::job_single()`.
+* [Setting up your computer for bioinformatics/biostatistics and a compedium of resources](http://lcolladotor.github.io/2012/08/23/setting-up-your-computer-for/#.XXft2pNKi50) 2012 blog post by Leo. Includes some Mac and Windows tools.
+* [Login to the cluster, request a node and change to your project directory in a single command](http://lcolladotor.github.io/2013/12/11/quick-cluster-login-to-interactive-session/#.XXft5JNKi50) 2013 blog post by Leo.
+* [me: Bad rm, don't delete stuff I didn't want to delete! (rm: well, I do what you tell me to do!)](http://lcolladotor.github.io/2012/11/07/me-bad-rm-dont-delete-stuff-i-didnt-want-to-delete/#.XXft6pNKi50) 2012 blog post by Leo.
+* [Automatically coloring your R output in the terminal using colorout](http://lcolladotor.github.io/2014/02/17/colorout/#.XXfu65NKi50) blog post by Leo on `colorout` which you can access through [jalvesaq/colorout](https://github.com/jalvesaq/colorout) nowadays and install with `remotes::install_github('jalvesaq/colorout')`.
+* Check Leo's JHPCE configuration files [here](https://github.com/lcolladotor/config_jhpce).
+
+
+There were a lot of miscellaneous things about using the cluster that might save some confusion if you knew now:
+
+* there's a 100G storage max on your home directory `/users/[yourusername]/`, which will likely fill up very quickly. Most of us have directories under the `/dcl01` and `/dcl02` filesystems, where there is far more space.
+ * you generally will want to include the `-cwd` flag in bash scripts. By default, it will default to dumping output files in your home directory, regardless of where you submit the script.
+* for scripts/jobs where you are generating large files, you will need to change the max writeable file size. This is the `h_fsize` flag for bash scripts, which defaults to 10G. See https://jhpce.jhu.edu/knowledge-base/how-to/.
+
+### Windows
+
+* **TODO**: WinSCP, putty
+* [MobaXTerm](https://jhpce.jhu.edu/knowledge-base/mobaxterm-configuration/) combines SSH and SFTP functionality and is fairly simple to set up and use.
+* [git for windows](https://gitforwindows.org/) which includes Git Bash. Check [rstudio issue 2224](https://github.com/rstudio/rstudio/issues/2224) for specifics on how to install Git Bash such that it will work with RStudio terminal.
+
+### Mac
+
+* [Cyberduck](https://cyberduck.io/) for accessing files remotely. With it, you can open any R files at JHPCE with RStudio in your laptop, then open a terminal from RStudio so you can execute your code.
+* [Alfred](https://www.alfredapp.com/) for quickly finding files among many other powerful workflows.
+* [Textmate setup (Mac only)](http://research.libd.org/rstatsclub/post/textmate-setup-mac-only/#.XXfvlZNKi50) LIBD rstats 2018 blog post by Leo; it's an alternative to using RStudio. The blog post also explains `rmate` which now also exists as a LIBD module that you can load with `module load rmate` at JHPCE.
+* [CriticMarkup](http://criticmarkup.com/).
+* [How to sync your Mac's Documents, Desktop, and any other folder to Dropbox](https://www.imore.com/how-sync-your-documents-desktop-and-any-other-folder-dropbox).
+* [Mac keyboard shortcuts](https://support.apple.com/en-us/HT201236).
+
+
+## Commonly used software
+
+### Bioconductor
+
+* [Where do I start using Bioconductor?](http://lcolladotor.github.io/2014/10/16/startbioc/#.XXf1QZNKi50) blog post by Leo.
+* [How to ask for help for Bioconductor packages](http://lcolladotor.github.io/2017/03/06/how-to-ask-for-help-for-bioconductor-packages/#.XXf1YpNKi50) blog post by Leo.
+* Bioconductor [workflows](https://bioconductor.org/packages/release/BiocViews.html#___Workflow) such as [rnaseqGene](http://bioconductor.org/packages/release/workflows/vignettes/rnaseqGene/inst/doc/rnaseqGene.html) and [sequencing](http://bioconductor.org/packages/release/workflows/vignettes/sequencing/inst/doc/sequencing.html) are very helpful to get started in the RNA sequencing (RNA-seq) field.
+* BioC2019 workshops are available [here](https://rebrand.ly/biocworkshops2019).
+* `r BiocStyle::Biocpkg('limma')`: is one of the main packages we use for analyzing data, particularly with the limma-voom method. Check the Bioconductor workflows that explain limma in more detail [here](https://bioconductor.org/packages/release/BiocViews.html#___Workflow).
+* `r BiocStyle::Biocpkg('GenomicRanges')`: is the package we use for interacting with genomic data across ranges. Check the [introduction](http://bioconductor.org/packages/release/bioc/vignettes/GenomicRanges/inst/doc/GenomicRangesIntroduction.html) for more information.
+* `r BiocStyle::Biocpkg('SummarizedExperiment')`: is the package we use for creating and interacting with `RangedSummarizedExperiment` objects.
+* `r BiocStyle::Biocpkg('bsseq')`: is highly useful for analyzing DNA methylation data, particularly whole genome bisulfite sequencing (WGBS) data.
+* `r BiocStyle::Biocpkg('Biostrings')`: is useful for dealing with sequence information such as the human genome sequence.
+* `r BiocStyle::Biocpkg('recount')`: contains the `getRPKM` function that we use frequently and allows accessing data from many human RNA-seq projects.
+* `r BiocStyle::Biocpkg('derfinder')`: contains functions for BigWig files and other related RNA-seq methods.
+
+### Lab software
+
+* `r BiocStyle::Githubpkg('LieberInstitute/jaffelab')` ([documentation](http://lieberinstitute.github.io/jaffelab)): contains several functions we've written over the years that we find helpful for different analyses.
+* `r BiocStyle::Githubpkg('LieberInstitute/sgejobs')` ([documentation](http://lieberinstitute.github.io/sgejobs)): contains helper functions for writing and interacting with SGE jobs at JHPCE.
+* [jhpce_mod_source](https://github.com/LieberInstitute/jhpce_mod_source) and [jhpce_module_config](https://github.com/LieberInstitute/jhpce_module_config) are our GitHub repositories for our LIBD modules.
+* `r BiocStyle::Githubpkg('LieberInstitute/libdRSE')` ([documentation](http://lieberinstitute.github.io/libdRSE)): is similar to `r BiocStyle::Biocpkg('recount')` for accessing coverage data from LIBD projects.
+* `r BiocStyle::Githubpkg('LieberInstitute/shinycsv')`: allows interactively exploring a table.
+* `r BiocStyle::Githubpkg('LieberInstitute/LIBDpheno')`: contains phenotype information for LIBD samples.
+* `r BiocStyle::Githubpkg('LieberInstitute/recount.bwtool')`: is an R package for dealing with BigWig files using `bwtool`. Check also `r BiocStyle::Githubpkg('ChristopherWilks/bamcount')` by Christopher Wilks.
+* `r BiocStyle::Githubpkg('LieberInstitute/brainflowprobes')`: is an R package for designing flow probes written by [Amanda J Price](https://www.linkedin.com/in/amanda-price-762a982a/).
+* LIBD RNA-seq processing pipeline: [initial version](https://github.com/LieberInstitute/RNAseq-pipeline) and [nextflow version](https://github.com/LieberInstitute/RNAsp).
+* [`globus`](https://github.com/LieberInstitute/globus): our Globus share endpoints such that others can access our data.
+* `r BiocStyle::Githubpkg('ComunidadBioInfo/easyweb')` for easily creating your own personal R markdown website.
+
+### Writing papers
+
+* [How to write academic documents with GoogleDocs using F1000Workspace](https://blog.f1000.com/2019/07/31/how-to-write-academic-documents-with-googledocs-using-f1000workspace/) blog post. Check the [original](http://lcolladotor.github.io/2019/04/02/how-to-write-academic-documents-with-googledocs/#.XXfKcJNKi50) version for some additional information.
+
+
+## Meetings of potential interest
+
+* [LIBD rstats club](http://research.libd.org/rstatsclub/#.XXfxTpNKi50) described in more detail on [this blog post](http://research.libd.org/rstatsclub/post/welcome-to-the-libd-rstats-club/#.XXfEtJNKi50).
+* Joint genomics meeting: check the `#joint_group_meeting` Slack public channel at the JHU Genomics Slack Workspace.
+* Genomics journal club: for students and trainees, check the `#genomics_journal_club` Slack public channel at the JHU Genomics Slack Workspace.
+* Baltimore R Ladies: check the `#r-ladies` Slack channel as well as [meetup.com/rladies-baltimore/](https://www.meetup.com/rladies-baltimore/). They also have a [website](https://rladies-baltimore.github.io/) with code from earlier sessions and you can find the [slides here](https://github.com/rladies/meetup-presentations_baltimore).
+* JHU Genomics events: check their calendar [here](http://genomics.jhu.edu/events.html). Every year they organize a symposium around October where you can present a poster if you want. They also organize other workshops which you might be interested in signing up for.
+
+
+### Conferences
+
+* BioC: announced [here](http://bioconductor.org/help/events/).
+* ASHG: [website](https://www.ashg.org/).
+* CSHL Biology of Genomes (BoG): through the [CSHL website](https://meetings.cshl.edu/meetingshome.aspx).
+* RStudio conf: [website](https://www.rstudio.com/conference/).
+* Women in Data Science (has multiple meetings), [website](https://www.widsconference.org/).
+* Joint Statistical Meetings (JSM): through the [ASA website](https://www.amstat.org/asa/meetings/home.aspx).
+
+See the [conferences/courses of interest](https://docs.google.com/spreadsheets/d/15toP739T3cGvqz9I2y56USvVT7GU9jkOx1GDKQsbaPY/edit?usp=sharing) Google Sheet for more up to date information.
+
+## Eating nearby
+
+* **North East Market**: it's on [2101 E Monument St](https://goo.gl/maps/Cy7K5LJ3pZx9p3Mr5) which is just a few minutes away walking. You can find a lot of variety there including a Korean stall along the south wall. That stall is pay-by-weight and lots of the dishes are delicious.
+* School of Public Health 9th floor salad bar
+**[Garden Plate](https://www.yelp.com/biz/garden-plate-baltimore)**: walk two blocks north to [615 N Wolfe St](https://goo.gl/maps/E5yJzcK4EA4mdTB89) or K 3-4 on the [Hopkins East Baltimore Campus map](https://www.hopkinsmedicine.org/the_johns_hopkins_hospital/_docs/jhi_visitors_guide.pdf), then take an elevator on the south side of the building to the 9th floor. The elevators on the north side don't go all the way up to the 9th floor.
+* **[Kabobi](http://www.helmandkabobi.com/)**: Afghan food, really quick for take-out. Popular choices are the lamb or chicken rice bowls, chopped salads, and the veggie rice bowls.
+* **Greenhouse**: This is in neighboring Preclinical Teaching Building (PCTB); it's on K2 on the [Hopkins East Baltimore Campus map](https://www.hopkinsmedicine.org/the_johns_hopkins_hospital/_docs/jhi_visitors_guide.pdf). Have someone show the inside way - or go outside and it's just inside the Wolfe/Monument corner entrance. It's a pay-by-weight buffet with salad bar and hot options. Not amazing but great lower cost option, especially if you are going for the lighter weight foods like salad!
+
+### Food trucks
+
+* **Koko** - Korean food on Tuesdays and Fridays. A lab favorite! Favorites are bulgogi (beef) and tofu dishes.
+* **Chowhound** - burgers (incl. veggie) on Mondays and ?. GREAT FRIES.
+* Other good ones: Greek truck, Kabob/falafel truck in front of Starbucks
+
+### Other
+
+* Food court inside the hospital (good luck finding it!) with Subway, Einstein Bros, and others. It's on G-H 4 on the [Hopkins East Baltimore campus map](https://www.hopkinsmedicine.org/the_johns_hopkins_hospital/_docs/jhi_visitors_guide.pdf). There's a second one at I6 on the same map.
+* Dunkin, Subway, and Chinese places along Monument St.
+
+
+## Baltimore Life
+
+* ["So you're moving to Baltimore"](https://simplystatistics.org/2013/09/13/so-youre-moving-to-baltimore/) 2013 blog post by [Brian Caffo](www.bcaffo.com).
+* The Baltimore Symphony Orchestra has [discount tickets](https://www.bsomusic.org/calendar/special-offers/) which you might be interested in.
