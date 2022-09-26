@@ -62,7 +62,6 @@ dsgs-feedback
 notes-1
 team-help
 individual-updates
-notion-updates
 project-meetings
 helping-others
 linear-regression-example
@@ -115,4 +114,6 @@ r-packages-1
 websites
 libd-rbioconductor-packages
 career-growth
+resources
 career-planning-session
+project-code-handoff-checks
