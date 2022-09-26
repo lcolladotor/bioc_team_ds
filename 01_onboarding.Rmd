@@ -20,7 +20,7 @@ This might be your first job experience which is very exciting, but also differe
 * Aim to achieve a weekly productivity score on [RescueTime](https://www.rescuetime.com/) of 70 or above (ideally over 80).
   * I have `docs.google.com/#document`, `terminal (iterm2)`, and `rstudio` listed as "very productive". Then `slack`, `mail.libd.org` as "productive". I have `zoom.us` as "very distracting" since I'm personally trying to de-incentivize having meetings all day, but for you that might be different.
 * Independently perform basic job responsibilities without instruction.
-  * Keep notebook with you to take notes when necessary.
+  * Keep a notebook with you to take notes when necessary.
   * Maintain ongoing list of daily to do items.
   * Optionally post your to dos on the respective Slack channels by 9:30 am each morning (10:30 am when we have 9-10 am meetings). Doing so can help the most in your first few months at the team, so we can identify how to best help you.
 * Write code daily and version control it on Git/[GitHub](https://github.com/LieberInstitute). If writing academic papers, then post equivalent updates on Slack.
@@ -35,7 +35,7 @@ This might be your first job experience which is very exciting, but also differe
 * Write a summary after every 1 on 1 meeting. Doing so reduces the burden on memorization.
   * Write a bullet point list or make some GitHub issues after every 1 on 1 meeting you have with me or other colleagues.
 * Comply with your "at the office" schedule.
-  * The exact days will depend on which days you are working remotely (if any at all).
+  * The exact days will depend on which days you have approval for working remotely (if any at all).
 * Read at least one relevant scientific manuscript per week.
   * Write a summary about it on the appropriate Slack channel. Relevant manuscripts are those explaining software/methods you are using, those related to the biological question you are working on, or new software/methods we might want to use for the projects you are working on.
 * Work on your main projects at least some portion each day.
@@ -45,7 +45,9 @@ This might be your first job experience which is very exciting, but also differe
 
 ## Background knowledge
 
-Below is a list of papers that might provide some useful background information for bulk RNA-seq or DNA methylation. We will also give you a more updated list of background papers to read depending on the project you will be working on. You might find some relevant papers and videos on the [**team presentations schedule**](https://docs.google.com/spreadsheets/d/1r6552ySisg7_KpmJmChOvLHVWdMmss3bncEf2jqIM9k/edit?usp=sharing) and companion YouTube playlist.
+Below is a list of papers that might provide some useful background information for bulk RNA-seq or DNA methylation. We will also give you a more updated list of background papers to read depending on the project you will be working on. You might find some relevant papers and videos on the [**team presentations schedule**](https://docs.google.com/spreadsheets/d/1r6552ySisg7_KpmJmChOvLHVWdMmss3bncEf2jqIM9k/edit?usp=sharing) and companion YouTube playlist. For example, check this presentation by Louise A. Huuki-Myers on the [Cobos et al, Nature Communications, 2020](https://doi.org/10.1038/s41467-020-19015-1) deconvolution paper.
+
+<iframe width="560" height="315" src="https://www.youtube.com/embed/xpZGn5JM0FQ" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 
 ### RNA-seq
 
@@ -60,6 +62,8 @@ Below is a list of papers that might provide some useful background information 
 * [Reproducibility of high-throughput mRNA and small RNA sequencing across laboratories](https://www.nature.com/articles/nbt.2702)
 
 ### DNAm
+
+_Note_ that we don't work much with DNAm data nowadays, unlike the [jaffe_onboarding](http://research.libd.org/jaffe_onboarding) days. However, this list might still be useful for some.
 
 * [Measuring cell-type specific differential methylation in human brain tissue](https://genomebiology.biomedcentral.com/articles/10.1186/gb-2013-14-8-r94)
 * [From promises to practical strategies in epigenetic epidemiology](https://www.nature.com/articles/nrg3405)
@@ -178,23 +182,47 @@ example
 The ["config files"](#config-files) page contains some relevant links that can help you find some software we frequently use or configuration files. Overall, we use frequently:
 
 * [R](https://cran.r-project.org/)
-* [RStudio](https://www.rstudio.com/products/rstudio/download/): for writing R/Python code, executing it at JHPCE through the integrated terminal
-* [Cyberduck](https://cyberduck.io/) or [WinSCP](https://winscp.net/) for browsing JHPCE files and previewing PDF files
-* Git: for version controlling files
-* [GitHub](https://github.com/LieberInstitute): for sharing our code within the team and externally, plus to transfer code between your laptop and JHPCE
+* [RStudio](https://www.rstudio.com/products/rstudio/download/): for writing R/Python code, executing it at JHPCE through the integrated terminal.
+* [Cyberduck](https://cyberduck.io/) or [WinSCP](https://winscp.net/) for browsing JHPCE files and previewing PDF files.
+* Git: for version controlling files. See the [install git](https://happygitwithr.com/install-git.html) chapter from _Happy Git and GitHub for the useR_.
+* [GitHub](https://github.com/LieberInstitute): for sharing our code within the team and externally, plus to transfer code between your laptop and JHPCE.
 * [TextMate](https://macromates.com/) or [Sublime Text](https://www.sublimetext.com/) or some other text editor that has code syntax highlighting. RStudio has this too.
 * JHPCE modules: for having a common installation location at JHPCE for software we use. See [jhpce_mod_source](https://github.com/LieberInstitute/jhpce_mod_source) and [jhpce_module_config](https://github.com/LieberInstitute/jhpce_module_config) for more details. 
 
 ### JHPCE
 
-Since most analyses we run involve resources larger than those in our laptops, we typically used a high performance computing environment. Particularly,  [JHPCE](https://jhpce.jhu.edu/). One of the first things you'll do is [get a JHPCE account](https://jhpce.jhu.edu/register/user/). Once you do, you'll want to get familiarized with many parts of JHPCE. You can see the archive of questions people have asked through [`bithelp`](https://lists.johnshopkins.edu/sympa/arc/bithelp) and/or the [`#jhpce`](https://jhu-genomics.slack.com/archives/C074W8800) channel.
+Since most analyses we run involve resources larger than those in our laptops, we typically used a high performance computing environment. Particularly,  [JHPCE](https://jhpce.jhu.edu/). Note that the only official pronunciation for JHPCE is by its letters **J-H-P-C-E**.
 
+
+#### JHPCE account
+
+One of the first things you'll do is [get a JHPCE account](https://jhpce.jhu.edu/register/user/): under "sponsoring organization" scroll all the way down till you find the LIBD PIs such as "Martinowich" (applicable also for members of Stephanie Page and Kristen Maynard's teams) or "Torres" for Leonardo Collado-Torres. You will receive an email with a private link to schedule your appointment at one of the training sessions for new users. They typically have space for 8 people and do the training sessions once every 2 weeks, so you will want to do this early as it can take a while to setup. Even if you are not going to write code but want to see some plots others have made, you will need to get your JHPCE account.
+
+#### JHPCE setup
+
+Once you have your JHPCE account, you will want to set up your laptop and JHPCE to work efficiently. You highly encourage that you use some of the configuration files from the [**"config files"**](#config-files) page.
+
+* Check the LIBD rstats club videos on JHPCE laptop configuration ([macOS](https://youtu.be/UmE1DZe0B8U); [winOS](https://youtu.be/5pMVb8I6yXI) + [this video](https://youtu.be/SBM5Oify6e8)).
 * Setup password-less login through [ssh key pairs](https://jhpce.jhu.edu/knowledge-base/authentication/ssh-key-setup/). You will need 4 key pairs.
-  * One key pair for your laptop to the JHPCE login node
-  * One key pair from the JHPCE login node to the compute nodes (typically created by JHPCE admins)
-  * One key pair from your laptop to GitHub; see their [documentation](https://docs.github.com/en/authentication/connecting-to-github-with-ssh/generating-a-new-ssh-key-and-adding-it-to-the-ssh-agent)
-  * One key pair from JHPCE to GitHub
-  * Check the LIBD rstats club videos on JHPCE laptop configuration ([macOS](https://youtu.be/UmE1DZe0B8U); [winOS](https://youtu.be/5pMVb8I6yXI) + [this video](https://youtu.be/SBM5Oify6e8))
+  * One key pair for your laptop to the JHPCE login node.
+  * One key pair from the JHPCE login node to the compute nodes (typically created by JHPCE admins).
+  * One key pair from your laptop to GitHub; see their [documentation](https://docs.github.com/en/authentication/connecting-to-github-with-ssh/generating-a-new-ssh-key-and-adding-it-to-the-ssh-agent).
+  * One key pair from JHPCE to GitHub.
+* You should edit your JHPCE `~/.bashrc` and create your JHPCE `~/.inputrc` file following the information we have at the ["config files"](#config-files) page. 
+  * You might want to do something similar for your macOS `~/.bashrc` file. Though I lately use a `~/.zshrc` file on my macOS computer.
+* You should specify your email on your JHPCE `~/.sge_request` file following the information we have at the ["config files"](#config-files) page.
+* You should edit your laptop's and JHPCE `~/.gitconfig` files following the information we have at the ["config files"](#config-files) page.
+* We will want to email BitSupport to make sure that your default user group is not `users`, but a more appropriate group such as `lieber_lcolladotor` or `lieber_marmaypag`.
+* You will likely want to configure your laptop & JHPCE to be able to use `rmate` to open JHPCE files from the terminal window in TextMate / Sublime Text / other text editors. This will involve editing your laptop's `~/.ssh/config` as well as your JHPCE's `~/.ssh/config` files. See the video below for more information about this process.
+* You might be interested in configuring `rmote` to emulate the RStudio plot and help file panels. This will also involve editing your laptop's `~/.ssh/config` as well as your JHPCE's `~/.ssh/config` files.
+* You will likely want to edit your laptop's and JHPCE `~/.Rprofile`, `~/.Renviron` configuration files following the information we have at the ["config files"](#config-files) page.
+  
+<iframe width="560" height="315" src="https://www.youtube.com/embed/LjWr39C1Z_Q" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+
+#### JHPCE info
+
+Now that you have your JHPCE account and can access files, you'll want to get familiarized with many parts of JHPCE. You can see the archive of questions people have asked through [`bithelp`](https://lists.johnshopkins.edu/sympa/arc/bithelp) and/or the [`#jhpce`](https://jhu-genomics.slack.com/archives/C074W8800) channel.
+
 * [Environment modules](https://jhpce.jhu.edu/knowledge-base/environment-modules/) are useful so you don't have to install some common software from stratch, such as `R` which you can load using `module load conda_R`.
 * Use LIBD modules which you can setup following [these instructions](https://github.com/LieberInstitute/jhpce_module_config#recurrent-usage). [jhpce_mod_source](https://github.com/LieberInstitute/jhpce_mod_source) and [jhpce_module_config](https://github.com/LieberInstitute/jhpce_module_config) are our GitHub repositories for our LIBD modules.
 * [Edit your bashrc file for a nicer terminal experience](http://research.libd.org/rstatsclub/post/edit-your-bashrc-file-for-a-nicer-terminal-experience/#.XXfJQ5NKi50) blog post. See the ["config files"](#config-files) page for the latest common configuration files we use.
@@ -207,26 +235,30 @@ Since most analyses we run involve resources larger than those in our laptops, w
 * See ["config files"](#config-files) page for the latest configuration files ^[Outdated: Check Leo's JHPCE configuration files [here](https://github.com/lcolladotor/config_jhpce).].
 
 
-There were a lot of miscellaneous things about using the cluster that might save some confusion if you knew now:
+There were a lot of miscellaneous things about using JHPCE that might save some confusion if you knew now:
 
-* there's a 100G storage max on your home directory `/users/[yourusername]/`, which will likely fill up very quickly. Most of us have directories under the `/dcs04`, `/dcl01`, and `/dcl02` filesystems, where there is far more space.
+* there's a 100G storage limit on your home directory `/users/[yourusername]/`, which will likely fill up very quickly. Most of us have directories under the `/dcs04`, `/dcl01`, and `/dcl02` filesystems, where there is far more space.
  * you generally will want to include the `-cwd` flag in bash scripts. By default, it will default to dumping output files in your home directory, regardless of where you submit the script.
-* for scripts/jobs where you are generating large files, you will need to change the maximum writeable file size. This is the `h_fsize` flag for bash scripts, which defaults to 10G. See https://jhpce.jhu.edu/knowledge-base/how-to/ for more details.
+* for scripts/jobs where you are generating large files, you will need to change the maximum writable file size. This is the `h_fsize` flag for bash scripts, which defaults to 10G. See https://jhpce.jhu.edu/knowledge-base/how-to/ for more details.
 
-### Mac
+### macOS
 
 * [Cyberduck](https://cyberduck.io/) for accessing files remotely. With it, you can open any R files at JHPCE with RStudio in your laptop, then open a terminal from RStudio so you can execute your code.
-* [Alfred](https://www.alfredapp.com/) for quickly finding files among many other powerful workflows.
-* [Textmate setup (Mac only)](http://research.libd.org/rstatsclub/post/textmate-setup-mac-only/#.XXfvlZNKi50) LIBD rstats 2018 blog post; it's an alternative to using RStudio. The blog post also explains `rmate` which now also exists as a LIBD module that you can load with `module load rmate` at JHPCE. There's also a more recent video on this topic on the LIBD rstats club Google Sheet.
+* [Alfred](https://www.alfredapp.com/) for quickly finding files among many other powerful workflows. I highly recommend paying for the power pack, to get access to the most advanced (and time saving) features.
+* [Textmate setup (Mac only)](http://research.libd.org/rstatsclub/post/textmate-setup-mac-only/#.XXfvlZNKi50) LIBD rstats 2018 blog post; it's an alternative to using RStudio. The blog post also explains `rmate` which now also exists as a LIBD module that you can load with `module load rmate` at JHPCE. There's also a more [recent video on this topic](https://youtu.be/LjWr39C1Z_Q) on the LIBD rstats club Google Sheet.
 * [CriticMarkup](http://criticmarkup.com/).
 * [Mac keyboard shortcuts](https://support.apple.com/en-us/HT201236).
 
-### Windows
+### winOS
 
 * [WinSCP](https://winscp.net/) for browsing files.
 * [putty](https://www.putty.org/) (which comes with WinSCP), for accessing JHPCE through a terminal window.
 * [MobaXTerm](https://jhpce.jhu.edu/knowledge-base/mobaxterm-configuration/) combines SSH and SFTP functionality and is fairly simple to set up and use.
 * [git for windows](https://gitforwindows.org/) which includes Git Bash. Check [rstudio issue 2224](https://github.com/rstudio/rstudio/issues/2224) for specifics on how to install Git Bash such that it will work with RStudio terminal.
+
+### Any OS
+
+For both macOS and winOS, you might be interested in this older (2012) blog post about my [computers setup](http://lcolladotor.github.io/2012/08/23/setting-up-your-computer-for/#.YzIP0OzMKX0). 
 
 
 ## Commonly used software
@@ -261,10 +293,6 @@ For example, you might enjoy the video about Bioconductor or the one on `Summari
 * LIBD RNA-seq processing pipeline: [SPEAQeasy](http://research.libd.org/SPEAQeasy/), and [SPEAQeasy-example](http://research.libd.org/SPEAQeasy-example/). See also the [initial version](https://github.com/LieberInstitute/RNAseq-pipeline).
 * [`globus`](https://github.com/LieberInstitute/globus): our Globus share endpoints such that others can access our data.
 
-### Writing papers
-
-* [How to write academic documents with GoogleDocs using F1000Workspace](https://blog.f1000.com/2019/07/31/how-to-write-academic-documents-with-googledocs-using-f1000workspace/) blog post. Check the [original](http://lcolladotor.github.io/2019/04/02/how-to-write-academic-documents-with-googledocs/#.XXfKcJNKi50) version for some additional information.
-
 
 ## Meetings of potential interest
 
@@ -278,7 +306,7 @@ For example, you might enjoy the video about Bioconductor or the one on `Summari
 
 * BioC: announced [here](http://bioconductor.org/help/events/).
 * ASHG: [website](https://www.ashg.org/).
-* CSHL Biology of Genomes (BoG): through the [CSHL website](https://meetings.cshl.edu/meetingshome.aspx).
+* CSHL Biology of Genomes (BoG) or Biological Data Science (BDS): through the [CSHL website](https://meetings.cshl.edu/meetingshome.aspx).
 * RStudio conf: [website](https://www.rstudio.com/conference/).
 * Women in Data Science (has multiple meetings), [website](https://www.widsconference.org/).
 * Joint Statistical Meetings (JSM): through the [ASA website](https://www.amstat.org/asa/meetings/home.aspx).
@@ -289,7 +317,7 @@ See the [conferences/courses of interest](https://docs.google.com/spreadsheets/d
 
 * **North East Market**: it's on [2101 E Monument St](https://goo.gl/maps/Cy7K5LJ3pZx9p3Mr5) which is just a few minutes away walking. You can find a lot of variety there including a Korean stall along the south wall. That stall is pay-by-weight and lots of the dishes are delicious.
 * School of Public Health 9th floor salad bar
-**[Garden Plate](https://www.yelp.com/biz/garden-plate-baltimore)**: walk two blocks north to [615 N Wolfe St](https://goo.gl/maps/E5yJzcK4EA4mdTB89) or K 3-4 on the [Hopkins East Baltimore Campus map](https://www.hopkinsmedicine.org/the_johns_hopkins_hospital/_docs/jhi_visitors_guide.pdf), then take an elevator on the south side of the building to the 9th floor. The elevators on the north side don't go all the way up to the 9th floor.
+**[Garden Plate](https://www.yelp.com/biz/garden-plate-baltimore)**: walk two blocks north to [615 N Wolfe St](https://goo.gl/maps/E5yJzcK4EA4mdTB89) or K 3-4 on the [Hopkins East Baltimore Campus map](https://www.hopkinsmedicine.org/the_johns_hopkins_hospital/_docs/jhi_visitors_guide.pdf), then take an elevator on the south side of the building to the 9th floor. The elevators on the north side don't go all the way up to the 9th floor. ^[I haven't checked if it survived the COVID-19 pandemic or got replaced.]
 * **[Kabobi](http://www.helmandkabobi.com/)**: Afghan food, really quick for take-out. Popular choices are the lamb or chicken rice bowls, chopped salads, and the veggie rice bowls.
 * **Greenhouse**: This is in neighboring Preclinical Teaching Building (PCTB); it's on K2 on the [Hopkins East Baltimore Campus map](https://www.hopkinsmedicine.org/the_johns_hopkins_hospital/_docs/jhi_visitors_guide.pdf). Have someone show the inside way - or go outside and it's just inside the Wolfe/Monument corner entrance. It's a pay-by-weight buffet with salad bar and hot options. Not amazing but great lower cost option, especially if you are going for the lighter weight foods like salad!
 
