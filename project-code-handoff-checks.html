@@ -394,7 +394,7 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
             <section class="normal" id="section-">
 <div id="project-code-handoff-checks" class="section level1 hasAnchor" number="20">
 <h1><span class="header-section-number">20</span> Project code handoff checks<a href="project-code-handoff-checks.html#project-code-handoff-checks" class="anchor-section" aria-label="Anchor link to header"></a></h1>
-<p>Things to check before someone leaves, to make sure we understand the code and files in the project.</p>
+<p>At some point, it might be time for you to move on to a different opportunity. We will miss you! But before you go, there are some things we should check, to make sure we understand the code and files in the project(s) you were working on.</p>
 <ul>
 <li>Is the code version controlled?</li>
 <li>Do we have access to the GitHub repository?
@@ -404,7 +404,7 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <li>Is the home directory on JHPCE listed on the main <code>README.md</code>?</li>
 <li>Do we have access to the files on JHPCE?
 <ul>
-<li>Do we have write access to these files?</li>
+<li>Do we have write access to these files? Check with <code>nfs4_getfacl</code> and/or <code>ls -lah</code>.</li>
 </ul></li>
 <li>Is there a clean <code>git status</code> output?</li>
 <li>Are the files organized as specified in <a href="#organizing-your-work.html">“Organizing your work”</a>?
@@ -417,7 +417,7 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 </ul></li>
 <li>Are the scripts linear? That is, can they be re-run from line 1 till the end linearly?
 <ul>
-<li>Ideally: are there companion shell scripts for the R scripts? For example, <a href="https://github.com/LieberInstitute/Visium_IF_AD/blob/master/code/run_all_post_spaceranger.sh"><code>run_all_post_spaceranger.sh</code></a>.</li>
+<li>Ideally: are there companion shell scripts for the R scripts? For example, <a href="https://github.com/LieberInstitute/Visium_IF_AD/blob/master/code/run_all_post_spaceranger.sh"><code>Visium_IF_AD/run_all_post_spaceranger.sh</code></a>.</li>
 </ul></li>
 <li>Do we know how much RAM or how many cores are required for each script?
 <ul>
