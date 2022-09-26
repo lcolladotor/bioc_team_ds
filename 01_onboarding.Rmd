@@ -12,7 +12,7 @@ This might be your first job experience which is very exciting, but also differe
   * You can measure this by installing the free version of [RescueTime](https://www.rescuetime.com/).
 * Minimize all distractions on the 8 work hours.
   * Avoid checking social media or any other lurking activities. You can put your phone in "work mode" ("focus" for iPhone) to silence all notifications as well. If you need to do something else, notify me or request time off through [Paylocity](https://www.paylocity.com/) when appropriate.
-* Aim to achieve a weekly productivity score on [RescueTime](https://www.rescuetime.com/) of 70 or above.
+* Aim to achieve a weekly productivity score on [RescueTime](https://www.rescuetime.com/) of 70 or above (ideally over 80).
   * I have `docs.google.com/#document`, `terminal (iterm2)`, and `rstudio` listed as "very productive". Then `slack`, `mail.libd.org` as "productive". I have `zoom.us` as "very distracting" since I'm personally trying to de-incentivize having meetings all day, but for you that might be different.
 * Independently perform basic job responsibilities without instruction.
   * Keep notebook with you to take notes when necessary.
@@ -38,6 +38,20 @@ This might be your first job experience which is very exciting, but also differe
   * I like having blocks of 2 hours where I work on a given project during 1 block of time. Switching projects too frequently is detrimental since it takes some time to refresh your memory and load the relevant data.
 
 
-## JHPCE setup
+## Laptop setup
+
+The ["config files"](#config-files) chapter contains some relevant links that can help you find some software we frequently use or configuration files. Overall, we use frequently:
+
+* [R](https://cran.r-project.org/)
+* [RStudio](https://www.rstudio.com/products/rstudio/download/): for writing R/Python code, executing it at JHPCE through the integrated terminal
+* [Cyberduck](https://cyberduck.io/) or [WinSCP](https://winscp.net/) for browsing JHPCE files and previewing PDF files
+* Git: for version controlling files
+* [GitHub](https://github.com/LieberInstitute): for sharing our code within the team and externally, plus to transfer code between your laptop and JHPCE
+* [TextMate](https://macromates.com/) or [Sublime Text](https://www.sublimetext.com/) or some other text editor that has code syntax highlighting. RStudio has this too.
+* JHPCE modules: for having a common installation location at JHPCE for software we use. See [jhpce_mod_source](https://github.com/LieberInstitute/jhpce_mod_source) and [jhpce_module_config](https://github.com/LieberInstitute/jhpce_module_config) for more details. 
+
+
+### JHPCE setup
 
 all steps
+
