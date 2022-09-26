@@ -1,2 +1,43 @@
 # Onboarding
 
+If you are either new to my team or [LIBD](https://www.libd.org/), you might this page useful.
+
+On your first few weeks, you will be acquiring a lot of information about how we work, how we organize our work, where things are located, scientific background on the topic(s) you will be working on, as well as configuring your computer so you can work efficiently with the resources we have available. As part of this process, you will likely get a LIBD laptop and will need to spend time configuring it before you can do a lot of work.
+
+## Basic work expectations
+
+This might be your first job experience which is very exciting, but also different from being a student. You will thus need to learn to work in our team and maybe adapt some of your behavior. Ultimately, communication will be your friend to avoid any misunderstandings such as different expectations. There are also some rules you will have to follow, which are aimed at making sure we all are on the same playing field. The following are some team guidelines I have, but you should also follow the LIBD Employee Handbook which you can find through [Paylocity](https://www.paylocity.com/) under the "Company" section after you log in.
+
+* Work 40 hours per week. The employee handbook states: _The Lieber Institute’s normal business hours are 8:30 a.m. to 5:30 p.m., Monday through Friday with an hour included for lunch and breaks._. That’s exactly 8 work hours per day, and 40 work hours per week.
+  * You can measure this by installing the free version of [RescueTime](https://www.rescuetime.com/).
+* Minimize all distractions on the 8 work hours.
+  * Avoid checking social media or any other lurking activities. You can put your phone in "work mode" ("focus" for iPhone) to silence all notifications as well. If you need to do something else, notify me or request time off through [Paylocity](https://www.paylocity.com/) when appropriate.
+* Aim to achieve a weekly productivity score on [RescueTime](https://www.rescuetime.com/) of 70 or above.
+  * I have `docs.google.com/#document`, `terminal (iterm2)`, and `rstudio` listed as "very productive". Then `slack`, `mail.libd.org` as "productive". I have `zoom.us` as "very distracting" since I'm personally trying to de-incentivize having meetings all day, but for you that might be different.
+* Independently perform basic job responsibilities without instruction.
+  * Keep notebook with you to take notes when necessary.
+  * Maintain ongoing list of daily to do items.
+  * Optionally post your to dos on the respective Slack channels by 9:30 am each morning (10:30 am when we have 9-10 am meetings). Doing so can help the most in your first few months at the team, so we can identify how to best help you.
+* Write code daily and version control it on Git/[GitHub](https://github.com/LieberInstitute). If writing academic papers, then post equivalent updates on Slack.
+  * Make at least 10 commits per day, with 15 per day being the ideal number. That’s from 5 commits per 2 hour coding session as noted at ["project feedback"](project-feedback), with at least 3 such sessions per day. 
+  * If you spend time writing part of an academic manuscript, then post bullet point updates on the respective Slack channel.
+* If you spend more than 15 minutes trying to solve something and are not making any more progress, ask a question about it on a Slack channel (not direct messages) with as much information needed to help you.
+  * Don't use direct messages (DMs) on Slack, as multiple people can very likely help you and they won't be able to do so through DMs.
+  * For R code, remember to use `reprex` like we mention at ["how to ask for help"](how-to-ask-for-help).
+  * You could also request help sessions from team members through the [Data Science guidance sessions](#data-science-guidance-sessions) system.
+* Communicate your reasoning and thought process. Respond to your colleagues in appropriate time windows.
+  * Don’t assume others know what you are thinking: be as verbose as possible. Avoid one liner replies on emails and Slack. Respond to Slack messages within a business hour and to emails from colleagues within a business day. CC me on all replies you send via email.
+* Write a summary after every 1 on 1 meeting. Doing so reduces the burden on memorization.
+  * Write a bullet point list or make some GitHub issues after every 1 on 1 meeting you have with me or other colleagues.
+* Comply with your "at the office" schedule.
+  * The exact days will depend on which days you are working remotely (if any at all).
+* Read at least one relevant scientific manuscript per week.
+  * Write a summary about it on the appropriate Slack channel. Relevant manuscripts are those explaining software/methods you are using, those related to the biological question you are working on, or new software/methods we might want to use for the projects you are working on.
+* Work on your main projects at least some portion each day.
+  * Avoid cramming work the day before a meeting for a given project. Working the same amount of hours spread throughout the week allows you to identify questions and problems you might need help with, and to have the time to get the required help.
+  * I like having blocks of 2 hours where I work on a given project during 1 block of time. Switching projects too frequently is detrimental since it takes some time to refresh your memory and load the relevant data.
+
+
+## JHPCE setup
+
+all steps
