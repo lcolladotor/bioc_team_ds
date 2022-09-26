@@ -25,9 +25,9 @@ As a team, we run [Data Science guidance sessions](#data-science-guidance-sessio
 
 We constantly create new content to share what we are learning or working on, which you might be interested in. In particular, we:
 
-* run the [LIBD rstats club](http://research.libd.org/rstatsclub/) which you can find on Twitter as [LIBDrstats](https://twitter.com/LIBDrstats) (check the [rstats club schedule](https://docs.google.com/spreadsheets/d/1is8dZSd0FZ9Qi1Zvq1uRhm-P1McnJRd_zxdAfCRoMfA/edit?usp=sharing))
-* discuss papers and software in our [team meetings](#team-meetings) (check our [schedule](https://docs.google.com/spreadsheets/d/1r6552ySisg7_KpmJmChOvLHVWdMmss3bncEf2jqIM9k/edit?usp=sharing))
-* organize R/Bioconductor data science [bootcamps](#rbioconductor-data-science-bootcamps)
+* run the [LIBD rstats club](http://research.libd.org/rstatsclub/) which you can find on Twitter as [LIBDrstats](https://twitter.com/LIBDrstats) (check the [**rstats club schedule**](https://docs.google.com/spreadsheets/d/1is8dZSd0FZ9Qi1Zvq1uRhm-P1McnJRd_zxdAfCRoMfA/edit?usp=sharing))
+* discuss papers and software in our [team meetings](#team-meetings) (check our [**team schedule**](https://docs.google.com/spreadsheets/d/1r6552ySisg7_KpmJmChOvLHVWdMmss3bncEf2jqIM9k/edit?usp=sharing))
+* organize R/Bioconductor data science [**bootcamps**](#rbioconductor-data-science-bootcamps)
 
 For an overview of our recent work, check this video and [companion slides](https://speakerdeck.com/lcolladotor/libd-ds-tldr).
 
