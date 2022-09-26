@@ -14,12 +14,15 @@ team-calendar
 twitter-1
 laptop-setup
 jhpce
-mac
-windows
+jhpce-account
+jhpce-setup
+jhpce-info
+macos
+winos
+any-os
 commonly-used-software-1
 bioconductor
 lab-software
-writing-papers
 meetings-of-potential-interest
 conferences
 eating-nearby
@@ -112,7 +115,7 @@ jhpce-file-organization
 background-history
 organization-since-2021
 project-documentation
-writing-papers-1
+writing-papers
 things-to-keep-in-mind
 writing-process
 details
