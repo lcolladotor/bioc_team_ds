@@ -2,17 +2,17 @@
 
 # Team meetings
 
-Every week we meet for about an hour 20 minutes. The team meeting has three sections:
+Every week we meet for about an hour. The team meeting has three sections:
 
 * [30 min] **Papers & software**: we discuss either a paper or some software. The discussion is lead by a team member and the presentation is made public on [YouTube](https://www.youtube.com/c/LeonardoColladoTorres/playlists) while the discussion is kept private.
-* [30 min] **Data Science guidance sessions**: we talk about our sessions and provide internal feedback.
-* [20 min] **Help requests**: we give open the floor to discuss anything we need help on from the rest of the team.
+* [10 min] **Data Science guidance sessions**: we talk about our sessions and provide internal feedback.
+* [20 min] **Help requests**: we give open the floor to discuss anything we need help on from the rest of the team. If you have a topic in mind, add it to the team meeting calendar.
 
 On some occasions we have meetings fully dedicated to:
 
 * A paper or software
 * A practice presentation by one of our team members in order to build up and polish our presentation skills. These are typically held during the Summer or prior to specific conferences/LIBD seminars.
-* Code written by one of our team members: show us something you've been working on, something you want feedback on, etc. Think of it as a larger _paired coding_ session.
+* Code written by one of our team members: show us something you've been working on, something you want feedback on, etc. Think of it as a group-level _paired coding_ session.
 
 ## Papers & software
 
@@ -58,13 +58,7 @@ While each team member has an individual weekly meeting, sometimes some problems
 
 ## Individual updates
 
-On Mondays at 10:30 am everyone meets with Leo sequentially for 20 min to discuss individual updates. These meetings are useful to talk about what projects take priority on a given week, personal issues, and personal career development decisions such as which conference(s) to attend. Here's a [list of conferences/courses of interest](https://docs.google.com/spreadsheets/d/15toP739T3cGvqz9I2y56USvVT7GU9jkOx1GDKQsbaPY/edit?usp=sharing).
-
-## Notion updates
-
-We recently started using [Notion](https://www.notion.so/) that you can [sign up here](https://www.notion.so/signup) and get a free "Personal Pro" account when you sign up with an `edu` email. Let Leo know your `edu` email once you sign up so he can add you to the team "page". On it, you can find "epics" which are major projects and "tasks". We meet on Fridays at 9:30 am to discuss our progress as a team with our epics & tasks.
-
-_Note: we have paused the Notion updates meetings._
+On Mondays at 10:30 am everyone meets with Leo sequentially for 30 min to discuss individual updates. These meetings are useful to talk about what projects take priority on a given week, personal issues, and personal career development decisions such as which conference(s) to attend. Here's a [list of conferences/courses of interest](https://docs.google.com/spreadsheets/d/15toP739T3cGvqz9I2y56USvVT7GU9jkOx1GDKQsbaPY/edit?usp=sharing).
 
 ## Project meetings
 
@@ -74,7 +68,7 @@ Here's the list of project meetings and who should attend them:
 * Moods: Louise, Leo.
 * spatial team meeting: Louise, Nick, Leo.
 * deconvolution: Louise, Nick, Leo.
-* habenula: Louise, Leo.
+* habenula: Bukola, Louise, Leo.
 * CHESS-BRAIN: Geo, Leo.
 * LIBD rstats club: everyone.
 * team meeting: everyone.
