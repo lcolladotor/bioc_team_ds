@@ -77,7 +77,9 @@ Below is a list of papers that might provide some useful background information 
 
 ## Commonly used software
 
-We use quite a bit of different software and while we list out some here below, you will want to check the LIBD [**rstats club schedule**](https://docs.google.com/spreadsheets/d/1is8dZSd0FZ9Qi1Zvq1uRhm-P1McnJRd_zxdAfCRoMfA/edit?usp=sharing) and companion YouTube playlist for more recent videos that might be relevant to your situation.
+We use quite a bit of different software and while we list out some here below, you will want to check the LIBD [**rstats club schedule**](https://docs.google.com/spreadsheets/d/1is8dZSd0FZ9Qi1Zvq1uRhm-P1McnJRd_zxdAfCRoMfA/edit?usp=sharing) and companion YouTube playlist for more recent videos that might be relevant to your situation. For example, this video talks about RStudio and key packages like: `usethis`, `here`, and `sessioninfo`.
+
+<iframe width="560" height="315" src="https://www.youtube.com/embed/XTuJ8vGnzBU" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 
 ### `bash` and `linux`
 
@@ -187,12 +189,12 @@ The ["config files"](#config-files) page contains some relevant links that can h
 
 Since most analyses we run involve resources larger than those in our laptops, we typically used a high performance computing environment. Particularly,  [JHPCE](https://jhpce.jhu.edu/). One of the first things you'll do is [get a JHPCE account](https://jhpce.jhu.edu/register/user/). Once you do, you'll want to get familiarized with many parts of JHPCE. You can see the archive of questions people have asked through [`bithelp`](https://lists.johnshopkins.edu/sympa/arc/bithelp) and/or the [`#jhpce`](https://jhu-genomics.slack.com/archives/C074W8800) channel.
 
-* Setup password-less login through [ssh key pairs](https://jhpce.jhu.edu/knowledge-base/authentication/ssh-key-setup/).
-  * One keypair for your laptop to the JHPCE login node
-  * One keypair from the JHPCE login node to the compute nodes (typically created by JHPCE admins)
-  * One keypair from your laptop to GitHub; see their [documentation](https://docs.github.com/en/authentication/connecting-to-github-with-ssh/generating-a-new-ssh-key-and-adding-it-to-the-ssh-agent)
-  * One keypair from JHPCE to GitHub
-  * Check the LIBD rstats club videos on JHPCE laptop configuration (macOS and winOS versions)
+* Setup password-less login through [ssh key pairs](https://jhpce.jhu.edu/knowledge-base/authentication/ssh-key-setup/). You will need 4 key pairs.
+  * One key pair for your laptop to the JHPCE login node
+  * One key pair from the JHPCE login node to the compute nodes (typically created by JHPCE admins)
+  * One key pair from your laptop to GitHub; see their [documentation](https://docs.github.com/en/authentication/connecting-to-github-with-ssh/generating-a-new-ssh-key-and-adding-it-to-the-ssh-agent)
+  * One key pair from JHPCE to GitHub
+  * Check the LIBD rstats club videos on JHPCE laptop configuration ([macOS](https://youtu.be/UmE1DZe0B8U); [winOS](https://youtu.be/5pMVb8I6yXI) + [this video](https://youtu.be/SBM5Oify6e8))
 * [Environment modules](https://jhpce.jhu.edu/knowledge-base/environment-modules/) are useful so you don't have to install some common software from stratch, such as `R` which you can load using `module load conda_R`.
 * Use LIBD modules which you can setup following [these instructions](https://github.com/LieberInstitute/jhpce_module_config#recurrent-usage). [jhpce_mod_source](https://github.com/LieberInstitute/jhpce_mod_source) and [jhpce_module_config](https://github.com/LieberInstitute/jhpce_module_config) are our GitHub repositories for our LIBD modules.
 * [Edit your bashrc file for a nicer terminal experience](http://research.libd.org/rstatsclub/post/edit-your-bashrc-file-for-a-nicer-terminal-experience/#.XXfJQ5NKi50) blog post. See the ["config files"](#config-files) page for the latest common configuration files we use.
@@ -230,6 +232,12 @@ There were a lot of miscellaneous things about using the cluster that might save
 ## Commonly used software
 
 You will find a lot of more recent videos an materials for the topics below on the LIBD [**rstats club schedule**](https://docs.google.com/spreadsheets/d/1is8dZSd0FZ9Qi1Zvq1uRhm-P1McnJRd_zxdAfCRoMfA/edit?usp=sharing) / YouTube playlist. See the [Overview](https://lcolladotor.github.io/bioc_team_ds/index.html#overview) page for more details.
+
+For example, you might enjoy the video about Bioconductor or the one on `SummarizedExperiment` / `SingleCellExperiment`.
+
+<iframe width="560" height="315" src="https://www.youtube.com/embed/c0Ch_sXiGDQ" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+
+<iframe width="560" height="315" src="https://www.youtube.com/embed/lqxtgpD-heM" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 
 ### Bioconductor
 
@@ -287,7 +295,7 @@ See the [conferences/courses of interest](https://docs.google.com/spreadsheets/d
 
 ### Food trucks
 
-* **Koko** - Korean food on Tuesdays and Fridays. A lab favorite! Favorites are bulgogi (beef) and tofu dishes.
+* [**Koko**](https://www.facebook.com/kocotruck/) - Korean food on Tuesdays and Fridays. A lab favorite! Favorites are bulgogi (beef) and tofu dishes.
 * **Chowhound** - burgers (incl. veggie).
 * Other good ones: Greek truck, Kabob/falafel truck in front of Starbucks
 
