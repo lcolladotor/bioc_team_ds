@@ -202,7 +202,10 @@ One of the first things you'll do is [get a JHPCE account](https://jhpce.jhu.edu
 
 Once you have your JHPCE account, you will want to set up your laptop and JHPCE to work efficiently. You highly encourage that you use some of the configuration files from the [**"config files"**](#config-files) page.
 
-* Check the LIBD rstats club videos on JHPCE laptop configuration ([macOS](https://youtu.be/UmE1DZe0B8U); [winOS](https://youtu.be/5pMVb8I6yXI) + [this video](https://youtu.be/SBM5Oify6e8)).
+* Check the LIBD rstats club videos on JHPCE laptop configuration. Though I also highly encourage you to schedule a [Data Science guidance sessions](#data-science-guidance-sessions) to have someone check your configuration files.
+  * [macOS](https://youtu.be/UmE1DZe0B8U): macOS setup, which included troubleshooting some steps.
+  * [macOS & winOS](https://youtu.be/5pMVb8I6yXI): some macOS and some winOS users joined us for this practice session.
+  * [winOS](https://youtu.be/SBM5Oify6e8): this is a very long video, but everything is eventually covered.
 * Setup password-less login through [ssh key pairs](https://jhpce.jhu.edu/knowledge-base/authentication/ssh-key-setup/). You will need 4 key pairs.
   * One key pair for your laptop to the JHPCE login node.
   * One key pair from the JHPCE login node to the compute nodes (typically created by JHPCE admins).
@@ -251,7 +254,7 @@ There were a lot of miscellaneous things about using JHPCE that might save some 
 
 ### winOS
 
-* [WinSCP](https://winscp.net/) for browsing files.
+* [WinSCP](https://winscp.net/) for browsing JHPCE files, previewing PDF files, opening R files on RStudio, etc.
 * [putty](https://www.putty.org/) (which comes with WinSCP), for accessing JHPCE through a terminal window.
 * [MobaXTerm](https://jhpce.jhu.edu/knowledge-base/mobaxterm-configuration/) combines SSH and SFTP functionality and is fairly simple to set up and use.
 * [git for windows](https://gitforwindows.org/) which includes Git Bash. Check [rstudio issue 2224](https://github.com/rstudio/rstudio/issues/2224) for specifics on how to install Git Bash such that it will work with RStudio terminal.
@@ -286,7 +289,7 @@ For example, you might enjoy the video about Bioconductor or the one on `Summari
 ### Lab software
 
 * `r BiocStyle::Githubpkg('LieberInstitute/jaffelab')` ([documentation](http://lieberinstitute.github.io/jaffelab)): contains several functions we've written over the years that we find helpful for different analyses.
-* `r BiocStyle::Githubpkg('LieberInstitute/sgejobs')` ([documentation](http://lieberinstitute.github.io/sgejobs)): contains helper functions for writing and interacting with SGE jobs at JHPCE.
+* `r BiocStyle::Githubpkg('LieberInstitute/sgejobs')` ([documentation](http://lieberinstitute.github.io/sgejobs)): contains helper functions for writing and interacting with SGE jobs at JHPCE. We have several videos on `sgejobs` at the [**rstats club schedule**](https://docs.google.com/spreadsheets/d/1is8dZSd0FZ9Qi1Zvq1uRhm-P1McnJRd_zxdAfCRoMfA/edit?usp=sharing).
 * [jhpce_mod_source](https://github.com/LieberInstitute/jhpce_mod_source) and [jhpce_module_config](https://github.com/LieberInstitute/jhpce_module_config) are our GitHub repositories for our LIBD modules.
 * `r BiocStyle::Githubpkg('LieberInstitute/shinycsv')`: allows interactively exploring a table.
 * `r BiocStyle::Biocpkg('megadepth')` by David Zhang, Christopher Wilks, et al is an R package for dealing with BigWig files. Check also the older `r BiocStyle::Githubpkg('LieberInstitute/recount.bwtool')`.
@@ -337,3 +340,4 @@ See the [conferences/courses of interest](https://docs.google.com/spreadsheets/d
 
 * ["So you're moving to Baltimore"](https://simplystatistics.org/2013/09/13/so-youre-moving-to-baltimore/) 2013 blog post by [Brian Caffo](www.bcaffo.com).
 * The Baltimore Symphony Orchestra has [discount tickets](https://www.bsomusic.org/calendar/special-offers/) which you might be interested in.
+* [Live Baltimore](https://livebaltimore.com/) for relevant information that might be useful prior to buying a home.
