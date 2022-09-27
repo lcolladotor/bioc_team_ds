@@ -115,6 +115,7 @@ jhpce-file-organization
 background-history
 organization-since-2021
 project-documentation
+moving-files-across-jhpce-disks
 writing-papers
 things-to-keep-in-mind
 writing-process
