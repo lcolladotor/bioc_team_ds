@@ -124,6 +124,170 @@ Additionally, nested directories could have their own `README.md` files. For exa
 
 If the project is quite big, it might make sense to make a documentation website such as the one we made for [`SPEAQeasy`](http://research.libd.org/SPEAQeasy/). The advantage of such websites is that they enable visitors to search and locate information more rapidly. Though they take longer to write.
 
+## Setting JHPCE file permissions
+
+At [JHPCE](http://www.jhpce.jhu.edu/) we have multiple user groups. Everyone within a user group has the same permissions, such that everyone is equal. That is, there is no user group admin role. As there are many JHPCE users, the typical approach is to make a user group and restrict read and/or write access to that user group. We use to do this with `lieber_jaffe`, but then the user group grew quite large over time and not everyone necessarily should have had read/write access to everything.
+
+This leads to having multiple user groups. One option is to create a user group for every specific project, but this requires constantly asking JHPCE admins (through BitSupport) for changes, since they are the only ones who can add/remove people to user groups, or even create them.
+
+This is where _Access Control Lists_ (ACLs) come into play. See ["An introduction to Linux Access Control Lists (ACLs)"](https://www.redhat.com/sysadmin/linux-access-control-lists) for more details. That's because if you have user groups that are small, such as those representing specific members of a given team/lab, then you say that
+
+* team 1 should be given write and read access to project 1
+* teams 1 and 2 should be given write and read access to project 2
+* teams 1 and 2 should be given write and read access to project 3 and team 3 only given read access
+
+Some examples with actual teams are:
+
+* Team (user group) `lieber_lcolladotor` is working on a private project.
+* Team (user group) `lieber_lcolladotor` is working on a private project along with team (user group) `lieber_marmaypag`.
+* Teams (user groups) `lieber_lcolladotor` and `lieber_marmaypag` created some files that we want to share with everyone at LIBD (`lieber` user group) but don't want others to accidentally delete or modify them.
+
+### Useful commands
+
+To check who belongs to a specific group, use `getent group groupName`. For example:
+
+```bash
+$ getent group lieber_lcolladotor
+lieber_lcolladotor:*:4217:jstolz,aseyedia,neagles,lcollado,gpertea1,lhuuki,bpardo
+```
+
+Note that `4217` is the actual user group ID. Sometimes we need to know that ID to run some ACL commands.
+
+To find all the user groups for a specific person, use the `groups` command. For example:
+
+```bash
+$ groups lcollado
+lcollado : lieber_jaffe swdev leekgroup recount3 lieber docker lieber_lcolladotor epi stanley rnaseq lieber_marmaypag lieber_snps lieber_martinowich users libdandme lieber_cmc lieber_gursini lieber_moods
+```
+
+
+### dsc04 scripts
+
+At `dcs04`, we use the `nfs4_setfacl` and `nfs4_getfacl` commands to either set or get (list) the current ACL settings. This is different from the commands we use at `/dcl01` or other disks, and depends on how JHPCE admins configured specific disks.
+
+
+Here are two scripts that you might find useful:
+
+* `/dcs04/lieber/lcolladotor/_jhpce_org_LIBD001/update_permissions_spatialteam.sh`
+* `/dcs04/lieber/lcolladotor/_jhpce_org_LIBD001/update_permissions_moods.sh`
+
+```bash
+#!/bin/bash
+
+echo "**** Updating permissions for $1 ****"
+date
+
+echo "**** Warning/error messages are expected for files and directories that you are not the owner of. ****"
+
+echo "**** Setting read (R), write (W), and execute (X) permissions for hickslab ****"
+date
+
+find ${1} -type d -exec nfs4_setfacl -a "A:g:hickslab@cm.cluster:RWX" {} \;
+find ${1} -type d -exec nfs4_setfacl -a "A:gfdi:hickslab@cm.cluster:RWX" {} \;
+find ${1} -type f -exec nfs4_setfacl -a "A:g:hickslab@cm.cluster:RW" {} \;
+
+echo "**** Setting read (R), write (W), and execute (X) permissions for lieber_lcolladotor ****"
+date
+
+find ${1} -type d -exec nfs4_setfacl -a "A:g:lieber_lcolladotor@cm.cluster:RWX" {} \;
+find ${1} -type d -exec nfs4_setfacl -a "A:gfdi:lieber_lcolladotor@cm.cluster:RWX" {} \;
+find ${1} -type f -exec nfs4_setfacl -a "A:g:lieber_lcolladotor@cm.cluster:RW" {} \;
+
+echo "**** Setting read (R), write (W), and execute (X) permissions for lieber_marmaypag ****"
+date
+
+find ${1} -type d -exec nfs4_setfacl -a "A:g:lieber_marmaypag@cm.cluster:RWX" {} \;
+find ${1} -type d -exec nfs4_setfacl -a "A:gfdi:lieber_marmaypag@cm.cluster:RWX" {} \;
+find ${1} -type f -exec nfs4_setfacl -a "A:g:lieber_marmaypag@cm.cluster:RW" {} \;
+
+## To move away from lieber_jaffe
+if getent group lieber_lcolladotor | grep -q "\b${USER}\b"; then
+    echo "**** Running chgrp lieber_lcolladotor ****"
+    date
+    chgrp lieber_lcolladotor -R ${1}
+elif getent group lieber_marmaypag | grep -q "\b${USER}\b"; then
+    echo "**** Running chgrp lieber_marmaypag ****"
+    date
+    chgrp lieber_marmaypag -R ${1}
+elif getent group hickslab | grep -q "\b${USER}\b"; then
+    echo "**** Running chgrp hickslab ****"
+    date
+    chgrp hickslab -R ${1}
+else
+    echo "**** Skipping chgrp step ****"
+fi
+
+## For setting the group sticky bit
+echo "**** Setting the group sticky bit ****"
+date
+find ${1} -type d | xargs chmod g+s
+
+## Check settings
+echo "**** Checking the nfs4 settings ****"
+date
+nfs4_getfacl ${1}
+```
+
+```bash
+#!/bin/bash
+
+echo "**** Updating permissions for $1 ****"
+date
+
+echo "**** Warning/error messages are expected for files and directories that you are not the owner of. ****"
+
+echo "**** Setting read (R), write (W), and execute (X) permissions for lieber_moods ****"
+date
+
+find ${1} -type d -exec nfs4_setfacl -a "A:g:lieber_moods@cm.cluster:RWX" {} \;
+find ${1} -type d -exec nfs4_setfacl -a "A:gfdi:lieber_moods@cm.cluster:RWX" {} \;
+find ${1} -type f -exec nfs4_setfacl -a "A:g:lieber_moods@cm.cluster:RW" {} \;
+
+echo "**** Setting read (R), write (W), and execute (X) permissions for lieber_lcolladotor ****"
+date
+
+find ${1} -type d -exec nfs4_setfacl -a "A:g:lieber_lcolladotor@cm.cluster:RWX" {} \;
+find ${1} -type d -exec nfs4_setfacl -a "A:gfdi:lieber_lcolladotor@cm.cluster:RWX" {} \;
+find ${1} -type f -exec nfs4_setfacl -a "A:g:lieber_lcolladotor@cm.cluster:RW" {} \;
+
+echo "**** Setting read (R) and execute (X) permissions for lieber ****"
+find ${MAINDIR} -type d -exec nfs4_setfacl -a "A:g:lieber@cm.cluster:RX" {} \;
+find ${MAINDIR} -type d -exec nfs4_setfacl -a "A:gfdi:lieber@cm.cluster:RX" {} \;
+find ${MAINDIR} -type f -exec nfs4_setfacl -a "A:g:lieber@cm.cluster:R" {} \;
+
+echo "**** Remove permissions for lieber_marmaypag ****"
+find ${MAINDIR} -type d -exec nfs4_setfacl -x "A:g:lieber_marmaypag@cm.cluster:rwaDxtcy" {} \;
+find ${MAINDIR} -type d -exec nfs4_setfacl -x "A:gfdi:lieber_marmaypag@cm.cluster:rwaDxtcy" {} \;
+find ${MAINDIR} -type f -exec nfs4_setfacl -x "A:g:lieber_marmaypag@cm.cluster:rwatcy" {} \;
+
+find ${MAINDIR} -type d -exec nfs4_setfacl -x "A:g:4218:rwaDxtcy" {} \;
+find ${MAINDIR} -type d -exec nfs4_setfacl -x "A:gfdi:4218:rwaDxtcy" {} \;
+find ${MAINDIR} -type f -exec nfs4_setfacl -x "A:g:4218:rwatcy" {} \;
+
+## To move away from lieber_jaffe
+if getent group lieber_moods | grep -q "\b${USER}\b"; then
+    echo "**** Running chgrp lieber_moods ****"
+    date
+    chgrp lieber_moods -R ${1}
+elif getent group lieber_lcolladotor | grep -q "\b${USER}\b"; then
+    echo "**** Running chgrp lieber_lcolladotor ****"
+    date
+    chgrp lieber_lcolladotor -R ${1}
+else
+    echo "**** Skipping chgrp step ****"
+fi
+
+## For setting the group sticky bit
+echo "**** Setting the group sticky bit ****"
+date
+find ${1} -type d | xargs chmod g+s
+
+## Check settings
+echo "**** Checking the nfs4 settings ****"
+date
+nfs4_getfacl ${1}
+```
+
 
 ## Moving files across JHPCE disks
 
