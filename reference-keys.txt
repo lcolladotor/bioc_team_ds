@@ -115,6 +115,9 @@ jhpce-file-organization
 background-history
 organization-since-2021
 project-documentation
+setting-jhpce-file-permissions
+useful-commands
+dsc04-scripts
 moving-files-across-jhpce-disks
 writing-papers
 things-to-keep-in-mind

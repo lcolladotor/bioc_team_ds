@@ -321,7 +321,12 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <li class="chapter" data-level="14.1.2" data-path="organizing-your-work.html"><a href="organizing-your-work.html#organization-since-2021"><i class="fa fa-check"></i><b>14.1.2</b> Organization since 2021</a></li>
 </ul></li>
 <li class="chapter" data-level="14.2" data-path="organizing-your-work.html"><a href="organizing-your-work.html#project-documentation"><i class="fa fa-check"></i><b>14.2</b> Project documentation</a></li>
-<li class="chapter" data-level="14.3" data-path="organizing-your-work.html"><a href="organizing-your-work.html#moving-files-across-jhpce-disks"><i class="fa fa-check"></i><b>14.3</b> Moving files across JHPCE disks</a></li>
+<li class="chapter" data-level="14.3" data-path="organizing-your-work.html"><a href="organizing-your-work.html#setting-jhpce-file-permissions"><i class="fa fa-check"></i><b>14.3</b> Setting JHPCE file permissions</a>
+<ul>
+<li class="chapter" data-level="14.3.1" data-path="organizing-your-work.html"><a href="organizing-your-work.html#useful-commands"><i class="fa fa-check"></i><b>14.3.1</b> Useful commands</a></li>
+<li class="chapter" data-level="14.3.2" data-path="organizing-your-work.html"><a href="organizing-your-work.html#dsc04-scripts"><i class="fa fa-check"></i><b>14.3.2</b> dsc04 scripts</a></li>
+</ul></li>
+<li class="chapter" data-level="14.4" data-path="organizing-your-work.html"><a href="organizing-your-work.html#moving-files-across-jhpce-disks"><i class="fa fa-check"></i><b>14.4</b> Moving files across JHPCE disks</a></li>
 </ul></li>
 <li class="chapter" data-level="15" data-path="writing-papers.html"><a href="writing-papers.html"><i class="fa fa-check"></i><b>15</b> Writing papers</a>
 <ul>
@@ -513,8 +518,155 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <p>Additionally, nested directories could have their own <code>README.md</code> files. For example, <code>/group_home_disk1/projectName_grantNumber/repositoryName/raw-data/README.md</code> is one such <code>README.md</code> file which can describe where the raw-data has been backed up, such as saying “The raw data has been backed up at <code>/group_home_disk2/backup_projectName_grantNumber/repositoryName/raw-data</code> as of 2021-04-16.”. Other <code>README.md</code> files could show can show results such as <a href="https://github.com/LieberInstitute/brainseq_phase2/tree/master/check_noQsva">this example from <code>brainseq_phase2</code></a>.</p>
 <p>If the project is quite big, it might make sense to make a documentation website such as the one we made for <a href="http://research.libd.org/SPEAQeasy/"><code>SPEAQeasy</code></a>. The advantage of such websites is that they enable visitors to search and locate information more rapidly. Though they take longer to write.</p>
 </div>
-<div id="moving-files-across-jhpce-disks" class="section level2 hasAnchor" number="14.3">
-<h2><span class="header-section-number">14.3</span> Moving files across JHPCE disks<a href="organizing-your-work.html#moving-files-across-jhpce-disks" class="anchor-section" aria-label="Anchor link to header"></a></h2>
+<div id="setting-jhpce-file-permissions" class="section level2 hasAnchor" number="14.3">
+<h2><span class="header-section-number">14.3</span> Setting JHPCE file permissions<a href="organizing-your-work.html#setting-jhpce-file-permissions" class="anchor-section" aria-label="Anchor link to header"></a></h2>
+<p>At <a href="http://www.jhpce.jhu.edu/">JHPCE</a> we have multiple user groups. Everyone within a user group has the same permissions, such that everyone is equal. That is, there is no user group admin role. As there are many JHPCE users, the typical approach is to make a user group and restrict read and/or write access to that user group. We use to do this with <code>lieber_jaffe</code>, but then the user group grew quite large over time and not everyone necessarily should have had read/write access to everything.</p>
+<p>This leads to having multiple user groups. One option is to create a user group for every specific project, but this requires constantly asking JHPCE admins (through BitSupport) for changes, since they are the only ones who can add/remove people to user groups, or even create them.</p>
+<p>This is where <em>Access Control Lists</em> (ACLs) come into play. See <a href="https://www.redhat.com/sysadmin/linux-access-control-lists">“An introduction to Linux Access Control Lists (ACLs)”</a> for more details. That’s because if you have user groups that are small, such as those representing specific members of a given team/lab, then you say that</p>
+<ul>
+<li>team 1 should be given write and read access to project 1</li>
+<li>teams 1 and 2 should be given write and read access to project 2</li>
+<li>teams 1 and 2 should be given write and read access to project 3 and team 3 only given read access</li>
+</ul>
+<p>Some examples with actual teams are:</p>
+<ul>
+<li>Team (user group) <code>lieber_lcolladotor</code> is working on a private project.</li>
+<li>Team (user group) <code>lieber_lcolladotor</code> is working on a private project along with team (user group) <code>lieber_marmaypag</code>.</li>
+<li>Teams (user groups) <code>lieber_lcolladotor</code> and <code>lieber_marmaypag</code> created some files that we want to share with everyone at LIBD (<code>lieber</code> user group) but don’t want others to accidentally delete or modify them.</li>
+</ul>
+<div id="useful-commands" class="section level3 hasAnchor" number="14.3.1">
+<h3><span class="header-section-number">14.3.1</span> Useful commands<a href="organizing-your-work.html#useful-commands" class="anchor-section" aria-label="Anchor link to header"></a></h3>
+<p>To check who belongs to a specific group, use <code>getent group groupName</code>. For example:</p>
+<div class="sourceCode" id="cb6"><pre class="sourceCode bash"><code class="sourceCode bash"><span id="cb6-1"><a href="organizing-your-work.html#cb6-1" aria-hidden="true" tabindex="-1"></a><span class="ex">$</span> getent group lieber_lcolladotor</span>
+<span id="cb6-2"><a href="organizing-your-work.html#cb6-2" aria-hidden="true" tabindex="-1"></a><span class="ex">lieber_lcolladotor:*:4217:jstolz,aseyedia,neagles,lcollado,gpertea1,lhuuki,bpardo</span></span></code></pre></div>
+<p>Note that <code>4217</code> is the actual user group ID. Sometimes we need to know that ID to run some ACL commands.</p>
+<p>To find all the user groups for a specific person, use the <code>groups</code> command. For example:</p>
+<div class="sourceCode" id="cb7"><pre class="sourceCode bash"><code class="sourceCode bash"><span id="cb7-1"><a href="organizing-your-work.html#cb7-1" aria-hidden="true" tabindex="-1"></a><span class="ex">$</span> groups lcollado</span>
+<span id="cb7-2"><a href="organizing-your-work.html#cb7-2" aria-hidden="true" tabindex="-1"></a><span class="ex">lcollado</span> : lieber_jaffe swdev leekgroup recount3 lieber docker lieber_lcolladotor epi stanley rnaseq lieber_marmaypag lieber_snps lieber_martinowich users libdandme lieber_cmc lieber_gursini lieber_moods</span></code></pre></div>
+</div>
+<div id="dsc04-scripts" class="section level3 hasAnchor" number="14.3.2">
+<h3><span class="header-section-number">14.3.2</span> dsc04 scripts<a href="organizing-your-work.html#dsc04-scripts" class="anchor-section" aria-label="Anchor link to header"></a></h3>
+<p>At <code>dcs04</code>, we use the <code>nfs4_setfacl</code> and <code>nfs4_getfacl</code> commands to either set or get (list) the current ACL settings. This is different from the commands we use at <code>/dcl01</code> or other disks, and depends on how JHPCE admins configured specific disks.</p>
+<p>Here are two scripts that you might find useful:</p>
+<ul>
+<li><code>/dcs04/lieber/lcolladotor/_jhpce_org_LIBD001/update_permissions_spatialteam.sh</code></li>
+<li><code>/dcs04/lieber/lcolladotor/_jhpce_org_LIBD001/update_permissions_moods.sh</code></li>
+</ul>
+<div class="sourceCode" id="cb8"><pre class="sourceCode bash"><code class="sourceCode bash"><span id="cb8-1"><a href="organizing-your-work.html#cb8-1" aria-hidden="true" tabindex="-1"></a><span class="co">#!/bin/bash</span></span>
+<span id="cb8-2"><a href="organizing-your-work.html#cb8-2" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb8-3"><a href="organizing-your-work.html#cb8-3" aria-hidden="true" tabindex="-1"></a><span class="bu">echo</span> <span class="st">&quot;**** Updating permissions for </span><span class="va">$1</span><span class="st"> ****&quot;</span></span>
+<span id="cb8-4"><a href="organizing-your-work.html#cb8-4" aria-hidden="true" tabindex="-1"></a><span class="fu">date</span></span>
+<span id="cb8-5"><a href="organizing-your-work.html#cb8-5" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb8-6"><a href="organizing-your-work.html#cb8-6" aria-hidden="true" tabindex="-1"></a><span class="bu">echo</span> <span class="st">&quot;**** Warning/error messages are expected for files and directories that you are not the owner of. ****&quot;</span></span>
+<span id="cb8-7"><a href="organizing-your-work.html#cb8-7" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb8-8"><a href="organizing-your-work.html#cb8-8" aria-hidden="true" tabindex="-1"></a><span class="bu">echo</span> <span class="st">&quot;**** Setting read (R), write (W), and execute (X) permissions for hickslab ****&quot;</span></span>
+<span id="cb8-9"><a href="organizing-your-work.html#cb8-9" aria-hidden="true" tabindex="-1"></a><span class="fu">date</span></span>
+<span id="cb8-10"><a href="organizing-your-work.html#cb8-10" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb8-11"><a href="organizing-your-work.html#cb8-11" aria-hidden="true" tabindex="-1"></a><span class="fu">find</span> <span class="va">${1}</span> <span class="at">-type</span> d <span class="at">-exec</span> nfs4_setfacl <span class="at">-a</span> <span class="st">&quot;A:g:hickslab@cm.cluster:RWX&quot;</span> {} <span class="dt">\;</span></span>
+<span id="cb8-12"><a href="organizing-your-work.html#cb8-12" aria-hidden="true" tabindex="-1"></a><span class="fu">find</span> <span class="va">${1}</span> <span class="at">-type</span> d <span class="at">-exec</span> nfs4_setfacl <span class="at">-a</span> <span class="st">&quot;A:gfdi:hickslab@cm.cluster:RWX&quot;</span> {} <span class="dt">\;</span></span>
+<span id="cb8-13"><a href="organizing-your-work.html#cb8-13" aria-hidden="true" tabindex="-1"></a><span class="fu">find</span> <span class="va">${1}</span> <span class="at">-type</span> f <span class="at">-exec</span> nfs4_setfacl <span class="at">-a</span> <span class="st">&quot;A:g:hickslab@cm.cluster:RW&quot;</span> {} <span class="dt">\;</span></span>
+<span id="cb8-14"><a href="organizing-your-work.html#cb8-14" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb8-15"><a href="organizing-your-work.html#cb8-15" aria-hidden="true" tabindex="-1"></a><span class="bu">echo</span> <span class="st">&quot;**** Setting read (R), write (W), and execute (X) permissions for lieber_lcolladotor ****&quot;</span></span>
+<span id="cb8-16"><a href="organizing-your-work.html#cb8-16" aria-hidden="true" tabindex="-1"></a><span class="fu">date</span></span>
+<span id="cb8-17"><a href="organizing-your-work.html#cb8-17" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb8-18"><a href="organizing-your-work.html#cb8-18" aria-hidden="true" tabindex="-1"></a><span class="fu">find</span> <span class="va">${1}</span> <span class="at">-type</span> d <span class="at">-exec</span> nfs4_setfacl <span class="at">-a</span> <span class="st">&quot;A:g:lieber_lcolladotor@cm.cluster:RWX&quot;</span> {} <span class="dt">\;</span></span>
+<span id="cb8-19"><a href="organizing-your-work.html#cb8-19" aria-hidden="true" tabindex="-1"></a><span class="fu">find</span> <span class="va">${1}</span> <span class="at">-type</span> d <span class="at">-exec</span> nfs4_setfacl <span class="at">-a</span> <span class="st">&quot;A:gfdi:lieber_lcolladotor@cm.cluster:RWX&quot;</span> {} <span class="dt">\;</span></span>
+<span id="cb8-20"><a href="organizing-your-work.html#cb8-20" aria-hidden="true" tabindex="-1"></a><span class="fu">find</span> <span class="va">${1}</span> <span class="at">-type</span> f <span class="at">-exec</span> nfs4_setfacl <span class="at">-a</span> <span class="st">&quot;A:g:lieber_lcolladotor@cm.cluster:RW&quot;</span> {} <span class="dt">\;</span></span>
+<span id="cb8-21"><a href="organizing-your-work.html#cb8-21" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb8-22"><a href="organizing-your-work.html#cb8-22" aria-hidden="true" tabindex="-1"></a><span class="bu">echo</span> <span class="st">&quot;**** Setting read (R), write (W), and execute (X) permissions for lieber_marmaypag ****&quot;</span></span>
+<span id="cb8-23"><a href="organizing-your-work.html#cb8-23" aria-hidden="true" tabindex="-1"></a><span class="fu">date</span></span>
+<span id="cb8-24"><a href="organizing-your-work.html#cb8-24" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb8-25"><a href="organizing-your-work.html#cb8-25" aria-hidden="true" tabindex="-1"></a><span class="fu">find</span> <span class="va">${1}</span> <span class="at">-type</span> d <span class="at">-exec</span> nfs4_setfacl <span class="at">-a</span> <span class="st">&quot;A:g:lieber_marmaypag@cm.cluster:RWX&quot;</span> {} <span class="dt">\;</span></span>
+<span id="cb8-26"><a href="organizing-your-work.html#cb8-26" aria-hidden="true" tabindex="-1"></a><span class="fu">find</span> <span class="va">${1}</span> <span class="at">-type</span> d <span class="at">-exec</span> nfs4_setfacl <span class="at">-a</span> <span class="st">&quot;A:gfdi:lieber_marmaypag@cm.cluster:RWX&quot;</span> {} <span class="dt">\;</span></span>
+<span id="cb8-27"><a href="organizing-your-work.html#cb8-27" aria-hidden="true" tabindex="-1"></a><span class="fu">find</span> <span class="va">${1}</span> <span class="at">-type</span> f <span class="at">-exec</span> nfs4_setfacl <span class="at">-a</span> <span class="st">&quot;A:g:lieber_marmaypag@cm.cluster:RW&quot;</span> {} <span class="dt">\;</span></span>
+<span id="cb8-28"><a href="organizing-your-work.html#cb8-28" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb8-29"><a href="organizing-your-work.html#cb8-29" aria-hidden="true" tabindex="-1"></a><span class="co">## To move away from lieber_jaffe</span></span>
+<span id="cb8-30"><a href="organizing-your-work.html#cb8-30" aria-hidden="true" tabindex="-1"></a><span class="cf">if</span> <span class="fu">getent</span> group lieber_lcolladotor <span class="kw">|</span> <span class="fu">grep</span> <span class="at">-q</span> <span class="st">&quot;\b</span><span class="va">${USER}</span><span class="st">\b&quot;</span><span class="kw">;</span> <span class="cf">then</span></span>
+<span id="cb8-31"><a href="organizing-your-work.html#cb8-31" aria-hidden="true" tabindex="-1"></a>    <span class="bu">echo</span> <span class="st">&quot;**** Running chgrp lieber_lcolladotor ****&quot;</span></span>
+<span id="cb8-32"><a href="organizing-your-work.html#cb8-32" aria-hidden="true" tabindex="-1"></a>    <span class="fu">date</span></span>
+<span id="cb8-33"><a href="organizing-your-work.html#cb8-33" aria-hidden="true" tabindex="-1"></a>    <span class="fu">chgrp</span> lieber_lcolladotor <span class="at">-R</span> <span class="va">${1}</span></span>
+<span id="cb8-34"><a href="organizing-your-work.html#cb8-34" aria-hidden="true" tabindex="-1"></a><span class="cf">elif</span> <span class="fu">getent</span> group lieber_marmaypag <span class="kw">|</span> <span class="fu">grep</span> <span class="at">-q</span> <span class="st">&quot;\b</span><span class="va">${USER}</span><span class="st">\b&quot;</span><span class="kw">;</span> <span class="cf">then</span></span>
+<span id="cb8-35"><a href="organizing-your-work.html#cb8-35" aria-hidden="true" tabindex="-1"></a>    <span class="bu">echo</span> <span class="st">&quot;**** Running chgrp lieber_marmaypag ****&quot;</span></span>
+<span id="cb8-36"><a href="organizing-your-work.html#cb8-36" aria-hidden="true" tabindex="-1"></a>    <span class="fu">date</span></span>
+<span id="cb8-37"><a href="organizing-your-work.html#cb8-37" aria-hidden="true" tabindex="-1"></a>    <span class="fu">chgrp</span> lieber_marmaypag <span class="at">-R</span> <span class="va">${1}</span></span>
+<span id="cb8-38"><a href="organizing-your-work.html#cb8-38" aria-hidden="true" tabindex="-1"></a><span class="cf">elif</span> <span class="fu">getent</span> group hickslab <span class="kw">|</span> <span class="fu">grep</span> <span class="at">-q</span> <span class="st">&quot;\b</span><span class="va">${USER}</span><span class="st">\b&quot;</span><span class="kw">;</span> <span class="cf">then</span></span>
+<span id="cb8-39"><a href="organizing-your-work.html#cb8-39" aria-hidden="true" tabindex="-1"></a>    <span class="bu">echo</span> <span class="st">&quot;**** Running chgrp hickslab ****&quot;</span></span>
+<span id="cb8-40"><a href="organizing-your-work.html#cb8-40" aria-hidden="true" tabindex="-1"></a>    <span class="fu">date</span></span>
+<span id="cb8-41"><a href="organizing-your-work.html#cb8-41" aria-hidden="true" tabindex="-1"></a>    <span class="fu">chgrp</span> hickslab <span class="at">-R</span> <span class="va">${1}</span></span>
+<span id="cb8-42"><a href="organizing-your-work.html#cb8-42" aria-hidden="true" tabindex="-1"></a><span class="cf">else</span></span>
+<span id="cb8-43"><a href="organizing-your-work.html#cb8-43" aria-hidden="true" tabindex="-1"></a>    <span class="bu">echo</span> <span class="st">&quot;**** Skipping chgrp step ****&quot;</span></span>
+<span id="cb8-44"><a href="organizing-your-work.html#cb8-44" aria-hidden="true" tabindex="-1"></a><span class="cf">fi</span></span>
+<span id="cb8-45"><a href="organizing-your-work.html#cb8-45" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb8-46"><a href="organizing-your-work.html#cb8-46" aria-hidden="true" tabindex="-1"></a><span class="co">## For setting the group sticky bit</span></span>
+<span id="cb8-47"><a href="organizing-your-work.html#cb8-47" aria-hidden="true" tabindex="-1"></a><span class="bu">echo</span> <span class="st">&quot;**** Setting the group sticky bit ****&quot;</span></span>
+<span id="cb8-48"><a href="organizing-your-work.html#cb8-48" aria-hidden="true" tabindex="-1"></a><span class="fu">date</span></span>
+<span id="cb8-49"><a href="organizing-your-work.html#cb8-49" aria-hidden="true" tabindex="-1"></a><span class="fu">find</span> <span class="va">${1}</span> <span class="at">-type</span> d <span class="kw">|</span> <span class="fu">xargs</span> chmod g+s</span>
+<span id="cb8-50"><a href="organizing-your-work.html#cb8-50" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb8-51"><a href="organizing-your-work.html#cb8-51" aria-hidden="true" tabindex="-1"></a><span class="co">## Check settings</span></span>
+<span id="cb8-52"><a href="organizing-your-work.html#cb8-52" aria-hidden="true" tabindex="-1"></a><span class="bu">echo</span> <span class="st">&quot;**** Checking the nfs4 settings ****&quot;</span></span>
+<span id="cb8-53"><a href="organizing-your-work.html#cb8-53" aria-hidden="true" tabindex="-1"></a><span class="fu">date</span></span>
+<span id="cb8-54"><a href="organizing-your-work.html#cb8-54" aria-hidden="true" tabindex="-1"></a><span class="ex">nfs4_getfacl</span> <span class="va">${1}</span></span></code></pre></div>
+<div class="sourceCode" id="cb9"><pre class="sourceCode bash"><code class="sourceCode bash"><span id="cb9-1"><a href="organizing-your-work.html#cb9-1" aria-hidden="true" tabindex="-1"></a><span class="co">#!/bin/bash</span></span>
+<span id="cb9-2"><a href="organizing-your-work.html#cb9-2" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb9-3"><a href="organizing-your-work.html#cb9-3" aria-hidden="true" tabindex="-1"></a><span class="bu">echo</span> <span class="st">&quot;**** Updating permissions for </span><span class="va">$1</span><span class="st"> ****&quot;</span></span>
+<span id="cb9-4"><a href="organizing-your-work.html#cb9-4" aria-hidden="true" tabindex="-1"></a><span class="fu">date</span></span>
+<span id="cb9-5"><a href="organizing-your-work.html#cb9-5" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb9-6"><a href="organizing-your-work.html#cb9-6" aria-hidden="true" tabindex="-1"></a><span class="bu">echo</span> <span class="st">&quot;**** Warning/error messages are expected for files and directories that you are not the owner of. ****&quot;</span></span>
+<span id="cb9-7"><a href="organizing-your-work.html#cb9-7" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb9-8"><a href="organizing-your-work.html#cb9-8" aria-hidden="true" tabindex="-1"></a><span class="bu">echo</span> <span class="st">&quot;**** Setting read (R), write (W), and execute (X) permissions for lieber_moods ****&quot;</span></span>
+<span id="cb9-9"><a href="organizing-your-work.html#cb9-9" aria-hidden="true" tabindex="-1"></a><span class="fu">date</span></span>
+<span id="cb9-10"><a href="organizing-your-work.html#cb9-10" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb9-11"><a href="organizing-your-work.html#cb9-11" aria-hidden="true" tabindex="-1"></a><span class="fu">find</span> <span class="va">${1}</span> <span class="at">-type</span> d <span class="at">-exec</span> nfs4_setfacl <span class="at">-a</span> <span class="st">&quot;A:g:lieber_moods@cm.cluster:RWX&quot;</span> {} <span class="dt">\;</span></span>
+<span id="cb9-12"><a href="organizing-your-work.html#cb9-12" aria-hidden="true" tabindex="-1"></a><span class="fu">find</span> <span class="va">${1}</span> <span class="at">-type</span> d <span class="at">-exec</span> nfs4_setfacl <span class="at">-a</span> <span class="st">&quot;A:gfdi:lieber_moods@cm.cluster:RWX&quot;</span> {} <span class="dt">\;</span></span>
+<span id="cb9-13"><a href="organizing-your-work.html#cb9-13" aria-hidden="true" tabindex="-1"></a><span class="fu">find</span> <span class="va">${1}</span> <span class="at">-type</span> f <span class="at">-exec</span> nfs4_setfacl <span class="at">-a</span> <span class="st">&quot;A:g:lieber_moods@cm.cluster:RW&quot;</span> {} <span class="dt">\;</span></span>
+<span id="cb9-14"><a href="organizing-your-work.html#cb9-14" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb9-15"><a href="organizing-your-work.html#cb9-15" aria-hidden="true" tabindex="-1"></a><span class="bu">echo</span> <span class="st">&quot;**** Setting read (R), write (W), and execute (X) permissions for lieber_lcolladotor ****&quot;</span></span>
+<span id="cb9-16"><a href="organizing-your-work.html#cb9-16" aria-hidden="true" tabindex="-1"></a><span class="fu">date</span></span>
+<span id="cb9-17"><a href="organizing-your-work.html#cb9-17" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb9-18"><a href="organizing-your-work.html#cb9-18" aria-hidden="true" tabindex="-1"></a><span class="fu">find</span> <span class="va">${1}</span> <span class="at">-type</span> d <span class="at">-exec</span> nfs4_setfacl <span class="at">-a</span> <span class="st">&quot;A:g:lieber_lcolladotor@cm.cluster:RWX&quot;</span> {} <span class="dt">\;</span></span>
+<span id="cb9-19"><a href="organizing-your-work.html#cb9-19" aria-hidden="true" tabindex="-1"></a><span class="fu">find</span> <span class="va">${1}</span> <span class="at">-type</span> d <span class="at">-exec</span> nfs4_setfacl <span class="at">-a</span> <span class="st">&quot;A:gfdi:lieber_lcolladotor@cm.cluster:RWX&quot;</span> {} <span class="dt">\;</span></span>
+<span id="cb9-20"><a href="organizing-your-work.html#cb9-20" aria-hidden="true" tabindex="-1"></a><span class="fu">find</span> <span class="va">${1}</span> <span class="at">-type</span> f <span class="at">-exec</span> nfs4_setfacl <span class="at">-a</span> <span class="st">&quot;A:g:lieber_lcolladotor@cm.cluster:RW&quot;</span> {} <span class="dt">\;</span></span>
+<span id="cb9-21"><a href="organizing-your-work.html#cb9-21" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb9-22"><a href="organizing-your-work.html#cb9-22" aria-hidden="true" tabindex="-1"></a><span class="bu">echo</span> <span class="st">&quot;**** Setting read (R) and execute (X) permissions for lieber ****&quot;</span></span>
+<span id="cb9-23"><a href="organizing-your-work.html#cb9-23" aria-hidden="true" tabindex="-1"></a><span class="fu">find</span> <span class="va">${MAINDIR}</span> <span class="at">-type</span> d <span class="at">-exec</span> nfs4_setfacl <span class="at">-a</span> <span class="st">&quot;A:g:lieber@cm.cluster:RX&quot;</span> {} <span class="dt">\;</span></span>
+<span id="cb9-24"><a href="organizing-your-work.html#cb9-24" aria-hidden="true" tabindex="-1"></a><span class="fu">find</span> <span class="va">${MAINDIR}</span> <span class="at">-type</span> d <span class="at">-exec</span> nfs4_setfacl <span class="at">-a</span> <span class="st">&quot;A:gfdi:lieber@cm.cluster:RX&quot;</span> {} <span class="dt">\;</span></span>
+<span id="cb9-25"><a href="organizing-your-work.html#cb9-25" aria-hidden="true" tabindex="-1"></a><span class="fu">find</span> <span class="va">${MAINDIR}</span> <span class="at">-type</span> f <span class="at">-exec</span> nfs4_setfacl <span class="at">-a</span> <span class="st">&quot;A:g:lieber@cm.cluster:R&quot;</span> {} <span class="dt">\;</span></span>
+<span id="cb9-26"><a href="organizing-your-work.html#cb9-26" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb9-27"><a href="organizing-your-work.html#cb9-27" aria-hidden="true" tabindex="-1"></a><span class="bu">echo</span> <span class="st">&quot;**** Remove permissions for lieber_marmaypag ****&quot;</span></span>
+<span id="cb9-28"><a href="organizing-your-work.html#cb9-28" aria-hidden="true" tabindex="-1"></a><span class="fu">find</span> <span class="va">${MAINDIR}</span> <span class="at">-type</span> d <span class="at">-exec</span> nfs4_setfacl <span class="at">-x</span> <span class="st">&quot;A:g:lieber_marmaypag@cm.cluster:rwaDxtcy&quot;</span> {} <span class="dt">\;</span></span>
+<span id="cb9-29"><a href="organizing-your-work.html#cb9-29" aria-hidden="true" tabindex="-1"></a><span class="fu">find</span> <span class="va">${MAINDIR}</span> <span class="at">-type</span> d <span class="at">-exec</span> nfs4_setfacl <span class="at">-x</span> <span class="st">&quot;A:gfdi:lieber_marmaypag@cm.cluster:rwaDxtcy&quot;</span> {} <span class="dt">\;</span></span>
+<span id="cb9-30"><a href="organizing-your-work.html#cb9-30" aria-hidden="true" tabindex="-1"></a><span class="fu">find</span> <span class="va">${MAINDIR}</span> <span class="at">-type</span> f <span class="at">-exec</span> nfs4_setfacl <span class="at">-x</span> <span class="st">&quot;A:g:lieber_marmaypag@cm.cluster:rwatcy&quot;</span> {} <span class="dt">\;</span></span>
+<span id="cb9-31"><a href="organizing-your-work.html#cb9-31" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb9-32"><a href="organizing-your-work.html#cb9-32" aria-hidden="true" tabindex="-1"></a><span class="fu">find</span> <span class="va">${MAINDIR}</span> <span class="at">-type</span> d <span class="at">-exec</span> nfs4_setfacl <span class="at">-x</span> <span class="st">&quot;A:g:4218:rwaDxtcy&quot;</span> {} <span class="dt">\;</span></span>
+<span id="cb9-33"><a href="organizing-your-work.html#cb9-33" aria-hidden="true" tabindex="-1"></a><span class="fu">find</span> <span class="va">${MAINDIR}</span> <span class="at">-type</span> d <span class="at">-exec</span> nfs4_setfacl <span class="at">-x</span> <span class="st">&quot;A:gfdi:4218:rwaDxtcy&quot;</span> {} <span class="dt">\;</span></span>
+<span id="cb9-34"><a href="organizing-your-work.html#cb9-34" aria-hidden="true" tabindex="-1"></a><span class="fu">find</span> <span class="va">${MAINDIR}</span> <span class="at">-type</span> f <span class="at">-exec</span> nfs4_setfacl <span class="at">-x</span> <span class="st">&quot;A:g:4218:rwatcy&quot;</span> {} <span class="dt">\;</span></span>
+<span id="cb9-35"><a href="organizing-your-work.html#cb9-35" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb9-36"><a href="organizing-your-work.html#cb9-36" aria-hidden="true" tabindex="-1"></a><span class="co">## To move away from lieber_jaffe</span></span>
+<span id="cb9-37"><a href="organizing-your-work.html#cb9-37" aria-hidden="true" tabindex="-1"></a><span class="cf">if</span> <span class="fu">getent</span> group lieber_moods <span class="kw">|</span> <span class="fu">grep</span> <span class="at">-q</span> <span class="st">&quot;\b</span><span class="va">${USER}</span><span class="st">\b&quot;</span><span class="kw">;</span> <span class="cf">then</span></span>
+<span id="cb9-38"><a href="organizing-your-work.html#cb9-38" aria-hidden="true" tabindex="-1"></a>    <span class="bu">echo</span> <span class="st">&quot;**** Running chgrp lieber_moods ****&quot;</span></span>
+<span id="cb9-39"><a href="organizing-your-work.html#cb9-39" aria-hidden="true" tabindex="-1"></a>    <span class="fu">date</span></span>
+<span id="cb9-40"><a href="organizing-your-work.html#cb9-40" aria-hidden="true" tabindex="-1"></a>    <span class="fu">chgrp</span> lieber_moods <span class="at">-R</span> <span class="va">${1}</span></span>
+<span id="cb9-41"><a href="organizing-your-work.html#cb9-41" aria-hidden="true" tabindex="-1"></a><span class="cf">elif</span> <span class="fu">getent</span> group lieber_lcolladotor <span class="kw">|</span> <span class="fu">grep</span> <span class="at">-q</span> <span class="st">&quot;\b</span><span class="va">${USER}</span><span class="st">\b&quot;</span><span class="kw">;</span> <span class="cf">then</span></span>
+<span id="cb9-42"><a href="organizing-your-work.html#cb9-42" aria-hidden="true" tabindex="-1"></a>    <span class="bu">echo</span> <span class="st">&quot;**** Running chgrp lieber_lcolladotor ****&quot;</span></span>
+<span id="cb9-43"><a href="organizing-your-work.html#cb9-43" aria-hidden="true" tabindex="-1"></a>    <span class="fu">date</span></span>
+<span id="cb9-44"><a href="organizing-your-work.html#cb9-44" aria-hidden="true" tabindex="-1"></a>    <span class="fu">chgrp</span> lieber_lcolladotor <span class="at">-R</span> <span class="va">${1}</span></span>
+<span id="cb9-45"><a href="organizing-your-work.html#cb9-45" aria-hidden="true" tabindex="-1"></a><span class="cf">else</span></span>
+<span id="cb9-46"><a href="organizing-your-work.html#cb9-46" aria-hidden="true" tabindex="-1"></a>    <span class="bu">echo</span> <span class="st">&quot;**** Skipping chgrp step ****&quot;</span></span>
+<span id="cb9-47"><a href="organizing-your-work.html#cb9-47" aria-hidden="true" tabindex="-1"></a><span class="cf">fi</span></span>
+<span id="cb9-48"><a href="organizing-your-work.html#cb9-48" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb9-49"><a href="organizing-your-work.html#cb9-49" aria-hidden="true" tabindex="-1"></a><span class="co">## For setting the group sticky bit</span></span>
+<span id="cb9-50"><a href="organizing-your-work.html#cb9-50" aria-hidden="true" tabindex="-1"></a><span class="bu">echo</span> <span class="st">&quot;**** Setting the group sticky bit ****&quot;</span></span>
+<span id="cb9-51"><a href="organizing-your-work.html#cb9-51" aria-hidden="true" tabindex="-1"></a><span class="fu">date</span></span>
+<span id="cb9-52"><a href="organizing-your-work.html#cb9-52" aria-hidden="true" tabindex="-1"></a><span class="fu">find</span> <span class="va">${1}</span> <span class="at">-type</span> d <span class="kw">|</span> <span class="fu">xargs</span> chmod g+s</span>
+<span id="cb9-53"><a href="organizing-your-work.html#cb9-53" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb9-54"><a href="organizing-your-work.html#cb9-54" aria-hidden="true" tabindex="-1"></a><span class="co">## Check settings</span></span>
+<span id="cb9-55"><a href="organizing-your-work.html#cb9-55" aria-hidden="true" tabindex="-1"></a><span class="bu">echo</span> <span class="st">&quot;**** Checking the nfs4 settings ****&quot;</span></span>
+<span id="cb9-56"><a href="organizing-your-work.html#cb9-56" aria-hidden="true" tabindex="-1"></a><span class="fu">date</span></span>
+<span id="cb9-57"><a href="organizing-your-work.html#cb9-57" aria-hidden="true" tabindex="-1"></a><span class="ex">nfs4_getfacl</span> <span class="va">${1}</span></span></code></pre></div>
+</div>
+</div>
+<div id="moving-files-across-jhpce-disks" class="section level2 hasAnchor" number="14.4">
+<h2><span class="header-section-number">14.4</span> Moving files across JHPCE disks<a href="organizing-your-work.html#moving-files-across-jhpce-disks" class="anchor-section" aria-label="Anchor link to header"></a></h2>
 
 </div>
 </div>
