@@ -98,6 +98,8 @@ The project organization detailed shown above enables us to write code inside a 
 
 <iframe width="560" height="315" src="https://www.youtube.com/embed/XTuJ8vGnzBU" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 
+### Project template
+
 You might be interested in checking out the [**template_project**](https://github.com/LieberInstitute/template_project), which shows these organization guidelines in action.
 
 Some current examples are:
@@ -161,15 +163,19 @@ lcollado : lieber_jaffe swdev leekgroup recount3 lieber docker lieber_lcolladoto
 ```
 
 
-### dsc04 scripts
+### dcs04 scripts
 
-At `dcs04`, we use the `nfs4_setfacl` and `nfs4_getfacl` commands to either set or get (list) the current ACL settings. This is different from the commands we use at `/dcl01` or other disks, and depends on how JHPCE admins configured specific disks.
+At `/dcs04`, we use the `nfs4_setfacl` and `nfs4_getfacl` commands to either set or get (list) the current ACL settings. This is different from the commands we use at `/dcl01` or other disks, and depends on how JHPCE admins configured specific disks. You might find this email exchange I had with JHPCE admins in 2021 useful to understand more details about these commands.
 
-
-Here are two scripts that you might find useful:
+Ultimately, my exchanges with JHPCE admins led to two scripts we use frequently when setting file permissions. One of them is for the collaboration between `lieber_lcolladotor`, `lieber_marmaypag` and `hickslab`. The second one is for a collaboration between `lieber_lcolladotor` and `lieber_moods`, that we want `lieber` to be able to see. The files are:
 
 * `/dcs04/lieber/lcolladotor/_jhpce_org_LIBD001/update_permissions_spatialteam.sh`
+  * Usage: `sh /dcs04/lieber/lcolladotor/_jhpce_org_LIBD001/update_permissions_spatialteam.sh /dcs04/lieber/yourTeam/someProject_LIBDcode/yourRepository`
 * `/dcs04/lieber/lcolladotor/_jhpce_org_LIBD001/update_permissions_moods.sh`
+  * Usage: `sh /dcs04/lieber/lcolladotor/_jhpce_org_LIBD001/update_permissions_moods.sh /dcs04/lieber/yourTeam/someProject_LIBDcode/yourRepository`
+  
+
+A very **common problem arises from copying files to JHPCE** (for example, through Cyberduck), as copying files doesn't respect the ACL settings we specify. This also happens when you move file around at JHPCE using `mv` that already existed. So after uploading a file or moving it with `mv`, you will likely need to re-run these permission scripts.
 
 ```bash
 #!/bin/bash
