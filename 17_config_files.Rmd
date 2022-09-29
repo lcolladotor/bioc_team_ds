@@ -358,6 +358,8 @@ This file configures the default SGE requests under `qsub` and `qrsh`.
 # Define my email
 -M YOUR_EMAIL@gmail.com
 # To get an email on a job use -m e
+# Keep in mind the limits with sending emails from
+# https://jhpce.jhu.edu/email-qsub
 ```
 
 
