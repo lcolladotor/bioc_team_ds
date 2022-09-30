@@ -330,6 +330,7 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <li class="chapter" data-level="14.4" data-path="organizing-your-work.html"><a href="organizing-your-work.html#moving-files-across-jhpce-disks"><i class="fa fa-check"></i><b>14.4</b> Moving files across JHPCE disks</a>
 <ul>
 <li class="chapter" data-level="14.4.1" data-path="organizing-your-work.html"><a href="organizing-your-work.html#qsva-example"><i class="fa fa-check"></i><b>14.4.1</b> qSVA example</a></li>
+<li class="chapter" data-level="14.4.2" data-path="organizing-your-work.html"><a href="organizing-your-work.html#humanpilot-example"><i class="fa fa-check"></i><b>14.4.2</b> HumanPilot example</a></li>
 </ul></li>
 </ul></li>
 <li class="chapter" data-level="15" data-path="writing-papers.html"><a href="writing-papers.html"><i class="fa fa-check"></i><b>15</b> Writing papers</a>
@@ -421,7 +422,7 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <li>for storage, it computes the size of the main paths such as <code>/dcl01/lieber/ajaffe</code></li>
 <li>for compute hours, they keep track of the memory and compute hours used by each each individual for each compute node queue (namely, <code>shared</code> and <code>bluejay</code>)</li>
 </ul>
-<p>In 2021, we started to re-organize files as JHPCE admins now compute storage 1 level deeper than they used to, such as <code>/dcl01/lieber/ajaffe/dir01</code> and <code>/dcl01/lieber/ajaffe/dir02</code>. The idea is that this extra level of information enables LIBD Finance to have more detailed information on which grant or project code to charge for the different storage costs we incur at JHPCE. We also want to avoid personal directories, thus the “group home” directories will become the root for each disk such as <code>/dcl01/lieber/ajaffe/</code>. Overall, this new organization can help us identify old data that could be deleted.</p>
+<p>In 2021, we started to re-organize files as JHPCE’s admins now compute storage 1 level deeper than they used to, such as <code>/dcl01/lieber/ajaffe/dir01</code> and <code>/dcl01/lieber/ajaffe/dir02</code>. The idea is that this extra level of information enables LIBD Finance to have more detailed information on which grant or project code to charge for the different storage costs we incur at JHPCE. We also want to avoid personal directories, thus the “group home” directories will become the root for each disk such as <code>/dcl01/lieber/ajaffe/</code>. Overall, this new organization can help us identify old data that could be deleted.</p>
 <p>Another issue we have with the current file organization at JHPCE is that we don’t know which data has to be backed up and which doesn’t. Files can be classified into:</p>
 <ul>
 <li><code>raw-data</code>: FASTQ, images, sample phenotype tables, etc</li>
@@ -533,7 +534,7 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <div id="setting-jhpce-file-permissions" class="section level2 hasAnchor" number="14.3">
 <h2><span class="header-section-number">14.3</span> Setting JHPCE file permissions<a href="organizing-your-work.html#setting-jhpce-file-permissions" class="anchor-section" aria-label="Anchor link to header"></a></h2>
 <p>At <a href="http://www.jhpce.jhu.edu/">JHPCE</a> we have multiple user groups. Everyone within a user group has the same permissions, such that everyone is equal. That is, there is no user group admin role. As there are many JHPCE users, the typical approach is to make a user group and restrict read and/or write access to that user group. We use to do this with <code>lieber_jaffe</code>, but then the user group grew quite large over time and not everyone necessarily should have had read/write access to everything.</p>
-<p>This leads to having multiple user groups. One option is to create a user group for every specific project, but this requires constantly asking JHPCE admins (through BitSupport) for changes, since they are the only ones who can add/remove people to user groups, or even create them.</p>
+<p>This leads to having multiple user groups. One option is to create a user group for every specific project, but this requires constantly asking JHPCE’s admins (through BitSupport) for changes, since they are the only ones who can add/remove people to user groups, or even create them.</p>
 <p>This is where <em>Access Control Lists</em> (ACLs) come into play. See <a href="https://www.redhat.com/sysadmin/linux-access-control-lists">“An introduction to Linux Access Control Lists (ACLs)”</a> for more details. That’s because if you have user groups that are small, such as those representing specific members of a given team/lab, then you say that</p>
 <ul>
 <li>team 1 should be given write and read access to project 1</li>
@@ -558,8 +559,8 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 </div>
 <div id="dcs04-scripts" class="section level3 hasAnchor" number="14.3.2">
 <h3><span class="header-section-number">14.3.2</span> dcs04 scripts<a href="organizing-your-work.html#dcs04-scripts" class="anchor-section" aria-label="Anchor link to header"></a></h3>
-<p>At <code>/dcs04</code>, we use the <code>nfs4_setfacl</code> and <code>nfs4_getfacl</code> commands to either set or get (list) the current ACL settings. This is different from the commands we use at <code>/dcl01</code> or other disks, and depends on how JHPCE admins configured specific disks. You might find <a href="https://lists.johnshopkins.edu/sympa/arc/bithelp/2021-06/msg00004.html">this email exchange</a> I had with JHPCE admins in 2021 useful to understand more details about these commands.</p>
-<p>Ultimately, my exchanges with JHPCE admins led to two scripts we use frequently when setting file permissions. One of them is for the collaboration between <code>lieber_lcolladotor</code>, <code>lieber_marmaypag</code> and <code>hickslab</code>. The second one is for a collaboration between <code>lieber_lcolladotor</code> and <code>lieber_moods</code>, that we want <code>lieber</code> to be able to see. The files are:</p>
+<p>At <code>/dcs04</code>, we use the <code>nfs4_setfacl</code> and <code>nfs4_getfacl</code> commands to either set or get (list) the current ACL settings. This is different from the commands we use at <code>/dcl01</code> or other disks, and depends on how JHPCE’s admins configured specific disks. You might find <a href="https://lists.johnshopkins.edu/sympa/arc/bithelp/2021-06/msg00004.html">this email exchange</a> I had with JHPCE’s admins in 2021 useful to understand more details about these commands.</p>
+<p>Ultimately, my exchanges with JHPCE’s admins led to two scripts we use frequently when setting file permissions. One of them is for the collaboration between <code>lieber_lcolladotor</code>, <code>lieber_marmaypag</code> and <code>hickslab</code>. The second one is for a collaboration between <code>lieber_lcolladotor</code> and <code>lieber_moods</code>, that we want <code>lieber</code> to be able to see. The files are:</p>
 <ul>
 <li><code>/dcs04/lieber/lcolladotor/_jhpce_org_LIBD001/update_permissions_spatialteam.sh</code>
 <ul>
@@ -715,7 +716,7 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <li>one script for deleting the original files
 <ul>
 <li>You will likely want to wait a few days / weeks before running this, to make sure that you have successfully moved everything you needed.</li>
-<li>If you don’t have write permissions to all the original files, you will need to request JHPCE admins to run this for you.</li>
+<li>If you don’t have write permissions to all the original files, you will need to request JHPCE’s admins to run this for you.</li>
 </ul></li>
 </ul>
 <div id="qsva-example" class="section level3 hasAnchor" number="14.4.1">
@@ -883,6 +884,74 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <span id="cb13-29"><a href="organizing-your-work.html#cb13-29" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb13-30"><a href="organizing-your-work.html#cb13-30" aria-hidden="true" tabindex="-1"></a><span class="co">## This script was made using sgejobs version 0.99.1</span></span>
 <span id="cb13-31"><a href="organizing-your-work.html#cb13-31" aria-hidden="true" tabindex="-1"></a><span class="co">## available from http://research.libd.org/sgejobs/</span></span></code></pre></div>
+</div>
+<div id="humanpilot-example" class="section level3 hasAnchor" number="14.4.2">
+<h3><span class="header-section-number">14.4.2</span> HumanPilot example<a href="organizing-your-work.html#humanpilot-example" class="anchor-section" aria-label="Anchor link to header"></a></h3>
+<p>This is a simpler example, since we only moved one directory. So there’s no need for an array job or a file listing the directories we want to move. This project was done without any grant support, hence why we associated the LIBD 001 code to it. It was done in collaboration with 10x Genomics, hence why we decided to move it to <code>/dcs04/lieber/lcolladotor/with10x_LIBD001</code>. As in the previous example, I created a <code>_jhpce_org</code> directory to store the scripts related to relocating files and updating permissions. We also don’t have a script for deleting the files, since we knew that we didn’t have write permissions on all the original files and thus would need JHPCE’s admins help deleting them. This scenario is common when one or more people who were involved in the initial project leave LIBD prior to the file relocation, as you can’t ask them to run the <em>delete</em> script to delete the files they control. However, since we did have read access to all files, we were able to relocate them without needing JHPCE’s admins support.</p>
+<p><code>/dcs04/lieber/lcolladotor/with10x_LIBD001/_jhpce_org</code> files:</p>
+<ul>
+<li><code>move_HumanPilot_dcl02.sh</code></li>
+</ul>
+<p>This script is similar to the qSVA example, but there is no array job. It was adapted from it, and thus we still specify the <code>ORIGINALDIR</code> environment variable, but we do it manually this time instead of using <code>awk</code> to do so.</p>
+<p>Most of the rest is the same, but here the trash directory is just called <code>trash</code>, as it became easier to do so and explain to JHPCE admins which directories we wanted deleted later on.</p>
+<div class="sourceCode" id="cb14"><pre class="sourceCode bash"><code class="sourceCode bash"><span id="cb14-1"><a href="organizing-your-work.html#cb14-1" aria-hidden="true" tabindex="-1"></a><span class="co">#!/bin/bash</span></span>
+<span id="cb14-2"><a href="organizing-your-work.html#cb14-2" aria-hidden="true" tabindex="-1"></a><span class="co">#$ -cwd</span></span>
+<span id="cb14-3"><a href="organizing-your-work.html#cb14-3" aria-hidden="true" tabindex="-1"></a><span class="co">#$ -l bluejay,mem_free=2G,h_vmem=2G,h_fsize=400G</span></span>
+<span id="cb14-4"><a href="organizing-your-work.html#cb14-4" aria-hidden="true" tabindex="-1"></a><span class="co">#$ -N move_HumanPilot_dcl02</span></span>
+<span id="cb14-5"><a href="organizing-your-work.html#cb14-5" aria-hidden="true" tabindex="-1"></a><span class="co">#$ -o logs/move_HumanPilot_dcl02.txt</span></span>
+<span id="cb14-6"><a href="organizing-your-work.html#cb14-6" aria-hidden="true" tabindex="-1"></a><span class="co">#$ -e logs/move_HumanPilot_dcl02.txt</span></span>
+<span id="cb14-7"><a href="organizing-your-work.html#cb14-7" aria-hidden="true" tabindex="-1"></a><span class="co">#$ -m e</span></span>
+<span id="cb14-8"><a href="organizing-your-work.html#cb14-8" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb14-9"><a href="organizing-your-work.html#cb14-9" aria-hidden="true" tabindex="-1"></a><span class="bu">echo</span> <span class="st">&quot;**** Job starts ****&quot;</span></span>
+<span id="cb14-10"><a href="organizing-your-work.html#cb14-10" aria-hidden="true" tabindex="-1"></a><span class="fu">date</span></span>
+<span id="cb14-11"><a href="organizing-your-work.html#cb14-11" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb14-12"><a href="organizing-your-work.html#cb14-12" aria-hidden="true" tabindex="-1"></a><span class="bu">echo</span> <span class="st">&quot;**** JHPCE info ****&quot;</span></span>
+<span id="cb14-13"><a href="organizing-your-work.html#cb14-13" aria-hidden="true" tabindex="-1"></a><span class="bu">echo</span> <span class="st">&quot;User: </span><span class="va">${USER}</span><span class="st">&quot;</span></span>
+<span id="cb14-14"><a href="organizing-your-work.html#cb14-14" aria-hidden="true" tabindex="-1"></a><span class="bu">echo</span> <span class="st">&quot;Job id: </span><span class="va">${JOB_ID}</span><span class="st">&quot;</span></span>
+<span id="cb14-15"><a href="organizing-your-work.html#cb14-15" aria-hidden="true" tabindex="-1"></a><span class="bu">echo</span> <span class="st">&quot;Job name: </span><span class="va">${JOB_NAME}</span><span class="st">&quot;</span></span>
+<span id="cb14-16"><a href="organizing-your-work.html#cb14-16" aria-hidden="true" tabindex="-1"></a><span class="bu">echo</span> <span class="st">&quot;Hostname: </span><span class="va">${HOSTNAME}</span><span class="st">&quot;</span></span>
+<span id="cb14-17"><a href="organizing-your-work.html#cb14-17" aria-hidden="true" tabindex="-1"></a><span class="bu">echo</span> <span class="st">&quot;Task id: </span><span class="va">${SGE_TASK_ID}</span><span class="st">&quot;</span></span>
+<span id="cb14-18"><a href="organizing-your-work.html#cb14-18" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb14-19"><a href="organizing-your-work.html#cb14-19" aria-hidden="true" tabindex="-1"></a><span class="co">## List current modules for reproducibility</span></span>
+<span id="cb14-20"><a href="organizing-your-work.html#cb14-20" aria-hidden="true" tabindex="-1"></a><span class="ex">module</span> list</span>
+<span id="cb14-21"><a href="organizing-your-work.html#cb14-21" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb14-22"><a href="organizing-your-work.html#cb14-22" aria-hidden="true" tabindex="-1"></a><span class="co">## Locate directory</span></span>
+<span id="cb14-23"><a href="organizing-your-work.html#cb14-23" aria-hidden="true" tabindex="-1"></a><span class="va">ORIGINALDIR</span><span class="op">=</span><span class="st">&quot;/dcl02/lieber/ajaffe/SpatialTranscriptomics/HumanPilot&quot;</span></span>
+<span id="cb14-24"><a href="organizing-your-work.html#cb14-24" aria-hidden="true" tabindex="-1"></a><span class="bu">echo</span> <span class="st">&quot;Processing directory </span><span class="va">${ORIGINALDIR}</span><span class="st">&quot;</span></span>
+<span id="cb14-25"><a href="organizing-your-work.html#cb14-25" aria-hidden="true" tabindex="-1"></a><span class="fu">date</span></span>
+<span id="cb14-26"><a href="organizing-your-work.html#cb14-26" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb14-27"><a href="organizing-your-work.html#cb14-27" aria-hidden="true" tabindex="-1"></a><span class="va">BASEDIR</span><span class="op">=</span><span class="va">$(</span><span class="fu">basename</span> <span class="va">${ORIGINALDIR})</span></span>
+<span id="cb14-28"><a href="organizing-your-work.html#cb14-28" aria-hidden="true" tabindex="-1"></a><span class="va">ORIGINALHOME</span><span class="op">=</span><span class="va">$(</span><span class="fu">dirname</span> <span class="va">${ORIGINALDIR})</span></span>
+<span id="cb14-29"><a href="organizing-your-work.html#cb14-29" aria-hidden="true" tabindex="-1"></a><span class="va">NEWDIR</span><span class="op">=</span><span class="st">&quot;/dcs04/lieber/lcolladotor/with10x_LIBD001/</span><span class="va">${BASEDIR}</span><span class="st">&quot;</span></span>
+<span id="cb14-30"><a href="organizing-your-work.html#cb14-30" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb14-31"><a href="organizing-your-work.html#cb14-31" aria-hidden="true" tabindex="-1"></a><span class="co">## Determine amount of data to transfer</span></span>
+<span id="cb14-32"><a href="organizing-your-work.html#cb14-32" aria-hidden="true" tabindex="-1"></a><span class="fu">du</span> <span class="at">-sk</span> <span class="at">--apparent-size</span> <span class="va">${ORIGINALDIR}</span>/ <span class="kw">|</span> <span class="fu">awk</span> <span class="st">&#39;{$1=$1/(1024^3); print $1, &quot;TB&quot;;}&#39;</span></span>
+<span id="cb14-33"><a href="organizing-your-work.html#cb14-33" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb14-34"><a href="organizing-your-work.html#cb14-34" aria-hidden="true" tabindex="-1"></a><span class="co">## List owners of all the files in the original path</span></span>
+<span id="cb14-35"><a href="organizing-your-work.html#cb14-35" aria-hidden="true" tabindex="-1"></a><span class="fu">find</span> <span class="va">${ORIGINALDIR}</span>/ <span class="at">-exec</span> ls <span class="at">-l</span> {} <span class="dt">\;</span> <span class="kw">|</span> <span class="fu">grep</span> <span class="at">-v</span> total <span class="kw">|</span> <span class="fu">tr</span> <span class="at">-s</span> <span class="st">&#39; &#39;</span> <span class="kw">|</span> <span class="fu">cut</span> <span class="at">-d</span> <span class="st">&#39; &#39;</span> <span class="at">-f3,9-</span></span>
+<span id="cb14-36"><a href="organizing-your-work.html#cb14-36" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb14-37"><a href="organizing-your-work.html#cb14-37" aria-hidden="true" tabindex="-1"></a><span class="co">## Copy from dcl02 to dcs04</span></span>
+<span id="cb14-38"><a href="organizing-your-work.html#cb14-38" aria-hidden="true" tabindex="-1"></a><span class="fu">rsync</span> <span class="at">-rltgvh</span> <span class="at">--chown</span><span class="op">=</span>:lieber_lcolladotor <span class="va">${ORIGINALDIR}</span>/ <span class="va">${NEWDIR}</span>/</span>
+<span id="cb14-39"><a href="organizing-your-work.html#cb14-39" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb14-40"><a href="organizing-your-work.html#cb14-40" aria-hidden="true" tabindex="-1"></a><span class="co">## Label as trash the files that were moved</span></span>
+<span id="cb14-41"><a href="organizing-your-work.html#cb14-41" aria-hidden="true" tabindex="-1"></a><span class="fu">mkdir</span> <span class="at">-p</span> <span class="va">${ORIGINALHOME}</span>/trash/</span>
+<span id="cb14-42"><a href="organizing-your-work.html#cb14-42" aria-hidden="true" tabindex="-1"></a><span class="fu">mv</span> <span class="va">${ORIGINALDIR}</span> <span class="va">${ORIGINALHOME}</span>/trash/</span>
+<span id="cb14-43"><a href="organizing-your-work.html#cb14-43" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb14-44"><a href="organizing-your-work.html#cb14-44" aria-hidden="true" tabindex="-1"></a><span class="co">## Create link</span></span>
+<span id="cb14-45"><a href="organizing-your-work.html#cb14-45" aria-hidden="true" tabindex="-1"></a><span class="fu">ln</span> <span class="at">-s</span> <span class="va">${NEWDIR}</span> <span class="va">${ORIGINALDIR}</span></span>
+<span id="cb14-46"><a href="organizing-your-work.html#cb14-46" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb14-47"><a href="organizing-your-work.html#cb14-47" aria-hidden="true" tabindex="-1"></a><span class="bu">echo</span> <span class="st">&quot;**** Job ends ****&quot;</span></span>
+<span id="cb14-48"><a href="organizing-your-work.html#cb14-48" aria-hidden="true" tabindex="-1"></a><span class="fu">date</span></span>
+<span id="cb14-49"><a href="organizing-your-work.html#cb14-49" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb14-50"><a href="organizing-your-work.html#cb14-50" aria-hidden="true" tabindex="-1"></a><span class="co">## This script was made using sgejobs version 0.99.1</span></span>
+<span id="cb14-51"><a href="organizing-your-work.html#cb14-51" aria-hidden="true" tabindex="-1"></a><span class="co">## available from http://research.libd.org/sgejobs/</span></span></code></pre></div>
+<ul>
+<li><code>update_permissions.sh</code></li>
+</ul>
+<p>This is a much simpler bash script which we didn’t <code>qsub</code> and basically just reminds us of the specific command we used to update the permissions. That way, if anyone asks us what we ran in the future, we know exactly how we updated the permissions.</p>
+<div class="sourceCode" id="cb15"><pre class="sourceCode bash"><code class="sourceCode bash"><span id="cb15-1"><a href="organizing-your-work.html#cb15-1" aria-hidden="true" tabindex="-1"></a><span class="co">#!/bin/bash</span></span>
+<span id="cb15-2"><a href="organizing-your-work.html#cb15-2" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb15-3"><a href="organizing-your-work.html#cb15-3" aria-hidden="true" tabindex="-1"></a><span class="fu">sh</span> /dcs04/lieber/lcolladotor/_jhpce_org_LIBD001/update_permissions_spatialteam.sh /dcs04/lieber/lcolladotor/with10x_LIBD001</span></code></pre></div>
 
 </div>
 </div>

@@ -123,6 +123,7 @@ spatialteam-example
 lieber_moods-example
 moving-files-across-jhpce-disks
 qsva-example
+humanpilot-example
 writing-papers
 things-to-keep-in-mind
 writing-process
