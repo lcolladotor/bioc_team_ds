@@ -119,7 +119,10 @@ project-documentation
 setting-jhpce-file-permissions
 useful-commands
 dcs04-scripts
+spatialteam-example
+lieber_moods-example
 moving-files-across-jhpce-disks
+qsva-example
 writing-papers
 things-to-keep-in-mind
 writing-process
