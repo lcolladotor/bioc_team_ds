@@ -333,7 +333,12 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <ul>
 <li class="chapter" data-level="15.1" data-path="writing-papers.html"><a href="writing-papers.html#things-to-keep-in-mind"><i class="fa fa-check"></i><b>15.1</b> Things to keep in mind</a></li>
 <li class="chapter" data-level="15.2" data-path="writing-papers.html"><a href="writing-papers.html#writing-process"><i class="fa fa-check"></i><b>15.2</b> Writing process</a></li>
-<li class="chapter" data-level="15.3" data-path="writing-papers.html"><a href="writing-papers.html#details"><i class="fa fa-check"></i><b>15.3</b> Details</a></li>
+<li class="chapter" data-level="15.3" data-path="writing-papers.html"><a href="writing-papers.html#onedrive-publication-files"><i class="fa fa-check"></i><b>15.3</b> OneDrive: publication files</a>
+<ul>
+<li class="chapter" data-level="15.3.1" data-path="writing-papers.html"><a href="writing-papers.html#examples"><i class="fa fa-check"></i><b>15.3.1</b> Examples</a></li>
+</ul></li>
+<li class="chapter" data-level="15.4" data-path="writing-papers.html"><a href="writing-papers.html#revisions"><i class="fa fa-check"></i><b>15.4</b> Revisions</a></li>
+<li class="chapter" data-level="15.5" data-path="writing-papers.html"><a href="writing-papers.html#details"><i class="fa fa-check"></i><b>15.5</b> Details</a></li>
 </ul></li>
 <li class="chapter" data-level="16" data-path="authorship.html"><a href="authorship.html"><i class="fa fa-check"></i><b>16</b> Authorship</a></li>
 <li class="chapter" data-level="17" data-path="config-files.html"><a href="config-files.html"><i class="fa fa-check"></i><b>17</b> Config files</a>
@@ -403,7 +408,7 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <h1><span class="header-section-number">15</span> Writing papers<a href="writing-papers.html#writing-papers" class="anchor-section" aria-label="Anchor link to header"></a></h1>
 <iframe width="560" height="315" src="https://www.youtube.com/embed/jbXkulDnn9g" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen>
 </iframe>
-<p>On 2020-04-06 I presented at <a href="https://docs.google.com/document/d/1yumuVwZmpoE_SpcM-9AsU0U6D9R051vU8s_AGhoqh7Y/edit?usp=sharing">how to write papers using Google Docs</a>. The video and notes mostly highlight these tools including <a href="https://twitter.com/Sciwheel">Sciwheel</a>.</p>
+<p>On 2020-04-06 I presented at <a href="https://docs.google.com/document/d/1yumuVwZmpoE_SpcM-9AsU0U6D9R051vU8s_AGhoqh7Y/edit?usp=sharing">how to write papers using Google Docs</a>. The video and notes mostly highlight these tools including <a href="https://twitter.com/Sciwheel"><code>Sciwheel</code></a> and <a href="https://github.com/davidrthorn/cross_reference"><code>CrossReference</code></a>.</p>
 <iframe width="560" height="315" src="https://www.youtube.com/embed/m6f6D3r1h7U" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen>
 </iframe>
 <p>Most recently I presented at the <a href="https://twitter.com/LIBDrstats">LIBD rstats club</a> more ideas behind writing papers. Here are the <a href="https://docs.google.com/document/d/1V7hTQvWTurHqEm24Ufz9oVAPQy2ssyDPuPxJm5yills/edit?usp=sharing">notes</a>.</p>
@@ -420,8 +425,57 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <p>Also, don’t be shy with the methods and supplementary material. Typically, journals allow us to include as many details as we want. That way, you’ll be able to refer back to sections of you paper in the future when people ask you how you did X or Y part of the paper.</p>
 <p>In a similar sense, don’t be shy about tagging others in your paper in case you need feedback on a section you just wrote or you need others to help you write. We are a team in the end and are in this together =)</p>
 </div>
-<div id="details" class="section level2 hasAnchor" number="15.3">
-<h2><span class="header-section-number">15.3</span> Details<a href="writing-papers.html#details" class="anchor-section" aria-label="Anchor link to header"></a></h2>
+<div id="onedrive-publication-files" class="section level2 hasAnchor" number="15.3">
+<h2><span class="header-section-number">15.3</span> OneDrive: publication files<a href="writing-papers.html#onedrive-publication-files" class="anchor-section" aria-label="Anchor link to header"></a></h2>
+<p>In <code>OneDrive</code> <a href="#fn26" class="footnote-ref" id="fnref26"><sup>26</sup></a>, use a directory like <code>submission_01</code> for the first submission as there will be multiple rounds for any paper. Follow this general structure for the publication files:</p>
+<ul>
+<li><code>submission_01</code>
+<ul>
+<li><a href="https://github.com/lcolladotor/bioc_team_ds/blob/master/author_template.tsv"><em>bioRxiv</em> author information</a></li>
+<li><code>Manuscript</code>: for the PDF/docx version of the manuscript and other files required by the journal such as the table describing software and methods used, the cover letter, etc.</li>
+<li><code>Figures</code>: include a directory for every single Figure such that we can keep all files related to that figure in that directory and use Adobe Illustrator to link the different panels together.
+<ul>
+<li>Name the directory with the same name you use for <code>CrossReference</code>. For example, <code>fig_overview</code>. if <code>overview</code> is the name you use in <code>CrossReference</code>. That makes it easy to remember what are the names you are using in <code>CrossReference</code>.</li>
+</ul></li>
+<li><code>Tables</code>: if the tables are small, consider combining them into a single Excel file where you include one sheet with the table legends. Keep the advice from Karl Broman and Kara Woo in mind (DOI <a href="https://doi.org/10.1080/00031305.2017.1375989">10.1080/00031305.2017.1375989</a>) when making the table files.
+<ul>
+<li>In many journals, a table counts the same as a figure in terms of display items. We thus tend to not use tables (only supplementary tables).</li>
+</ul></li>
+<li><code>SupplementaryFigures</code>: similar to <code>Figures</code>, you want to have each directory name to include the <code>CrossReference</code> code used for the figure. See the <em>Mendelay Data</em> example mentioned further below.</li>
+<li><code>SupplementaryTables</code>: similar to <code>SupplementaryFigures</code>.
+<ul>
+<li>If you have related supplementary tables, you could use an Excel file with multiple sheets.</li>
+<li>Remember to describe all columns, such that others can understand them without absolutely having to send an email asking about the table: you want to minimize getting lots of emails about them! Though of course, getting the occassional email because something wasn’t clear is ok.</li>
+</ul></li>
+</ul></li>
+<li><code>submission_02</code>
+<ul>
+<li><code>Manuscript</code>: revised manuscript, response to reviewers, cover letter, etc.</li>
+<li><code>Figures</code>: any revised figures. Sometimes we copy them all if most of them have some modifications or if the numbers changed.</li>
+<li><code>Tables</code>: any revised tables, similar to <code>Figures</code>.</li>
+<li><code>SupplementaryFigures</code>: similar to <code>Figures</code>.</li>
+<li><code>SupplementaryTables</code>: similar to <code>SupplementaryFigures</code></li>
+</ul></li>
+</ul>
+<p>Unlike version controlled files in GitHub, for all files related to the publication, we will keep multiple copies of them across submission versions.</p>
+<div id="examples" class="section level3 hasAnchor" number="15.3.1">
+<h3><span class="header-section-number">15.3.1</span> Examples<a href="writing-papers.html#examples" class="anchor-section" aria-label="Anchor link to header"></a></h3>
+<p>See <a href="https://data.mendeley.com/datasets/3j93ybf4md/1"><em>Regional heterogeneity in gene expression, regulation and coherence in hippocampus and prefrontal cortex across development and in schizophrenia. Collado-Torres et al, Neuron, 2019</em></a> on <em>Mendeley Data</em> which contains our final <code>Figures/</code>, <code>SupplementaryFigures/</code> and <code>SupplementaryTables/</code> directories. We shared all full resolution images as some were large files.</p>
+<p>A second example is <a href="https://doi.org/10.6084/m9.figshare.13623902.v1"><em>Figures_Maynard_Collado-Torres_et_al_Nature_Neuroscience_2021.zip</em></a> that contains the <code>Figures/</code> and <code>SupplementaryFigures/</code> directories for that paper. This included large <code>.tiff</code> images with RNAscope results that we thought others might be interested in using at some point, since the versions of the images on the paper itself are not high-resolution enough to extract data from them.</p>
+<p>Both <em>Mendeley Data</em> and <em>Figshare</em> give you a DOI that you can refer to in the manuscript of the paper associated with the figures and tables that you are sharing.</p>
+</div>
+</div>
+<div id="revisions" class="section level2 hasAnchor" number="15.4">
+<h2><span class="header-section-number">15.4</span> Revisions<a href="writing-papers.html#revisions" class="anchor-section" aria-label="Anchor link to header"></a></h2>
+<p>When responding to reviewers, make a new Google Doc where the feedback from the reviewers is in bold or some other font, and add placeholders for responses. You can then tag the co-author(s) that can help the most with the response for each point.</p>
+<p>As examples, check:</p>
+<ul>
+<li>the <a href="https://docs.google.com/document/d/1GLB4aVrzXhSZNT6br7m_JvvzjRUCixBKgwrZUTIwZyA/edit?usp=sharing">BrainSEQ Phase II Google Doc</a> with code at <a href="https://github.com/LieberInstitute/brainseq_phase2">LieberInstitute/brainseq_phase2</a> as well through Zenodo. The final version is available at DOI <a href="https://doi.org/10.1016/j.neuron.2019.05.013">10.1016/j.neuron.2019.05.013</a>.</li>
+<li>the <a href="https://docs.google.com/document/d/1mHf2gDtQAwCqxplh5NV-nAcLxzv5LdXR7MhFdo6QLl8/edit?usp=sharing">spatialLIBD project Google Doc</a> with code at <a href="https://github.com/LieberInstitute/HumanPilot">LieberInstitute/HumanPilot</a> as well as through Zenodo. The final version is available at DOI <a href="https://doi.org/10.1038/s41593-020-00787-0">10.1038/s41593-020-00787-0</a>. For an Overleaf example, check the <a href="https://www.overleaf.com/read/tqvgjssdckqv">spatialLIBD software paper</a>.</li>
+</ul>
+</div>
+<div id="details" class="section level2 hasAnchor" number="15.5">
+<h2><span class="header-section-number">15.5</span> Details<a href="writing-papers.html#details" class="anchor-section" aria-label="Anchor link to header"></a></h2>
 <p>Here are more details:</p>
 <ul>
 <li>Title: check character limits.</li>
@@ -435,21 +489,9 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <li>Funding: include full grant IDs and who they supported.</li>
 <li>Author contributions: use the <a href="https://casrai.org/credit/">CRediT contributor roles taxonomy</a></li>
 <li>Conflicts of interest: in case any authors worked for companies, list that info here.</li>
-<li>Figure/table legends: figure/table number and figure/table title should be in bold font. Then the description in plain text. I also like to use (<strong>A</strong>) instead of (A) whenever the description of a sub-panel begins. Some journals will ask that you also link to all supplementary figure/tables from the main figures.</li>
+<li>Figure/table legends: figure/table number and figure/table title should be in bold font. Then the description in plain text. I also like to use (<strong>A</strong>) instead of (A) whenever the description of a sub-panel begins. Some journals will ask that you also link to all supplementary figure/tables from the main figures. Check also the allowed text length for figure legends.</li>
 <li>Methods: use sub-sections for the different parts of the work and sort them in order of appearance from the Results section. Use version numbers and a different font style for software / functions to make it easier to identify those words as names of tools. Cite every single software you used! Don’t interpret results here, that should be in the Results section.</li>
-<li>Data and software availability: link to GitHub and cite using Zenodo which provides DOIs for GitHub repositories as shown in <a href="https://guides.github.com/activities/citable-code/">this guide</a>. Note that we start most of our GitHub repositories as private, but we make them public by the time we post a pre-print. You’ll want to have a high quality README.md in your repository that shows how the work should be cited and guides visitors to the different components included in the repository. Several journals will require to you also complete more detailed forms such as this <a href="https://static-content.springer.com/esm/art%3A10.1038%2Fs41593-020-00787-0/MediaObjects/41593_2020_787_MOESM2_ESM.pdf">Reporting Summary</a> example from one of our papers.</li>
-</ul>
-<p>In Dropbox, use a directory like <code>submission_01</code> for the first submission as there will be multiple rounds for any paper. Inside each submission directory include directories:</p>
-<ul>
-<li><code>manuscript</code>: for the PDF/docx version of the manuscript and other files required by the journal (like the table describing software and methods used)</li>
-<li><code>Figures</code>: include a directory for every single Figure such that we can keep all files related to that figure in that directory and use Adobe Illustrator to link the different panels together.</li>
-<li><code>Tables</code>: if the tables are small, consider combining them into a single Excel file where you include one sheet with the table legends. Keep the advice from Karl Broman and Kara Woo in mind (DOI <a href="https://doi.org/10.1080/00031305.2017.1375989">10.1080/00031305.2017.1375989</a>) when making the table files.</li>
-</ul>
-<p>When responding to reviewers, make a new Google Doc where the feedback from the reviewers is in bold or some other font, and add placeholders for responses. You can then tag the co-author(s) that can help the most with the response for each point.</p>
-<p>As examples, check:</p>
-<ul>
-<li>the <a href="https://docs.google.com/document/d/1GLB4aVrzXhSZNT6br7m_JvvzjRUCixBKgwrZUTIwZyA/edit?usp=sharing">BrainSEQ Phase II Google Doc</a> with code at <a href="https://github.com/LieberInstitute/brainseq_phase2">LieberInstitute/brainseq_phase2</a> as well through Zenodo. The final version is available at DOI <a href="https://doi.org/10.1016/j.neuron.2019.05.013">10.1016/j.neuron.2019.05.013</a>.</li>
-<li>the <a href="https://docs.google.com/document/d/1mHf2gDtQAwCqxplh5NV-nAcLxzv5LdXR7MhFdo6QLl8/edit?usp=sharing">spatialLIBD project Google Doc</a> with code at <a href="https://github.com/LieberInstitute/HumanPilot">LieberInstitute/HumanPilot</a> as well as through Zenodo. The final version is available at DOI <a href="https://doi.org/10.1038/s41593-020-00787-0">10.1038/s41593-020-00787-0</a>. For an Overleaf example, check the <a href="https://www.overleaf.com/read/tqvgjssdckqv">spatialLIBD software paper</a>.</li>
+<li>Data and software availability: link to GitHub and cite using <code>Zenodo</code> which provides DOIs for GitHub repositories as shown in <a href="https://guides.github.com/activities/citable-code/">this guide</a>. Note that we start most of our GitHub repositories as private, but we make them public by the time we post a pre-print. You’ll want to have a high quality <code>README.md</code> in your repository that shows how the work should be cited and guides visitors to the different components included in the repository. Several journals will require to you also complete more detailed forms such as this <a href="https://static-content.springer.com/esm/art%3A10.1038%2Fs41593-020-00787-0/MediaObjects/41593_2020_787_MOESM2_ESM.pdf">Reporting Summary</a> example from one of our papers.</li>
 </ul>
 <p>Finally, feel free to sign up for a <a href="data-science-guidance-sessions.html#data-science-guidance-sessions">Data Science guidance session</a> with anyone in the team that recently wrote a paper.</p>
 
@@ -460,6 +502,7 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <ol start="24">
 <li id="fn24"><p>Note that bioRxiv has an <a href="https://github.com/lcolladotor/bioc_team_ds/blob/master/author_template.tsv">author information template table</a> that you can use.<a href="writing-papers.html#fnref24" class="footnote-back">↩︎</a></p></li>
 <li id="fn25"><p>Likely using <em>suggestion mode</em> in Google Docs. Also note that both Google Docs and Overleaf allow you to name versions, which makes it easier to refer back to them and compare against them.<a href="writing-papers.html#fnref25" class="footnote-back">↩︎</a></p></li>
+<li id="fn26"><p>In the past we used <code>Dropbox</code>, but because <code>OneDrive</code> is free through JHU, we switched to it.<a href="writing-papers.html#fnref26" class="footnote-back">↩︎</a></p></li>
 </ol>
 </div>
 <div class="container">

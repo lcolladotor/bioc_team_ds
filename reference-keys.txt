@@ -123,6 +123,9 @@ moving-files-across-jhpce-disks
 writing-papers
 things-to-keep-in-mind
 writing-process
+onedrive-publication-files
+examples
+revisions
 details
 authorship
 config-files
