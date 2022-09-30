@@ -3,7 +3,7 @@
 
 <iframe width="560" height="315" src="https://www.youtube.com/embed/jbXkulDnn9g" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 
-On 2020-04-06 I presented at [how to write papers using Google Docs](https://docs.google.com/document/d/1yumuVwZmpoE_SpcM-9AsU0U6D9R051vU8s_AGhoqh7Y/edit?usp=sharing). The video and notes mostly highlight these tools including [Sciwheel](https://twitter.com/Sciwheel).
+On 2020-04-06 I presented at [how to write papers using Google Docs](https://docs.google.com/document/d/1yumuVwZmpoE_SpcM-9AsU0U6D9R051vU8s_AGhoqh7Y/edit?usp=sharing). The video and notes mostly highlight these tools including [`Sciwheel`](https://twitter.com/Sciwheel) and [`CrossReference`](https://github.com/davidrthorn/cross_reference).
 
 
 <iframe width="560" height="315" src="https://www.youtube.com/embed/m6f6D3r1h7U" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
@@ -29,6 +29,47 @@ Also, don't be shy with the methods and supplementary material. Typically, journ
 
 In a similar sense, don't be shy about tagging others in your paper in case you need feedback on a section you just wrote or you need others to help you write. We are a team in the end and are in this together =)
 
+## OneDrive: publication files
+
+In `OneDrive` ^[In the past we used `Dropbox`, but because `OneDrive` is free through JHU, we switched to it.], use a directory like `submission_01` for the first submission as there will be multiple rounds for any paper. Follow this general structure for the publication files:
+
+* `submission_01`
+  * [_bioRxiv_ author information](https://github.com/lcolladotor/bioc_team_ds/blob/master/author_template.tsv)
+  * `Manuscript`: for the PDF/docx version of the manuscript and other files required by the journal such as the table describing software and methods used, the cover letter, etc.
+  * `Figures`: include a directory for every single Figure such that we can keep all files related to that figure in that directory and use Adobe Illustrator to link the different panels together.
+    * Name the directory with the same name you use for `CrossReference`. For example, `fig_overview`. if `overview` is the name you use in `CrossReference`. That makes it easy to remember what are the names you are using in `CrossReference`.
+  * `Tables`: if the tables are small, consider combining them into a single Excel file where you include one sheet with the table legends. Keep the advice from Karl Broman and Kara Woo in mind (DOI [10.1080/00031305.2017.1375989](https://doi.org/10.1080/00031305.2017.1375989)) when making the table files.
+    * In many journals, a table counts the same as a figure in terms of display items. We thus tend to not use tables (only supplementary tables).
+  * `SupplementaryFigures`: similar to `Figures`, you want to have each directory name to include the `CrossReference` code used for the figure. See the _Mendelay Data_ example mentioned further below.
+  * `SupplementaryTables`: similar to `SupplementaryFigures`.
+    * If you have related supplementary tables, you could use an Excel file with multiple sheets.
+    * Remember to describe all columns, such that others can understand them without absolutely having to send an email asking about the table: you want to minimize getting lots of emails about them! Though of course, getting the occassional email because something wasn't clear is ok.
+* `submission_02`
+  * `Manuscript`: revised manuscript, response to reviewers, cover letter, etc.
+  * `Figures`: any revised figures. Sometimes we copy them all if most of them have some modifications or if the numbers changed.
+  * `Tables`: any revised tables, similar to `Figures`.
+  * `SupplementaryFigures`: similar to `Figures`.
+  * `SupplementaryTables`: similar to `SupplementaryFigures`
+  
+Unlike version controlled files in GitHub, for all files related to the publication, we will keep multiple copies of them across submission versions. 
+
+### Examples
+
+See [_Regional heterogeneity in gene expression, regulation and coherence in hippocampus and prefrontal cortex across development and in schizophrenia. Collado-Torres et al, Neuron, 2019_](https://data.mendeley.com/datasets/3j93ybf4md/1) on _Mendeley Data_ which contains our final `Figures/`, `SupplementaryFigures/` and `SupplementaryTables/` directories. We shared all full resolution images as some were large files. 
+
+A second example is [*Figures_Maynard_Collado-Torres_et_al_Nature_Neuroscience_2021.zip*](https://doi.org/10.6084/m9.figshare.13623902.v1) that contains the `Figures/` and `SupplementaryFigures/` directories for that paper. This included large `.tiff` images with RNAscope results that we thought others might be interested in using at some point, since the versions of the images on the paper itself are not high-resolution enough to extract data from them.
+
+Both _Mendeley Data_ and _Figshare_ give you a DOI that you can refer to in the manuscript of the paper associated with the figures and tables that you are sharing.
+
+## Revisions
+
+When responding to reviewers, make a new Google Doc where the feedback from the reviewers is in bold or some other font, and add placeholders for responses. You can then tag the co-author(s) that can help the most with the response for each point.
+
+As examples, check:
+
+* the [BrainSEQ Phase II Google Doc](https://docs.google.com/document/d/1GLB4aVrzXhSZNT6br7m_JvvzjRUCixBKgwrZUTIwZyA/edit?usp=sharing) with code at [LieberInstitute/brainseq_phase2](https://github.com/LieberInstitute/brainseq_phase2) as well through Zenodo. The final version is available at DOI [10.1016/j.neuron.2019.05.013](https://doi.org/10.1016/j.neuron.2019.05.013).
+* the [spatialLIBD project Google Doc](https://docs.google.com/document/d/1mHf2gDtQAwCqxplh5NV-nAcLxzv5LdXR7MhFdo6QLl8/edit?usp=sharing) with code at [LieberInstitute/HumanPilot](https://github.com/LieberInstitute/HumanPilot) as well as through Zenodo. The final version is available at DOI [10.1038/s41593-020-00787-0](https://doi.org/10.1038/s41593-020-00787-0). For an Overleaf example, check the [spatialLIBD software paper](https://www.overleaf.com/read/tqvgjssdckqv).
+
 ## Details
 
 
@@ -45,21 +86,9 @@ Here are more details:
 * Funding: include full grant IDs and who they supported.
 * Author contributions: use the [CRediT contributor roles taxonomy](https://casrai.org/credit/)
 * Conflicts of interest: in case any authors worked for companies, list that info here.
-* Figure/table legends: figure/table number and figure/table title should be in bold font. Then the description in plain text. I also like to use (__A__) instead of (A) whenever the description of a sub-panel begins. Some journals will ask that you also link to all supplementary figure/tables from the main figures.
+* Figure/table legends: figure/table number and figure/table title should be in bold font. Then the description in plain text. I also like to use (__A__) instead of (A) whenever the description of a sub-panel begins. Some journals will ask that you also link to all supplementary figure/tables from the main figures. Check also the allowed text length for figure legends.
 * Methods: use sub-sections for the different parts of the work and sort them in order of appearance from the Results section. Use version numbers and a different font style for software / functions to make it easier to identify those words as names of tools. Cite every single software you used! Don't interpret results here, that should be in the Results section.
-* Data and software availability: link to GitHub and cite using Zenodo which provides DOIs for GitHub repositories as shown in [this guide](https://guides.github.com/activities/citable-code/). Note that we start most of our GitHub repositories as private, but we make them public by the time we post a pre-print. You'll want to have a high quality README.md in your repository that shows how the work should be cited and guides visitors to the different components included in the repository. Several journals will require to you also complete more detailed forms such as this [Reporting Summary](https://static-content.springer.com/esm/art%3A10.1038%2Fs41593-020-00787-0/MediaObjects/41593_2020_787_MOESM2_ESM.pdf) example from one of our papers. 
+* Data and software availability: link to GitHub and cite using `Zenodo` which provides DOIs for GitHub repositories as shown in [this guide](https://guides.github.com/activities/citable-code/). Note that we start most of our GitHub repositories as private, but we make them public by the time we post a pre-print. You'll want to have a high quality `README.md` in your repository that shows how the work should be cited and guides visitors to the different components included in the repository. Several journals will require to you also complete more detailed forms such as this [Reporting Summary](https://static-content.springer.com/esm/art%3A10.1038%2Fs41593-020-00787-0/MediaObjects/41593_2020_787_MOESM2_ESM.pdf) example from one of our papers. 
 
-In Dropbox, use a directory like `submission_01` for the first submission as there will be multiple rounds for any paper. Inside each submission directory include directories:
-
-* `manuscript`: for the PDF/docx version of the manuscript and other files required by the journal (like the table describing software and methods used)
-* `Figures`: include a directory for every single Figure such that we can keep all files related to that figure in that directory and use Adobe Illustrator to link the different panels together.
-* `Tables`: if the tables are small, consider combining them into a single Excel file where you include one sheet with the table legends. Keep the advice from Karl Broman and Kara Woo in mind (DOI [10.1080/00031305.2017.1375989](https://doi.org/10.1080/00031305.2017.1375989)) when making the table files.
-
-When responding to reviewers, make a new Google Doc where the feedback from the reviewers is in bold or some other font, and add placeholders for responses. You can then tag the co-author(s) that can help the most with the response for each point.
-
-As examples, check:
-
-* the [BrainSEQ Phase II Google Doc](https://docs.google.com/document/d/1GLB4aVrzXhSZNT6br7m_JvvzjRUCixBKgwrZUTIwZyA/edit?usp=sharing) with code at [LieberInstitute/brainseq_phase2](https://github.com/LieberInstitute/brainseq_phase2) as well through Zenodo. The final version is available at DOI [10.1016/j.neuron.2019.05.013](https://doi.org/10.1016/j.neuron.2019.05.013).
-* the [spatialLIBD project Google Doc](https://docs.google.com/document/d/1mHf2gDtQAwCqxplh5NV-nAcLxzv5LdXR7MhFdo6QLl8/edit?usp=sharing) with code at [LieberInstitute/HumanPilot](https://github.com/LieberInstitute/HumanPilot) as well as through Zenodo. The final version is available at DOI [10.1038/s41593-020-00787-0](https://doi.org/10.1038/s41593-020-00787-0). For an Overleaf example, check the [spatialLIBD software paper](https://www.overleaf.com/read/tqvgjssdckqv).
 
 Finally, feel free to sign up for a [Data Science guidance session](#data-science-guidance-sessions) with anyone in the team that recently wrote a paper.
