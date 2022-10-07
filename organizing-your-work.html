@@ -533,6 +533,9 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 </div>
 <div id="setting-jhpce-file-permissions" class="section level2 hasAnchor" number="14.3">
 <h2><span class="header-section-number">14.3</span> Setting JHPCE file permissions<a href="organizing-your-work.html#setting-jhpce-file-permissions" class="anchor-section" aria-label="Anchor link to header"></a></h2>
+<p>The following video on how to move files and setup permissions might be useful. It covers the same material shown here.</p>
+<iframe width="560" height="315" src="https://www.youtube.com/embed/Y7fFLX3fw9A" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen>
+</iframe>
 <p>At <a href="http://www.jhpce.jhu.edu/">JHPCE</a> we have multiple user groups. Everyone within a user group has the same permissions, such that everyone is equal. That is, there is no user group admin role. As there are many JHPCE users, the typical approach is to make a user group and restrict read and/or write access to that user group. We use to do this with <code>lieber_jaffe</code>, but then the user group grew quite large over time and not everyone necessarily should have had read/write access to everything.</p>
 <p>This leads to having multiple user groups. One option is to create a user group for every specific project, but this requires constantly asking JHPCE’s admins (through BitSupport) for changes, since they are the only ones who can add/remove people to user groups, or even create them.</p>
 <p>This is where <em>Access Control Lists</em> (ACLs) come into play. See <a href="https://www.redhat.com/sysadmin/linux-access-control-lists">“An introduction to Linux Access Control Lists (ACLs)”</a> for more details. That’s because if you have user groups that are small, such as those representing specific members of a given team/lab, then you say that</p>
