@@ -128,6 +128,10 @@ If the project is quite big, it might make sense to make a documentation website
 
 ## Setting JHPCE file permissions
 
+The following video on how to move files and setup permissions might be useful. It covers the same material shown here.
+
+<iframe width="560" height="315" src="https://www.youtube.com/embed/Y7fFLX3fw9A" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+
 At [JHPCE](http://www.jhpce.jhu.edu/) we have multiple user groups. Everyone within a user group has the same permissions, such that everyone is equal. That is, there is no user group admin role. As there are many JHPCE users, the typical approach is to make a user group and restrict read and/or write access to that user group. We use to do this with `lieber_jaffe`, but then the user group grew quite large over time and not everyone necessarily should have had read/write access to everything.
 
 This leads to having multiple user groups. One option is to create a user group for every specific project, but this requires constantly asking JHPCE's admins (through BitSupport) for changes, since they are the only ones who can add/remove people to user groups, or even create them.
