@@ -10,6 +10,8 @@ Actually, Jim Hester keeps providing excellent advice, so you might want to chec
 
 <script src="https://gist.github.com/jimhester/9b5461108f93162e15c42684076de82f.js"></script>
 
+We highly recommend that you watch [Jenny Bryan](https://twitter.com/JennyBryan)'s RStudio Conf 2020 keynote talk titled "Object of type ‘closure’ is not subsettable" available through [RStudio's website](https://www.rstudio.com/resources/rstudioconf-2020/object-of-type-closure-is-not-subsettable/). You can find all related links from her talk through [GitHub](https://github.com/jennybc/debugging#readme).
+
 Ultimately, some coding issues are complex. Here are some tips on some strategies for resolving complex coding problems.
 
 <iframe width="560" height="315" src="https://www.youtube.com/embed/xUSEippbXBc" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
