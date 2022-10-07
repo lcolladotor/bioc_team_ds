@@ -12,6 +12,8 @@ Actually, Jim Hester keeps providing excellent advice, so you might want to chec
 
 We highly recommend that you watch [Jenny Bryan](https://twitter.com/JennyBryan)'s RStudio Conf 2020 keynote talk titled "Object of type ‘closure’ is not subsettable" available through [RStudio's website](https://www.rstudio.com/resources/rstudioconf-2020/object-of-type-closure-is-not-subsettable/). You can find all related links from her talk through [GitHub](https://github.com/jennybc/debugging#readme).
 
+<p><a href="https://www.rstudio.com/resources/rstudioconf-2020/object-of-type-closure-is-not-subsettable/?wvideo=3eryv8gcor"><img src="https://embed-ssl.wistia.com/deliveries/2e2c4f025a70aaa1659fa66786570766f9f0f11a.jpg?image_play_button_size=2x&amp;image_crop_resized=960x540&amp;image_play_button=1&amp;image_play_button_color=4287c7e0" width="400" height="225" style="width: 400px; height: 225px;"></a></p><p><a href="https://www.rstudio.com/resources/rstudioconf-2020/object-of-type-closure-is-not-subsettable/?wvideo=3eryv8gcor">Object of type ‘closure’ is not subsettable - RStudio</a></p>
+
 Ultimately, some coding issues are complex. Here are some tips on some strategies for resolving complex coding problems.
 
 <iframe width="560" height="315" src="https://www.youtube.com/embed/xUSEippbXBc" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
