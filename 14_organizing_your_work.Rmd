@@ -148,6 +148,8 @@ Some examples with actual teams are:
 * Team (user group) `lieber_lcolladotor` is working on a private project along with team (user group) `lieber_marmaypag`.
 * Teams (user groups) `lieber_lcolladotor` and `lieber_marmaypag` created some files that we want to share with everyone at LIBD (`lieber` user group) but don't want others to accidentally delete or modify them.
 
+For more details about ACLs at JHPCE check the [Granting File Permissions using ACLs](https://jhpce.jhu.edu/knowledge-base/granting-permissions-using-acls/) page.
+
 ### Useful commands
 
 To check who belongs to a specific group, use `getent group groupName`. For example:
