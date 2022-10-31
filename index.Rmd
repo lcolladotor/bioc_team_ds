@@ -37,7 +37,7 @@ For an overview of our recent work, check this video and [companion slides](http
 
 ## YouTube {-}
 
-You can find our videos on **YouTube** at [LeonardoColladoTorres/playlists](https://www.youtube.com/c/LeonardoColladoTorres/playlists). Some of our main video playlists are show below.
+You can find our videos on **YouTube** at [lcolladotor/playlists](https://www.youtube.com/@lcolladotor/playlists). Some of our main video playlists are show below.
 
 ### LIBD rstats club {-}
 

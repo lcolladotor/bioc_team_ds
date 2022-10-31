@@ -4,7 +4,7 @@
 
 Every week we meet for about an hour. The team meeting has three sections:
 
-* [30 min] **Papers & software**: we discuss either a paper or some software. The discussion is lead by a team member and the presentation is made public on [YouTube](https://www.youtube.com/c/LeonardoColladoTorres/playlists) while the discussion is kept private.
+* [30 min] **Papers & software**: we discuss either a paper or some software. The discussion is lead by a team member and the presentation is made public on [YouTube](https://www.youtube.com/@lcolladotor/playlists) while the discussion is kept private.
 * [10 min] **Data Science guidance sessions**: we talk about our sessions and provide internal feedback.
 * [20 min] **Help requests**: we give open the floor to discuss anything we need help on from the rest of the team. If you have a topic in mind, add it to the team meeting calendar.
 
@@ -31,7 +31,7 @@ We record that portion of our meeting and make it publicly available through [th
 
 <iframe width="560" height="315" src="https://www.youtube.com/embed/wuPLVfdZ92Q" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 
-You can also find the rest of them under the **team lcolladotor** YouTube playlist at [LeonardoColladoTorres/playlists](https://www.youtube.com/c/LeonardoColladoTorres/playlists).
+You can also find the rest of them under the **team lcolladotor** YouTube playlist at [lcolladotor/playlists](https://www.youtube.com/@lcolladotor/playlists).
 
 ### Notes
 
