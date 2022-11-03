@@ -57,6 +57,10 @@ To share code with us,
 
 ## Sign up
 
+<div id="hello" class="greeting message" style="color: red;">
+  <strong>Due to a strong deadline we have with a paper, Louise, Nick and Leo will provide a maximum of 2 DSgs sessions per week for the rest of 2022.</strong> Thank you for your comprehension and support!
+</div>
+
 If you are interested in a 25 minute Data Science guidance session, please sign up through the Calendly links below with a session with one of our guides. If this is the first time you are using this or might need more general guidance, sign up with Leo. 
 
 If you have a Zoom account, please add the Zoom details to the calendar invitation ^[If you are using Google Calendar, there is a Google Calendar Zoom integration. The Outlook version LIBD uses does not support the Zoom integration, so you'll have to add the information manually to the calendar invitation.]. 
