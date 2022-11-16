@@ -229,7 +229,7 @@ Once you have your JHPCE account, you will want to set up your laptop and JHPCE 
 
 Now that you have your JHPCE account and can access files, you'll want to get familiarized with many parts of JHPCE. You can see the archive of questions people have asked through [`bithelp`](https://lists.johnshopkins.edu/sympa/arc/bithelp) and/or the [`#jhpce`](https://jhu-genomics.slack.com/archives/C074W8800) channel.
 
-* [Environment modules](https://jhpce.jhu.edu/knowledge-base/environment-modules/) are useful so you don't have to install some common software from stratch, such as `R` which you can load using `module load conda_R`.
+* [Environment modules](https://jhpce.jhu.edu/knowledge-base/environment-modules/) are useful so you don't have to install some common software from scratch, such as `R` which you can load using `module load conda_R`.
 * Use LIBD modules which you can setup following [these instructions](https://github.com/LieberInstitute/jhpce_module_config#recurrent-usage). [jhpce_mod_source](https://github.com/LieberInstitute/jhpce_mod_source) and [jhpce_module_config](https://github.com/LieberInstitute/jhpce_module_config) are our GitHub repositories for our LIBD modules.
 * [Edit your bashrc file for a nicer terminal experience](http://research.libd.org/rstatsclub/post/edit-your-bashrc-file-for-a-nicer-terminal-experience/#.XXfJQ5NKi50) blog post. See the ["config files"](#config-files) page for the latest common configuration files we use.
 * `r BiocStyle::Githubpkg('LieberInstitute/sgejobs')` ([documentation](http://lieberinstitute.github.io/sgejobs)): contains helper functions for writing and interacting with SGE jobs at JHPCE.
