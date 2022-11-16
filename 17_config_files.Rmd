@@ -54,16 +54,21 @@ if (.Platform$OS.type != "windows") {
     )
 }
 remotes::install_github("gaborcsardi/prompt")
+remotes::install_cran(c(
+    "devtools",
+    "usethis"
+))
 
+## Laptop R profile packages (not needed at JHPCE)
 remotes::install_github(c(
     "gadenbuie/rsthemes"
 ))
 remotes::install_cran("suncalc")
 rsthemes::install_rsthemes(include_base16 = TRUE)
-remotes::install_cran(c(
-    "devtools",
-    "usethis"
-))
+remotes::install_github("gadenbuie/xaringanExtra")
+
+## JHPCE R profile packages
+remotes::install_github("cloudyr/rmote")
 
 ## Main packages
 BiocManager::install(c(
@@ -85,8 +90,9 @@ BiocManager::install(c(
 
 ## LIBD packages
 remotes::install_github(c(
+    "LieberInstitute/DeconvoBuddies",
     "LieberInstitute/jaffelab",
-    "LieberInstitute/recount.bwtool",
+    # "LieberInstitute/recount.bwtool", ## Not really used anymore
     "LieberInstitute/sgejobs",
     "LieberInstitute/shinycsv"
 ), dependencies = TRUE)
@@ -131,19 +137,21 @@ BiocManager::install(c(
 
 ## GitHub packages
 remotes::install_github(c(
-    "cloudyr/rmote",
-    "gadenbuie/xaringanExtra",
     "clauswilke/colorblindr",
     ## Install from GitHub due to https://github.com/immunogenomics/harmony/issues/145
     "immunogenomics/harmony", 
     "satijalab/azimuth"
 ))
  ## Related to https://github.com/gusevlab/fusion_twas/issues/14
-remotes::install_github("carbocation/plink2R/plink2R", ref = "carbocation-permit-r361")
+remotes::install_github(
+    "carbocation/plink2R/plink2R",
+    ref = "carbocation-permit-r361"
+)
 
 ## Packages I only install at JHPCE
-remotes::install_github("muschellij2/clusterRundown")
-remotes::install_github("cloudyr/rmote")
+remotes::install_github(c(
+    "muschellij2/clusterRundown"
+))
 ```
 
 #### Previously installed
@@ -158,6 +166,9 @@ installed_path <- ifelse(
     "C:/Users/fellg/Dropbox/Computing/R"
 )
 
+## At JHPCE I use:
+installed_path <- "~/R/update_R"
+
 installed <- dir(.libPaths())
 save(installed, file = file.path(installed_path, paste0(Sys.Date(), '-installed.Rdata')))
 ``` 
@@ -169,6 +180,8 @@ load(file.path(installed_path, previous[length(previous)]), verbose = TRUE)
 
 ## Locate current packages
 current <- dir(.libPaths())
+## Use the following at JHPCE:
+current <- dir(.libPaths()[1])
 
 ## Missing ones
 installed[!installed %in% current]
