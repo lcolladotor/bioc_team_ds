@@ -67,6 +67,12 @@ If you have a Zoom account, please add the Zoom details to the calendar invitati
 
 Finally, please sign up for a **maximum of two sessions per week**. This will help us keep the DSgs system fair for everyone to use. Thank you!
 
+
+* [Hédia Tnani](https://github.com/HediaTnani) ([BioC Support](https://support.bioconductor.org/u/56927/))
+  - Research interests: Bulk RNA-seq, scRNA-seq, building computational pipelines, .
+  - Technologies I use: R/Bioconductor, Python, GitHub, Nextflow.
+  - Learning about: Functional programming, deconvolution, package development, omics integration.
+  - [Calendly](https://calendly.com/hediatnani/25-min-data-science-guidance-session)
 * [Leonardo Collado-Torres](https://github.com/lcolladotor) ([BioC Support](https://support.bioconductor.org/u/6526/))
   - Research interests: RNA-seq, spatial transcriptomics, un-annotated transcriptome.
   - Technologies I use: R/Bioconductor, GitHub, SGE/JHPCE.
