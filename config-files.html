@@ -655,35 +655,40 @@ Do you want to use <a href="https://twitter.com/Bioconductor?ref_src=twsrc%5Etfw
 <span id="cb20-45"><a href="config-files.html#cb20-45" aria-hidden="true" tabindex="-1"></a><span class="fu">options</span>(<span class="st">&quot;biocthis.pkgdown&quot;</span> <span class="ot">=</span> <span class="cn">TRUE</span>)</span>
 <span id="cb20-46"><a href="config-files.html#cb20-46" aria-hidden="true" tabindex="-1"></a><span class="fu">options</span>(<span class="st">&quot;biocthis.testthat&quot;</span> <span class="ot">=</span> <span class="cn">TRUE</span>)</span>
 <span id="cb20-47"><a href="config-files.html#cb20-47" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb20-48"><a href="config-files.html#cb20-48" aria-hidden="true" tabindex="-1"></a><span class="do">## From https://www.garrickadenbuie.com/project/rsthemes/</span></span>
-<span id="cb20-49"><a href="config-files.html#cb20-49" aria-hidden="true" tabindex="-1"></a><span class="cf">if</span> (<span class="fu">interactive</span>() <span class="sc">&amp;&amp;</span> <span class="fu">requireNamespace</span>(<span class="st">&quot;rsthemes&quot;</span>, <span class="at">quietly =</span> <span class="cn">TRUE</span>)) {</span>
-<span id="cb20-50"><a href="config-files.html#cb20-50" aria-hidden="true" tabindex="-1"></a>    <span class="co"># Set preferred themes if not handled elsewhere..</span></span>
-<span id="cb20-51"><a href="config-files.html#cb20-51" aria-hidden="true" tabindex="-1"></a>    rsthemes<span class="sc">::</span><span class="fu">set_theme_light</span>(<span class="st">&quot;base16 Monokai {rsthemes}&quot;</span>)  <span class="co"># light theme</span></span>
-<span id="cb20-52"><a href="config-files.html#cb20-52" aria-hidden="true" tabindex="-1"></a>    rsthemes<span class="sc">::</span><span class="fu">set_theme_dark</span>(<span class="st">&quot;base16 Pop {rsthemes}&quot;</span>) <span class="co"># dark theme</span></span>
-<span id="cb20-53"><a href="config-files.html#cb20-53" aria-hidden="true" tabindex="-1"></a>    rsthemes<span class="sc">::</span><span class="fu">set_theme_favorite</span>(<span class="fu">c</span>(</span>
-<span id="cb20-54"><a href="config-files.html#cb20-54" aria-hidden="true" tabindex="-1"></a>        <span class="st">&quot;base16 Monokai {rsthemes}&quot;</span>,</span>
-<span id="cb20-55"><a href="config-files.html#cb20-55" aria-hidden="true" tabindex="-1"></a>        <span class="st">&quot;base16 Pop {rsthemes}&quot;</span>,</span>
-<span id="cb20-56"><a href="config-files.html#cb20-56" aria-hidden="true" tabindex="-1"></a>        <span class="st">&quot;base16 Brewer {rsthemes}&quot;</span>,</span>
-<span id="cb20-57"><a href="config-files.html#cb20-57" aria-hidden="true" tabindex="-1"></a>        <span class="st">&quot;One Dark {rsthemes}&quot;</span>,</span>
-<span id="cb20-58"><a href="config-files.html#cb20-58" aria-hidden="true" tabindex="-1"></a>        <span class="st">&quot;Solarized Light {rsthemes}&quot;</span></span>
-<span id="cb20-59"><a href="config-files.html#cb20-59" aria-hidden="true" tabindex="-1"></a>    ))</span>
-<span id="cb20-60"><a href="config-files.html#cb20-60" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb20-61"><a href="config-files.html#cb20-61" aria-hidden="true" tabindex="-1"></a>    <span class="co"># Whenever the R session restarts inside RStudio...</span></span>
-<span id="cb20-62"><a href="config-files.html#cb20-62" aria-hidden="true" tabindex="-1"></a>    <span class="fu">setHook</span>(<span class="st">&quot;rstudio.sessionInit&quot;</span>, <span class="cf">function</span>(isNewSession) {</span>
-<span id="cb20-63"><a href="config-files.html#cb20-63" aria-hidden="true" tabindex="-1"></a>        <span class="co"># Automatically choose the correct theme based on time of day</span></span>
-<span id="cb20-64"><a href="config-files.html#cb20-64" aria-hidden="true" tabindex="-1"></a>        <span class="do">## Used rsthemes::geolocate() once</span></span>
-<span id="cb20-65"><a href="config-files.html#cb20-65" aria-hidden="true" tabindex="-1"></a>        rsthemes<span class="sc">::</span><span class="fu">use_theme_auto</span>(<span class="at">lat =</span> <span class="fl">39.2891</span>, <span class="at">lon =</span> <span class="sc">-</span><span class="fl">76.5583</span>)</span>
-<span id="cb20-66"><a href="config-files.html#cb20-66" aria-hidden="true" tabindex="-1"></a>    }, <span class="at">action =</span> <span class="st">&quot;append&quot;</span>)</span>
-<span id="cb20-67"><a href="config-files.html#cb20-67" aria-hidden="true" tabindex="-1"></a>}</span>
-<span id="cb20-68"><a href="config-files.html#cb20-68" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb20-69"><a href="config-files.html#cb20-69" aria-hidden="true" tabindex="-1"></a><span class="do">## From https://twitter.com/hadleywickham/status/1113542388033699840</span></span>
-<span id="cb20-70"><a href="config-files.html#cb20-70" aria-hidden="true" tabindex="-1"></a><span class="cf">if</span>(<span class="fu">interactive</span>()) {</span>
-<span id="cb20-71"><a href="config-files.html#cb20-71" aria-hidden="true" tabindex="-1"></a>    <span class="cf">if</span> (<span class="sc">!</span><span class="fu">requireNamespace</span>(<span class="st">&quot;prompt&quot;</span>, <span class="at">quietly =</span> <span class="cn">TRUE</span>)) {</span>
-<span id="cb20-72"><a href="config-files.html#cb20-72" aria-hidden="true" tabindex="-1"></a>        <span class="fu">cat</span>(<span class="st">&#39;To install prompt use: remotes::install_github(&quot;gaborcsardi/prompt&quot;)</span><span class="sc">\n</span><span class="st">&#39;</span>)</span>
-<span id="cb20-73"><a href="config-files.html#cb20-73" aria-hidden="true" tabindex="-1"></a>    } <span class="cf">else</span> {</span>
-<span id="cb20-74"><a href="config-files.html#cb20-74" aria-hidden="true" tabindex="-1"></a>        prompt<span class="sc">::</span><span class="fu">set_prompt</span>(prompt<span class="sc">::</span>prompt_git)</span>
-<span id="cb20-75"><a href="config-files.html#cb20-75" aria-hidden="true" tabindex="-1"></a>    }</span>
-<span id="cb20-76"><a href="config-files.html#cb20-76" aria-hidden="true" tabindex="-1"></a>}</span></code></pre></div>
+<span id="cb20-48"><a href="config-files.html#cb20-48" aria-hidden="true" tabindex="-1"></a><span class="do">## For the styler addin</span></span>
+<span id="cb20-49"><a href="config-files.html#cb20-49" aria-hidden="true" tabindex="-1"></a><span class="co"># Affects the output of: styler:::get_addins_style_transformer_name()</span></span>
+<span id="cb20-50"><a href="config-files.html#cb20-50" aria-hidden="true" tabindex="-1"></a><span class="co"># https://github.com/r-lib/styler/blob/acfb42acc2e558e7b57ef133f1470df78b5093fd/R/addins.R#L183</span></span>
+<span id="cb20-51"><a href="config-files.html#cb20-51" aria-hidden="true" tabindex="-1"></a><span class="fu">options</span>(<span class="st">&quot;styler.addins_style_transformer&quot;</span> <span class="ot">=</span> <span class="st">&quot;biocthis::bioc_style()&quot;</span>)</span>
+<span id="cb20-52"><a href="config-files.html#cb20-52" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb20-53"><a href="config-files.html#cb20-53" aria-hidden="true" tabindex="-1"></a><span class="do">## From https://www.garrickadenbuie.com/project/rsthemes/</span></span>
+<span id="cb20-54"><a href="config-files.html#cb20-54" aria-hidden="true" tabindex="-1"></a><span class="cf">if</span> (<span class="fu">interactive</span>() <span class="sc">&amp;&amp;</span> <span class="fu">requireNamespace</span>(<span class="st">&quot;rsthemes&quot;</span>, <span class="at">quietly =</span> <span class="cn">TRUE</span>)) {</span>
+<span id="cb20-55"><a href="config-files.html#cb20-55" aria-hidden="true" tabindex="-1"></a>    <span class="co"># Set preferred themes if not handled elsewhere..</span></span>
+<span id="cb20-56"><a href="config-files.html#cb20-56" aria-hidden="true" tabindex="-1"></a>    rsthemes<span class="sc">::</span><span class="fu">set_theme_light</span>(<span class="st">&quot;base16 Monokai {rsthemes}&quot;</span>)  <span class="co"># light theme</span></span>
+<span id="cb20-57"><a href="config-files.html#cb20-57" aria-hidden="true" tabindex="-1"></a>    rsthemes<span class="sc">::</span><span class="fu">set_theme_dark</span>(<span class="st">&quot;base16 Pop {rsthemes}&quot;</span>) <span class="co"># dark theme</span></span>
+<span id="cb20-58"><a href="config-files.html#cb20-58" aria-hidden="true" tabindex="-1"></a>    rsthemes<span class="sc">::</span><span class="fu">set_theme_favorite</span>(<span class="fu">c</span>(</span>
+<span id="cb20-59"><a href="config-files.html#cb20-59" aria-hidden="true" tabindex="-1"></a>        <span class="st">&quot;base16 Monokai {rsthemes}&quot;</span>,</span>
+<span id="cb20-60"><a href="config-files.html#cb20-60" aria-hidden="true" tabindex="-1"></a>        <span class="st">&quot;base16 Pop {rsthemes}&quot;</span>,</span>
+<span id="cb20-61"><a href="config-files.html#cb20-61" aria-hidden="true" tabindex="-1"></a>        <span class="st">&quot;base16 Brewer {rsthemes}&quot;</span>,</span>
+<span id="cb20-62"><a href="config-files.html#cb20-62" aria-hidden="true" tabindex="-1"></a>        <span class="st">&quot;One Dark {rsthemes}&quot;</span>,</span>
+<span id="cb20-63"><a href="config-files.html#cb20-63" aria-hidden="true" tabindex="-1"></a>        <span class="st">&quot;Solarized Light {rsthemes}&quot;</span></span>
+<span id="cb20-64"><a href="config-files.html#cb20-64" aria-hidden="true" tabindex="-1"></a>    ))</span>
+<span id="cb20-65"><a href="config-files.html#cb20-65" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb20-66"><a href="config-files.html#cb20-66" aria-hidden="true" tabindex="-1"></a>    <span class="co"># Whenever the R session restarts inside RStudio...</span></span>
+<span id="cb20-67"><a href="config-files.html#cb20-67" aria-hidden="true" tabindex="-1"></a>    <span class="fu">setHook</span>(<span class="st">&quot;rstudio.sessionInit&quot;</span>, <span class="cf">function</span>(isNewSession) {</span>
+<span id="cb20-68"><a href="config-files.html#cb20-68" aria-hidden="true" tabindex="-1"></a>        <span class="co"># Automatically choose the correct theme based on time of day</span></span>
+<span id="cb20-69"><a href="config-files.html#cb20-69" aria-hidden="true" tabindex="-1"></a>        <span class="do">## Used rsthemes::geolocate() once</span></span>
+<span id="cb20-70"><a href="config-files.html#cb20-70" aria-hidden="true" tabindex="-1"></a>        rsthemes<span class="sc">::</span><span class="fu">use_theme_auto</span>(<span class="at">lat =</span> <span class="fl">39.2891</span>, <span class="at">lon =</span> <span class="sc">-</span><span class="fl">76.5583</span>)</span>
+<span id="cb20-71"><a href="config-files.html#cb20-71" aria-hidden="true" tabindex="-1"></a>    }, <span class="at">action =</span> <span class="st">&quot;append&quot;</span>)</span>
+<span id="cb20-72"><a href="config-files.html#cb20-72" aria-hidden="true" tabindex="-1"></a>}</span>
+<span id="cb20-73"><a href="config-files.html#cb20-73" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb20-74"><a href="config-files.html#cb20-74" aria-hidden="true" tabindex="-1"></a><span class="do">## From https://twitter.com/hadleywickham/status/1113542388033699840</span></span>
+<span id="cb20-75"><a href="config-files.html#cb20-75" aria-hidden="true" tabindex="-1"></a><span class="cf">if</span>(<span class="fu">interactive</span>()) {</span>
+<span id="cb20-76"><a href="config-files.html#cb20-76" aria-hidden="true" tabindex="-1"></a>    <span class="cf">if</span> (<span class="sc">!</span><span class="fu">requireNamespace</span>(<span class="st">&quot;prompt&quot;</span>, <span class="at">quietly =</span> <span class="cn">TRUE</span>)) {</span>
+<span id="cb20-77"><a href="config-files.html#cb20-77" aria-hidden="true" tabindex="-1"></a>        <span class="fu">cat</span>(<span class="st">&#39;To install prompt use: remotes::install_github(&quot;gaborcsardi/prompt&quot;)</span><span class="sc">\n</span><span class="st">&#39;</span>)</span>
+<span id="cb20-78"><a href="config-files.html#cb20-78" aria-hidden="true" tabindex="-1"></a>    } <span class="cf">else</span> {</span>
+<span id="cb20-79"><a href="config-files.html#cb20-79" aria-hidden="true" tabindex="-1"></a>        prompt<span class="sc">::</span><span class="fu">set_prompt</span>(prompt<span class="sc">::</span>prompt_git)</span>
+<span id="cb20-80"><a href="config-files.html#cb20-80" aria-hidden="true" tabindex="-1"></a>    }</span>
+<span id="cb20-81"><a href="config-files.html#cb20-81" aria-hidden="true" tabindex="-1"></a>}</span></code></pre></div>
 </div>
 <div id="renviron" class="section level3 hasAnchor" number="17.2.2">
 <h3><span class="header-section-number">17.2.2</span> <code>~/.Renviron</code><a href="config-files.html#renviron" class="anchor-section" aria-label="Anchor link to header"></a></h3>
