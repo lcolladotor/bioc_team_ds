@@ -256,6 +256,11 @@ options(
 options("biocthis.pkgdown" = TRUE)
 options("biocthis.testthat" = TRUE)
 
+## For the styler addin
+# Affects the output of: styler:::get_addins_style_transformer_name()
+# https://github.com/r-lib/styler/blob/acfb42acc2e558e7b57ef133f1470df78b5093fd/R/addins.R#L183
+options("styler.addins_style_transformer" = "biocthis::bioc_style()")
+
 ## From https://www.garrickadenbuie.com/project/rsthemes/
 if (interactive() && requireNamespace("rsthemes", quietly = TRUE)) {
     # Set preferred themes if not handled elsewhere..
