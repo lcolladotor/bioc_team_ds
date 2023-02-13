@@ -58,6 +58,7 @@ We follow the LIBD conduct policies as well the [Bioconductor code of conduct](h
 ## Team members {-}
 
 * [Daianna González](https://github.com/daianna21)
+* [Renee Garcia-Flores] (https://github.com/reneegf)
 * [Louise A. Huuki-Myers](https://github.com/lahuuki)
 * [Nicholas J. Eagles](https://github.com/Nick-Eagles)
 
