@@ -64,7 +64,7 @@ If you have a Zoom account, please add the Zoom details to the calendar invitati
 Finally, please sign up for a **maximum of two sessions per week**. This will help us keep the DSgs system fair for everyone to use. Thank you!
 
 <div id="hello" class="greeting message" style="color: red;">
-  <strong>Guides are show in order of their availability (most to least).</strong> Please try reaching out to multiple people instead of one person for all your questions. Thank you!
+  <strong>Guides are shown in order of their availability (most to least).</strong> Please try reaching out to multiple people instead of one person for all your questions. Thank you!
 </div>
 
 * [Cynthia Soto Cardinault](https://github.com/cyntsc) ([BioC Support](TBD))
