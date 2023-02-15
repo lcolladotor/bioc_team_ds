@@ -57,43 +57,46 @@ To share code with us,
 
 ## Sign up
 
-<div id="hello" class="greeting message" style="color: red;">
-  <strong>Due to a strong deadline we have with a paper, Louise, Nick and Leo will provide a maximum of 2 DSgs sessions per week for the rest of 2022.</strong> Thank you for your comprehension and support!
-</div>
-
 If you are interested in a 25 minute Data Science guidance session, please sign up through the Calendly links below with a session with one of our guides. If this is the first time you are using this or might need more general guidance, sign up with Leo. 
 
 If you have a Zoom account, please add the Zoom details to the calendar invitation ^[If you are using Google Calendar, there is a Google Calendar Zoom integration. The Outlook version LIBD uses does not support the Zoom integration, so you'll have to add the information manually to the calendar invitation.]. 
 
 Finally, please sign up for a **maximum of two sessions per week**. This will help us keep the DSgs system fair for everyone to use. Thank you!
 
+<div id="hello" class="greeting message" style="color: red;">
+  <strong>Guides are show in order of their availability (most to least).</strong> Please try reaching out to multiple people instead of one person for all your questions. Thank you!
+</div>
 
+* [Cynthia Soto Cardinault](https://github.com/cyntsc) ([BioC Support](TBD))
+  - Research interests: TBD.
+  - Technologies I use: TBD.
+  - Learning about: TBD.
+  - [Calendly](https://calendly.com/hediatnani/25-min-data-science-guidance-session)
 * [Hédia Tnani](https://github.com/HediaTnani) ([BioC Support](https://support.bioconductor.org/u/56927/))
-  - Research interests: Bulk RNA-seq, scRNA-seq, building computational pipelines, .
+  - Research interests: Bulk RNA-seq, scRNA-seq, building computational pipelines.
   - Technologies I use: R/Bioconductor, Python, GitHub, Nextflow.
   - Learning about: Functional programming, deconvolution, package development, omics integration.
   - [Calendly](https://calendly.com/hediatnani/25-min-data-science-guidance-session)
-* [Leonardo Collado-Torres](https://github.com/lcolladotor) ([BioC Support](https://support.bioconductor.org/u/6526/))
-  - Research interests: RNA-seq, spatial transcriptomics, un-annotated transcriptome.
-  - Technologies I use: R/Bioconductor, GitHub, SGE/JHPCE.
-  - Learning about: team management, spatial transcriptomics.
-  - [Calendly](https://calendly.com/lcolladotor/ds-guidance)
-* [Louise A. Huuki-Myers](https://github.com/lahuuki) ([BioC Support](https://support.bioconductor.org/u/24238/))
-  - Research interests: RNA-seq, data visualization.
-  - Technologies I use: R (tidyverse, ggplot, dplyr), Python, GitHub, Synapse upload.
-  - Learning about: Bioconductor.
-  - [Calendly](https://calendly.com/lahuuki/25-min-data-science-guidance-session)
-* [Nicholas J. Eagles](https://github.com/Nick-Eagles) ([BioC Support](https://support.bioconductor.org/u/24264/))
-  - Research interests: RNA-seq, whole-genome bisulfite sequencing (WGBS), building computational pipelines.
-  - Technologies I use: R/Bioconductor, GitHub, Nextflow.
-  - Learning about: data visualization, deep learning.
-  - [Calendly](https://calendly.com/nick-eagles/25-minute-data-science-guidance-session)
 * [Madhavi Tippani](https://github.com/madhavitippani) ([BioC Support](https://support.bioconductor.org/u/24319/))
   - Research interests: spatial transcriptomics, calcium imaging, RNAscope, medical image processing.
   - Technologies I use: Matlab, R, GitHub, SGE/JHPCE.
   - Learning about: Machine Learning, spatial transcriptomics, statistical analysis.
   - [Calendly](https://calendly.com/madhavitippani/25-minute-data-science-guidance-session)
-
+* [Nicholas J. Eagles](https://github.com/Nick-Eagles) ([BioC Support](https://support.bioconductor.org/u/24264/))
+  - Research interests: RNA-seq, whole-genome bisulfite sequencing (WGBS), building computational pipelines.
+  - Technologies I use: R/Bioconductor, GitHub, Nextflow.
+  - Learning about: data visualization, deep learning.
+  - [Calendly](https://calendly.com/nick-eagles/25-minute-data-science-guidance-session)
+* [Louise A. Huuki-Myers](https://github.com/lahuuki) ([BioC Support](https://support.bioconductor.org/u/24238/))
+  - Research interests: RNA-seq, data visualization.
+  - Technologies I use: R (tidyverse, ggplot, dplyr), Python, GitHub, Synapse upload.
+  - Learning about: Bioconductor.
+  - [Calendly](https://calendly.com/lahuuki/25-min-data-science-guidance-session)
+* [Leonardo Collado-Torres](https://github.com/lcolladotor) ([BioC Support](https://support.bioconductor.org/u/6526/))
+  - Research interests: RNA-seq, spatial transcriptomics, un-annotated transcriptome, deconvolution.
+  - Technologies I use: R/Bioconductor, GitHub, SGE/JHPCE.
+  - Learning about: team management, multi-omics.
+  - [Calendly](https://calendly.com/lcolladotor/ds-guidance)
 
 ## DSgs session reports
 
