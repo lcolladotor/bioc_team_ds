@@ -8,6 +8,7 @@ bash-and-linux
 r
 python
 team-communication
+zoom
 github
 slack
 team-calendar
