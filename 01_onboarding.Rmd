@@ -125,6 +125,10 @@ We use `R` quite a bit, and that's actually how this website was made. Here are 
 
 Overall, it's important to ask for help. We try to follow the advice from the [you must try, and then you must ask](https://blogs.akamai.com/2013/10/you-must-try-and-then-you-must-ask.html) blog post. Also try to ask in a Slack channel where others might be able to benefit from your answers in the future. If enough people ask about something, we'll try to write a blog post as [advised here](http://varianceexplained.org/r/start-blog/) by [David Robinson](https://twitter.com/drob). For more details, see the [**"how to ask for help"**](how-to-ask-for-help) page.
 
+### Zoom
+
+When on a team meeting Zoom call and most importantly, on one on one meetings, please have your camera on. Otherwise it feels like you are talking to the void. There are of course good reasons to turn off your camera, like if your internet connection is slow and you are presenting. Turning your camera on also incentives you to pay closer attention. Thank you!
+
 ### GitHub
 
 * [LieberInstitute](https://github.com/LieberInstitute/) is our GitHub organization account. After you've made your GitHub account let your PI, [Bill Ulrich](https://www.libd.org/team/Bill-Ulrich/) or Leonardo Collado-Torres know about your username through Slack so they can add you to the relevant [teams](https://github.com/orgs/LieberInstitute/teams).
