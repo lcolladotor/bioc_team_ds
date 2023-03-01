@@ -83,14 +83,14 @@ Finally, please sign up for a **maximum of two sessions per week**. This will he
   - Learning about: Machine Learning, spatial transcriptomics, statistical analysis.
   - [Calendly](https://calendly.com/madhavitippani/25-minute-data-science-guidance-session)
 * [Nicholas J. Eagles](https://github.com/Nick-Eagles) ([BioC Support](https://support.bioconductor.org/u/24264/))
-  - Research interests: RNA-seq, whole-genome bisulfite sequencing (WGBS), building computational pipelines.
-  - Technologies I use: R/Bioconductor, GitHub, Nextflow.
+  - Research interests: bulk/single-cell RNA-seq, spatial transcriptomics, building computational pipelines.
+  - Technologies I use: R/Bioconductor, Git, Nextflow, python.
   - Learning about: data visualization, deep learning.
   - [Calendly](https://calendly.com/nick-eagles/25-minute-data-science-guidance-session)
 * [Louise A. Huuki-Myers](https://github.com/lahuuki) ([BioC Support](https://support.bioconductor.org/u/24238/))
   - Research interests: bulk and single cell RNA-seq, spatial transcriptomics, RNA scope data, DEGs, data visualization.
   - Technologies I use: R (tidyverse, ggplot, dplyr), Python, GitHub, Synapse upload.
-  - Learning about: Bioconductor Pacakge deveopment.
+  - Learning about: Bioconductor Package development.
   - [Calendly](https://calendly.com/lahuuki/25-min-data-science-guidance-session)
 * [Leonardo Collado-Torres](https://github.com/lcolladotor) ([BioC Support](https://support.bioconductor.org/u/6526/))
   - Research interests: RNA-seq, spatial transcriptomics, un-annotated transcriptome, deconvolution.
