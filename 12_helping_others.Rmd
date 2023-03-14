@@ -127,7 +127,7 @@ We need a short description of who you are and what type of questions you are in
 
 ## Bioconductor Support: practice grounds
 
-We use [Bioconductor](http://bioconductor.org/) R packages basically every day for our work and the main venue for asking for help related to Bioconductor is the [Bioconductor Support website](#bioconductor-support-website) as mentioned in a previous chapter. A great way to learn is by helping others. So, [DSgs-guides](#dsgs-guide-team-members) should try to help one person per week on the Bioconductor Support website. By doing so, they'll learn more about Bioconductor, practice helping others, and also learn what information helpers need. Then, the next time the guides ask questions themselves, they'll know what information they need to provide in order to help others help them. 
+We use [Bioconductor](http://bioconductor.org/) R packages basically every day for our work and the main venue for asking for help related to Bioconductor is the [Bioconductor Support website](https://support.bioconductor.org/) as mentioned in a previous chapter. A great way to learn is by helping others. So, [DSgs-guides](#dsgs-guide-team-members) should try to help one person per week on the Bioconductor Support website. By doing so, they'll learn more about Bioconductor, practice helping others, and also learn what information helpers need. Then, the next time the guides ask questions themselves, they'll know what information they need to provide in order to help others help them. 
 
 ### Steps to follow
 
