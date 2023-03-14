@@ -57,6 +57,7 @@ We follow the LIBD conduct policies as well the [Bioconductor code of conduct](h
 
 ## Team members {-}
 
+* [Cynthia S Cardinault](https://github.com/cyntsc)
 * [Daianna González](https://github.com/daianna21)
 * [Hédia Tnani](https://github.com/HediaTnani)
 * [Louise A. Huuki-Myers](https://github.com/lahuuki)
@@ -91,6 +92,7 @@ If we don't have any open positions, please reach out to Leonardo with your CV, 
 
 You can find us on Twitter through the [LIBD rstats club account](https://twitter.com/LIBDrstats) and our own accounts where we share our work.
 
+* [Cynthia S Cardinault](https://twitter.com/cynthiasotocar)
 * [Daianna González](https://twitter.com/Daianna27635327)
 * [Hédia Tnani](https://twitter.com/TnaniHedia)
 * [Leonardo Collado Torres](https://twitter.com/lcolladotor)
