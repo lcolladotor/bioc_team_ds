@@ -64,11 +64,19 @@ On Mondays at 10:30 am everyone meets with Leo sequentially for 30 min to discus
 
 Here's the list of project meetings and who should attend them:
 
-* recount3: Nick, Leo. Optional: Geo.
-* Moods: Louise, Leo.
-* spatial team meeting: Louise, Nick, Leo.
-* deconvolution: Louise, Nick, Leo. Optional: Hédia.
-* habenula: Bukola, Louise, Leo.
-* CHESS-BRAIN: Geo, Hédia, Leo.
-* LIBD rstats club: everyone.
-* team meeting: everyone.
+* Tuesday
+  * Moods: Louise, Leo.
+    * Optional: Geo.
+  * Habenula + multi-ome + Fentanyl: Bukola, Cynthia, Daianna, Louise, Renee, Leo.
+    * Optional: Hédia, Nick.
+* Wednesday
+  * team meeting: everyone.
+* Thursday:
+  * spatial team meeting: Louise, Nick, Leo.
+  * deconvolution: Louise, Leo.
+  * NAc spatial: Nick, Leo.
+* Friday
+  * LIBD rstats club: everyone.
+* Unassigned
+  * CHESS-BRAIN: Geo, Hédia, Leo.
+
