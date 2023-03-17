@@ -67,8 +67,8 @@ Here's the list of project meetings and who should attend them:
 * Tuesday
   * Moods: Louise, Leo.
     * Optional: Geo.
-  * Habenula + multi-ome + Fentanyl: Bukola, Cynthia, Daianna, Louise, Renee, Leo.
-    * Optional: Hédia, Nick.
+  * Habenula + multi-ome + Fentanyl: Bukola, Cynthia, Daianna, Renee, Leo.
+    * Optional: Hédia, Louise, Nick.
 * Wednesday
   * team meeting: everyone.
 * Thursday:
