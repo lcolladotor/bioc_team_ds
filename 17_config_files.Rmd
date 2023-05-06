@@ -100,8 +100,10 @@ remotes::install_github(c(
 ## CRAN packages
 remotes::install_cran(c(
     "ari",
+    "available",
     "bookdown",
     "blogdown",
+    "clisymnbols",
     "clue",
     "corrplot",
     "getopt",
@@ -112,6 +114,7 @@ remotes::install_cran(c(
     "MatrixEQTL",
     "pagedown",
     "patchwork",
+    "Polychrome",
     "postcards",
     "reprex",
     "rsconnect",
@@ -127,6 +130,7 @@ remotes::install_cran(c(
 BiocManager::install(c(
     "BiocCheck",
     "ComplexHeatmap",
+    "DO.db",
     "ExploreModelMatrix",
     "iSEE",
     "scater",
