@@ -511,58 +511,62 @@ Do you want to use <a href="https://twitter.com/Bioconductor?ref_src=twsrc%5Etfw
 <span id="cb17-57"><a href="config-files.html#cb17-57" aria-hidden="true" tabindex="-1"></a><span class="do">## CRAN packages</span></span>
 <span id="cb17-58"><a href="config-files.html#cb17-58" aria-hidden="true" tabindex="-1"></a>remotes<span class="sc">::</span><span class="fu">install_cran</span>(<span class="fu">c</span>(</span>
 <span id="cb17-59"><a href="config-files.html#cb17-59" aria-hidden="true" tabindex="-1"></a>    <span class="st">&quot;ari&quot;</span>,</span>
-<span id="cb17-60"><a href="config-files.html#cb17-60" aria-hidden="true" tabindex="-1"></a>    <span class="st">&quot;bookdown&quot;</span>,</span>
-<span id="cb17-61"><a href="config-files.html#cb17-61" aria-hidden="true" tabindex="-1"></a>    <span class="st">&quot;blogdown&quot;</span>,</span>
-<span id="cb17-62"><a href="config-files.html#cb17-62" aria-hidden="true" tabindex="-1"></a>    <span class="st">&quot;clue&quot;</span>,</span>
-<span id="cb17-63"><a href="config-files.html#cb17-63" aria-hidden="true" tabindex="-1"></a>    <span class="st">&quot;corrplot&quot;</span>,</span>
-<span id="cb17-64"><a href="config-files.html#cb17-64" aria-hidden="true" tabindex="-1"></a>    <span class="st">&quot;getopt&quot;</span>,</span>
-<span id="cb17-65"><a href="config-files.html#cb17-65" aria-hidden="true" tabindex="-1"></a>    <span class="st">&quot;ggpubr&quot;</span>,</span>
-<span id="cb17-66"><a href="config-files.html#cb17-66" aria-hidden="true" tabindex="-1"></a>    <span class="st">&quot;ggrepel&quot;</span>,</span>
-<span id="cb17-67"><a href="config-files.html#cb17-67" aria-hidden="true" tabindex="-1"></a>    <span class="st">&quot;ggthemes&quot;</span>,</span>
-<span id="cb17-68"><a href="config-files.html#cb17-68" aria-hidden="true" tabindex="-1"></a>    <span class="st">&quot;googlesheets4&quot;</span>,</span>
-<span id="cb17-69"><a href="config-files.html#cb17-69" aria-hidden="true" tabindex="-1"></a>    <span class="st">&quot;MatrixEQTL&quot;</span>,</span>
-<span id="cb17-70"><a href="config-files.html#cb17-70" aria-hidden="true" tabindex="-1"></a>    <span class="st">&quot;pagedown&quot;</span>,</span>
-<span id="cb17-71"><a href="config-files.html#cb17-71" aria-hidden="true" tabindex="-1"></a>    <span class="st">&quot;patchwork&quot;</span>,</span>
-<span id="cb17-72"><a href="config-files.html#cb17-72" aria-hidden="true" tabindex="-1"></a>    <span class="st">&quot;postcards&quot;</span>,</span>
-<span id="cb17-73"><a href="config-files.html#cb17-73" aria-hidden="true" tabindex="-1"></a>    <span class="st">&quot;reprex&quot;</span>,</span>
-<span id="cb17-74"><a href="config-files.html#cb17-74" aria-hidden="true" tabindex="-1"></a>    <span class="st">&quot;rsconnect&quot;</span>,</span>
-<span id="cb17-75"><a href="config-files.html#cb17-75" aria-hidden="true" tabindex="-1"></a>    <span class="st">&quot;rtweet&quot;</span>,</span>
-<span id="cb17-76"><a href="config-files.html#cb17-76" aria-hidden="true" tabindex="-1"></a>    <span class="st">&quot;tidyverse&quot;</span>,</span>
-<span id="cb17-77"><a href="config-files.html#cb17-77" aria-hidden="true" tabindex="-1"></a>    <span class="st">&quot;xaringan&quot;</span>,</span>
-<span id="cb17-78"><a href="config-files.html#cb17-78" aria-hidden="true" tabindex="-1"></a>    <span class="st">&quot;xaringanthemer&quot;</span>,</span>
-<span id="cb17-79"><a href="config-files.html#cb17-79" aria-hidden="true" tabindex="-1"></a>    <span class="st">&quot;UpSetR&quot;</span>,</span>
-<span id="cb17-80"><a href="config-files.html#cb17-80" aria-hidden="true" tabindex="-1"></a>    <span class="st">&quot;VennDiagram&quot;</span></span>
-<span id="cb17-81"><a href="config-files.html#cb17-81" aria-hidden="true" tabindex="-1"></a>))</span>
-<span id="cb17-82"><a href="config-files.html#cb17-82" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb17-83"><a href="config-files.html#cb17-83" aria-hidden="true" tabindex="-1"></a><span class="do">## Bioc packages</span></span>
-<span id="cb17-84"><a href="config-files.html#cb17-84" aria-hidden="true" tabindex="-1"></a>BiocManager<span class="sc">::</span><span class="fu">install</span>(<span class="fu">c</span>(</span>
-<span id="cb17-85"><a href="config-files.html#cb17-85" aria-hidden="true" tabindex="-1"></a>    <span class="st">&quot;BiocCheck&quot;</span>,</span>
-<span id="cb17-86"><a href="config-files.html#cb17-86" aria-hidden="true" tabindex="-1"></a>    <span class="st">&quot;ComplexHeatmap&quot;</span>,</span>
-<span id="cb17-87"><a href="config-files.html#cb17-87" aria-hidden="true" tabindex="-1"></a>    <span class="st">&quot;ExploreModelMatrix&quot;</span>,</span>
-<span id="cb17-88"><a href="config-files.html#cb17-88" aria-hidden="true" tabindex="-1"></a>    <span class="st">&quot;iSEE&quot;</span>,</span>
-<span id="cb17-89"><a href="config-files.html#cb17-89" aria-hidden="true" tabindex="-1"></a>    <span class="st">&quot;scater&quot;</span>,</span>
-<span id="cb17-90"><a href="config-files.html#cb17-90" aria-hidden="true" tabindex="-1"></a>    <span class="st">&quot;scran&quot;</span>,</span>
-<span id="cb17-91"><a href="config-files.html#cb17-91" aria-hidden="true" tabindex="-1"></a>    <span class="st">&quot;sva&quot;</span>,</span>
-<span id="cb17-92"><a href="config-files.html#cb17-92" aria-hidden="true" tabindex="-1"></a>    <span class="st">&quot;variancePartition&quot;</span></span>
-<span id="cb17-93"><a href="config-files.html#cb17-93" aria-hidden="true" tabindex="-1"></a>), <span class="at">update =</span> <span class="cn">FALSE</span>)</span>
-<span id="cb17-94"><a href="config-files.html#cb17-94" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb17-95"><a href="config-files.html#cb17-95" aria-hidden="true" tabindex="-1"></a><span class="do">## GitHub packages</span></span>
-<span id="cb17-96"><a href="config-files.html#cb17-96" aria-hidden="true" tabindex="-1"></a>remotes<span class="sc">::</span><span class="fu">install_github</span>(<span class="fu">c</span>(</span>
-<span id="cb17-97"><a href="config-files.html#cb17-97" aria-hidden="true" tabindex="-1"></a>    <span class="st">&quot;clauswilke/colorblindr&quot;</span>,</span>
-<span id="cb17-98"><a href="config-files.html#cb17-98" aria-hidden="true" tabindex="-1"></a>    <span class="do">## Install from GitHub due to https://github.com/immunogenomics/harmony/issues/145</span></span>
-<span id="cb17-99"><a href="config-files.html#cb17-99" aria-hidden="true" tabindex="-1"></a>    <span class="st">&quot;immunogenomics/harmony&quot;</span>, </span>
-<span id="cb17-100"><a href="config-files.html#cb17-100" aria-hidden="true" tabindex="-1"></a>    <span class="st">&quot;satijalab/azimuth&quot;</span></span>
-<span id="cb17-101"><a href="config-files.html#cb17-101" aria-hidden="true" tabindex="-1"></a>))</span>
-<span id="cb17-102"><a href="config-files.html#cb17-102" aria-hidden="true" tabindex="-1"></a> <span class="do">## Related to https://github.com/gusevlab/fusion_twas/issues/14</span></span>
-<span id="cb17-103"><a href="config-files.html#cb17-103" aria-hidden="true" tabindex="-1"></a>remotes<span class="sc">::</span><span class="fu">install_github</span>(</span>
-<span id="cb17-104"><a href="config-files.html#cb17-104" aria-hidden="true" tabindex="-1"></a>    <span class="st">&quot;carbocation/plink2R/plink2R&quot;</span>,</span>
-<span id="cb17-105"><a href="config-files.html#cb17-105" aria-hidden="true" tabindex="-1"></a>    <span class="at">ref =</span> <span class="st">&quot;carbocation-permit-r361&quot;</span></span>
-<span id="cb17-106"><a href="config-files.html#cb17-106" aria-hidden="true" tabindex="-1"></a>)</span>
-<span id="cb17-107"><a href="config-files.html#cb17-107" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb17-108"><a href="config-files.html#cb17-108" aria-hidden="true" tabindex="-1"></a><span class="do">## Packages I only install at JHPCE</span></span>
-<span id="cb17-109"><a href="config-files.html#cb17-109" aria-hidden="true" tabindex="-1"></a>remotes<span class="sc">::</span><span class="fu">install_github</span>(<span class="fu">c</span>(</span>
-<span id="cb17-110"><a href="config-files.html#cb17-110" aria-hidden="true" tabindex="-1"></a>    <span class="st">&quot;muschellij2/clusterRundown&quot;</span></span>
-<span id="cb17-111"><a href="config-files.html#cb17-111" aria-hidden="true" tabindex="-1"></a>))</span></code></pre></div>
+<span id="cb17-60"><a href="config-files.html#cb17-60" aria-hidden="true" tabindex="-1"></a>    <span class="st">&quot;available&quot;</span>,</span>
+<span id="cb17-61"><a href="config-files.html#cb17-61" aria-hidden="true" tabindex="-1"></a>    <span class="st">&quot;bookdown&quot;</span>,</span>
+<span id="cb17-62"><a href="config-files.html#cb17-62" aria-hidden="true" tabindex="-1"></a>    <span class="st">&quot;blogdown&quot;</span>,</span>
+<span id="cb17-63"><a href="config-files.html#cb17-63" aria-hidden="true" tabindex="-1"></a>    <span class="st">&quot;clisymnbols&quot;</span>,</span>
+<span id="cb17-64"><a href="config-files.html#cb17-64" aria-hidden="true" tabindex="-1"></a>    <span class="st">&quot;clue&quot;</span>,</span>
+<span id="cb17-65"><a href="config-files.html#cb17-65" aria-hidden="true" tabindex="-1"></a>    <span class="st">&quot;corrplot&quot;</span>,</span>
+<span id="cb17-66"><a href="config-files.html#cb17-66" aria-hidden="true" tabindex="-1"></a>    <span class="st">&quot;getopt&quot;</span>,</span>
+<span id="cb17-67"><a href="config-files.html#cb17-67" aria-hidden="true" tabindex="-1"></a>    <span class="st">&quot;ggpubr&quot;</span>,</span>
+<span id="cb17-68"><a href="config-files.html#cb17-68" aria-hidden="true" tabindex="-1"></a>    <span class="st">&quot;ggrepel&quot;</span>,</span>
+<span id="cb17-69"><a href="config-files.html#cb17-69" aria-hidden="true" tabindex="-1"></a>    <span class="st">&quot;ggthemes&quot;</span>,</span>
+<span id="cb17-70"><a href="config-files.html#cb17-70" aria-hidden="true" tabindex="-1"></a>    <span class="st">&quot;googlesheets4&quot;</span>,</span>
+<span id="cb17-71"><a href="config-files.html#cb17-71" aria-hidden="true" tabindex="-1"></a>    <span class="st">&quot;MatrixEQTL&quot;</span>,</span>
+<span id="cb17-72"><a href="config-files.html#cb17-72" aria-hidden="true" tabindex="-1"></a>    <span class="st">&quot;pagedown&quot;</span>,</span>
+<span id="cb17-73"><a href="config-files.html#cb17-73" aria-hidden="true" tabindex="-1"></a>    <span class="st">&quot;patchwork&quot;</span>,</span>
+<span id="cb17-74"><a href="config-files.html#cb17-74" aria-hidden="true" tabindex="-1"></a>    <span class="st">&quot;Polychrome&quot;</span>,</span>
+<span id="cb17-75"><a href="config-files.html#cb17-75" aria-hidden="true" tabindex="-1"></a>    <span class="st">&quot;postcards&quot;</span>,</span>
+<span id="cb17-76"><a href="config-files.html#cb17-76" aria-hidden="true" tabindex="-1"></a>    <span class="st">&quot;reprex&quot;</span>,</span>
+<span id="cb17-77"><a href="config-files.html#cb17-77" aria-hidden="true" tabindex="-1"></a>    <span class="st">&quot;rsconnect&quot;</span>,</span>
+<span id="cb17-78"><a href="config-files.html#cb17-78" aria-hidden="true" tabindex="-1"></a>    <span class="st">&quot;rtweet&quot;</span>,</span>
+<span id="cb17-79"><a href="config-files.html#cb17-79" aria-hidden="true" tabindex="-1"></a>    <span class="st">&quot;tidyverse&quot;</span>,</span>
+<span id="cb17-80"><a href="config-files.html#cb17-80" aria-hidden="true" tabindex="-1"></a>    <span class="st">&quot;xaringan&quot;</span>,</span>
+<span id="cb17-81"><a href="config-files.html#cb17-81" aria-hidden="true" tabindex="-1"></a>    <span class="st">&quot;xaringanthemer&quot;</span>,</span>
+<span id="cb17-82"><a href="config-files.html#cb17-82" aria-hidden="true" tabindex="-1"></a>    <span class="st">&quot;UpSetR&quot;</span>,</span>
+<span id="cb17-83"><a href="config-files.html#cb17-83" aria-hidden="true" tabindex="-1"></a>    <span class="st">&quot;VennDiagram&quot;</span></span>
+<span id="cb17-84"><a href="config-files.html#cb17-84" aria-hidden="true" tabindex="-1"></a>))</span>
+<span id="cb17-85"><a href="config-files.html#cb17-85" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb17-86"><a href="config-files.html#cb17-86" aria-hidden="true" tabindex="-1"></a><span class="do">## Bioc packages</span></span>
+<span id="cb17-87"><a href="config-files.html#cb17-87" aria-hidden="true" tabindex="-1"></a>BiocManager<span class="sc">::</span><span class="fu">install</span>(<span class="fu">c</span>(</span>
+<span id="cb17-88"><a href="config-files.html#cb17-88" aria-hidden="true" tabindex="-1"></a>    <span class="st">&quot;BiocCheck&quot;</span>,</span>
+<span id="cb17-89"><a href="config-files.html#cb17-89" aria-hidden="true" tabindex="-1"></a>    <span class="st">&quot;ComplexHeatmap&quot;</span>,</span>
+<span id="cb17-90"><a href="config-files.html#cb17-90" aria-hidden="true" tabindex="-1"></a>    <span class="st">&quot;DO.db&quot;</span>,</span>
+<span id="cb17-91"><a href="config-files.html#cb17-91" aria-hidden="true" tabindex="-1"></a>    <span class="st">&quot;ExploreModelMatrix&quot;</span>,</span>
+<span id="cb17-92"><a href="config-files.html#cb17-92" aria-hidden="true" tabindex="-1"></a>    <span class="st">&quot;iSEE&quot;</span>,</span>
+<span id="cb17-93"><a href="config-files.html#cb17-93" aria-hidden="true" tabindex="-1"></a>    <span class="st">&quot;scater&quot;</span>,</span>
+<span id="cb17-94"><a href="config-files.html#cb17-94" aria-hidden="true" tabindex="-1"></a>    <span class="st">&quot;scran&quot;</span>,</span>
+<span id="cb17-95"><a href="config-files.html#cb17-95" aria-hidden="true" tabindex="-1"></a>    <span class="st">&quot;sva&quot;</span>,</span>
+<span id="cb17-96"><a href="config-files.html#cb17-96" aria-hidden="true" tabindex="-1"></a>    <span class="st">&quot;variancePartition&quot;</span></span>
+<span id="cb17-97"><a href="config-files.html#cb17-97" aria-hidden="true" tabindex="-1"></a>), <span class="at">update =</span> <span class="cn">FALSE</span>)</span>
+<span id="cb17-98"><a href="config-files.html#cb17-98" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb17-99"><a href="config-files.html#cb17-99" aria-hidden="true" tabindex="-1"></a><span class="do">## GitHub packages</span></span>
+<span id="cb17-100"><a href="config-files.html#cb17-100" aria-hidden="true" tabindex="-1"></a>remotes<span class="sc">::</span><span class="fu">install_github</span>(<span class="fu">c</span>(</span>
+<span id="cb17-101"><a href="config-files.html#cb17-101" aria-hidden="true" tabindex="-1"></a>    <span class="st">&quot;clauswilke/colorblindr&quot;</span>,</span>
+<span id="cb17-102"><a href="config-files.html#cb17-102" aria-hidden="true" tabindex="-1"></a>    <span class="do">## Install from GitHub due to https://github.com/immunogenomics/harmony/issues/145</span></span>
+<span id="cb17-103"><a href="config-files.html#cb17-103" aria-hidden="true" tabindex="-1"></a>    <span class="st">&quot;immunogenomics/harmony&quot;</span>, </span>
+<span id="cb17-104"><a href="config-files.html#cb17-104" aria-hidden="true" tabindex="-1"></a>    <span class="st">&quot;satijalab/azimuth&quot;</span></span>
+<span id="cb17-105"><a href="config-files.html#cb17-105" aria-hidden="true" tabindex="-1"></a>))</span>
+<span id="cb17-106"><a href="config-files.html#cb17-106" aria-hidden="true" tabindex="-1"></a> <span class="do">## Related to https://github.com/gusevlab/fusion_twas/issues/14</span></span>
+<span id="cb17-107"><a href="config-files.html#cb17-107" aria-hidden="true" tabindex="-1"></a>remotes<span class="sc">::</span><span class="fu">install_github</span>(</span>
+<span id="cb17-108"><a href="config-files.html#cb17-108" aria-hidden="true" tabindex="-1"></a>    <span class="st">&quot;carbocation/plink2R/plink2R&quot;</span>,</span>
+<span id="cb17-109"><a href="config-files.html#cb17-109" aria-hidden="true" tabindex="-1"></a>    <span class="at">ref =</span> <span class="st">&quot;carbocation-permit-r361&quot;</span></span>
+<span id="cb17-110"><a href="config-files.html#cb17-110" aria-hidden="true" tabindex="-1"></a>)</span>
+<span id="cb17-111"><a href="config-files.html#cb17-111" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb17-112"><a href="config-files.html#cb17-112" aria-hidden="true" tabindex="-1"></a><span class="do">## Packages I only install at JHPCE</span></span>
+<span id="cb17-113"><a href="config-files.html#cb17-113" aria-hidden="true" tabindex="-1"></a>remotes<span class="sc">::</span><span class="fu">install_github</span>(<span class="fu">c</span>(</span>
+<span id="cb17-114"><a href="config-files.html#cb17-114" aria-hidden="true" tabindex="-1"></a>    <span class="st">&quot;muschellij2/clusterRundown&quot;</span></span>
+<span id="cb17-115"><a href="config-files.html#cb17-115" aria-hidden="true" tabindex="-1"></a>))</span></code></pre></div>
 <div id="previously-installed" class="section level4 hasAnchor" number="17.1.1.1">
 <h4><span class="header-section-number">17.1.1.1</span> Previously installed<a href="config-files.html#previously-installed" class="anchor-section" aria-label="Anchor link to header"></a></h4>
 <p>As I described in <a href="http://lcolladotor.github.io/2017/05/04/updating-r/#.X6ICiIhKguU">my blog post on updating R</a>, I also like to saved my list of currently installed packages.</p>
@@ -813,56 +817,57 @@ Do you want to use <a href="https://twitter.com/Bioconductor?ref_src=twsrc%5Etfw
 <span id="cb24-41"><a href="config-files.html#cb24-41" aria-hidden="true" tabindex="-1"></a><span class="bu">alias</span> dcl01=<span class="st">&quot;cd /dcl01/lieber/lcolladotor&quot;</span></span>
 <span id="cb24-42"><a href="config-files.html#cb24-42" aria-hidden="true" tabindex="-1"></a><span class="bu">alias</span> dcl02=<span class="st">&quot;cd /dcl02/lieber/lcolladotor&quot;</span></span>
 <span id="cb24-43"><a href="config-files.html#cb24-43" aria-hidden="true" tabindex="-1"></a><span class="bu">alias</span> dcs04=<span class="st">&quot;cd /dcs04/lieber/lcolladotor&quot;</span></span>
-<span id="cb24-44"><a href="config-files.html#cb24-44" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb24-45"><a href="config-files.html#cb24-45" aria-hidden="true" tabindex="-1"></a><span class="co">## Creating modules</span></span>
-<span id="cb24-46"><a href="config-files.html#cb24-46" aria-hidden="true" tabindex="-1"></a><span class="co"># https://lmod.readthedocs.io/en/latest/050_lua_modulefiles.html</span></span>
-<span id="cb24-47"><a href="config-files.html#cb24-47" aria-hidden="true" tabindex="-1"></a><span class="bu">alias</span> modsrc=<span class="st">&quot;cd /jhpce/shared/jhpce/libd&quot;</span></span>
-<span id="cb24-48"><a href="config-files.html#cb24-48" aria-hidden="true" tabindex="-1"></a><span class="bu">alias</span> modlua=<span class="st">&quot;cd /jhpce/shared/jhpce/modulefiles/libd&quot;</span></span>
-<span id="cb24-49"><a href="config-files.html#cb24-49" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb24-50"><a href="config-files.html#cb24-50" aria-hidden="true" tabindex="-1"></a><span class="co"># colors</span></span>
-<span id="cb24-51"><a href="config-files.html#cb24-51" aria-hidden="true" tabindex="-1"></a><span class="co"># http://norbauer.com/notebooks/code/notes/ls-colors-and-terminal-app</span></span>
-<span id="cb24-52"><a href="config-files.html#cb24-52" aria-hidden="true" tabindex="-1"></a><span class="co"># used BSD pattern ExGxFxDxBxEgEdxbxgxhxd on http://geoff.greer.fm/lscolors/</span></span>
-<span id="cb24-53"><a href="config-files.html#cb24-53" aria-hidden="true" tabindex="-1"></a><span class="co"># that tool does not specify the colors, which I did by looking manually at</span></span>
-<span id="cb24-54"><a href="config-files.html#cb24-54" aria-hidden="true" tabindex="-1"></a><span class="co"># http://blog.twistedcode.org/2008/04/lscolors-explained.html</span></span>
-<span id="cb24-55"><a href="config-files.html#cb24-55" aria-hidden="true" tabindex="-1"></a><span class="co"># and the norbauer.com site previously mentioned</span></span>
-<span id="cb24-56"><a href="config-files.html#cb24-56" aria-hidden="true" tabindex="-1"></a><span class="bu">alias</span> ls=<span class="st">&quot;ls --color=auto&quot;</span></span>
-<span id="cb24-57"><a href="config-files.html#cb24-57" aria-hidden="true" tabindex="-1"></a><span class="co">#export LS_COLORS=&quot;di=1;34;40:ln=1;36;40:so=1;35;40:pi=1;93;40:ex=1;31;40:bd=1;34;46:cd=1;34;43:su=0;41:sg=0;46:tw=0;47:ow=0;43&quot;</span></span>
-<span id="cb24-58"><a href="config-files.html#cb24-58" aria-hidden="true" tabindex="-1"></a><span class="co">## After switching to RStudio:</span></span>
-<span id="cb24-59"><a href="config-files.html#cb24-59" aria-hidden="true" tabindex="-1"></a><span class="co"># https://askubuntu.com/questions/466198/how-do-i-change-the-color-for-directories-with-ls-in-the-console</span></span>
-<span id="cb24-60"><a href="config-files.html#cb24-60" aria-hidden="true" tabindex="-1"></a><span class="bu">export</span> <span class="va">LS_COLORS</span><span class="op">=</span><span class="st">&quot;di=0;32:ln=0;36:so=0;35:pi=0;93:ex=0;31:bd=0;34;46:cd=0;34;43:su=0;41:sg=0;46:tw=0;47:ow=0;43:fi=0;33&quot;</span></span>
-<span id="cb24-61"><a href="config-files.html#cb24-61" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb24-62"><a href="config-files.html#cb24-62" aria-hidden="true" tabindex="-1"></a><span class="co"># Uncomment below for Mac and comment the two previous commands</span></span>
-<span id="cb24-63"><a href="config-files.html#cb24-63" aria-hidden="true" tabindex="-1"></a><span class="co">#export CLICOLOR=1</span></span>
-<span id="cb24-64"><a href="config-files.html#cb24-64" aria-hidden="true" tabindex="-1"></a><span class="co">#export LSCOLORS=&quot;ExGxFxDxBxEgEdxbxgxhxd&quot;</span></span>
-<span id="cb24-65"><a href="config-files.html#cb24-65" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb24-66"><a href="config-files.html#cb24-66" aria-hidden="true" tabindex="-1"></a><span class="co">## For setup:</span></span>
-<span id="cb24-67"><a href="config-files.html#cb24-67" aria-hidden="true" tabindex="-1"></a><span class="co"># http://erniemiller.org/2011/12/12/textmate-2-rmate-awesome/</span></span>
-<span id="cb24-68"><a href="config-files.html#cb24-68" aria-hidden="true" tabindex="-1"></a><span class="co">## For laptop config:</span></span>
-<span id="cb24-69"><a href="config-files.html#cb24-69" aria-hidden="true" tabindex="-1"></a><span class="co"># http://jonsimpson.co.uk/log/2011/rmate-ssh-remoteforward</span></span>
-<span id="cb24-70"><a href="config-files.html#cb24-70" aria-hidden="true" tabindex="-1"></a><span class="co">## rmate port</span></span>
-<span id="cb24-71"><a href="config-files.html#cb24-71" aria-hidden="true" tabindex="-1"></a><span class="co"># https://github.com/textmate/rmate</span></span>
-<span id="cb24-72"><a href="config-files.html#cb24-72" aria-hidden="true" tabindex="-1"></a><span class="bu">export</span> <span class="va">RMATE_PORT</span><span class="op">=</span><span class="st">&quot;SOME_PORT_YOU_CHOOSE&quot;</span></span>
-<span id="cb24-73"><a href="config-files.html#cb24-73" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb24-74"><a href="config-files.html#cb24-74" aria-hidden="true" tabindex="-1"></a><span class="co">## Load the git module by default when qrsh/qsub</span></span>
-<span id="cb24-75"><a href="config-files.html#cb24-75" aria-hidden="true" tabindex="-1"></a><span class="co">## thanks to Jiong Yang</span></span>
-<span id="cb24-76"><a href="config-files.html#cb24-76" aria-hidden="true" tabindex="-1"></a><span class="cf">if</span> <span class="kw">[[</span> <span class="va">$HOSTNAME</span> <span class="ot">==</span> compute-<span class="pp">*</span> <span class="kw">]]</span> <span class="kw">||</span> <span class="kw">[[</span> <span class="va">$HOSTNAME</span> <span class="ot">==</span> transfer-<span class="pp">*</span> <span class="kw">]];</span> <span class="cf">then</span></span>
-<span id="cb24-77"><a href="config-files.html#cb24-77" aria-hidden="true" tabindex="-1"></a>    <span class="bu">echo</span> <span class="st">&quot;Adding LIBD modules&quot;</span></span>
-<span id="cb24-78"><a href="config-files.html#cb24-78" aria-hidden="true" tabindex="-1"></a>    <span class="ex">module</span> use /jhpce/shared/jhpce/modulefiles/libd</span>
-<span id="cb24-79"><a href="config-files.html#cb24-79" aria-hidden="true" tabindex="-1"></a>    <span class="bu">echo</span> <span class="st">&quot;Loading git&quot;</span></span>
-<span id="cb24-80"><a href="config-files.html#cb24-80" aria-hidden="true" tabindex="-1"></a>    <span class="ex">module</span> load git</span>
-<span id="cb24-81"><a href="config-files.html#cb24-81" aria-hidden="true" tabindex="-1"></a>    <span class="ex">module</span> load git-status-size/github</span>
-<span id="cb24-82"><a href="config-files.html#cb24-82" aria-hidden="true" tabindex="-1"></a>    <span class="ex">module</span> load git-lfs/2.8.0</span>
-<span id="cb24-83"><a href="config-files.html#cb24-83" aria-hidden="true" tabindex="-1"></a>    <span class="ex">module</span> load rmate/1.5.10</span>
-<span id="cb24-84"><a href="config-files.html#cb24-84" aria-hidden="true" tabindex="-1"></a>    <span class="ex">module</span> load conda_R/4.3</span>
-<span id="cb24-85"><a href="config-files.html#cb24-85" aria-hidden="true" tabindex="-1"></a><span class="cf">fi</span></span>
-<span id="cb24-86"><a href="config-files.html#cb24-86" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb24-87"><a href="config-files.html#cb24-87" aria-hidden="true" tabindex="-1"></a><span class="co">## To deal with running nextflow without requesting much more memory</span></span>
-<span id="cb24-88"><a href="config-files.html#cb24-88" aria-hidden="true" tabindex="-1"></a><span class="co">## https://jhpce.jhu.edu/question/why-do-i-get-memory-errors-when-running-java/</span></span>
-<span id="cb24-89"><a href="config-files.html#cb24-89" aria-hidden="true" tabindex="-1"></a><span class="bu">export</span> <span class="va">_JAVA_OPTIONS</span><span class="op">=</span><span class="st">&quot;-Xms5g -Xmx6g&quot;</span></span>
-<span id="cb24-90"><a href="config-files.html#cb24-90" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb24-91"><a href="config-files.html#cb24-91" aria-hidden="true" tabindex="-1"></a><span class="co">## From https://twitter.com/fellgernon/status/1258455434073124865?s=20</span></span>
-<span id="cb24-92"><a href="config-files.html#cb24-92" aria-hidden="true" tabindex="-1"></a><span class="co">## and https://www.cyberciti.biz/tips/understanding-linux-unix-umask-value-usage.html</span></span>
-<span id="cb24-93"><a href="config-files.html#cb24-93" aria-hidden="true" tabindex="-1"></a><span class="bu">umask</span> u=rwx,g=rwx,o= <span class="co">## equivalent to umask 007</span></span></code></pre></div>
+<span id="cb24-44"><a href="config-files.html#cb24-44" aria-hidden="true" tabindex="-1"></a><span class="bu">alias</span> dcs05=<span class="st">&quot;cd /dcs05/lieber/lcolladotor&quot;</span></span>
+<span id="cb24-45"><a href="config-files.html#cb24-45" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb24-46"><a href="config-files.html#cb24-46" aria-hidden="true" tabindex="-1"></a><span class="co">## Creating modules</span></span>
+<span id="cb24-47"><a href="config-files.html#cb24-47" aria-hidden="true" tabindex="-1"></a><span class="co"># https://lmod.readthedocs.io/en/latest/050_lua_modulefiles.html</span></span>
+<span id="cb24-48"><a href="config-files.html#cb24-48" aria-hidden="true" tabindex="-1"></a><span class="bu">alias</span> modsrc=<span class="st">&quot;cd /jhpce/shared/jhpce/libd&quot;</span></span>
+<span id="cb24-49"><a href="config-files.html#cb24-49" aria-hidden="true" tabindex="-1"></a><span class="bu">alias</span> modlua=<span class="st">&quot;cd /jhpce/shared/jhpce/modulefiles/libd&quot;</span></span>
+<span id="cb24-50"><a href="config-files.html#cb24-50" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb24-51"><a href="config-files.html#cb24-51" aria-hidden="true" tabindex="-1"></a><span class="co"># colors</span></span>
+<span id="cb24-52"><a href="config-files.html#cb24-52" aria-hidden="true" tabindex="-1"></a><span class="co"># http://norbauer.com/notebooks/code/notes/ls-colors-and-terminal-app</span></span>
+<span id="cb24-53"><a href="config-files.html#cb24-53" aria-hidden="true" tabindex="-1"></a><span class="co"># used BSD pattern ExGxFxDxBxEgEdxbxgxhxd on http://geoff.greer.fm/lscolors/</span></span>
+<span id="cb24-54"><a href="config-files.html#cb24-54" aria-hidden="true" tabindex="-1"></a><span class="co"># that tool does not specify the colors, which I did by looking manually at</span></span>
+<span id="cb24-55"><a href="config-files.html#cb24-55" aria-hidden="true" tabindex="-1"></a><span class="co"># http://blog.twistedcode.org/2008/04/lscolors-explained.html</span></span>
+<span id="cb24-56"><a href="config-files.html#cb24-56" aria-hidden="true" tabindex="-1"></a><span class="co"># and the norbauer.com site previously mentioned</span></span>
+<span id="cb24-57"><a href="config-files.html#cb24-57" aria-hidden="true" tabindex="-1"></a><span class="bu">alias</span> ls=<span class="st">&quot;ls --color=auto&quot;</span></span>
+<span id="cb24-58"><a href="config-files.html#cb24-58" aria-hidden="true" tabindex="-1"></a><span class="co">#export LS_COLORS=&quot;di=1;34;40:ln=1;36;40:so=1;35;40:pi=1;93;40:ex=1;31;40:bd=1;34;46:cd=1;34;43:su=0;41:sg=0;46:tw=0;47:ow=0;43&quot;</span></span>
+<span id="cb24-59"><a href="config-files.html#cb24-59" aria-hidden="true" tabindex="-1"></a><span class="co">## After switching to RStudio:</span></span>
+<span id="cb24-60"><a href="config-files.html#cb24-60" aria-hidden="true" tabindex="-1"></a><span class="co"># https://askubuntu.com/questions/466198/how-do-i-change-the-color-for-directories-with-ls-in-the-console</span></span>
+<span id="cb24-61"><a href="config-files.html#cb24-61" aria-hidden="true" tabindex="-1"></a><span class="bu">export</span> <span class="va">LS_COLORS</span><span class="op">=</span><span class="st">&quot;di=0;32:ln=0;36:so=0;35:pi=0;93:ex=0;31:bd=0;34;46:cd=0;34;43:su=0;41:sg=0;46:tw=0;47:ow=0;43:fi=0;33&quot;</span></span>
+<span id="cb24-62"><a href="config-files.html#cb24-62" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb24-63"><a href="config-files.html#cb24-63" aria-hidden="true" tabindex="-1"></a><span class="co"># Uncomment below for Mac and comment the two previous commands</span></span>
+<span id="cb24-64"><a href="config-files.html#cb24-64" aria-hidden="true" tabindex="-1"></a><span class="co">#export CLICOLOR=1</span></span>
+<span id="cb24-65"><a href="config-files.html#cb24-65" aria-hidden="true" tabindex="-1"></a><span class="co">#export LSCOLORS=&quot;ExGxFxDxBxEgEdxbxgxhxd&quot;</span></span>
+<span id="cb24-66"><a href="config-files.html#cb24-66" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb24-67"><a href="config-files.html#cb24-67" aria-hidden="true" tabindex="-1"></a><span class="co">## For setup:</span></span>
+<span id="cb24-68"><a href="config-files.html#cb24-68" aria-hidden="true" tabindex="-1"></a><span class="co"># http://erniemiller.org/2011/12/12/textmate-2-rmate-awesome/</span></span>
+<span id="cb24-69"><a href="config-files.html#cb24-69" aria-hidden="true" tabindex="-1"></a><span class="co">## For laptop config:</span></span>
+<span id="cb24-70"><a href="config-files.html#cb24-70" aria-hidden="true" tabindex="-1"></a><span class="co"># http://jonsimpson.co.uk/log/2011/rmate-ssh-remoteforward</span></span>
+<span id="cb24-71"><a href="config-files.html#cb24-71" aria-hidden="true" tabindex="-1"></a><span class="co">## rmate port</span></span>
+<span id="cb24-72"><a href="config-files.html#cb24-72" aria-hidden="true" tabindex="-1"></a><span class="co"># https://github.com/textmate/rmate</span></span>
+<span id="cb24-73"><a href="config-files.html#cb24-73" aria-hidden="true" tabindex="-1"></a><span class="bu">export</span> <span class="va">RMATE_PORT</span><span class="op">=</span><span class="st">&quot;SOME_PORT_YOU_CHOOSE&quot;</span></span>
+<span id="cb24-74"><a href="config-files.html#cb24-74" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb24-75"><a href="config-files.html#cb24-75" aria-hidden="true" tabindex="-1"></a><span class="co">## Load the git module by default when qrsh/qsub</span></span>
+<span id="cb24-76"><a href="config-files.html#cb24-76" aria-hidden="true" tabindex="-1"></a><span class="co">## thanks to Jiong Yang</span></span>
+<span id="cb24-77"><a href="config-files.html#cb24-77" aria-hidden="true" tabindex="-1"></a><span class="cf">if</span> <span class="kw">[[</span> <span class="va">$HOSTNAME</span> <span class="ot">==</span> compute-<span class="pp">*</span> <span class="kw">]]</span> <span class="kw">||</span> <span class="kw">[[</span> <span class="va">$HOSTNAME</span> <span class="ot">==</span> transfer-<span class="pp">*</span> <span class="kw">]];</span> <span class="cf">then</span></span>
+<span id="cb24-78"><a href="config-files.html#cb24-78" aria-hidden="true" tabindex="-1"></a>    <span class="bu">echo</span> <span class="st">&quot;Adding LIBD modules&quot;</span></span>
+<span id="cb24-79"><a href="config-files.html#cb24-79" aria-hidden="true" tabindex="-1"></a>    <span class="ex">module</span> use /jhpce/shared/jhpce/modulefiles/libd</span>
+<span id="cb24-80"><a href="config-files.html#cb24-80" aria-hidden="true" tabindex="-1"></a>    <span class="bu">echo</span> <span class="st">&quot;Loading git&quot;</span></span>
+<span id="cb24-81"><a href="config-files.html#cb24-81" aria-hidden="true" tabindex="-1"></a>    <span class="ex">module</span> load git</span>
+<span id="cb24-82"><a href="config-files.html#cb24-82" aria-hidden="true" tabindex="-1"></a>    <span class="ex">module</span> load git-status-size/github</span>
+<span id="cb24-83"><a href="config-files.html#cb24-83" aria-hidden="true" tabindex="-1"></a>    <span class="ex">module</span> load git-lfs/2.8.0</span>
+<span id="cb24-84"><a href="config-files.html#cb24-84" aria-hidden="true" tabindex="-1"></a>    <span class="ex">module</span> load rmate/1.5.10</span>
+<span id="cb24-85"><a href="config-files.html#cb24-85" aria-hidden="true" tabindex="-1"></a>    <span class="ex">module</span> load conda_R/4.3</span>
+<span id="cb24-86"><a href="config-files.html#cb24-86" aria-hidden="true" tabindex="-1"></a><span class="cf">fi</span></span>
+<span id="cb24-87"><a href="config-files.html#cb24-87" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb24-88"><a href="config-files.html#cb24-88" aria-hidden="true" tabindex="-1"></a><span class="co">## To deal with running nextflow without requesting much more memory</span></span>
+<span id="cb24-89"><a href="config-files.html#cb24-89" aria-hidden="true" tabindex="-1"></a><span class="co">## https://jhpce.jhu.edu/question/why-do-i-get-memory-errors-when-running-java/</span></span>
+<span id="cb24-90"><a href="config-files.html#cb24-90" aria-hidden="true" tabindex="-1"></a><span class="bu">export</span> <span class="va">_JAVA_OPTIONS</span><span class="op">=</span><span class="st">&quot;-Xms5g -Xmx6g&quot;</span></span>
+<span id="cb24-91"><a href="config-files.html#cb24-91" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb24-92"><a href="config-files.html#cb24-92" aria-hidden="true" tabindex="-1"></a><span class="co">## From https://twitter.com/fellgernon/status/1258455434073124865?s=20</span></span>
+<span id="cb24-93"><a href="config-files.html#cb24-93" aria-hidden="true" tabindex="-1"></a><span class="co">## and https://www.cyberciti.biz/tips/understanding-linux-unix-umask-value-usage.html</span></span>
+<span id="cb24-94"><a href="config-files.html#cb24-94" aria-hidden="true" tabindex="-1"></a><span class="bu">umask</span> u=rwx,g=rwx,o= <span class="co">## equivalent to umask 007</span></span></code></pre></div>
 <p>For more information on <code>rmate</code> and <code>rmote</code> and how it relates to these configuration files, check this video and <a href="https://docs.google.com/document/d/1vj0xa_qZTIgsnooW_9_j44Low1UbSIufnlGXCgL_YCU/edit">companion notes</a>.</p>
 <iframe width="560" height="315" src="https://www.youtube.com/embed/LjWr39C1Z_Q" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen>
 </iframe>
