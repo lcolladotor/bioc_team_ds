@@ -429,6 +429,7 @@ alias matt="cd /dcl01/lieber/ajaffe/Matt/MNT_thesis/snRNAseq/10x_pilot_FINAL"
 alias dcl01="cd /dcl01/lieber/lcolladotor"
 alias dcl02="cd /dcl02/lieber/lcolladotor"
 alias dcs04="cd /dcs04/lieber/lcolladotor"
+alias dcs05="cd /dcs05/lieber/lcolladotor"
 
 ## Creating modules
 # https://lmod.readthedocs.io/en/latest/050_lua_modulefiles.html
