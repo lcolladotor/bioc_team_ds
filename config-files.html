@@ -91,7 +91,7 @@ code span.al { color: #ff0000; font-weight: bold; } /* Alert */
 code span.an { color: #60a0b0; font-weight: bold; font-style: italic; } /* Annotation */
 code span.at { color: #7d9029; } /* Attribute */
 code span.bn { color: #40a070; } /* BaseN */
-code span.bu { } /* BuiltIn */
+code span.bu { color: #008000; } /* BuiltIn */
 code span.cf { color: #007020; font-weight: bold; } /* ControlFlow */
 code span.ch { color: #4070a0; } /* Char */
 code span.cn { color: #880000; } /* Constant */
@@ -104,7 +104,7 @@ code span.er { color: #ff0000; font-weight: bold; } /* Error */
 code span.ex { } /* Extension */
 code span.fl { color: #40a070; } /* Float */
 code span.fu { color: #06287e; } /* Function */
-code span.im { } /* Import */
+code span.im { color: #008000; font-weight: bold; } /* Import */
 code span.in { color: #60a0b0; font-weight: bold; font-style: italic; } /* Information */
 code span.kw { color: #007020; font-weight: bold; } /* Keyword */
 code span.op { color: #666666; } /* Operator */
@@ -514,45 +514,45 @@ Do you want to use <a href="https://twitter.com/Bioconductor?ref_src=twsrc%5Etfw
 <span id="cb17-60"><a href="config-files.html#cb17-60" aria-hidden="true" tabindex="-1"></a>    <span class="st">&quot;available&quot;</span>,</span>
 <span id="cb17-61"><a href="config-files.html#cb17-61" aria-hidden="true" tabindex="-1"></a>    <span class="st">&quot;bookdown&quot;</span>,</span>
 <span id="cb17-62"><a href="config-files.html#cb17-62" aria-hidden="true" tabindex="-1"></a>    <span class="st">&quot;blogdown&quot;</span>,</span>
-<span id="cb17-63"><a href="config-files.html#cb17-63" aria-hidden="true" tabindex="-1"></a>    <span class="st">&quot;clisymnbols&quot;</span>,</span>
-<span id="cb17-64"><a href="config-files.html#cb17-64" aria-hidden="true" tabindex="-1"></a>    <span class="st">&quot;clue&quot;</span>,</span>
-<span id="cb17-65"><a href="config-files.html#cb17-65" aria-hidden="true" tabindex="-1"></a>    <span class="st">&quot;corrplot&quot;</span>,</span>
-<span id="cb17-66"><a href="config-files.html#cb17-66" aria-hidden="true" tabindex="-1"></a>    <span class="st">&quot;getopt&quot;</span>,</span>
-<span id="cb17-67"><a href="config-files.html#cb17-67" aria-hidden="true" tabindex="-1"></a>    <span class="st">&quot;ggpubr&quot;</span>,</span>
-<span id="cb17-68"><a href="config-files.html#cb17-68" aria-hidden="true" tabindex="-1"></a>    <span class="st">&quot;ggrepel&quot;</span>,</span>
-<span id="cb17-69"><a href="config-files.html#cb17-69" aria-hidden="true" tabindex="-1"></a>    <span class="st">&quot;ggthemes&quot;</span>,</span>
-<span id="cb17-70"><a href="config-files.html#cb17-70" aria-hidden="true" tabindex="-1"></a>    <span class="st">&quot;googlesheets4&quot;</span>,</span>
-<span id="cb17-71"><a href="config-files.html#cb17-71" aria-hidden="true" tabindex="-1"></a>    <span class="st">&quot;MatrixEQTL&quot;</span>,</span>
-<span id="cb17-72"><a href="config-files.html#cb17-72" aria-hidden="true" tabindex="-1"></a>    <span class="st">&quot;pagedown&quot;</span>,</span>
-<span id="cb17-73"><a href="config-files.html#cb17-73" aria-hidden="true" tabindex="-1"></a>    <span class="st">&quot;patchwork&quot;</span>,</span>
-<span id="cb17-74"><a href="config-files.html#cb17-74" aria-hidden="true" tabindex="-1"></a>    <span class="st">&quot;Polychrome&quot;</span>,</span>
-<span id="cb17-75"><a href="config-files.html#cb17-75" aria-hidden="true" tabindex="-1"></a>    <span class="st">&quot;postcards&quot;</span>,</span>
-<span id="cb17-76"><a href="config-files.html#cb17-76" aria-hidden="true" tabindex="-1"></a>    <span class="st">&quot;reprex&quot;</span>,</span>
-<span id="cb17-77"><a href="config-files.html#cb17-77" aria-hidden="true" tabindex="-1"></a>    <span class="st">&quot;rsconnect&quot;</span>,</span>
-<span id="cb17-78"><a href="config-files.html#cb17-78" aria-hidden="true" tabindex="-1"></a>    <span class="st">&quot;rtweet&quot;</span>,</span>
-<span id="cb17-79"><a href="config-files.html#cb17-79" aria-hidden="true" tabindex="-1"></a>    <span class="st">&quot;tidyverse&quot;</span>,</span>
-<span id="cb17-80"><a href="config-files.html#cb17-80" aria-hidden="true" tabindex="-1"></a>    <span class="st">&quot;xaringan&quot;</span>,</span>
-<span id="cb17-81"><a href="config-files.html#cb17-81" aria-hidden="true" tabindex="-1"></a>    <span class="st">&quot;xaringanthemer&quot;</span>,</span>
-<span id="cb17-82"><a href="config-files.html#cb17-82" aria-hidden="true" tabindex="-1"></a>    <span class="st">&quot;UpSetR&quot;</span>,</span>
-<span id="cb17-83"><a href="config-files.html#cb17-83" aria-hidden="true" tabindex="-1"></a>    <span class="st">&quot;VennDiagram&quot;</span></span>
-<span id="cb17-84"><a href="config-files.html#cb17-84" aria-hidden="true" tabindex="-1"></a>))</span>
-<span id="cb17-85"><a href="config-files.html#cb17-85" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb17-86"><a href="config-files.html#cb17-86" aria-hidden="true" tabindex="-1"></a><span class="do">## Bioc packages</span></span>
-<span id="cb17-87"><a href="config-files.html#cb17-87" aria-hidden="true" tabindex="-1"></a>BiocManager<span class="sc">::</span><span class="fu">install</span>(<span class="fu">c</span>(</span>
-<span id="cb17-88"><a href="config-files.html#cb17-88" aria-hidden="true" tabindex="-1"></a>    <span class="st">&quot;BiocCheck&quot;</span>,</span>
-<span id="cb17-89"><a href="config-files.html#cb17-89" aria-hidden="true" tabindex="-1"></a>    <span class="st">&quot;ComplexHeatmap&quot;</span>,</span>
-<span id="cb17-90"><a href="config-files.html#cb17-90" aria-hidden="true" tabindex="-1"></a>    <span class="st">&quot;DO.db&quot;</span>,</span>
-<span id="cb17-91"><a href="config-files.html#cb17-91" aria-hidden="true" tabindex="-1"></a>    <span class="st">&quot;ExploreModelMatrix&quot;</span>,</span>
-<span id="cb17-92"><a href="config-files.html#cb17-92" aria-hidden="true" tabindex="-1"></a>    <span class="st">&quot;iSEE&quot;</span>,</span>
-<span id="cb17-93"><a href="config-files.html#cb17-93" aria-hidden="true" tabindex="-1"></a>    <span class="st">&quot;scater&quot;</span>,</span>
-<span id="cb17-94"><a href="config-files.html#cb17-94" aria-hidden="true" tabindex="-1"></a>    <span class="st">&quot;scran&quot;</span>,</span>
-<span id="cb17-95"><a href="config-files.html#cb17-95" aria-hidden="true" tabindex="-1"></a>    <span class="st">&quot;sva&quot;</span>,</span>
-<span id="cb17-96"><a href="config-files.html#cb17-96" aria-hidden="true" tabindex="-1"></a>    <span class="st">&quot;variancePartition&quot;</span></span>
-<span id="cb17-97"><a href="config-files.html#cb17-97" aria-hidden="true" tabindex="-1"></a>), <span class="at">update =</span> <span class="cn">FALSE</span>)</span>
-<span id="cb17-98"><a href="config-files.html#cb17-98" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb17-99"><a href="config-files.html#cb17-99" aria-hidden="true" tabindex="-1"></a><span class="do">## GitHub packages</span></span>
-<span id="cb17-100"><a href="config-files.html#cb17-100" aria-hidden="true" tabindex="-1"></a>remotes<span class="sc">::</span><span class="fu">install_github</span>(<span class="fu">c</span>(</span>
-<span id="cb17-101"><a href="config-files.html#cb17-101" aria-hidden="true" tabindex="-1"></a>    <span class="st">&quot;clauswilke/colorblindr&quot;</span>,</span>
+<span id="cb17-63"><a href="config-files.html#cb17-63" aria-hidden="true" tabindex="-1"></a>    <span class="st">&quot;clue&quot;</span>,</span>
+<span id="cb17-64"><a href="config-files.html#cb17-64" aria-hidden="true" tabindex="-1"></a>    <span class="st">&quot;corrplot&quot;</span>,</span>
+<span id="cb17-65"><a href="config-files.html#cb17-65" aria-hidden="true" tabindex="-1"></a>    <span class="st">&quot;getopt&quot;</span>,</span>
+<span id="cb17-66"><a href="config-files.html#cb17-66" aria-hidden="true" tabindex="-1"></a>    <span class="st">&quot;ggpubr&quot;</span>,</span>
+<span id="cb17-67"><a href="config-files.html#cb17-67" aria-hidden="true" tabindex="-1"></a>    <span class="st">&quot;ggrepel&quot;</span>,</span>
+<span id="cb17-68"><a href="config-files.html#cb17-68" aria-hidden="true" tabindex="-1"></a>    <span class="st">&quot;ggthemes&quot;</span>,</span>
+<span id="cb17-69"><a href="config-files.html#cb17-69" aria-hidden="true" tabindex="-1"></a>    <span class="st">&quot;googlesheets4&quot;</span>,</span>
+<span id="cb17-70"><a href="config-files.html#cb17-70" aria-hidden="true" tabindex="-1"></a>    <span class="st">&quot;MatrixEQTL&quot;</span>,</span>
+<span id="cb17-71"><a href="config-files.html#cb17-71" aria-hidden="true" tabindex="-1"></a>    <span class="st">&quot;pagedown&quot;</span>,</span>
+<span id="cb17-72"><a href="config-files.html#cb17-72" aria-hidden="true" tabindex="-1"></a>    <span class="st">&quot;patchwork&quot;</span>,</span>
+<span id="cb17-73"><a href="config-files.html#cb17-73" aria-hidden="true" tabindex="-1"></a>    <span class="st">&quot;Polychrome&quot;</span>,</span>
+<span id="cb17-74"><a href="config-files.html#cb17-74" aria-hidden="true" tabindex="-1"></a>    <span class="st">&quot;postcards&quot;</span>,</span>
+<span id="cb17-75"><a href="config-files.html#cb17-75" aria-hidden="true" tabindex="-1"></a>    <span class="st">&quot;reprex&quot;</span>,</span>
+<span id="cb17-76"><a href="config-files.html#cb17-76" aria-hidden="true" tabindex="-1"></a>    <span class="st">&quot;rsconnect&quot;</span>,</span>
+<span id="cb17-77"><a href="config-files.html#cb17-77" aria-hidden="true" tabindex="-1"></a>    <span class="st">&quot;rtweet&quot;</span>,</span>
+<span id="cb17-78"><a href="config-files.html#cb17-78" aria-hidden="true" tabindex="-1"></a>    <span class="st">&quot;tidyverse&quot;</span>,</span>
+<span id="cb17-79"><a href="config-files.html#cb17-79" aria-hidden="true" tabindex="-1"></a>    <span class="st">&quot;xaringan&quot;</span>,</span>
+<span id="cb17-80"><a href="config-files.html#cb17-80" aria-hidden="true" tabindex="-1"></a>    <span class="st">&quot;xaringanthemer&quot;</span>,</span>
+<span id="cb17-81"><a href="config-files.html#cb17-81" aria-hidden="true" tabindex="-1"></a>    <span class="st">&quot;UpSetR&quot;</span>,</span>
+<span id="cb17-82"><a href="config-files.html#cb17-82" aria-hidden="true" tabindex="-1"></a>    <span class="st">&quot;VennDiagram&quot;</span></span>
+<span id="cb17-83"><a href="config-files.html#cb17-83" aria-hidden="true" tabindex="-1"></a>))</span>
+<span id="cb17-84"><a href="config-files.html#cb17-84" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb17-85"><a href="config-files.html#cb17-85" aria-hidden="true" tabindex="-1"></a><span class="do">## Bioc packages</span></span>
+<span id="cb17-86"><a href="config-files.html#cb17-86" aria-hidden="true" tabindex="-1"></a>BiocManager<span class="sc">::</span><span class="fu">install</span>(<span class="fu">c</span>(</span>
+<span id="cb17-87"><a href="config-files.html#cb17-87" aria-hidden="true" tabindex="-1"></a>    <span class="st">&quot;BiocCheck&quot;</span>,</span>
+<span id="cb17-88"><a href="config-files.html#cb17-88" aria-hidden="true" tabindex="-1"></a>    <span class="st">&quot;ComplexHeatmap&quot;</span>,</span>
+<span id="cb17-89"><a href="config-files.html#cb17-89" aria-hidden="true" tabindex="-1"></a>    <span class="st">&quot;DO.db&quot;</span>,</span>
+<span id="cb17-90"><a href="config-files.html#cb17-90" aria-hidden="true" tabindex="-1"></a>    <span class="st">&quot;ExploreModelMatrix&quot;</span>,</span>
+<span id="cb17-91"><a href="config-files.html#cb17-91" aria-hidden="true" tabindex="-1"></a>    <span class="st">&quot;iSEE&quot;</span>,</span>
+<span id="cb17-92"><a href="config-files.html#cb17-92" aria-hidden="true" tabindex="-1"></a>    <span class="st">&quot;scater&quot;</span>,</span>
+<span id="cb17-93"><a href="config-files.html#cb17-93" aria-hidden="true" tabindex="-1"></a>    <span class="st">&quot;scran&quot;</span>,</span>
+<span id="cb17-94"><a href="config-files.html#cb17-94" aria-hidden="true" tabindex="-1"></a>    <span class="st">&quot;sva&quot;</span>,</span>
+<span id="cb17-95"><a href="config-files.html#cb17-95" aria-hidden="true" tabindex="-1"></a>    <span class="st">&quot;variancePartition&quot;</span></span>
+<span id="cb17-96"><a href="config-files.html#cb17-96" aria-hidden="true" tabindex="-1"></a>), <span class="at">update =</span> <span class="cn">FALSE</span>)</span>
+<span id="cb17-97"><a href="config-files.html#cb17-97" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb17-98"><a href="config-files.html#cb17-98" aria-hidden="true" tabindex="-1"></a><span class="do">## GitHub packages</span></span>
+<span id="cb17-99"><a href="config-files.html#cb17-99" aria-hidden="true" tabindex="-1"></a>remotes<span class="sc">::</span><span class="fu">install_github</span>(<span class="fu">c</span>(</span>
+<span id="cb17-100"><a href="config-files.html#cb17-100" aria-hidden="true" tabindex="-1"></a>    <span class="st">&quot;clauswilke/colorblindr&quot;</span>,</span>
+<span id="cb17-101"><a href="config-files.html#cb17-101" aria-hidden="true" tabindex="-1"></a>    <span class="st">&quot;DiseaseNeurogenomics/dreamlet&quot;</span>,</span>
 <span id="cb17-102"><a href="config-files.html#cb17-102" aria-hidden="true" tabindex="-1"></a>    <span class="do">## Install from GitHub due to https://github.com/immunogenomics/harmony/issues/145</span></span>
 <span id="cb17-103"><a href="config-files.html#cb17-103" aria-hidden="true" tabindex="-1"></a>    <span class="st">&quot;immunogenomics/harmony&quot;</span>, </span>
 <span id="cb17-104"><a href="config-files.html#cb17-104" aria-hidden="true" tabindex="-1"></a>    <span class="st">&quot;satijalab/azimuth&quot;</span></span>

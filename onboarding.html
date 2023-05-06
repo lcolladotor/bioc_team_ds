@@ -91,7 +91,7 @@ code span.al { color: #ff0000; font-weight: bold; } /* Alert */
 code span.an { color: #60a0b0; font-weight: bold; font-style: italic; } /* Annotation */
 code span.at { color: #7d9029; } /* Attribute */
 code span.bn { color: #40a070; } /* BaseN */
-code span.bu { } /* BuiltIn */
+code span.bu { color: #008000; } /* BuiltIn */
 code span.cf { color: #007020; font-weight: bold; } /* ControlFlow */
 code span.ch { color: #4070a0; } /* Char */
 code span.cn { color: #880000; } /* Constant */
@@ -104,7 +104,7 @@ code span.er { color: #ff0000; font-weight: bold; } /* Error */
 code span.ex { } /* Extension */
 code span.fl { color: #40a070; } /* Float */
 code span.fu { color: #06287e; } /* Function */
-code span.im { } /* Import */
+code span.im { color: #008000; font-weight: bold; } /* Import */
 code span.in { color: #60a0b0; font-weight: bold; font-style: italic; } /* Information */
 code span.kw { color: #007020; font-weight: bold; } /* Keyword */
 code span.op { color: #666666; } /* Operator */
@@ -727,11 +727,11 @@ example</code></pre>
 <li><a href="http://lcolladotor.github.io/2017/03/06/how-to-ask-for-help-for-bioconductor-packages/#.XXf1YpNKi50">How to ask for help for Bioconductor packages</a> blog post.</li>
 <li>Bioconductor <a href="https://bioconductor.org/packages/release/BiocViews.html#___Workflow">workflows</a> such as <a href="http://bioconductor.org/packages/release/workflows/vignettes/rnaseqGene/inst/doc/rnaseqGene.html">rnaseqGene</a> and <a href="http://bioconductor.org/packages/release/workflows/vignettes/sequencing/inst/doc/sequencing.html">sequencing</a> are very helpful to get started in the RNA sequencing (RNA-seq) field.</li>
 <li>BioC2019 workshops are available <a href="https://rebrand.ly/biocworkshops2019">here</a>. More recently, you might want to use <a href="http://orchestra.cancerdatasci.org/">Orchestra</a> to find recent workshops and even access them interactively.</li>
-<li><em><a href="https://bioconductor.org/packages/3.14/limma">limma</a></em>: is one of the main packages we use for analyzing data, particularly with the limma-voom method. Check the Bioconductor workflows that explain limma in more detail <a href="https://bioconductor.org/packages/release/BiocViews.html#___Workflow">here</a>.</li>
-<li><em><a href="https://bioconductor.org/packages/3.14/GenomicRanges">GenomicRanges</a></em>: is the package we use for interacting with genomic data across ranges. Check the <a href="http://bioconductor.org/packages/release/bioc/vignettes/GenomicRanges/inst/doc/GenomicRangesIntroduction.html">introduction</a> for more information.</li>
-<li><em><a href="https://bioconductor.org/packages/3.14/SummarizedExperiment">SummarizedExperiment</a></em>: is the package we use for creating and interacting with <code>RangedSummarizedExperiment</code> objects.</li>
-<li><em><a href="https://bioconductor.org/packages/3.14/bsseq">bsseq</a></em>: is highly useful for analyzing DNA methylation data, particularly whole genome bisulfite sequencing (WGBS) data.</li>
-<li><em><a href="https://bioconductor.org/packages/3.14/Biostrings">Biostrings</a></em>: is useful for dealing with sequence information such as the human genome sequence.</li>
+<li><em><a href="https://bioconductor.org/packages/3.17/limma">limma</a></em>: is one of the main packages we use for analyzing data, particularly with the limma-voom method. Check the Bioconductor workflows that explain limma in more detail <a href="https://bioconductor.org/packages/release/BiocViews.html#___Workflow">here</a>.</li>
+<li><em><a href="https://bioconductor.org/packages/3.17/GenomicRanges">GenomicRanges</a></em>: is the package we use for interacting with genomic data across ranges. Check the <a href="http://bioconductor.org/packages/release/bioc/vignettes/GenomicRanges/inst/doc/GenomicRangesIntroduction.html">introduction</a> for more information.</li>
+<li><em><a href="https://bioconductor.org/packages/3.17/SummarizedExperiment">SummarizedExperiment</a></em>: is the package we use for creating and interacting with <code>RangedSummarizedExperiment</code> objects.</li>
+<li><em><a href="https://bioconductor.org/packages/3.17/bsseq">bsseq</a></em>: is highly useful for analyzing DNA methylation data, particularly whole genome bisulfite sequencing (WGBS) data.</li>
+<li><em><a href="https://bioconductor.org/packages/3.17/Biostrings">Biostrings</a></em>: is useful for dealing with sequence information such as the human genome sequence.</li>
 </ul>
 </div>
 <div id="lab-software" class="section level3 hasAnchor" number="1.6.2">
@@ -741,7 +741,7 @@ example</code></pre>
 <li><em><a href="https://github.com/LieberInstitute/sgejobs">sgejobs</a></em> (<a href="http://lieberinstitute.github.io/sgejobs">documentation</a>): contains helper functions for writing and interacting with SGE jobs at JHPCE. We have several videos on <code>sgejobs</code> at the <a href="https://docs.google.com/spreadsheets/d/1is8dZSd0FZ9Qi1Zvq1uRhm-P1McnJRd_zxdAfCRoMfA/edit?usp=sharing"><strong>rstats club schedule</strong></a>.</li>
 <li><a href="https://github.com/LieberInstitute/jhpce_mod_source">jhpce_mod_source</a> and <a href="https://github.com/LieberInstitute/jhpce_module_config">jhpce_module_config</a> are our GitHub repositories for our LIBD modules.</li>
 <li><em><a href="https://github.com/LieberInstitute/shinycsv">shinycsv</a></em>: allows interactively exploring a table.</li>
-<li><em><a href="https://bioconductor.org/packages/3.14/megadepth">megadepth</a></em> by David Zhang, Christopher Wilks, et al is an R package for dealing with BigWig files. Check also the older <em><a href="https://github.com/LieberInstitute/recount.bwtool">recount.bwtool</a></em>.</li>
+<li><em><a href="https://bioconductor.org/packages/3.17/megadepth">megadepth</a></em> by David Zhang, Christopher Wilks, et al is an R package for dealing with BigWig files. Check also the older <em><a href="https://github.com/LieberInstitute/recount.bwtool">recount.bwtool</a></em>.</li>
 <li>LIBD RNA-seq processing pipeline: <a href="http://research.libd.org/SPEAQeasy/">SPEAQeasy</a>, and <a href="http://research.libd.org/SPEAQeasy-example/">SPEAQeasy-example</a>. See also the <a href="https://github.com/LieberInstitute/RNAseq-pipeline">initial version</a>.</li>
 <li><a href="https://github.com/LieberInstitute/globus"><code>globus</code></a>: our Globus share endpoints such that others can access our data.</li>
 </ul>
