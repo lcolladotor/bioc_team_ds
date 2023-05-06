@@ -129,7 +129,6 @@ remotes::install_cran(c(
 BiocManager::install(c(
     "BiocCheck",
     "ComplexHeatmap",
-    "dream",
     "DO.db",
     "ExploreModelMatrix",
     "iSEE",
@@ -142,6 +141,7 @@ BiocManager::install(c(
 ## GitHub packages
 remotes::install_github(c(
     "clauswilke/colorblindr",
+    "DiseaseNeurogenomics/dreamlet",
     ## Install from GitHub due to https://github.com/immunogenomics/harmony/issues/145
     "immunogenomics/harmony", 
     "satijalab/azimuth"
