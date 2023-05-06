@@ -103,7 +103,6 @@ remotes::install_cran(c(
     "available",
     "bookdown",
     "blogdown",
-    "clisymnbols",
     "clue",
     "corrplot",
     "getopt",
