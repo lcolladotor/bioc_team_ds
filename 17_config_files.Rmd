@@ -129,6 +129,7 @@ remotes::install_cran(c(
 BiocManager::install(c(
     "BiocCheck",
     "ComplexHeatmap",
+    "dream",
     "DO.db",
     "ExploreModelMatrix",
     "iSEE",
