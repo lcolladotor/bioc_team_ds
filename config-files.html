@@ -538,35 +538,38 @@ Do you want to use <a href="https://twitter.com/Bioconductor?ref_src=twsrc%5Etfw
 <span id="cb17-84"><a href="config-files.html#cb17-84" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb17-85"><a href="config-files.html#cb17-85" aria-hidden="true" tabindex="-1"></a><span class="do">## Bioc packages</span></span>
 <span id="cb17-86"><a href="config-files.html#cb17-86" aria-hidden="true" tabindex="-1"></a>BiocManager<span class="sc">::</span><span class="fu">install</span>(<span class="fu">c</span>(</span>
-<span id="cb17-87"><a href="config-files.html#cb17-87" aria-hidden="true" tabindex="-1"></a>    <span class="st">&quot;BiocCheck&quot;</span>,</span>
-<span id="cb17-88"><a href="config-files.html#cb17-88" aria-hidden="true" tabindex="-1"></a>    <span class="st">&quot;ComplexHeatmap&quot;</span>,</span>
-<span id="cb17-89"><a href="config-files.html#cb17-89" aria-hidden="true" tabindex="-1"></a>    <span class="st">&quot;DO.db&quot;</span>,</span>
-<span id="cb17-90"><a href="config-files.html#cb17-90" aria-hidden="true" tabindex="-1"></a>    <span class="st">&quot;ExploreModelMatrix&quot;</span>,</span>
-<span id="cb17-91"><a href="config-files.html#cb17-91" aria-hidden="true" tabindex="-1"></a>    <span class="st">&quot;iSEE&quot;</span>,</span>
-<span id="cb17-92"><a href="config-files.html#cb17-92" aria-hidden="true" tabindex="-1"></a>    <span class="st">&quot;scater&quot;</span>,</span>
-<span id="cb17-93"><a href="config-files.html#cb17-93" aria-hidden="true" tabindex="-1"></a>    <span class="st">&quot;scran&quot;</span>,</span>
-<span id="cb17-94"><a href="config-files.html#cb17-94" aria-hidden="true" tabindex="-1"></a>    <span class="st">&quot;sva&quot;</span>,</span>
-<span id="cb17-95"><a href="config-files.html#cb17-95" aria-hidden="true" tabindex="-1"></a>    <span class="st">&quot;variancePartition&quot;</span></span>
-<span id="cb17-96"><a href="config-files.html#cb17-96" aria-hidden="true" tabindex="-1"></a>), <span class="at">update =</span> <span class="cn">FALSE</span>)</span>
-<span id="cb17-97"><a href="config-files.html#cb17-97" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb17-98"><a href="config-files.html#cb17-98" aria-hidden="true" tabindex="-1"></a><span class="do">## GitHub packages</span></span>
-<span id="cb17-99"><a href="config-files.html#cb17-99" aria-hidden="true" tabindex="-1"></a>remotes<span class="sc">::</span><span class="fu">install_github</span>(<span class="fu">c</span>(</span>
-<span id="cb17-100"><a href="config-files.html#cb17-100" aria-hidden="true" tabindex="-1"></a>    <span class="st">&quot;clauswilke/colorblindr&quot;</span>,</span>
-<span id="cb17-101"><a href="config-files.html#cb17-101" aria-hidden="true" tabindex="-1"></a>    <span class="st">&quot;DiseaseNeurogenomics/dreamlet&quot;</span>,</span>
-<span id="cb17-102"><a href="config-files.html#cb17-102" aria-hidden="true" tabindex="-1"></a>    <span class="do">## Install from GitHub due to https://github.com/immunogenomics/harmony/issues/145</span></span>
-<span id="cb17-103"><a href="config-files.html#cb17-103" aria-hidden="true" tabindex="-1"></a>    <span class="st">&quot;immunogenomics/harmony&quot;</span>, </span>
-<span id="cb17-104"><a href="config-files.html#cb17-104" aria-hidden="true" tabindex="-1"></a>    <span class="st">&quot;satijalab/azimuth&quot;</span></span>
-<span id="cb17-105"><a href="config-files.html#cb17-105" aria-hidden="true" tabindex="-1"></a>))</span>
-<span id="cb17-106"><a href="config-files.html#cb17-106" aria-hidden="true" tabindex="-1"></a> <span class="do">## Related to https://github.com/gusevlab/fusion_twas/issues/14</span></span>
-<span id="cb17-107"><a href="config-files.html#cb17-107" aria-hidden="true" tabindex="-1"></a>remotes<span class="sc">::</span><span class="fu">install_github</span>(</span>
-<span id="cb17-108"><a href="config-files.html#cb17-108" aria-hidden="true" tabindex="-1"></a>    <span class="st">&quot;carbocation/plink2R/plink2R&quot;</span>,</span>
-<span id="cb17-109"><a href="config-files.html#cb17-109" aria-hidden="true" tabindex="-1"></a>    <span class="at">ref =</span> <span class="st">&quot;carbocation-permit-r361&quot;</span></span>
-<span id="cb17-110"><a href="config-files.html#cb17-110" aria-hidden="true" tabindex="-1"></a>)</span>
-<span id="cb17-111"><a href="config-files.html#cb17-111" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb17-112"><a href="config-files.html#cb17-112" aria-hidden="true" tabindex="-1"></a><span class="do">## Packages I only install at JHPCE</span></span>
-<span id="cb17-113"><a href="config-files.html#cb17-113" aria-hidden="true" tabindex="-1"></a>remotes<span class="sc">::</span><span class="fu">install_github</span>(<span class="fu">c</span>(</span>
-<span id="cb17-114"><a href="config-files.html#cb17-114" aria-hidden="true" tabindex="-1"></a>    <span class="st">&quot;muschellij2/clusterRundown&quot;</span></span>
-<span id="cb17-115"><a href="config-files.html#cb17-115" aria-hidden="true" tabindex="-1"></a>))</span></code></pre></div>
+<span id="cb17-87"><a href="config-files.html#cb17-87" aria-hidden="true" tabindex="-1"></a>    <span class="st">&quot;BayesSpace&quot;</span>,</span>
+<span id="cb17-88"><a href="config-files.html#cb17-88" aria-hidden="true" tabindex="-1"></a>    <span class="st">&quot;BiocCheck&quot;</span>,</span>
+<span id="cb17-89"><a href="config-files.html#cb17-89" aria-hidden="true" tabindex="-1"></a>    <span class="st">&quot;ComplexHeatmap&quot;</span>,</span>
+<span id="cb17-90"><a href="config-files.html#cb17-90" aria-hidden="true" tabindex="-1"></a>    <span class="st">&quot;DO.db&quot;</span>,</span>
+<span id="cb17-91"><a href="config-files.html#cb17-91" aria-hidden="true" tabindex="-1"></a>    <span class="st">&quot;EnhancedVolcano&quot;</span>,</span>
+<span id="cb17-92"><a href="config-files.html#cb17-92" aria-hidden="true" tabindex="-1"></a>    <span class="st">&quot;ExploreModelMatrix&quot;</span>,</span>
+<span id="cb17-93"><a href="config-files.html#cb17-93" aria-hidden="true" tabindex="-1"></a>    <span class="st">&quot;HubPub&quot;</span>,</span>
+<span id="cb17-94"><a href="config-files.html#cb17-94" aria-hidden="true" tabindex="-1"></a>    <span class="st">&quot;iSEE&quot;</span>,</span>
+<span id="cb17-95"><a href="config-files.html#cb17-95" aria-hidden="true" tabindex="-1"></a>    <span class="st">&quot;scater&quot;</span>,</span>
+<span id="cb17-96"><a href="config-files.html#cb17-96" aria-hidden="true" tabindex="-1"></a>    <span class="st">&quot;scran&quot;</span>,</span>
+<span id="cb17-97"><a href="config-files.html#cb17-97" aria-hidden="true" tabindex="-1"></a>    <span class="st">&quot;sva&quot;</span>,</span>
+<span id="cb17-98"><a href="config-files.html#cb17-98" aria-hidden="true" tabindex="-1"></a>    <span class="st">&quot;variancePartition&quot;</span></span>
+<span id="cb17-99"><a href="config-files.html#cb17-99" aria-hidden="true" tabindex="-1"></a>), <span class="at">update =</span> <span class="cn">FALSE</span>)</span>
+<span id="cb17-100"><a href="config-files.html#cb17-100" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb17-101"><a href="config-files.html#cb17-101" aria-hidden="true" tabindex="-1"></a><span class="do">## GitHub packages</span></span>
+<span id="cb17-102"><a href="config-files.html#cb17-102" aria-hidden="true" tabindex="-1"></a>remotes<span class="sc">::</span><span class="fu">install_github</span>(<span class="fu">c</span>(</span>
+<span id="cb17-103"><a href="config-files.html#cb17-103" aria-hidden="true" tabindex="-1"></a>    <span class="st">&quot;clauswilke/colorblindr&quot;</span>,</span>
+<span id="cb17-104"><a href="config-files.html#cb17-104" aria-hidden="true" tabindex="-1"></a>    <span class="st">&quot;DiseaseNeurogenomics/dreamlet&quot;</span>,</span>
+<span id="cb17-105"><a href="config-files.html#cb17-105" aria-hidden="true" tabindex="-1"></a>    <span class="do">## Install from GitHub due to https://github.com/immunogenomics/harmony/issues/145</span></span>
+<span id="cb17-106"><a href="config-files.html#cb17-106" aria-hidden="true" tabindex="-1"></a>    <span class="st">&quot;immunogenomics/harmony&quot;</span>, </span>
+<span id="cb17-107"><a href="config-files.html#cb17-107" aria-hidden="true" tabindex="-1"></a>    <span class="st">&quot;satijalab/azimuth&quot;</span></span>
+<span id="cb17-108"><a href="config-files.html#cb17-108" aria-hidden="true" tabindex="-1"></a>))</span>
+<span id="cb17-109"><a href="config-files.html#cb17-109" aria-hidden="true" tabindex="-1"></a> <span class="do">## Related to https://github.com/gusevlab/fusion_twas/issues/14</span></span>
+<span id="cb17-110"><a href="config-files.html#cb17-110" aria-hidden="true" tabindex="-1"></a>remotes<span class="sc">::</span><span class="fu">install_github</span>(</span>
+<span id="cb17-111"><a href="config-files.html#cb17-111" aria-hidden="true" tabindex="-1"></a>    <span class="st">&quot;carbocation/plink2R/plink2R&quot;</span>,</span>
+<span id="cb17-112"><a href="config-files.html#cb17-112" aria-hidden="true" tabindex="-1"></a>    <span class="at">ref =</span> <span class="st">&quot;carbocation-permit-r361&quot;</span></span>
+<span id="cb17-113"><a href="config-files.html#cb17-113" aria-hidden="true" tabindex="-1"></a>)</span>
+<span id="cb17-114"><a href="config-files.html#cb17-114" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb17-115"><a href="config-files.html#cb17-115" aria-hidden="true" tabindex="-1"></a><span class="do">## Packages I only install at JHPCE</span></span>
+<span id="cb17-116"><a href="config-files.html#cb17-116" aria-hidden="true" tabindex="-1"></a>remotes<span class="sc">::</span><span class="fu">install_github</span>(<span class="fu">c</span>(</span>
+<span id="cb17-117"><a href="config-files.html#cb17-117" aria-hidden="true" tabindex="-1"></a>    <span class="st">&quot;muschellij2/clusterRundown&quot;</span></span>
+<span id="cb17-118"><a href="config-files.html#cb17-118" aria-hidden="true" tabindex="-1"></a>))</span></code></pre></div>
 <div id="previously-installed" class="section level4 hasAnchor" number="17.1.1.1">
 <h4><span class="header-section-number">17.1.1.1</span> Previously installed<a href="config-files.html#previously-installed" class="anchor-section" aria-label="Anchor link to header"></a></h4>
 <p>As I described in <a href="http://lcolladotor.github.io/2017/05/04/updating-r/#.X6ICiIhKguU">my blog post on updating R</a>, I also like to saved my list of currently installed packages.</p>
