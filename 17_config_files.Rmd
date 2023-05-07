@@ -149,7 +149,8 @@ remotes::install_github(c(
     "immunogenomics/harmony", 
     "satijalab/azimuth"
 ))
- ## Related to https://github.com/gusevlab/fusion_twas/issues/14
+
+## Related to https://github.com/gusevlab/fusion_twas/issues/14
 remotes::install_github(
     "carbocation/plink2R/plink2R",
     ref = "carbocation-permit-r361"
