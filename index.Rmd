@@ -17,23 +17,11 @@ output:
 
 # Overview {-}
 
-Welcome to the **R/Bioconductor-powered Team Data Science** group by [Leonardo Collado Torres](http://lcolladotor.github.io) and team members! The purpose of this website is to serve as a guide for training new team members and colleagues on how we do R/Bioconductor-powered Team Data Science. 
+Welcome to the [**R/Bioconductor-powered Team Data Science**](http://lcolladotor.github.io) documentation website/book! The purpose of this website is to serve as a guide for training new team members and colleagues on how we do R/Bioconductor-powered Team Data Science. This documentation book contains more details for on boarding, how to ask for help, bootcamps, writing papers, authorship, configuration files, and much more.
 
 <img src="icon_192.png"/>
 
 As a team, we run [Data Science guidance sessions](#data-science-guidance-sessions) where we help others navigate the world of data science. Through those sessions we identify concepts that we might need to explain better and this book is where we concentrate all our knowledge. Thus it is continuously modified and expanded. We often refer others to this specific chapters of this book, which in a way is a gloried collection of bookmarks with some of our own explanations.
-
-We constantly create new content to share what we are learning or working on, which you might be interested in. In particular, we:
-
-* run the [LIBD rstats club](http://research.libd.org/rstatsclub/) which you can find on Twitter as [LIBDrstats](https://twitter.com/LIBDrstats) (check the [**rstats club schedule**](https://docs.google.com/spreadsheets/d/1is8dZSd0FZ9Qi1Zvq1uRhm-P1McnJRd_zxdAfCRoMfA/edit?usp=sharing))
-* discuss papers and software in our [team meetings](#team-meetings) (check our [**team schedule**](https://docs.google.com/spreadsheets/d/1r6552ySisg7_KpmJmChOvLHVWdMmss3bncEf2jqIM9k/edit?usp=sharing))
-* organize R/Bioconductor data science [**bootcamps**](#rbioconductor-data-science-bootcamps)
-
-For an overview of our recent work, check this video and [companion slides](https://speakerdeck.com/lcolladotor/libd-ds-tldr).
-
-<iframe width="560" height="315" src="https://www.youtube.com/embed/33scakbTNO0" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-
-<script async class="speakerdeck-embed" data-id="3c32410b600740abb4724486e83ebd30" data-ratio="1.77725118483412" src="//speakerdeck.com/assets/embed.js"></script>
 
 ## YouTube {-}
 
@@ -55,24 +43,6 @@ You can find our videos on **YouTube** at [lcolladotor/playlists](https://www.yo
 
 We follow the LIBD conduct policies as well the [Bioconductor code of conduct](http://bioconductor.org/about/code-of-conduct/). The [LIBD rstats club code of conduct](http://research.libd.org/rstatsclub/#coc) is currently outdated and will be updated based on the Bioconductor code of conduct.
 
-## Team members {-}
-
-* [Cynthia S Cardinault](https://github.com/cyntsc)
-* [Daianna González](https://github.com/daianna21)
-* [Hédia Tnani](https://github.com/HediaTnani)
-* [Louise A. Huuki-Myers](https://github.com/lahuuki)
-* [Nicholas J. Eagles](https://github.com/Nick-Eagles)
-* [Renee Garcia-Flores](https://github.com/reneegf)
-
-### Alumni {-}
-
-* [Abby Spangler](https://github.com/abspangler13)
-* [Amy Peterson](https://github.com/Ashkaunr)
-* [Arta Seyedian](https://github.com/aseyedia)
-* [Ashkaun Razmara](https://github.com/amy-peterson)
-* [Brenda Pardo](https://github.com/bpardo99)
-* [Joshua M. Stolz](https://github.com/joshstolz)
-
 ## Acknowledgements {-}
 
 The contents of this book have been refined thanks to feedback from:
@@ -82,31 +52,6 @@ The contents of this book have been refined thanks to feedback from:
 
 With lessons learned from former mentors [Jeffrey T. Leek](https://github.com/jtleek) and [Andrew E. Jaffe](https://github.com/andrewejaffe).
 
-## Join the team {-}
-
-If you are interested in joining the **R/Bioconductor-powered Team Data Science** group, please check our open positions at the [LIBD career opportunities website](https://www.libd.org/careers/). You might be interested in checking our [anonymous team survey results](https://lcolladotor.github.io/team_surveys/), which highlights some strengths but also some weaknesses and areas we can improve.
-
-If we don't have any open positions, please reach out to Leonardo with your CV, GitHub/GitLab/etc profile with open-source software, and a short description of why you are interested in our team.
-
 ## Twitter {-}
 
 You can find us on Twitter through the [LIBD rstats club account](https://twitter.com/LIBDrstats) and our own accounts where we share our work.
-
-* [Cynthia S Cardinault](https://twitter.com/cynthiasotocar)
-* [Daianna González](https://twitter.com/Daianna27635327)
-* [Hédia Tnani](https://twitter.com/TnaniHedia)
-* [Leonardo Collado Torres](https://twitter.com/lcolladotor)
-* [Louise A. Huuki-Myers](https://twitter.com/lahuuki)
-* Nicholas J. Eagles
-* [Renee Garcia-Flores](https://twitter.com/SubmarineGene)
-
-Alumni:
-
-* [Abby Spangler](https://twitter.com/abspangler)
-* [Amy Peterson](https://twitter.com/amptrsn)
-* [Arta Seyedian](https://twitter.com/artaseyedian)
-* [Askhaun Razmara](https://twitter.com/ashkaun_razmara)
-* [Brenda Pardo](https://twitter.com/PardoBree)
-* [Joshua M. Stolz](https://twitter.com/JoshStolz2)
-
-<a class="twitter-timeline" href="https://twitter.com/LIBDrstats?ref_src=twsrc%5Etfw">Tweets by LIBDrstats</a> <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
