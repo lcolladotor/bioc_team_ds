@@ -6,7 +6,7 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge" />
   <title>R session information | R/Bioconductor-powered Team Data Science</title>
   <meta name="description" content="R session information | R/Bioconductor-powered Team Data Science" />
-  <meta name="generator" content="bookdown 0.33 and GitBook 2.6.7" />
+  <meta name="generator" content="bookdown 0.34 and GitBook 2.6.7" />
 
   <meta property="og:title" content="R session information | R/Bioconductor-powered Team Data Science" />
   <meta property="og:type" content="book" />
@@ -118,6 +118,10 @@ code span.vs { color: #4070a0; } /* VerbatimString */
 code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warning */
 </style>
 
+<style type="text/css">
+  
+  div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+</style>
 
 <link rel="stylesheet" href="style.css" type="text/css" />
 </head>
@@ -407,7 +411,7 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <div id="r-session-information-1" class="section level1 unnumbered hasAnchor">
 <h1>R session information<a href="r-session-information-1.html#r-session-information-1" class="anchor-section" aria-label="Anchor link to header"></a></h1>
 <p>If you find any typos or issues, please let us know through <a href="https://github.com/lcolladotor/bioc_team_ds/issues">github.com/lcolladotor/bioc_team_ds</a>. Thank you!</p>
-<p>This book was last updated on 2023-05-08 05:01:32.642803.</p>
+<p>This book was last updated on 2023-05-11 06:11:16.951955.</p>
 <p>Details on the R version used for making this book. The source code is available at <a href="https://github.com/lcolladotor/bioc_team_ds"><code>lcolladotor/bioc_team_ds</code></a>.</p>
 <div class="sourceCode" id="cb27"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb27-1"><a href="r-session-information-1.html#cb27-1" aria-hidden="true" tabindex="-1"></a><span class="do">## Load the package at the top of your script</span></span>
 <span id="cb27-2"><a href="r-session-information-1.html#cb27-2" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(<span class="st">&quot;sessioninfo&quot;</span>)</span>
@@ -416,10 +420,10 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <span id="cb27-5"><a href="r-session-information-1.html#cb27-5" aria-hidden="true" tabindex="-1"></a><span class="fu">print</span>(<span class="st">&#39;Reproducibility information:&#39;</span>)</span></code></pre></div>
 <pre><code>## [1] &quot;Reproducibility information:&quot;</code></pre>
 <div class="sourceCode" id="cb29"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb29-1"><a href="r-session-information-1.html#cb29-1" aria-hidden="true" tabindex="-1"></a><span class="fu">Sys.time</span>()</span></code></pre></div>
-<pre><code>## [1] &quot;2023-05-08 05:01:32 UTC&quot;</code></pre>
+<pre><code>## [1] &quot;2023-05-11 06:11:16 UTC&quot;</code></pre>
 <div class="sourceCode" id="cb31"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb31-1"><a href="r-session-information-1.html#cb31-1" aria-hidden="true" tabindex="-1"></a><span class="fu">proc.time</span>()</span></code></pre></div>
 <pre><code>##    user  system elapsed 
-##   0.967   0.100   1.049</code></pre>
+##   0.899   0.141   0.883</code></pre>
 <div class="sourceCode" id="cb33"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb33-1"><a href="r-session-information-1.html#cb33-1" aria-hidden="true" tabindex="-1"></a><span class="fu">options</span>(<span class="at">width =</span> <span class="dv">120</span>)</span>
 <span id="cb33-2"><a href="r-session-information-1.html#cb33-2" aria-hidden="true" tabindex="-1"></a><span class="fu">session_info</span>()</span></code></pre></div>
 <pre><code>## ─ Session info ───────────────────────────────────────────────────────────────────────────────────────────────────────
@@ -432,19 +436,19 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 ##  collate  en_US.UTF-8
 ##  ctype    en_US.UTF-8
 ##  tz       UTC
-##  date     2023-05-08
+##  date     2023-05-11
 ##  pandoc   2.19.2 @ /usr/local/bin/ (via rmarkdown)
 ## 
 ## ─ Packages ───────────────────────────────────────────────────────────────────────────────────────────────────────────
 ##  package     * version date (UTC) lib source
 ##  BiocManager   1.30.20 2023-02-24 [1] RSPM (R 4.1.0)
 ##  BiocStyle     2.28.0  2023-04-25 [1] Bioconductor
-##  bookdown      0.33    2023-03-06 [1] RSPM (R 4.1.0)
+##  bookdown      0.34    2023-05-09 [1] RSPM (R 4.3.0)
 ##  bslib         0.4.2   2022-12-16 [2] RSPM (R 4.3.0)
 ##  cachem        1.0.8   2023-05-01 [2] RSPM (R 4.3.0)
 ##  cli           3.6.1   2023-03-23 [2] RSPM (R 4.3.0)
 ##  digest        0.6.31  2022-12-11 [2] RSPM (R 4.3.0)
-##  evaluate      0.20    2023-01-17 [2] RSPM (R 4.3.0)
+##  evaluate      0.21    2023-05-05 [2] RSPM (R 4.3.0)
 ##  fastmap       1.1.1   2023-02-24 [2] RSPM (R 4.3.0)
 ##  htmltools     0.5.5   2023-03-23 [2] RSPM (R 4.3.0)
 ##  jquerylib     0.1.4   2021-04-26 [2] RSPM (R 4.3.0)
@@ -514,10 +518,10 @@ This work is licensed under <a href="https://creativecommons.org/licenses/by-nc-
 
 <p class="powered-by footer-license-icons">
     <a href="https://creativecommons.org/licenses/by-nc-sa/4.0" rel="noopener noreferrer" target="_blank">
-      <img src="https://search.creativecommons.org/static/img/cc_icon.svg" alt="CC icon" width="32px">
-      <img src="https://search.creativecommons.org/static/img/cc-by_icon.svg" alt="CC by icon" width="32px">
-      <img src="https://search.creativecommons.org/static/img/cc-nc_icon.svg" alt="CC NC icon" width="32px">
-      <img src="https://search.creativecommons.org/static/img/cc-sa_icon.svg" alt="CC SA icon" width="32px">
+      <img src="https://mirrors.creativecommons.org/presskit/icons/cc.svg" alt="CC icon" width="32px">
+      <img src="https://mirrors.creativecommons.org/presskit/icons/by.svg" alt="CC by icon" width="32px">
+      <img src="https://mirrors.creativecommons.org/presskit/icons/nc.svg" alt="CC NC icon" width="32px">
+      <img src="https://mirrors.creativecommons.org/presskit/icons/sa.svg" alt="CC SA icon" width="32px">
     </a>
 </p>
 
