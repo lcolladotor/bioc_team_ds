@@ -197,8 +197,7 @@ echo ""
 if [[ $HOSTNAME == compute-* ]] || [[ $HOSTNAME == transfer-* ]]; then
 	echo "**** Note that warning/error messages are expected for files and directories that you are not the owner of."
 	echo "The expected warning/error messages are: "
-	echo "    'Failed setxattr operation: Operation not permitted'"
-	echo " or 'chgrp: changing group of ‘some_JHPCE_file_path’: Operation not permitted'"
+	echo "    'chgrp: changing group of ‘some_JHPCE_file_path’: Operation not permitted'"
 	echo " or 'chmod: changing permissions of ‘some_JHPCE_file_path’: Operation not permitted'."
 	echo "If for many files you are not the owner (creator of), you will get lots of these warning/error messages, this is expected!"
 	echo "Error or warnings with another syntax are likely real. ****"
@@ -217,27 +216,27 @@ if [[ $HOSTNAME == compute-* ]] || [[ $HOSTNAME == transfer-* ]]; then
 	sleep 5
 	date
 	
-	find ${1} -type d -exec nfs4_setfacl -a "A:g:hickslab@cm.cluster:RWX" {} \;
-	find ${1} -type d -exec nfs4_setfacl -a "A:gfdi:hickslab@cm.cluster:RWX" {} \;
-	find ${1} -type f -exec nfs4_setfacl -a "A:g:hickslab@cm.cluster:RW" {} \;
+	find ${1} -user ${USER} -type d -exec nfs4_setfacl -a "A:g:hickslab@cm.cluster:RWX" {} \;
+	find ${1} -user ${USER} -type d -exec nfs4_setfacl -a "A:gfdi:hickslab@cm.cluster:RWX" {} \;
+	find ${1} -user ${USER} -type f -exec nfs4_setfacl -a "A:g:hickslab@cm.cluster:RW" {} \;
 	
 	echo ""
 	echo "**** Setting read (R), write (W), and execute (X) permissions for lieber_lcolladotor ****"
 	sleep 5
 	date
 	
-	find ${1} -type d -exec nfs4_setfacl -a "A:g:lieber_lcolladotor@cm.cluster:RWX" {} \;
-	find ${1} -type d -exec nfs4_setfacl -a "A:gfdi:lieber_lcolladotor@cm.cluster:RWX" {} \;
-	find ${1} -type f -exec nfs4_setfacl -a "A:g:lieber_lcolladotor@cm.cluster:RW" {} \;
+	find ${1} -user ${USER} -type d -exec nfs4_setfacl -a "A:g:lieber_lcolladotor@cm.cluster:RWX" {} \;
+	find ${1} -user ${USER} -type d -exec nfs4_setfacl -a "A:gfdi:lieber_lcolladotor@cm.cluster:RWX" {} \;
+	find ${1} -user ${USER} -type f -exec nfs4_setfacl -a "A:g:lieber_lcolladotor@cm.cluster:RW" {} \;
 	
 	echo ""
 	echo "**** Setting read (R), write (W), and execute (X) permissions for lieber_marmaypag ****"
 	sleep 5
 	date
 	
-	find ${1} -type d -exec nfs4_setfacl -a "A:g:lieber_marmaypag@cm.cluster:RWX" {} \;
-	find ${1} -type d -exec nfs4_setfacl -a "A:gfdi:lieber_marmaypag@cm.cluster:RWX" {} \;
-	find ${1} -type f -exec nfs4_setfacl -a "A:g:lieber_marmaypag@cm.cluster:RW" {} \;
+	find ${1} -user ${USER} -type d -exec nfs4_setfacl -a "A:g:lieber_marmaypag@cm.cluster:RWX" {} \;
+	find ${1} -user ${USER} -type d -exec nfs4_setfacl -a "A:gfdi:lieber_marmaypag@cm.cluster:RWX" {} \;
+	find ${1} -user ${USER} -type f -exec nfs4_setfacl -a "A:g:lieber_marmaypag@cm.cluster:RW" {} \;
 	
 	## To move away from lieber_jaffe
 	echo ""
@@ -265,7 +264,7 @@ if [[ $HOSTNAME == compute-* ]] || [[ $HOSTNAME == transfer-* ]]; then
 	echo "**** Setting the group sticky bit ****"
 	sleep 5
 	date
-	find ${1} -type d | xargs chmod g+s
+	find ${1} -user ${USER} -type d | xargs chmod g+s
 	
 	## Check settings
 	echo ""
@@ -292,8 +291,7 @@ echo ""
 if [[ $HOSTNAME == compute-* ]] || [[ $HOSTNAME == transfer-* ]]; then
 	echo "**** Note that warning/error messages are expected for files and directories that you are not the owner of."
 	echo "The expected warning/error messages are: "
-	echo "    'Failed setxattr operation: Operation not permitted'"
-	echo " or 'chgrp: changing group of ‘some_JHPCE_file_path’: Operation not permitted'"
+	echo "    'chgrp: changing group of ‘some_JHPCE_file_path’: Operation not permitted'"
 	echo " or 'chmod: changing permissions of ‘some_JHPCE_file_path’: Operation not permitted'."
 	echo "If for many files you are not the owner (creator of), you will get lots of these warning/error messages, this is expected!"
 	echo "Error or warnings with another syntax are likely real. ****"
@@ -312,38 +310,38 @@ if [[ $HOSTNAME == compute-* ]] || [[ $HOSTNAME == transfer-* ]]; then
 	sleep 5
 	date
 
-	find ${1} -type d -exec nfs4_setfacl -a "A:g:lieber_moods@cm.cluster:RWX" {} \;
-	find ${1} -type d -exec nfs4_setfacl -a "A:gfdi:lieber_moods@cm.cluster:RWX" {} \;
-	find ${1} -type f -exec nfs4_setfacl -a "A:g:lieber_moods@cm.cluster:RW" {} \;
+	find ${1} -user ${USER} -type d -exec nfs4_setfacl -a "A:g:lieber_moods@cm.cluster:RWX" {} \;
+	find ${1} -user ${USER} -type d -exec nfs4_setfacl -a "A:gfdi:lieber_moods@cm.cluster:RWX" {} \;
+	find ${1} -user ${USER} -type f -exec nfs4_setfacl -a "A:g:lieber_moods@cm.cluster:RW" {} \;
 	
 	echo ""
 	echo "**** Setting read (R), write (W), and execute (X) permissions for lieber_lcolladotor ****"
 	sleep 5
 	date
 	
-	find ${1} -type d -exec nfs4_setfacl -a "A:g:lieber_lcolladotor@cm.cluster:RWX" {} \;
-	find ${1} -type d -exec nfs4_setfacl -a "A:gfdi:lieber_lcolladotor@cm.cluster:RWX" {} \;
-	find ${1} -type f -exec nfs4_setfacl -a "A:g:lieber_lcolladotor@cm.cluster:RW" {} \;
+	find ${1} -user ${USER} -type d -exec nfs4_setfacl -a "A:g:lieber_lcolladotor@cm.cluster:RWX" {} \;
+	find ${1} -user ${USER} -type d -exec nfs4_setfacl -a "A:gfdi:lieber_lcolladotor@cm.cluster:RWX" {} \;
+	find ${1} -user ${USER} -type f -exec nfs4_setfacl -a "A:g:lieber_lcolladotor@cm.cluster:RW" {} \;
 	
 	echo ""	
 	echo "**** Setting read (R) and execute (X) permissions for lieber ****"
 	sleep 5
 	date
-	find ${1} -type d -exec nfs4_setfacl -a "A:g:lieber@cm.cluster:RX" {} \;
-	find ${1} -type d -exec nfs4_setfacl -a "A:gfdi:lieber@cm.cluster:RX" {} \;
-	find ${1} -type f -exec nfs4_setfacl -a "A:g:lieber@cm.cluster:R" {} \;
+	find ${1} -user ${USER} -type d -exec nfs4_setfacl -a "A:g:lieber@cm.cluster:RX" {} \;
+	find ${1} -user ${USER} -type d -exec nfs4_setfacl -a "A:gfdi:lieber@cm.cluster:RX" {} \;
+	find ${1} -user ${USER} -type f -exec nfs4_setfacl -a "A:g:lieber@cm.cluster:R" {} \;
 	
 	echo ""	
 	echo "**** Removing permissions for lieber_marmaypag ****"
 	sleep 5
 	date
-	find ${1} -type d -exec nfs4_setfacl -x "A:g:lieber_marmaypag@cm.cluster:rwaDxtcy" {} \;
-	find ${1} -type d -exec nfs4_setfacl -x "A:gfdi:lieber_marmaypag@cm.cluster:rwaDxtcy" {} \;
-	find ${1} -type f -exec nfs4_setfacl -x "A:g:lieber_marmaypag@cm.cluster:rwatcy" {} \;
+	find ${1} -user ${USER} -type d -exec nfs4_setfacl -x "A:g:lieber_marmaypag@cm.cluster:rwaDxtcy" {} \;
+	find ${1} -user ${USER} -type d -exec nfs4_setfacl -x "A:gfdi:lieber_marmaypag@cm.cluster:rwaDxtcy" {} \;
+	find ${1} -user ${USER} -type f -exec nfs4_setfacl -x "A:g:lieber_marmaypag@cm.cluster:rwatcy" {} \;
 
-	find ${1} -type d -exec nfs4_setfacl -x "A:g:4218:rwaDxtcy" {} \;
-	find ${1} -type d -exec nfs4_setfacl -x "A:gfdi:4218:rwaDxtcy" {} \;
-	find ${1} -type f -exec nfs4_setfacl -x "A:g:4218:rwatcy" {} \;
+	find ${1} -user ${USER} -type d -exec nfs4_setfacl -x "A:g:4218:rwaDxtcy" {} \;
+	find ${1} -user ${USER} -type d -exec nfs4_setfacl -x "A:gfdi:4218:rwaDxtcy" {} \;
+	find ${1} -user ${USER} -type f -exec nfs4_setfacl -x "A:g:4218:rwatcy" {} \;
 	
 	## To move away from lieber_jaffe
 	echo ""
@@ -366,7 +364,7 @@ if [[ $HOSTNAME == compute-* ]] || [[ $HOSTNAME == transfer-* ]]; then
 	echo "**** Setting the group sticky bit ****"
 	sleep 5
 	date
-	find ${1} -type d | xargs chmod g+s
+	find ${1} -user ${USER} -type d | xargs chmod g+s
 	
 	## Check settings
 	echo ""
