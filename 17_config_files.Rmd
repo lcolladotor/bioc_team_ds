@@ -345,7 +345,64 @@ Edit it with `usethis::edit_git_config()`.
 
 Edit it with `usethis::edit_git_ignore()`. These files are ignored by default by git on my computer.
 
-_I no longer have this file since many people didn't have it, so they would see files with `git status` that I wouldn't. To simplify things, I have deleted this (for now)._
+_I no longer have this file at JHPCE (though I have one on my laptop) since many people didn't have it, so they would see files with `git status` that I wouldn't. To simplify things, I have deleted this (for now)._
+
+```
+*~
+
+## More at
+## https://help.github.com/articles/ignoring-files
+
+# R history #
+#############
+.Rapp.history
+.Rhistory
+
+# LaTeX stuff #
+###############
+*.aux
+*.out
+
+
+# Compiled source #
+###################
+*.com
+*.class
+*.dll
+*.exe
+*.o
+*.so
+
+# Packages #
+############
+# it's better to unpack these files and commit the raw source
+# git has its own built in compression methods
+*.7z
+*.dmg
+*.gz
+*.iso
+*.jar
+*.rar
+*.tar
+*.zip
+
+# Logs and databases #
+######################
+*.log
+*.sql
+*.sqlite
+
+# OS generated files #
+######################
+.DS_Store
+.DS_Store?
+._*
+.Spotlight-V100
+.Trashes
+Icon?
+ehthumbs.db
+Thumbs.db
+```
 
 ## JHPCE files
 
