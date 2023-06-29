@@ -717,6 +717,8 @@ Do you want to use <a href="https://twitter.com/Bioconductor?ref_src=twsrc%5Etfw
 <pre><code>[user]
     name = lcolladotor
     email = lcolladotor@gmail.com
+[pull]
+    rebase = false
 [alias]
     co = checkout
     br = branch
@@ -730,11 +732,70 @@ Do you want to use <a href="https://twitter.com/Bioconductor?ref_src=twsrc%5Etfw
 [core]
     ignorecase = true
 </code></pre>
+<p>On my laptop the end is a little different given that I do use a <code>~/.gitignore_global</code> file there and use TextMate as my text editor for commit messages.</p>
+<pre><code>[core]
+    ignorecase = true
+    excludesfile = ~/.gitignore_global
+    editor = mate -w</code></pre>
 </div>
 <div id="gitignore_global" class="section level3 hasAnchor" number="17.3.2">
 <h3><span class="header-section-number">17.3.2</span> <code>~/.gitignore_global</code><a href="config-files.html#gitignore_global" class="anchor-section" aria-label="Anchor link to header"></a></h3>
 <p>Edit it with <code>usethis::edit_git_ignore()</code>. These files are ignored by default by git on my computer.</p>
-<p><em>I no longer have this file since many people didn’t have it, so they would see files with <code>git status</code> that I wouldn’t. To simplify things, I have deleted this (for now).</em></p>
+<p><em>I no longer have this file at JHPCE (though I have one on my laptop) since many people didn’t have it, so they would see files with <code>git status</code> that I wouldn’t. To simplify things, I have deleted this (for now).</em></p>
+<pre><code>*~
+
+## More at
+## https://help.github.com/articles/ignoring-files
+
+# R history #
+#############
+.Rapp.history
+.Rhistory
+
+# LaTeX stuff #
+###############
+*.aux
+*.out
+
+
+# Compiled source #
+###################
+*.com
+*.class
+*.dll
+*.exe
+*.o
+*.so
+
+# Packages #
+############
+# it&#39;s better to unpack these files and commit the raw source
+# git has its own built in compression methods
+*.7z
+*.dmg
+*.gz
+*.iso
+*.jar
+*.rar
+*.tar
+*.zip
+
+# Logs and databases #
+######################
+*.log
+*.sql
+*.sqlite
+
+# OS generated files #
+######################
+.DS_Store
+.DS_Store?
+._*
+.Spotlight-V100
+.Trashes
+Icon?
+ehthumbs.db
+Thumbs.db</code></pre>
 </div>
 </div>
 <div id="jhpce-files" class="section level2 hasAnchor" number="17.4">
@@ -749,136 +810,136 @@ Do you want to use <a href="https://twitter.com/Bioconductor?ref_src=twsrc%5Etfw
 <div id="sge_request" class="section level3 hasAnchor" number="17.4.1">
 <h3><span class="header-section-number">17.4.1</span> <code>~/.sge_request</code><a href="config-files.html#sge_request" class="anchor-section" aria-label="Anchor link to header"></a></h3>
 <p>This file configures the default SGE requests under <code>qsub</code> and <code>qrsh</code>.</p>
-<div class="sourceCode" id="cb23"><pre class="sourceCode bash"><code class="sourceCode bash"><span id="cb23-1"><a href="config-files.html#cb23-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Check http://www.biostat.jhsph.edu/bit/cluster-usage.html for more instructions</span></span>
-<span id="cb23-2"><a href="config-files.html#cb23-2" aria-hidden="true" tabindex="-1"></a><span class="co">#</span></span>
-<span id="cb23-3"><a href="config-files.html#cb23-3" aria-hidden="true" tabindex="-1"></a><span class="co"># Set defaults for mem_free and h_vmem</span></span>
-<span id="cb23-4"><a href="config-files.html#cb23-4" aria-hidden="true" tabindex="-1"></a><span class="ex">-l</span> mem_free=12G,h_vmem=12G</span>
-<span id="cb23-5"><a href="config-files.html#cb23-5" aria-hidden="true" tabindex="-1"></a><span class="co">#</span></span>
-<span id="cb23-6"><a href="config-files.html#cb23-6" aria-hidden="true" tabindex="-1"></a><span class="co"># Set the standard value for stack size limit</span></span>
-<span id="cb23-7"><a href="config-files.html#cb23-7" aria-hidden="true" tabindex="-1"></a><span class="co"># (needed for some programs to run properly when h_vmem is set)</span></span>
-<span id="cb23-8"><a href="config-files.html#cb23-8" aria-hidden="true" tabindex="-1"></a><span class="ex">-l</span> h_stack=256M</span>
-<span id="cb23-9"><a href="config-files.html#cb23-9" aria-hidden="true" tabindex="-1"></a><span class="co">#</span></span>
-<span id="cb23-10"><a href="config-files.html#cb23-10" aria-hidden="true" tabindex="-1"></a><span class="co"># Set a default maximum file size that an SGE job can create</span></span>
-<span id="cb23-11"><a href="config-files.html#cb23-11" aria-hidden="true" tabindex="-1"></a><span class="ex">-l</span> h_fsize=100G</span>
-<span id="cb23-12"><a href="config-files.html#cb23-12" aria-hidden="true" tabindex="-1"></a><span class="co"># Define my email</span></span>
-<span id="cb23-13"><a href="config-files.html#cb23-13" aria-hidden="true" tabindex="-1"></a><span class="ex">-M</span> YOUR_EMAIL@gmail.com</span>
-<span id="cb23-14"><a href="config-files.html#cb23-14" aria-hidden="true" tabindex="-1"></a><span class="co"># To get an email on a job use -m e</span></span>
-<span id="cb23-15"><a href="config-files.html#cb23-15" aria-hidden="true" tabindex="-1"></a><span class="co"># Keep in mind the limits with sending emails from</span></span>
-<span id="cb23-16"><a href="config-files.html#cb23-16" aria-hidden="true" tabindex="-1"></a><span class="co"># https://jhpce.jhu.edu/email-qsub</span></span></code></pre></div>
+<div class="sourceCode" id="cb25"><pre class="sourceCode bash"><code class="sourceCode bash"><span id="cb25-1"><a href="config-files.html#cb25-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Check http://www.biostat.jhsph.edu/bit/cluster-usage.html for more instructions</span></span>
+<span id="cb25-2"><a href="config-files.html#cb25-2" aria-hidden="true" tabindex="-1"></a><span class="co">#</span></span>
+<span id="cb25-3"><a href="config-files.html#cb25-3" aria-hidden="true" tabindex="-1"></a><span class="co"># Set defaults for mem_free and h_vmem</span></span>
+<span id="cb25-4"><a href="config-files.html#cb25-4" aria-hidden="true" tabindex="-1"></a><span class="ex">-l</span> mem_free=12G,h_vmem=12G</span>
+<span id="cb25-5"><a href="config-files.html#cb25-5" aria-hidden="true" tabindex="-1"></a><span class="co">#</span></span>
+<span id="cb25-6"><a href="config-files.html#cb25-6" aria-hidden="true" tabindex="-1"></a><span class="co"># Set the standard value for stack size limit</span></span>
+<span id="cb25-7"><a href="config-files.html#cb25-7" aria-hidden="true" tabindex="-1"></a><span class="co"># (needed for some programs to run properly when h_vmem is set)</span></span>
+<span id="cb25-8"><a href="config-files.html#cb25-8" aria-hidden="true" tabindex="-1"></a><span class="ex">-l</span> h_stack=256M</span>
+<span id="cb25-9"><a href="config-files.html#cb25-9" aria-hidden="true" tabindex="-1"></a><span class="co">#</span></span>
+<span id="cb25-10"><a href="config-files.html#cb25-10" aria-hidden="true" tabindex="-1"></a><span class="co"># Set a default maximum file size that an SGE job can create</span></span>
+<span id="cb25-11"><a href="config-files.html#cb25-11" aria-hidden="true" tabindex="-1"></a><span class="ex">-l</span> h_fsize=100G</span>
+<span id="cb25-12"><a href="config-files.html#cb25-12" aria-hidden="true" tabindex="-1"></a><span class="co"># Define my email</span></span>
+<span id="cb25-13"><a href="config-files.html#cb25-13" aria-hidden="true" tabindex="-1"></a><span class="ex">-M</span> YOUR_EMAIL@gmail.com</span>
+<span id="cb25-14"><a href="config-files.html#cb25-14" aria-hidden="true" tabindex="-1"></a><span class="co"># To get an email on a job use -m e</span></span>
+<span id="cb25-15"><a href="config-files.html#cb25-15" aria-hidden="true" tabindex="-1"></a><span class="co"># Keep in mind the limits with sending emails from</span></span>
+<span id="cb25-16"><a href="config-files.html#cb25-16" aria-hidden="true" tabindex="-1"></a><span class="co"># https://jhpce.jhu.edu/email-qsub</span></span></code></pre></div>
 </div>
 <div id="bashrc" class="section level3 hasAnchor" number="17.4.2">
 <h3><span class="header-section-number">17.4.2</span> <code>~/.bashrc</code><a href="config-files.html#bashrc" class="anchor-section" aria-label="Anchor link to header"></a></h3>
 <p>This is the main configuration file for JHPCE, but it’s really for any linux system. Some of the commands have to change when working on macOS.</p>
-<div class="sourceCode" id="cb24"><pre class="sourceCode bash"><code class="sourceCode bash"><span id="cb24-1"><a href="config-files.html#cb24-1" aria-hidden="true" tabindex="-1"></a><span class="co"># .bashrc</span></span>
-<span id="cb24-2"><a href="config-files.html#cb24-2" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb24-3"><a href="config-files.html#cb24-3" aria-hidden="true" tabindex="-1"></a><span class="co"># Source global definitions</span></span>
-<span id="cb24-4"><a href="config-files.html#cb24-4" aria-hidden="true" tabindex="-1"></a><span class="cf">if</span> <span class="bu">[</span> <span class="ot">-f</span> /etc/bashrc <span class="bu">]</span><span class="kw">;</span> <span class="cf">then</span></span>
-<span id="cb24-5"><a href="config-files.html#cb24-5" aria-hidden="true" tabindex="-1"></a>    <span class="bu">.</span> /etc/bashrc</span>
-<span id="cb24-6"><a href="config-files.html#cb24-6" aria-hidden="true" tabindex="-1"></a><span class="cf">fi</span></span>
-<span id="cb24-7"><a href="config-files.html#cb24-7" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb24-8"><a href="config-files.html#cb24-8" aria-hidden="true" tabindex="-1"></a><span class="co"># User specific aliases and functions</span></span>
-<span id="cb24-9"><a href="config-files.html#cb24-9" aria-hidden="true" tabindex="-1"></a><span class="co"># Auto-complete command from history</span></span>
-<span id="cb24-10"><a href="config-files.html#cb24-10" aria-hidden="true" tabindex="-1"></a><span class="co"># http://lindesk.com/2009/04/customize-terminal-configuration-setting-bash-cli-power-user/</span></span>
-<span id="cb24-11"><a href="config-files.html#cb24-11" aria-hidden="true" tabindex="-1"></a><span class="bu">export</span> <span class="va">INPUTRC</span><span class="op">=</span>~/.inputrc</span>
-<span id="cb24-12"><a href="config-files.html#cb24-12" aria-hidden="true" tabindex="-1"></a><span class="co"># http://www.biostat.jhsph.edu/~afisher/ComputingClub/webfiles/KasperHansenPres/IntermediateUnix.pdf</span></span>
-<span id="cb24-13"><a href="config-files.html#cb24-13" aria-hidden="true" tabindex="-1"></a><span class="co"># https://unix.stackexchange.com/questions/48713/how-can-i-remove-duplicates-in-my-bash-history-preserving-order</span></span>
-<span id="cb24-14"><a href="config-files.html#cb24-14" aria-hidden="true" tabindex="-1"></a><span class="bu">export</span> <span class="va">HISTCONTROL</span><span class="op">=</span>ignoreboth:erasedups</span>
-<span id="cb24-15"><a href="config-files.html#cb24-15" aria-hidden="true" tabindex="-1"></a><span class="bu">export</span> <span class="va">HISTSIZE</span><span class="op">=</span>20000</span>
-<span id="cb24-16"><a href="config-files.html#cb24-16" aria-hidden="true" tabindex="-1"></a><span class="bu">shopt</span> <span class="at">-s</span> histappend</span>
-<span id="cb24-17"><a href="config-files.html#cb24-17" aria-hidden="true" tabindex="-1"></a><span class="bu">shopt</span> <span class="at">-s</span> cmdhist</span>
-<span id="cb24-18"><a href="config-files.html#cb24-18" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb24-19"><a href="config-files.html#cb24-19" aria-hidden="true" tabindex="-1"></a><span class="co"># http://superuser.com/questions/384769/alias-rm-rm-i-considered-harmful</span></span>
-<span id="cb24-20"><a href="config-files.html#cb24-20" aria-hidden="true" tabindex="-1"></a><span class="bu">alias</span> rmi=<span class="st">&#39;rm -i&#39;</span></span>
-<span id="cb24-21"><a href="config-files.html#cb24-21" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb24-22"><a href="config-files.html#cb24-22" aria-hidden="true" tabindex="-1"></a><span class="co"># Change command prompt</span></span>
-<span id="cb24-23"><a href="config-files.html#cb24-23" aria-hidden="true" tabindex="-1"></a><span class="co"># http://www.cyberciti.biz/tips/howto-linux-unix-bash-shell-setup-prompt.html</span></span>
-<span id="cb24-24"><a href="config-files.html#cb24-24" aria-hidden="true" tabindex="-1"></a><span class="co"># http://www.cyberciti.biz/faq/bash-shell-change-the-color-of-my-shell-prompt-under-linux-or-unix/</span></span>
-<span id="cb24-25"><a href="config-files.html#cb24-25" aria-hidden="true" tabindex="-1"></a><span class="co"># https://bbs.archlinux.org/viewtopic.php?id=48910</span></span>
-<span id="cb24-26"><a href="config-files.html#cb24-26" aria-hidden="true" tabindex="-1"></a><span class="co"># previous in enigma2: &quot;[\u@\h \W]\$ &quot;</span></span>
-<span id="cb24-27"><a href="config-files.html#cb24-27" aria-hidden="true" tabindex="-1"></a><span class="co"># previously in mac: &quot;\h:\W \u\$ &quot;</span></span>
-<span id="cb24-28"><a href="config-files.html#cb24-28" aria-hidden="true" tabindex="-1"></a><span class="bu">export</span> <span class="va">PS1</span><span class="op">=</span><span class="st">&quot;\[\e[0;33m\]\A \W </span><span class="dt">\$</span><span class="st"> \[\e[m\]&quot;</span></span>
-<span id="cb24-29"><a href="config-files.html#cb24-29" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb24-30"><a href="config-files.html#cb24-30" aria-hidden="true" tabindex="-1"></a><span class="co"># LIDB projects</span></span>
-<span id="cb24-31"><a href="config-files.html#cb24-31" aria-hidden="true" tabindex="-1"></a><span class="bu">alias</span> labold=<span class="st">&quot;cd /dcl01/lieber/ajaffe/lab&quot;</span></span>
-<span id="cb24-32"><a href="config-files.html#cb24-32" aria-hidden="true" tabindex="-1"></a><span class="bu">alias</span> lab=<span class="st">&quot;cd /dcl01/ajaffe/data/lab&quot;</span></span>
-<span id="cb24-33"><a href="config-files.html#cb24-33" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb24-34"><a href="config-files.html#cb24-34" aria-hidden="true" tabindex="-1"></a><span class="co">## 10X genomics</span></span>
-<span id="cb24-35"><a href="config-files.html#cb24-35" aria-hidden="true" tabindex="-1"></a><span class="bu">alias</span> single=<span class="st">&quot;cd /dcl01/ajaffe/data/lab/singleCell&quot;</span></span>
-<span id="cb24-36"><a href="config-files.html#cb24-36" aria-hidden="true" tabindex="-1"></a><span class="bu">alias</span> spatialold=<span class="st">&quot;cd /dcl02/lieber/ajaffe/SpatialTranscriptomics/HumanPilot&quot;</span></span>
-<span id="cb24-37"><a href="config-files.html#cb24-37" aria-hidden="true" tabindex="-1"></a><span class="bu">alias</span> spatial=<span class="st">&quot;cd /dcl02/lieber/ajaffe/SpatialTranscriptomics/LIBD&quot;</span></span>
-<span id="cb24-38"><a href="config-files.html#cb24-38" aria-hidden="true" tabindex="-1"></a><span class="bu">alias</span> matt=<span class="st">&quot;cd /dcl01/lieber/ajaffe/Matt/MNT_thesis/snRNAseq/10x_pilot_FINAL&quot;</span></span>
-<span id="cb24-39"><a href="config-files.html#cb24-39" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb24-40"><a href="config-files.html#cb24-40" aria-hidden="true" tabindex="-1"></a><span class="co">## Team home directories</span></span>
-<span id="cb24-41"><a href="config-files.html#cb24-41" aria-hidden="true" tabindex="-1"></a><span class="bu">alias</span> dcl01=<span class="st">&quot;cd /dcl01/lieber/lcolladotor&quot;</span></span>
-<span id="cb24-42"><a href="config-files.html#cb24-42" aria-hidden="true" tabindex="-1"></a><span class="bu">alias</span> dcl02=<span class="st">&quot;cd /dcl02/lieber/lcolladotor&quot;</span></span>
-<span id="cb24-43"><a href="config-files.html#cb24-43" aria-hidden="true" tabindex="-1"></a><span class="bu">alias</span> dcs04=<span class="st">&quot;cd /dcs04/lieber/lcolladotor&quot;</span></span>
-<span id="cb24-44"><a href="config-files.html#cb24-44" aria-hidden="true" tabindex="-1"></a><span class="bu">alias</span> dcs05=<span class="st">&quot;cd /dcs05/lieber/lcolladotor&quot;</span></span>
-<span id="cb24-45"><a href="config-files.html#cb24-45" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb24-46"><a href="config-files.html#cb24-46" aria-hidden="true" tabindex="-1"></a><span class="co">## Creating modules</span></span>
-<span id="cb24-47"><a href="config-files.html#cb24-47" aria-hidden="true" tabindex="-1"></a><span class="co"># https://lmod.readthedocs.io/en/latest/050_lua_modulefiles.html</span></span>
-<span id="cb24-48"><a href="config-files.html#cb24-48" aria-hidden="true" tabindex="-1"></a><span class="cf">if</span> <span class="kw">[[</span> <span class="va">$HOSTNAME</span> <span class="ot">==</span> compute-094.<span class="pp">*</span> <span class="kw">]]</span> <span class="kw">||</span> <span class="kw">[[</span> <span class="va">$HOSTNAME</span> <span class="ot">==</span> compute-111.<span class="pp">*</span> <span class="kw">]];</span> <span class="cf">then</span></span>
-<span id="cb24-49"><a href="config-files.html#cb24-49" aria-hidden="true" tabindex="-1"></a>    <span class="bu">echo</span> <span class="st">&quot;Adding LIBD SLURM module aliases&quot;</span></span>
-<span id="cb24-50"><a href="config-files.html#cb24-50" aria-hidden="true" tabindex="-1"></a>    <span class="bu">alias</span> modsrc=<span class="st">&quot;cd /jhpce/shared/libd/core&quot;</span></span>
-<span id="cb24-51"><a href="config-files.html#cb24-51" aria-hidden="true" tabindex="-1"></a>    <span class="bu">alias</span> modlua=<span class="st">&quot;cd /jhpce/shared/libd/modulefiles&quot;</span></span>
-<span id="cb24-52"><a href="config-files.html#cb24-52" aria-hidden="true" tabindex="-1"></a><span class="cf">else</span></span>
-<span id="cb24-53"><a href="config-files.html#cb24-53" aria-hidden="true" tabindex="-1"></a>    <span class="bu">echo</span> <span class="st">&quot;Adding LIBD SGE module aliases&quot;</span></span>
-<span id="cb24-54"><a href="config-files.html#cb24-54" aria-hidden="true" tabindex="-1"></a>    <span class="bu">alias</span> modsrc=<span class="st">&quot;cd /jhpce/shared/jhpce/libd&quot;</span></span>
-<span id="cb24-55"><a href="config-files.html#cb24-55" aria-hidden="true" tabindex="-1"></a>    <span class="bu">alias</span> modlua=<span class="st">&quot;cd /jhpce/shared/jhpce/modulefiles/libd&quot;</span></span>
-<span id="cb24-56"><a href="config-files.html#cb24-56" aria-hidden="true" tabindex="-1"></a><span class="cf">fi</span></span>
-<span id="cb24-57"><a href="config-files.html#cb24-57" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb24-58"><a href="config-files.html#cb24-58" aria-hidden="true" tabindex="-1"></a><span class="co"># colors</span></span>
-<span id="cb24-59"><a href="config-files.html#cb24-59" aria-hidden="true" tabindex="-1"></a><span class="co"># http://norbauer.com/notebooks/code/notes/ls-colors-and-terminal-app</span></span>
-<span id="cb24-60"><a href="config-files.html#cb24-60" aria-hidden="true" tabindex="-1"></a><span class="co"># used BSD pattern ExGxFxDxBxEgEdxbxgxhxd on http://geoff.greer.fm/lscolors/</span></span>
-<span id="cb24-61"><a href="config-files.html#cb24-61" aria-hidden="true" tabindex="-1"></a><span class="co"># that tool does not specify the colors, which I did by looking manually at</span></span>
-<span id="cb24-62"><a href="config-files.html#cb24-62" aria-hidden="true" tabindex="-1"></a><span class="co"># http://blog.twistedcode.org/2008/04/lscolors-explained.html</span></span>
-<span id="cb24-63"><a href="config-files.html#cb24-63" aria-hidden="true" tabindex="-1"></a><span class="co"># and the norbauer.com site previously mentioned</span></span>
-<span id="cb24-64"><a href="config-files.html#cb24-64" aria-hidden="true" tabindex="-1"></a><span class="bu">alias</span> ls=<span class="st">&quot;ls --color=auto&quot;</span></span>
-<span id="cb24-65"><a href="config-files.html#cb24-65" aria-hidden="true" tabindex="-1"></a><span class="co">#export LS_COLORS=&quot;di=1;34;40:ln=1;36;40:so=1;35;40:pi=1;93;40:ex=1;31;40:bd=1;34;46:cd=1;34;43:su=0;41:sg=0;46:tw=0;47:ow=0;43&quot;</span></span>
-<span id="cb24-66"><a href="config-files.html#cb24-66" aria-hidden="true" tabindex="-1"></a><span class="co">## After switching to RStudio:</span></span>
-<span id="cb24-67"><a href="config-files.html#cb24-67" aria-hidden="true" tabindex="-1"></a><span class="co"># https://askubuntu.com/questions/466198/how-do-i-change-the-color-for-directories-with-ls-in-the-console</span></span>
-<span id="cb24-68"><a href="config-files.html#cb24-68" aria-hidden="true" tabindex="-1"></a><span class="bu">export</span> <span class="va">LS_COLORS</span><span class="op">=</span><span class="st">&quot;di=0;32:ln=0;36:so=0;35:pi=0;93:ex=0;31:bd=0;34;46:cd=0;34;43:su=0;41:sg=0;46:tw=0;47:ow=0;43:fi=0;33&quot;</span></span>
-<span id="cb24-69"><a href="config-files.html#cb24-69" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb24-70"><a href="config-files.html#cb24-70" aria-hidden="true" tabindex="-1"></a><span class="co"># Uncomment below for Mac and comment the two previous commands</span></span>
-<span id="cb24-71"><a href="config-files.html#cb24-71" aria-hidden="true" tabindex="-1"></a><span class="co">#export CLICOLOR=1</span></span>
-<span id="cb24-72"><a href="config-files.html#cb24-72" aria-hidden="true" tabindex="-1"></a><span class="co">#export LSCOLORS=&quot;ExGxFxDxBxEgEdxbxgxhxd&quot;</span></span>
-<span id="cb24-73"><a href="config-files.html#cb24-73" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb24-74"><a href="config-files.html#cb24-74" aria-hidden="true" tabindex="-1"></a><span class="co">## For setup:</span></span>
-<span id="cb24-75"><a href="config-files.html#cb24-75" aria-hidden="true" tabindex="-1"></a><span class="co"># http://erniemiller.org/2011/12/12/textmate-2-rmate-awesome/</span></span>
-<span id="cb24-76"><a href="config-files.html#cb24-76" aria-hidden="true" tabindex="-1"></a><span class="co">## For laptop config:</span></span>
-<span id="cb24-77"><a href="config-files.html#cb24-77" aria-hidden="true" tabindex="-1"></a><span class="co"># http://jonsimpson.co.uk/log/2011/rmate-ssh-remoteforward</span></span>
-<span id="cb24-78"><a href="config-files.html#cb24-78" aria-hidden="true" tabindex="-1"></a><span class="co">## rmate port</span></span>
-<span id="cb24-79"><a href="config-files.html#cb24-79" aria-hidden="true" tabindex="-1"></a><span class="co"># https://github.com/textmate/rmate</span></span>
-<span id="cb24-80"><a href="config-files.html#cb24-80" aria-hidden="true" tabindex="-1"></a><span class="bu">export</span> <span class="va">RMATE_PORT</span><span class="op">=</span><span class="st">&quot;SOME_PORT_YOU_CHOOSE&quot;</span></span>
-<span id="cb24-81"><a href="config-files.html#cb24-81" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb24-82"><a href="config-files.html#cb24-82" aria-hidden="true" tabindex="-1"></a><span class="co">## Load the git module by default when qrsh/qsub</span></span>
-<span id="cb24-83"><a href="config-files.html#cb24-83" aria-hidden="true" tabindex="-1"></a><span class="co">## thanks to Jiong Yang</span></span>
-<span id="cb24-84"><a href="config-files.html#cb24-84" aria-hidden="true" tabindex="-1"></a><span class="cf">if</span> <span class="kw">[[</span> <span class="va">$HOSTNAME</span> <span class="ot">==</span> compute-<span class="pp">*</span> <span class="kw">]]</span> <span class="kw">||</span> <span class="kw">[[</span> <span class="va">$HOSTNAME</span> <span class="ot">==</span> transfer-<span class="pp">*</span> <span class="kw">]];</span> <span class="cf">then</span></span>
-<span id="cb24-85"><a href="config-files.html#cb24-85" aria-hidden="true" tabindex="-1"></a>    <span class="cf">if</span> <span class="kw">[[</span> <span class="va">$HOSTNAME</span> <span class="ot">==</span> compute-094.<span class="pp">*</span> <span class="kw">]]</span> <span class="kw">||</span> <span class="kw">[[</span> <span class="va">$HOSTNAME</span> <span class="ot">==</span> compute-111.<span class="pp">*</span> <span class="kw">]];</span> <span class="cf">then</span></span>
-<span id="cb24-86"><a href="config-files.html#cb24-86" aria-hidden="true" tabindex="-1"></a>        <span class="bu">echo</span> <span class="st">&quot;Adding LIBD SLURM modules&quot;</span></span>
-<span id="cb24-87"><a href="config-files.html#cb24-87" aria-hidden="true" tabindex="-1"></a>        <span class="ex">module</span> use /jhpce/shared/libd/modulefiles</span>
-<span id="cb24-88"><a href="config-files.html#cb24-88" aria-hidden="true" tabindex="-1"></a>        <span class="co"># module load git-status-size/github</span></span>
-<span id="cb24-89"><a href="config-files.html#cb24-89" aria-hidden="true" tabindex="-1"></a>        <span class="co"># module load git-lfs/2.8.0</span></span>
-<span id="cb24-90"><a href="config-files.html#cb24-90" aria-hidden="true" tabindex="-1"></a>        <span class="co"># module load rmate/1.5.10</span></span>
-<span id="cb24-91"><a href="config-files.html#cb24-91" aria-hidden="true" tabindex="-1"></a>        <span class="co"># module load conda_R/4.3</span></span>
-<span id="cb24-92"><a href="config-files.html#cb24-92" aria-hidden="true" tabindex="-1"></a>    <span class="cf">else</span></span>
-<span id="cb24-93"><a href="config-files.html#cb24-93" aria-hidden="true" tabindex="-1"></a>        <span class="bu">echo</span> <span class="st">&quot;Adding LIBD SGE modules&quot;</span></span>
-<span id="cb24-94"><a href="config-files.html#cb24-94" aria-hidden="true" tabindex="-1"></a>        <span class="ex">module</span> use /jhpce/shared/jhpce/modulefiles/libd</span>
-<span id="cb24-95"><a href="config-files.html#cb24-95" aria-hidden="true" tabindex="-1"></a>        <span class="bu">echo</span> <span class="st">&quot;Loading git&quot;</span></span>
-<span id="cb24-96"><a href="config-files.html#cb24-96" aria-hidden="true" tabindex="-1"></a>        <span class="ex">module</span> load git</span>
-<span id="cb24-97"><a href="config-files.html#cb24-97" aria-hidden="true" tabindex="-1"></a>        <span class="ex">module</span> load git-status-size/github</span>
-<span id="cb24-98"><a href="config-files.html#cb24-98" aria-hidden="true" tabindex="-1"></a>        <span class="ex">module</span> load git-lfs/2.8.0</span>
-<span id="cb24-99"><a href="config-files.html#cb24-99" aria-hidden="true" tabindex="-1"></a>        <span class="ex">module</span> load rmate/1.5.10</span>
-<span id="cb24-100"><a href="config-files.html#cb24-100" aria-hidden="true" tabindex="-1"></a>        <span class="ex">module</span> load conda_R/4.3</span>
-<span id="cb24-101"><a href="config-files.html#cb24-101" aria-hidden="true" tabindex="-1"></a>    <span class="cf">fi</span></span>
-<span id="cb24-102"><a href="config-files.html#cb24-102" aria-hidden="true" tabindex="-1"></a><span class="cf">fi</span></span>
-<span id="cb24-103"><a href="config-files.html#cb24-103" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb24-104"><a href="config-files.html#cb24-104" aria-hidden="true" tabindex="-1"></a><span class="co">## To deal with running nextflow without requesting much more memory</span></span>
-<span id="cb24-105"><a href="config-files.html#cb24-105" aria-hidden="true" tabindex="-1"></a><span class="co">## https://jhpce.jhu.edu/question/why-do-i-get-memory-errors-when-running-java/</span></span>
-<span id="cb24-106"><a href="config-files.html#cb24-106" aria-hidden="true" tabindex="-1"></a><span class="bu">export</span> <span class="va">_JAVA_OPTIONS</span><span class="op">=</span><span class="st">&quot;-Xms5g -Xmx6g&quot;</span></span>
-<span id="cb24-107"><a href="config-files.html#cb24-107" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb24-108"><a href="config-files.html#cb24-108" aria-hidden="true" tabindex="-1"></a><span class="co">## From https://twitter.com/fellgernon/status/1258455434073124865?s=20</span></span>
-<span id="cb24-109"><a href="config-files.html#cb24-109" aria-hidden="true" tabindex="-1"></a><span class="co">## and https://www.cyberciti.biz/tips/understanding-linux-unix-umask-value-usage.html</span></span>
-<span id="cb24-110"><a href="config-files.html#cb24-110" aria-hidden="true" tabindex="-1"></a><span class="bu">umask</span> u=rwx,g=rwx,o= <span class="co">## equivalent to umask 007</span></span></code></pre></div>
+<div class="sourceCode" id="cb26"><pre class="sourceCode bash"><code class="sourceCode bash"><span id="cb26-1"><a href="config-files.html#cb26-1" aria-hidden="true" tabindex="-1"></a><span class="co"># .bashrc</span></span>
+<span id="cb26-2"><a href="config-files.html#cb26-2" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb26-3"><a href="config-files.html#cb26-3" aria-hidden="true" tabindex="-1"></a><span class="co"># Source global definitions</span></span>
+<span id="cb26-4"><a href="config-files.html#cb26-4" aria-hidden="true" tabindex="-1"></a><span class="cf">if</span> <span class="bu">[</span> <span class="ot">-f</span> /etc/bashrc <span class="bu">]</span><span class="kw">;</span> <span class="cf">then</span></span>
+<span id="cb26-5"><a href="config-files.html#cb26-5" aria-hidden="true" tabindex="-1"></a>    <span class="bu">.</span> /etc/bashrc</span>
+<span id="cb26-6"><a href="config-files.html#cb26-6" aria-hidden="true" tabindex="-1"></a><span class="cf">fi</span></span>
+<span id="cb26-7"><a href="config-files.html#cb26-7" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb26-8"><a href="config-files.html#cb26-8" aria-hidden="true" tabindex="-1"></a><span class="co"># User specific aliases and functions</span></span>
+<span id="cb26-9"><a href="config-files.html#cb26-9" aria-hidden="true" tabindex="-1"></a><span class="co"># Auto-complete command from history</span></span>
+<span id="cb26-10"><a href="config-files.html#cb26-10" aria-hidden="true" tabindex="-1"></a><span class="co"># http://lindesk.com/2009/04/customize-terminal-configuration-setting-bash-cli-power-user/</span></span>
+<span id="cb26-11"><a href="config-files.html#cb26-11" aria-hidden="true" tabindex="-1"></a><span class="bu">export</span> <span class="va">INPUTRC</span><span class="op">=</span>~/.inputrc</span>
+<span id="cb26-12"><a href="config-files.html#cb26-12" aria-hidden="true" tabindex="-1"></a><span class="co"># http://www.biostat.jhsph.edu/~afisher/ComputingClub/webfiles/KasperHansenPres/IntermediateUnix.pdf</span></span>
+<span id="cb26-13"><a href="config-files.html#cb26-13" aria-hidden="true" tabindex="-1"></a><span class="co"># https://unix.stackexchange.com/questions/48713/how-can-i-remove-duplicates-in-my-bash-history-preserving-order</span></span>
+<span id="cb26-14"><a href="config-files.html#cb26-14" aria-hidden="true" tabindex="-1"></a><span class="bu">export</span> <span class="va">HISTCONTROL</span><span class="op">=</span>ignoreboth:erasedups</span>
+<span id="cb26-15"><a href="config-files.html#cb26-15" aria-hidden="true" tabindex="-1"></a><span class="bu">export</span> <span class="va">HISTSIZE</span><span class="op">=</span>20000</span>
+<span id="cb26-16"><a href="config-files.html#cb26-16" aria-hidden="true" tabindex="-1"></a><span class="bu">shopt</span> <span class="at">-s</span> histappend</span>
+<span id="cb26-17"><a href="config-files.html#cb26-17" aria-hidden="true" tabindex="-1"></a><span class="bu">shopt</span> <span class="at">-s</span> cmdhist</span>
+<span id="cb26-18"><a href="config-files.html#cb26-18" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb26-19"><a href="config-files.html#cb26-19" aria-hidden="true" tabindex="-1"></a><span class="co"># http://superuser.com/questions/384769/alias-rm-rm-i-considered-harmful</span></span>
+<span id="cb26-20"><a href="config-files.html#cb26-20" aria-hidden="true" tabindex="-1"></a><span class="bu">alias</span> rmi=<span class="st">&#39;rm -i&#39;</span></span>
+<span id="cb26-21"><a href="config-files.html#cb26-21" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb26-22"><a href="config-files.html#cb26-22" aria-hidden="true" tabindex="-1"></a><span class="co"># Change command prompt</span></span>
+<span id="cb26-23"><a href="config-files.html#cb26-23" aria-hidden="true" tabindex="-1"></a><span class="co"># http://www.cyberciti.biz/tips/howto-linux-unix-bash-shell-setup-prompt.html</span></span>
+<span id="cb26-24"><a href="config-files.html#cb26-24" aria-hidden="true" tabindex="-1"></a><span class="co"># http://www.cyberciti.biz/faq/bash-shell-change-the-color-of-my-shell-prompt-under-linux-or-unix/</span></span>
+<span id="cb26-25"><a href="config-files.html#cb26-25" aria-hidden="true" tabindex="-1"></a><span class="co"># https://bbs.archlinux.org/viewtopic.php?id=48910</span></span>
+<span id="cb26-26"><a href="config-files.html#cb26-26" aria-hidden="true" tabindex="-1"></a><span class="co"># previous in enigma2: &quot;[\u@\h \W]\$ &quot;</span></span>
+<span id="cb26-27"><a href="config-files.html#cb26-27" aria-hidden="true" tabindex="-1"></a><span class="co"># previously in mac: &quot;\h:\W \u\$ &quot;</span></span>
+<span id="cb26-28"><a href="config-files.html#cb26-28" aria-hidden="true" tabindex="-1"></a><span class="bu">export</span> <span class="va">PS1</span><span class="op">=</span><span class="st">&quot;\[\e[0;33m\]\A \W </span><span class="dt">\$</span><span class="st"> \[\e[m\]&quot;</span></span>
+<span id="cb26-29"><a href="config-files.html#cb26-29" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb26-30"><a href="config-files.html#cb26-30" aria-hidden="true" tabindex="-1"></a><span class="co"># LIDB projects</span></span>
+<span id="cb26-31"><a href="config-files.html#cb26-31" aria-hidden="true" tabindex="-1"></a><span class="bu">alias</span> labold=<span class="st">&quot;cd /dcl01/lieber/ajaffe/lab&quot;</span></span>
+<span id="cb26-32"><a href="config-files.html#cb26-32" aria-hidden="true" tabindex="-1"></a><span class="bu">alias</span> lab=<span class="st">&quot;cd /dcl01/ajaffe/data/lab&quot;</span></span>
+<span id="cb26-33"><a href="config-files.html#cb26-33" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb26-34"><a href="config-files.html#cb26-34" aria-hidden="true" tabindex="-1"></a><span class="co">## 10X genomics</span></span>
+<span id="cb26-35"><a href="config-files.html#cb26-35" aria-hidden="true" tabindex="-1"></a><span class="bu">alias</span> single=<span class="st">&quot;cd /dcl01/ajaffe/data/lab/singleCell&quot;</span></span>
+<span id="cb26-36"><a href="config-files.html#cb26-36" aria-hidden="true" tabindex="-1"></a><span class="bu">alias</span> spatialold=<span class="st">&quot;cd /dcl02/lieber/ajaffe/SpatialTranscriptomics/HumanPilot&quot;</span></span>
+<span id="cb26-37"><a href="config-files.html#cb26-37" aria-hidden="true" tabindex="-1"></a><span class="bu">alias</span> spatial=<span class="st">&quot;cd /dcl02/lieber/ajaffe/SpatialTranscriptomics/LIBD&quot;</span></span>
+<span id="cb26-38"><a href="config-files.html#cb26-38" aria-hidden="true" tabindex="-1"></a><span class="bu">alias</span> matt=<span class="st">&quot;cd /dcl01/lieber/ajaffe/Matt/MNT_thesis/snRNAseq/10x_pilot_FINAL&quot;</span></span>
+<span id="cb26-39"><a href="config-files.html#cb26-39" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb26-40"><a href="config-files.html#cb26-40" aria-hidden="true" tabindex="-1"></a><span class="co">## Team home directories</span></span>
+<span id="cb26-41"><a href="config-files.html#cb26-41" aria-hidden="true" tabindex="-1"></a><span class="bu">alias</span> dcl01=<span class="st">&quot;cd /dcl01/lieber/lcolladotor&quot;</span></span>
+<span id="cb26-42"><a href="config-files.html#cb26-42" aria-hidden="true" tabindex="-1"></a><span class="bu">alias</span> dcl02=<span class="st">&quot;cd /dcl02/lieber/lcolladotor&quot;</span></span>
+<span id="cb26-43"><a href="config-files.html#cb26-43" aria-hidden="true" tabindex="-1"></a><span class="bu">alias</span> dcs04=<span class="st">&quot;cd /dcs04/lieber/lcolladotor&quot;</span></span>
+<span id="cb26-44"><a href="config-files.html#cb26-44" aria-hidden="true" tabindex="-1"></a><span class="bu">alias</span> dcs05=<span class="st">&quot;cd /dcs05/lieber/lcolladotor&quot;</span></span>
+<span id="cb26-45"><a href="config-files.html#cb26-45" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb26-46"><a href="config-files.html#cb26-46" aria-hidden="true" tabindex="-1"></a><span class="co">## Creating modules</span></span>
+<span id="cb26-47"><a href="config-files.html#cb26-47" aria-hidden="true" tabindex="-1"></a><span class="co"># https://lmod.readthedocs.io/en/latest/050_lua_modulefiles.html</span></span>
+<span id="cb26-48"><a href="config-files.html#cb26-48" aria-hidden="true" tabindex="-1"></a><span class="cf">if</span> <span class="kw">[[</span> <span class="va">$HOSTNAME</span> <span class="ot">==</span> compute-094.<span class="pp">*</span> <span class="kw">]]</span> <span class="kw">||</span> <span class="kw">[[</span> <span class="va">$HOSTNAME</span> <span class="ot">==</span> compute-111.<span class="pp">*</span> <span class="kw">]];</span> <span class="cf">then</span></span>
+<span id="cb26-49"><a href="config-files.html#cb26-49" aria-hidden="true" tabindex="-1"></a>    <span class="bu">echo</span> <span class="st">&quot;Adding LIBD SLURM module aliases&quot;</span></span>
+<span id="cb26-50"><a href="config-files.html#cb26-50" aria-hidden="true" tabindex="-1"></a>    <span class="bu">alias</span> modsrc=<span class="st">&quot;cd /jhpce/shared/libd/core&quot;</span></span>
+<span id="cb26-51"><a href="config-files.html#cb26-51" aria-hidden="true" tabindex="-1"></a>    <span class="bu">alias</span> modlua=<span class="st">&quot;cd /jhpce/shared/libd/modulefiles&quot;</span></span>
+<span id="cb26-52"><a href="config-files.html#cb26-52" aria-hidden="true" tabindex="-1"></a><span class="cf">else</span></span>
+<span id="cb26-53"><a href="config-files.html#cb26-53" aria-hidden="true" tabindex="-1"></a>    <span class="bu">echo</span> <span class="st">&quot;Adding LIBD SGE module aliases&quot;</span></span>
+<span id="cb26-54"><a href="config-files.html#cb26-54" aria-hidden="true" tabindex="-1"></a>    <span class="bu">alias</span> modsrc=<span class="st">&quot;cd /jhpce/shared/jhpce/libd&quot;</span></span>
+<span id="cb26-55"><a href="config-files.html#cb26-55" aria-hidden="true" tabindex="-1"></a>    <span class="bu">alias</span> modlua=<span class="st">&quot;cd /jhpce/shared/jhpce/modulefiles/libd&quot;</span></span>
+<span id="cb26-56"><a href="config-files.html#cb26-56" aria-hidden="true" tabindex="-1"></a><span class="cf">fi</span></span>
+<span id="cb26-57"><a href="config-files.html#cb26-57" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb26-58"><a href="config-files.html#cb26-58" aria-hidden="true" tabindex="-1"></a><span class="co"># colors</span></span>
+<span id="cb26-59"><a href="config-files.html#cb26-59" aria-hidden="true" tabindex="-1"></a><span class="co"># http://norbauer.com/notebooks/code/notes/ls-colors-and-terminal-app</span></span>
+<span id="cb26-60"><a href="config-files.html#cb26-60" aria-hidden="true" tabindex="-1"></a><span class="co"># used BSD pattern ExGxFxDxBxEgEdxbxgxhxd on http://geoff.greer.fm/lscolors/</span></span>
+<span id="cb26-61"><a href="config-files.html#cb26-61" aria-hidden="true" tabindex="-1"></a><span class="co"># that tool does not specify the colors, which I did by looking manually at</span></span>
+<span id="cb26-62"><a href="config-files.html#cb26-62" aria-hidden="true" tabindex="-1"></a><span class="co"># http://blog.twistedcode.org/2008/04/lscolors-explained.html</span></span>
+<span id="cb26-63"><a href="config-files.html#cb26-63" aria-hidden="true" tabindex="-1"></a><span class="co"># and the norbauer.com site previously mentioned</span></span>
+<span id="cb26-64"><a href="config-files.html#cb26-64" aria-hidden="true" tabindex="-1"></a><span class="bu">alias</span> ls=<span class="st">&quot;ls --color=auto&quot;</span></span>
+<span id="cb26-65"><a href="config-files.html#cb26-65" aria-hidden="true" tabindex="-1"></a><span class="co">#export LS_COLORS=&quot;di=1;34;40:ln=1;36;40:so=1;35;40:pi=1;93;40:ex=1;31;40:bd=1;34;46:cd=1;34;43:su=0;41:sg=0;46:tw=0;47:ow=0;43&quot;</span></span>
+<span id="cb26-66"><a href="config-files.html#cb26-66" aria-hidden="true" tabindex="-1"></a><span class="co">## After switching to RStudio:</span></span>
+<span id="cb26-67"><a href="config-files.html#cb26-67" aria-hidden="true" tabindex="-1"></a><span class="co"># https://askubuntu.com/questions/466198/how-do-i-change-the-color-for-directories-with-ls-in-the-console</span></span>
+<span id="cb26-68"><a href="config-files.html#cb26-68" aria-hidden="true" tabindex="-1"></a><span class="bu">export</span> <span class="va">LS_COLORS</span><span class="op">=</span><span class="st">&quot;di=0;32:ln=0;36:so=0;35:pi=0;93:ex=0;31:bd=0;34;46:cd=0;34;43:su=0;41:sg=0;46:tw=0;47:ow=0;43:fi=0;33&quot;</span></span>
+<span id="cb26-69"><a href="config-files.html#cb26-69" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb26-70"><a href="config-files.html#cb26-70" aria-hidden="true" tabindex="-1"></a><span class="co"># Uncomment below for Mac and comment the two previous commands</span></span>
+<span id="cb26-71"><a href="config-files.html#cb26-71" aria-hidden="true" tabindex="-1"></a><span class="co">#export CLICOLOR=1</span></span>
+<span id="cb26-72"><a href="config-files.html#cb26-72" aria-hidden="true" tabindex="-1"></a><span class="co">#export LSCOLORS=&quot;ExGxFxDxBxEgEdxbxgxhxd&quot;</span></span>
+<span id="cb26-73"><a href="config-files.html#cb26-73" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb26-74"><a href="config-files.html#cb26-74" aria-hidden="true" tabindex="-1"></a><span class="co">## For setup:</span></span>
+<span id="cb26-75"><a href="config-files.html#cb26-75" aria-hidden="true" tabindex="-1"></a><span class="co"># http://erniemiller.org/2011/12/12/textmate-2-rmate-awesome/</span></span>
+<span id="cb26-76"><a href="config-files.html#cb26-76" aria-hidden="true" tabindex="-1"></a><span class="co">## For laptop config:</span></span>
+<span id="cb26-77"><a href="config-files.html#cb26-77" aria-hidden="true" tabindex="-1"></a><span class="co"># http://jonsimpson.co.uk/log/2011/rmate-ssh-remoteforward</span></span>
+<span id="cb26-78"><a href="config-files.html#cb26-78" aria-hidden="true" tabindex="-1"></a><span class="co">## rmate port</span></span>
+<span id="cb26-79"><a href="config-files.html#cb26-79" aria-hidden="true" tabindex="-1"></a><span class="co"># https://github.com/textmate/rmate</span></span>
+<span id="cb26-80"><a href="config-files.html#cb26-80" aria-hidden="true" tabindex="-1"></a><span class="bu">export</span> <span class="va">RMATE_PORT</span><span class="op">=</span><span class="st">&quot;SOME_PORT_YOU_CHOOSE&quot;</span></span>
+<span id="cb26-81"><a href="config-files.html#cb26-81" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb26-82"><a href="config-files.html#cb26-82" aria-hidden="true" tabindex="-1"></a><span class="co">## Load the git module by default when qrsh/qsub</span></span>
+<span id="cb26-83"><a href="config-files.html#cb26-83" aria-hidden="true" tabindex="-1"></a><span class="co">## thanks to Jiong Yang</span></span>
+<span id="cb26-84"><a href="config-files.html#cb26-84" aria-hidden="true" tabindex="-1"></a><span class="cf">if</span> <span class="kw">[[</span> <span class="va">$HOSTNAME</span> <span class="ot">==</span> compute-<span class="pp">*</span> <span class="kw">]]</span> <span class="kw">||</span> <span class="kw">[[</span> <span class="va">$HOSTNAME</span> <span class="ot">==</span> transfer-<span class="pp">*</span> <span class="kw">]];</span> <span class="cf">then</span></span>
+<span id="cb26-85"><a href="config-files.html#cb26-85" aria-hidden="true" tabindex="-1"></a>    <span class="cf">if</span> <span class="kw">[[</span> <span class="va">$HOSTNAME</span> <span class="ot">==</span> compute-094.<span class="pp">*</span> <span class="kw">]]</span> <span class="kw">||</span> <span class="kw">[[</span> <span class="va">$HOSTNAME</span> <span class="ot">==</span> compute-111.<span class="pp">*</span> <span class="kw">]];</span> <span class="cf">then</span></span>
+<span id="cb26-86"><a href="config-files.html#cb26-86" aria-hidden="true" tabindex="-1"></a>        <span class="bu">echo</span> <span class="st">&quot;Adding LIBD SLURM modules&quot;</span></span>
+<span id="cb26-87"><a href="config-files.html#cb26-87" aria-hidden="true" tabindex="-1"></a>        <span class="ex">module</span> use /jhpce/shared/libd/modulefiles</span>
+<span id="cb26-88"><a href="config-files.html#cb26-88" aria-hidden="true" tabindex="-1"></a>        <span class="co"># module load git-status-size/github</span></span>
+<span id="cb26-89"><a href="config-files.html#cb26-89" aria-hidden="true" tabindex="-1"></a>        <span class="co"># module load git-lfs/2.8.0</span></span>
+<span id="cb26-90"><a href="config-files.html#cb26-90" aria-hidden="true" tabindex="-1"></a>        <span class="co"># module load rmate/1.5.10</span></span>
+<span id="cb26-91"><a href="config-files.html#cb26-91" aria-hidden="true" tabindex="-1"></a>        <span class="co"># module load conda_R/4.3</span></span>
+<span id="cb26-92"><a href="config-files.html#cb26-92" aria-hidden="true" tabindex="-1"></a>    <span class="cf">else</span></span>
+<span id="cb26-93"><a href="config-files.html#cb26-93" aria-hidden="true" tabindex="-1"></a>        <span class="bu">echo</span> <span class="st">&quot;Adding LIBD SGE modules&quot;</span></span>
+<span id="cb26-94"><a href="config-files.html#cb26-94" aria-hidden="true" tabindex="-1"></a>        <span class="ex">module</span> use /jhpce/shared/jhpce/modulefiles/libd</span>
+<span id="cb26-95"><a href="config-files.html#cb26-95" aria-hidden="true" tabindex="-1"></a>        <span class="bu">echo</span> <span class="st">&quot;Loading git&quot;</span></span>
+<span id="cb26-96"><a href="config-files.html#cb26-96" aria-hidden="true" tabindex="-1"></a>        <span class="ex">module</span> load git</span>
+<span id="cb26-97"><a href="config-files.html#cb26-97" aria-hidden="true" tabindex="-1"></a>        <span class="ex">module</span> load git-status-size/github</span>
+<span id="cb26-98"><a href="config-files.html#cb26-98" aria-hidden="true" tabindex="-1"></a>        <span class="ex">module</span> load git-lfs/2.8.0</span>
+<span id="cb26-99"><a href="config-files.html#cb26-99" aria-hidden="true" tabindex="-1"></a>        <span class="ex">module</span> load rmate/1.5.10</span>
+<span id="cb26-100"><a href="config-files.html#cb26-100" aria-hidden="true" tabindex="-1"></a>        <span class="ex">module</span> load conda_R/4.3</span>
+<span id="cb26-101"><a href="config-files.html#cb26-101" aria-hidden="true" tabindex="-1"></a>    <span class="cf">fi</span></span>
+<span id="cb26-102"><a href="config-files.html#cb26-102" aria-hidden="true" tabindex="-1"></a><span class="cf">fi</span></span>
+<span id="cb26-103"><a href="config-files.html#cb26-103" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb26-104"><a href="config-files.html#cb26-104" aria-hidden="true" tabindex="-1"></a><span class="co">## To deal with running nextflow without requesting much more memory</span></span>
+<span id="cb26-105"><a href="config-files.html#cb26-105" aria-hidden="true" tabindex="-1"></a><span class="co">## https://jhpce.jhu.edu/question/why-do-i-get-memory-errors-when-running-java/</span></span>
+<span id="cb26-106"><a href="config-files.html#cb26-106" aria-hidden="true" tabindex="-1"></a><span class="bu">export</span> <span class="va">_JAVA_OPTIONS</span><span class="op">=</span><span class="st">&quot;-Xms5g -Xmx6g&quot;</span></span>
+<span id="cb26-107"><a href="config-files.html#cb26-107" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb26-108"><a href="config-files.html#cb26-108" aria-hidden="true" tabindex="-1"></a><span class="co">## From https://twitter.com/fellgernon/status/1258455434073124865?s=20</span></span>
+<span id="cb26-109"><a href="config-files.html#cb26-109" aria-hidden="true" tabindex="-1"></a><span class="co">## and https://www.cyberciti.biz/tips/understanding-linux-unix-umask-value-usage.html</span></span>
+<span id="cb26-110"><a href="config-files.html#cb26-110" aria-hidden="true" tabindex="-1"></a><span class="bu">umask</span> u=rwx,g=rwx,o= <span class="co">## equivalent to umask 007</span></span></code></pre></div>
 <p>For more information on <code>rmate</code> and <code>rmote</code> and how it relates to these configuration files, check this video and <a href="https://docs.google.com/document/d/1vj0xa_qZTIgsnooW_9_j44Low1UbSIufnlGXCgL_YCU/edit">companion notes</a>.</p>
 <iframe width="560" height="315" src="https://www.youtube.com/embed/LjWr39C1Z_Q" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen>
 </iframe>
@@ -886,21 +947,21 @@ Do you want to use <a href="https://twitter.com/Bioconductor?ref_src=twsrc%5Etfw
 <div id="bash_profile" class="section level3 hasAnchor" number="17.4.3">
 <h3><span class="header-section-number">17.4.3</span> <code>~/.bash_profile</code><a href="config-files.html#bash_profile" class="anchor-section" aria-label="Anchor link to header"></a></h3>
 <p>This file is basically empty, since all the information is contained in the <code>~/.bashrc</code>. That was the recommended setup a few years ago when I asked JHPCE’s admins.</p>
-<div class="sourceCode" id="cb25"><pre class="sourceCode bash"><code class="sourceCode bash"><span id="cb25-1"><a href="config-files.html#cb25-1" aria-hidden="true" tabindex="-1"></a><span class="co"># .bash_profile</span></span>
-<span id="cb25-2"><a href="config-files.html#cb25-2" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb25-3"><a href="config-files.html#cb25-3" aria-hidden="true" tabindex="-1"></a><span class="co"># Get the aliases and functions</span></span>
-<span id="cb25-4"><a href="config-files.html#cb25-4" aria-hidden="true" tabindex="-1"></a><span class="cf">if</span> <span class="bu">[</span> <span class="ot">-f</span> ~/.bashrc <span class="bu">]</span><span class="kw">;</span> <span class="cf">then</span></span>
-<span id="cb25-5"><a href="config-files.html#cb25-5" aria-hidden="true" tabindex="-1"></a>    <span class="bu">.</span> ~/.bashrc</span>
-<span id="cb25-6"><a href="config-files.html#cb25-6" aria-hidden="true" tabindex="-1"></a><span class="cf">fi</span></span></code></pre></div>
+<div class="sourceCode" id="cb27"><pre class="sourceCode bash"><code class="sourceCode bash"><span id="cb27-1"><a href="config-files.html#cb27-1" aria-hidden="true" tabindex="-1"></a><span class="co"># .bash_profile</span></span>
+<span id="cb27-2"><a href="config-files.html#cb27-2" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb27-3"><a href="config-files.html#cb27-3" aria-hidden="true" tabindex="-1"></a><span class="co"># Get the aliases and functions</span></span>
+<span id="cb27-4"><a href="config-files.html#cb27-4" aria-hidden="true" tabindex="-1"></a><span class="cf">if</span> <span class="bu">[</span> <span class="ot">-f</span> ~/.bashrc <span class="bu">]</span><span class="kw">;</span> <span class="cf">then</span></span>
+<span id="cb27-5"><a href="config-files.html#cb27-5" aria-hidden="true" tabindex="-1"></a>    <span class="bu">.</span> ~/.bashrc</span>
+<span id="cb27-6"><a href="config-files.html#cb27-6" aria-hidden="true" tabindex="-1"></a><span class="cf">fi</span></span></code></pre></div>
 </div>
 <div id="inputrc" class="section level3 hasAnchor" number="17.4.4">
 <h3><span class="header-section-number">17.4.4</span> <code>~/.inputrc</code><a href="config-files.html#inputrc" class="anchor-section" aria-label="Anchor link to header"></a></h3>
 <p>Useful for altering the behavior of the up and down arrow keys. See the companion lines on the <code>~/.bashrc</code> file.</p>
-<div class="sourceCode" id="cb26"><pre class="sourceCode bash"><code class="sourceCode bash"><span id="cb26-1"><a href="config-files.html#cb26-1" aria-hidden="true" tabindex="-1"></a><span class="co">#Page up/page down</span></span>
-<span id="cb26-2"><a href="config-files.html#cb26-2" aria-hidden="true" tabindex="-1"></a><span class="st">&quot;\e[B&quot;</span><span class="ex">:</span> history-search-forward</span>
-<span id="cb26-3"><a href="config-files.html#cb26-3" aria-hidden="true" tabindex="-1"></a><span class="st">&quot;\e[A&quot;</span><span class="ex">:</span> history-search-backward</span>
-<span id="cb26-4"><a href="config-files.html#cb26-4" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb26-5"><a href="config-files.html#cb26-5" aria-hidden="true" tabindex="-1"></a><span class="va">$include</span> /etc/inputrc</span></code></pre></div>
+<div class="sourceCode" id="cb28"><pre class="sourceCode bash"><code class="sourceCode bash"><span id="cb28-1"><a href="config-files.html#cb28-1" aria-hidden="true" tabindex="-1"></a><span class="co">#Page up/page down</span></span>
+<span id="cb28-2"><a href="config-files.html#cb28-2" aria-hidden="true" tabindex="-1"></a><span class="st">&quot;\e[B&quot;</span><span class="ex">:</span> history-search-forward</span>
+<span id="cb28-3"><a href="config-files.html#cb28-3" aria-hidden="true" tabindex="-1"></a><span class="st">&quot;\e[A&quot;</span><span class="ex">:</span> history-search-backward</span>
+<span id="cb28-4"><a href="config-files.html#cb28-4" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb28-5"><a href="config-files.html#cb28-5" aria-hidden="true" tabindex="-1"></a><span class="va">$include</span> /etc/inputrc</span></code></pre></div>
 
 </div>
 </div>
