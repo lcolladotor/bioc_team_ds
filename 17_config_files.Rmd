@@ -341,6 +341,15 @@ Edit it with `usethis::edit_git_config()`.
 
 ```
 
+On my laptop the end is a little different given that I do use a `~/.gitignore_global` file there and use TextMate as my text editor for commit messages.
+
+```
+[core]
+	ignorecase = true
+	excludesfile = ~/.gitignore_global
+	editor = mate -w
+```
+
 ### `~/.gitignore_global`
 
 Edit it with `usethis::edit_git_ignore()`. These files are ignored by default by git on my computer.
