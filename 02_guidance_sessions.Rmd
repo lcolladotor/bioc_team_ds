@@ -71,7 +71,7 @@ Finally, please sign up for a **maximum of two sessions per week**. This will he
   - Research interests: bulk RNA-seq, workflows, machine learning methodologies.
   - Technologies I use: bulk RNA-seq, linux, python, R/WGCNA and github.
   - Learning about: snRNA-seq, multi-omics, snATAC and deconvolution.
-  - [Calendly](https://calendly.com/hediatnani/25-min-data-science-guidance-session)
+  - [Calendly](https://calendly.com/cynthiacardinault/25-min-data-science-guidance-session)
 * [Hédia Tnani](https://github.com/HediaTnani) ([BioC Support](https://support.bioconductor.org/u/56927/))
   - Research interests: bulk RNA-seq, scRNA-seq, building computational pipelines.
   - Technologies I use: R/Bioconductor, Python, GitHub, Nextflow.
