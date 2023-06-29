@@ -473,7 +473,7 @@ export RMATE_PORT="SOME_PORT_YOU_CHOOSE"
 if [[ $HOSTNAME == compute-* ]] || [[ $HOSTNAME == transfer-* ]]; then
 	if [[ $HOSTNAME == compute-094.* ]] || [[ $HOSTNAME == compute-111.* ]]; then
 	    echo "Adding LIBD SLURM modules"
-	    module use /jhpce/shared/libd/core
+	    module use /jhpce/shared/libd/modulefiles
 	    # echo "Loading git"
 	    # module load git
 	    # module load git-status-size/github
