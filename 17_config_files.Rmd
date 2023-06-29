@@ -441,8 +441,15 @@ alias dcs05="cd /dcs05/lieber/lcolladotor"
 
 ## Creating modules
 # https://lmod.readthedocs.io/en/latest/050_lua_modulefiles.html
-alias modsrc="cd /jhpce/shared/jhpce/libd"
-alias modlua="cd /jhpce/shared/jhpce/modulefiles/libd"
+if [[ $HOSTNAME == compute-094.* ]] || [[ $HOSTNAME == compute-111.* ]]; then
+    echo "Adding LIBD SLURM module aliases"
+	alias modsrc="cd /jhpce/shared/libd/core"
+	alias modlua="cd /jhpce/shared/libd/modulefiles"
+else
+    echo "Adding LIBD SGE module aliases"
+	alias modsrc="cd /jhpce/shared/jhpce/libd"
+	alias modlua="cd /jhpce/shared/jhpce/modulefiles/libd"
+fi
 
 # colors
 # http://norbauer.com/notebooks/code/notes/ls-colors-and-terminal-app
@@ -481,7 +488,7 @@ if [[ $HOSTNAME == compute-* ]] || [[ $HOSTNAME == transfer-* ]]; then
 	    # module load rmate/1.5.10
 	    # module load conda_R/4.3
 	else
-	    echo "Adding LIBD modules"
+	    echo "Adding LIBD SGE modules"
 	    module use /jhpce/shared/jhpce/modulefiles/libd
 	    echo "Loading git"
 	    module load git
