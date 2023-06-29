@@ -324,6 +324,8 @@ Edit it with `usethis::edit_git_config()`.
 [user]
 	name = lcolladotor
 	email = lcolladotor@gmail.com
+[pull]
+	rebase = false
 [alias]
 	co = checkout
 	br = branch
