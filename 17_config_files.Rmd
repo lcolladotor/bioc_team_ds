@@ -481,8 +481,6 @@ if [[ $HOSTNAME == compute-* ]] || [[ $HOSTNAME == transfer-* ]]; then
 	if [[ $HOSTNAME == compute-094.* ]] || [[ $HOSTNAME == compute-111.* ]]; then
 	    echo "Adding LIBD SLURM modules"
 	    module use /jhpce/shared/libd/modulefiles
-	    # echo "Loading git"
-	    # module load git
 	    # module load git-status-size/github
 	    # module load git-lfs/2.8.0
 	    # module load rmate/1.5.10
