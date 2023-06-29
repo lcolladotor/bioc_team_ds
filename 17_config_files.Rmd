@@ -471,14 +471,25 @@ export RMATE_PORT="SOME_PORT_YOU_CHOOSE"
 ## Load the git module by default when qrsh/qsub
 ## thanks to Jiong Yang
 if [[ $HOSTNAME == compute-* ]] || [[ $HOSTNAME == transfer-* ]]; then
-    echo "Adding LIBD modules"
-    module use /jhpce/shared/jhpce/modulefiles/libd
-    echo "Loading git"
-    module load git
-    module load git-status-size/github
-    module load git-lfs/2.8.0
-    module load rmate/1.5.10
-    module load conda_R/4.3
+	if [[ $HOSTNAME == compute-094.* ]] || [[ $HOSTNAME == compute-111.* ]]; then
+	    echo "Adding LIBD SLURM modules"
+	    module use /jhpce/shared/libd
+	    # echo "Loading git"
+	    # module load git
+	    # module load git-status-size/github
+	    # module load git-lfs/2.8.0
+	    # module load rmate/1.5.10
+	    # module load conda_R/4.3
+	else
+	    echo "Adding LIBD modules"
+	    module use /jhpce/shared/jhpce/modulefiles/libd
+	    echo "Loading git"
+	    module load git
+	    module load git-status-size/github
+	    module load git-lfs/2.8.0
+	    module load rmate/1.5.10
+	    module load conda_R/4.3
+	fi
 fi
 
 ## To deal with running nextflow without requesting much more memory
