@@ -345,6 +345,8 @@ Edit it with `usethis::edit_git_config()`. Note that my editor is TextMate2 on m
 [svn]
     rmdir = true
 [commit]
+[safe]
+        directory = *
 ```
 
 ### `~/.gitignore_global`
