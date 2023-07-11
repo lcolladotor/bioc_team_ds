@@ -502,11 +502,9 @@ alias dcs05="cd /dcs05/lieber/lcolladotor"
 ## Creating modules
 # https://lmod.readthedocs.io/en/latest/050_lua_modulefiles.html
 if [[ $HOSTNAME == compute-094.* ]] || [[ $HOSTNAME == compute-111.* ]]; then
-    echo "Adding LIBD SLURM module aliases"
 	alias modsrc="cd /jhpce/shared/libd/core"
 	alias modlua="cd /jhpce/shared/libd/modulefiles"
 else
-    echo "Adding LIBD SGE module aliases"
 	alias modsrc="cd /jhpce/shared/jhpce/libd"
 	alias modlua="cd /jhpce/shared/jhpce/modulefiles/libd"
 fi
@@ -539,16 +537,13 @@ export RMATE_PORT="SOME_PORT_YOU_CHOOSE"
 ## thanks to Jiong Yang
 if [[ $HOSTNAME == compute-* ]] || [[ $HOSTNAME == transfer-* ]]; then
 	if [[ $HOSTNAME == compute-094.* ]] || [[ $HOSTNAME == compute-111.* ]]; then
-	    echo "Adding LIBD SLURM modules"
 	    module use /jhpce/shared/libd/modulefiles
 	    # module load git-status-size/github
 	    # module load git-lfs/2.8.0
-	    # module load rmate/1.5.10
+	    module load rmate/1.5.10
 	    # module load conda_R/4.3
 	else
-	    echo "Adding LIBD SGE modules"
 	    module use /jhpce/shared/jhpce/modulefiles/libd
-	    echo "Loading git"
 	    module load git
 	    module load git-status-size/github
 	    module load git-lfs/2.8.0
