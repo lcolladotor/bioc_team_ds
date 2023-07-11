@@ -229,6 +229,7 @@ if(Sys.getenv('TERM') %in% c("term", "xterm-256color", "cygwin", "screen")) {
 options(blogdown.author = 'L. Collado-Torres')
 options(blogdown.ext = '.Rmd')
 options(blogdown.insertimage.usebaseurl = TRUE)
+options(blogdown.method = "markdown")
 
 ## From RStudio::conf 2019 Building Tidy Tools
 if (interactive()) {
