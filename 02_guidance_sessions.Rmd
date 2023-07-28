@@ -72,11 +72,6 @@ Finally, please sign up for a **maximum of two sessions per week**. This will he
   - Technologies I use: bulk RNA-seq, linux, python, R/WGCNA and github.
   - Learning about: snRNA-seq, multi-omics, snATAC and deconvolution.
   - **Sign up** via [Calendly](https://calendly.com/cynthiacardinault/25-min-data-science-guidance-session)
-* [Hédia Tnani](https://github.com/HediaTnani) ([BioC Support](https://support.bioconductor.org/u/56927/))
-  - Research interests: bulk RNA-seq, scRNA-seq, building computational pipelines.
-  - Technologies I use: R/Bioconductor, Python, GitHub, Nextflow.
-  - Learning about: Functional programming, deconvolution, package development, omics integration.
-  - **Sign up** via [Calendly](https://calendly.com/hediatnani/25-min-data-science-guidance-session)
 * [Madhavi Tippani](https://github.com/madhavitippani) ([BioC Support](https://support.bioconductor.org/u/24319/))
   - Research interests: spatial transcriptomics, calcium imaging, RNAscope, medical image processing.
   - Technologies I use: Matlab, R, GitHub, SGE/JHPCE.
@@ -97,6 +92,16 @@ Finally, please sign up for a **maximum of two sessions per week**. This will he
   - Technologies I use: R/Bioconductor, GitHub, SGE/JHPCE.
   - Learning about: team management, multi-omics.
   - **Sign up** via [Calendly](https://calendly.com/lcolladotor/ds-guidance)
+
+
+Note that Hédia can only do DSgs sessions related to the CHESS-BRAIN or qsvaR projects. She can also do internal team DSgs sessions on any topic.
+
+* [Hédia Tnani](https://github.com/HediaTnani) ([BioC Support](https://support.bioconductor.org/u/56927/))
+  - Research interests: bulk RNA-seq, scRNA-seq, building computational pipelines.
+  - Technologies I use: R/Bioconductor, Python, GitHub, Nextflow.
+  - Learning about: Functional programming, deconvolution, package development, omics integration.
+  - **Sign up** via [Calendly](https://calendly.com/hediatnani/25-min-data-science-guidance-session)
+  
 
 ## DSgs session reports
 
