@@ -502,10 +502,12 @@ alias dcs05="cd /dcs05/lieber/lcolladotor"
 
 ## Creating modules
 # https://lmod.readthedocs.io/en/latest/050_lua_modulefiles.html
-if [[ $HOSTNAME == compute-094.* ]] || [[ $HOSTNAME == compute-111.* ]]; then
+if [[ -n ${SLURM_CLUSTER_NAME} ]] && echo `hostname` | $(! grep -q "jhpce01|jhpce02|transfer"); then
+    # SLURM
 	alias modsrc="cd /jhpce/shared/libd/core"
 	alias modlua="cd /jhpce/shared/libd/modulefiles"
 else
+    # SGE
 	alias modsrc="cd /jhpce/shared/jhpce/libd"
 	alias modlua="cd /jhpce/shared/jhpce/modulefiles/libd"
 fi
@@ -535,15 +537,17 @@ export LS_COLORS="di=0;32:ln=0;36:so=0;35:pi=0;93:ex=0;31:bd=0;34;46:cd=0;34;43:
 export RMATE_PORT="SOME_PORT_YOU_CHOOSE"
 
 ## Load the git module by default when qrsh/qsub
-## thanks to Jiong Yang
+## thanks to Jiong Yang and John Muschelli
 if [[ $HOSTNAME == compute-* ]] || [[ $HOSTNAME == transfer-* ]]; then
-	if [[ $HOSTNAME == compute-094.* ]] || [[ $HOSTNAME == compute-111.* ]]; then
+	if [[ -n ${SLURM_CLUSTER_NAME} ]] && echo `hostname` | $(! grep -q "transfer"); then
+        # SLURM
 	    module use /jhpce/shared/libd/modulefiles
 	    # module load git-status-size/github
 	    # module load git-lfs/2.8.0
 	    module load rmate/1.5.10
 	    # module load conda_R/4.3
 	else
+	    # SGE
 	    module use /jhpce/shared/jhpce/modulefiles/libd
 	    module load git
 	    module load git-status-size/github
