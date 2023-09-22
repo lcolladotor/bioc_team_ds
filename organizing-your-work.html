@@ -554,12 +554,12 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <div id="useful-commands" class="section level3 hasAnchor" number="14.3.1">
 <h3><span class="header-section-number">14.3.1</span> Useful commands<a href="organizing-your-work.html#useful-commands" class="anchor-section" aria-label="Anchor link to header"></a></h3>
 <p>To check who belongs to a specific group, use <code>getent group groupName</code>. For example:</p>
-<div class="sourceCode" id="cb6"><pre class="sourceCode bash"><code class="sourceCode bash"><span id="cb6-1"><a href="organizing-your-work.html#cb6-1" aria-hidden="true" tabindex="-1"></a><span class="ex">$</span> getent group lieber_lcolladotor</span>
-<span id="cb6-2"><a href="organizing-your-work.html#cb6-2" aria-hidden="true" tabindex="-1"></a><span class="ex">lieber_lcolladotor:*:4217:jstolz,aseyedia,neagles,lcollado,gpertea1,lhuuki,bpardo</span></span></code></pre></div>
+<div class="sourceCode" id="cb6"><pre class="sourceCode bash"><code class="sourceCode bash"><span id="cb6-1"><a href="organizing-your-work.html#cb6-1" tabindex="-1"></a><span class="ex">$</span> getent group lieber_lcolladotor</span>
+<span id="cb6-2"><a href="organizing-your-work.html#cb6-2" tabindex="-1"></a><span class="ex">lieber_lcolladotor:*:4217:jstolz,aseyedia,neagles,lcollado,gpertea1,lhuuki,bpardo</span></span></code></pre></div>
 <p>Note that <code>4217</code> is the actual user group ID. Sometimes we need to know that ID to run some ACL commands.</p>
 <p>To find all the user groups for a specific person, use the <code>groups</code> command. For example:</p>
-<div class="sourceCode" id="cb7"><pre class="sourceCode bash"><code class="sourceCode bash"><span id="cb7-1"><a href="organizing-your-work.html#cb7-1" aria-hidden="true" tabindex="-1"></a><span class="ex">$</span> groups lcollado</span>
-<span id="cb7-2"><a href="organizing-your-work.html#cb7-2" aria-hidden="true" tabindex="-1"></a><span class="ex">lcollado</span> : lieber_jaffe swdev leekgroup recount3 lieber docker lieber_lcolladotor epi stanley rnaseq lieber_marmaypag lieber_snps lieber_martinowich users libdandme lieber_cmc lieber_gursini lieber_moods</span></code></pre></div>
+<div class="sourceCode" id="cb7"><pre class="sourceCode bash"><code class="sourceCode bash"><span id="cb7-1"><a href="organizing-your-work.html#cb7-1" tabindex="-1"></a><span class="ex">$</span> groups lcollado</span>
+<span id="cb7-2"><a href="organizing-your-work.html#cb7-2" tabindex="-1"></a><span class="ex">lcollado</span> : lieber_jaffe swdev leekgroup recount3 lieber docker lieber_lcolladotor epi stanley rnaseq lieber_marmaypag lieber_snps lieber_martinowich users libdandme lieber_cmc lieber_gursini lieber_moods</span></code></pre></div>
 </div>
 <div id="dcs04-scripts" class="section level3 hasAnchor" number="14.3.2">
 <h3><span class="header-section-number">14.3.2</span> dcs04 scripts<a href="organizing-your-work.html#dcs04-scripts" class="anchor-section" aria-label="Anchor link to header"></a></h3>
@@ -581,192 +581,192 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <ul>
 <li><code>/dcs04/lieber/lcolladotor/_jhpce_org_LIBD001/update_permissions_spatialteam.sh</code></li>
 </ul>
-<div class="sourceCode" id="cb8"><pre class="sourceCode bash"><code class="sourceCode bash"><span id="cb8-1"><a href="organizing-your-work.html#cb8-1" aria-hidden="true" tabindex="-1"></a><span class="co">#!/bin/bash</span></span>
-<span id="cb8-2"><a href="organizing-your-work.html#cb8-2" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb8-3"><a href="organizing-your-work.html#cb8-3" aria-hidden="true" tabindex="-1"></a><span class="bu">echo</span> <span class="st">&quot;**** Updating permissions for </span><span class="va">$1</span><span class="st"> ****&quot;</span></span>
-<span id="cb8-4"><a href="organizing-your-work.html#cb8-4" aria-hidden="true" tabindex="-1"></a><span class="fu">date</span></span>
-<span id="cb8-5"><a href="organizing-your-work.html#cb8-5" aria-hidden="true" tabindex="-1"></a><span class="bu">echo</span> <span class="st">&quot;&quot;</span></span>
-<span id="cb8-6"><a href="organizing-your-work.html#cb8-6" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb8-7"><a href="organizing-your-work.html#cb8-7" aria-hidden="true" tabindex="-1"></a><span class="cf">if</span> <span class="kw">[[</span> <span class="va">$HOSTNAME</span> <span class="ot">==</span> compute-<span class="pp">*</span> <span class="kw">]]</span> <span class="kw">||</span> <span class="kw">[[</span> <span class="va">$HOSTNAME</span> <span class="ot">==</span> transfer-<span class="pp">*</span> <span class="kw">]];</span> <span class="cf">then</span></span>
-<span id="cb8-8"><a href="organizing-your-work.html#cb8-8" aria-hidden="true" tabindex="-1"></a>    <span class="bu">echo</span> <span class="st">&quot;**** Note that warning/error messages are expected for files and directories that you are not the owner of.&quot;</span></span>
-<span id="cb8-9"><a href="organizing-your-work.html#cb8-9" aria-hidden="true" tabindex="-1"></a>    <span class="bu">echo</span> <span class="st">&quot;The expected warning/error messages are: &quot;</span></span>
-<span id="cb8-10"><a href="organizing-your-work.html#cb8-10" aria-hidden="true" tabindex="-1"></a>    <span class="bu">echo</span> <span class="st">&quot;    &#39;chgrp: changing group of ‘some_JHPCE_file_path’: Operation not permitted&#39;&quot;</span></span>
-<span id="cb8-11"><a href="organizing-your-work.html#cb8-11" aria-hidden="true" tabindex="-1"></a>    <span class="bu">echo</span> <span class="st">&quot; or &#39;chmod: changing permissions of ‘some_JHPCE_file_path’: Operation not permitted&#39;.&quot;</span></span>
-<span id="cb8-12"><a href="organizing-your-work.html#cb8-12" aria-hidden="true" tabindex="-1"></a>    <span class="bu">echo</span> <span class="st">&quot;If for many files you are not the owner (creator of), you will get lots of these warning/error messages, this is expected!&quot;</span></span>
-<span id="cb8-13"><a href="organizing-your-work.html#cb8-13" aria-hidden="true" tabindex="-1"></a>    <span class="bu">echo</span> <span class="st">&quot;Error or warnings with another syntax are likely real. ****&quot;</span></span>
-<span id="cb8-14"><a href="organizing-your-work.html#cb8-14" aria-hidden="true" tabindex="-1"></a>    <span class="bu">echo</span> <span class="st">&quot;&quot;</span></span>
-<span id="cb8-15"><a href="organizing-your-work.html#cb8-15" aria-hidden="true" tabindex="-1"></a>    <span class="bu">echo</span> <span class="st">&quot;You will need to re-run this script anytime you upload files to JHPCE through Cyberduck / WinSCP as they break the ACLs.&quot;</span></span>
-<span id="cb8-16"><a href="organizing-your-work.html#cb8-16" aria-hidden="true" tabindex="-1"></a>    <span class="bu">echo</span> <span class="st">&quot;Every new team member on a given project will likely also need to run this script once.&quot;</span></span>
-<span id="cb8-17"><a href="organizing-your-work.html#cb8-17" aria-hidden="true" tabindex="-1"></a>    <span class="bu">echo</span> <span class="st">&quot;&quot;</span></span>
-<span id="cb8-18"><a href="organizing-your-work.html#cb8-18" aria-hidden="true" tabindex="-1"></a>    <span class="bu">echo</span> <span class="st">&quot;For more details about setting permissions at JHPCE using ACLs, please check https://lcolladotor.github.io/bioc_team_ds/organizing-your-work.html#setting-jhpce-file-permissions.&quot;</span></span>
-<span id="cb8-19"><a href="organizing-your-work.html#cb8-19" aria-hidden="true" tabindex="-1"></a>    <span class="bu">echo</span> <span class="st">&quot;&quot;</span></span>
-<span id="cb8-20"><a href="organizing-your-work.html#cb8-20" aria-hidden="true" tabindex="-1"></a>    <span class="bu">echo</span> <span class="st">&quot;This message will be displayed for 90 seconds before the script proceeds.&quot;</span></span>
-<span id="cb8-21"><a href="organizing-your-work.html#cb8-21" aria-hidden="true" tabindex="-1"></a>    <span class="bu">echo</span> <span class="st">&quot;That way you will have time enough to read it and/or copy it.&quot;</span></span>
-<span id="cb8-22"><a href="organizing-your-work.html#cb8-22" aria-hidden="true" tabindex="-1"></a>    <span class="fu">sleep</span> 90</span>
-<span id="cb8-23"><a href="organizing-your-work.html#cb8-23" aria-hidden="true" tabindex="-1"></a>    </span>
-<span id="cb8-24"><a href="organizing-your-work.html#cb8-24" aria-hidden="true" tabindex="-1"></a>    <span class="bu">echo</span> <span class="st">&quot;&quot;</span></span>
-<span id="cb8-25"><a href="organizing-your-work.html#cb8-25" aria-hidden="true" tabindex="-1"></a>    <span class="bu">echo</span> <span class="st">&quot;**** Setting read (R), write (W), and execute (X) permissions for hickslab ****&quot;</span></span>
-<span id="cb8-26"><a href="organizing-your-work.html#cb8-26" aria-hidden="true" tabindex="-1"></a>    <span class="fu">sleep</span> 5</span>
-<span id="cb8-27"><a href="organizing-your-work.html#cb8-27" aria-hidden="true" tabindex="-1"></a>    <span class="fu">date</span></span>
-<span id="cb8-28"><a href="organizing-your-work.html#cb8-28" aria-hidden="true" tabindex="-1"></a>    </span>
-<span id="cb8-29"><a href="organizing-your-work.html#cb8-29" aria-hidden="true" tabindex="-1"></a>    <span class="fu">find</span> <span class="va">${1}</span> <span class="at">-user</span> <span class="va">${USER}</span> <span class="at">-type</span> d <span class="at">-exec</span> nfs4_setfacl <span class="at">-a</span> <span class="st">&quot;A:g:hickslab@cm.cluster:RWX&quot;</span> {} <span class="dt">\;</span></span>
-<span id="cb8-30"><a href="organizing-your-work.html#cb8-30" aria-hidden="true" tabindex="-1"></a>    <span class="fu">find</span> <span class="va">${1}</span> <span class="at">-user</span> <span class="va">${USER}</span> <span class="at">-type</span> d <span class="at">-exec</span> nfs4_setfacl <span class="at">-a</span> <span class="st">&quot;A:gfdi:hickslab@cm.cluster:RWX&quot;</span> {} <span class="dt">\;</span></span>
-<span id="cb8-31"><a href="organizing-your-work.html#cb8-31" aria-hidden="true" tabindex="-1"></a>    <span class="fu">find</span> <span class="va">${1}</span> <span class="at">-user</span> <span class="va">${USER}</span> <span class="at">-type</span> f <span class="at">-exec</span> nfs4_setfacl <span class="at">-a</span> <span class="st">&quot;A:g:hickslab@cm.cluster:RW&quot;</span> {} <span class="dt">\;</span></span>
-<span id="cb8-32"><a href="organizing-your-work.html#cb8-32" aria-hidden="true" tabindex="-1"></a>    </span>
-<span id="cb8-33"><a href="organizing-your-work.html#cb8-33" aria-hidden="true" tabindex="-1"></a>    <span class="bu">echo</span> <span class="st">&quot;&quot;</span></span>
-<span id="cb8-34"><a href="organizing-your-work.html#cb8-34" aria-hidden="true" tabindex="-1"></a>    <span class="bu">echo</span> <span class="st">&quot;**** Setting read (R), write (W), and execute (X) permissions for lieber_lcolladotor ****&quot;</span></span>
-<span id="cb8-35"><a href="organizing-your-work.html#cb8-35" aria-hidden="true" tabindex="-1"></a>    <span class="fu">sleep</span> 5</span>
-<span id="cb8-36"><a href="organizing-your-work.html#cb8-36" aria-hidden="true" tabindex="-1"></a>    <span class="fu">date</span></span>
-<span id="cb8-37"><a href="organizing-your-work.html#cb8-37" aria-hidden="true" tabindex="-1"></a>    </span>
-<span id="cb8-38"><a href="organizing-your-work.html#cb8-38" aria-hidden="true" tabindex="-1"></a>    <span class="fu">find</span> <span class="va">${1}</span> <span class="at">-user</span> <span class="va">${USER}</span> <span class="at">-type</span> d <span class="at">-exec</span> nfs4_setfacl <span class="at">-a</span> <span class="st">&quot;A:g:lieber_lcolladotor@cm.cluster:RWX&quot;</span> {} <span class="dt">\;</span></span>
-<span id="cb8-39"><a href="organizing-your-work.html#cb8-39" aria-hidden="true" tabindex="-1"></a>    <span class="fu">find</span> <span class="va">${1}</span> <span class="at">-user</span> <span class="va">${USER}</span> <span class="at">-type</span> d <span class="at">-exec</span> nfs4_setfacl <span class="at">-a</span> <span class="st">&quot;A:gfdi:lieber_lcolladotor@cm.cluster:RWX&quot;</span> {} <span class="dt">\;</span></span>
-<span id="cb8-40"><a href="organizing-your-work.html#cb8-40" aria-hidden="true" tabindex="-1"></a>    <span class="fu">find</span> <span class="va">${1}</span> <span class="at">-user</span> <span class="va">${USER}</span> <span class="at">-type</span> f <span class="at">-exec</span> nfs4_setfacl <span class="at">-a</span> <span class="st">&quot;A:g:lieber_lcolladotor@cm.cluster:RW&quot;</span> {} <span class="dt">\;</span></span>
-<span id="cb8-41"><a href="organizing-your-work.html#cb8-41" aria-hidden="true" tabindex="-1"></a>    </span>
-<span id="cb8-42"><a href="organizing-your-work.html#cb8-42" aria-hidden="true" tabindex="-1"></a>    <span class="bu">echo</span> <span class="st">&quot;&quot;</span></span>
-<span id="cb8-43"><a href="organizing-your-work.html#cb8-43" aria-hidden="true" tabindex="-1"></a>    <span class="bu">echo</span> <span class="st">&quot;**** Setting read (R), write (W), and execute (X) permissions for lieber_marmaypag ****&quot;</span></span>
-<span id="cb8-44"><a href="organizing-your-work.html#cb8-44" aria-hidden="true" tabindex="-1"></a>    <span class="fu">sleep</span> 5</span>
-<span id="cb8-45"><a href="organizing-your-work.html#cb8-45" aria-hidden="true" tabindex="-1"></a>    <span class="fu">date</span></span>
-<span id="cb8-46"><a href="organizing-your-work.html#cb8-46" aria-hidden="true" tabindex="-1"></a>    </span>
-<span id="cb8-47"><a href="organizing-your-work.html#cb8-47" aria-hidden="true" tabindex="-1"></a>    <span class="fu">find</span> <span class="va">${1}</span> <span class="at">-user</span> <span class="va">${USER}</span> <span class="at">-type</span> d <span class="at">-exec</span> nfs4_setfacl <span class="at">-a</span> <span class="st">&quot;A:g:lieber_marmaypag@cm.cluster:RWX&quot;</span> {} <span class="dt">\;</span></span>
-<span id="cb8-48"><a href="organizing-your-work.html#cb8-48" aria-hidden="true" tabindex="-1"></a>    <span class="fu">find</span> <span class="va">${1}</span> <span class="at">-user</span> <span class="va">${USER}</span> <span class="at">-type</span> d <span class="at">-exec</span> nfs4_setfacl <span class="at">-a</span> <span class="st">&quot;A:gfdi:lieber_marmaypag@cm.cluster:RWX&quot;</span> {} <span class="dt">\;</span></span>
-<span id="cb8-49"><a href="organizing-your-work.html#cb8-49" aria-hidden="true" tabindex="-1"></a>    <span class="fu">find</span> <span class="va">${1}</span> <span class="at">-user</span> <span class="va">${USER}</span> <span class="at">-type</span> f <span class="at">-exec</span> nfs4_setfacl <span class="at">-a</span> <span class="st">&quot;A:g:lieber_marmaypag@cm.cluster:RW&quot;</span> {} <span class="dt">\;</span></span>
-<span id="cb8-50"><a href="organizing-your-work.html#cb8-50" aria-hidden="true" tabindex="-1"></a>    </span>
-<span id="cb8-51"><a href="organizing-your-work.html#cb8-51" aria-hidden="true" tabindex="-1"></a>    <span class="co">## To move away from lieber_jaffe</span></span>
-<span id="cb8-52"><a href="organizing-your-work.html#cb8-52" aria-hidden="true" tabindex="-1"></a>    <span class="bu">echo</span> <span class="st">&quot;&quot;</span></span>
-<span id="cb8-53"><a href="organizing-your-work.html#cb8-53" aria-hidden="true" tabindex="-1"></a>    <span class="cf">if</span> <span class="fu">getent</span> group lieber_lcolladotor <span class="kw">|</span> <span class="fu">grep</span> <span class="at">-q</span> <span class="st">&quot;\b</span><span class="va">${USER}</span><span class="st">\b&quot;</span><span class="kw">;</span> <span class="cf">then</span></span>
-<span id="cb8-54"><a href="organizing-your-work.html#cb8-54" aria-hidden="true" tabindex="-1"></a>        <span class="bu">echo</span> <span class="st">&quot;**** Running chgrp lieber_lcolladotor ****&quot;</span></span>
-<span id="cb8-55"><a href="organizing-your-work.html#cb8-55" aria-hidden="true" tabindex="-1"></a>        <span class="fu">sleep</span> 5</span>
-<span id="cb8-56"><a href="organizing-your-work.html#cb8-56" aria-hidden="true" tabindex="-1"></a>        <span class="fu">date</span></span>
-<span id="cb8-57"><a href="organizing-your-work.html#cb8-57" aria-hidden="true" tabindex="-1"></a>        <span class="fu">chgrp</span> lieber_lcolladotor <span class="at">-R</span> <span class="va">${1}</span></span>
-<span id="cb8-58"><a href="organizing-your-work.html#cb8-58" aria-hidden="true" tabindex="-1"></a>    <span class="cf">elif</span> <span class="fu">getent</span> group lieber_marmaypag <span class="kw">|</span> <span class="fu">grep</span> <span class="at">-q</span> <span class="st">&quot;\b</span><span class="va">${USER}</span><span class="st">\b&quot;</span><span class="kw">;</span> <span class="cf">then</span></span>
-<span id="cb8-59"><a href="organizing-your-work.html#cb8-59" aria-hidden="true" tabindex="-1"></a>        <span class="bu">echo</span> <span class="st">&quot;**** Running chgrp lieber_marmaypag ****&quot;</span></span>
-<span id="cb8-60"><a href="organizing-your-work.html#cb8-60" aria-hidden="true" tabindex="-1"></a>        <span class="fu">sleep</span> 5</span>
-<span id="cb8-61"><a href="organizing-your-work.html#cb8-61" aria-hidden="true" tabindex="-1"></a>        <span class="fu">date</span></span>
-<span id="cb8-62"><a href="organizing-your-work.html#cb8-62" aria-hidden="true" tabindex="-1"></a>        <span class="fu">chgrp</span> lieber_marmaypag <span class="at">-R</span> <span class="va">${1}</span></span>
-<span id="cb8-63"><a href="organizing-your-work.html#cb8-63" aria-hidden="true" tabindex="-1"></a>    <span class="cf">elif</span> <span class="fu">getent</span> group hickslab <span class="kw">|</span> <span class="fu">grep</span> <span class="at">-q</span> <span class="st">&quot;\b</span><span class="va">${USER}</span><span class="st">\b&quot;</span><span class="kw">;</span> <span class="cf">then</span></span>
-<span id="cb8-64"><a href="organizing-your-work.html#cb8-64" aria-hidden="true" tabindex="-1"></a>        <span class="bu">echo</span> <span class="st">&quot;**** Running chgrp hickslab ****&quot;</span></span>
-<span id="cb8-65"><a href="organizing-your-work.html#cb8-65" aria-hidden="true" tabindex="-1"></a>        <span class="fu">sleep</span> 5</span>
-<span id="cb8-66"><a href="organizing-your-work.html#cb8-66" aria-hidden="true" tabindex="-1"></a>        <span class="fu">date</span></span>
-<span id="cb8-67"><a href="organizing-your-work.html#cb8-67" aria-hidden="true" tabindex="-1"></a>        <span class="fu">chgrp</span> hickslab <span class="at">-R</span> <span class="va">${1}</span></span>
-<span id="cb8-68"><a href="organizing-your-work.html#cb8-68" aria-hidden="true" tabindex="-1"></a>    <span class="cf">else</span></span>
-<span id="cb8-69"><a href="organizing-your-work.html#cb8-69" aria-hidden="true" tabindex="-1"></a>        <span class="bu">echo</span> <span class="st">&quot;**** Skipping chgrp step ****&quot;</span></span>
-<span id="cb8-70"><a href="organizing-your-work.html#cb8-70" aria-hidden="true" tabindex="-1"></a>    <span class="cf">fi</span></span>
-<span id="cb8-71"><a href="organizing-your-work.html#cb8-71" aria-hidden="true" tabindex="-1"></a>    </span>
-<span id="cb8-72"><a href="organizing-your-work.html#cb8-72" aria-hidden="true" tabindex="-1"></a>    <span class="co">## For setting the group sticky bit</span></span>
-<span id="cb8-73"><a href="organizing-your-work.html#cb8-73" aria-hidden="true" tabindex="-1"></a>    <span class="bu">echo</span> <span class="st">&quot;&quot;</span></span>
-<span id="cb8-74"><a href="organizing-your-work.html#cb8-74" aria-hidden="true" tabindex="-1"></a>    <span class="bu">echo</span> <span class="st">&quot;**** Setting the group sticky bit ****&quot;</span></span>
-<span id="cb8-75"><a href="organizing-your-work.html#cb8-75" aria-hidden="true" tabindex="-1"></a>    <span class="fu">sleep</span> 5</span>
-<span id="cb8-76"><a href="organizing-your-work.html#cb8-76" aria-hidden="true" tabindex="-1"></a>    <span class="fu">date</span></span>
-<span id="cb8-77"><a href="organizing-your-work.html#cb8-77" aria-hidden="true" tabindex="-1"></a>    <span class="fu">find</span> <span class="va">${1}</span> <span class="at">-user</span> <span class="va">${USER}</span> <span class="at">-type</span> d <span class="kw">|</span> <span class="fu">xargs</span> chmod g+s</span>
-<span id="cb8-78"><a href="organizing-your-work.html#cb8-78" aria-hidden="true" tabindex="-1"></a>    </span>
-<span id="cb8-79"><a href="organizing-your-work.html#cb8-79" aria-hidden="true" tabindex="-1"></a>    <span class="co">## Check settings</span></span>
-<span id="cb8-80"><a href="organizing-your-work.html#cb8-80" aria-hidden="true" tabindex="-1"></a>    <span class="bu">echo</span> <span class="st">&quot;&quot;</span></span>
-<span id="cb8-81"><a href="organizing-your-work.html#cb8-81" aria-hidden="true" tabindex="-1"></a>    <span class="bu">echo</span> <span class="st">&quot;**** Checking the nfs4 (ACLs) settings ****&quot;</span></span>
-<span id="cb8-82"><a href="organizing-your-work.html#cb8-82" aria-hidden="true" tabindex="-1"></a>    <span class="fu">sleep</span> 5</span>
-<span id="cb8-83"><a href="organizing-your-work.html#cb8-83" aria-hidden="true" tabindex="-1"></a>    <span class="fu">date</span></span>
-<span id="cb8-84"><a href="organizing-your-work.html#cb8-84" aria-hidden="true" tabindex="-1"></a>    <span class="ex">nfs4_getfacl</span> <span class="va">${1}</span></span>
-<span id="cb8-85"><a href="organizing-your-work.html#cb8-85" aria-hidden="true" tabindex="-1"></a><span class="cf">else</span></span>
-<span id="cb8-86"><a href="organizing-your-work.html#cb8-86" aria-hidden="true" tabindex="-1"></a>    <span class="bu">echo</span> <span class="st">&quot;**** This script can only work on a qrsh / qsub session. It does not work on a login node since it does not have access to the nfs4_setfacl and nfs4_getfacl commands.****&quot;</span></span>
-<span id="cb8-87"><a href="organizing-your-work.html#cb8-87" aria-hidden="true" tabindex="-1"></a><span class="cf">fi</span></span></code></pre></div>
+<div class="sourceCode" id="cb8"><pre class="sourceCode bash"><code class="sourceCode bash"><span id="cb8-1"><a href="organizing-your-work.html#cb8-1" tabindex="-1"></a><span class="co">#!/bin/bash</span></span>
+<span id="cb8-2"><a href="organizing-your-work.html#cb8-2" tabindex="-1"></a></span>
+<span id="cb8-3"><a href="organizing-your-work.html#cb8-3" tabindex="-1"></a><span class="bu">echo</span> <span class="st">&quot;**** Updating permissions for </span><span class="va">$1</span><span class="st"> ****&quot;</span></span>
+<span id="cb8-4"><a href="organizing-your-work.html#cb8-4" tabindex="-1"></a><span class="fu">date</span></span>
+<span id="cb8-5"><a href="organizing-your-work.html#cb8-5" tabindex="-1"></a><span class="bu">echo</span> <span class="st">&quot;&quot;</span></span>
+<span id="cb8-6"><a href="organizing-your-work.html#cb8-6" tabindex="-1"></a></span>
+<span id="cb8-7"><a href="organizing-your-work.html#cb8-7" tabindex="-1"></a><span class="cf">if</span> <span class="kw">[[</span> <span class="va">$HOSTNAME</span> <span class="ot">==</span> compute-<span class="pp">*</span> <span class="kw">]]</span> <span class="kw">||</span> <span class="kw">[[</span> <span class="va">$HOSTNAME</span> <span class="ot">==</span> transfer-<span class="pp">*</span> <span class="kw">]];</span> <span class="cf">then</span></span>
+<span id="cb8-8"><a href="organizing-your-work.html#cb8-8" tabindex="-1"></a>    <span class="bu">echo</span> <span class="st">&quot;**** Note that warning/error messages are expected for files and directories that you are not the owner of.&quot;</span></span>
+<span id="cb8-9"><a href="organizing-your-work.html#cb8-9" tabindex="-1"></a>    <span class="bu">echo</span> <span class="st">&quot;The expected warning/error messages are: &quot;</span></span>
+<span id="cb8-10"><a href="organizing-your-work.html#cb8-10" tabindex="-1"></a>    <span class="bu">echo</span> <span class="st">&quot;    &#39;chgrp: changing group of ‘some_JHPCE_file_path’: Operation not permitted&#39;&quot;</span></span>
+<span id="cb8-11"><a href="organizing-your-work.html#cb8-11" tabindex="-1"></a>    <span class="bu">echo</span> <span class="st">&quot; or &#39;chmod: changing permissions of ‘some_JHPCE_file_path’: Operation not permitted&#39;.&quot;</span></span>
+<span id="cb8-12"><a href="organizing-your-work.html#cb8-12" tabindex="-1"></a>    <span class="bu">echo</span> <span class="st">&quot;If for many files you are not the owner (creator of), you will get lots of these warning/error messages, this is expected!&quot;</span></span>
+<span id="cb8-13"><a href="organizing-your-work.html#cb8-13" tabindex="-1"></a>    <span class="bu">echo</span> <span class="st">&quot;Error or warnings with another syntax are likely real. ****&quot;</span></span>
+<span id="cb8-14"><a href="organizing-your-work.html#cb8-14" tabindex="-1"></a>    <span class="bu">echo</span> <span class="st">&quot;&quot;</span></span>
+<span id="cb8-15"><a href="organizing-your-work.html#cb8-15" tabindex="-1"></a>    <span class="bu">echo</span> <span class="st">&quot;You will need to re-run this script anytime you upload files to JHPCE through Cyberduck / WinSCP as they break the ACLs.&quot;</span></span>
+<span id="cb8-16"><a href="organizing-your-work.html#cb8-16" tabindex="-1"></a>    <span class="bu">echo</span> <span class="st">&quot;Every new team member on a given project will likely also need to run this script once.&quot;</span></span>
+<span id="cb8-17"><a href="organizing-your-work.html#cb8-17" tabindex="-1"></a>    <span class="bu">echo</span> <span class="st">&quot;&quot;</span></span>
+<span id="cb8-18"><a href="organizing-your-work.html#cb8-18" tabindex="-1"></a>    <span class="bu">echo</span> <span class="st">&quot;For more details about setting permissions at JHPCE using ACLs, please check https://lcolladotor.github.io/bioc_team_ds/organizing-your-work.html#setting-jhpce-file-permissions.&quot;</span></span>
+<span id="cb8-19"><a href="organizing-your-work.html#cb8-19" tabindex="-1"></a>    <span class="bu">echo</span> <span class="st">&quot;&quot;</span></span>
+<span id="cb8-20"><a href="organizing-your-work.html#cb8-20" tabindex="-1"></a>    <span class="bu">echo</span> <span class="st">&quot;This message will be displayed for 90 seconds before the script proceeds.&quot;</span></span>
+<span id="cb8-21"><a href="organizing-your-work.html#cb8-21" tabindex="-1"></a>    <span class="bu">echo</span> <span class="st">&quot;That way you will have time enough to read it and/or copy it.&quot;</span></span>
+<span id="cb8-22"><a href="organizing-your-work.html#cb8-22" tabindex="-1"></a>    <span class="fu">sleep</span> 90</span>
+<span id="cb8-23"><a href="organizing-your-work.html#cb8-23" tabindex="-1"></a>    </span>
+<span id="cb8-24"><a href="organizing-your-work.html#cb8-24" tabindex="-1"></a>    <span class="bu">echo</span> <span class="st">&quot;&quot;</span></span>
+<span id="cb8-25"><a href="organizing-your-work.html#cb8-25" tabindex="-1"></a>    <span class="bu">echo</span> <span class="st">&quot;**** Setting read (R), write (W), and execute (X) permissions for hickslab ****&quot;</span></span>
+<span id="cb8-26"><a href="organizing-your-work.html#cb8-26" tabindex="-1"></a>    <span class="fu">sleep</span> 5</span>
+<span id="cb8-27"><a href="organizing-your-work.html#cb8-27" tabindex="-1"></a>    <span class="fu">date</span></span>
+<span id="cb8-28"><a href="organizing-your-work.html#cb8-28" tabindex="-1"></a>    </span>
+<span id="cb8-29"><a href="organizing-your-work.html#cb8-29" tabindex="-1"></a>    <span class="fu">find</span> <span class="va">${1}</span> <span class="at">-user</span> <span class="va">${USER}</span> <span class="at">-type</span> d <span class="at">-exec</span> nfs4_setfacl <span class="at">-a</span> <span class="st">&quot;A:g:hickslab@cm.cluster:RWX&quot;</span> {} <span class="dt">\;</span></span>
+<span id="cb8-30"><a href="organizing-your-work.html#cb8-30" tabindex="-1"></a>    <span class="fu">find</span> <span class="va">${1}</span> <span class="at">-user</span> <span class="va">${USER}</span> <span class="at">-type</span> d <span class="at">-exec</span> nfs4_setfacl <span class="at">-a</span> <span class="st">&quot;A:gfdi:hickslab@cm.cluster:RWX&quot;</span> {} <span class="dt">\;</span></span>
+<span id="cb8-31"><a href="organizing-your-work.html#cb8-31" tabindex="-1"></a>    <span class="fu">find</span> <span class="va">${1}</span> <span class="at">-user</span> <span class="va">${USER}</span> <span class="at">-type</span> f <span class="at">-exec</span> nfs4_setfacl <span class="at">-a</span> <span class="st">&quot;A:g:hickslab@cm.cluster:RW&quot;</span> {} <span class="dt">\;</span></span>
+<span id="cb8-32"><a href="organizing-your-work.html#cb8-32" tabindex="-1"></a>    </span>
+<span id="cb8-33"><a href="organizing-your-work.html#cb8-33" tabindex="-1"></a>    <span class="bu">echo</span> <span class="st">&quot;&quot;</span></span>
+<span id="cb8-34"><a href="organizing-your-work.html#cb8-34" tabindex="-1"></a>    <span class="bu">echo</span> <span class="st">&quot;**** Setting read (R), write (W), and execute (X) permissions for lieber_lcolladotor ****&quot;</span></span>
+<span id="cb8-35"><a href="organizing-your-work.html#cb8-35" tabindex="-1"></a>    <span class="fu">sleep</span> 5</span>
+<span id="cb8-36"><a href="organizing-your-work.html#cb8-36" tabindex="-1"></a>    <span class="fu">date</span></span>
+<span id="cb8-37"><a href="organizing-your-work.html#cb8-37" tabindex="-1"></a>    </span>
+<span id="cb8-38"><a href="organizing-your-work.html#cb8-38" tabindex="-1"></a>    <span class="fu">find</span> <span class="va">${1}</span> <span class="at">-user</span> <span class="va">${USER}</span> <span class="at">-type</span> d <span class="at">-exec</span> nfs4_setfacl <span class="at">-a</span> <span class="st">&quot;A:g:lieber_lcolladotor@cm.cluster:RWX&quot;</span> {} <span class="dt">\;</span></span>
+<span id="cb8-39"><a href="organizing-your-work.html#cb8-39" tabindex="-1"></a>    <span class="fu">find</span> <span class="va">${1}</span> <span class="at">-user</span> <span class="va">${USER}</span> <span class="at">-type</span> d <span class="at">-exec</span> nfs4_setfacl <span class="at">-a</span> <span class="st">&quot;A:gfdi:lieber_lcolladotor@cm.cluster:RWX&quot;</span> {} <span class="dt">\;</span></span>
+<span id="cb8-40"><a href="organizing-your-work.html#cb8-40" tabindex="-1"></a>    <span class="fu">find</span> <span class="va">${1}</span> <span class="at">-user</span> <span class="va">${USER}</span> <span class="at">-type</span> f <span class="at">-exec</span> nfs4_setfacl <span class="at">-a</span> <span class="st">&quot;A:g:lieber_lcolladotor@cm.cluster:RW&quot;</span> {} <span class="dt">\;</span></span>
+<span id="cb8-41"><a href="organizing-your-work.html#cb8-41" tabindex="-1"></a>    </span>
+<span id="cb8-42"><a href="organizing-your-work.html#cb8-42" tabindex="-1"></a>    <span class="bu">echo</span> <span class="st">&quot;&quot;</span></span>
+<span id="cb8-43"><a href="organizing-your-work.html#cb8-43" tabindex="-1"></a>    <span class="bu">echo</span> <span class="st">&quot;**** Setting read (R), write (W), and execute (X) permissions for lieber_marmaypag ****&quot;</span></span>
+<span id="cb8-44"><a href="organizing-your-work.html#cb8-44" tabindex="-1"></a>    <span class="fu">sleep</span> 5</span>
+<span id="cb8-45"><a href="organizing-your-work.html#cb8-45" tabindex="-1"></a>    <span class="fu">date</span></span>
+<span id="cb8-46"><a href="organizing-your-work.html#cb8-46" tabindex="-1"></a>    </span>
+<span id="cb8-47"><a href="organizing-your-work.html#cb8-47" tabindex="-1"></a>    <span class="fu">find</span> <span class="va">${1}</span> <span class="at">-user</span> <span class="va">${USER}</span> <span class="at">-type</span> d <span class="at">-exec</span> nfs4_setfacl <span class="at">-a</span> <span class="st">&quot;A:g:lieber_marmaypag@cm.cluster:RWX&quot;</span> {} <span class="dt">\;</span></span>
+<span id="cb8-48"><a href="organizing-your-work.html#cb8-48" tabindex="-1"></a>    <span class="fu">find</span> <span class="va">${1}</span> <span class="at">-user</span> <span class="va">${USER}</span> <span class="at">-type</span> d <span class="at">-exec</span> nfs4_setfacl <span class="at">-a</span> <span class="st">&quot;A:gfdi:lieber_marmaypag@cm.cluster:RWX&quot;</span> {} <span class="dt">\;</span></span>
+<span id="cb8-49"><a href="organizing-your-work.html#cb8-49" tabindex="-1"></a>    <span class="fu">find</span> <span class="va">${1}</span> <span class="at">-user</span> <span class="va">${USER}</span> <span class="at">-type</span> f <span class="at">-exec</span> nfs4_setfacl <span class="at">-a</span> <span class="st">&quot;A:g:lieber_marmaypag@cm.cluster:RW&quot;</span> {} <span class="dt">\;</span></span>
+<span id="cb8-50"><a href="organizing-your-work.html#cb8-50" tabindex="-1"></a>    </span>
+<span id="cb8-51"><a href="organizing-your-work.html#cb8-51" tabindex="-1"></a>    <span class="co">## To move away from lieber_jaffe</span></span>
+<span id="cb8-52"><a href="organizing-your-work.html#cb8-52" tabindex="-1"></a>    <span class="bu">echo</span> <span class="st">&quot;&quot;</span></span>
+<span id="cb8-53"><a href="organizing-your-work.html#cb8-53" tabindex="-1"></a>    <span class="cf">if</span> <span class="fu">getent</span> group lieber_lcolladotor <span class="kw">|</span> <span class="fu">grep</span> <span class="at">-q</span> <span class="st">&quot;\b</span><span class="va">${USER}</span><span class="st">\b&quot;</span><span class="kw">;</span> <span class="cf">then</span></span>
+<span id="cb8-54"><a href="organizing-your-work.html#cb8-54" tabindex="-1"></a>        <span class="bu">echo</span> <span class="st">&quot;**** Running chgrp lieber_lcolladotor ****&quot;</span></span>
+<span id="cb8-55"><a href="organizing-your-work.html#cb8-55" tabindex="-1"></a>        <span class="fu">sleep</span> 5</span>
+<span id="cb8-56"><a href="organizing-your-work.html#cb8-56" tabindex="-1"></a>        <span class="fu">date</span></span>
+<span id="cb8-57"><a href="organizing-your-work.html#cb8-57" tabindex="-1"></a>        <span class="fu">chgrp</span> lieber_lcolladotor <span class="at">-R</span> <span class="va">${1}</span></span>
+<span id="cb8-58"><a href="organizing-your-work.html#cb8-58" tabindex="-1"></a>    <span class="cf">elif</span> <span class="fu">getent</span> group lieber_marmaypag <span class="kw">|</span> <span class="fu">grep</span> <span class="at">-q</span> <span class="st">&quot;\b</span><span class="va">${USER}</span><span class="st">\b&quot;</span><span class="kw">;</span> <span class="cf">then</span></span>
+<span id="cb8-59"><a href="organizing-your-work.html#cb8-59" tabindex="-1"></a>        <span class="bu">echo</span> <span class="st">&quot;**** Running chgrp lieber_marmaypag ****&quot;</span></span>
+<span id="cb8-60"><a href="organizing-your-work.html#cb8-60" tabindex="-1"></a>        <span class="fu">sleep</span> 5</span>
+<span id="cb8-61"><a href="organizing-your-work.html#cb8-61" tabindex="-1"></a>        <span class="fu">date</span></span>
+<span id="cb8-62"><a href="organizing-your-work.html#cb8-62" tabindex="-1"></a>        <span class="fu">chgrp</span> lieber_marmaypag <span class="at">-R</span> <span class="va">${1}</span></span>
+<span id="cb8-63"><a href="organizing-your-work.html#cb8-63" tabindex="-1"></a>    <span class="cf">elif</span> <span class="fu">getent</span> group hickslab <span class="kw">|</span> <span class="fu">grep</span> <span class="at">-q</span> <span class="st">&quot;\b</span><span class="va">${USER}</span><span class="st">\b&quot;</span><span class="kw">;</span> <span class="cf">then</span></span>
+<span id="cb8-64"><a href="organizing-your-work.html#cb8-64" tabindex="-1"></a>        <span class="bu">echo</span> <span class="st">&quot;**** Running chgrp hickslab ****&quot;</span></span>
+<span id="cb8-65"><a href="organizing-your-work.html#cb8-65" tabindex="-1"></a>        <span class="fu">sleep</span> 5</span>
+<span id="cb8-66"><a href="organizing-your-work.html#cb8-66" tabindex="-1"></a>        <span class="fu">date</span></span>
+<span id="cb8-67"><a href="organizing-your-work.html#cb8-67" tabindex="-1"></a>        <span class="fu">chgrp</span> hickslab <span class="at">-R</span> <span class="va">${1}</span></span>
+<span id="cb8-68"><a href="organizing-your-work.html#cb8-68" tabindex="-1"></a>    <span class="cf">else</span></span>
+<span id="cb8-69"><a href="organizing-your-work.html#cb8-69" tabindex="-1"></a>        <span class="bu">echo</span> <span class="st">&quot;**** Skipping chgrp step ****&quot;</span></span>
+<span id="cb8-70"><a href="organizing-your-work.html#cb8-70" tabindex="-1"></a>    <span class="cf">fi</span></span>
+<span id="cb8-71"><a href="organizing-your-work.html#cb8-71" tabindex="-1"></a>    </span>
+<span id="cb8-72"><a href="organizing-your-work.html#cb8-72" tabindex="-1"></a>    <span class="co">## For setting the group sticky bit</span></span>
+<span id="cb8-73"><a href="organizing-your-work.html#cb8-73" tabindex="-1"></a>    <span class="bu">echo</span> <span class="st">&quot;&quot;</span></span>
+<span id="cb8-74"><a href="organizing-your-work.html#cb8-74" tabindex="-1"></a>    <span class="bu">echo</span> <span class="st">&quot;**** Setting the group sticky bit ****&quot;</span></span>
+<span id="cb8-75"><a href="organizing-your-work.html#cb8-75" tabindex="-1"></a>    <span class="fu">sleep</span> 5</span>
+<span id="cb8-76"><a href="organizing-your-work.html#cb8-76" tabindex="-1"></a>    <span class="fu">date</span></span>
+<span id="cb8-77"><a href="organizing-your-work.html#cb8-77" tabindex="-1"></a>    <span class="fu">find</span> <span class="va">${1}</span> <span class="at">-user</span> <span class="va">${USER}</span> <span class="at">-type</span> d <span class="kw">|</span> <span class="fu">xargs</span> chmod g+s</span>
+<span id="cb8-78"><a href="organizing-your-work.html#cb8-78" tabindex="-1"></a>    </span>
+<span id="cb8-79"><a href="organizing-your-work.html#cb8-79" tabindex="-1"></a>    <span class="co">## Check settings</span></span>
+<span id="cb8-80"><a href="organizing-your-work.html#cb8-80" tabindex="-1"></a>    <span class="bu">echo</span> <span class="st">&quot;&quot;</span></span>
+<span id="cb8-81"><a href="organizing-your-work.html#cb8-81" tabindex="-1"></a>    <span class="bu">echo</span> <span class="st">&quot;**** Checking the nfs4 (ACLs) settings ****&quot;</span></span>
+<span id="cb8-82"><a href="organizing-your-work.html#cb8-82" tabindex="-1"></a>    <span class="fu">sleep</span> 5</span>
+<span id="cb8-83"><a href="organizing-your-work.html#cb8-83" tabindex="-1"></a>    <span class="fu">date</span></span>
+<span id="cb8-84"><a href="organizing-your-work.html#cb8-84" tabindex="-1"></a>    <span class="ex">nfs4_getfacl</span> <span class="va">${1}</span></span>
+<span id="cb8-85"><a href="organizing-your-work.html#cb8-85" tabindex="-1"></a><span class="cf">else</span></span>
+<span id="cb8-86"><a href="organizing-your-work.html#cb8-86" tabindex="-1"></a>    <span class="bu">echo</span> <span class="st">&quot;**** This script can only work on a qrsh / qsub session. It does not work on a login node since it does not have access to the nfs4_setfacl and nfs4_getfacl commands.****&quot;</span></span>
+<span id="cb8-87"><a href="organizing-your-work.html#cb8-87" tabindex="-1"></a><span class="cf">fi</span></span></code></pre></div>
 </div>
 <div id="lieber_moods-example" class="section level4 hasAnchor" number="14.3.2.2">
 <h4><span class="header-section-number">14.3.2.2</span> lieber_moods example<a href="organizing-your-work.html#lieber_moods-example" class="anchor-section" aria-label="Anchor link to header"></a></h4>
 <ul>
 <li><code>/dcs04/lieber/lcolladotor/_jhpce_org_LIBD001/update_permissions_moods.sh</code></li>
 </ul>
-<div class="sourceCode" id="cb9"><pre class="sourceCode bash"><code class="sourceCode bash"><span id="cb9-1"><a href="organizing-your-work.html#cb9-1" aria-hidden="true" tabindex="-1"></a><span class="co">#!/bin/bash</span></span>
-<span id="cb9-2"><a href="organizing-your-work.html#cb9-2" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb9-3"><a href="organizing-your-work.html#cb9-3" aria-hidden="true" tabindex="-1"></a><span class="bu">echo</span> <span class="st">&quot;**** Updating permissions for </span><span class="va">$1</span><span class="st"> ****&quot;</span></span>
-<span id="cb9-4"><a href="organizing-your-work.html#cb9-4" aria-hidden="true" tabindex="-1"></a><span class="fu">date</span></span>
-<span id="cb9-5"><a href="organizing-your-work.html#cb9-5" aria-hidden="true" tabindex="-1"></a><span class="bu">echo</span> <span class="st">&quot;&quot;</span></span>
-<span id="cb9-6"><a href="organizing-your-work.html#cb9-6" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb9-7"><a href="organizing-your-work.html#cb9-7" aria-hidden="true" tabindex="-1"></a><span class="cf">if</span> <span class="kw">[[</span> <span class="va">$HOSTNAME</span> <span class="ot">==</span> compute-<span class="pp">*</span> <span class="kw">]]</span> <span class="kw">||</span> <span class="kw">[[</span> <span class="va">$HOSTNAME</span> <span class="ot">==</span> transfer-<span class="pp">*</span> <span class="kw">]];</span> <span class="cf">then</span></span>
-<span id="cb9-8"><a href="organizing-your-work.html#cb9-8" aria-hidden="true" tabindex="-1"></a>    <span class="bu">echo</span> <span class="st">&quot;**** Note that warning/error messages are expected for files and directories that you are not the owner of.&quot;</span></span>
-<span id="cb9-9"><a href="organizing-your-work.html#cb9-9" aria-hidden="true" tabindex="-1"></a>    <span class="bu">echo</span> <span class="st">&quot;The expected warning/error messages are: &quot;</span></span>
-<span id="cb9-10"><a href="organizing-your-work.html#cb9-10" aria-hidden="true" tabindex="-1"></a>    <span class="bu">echo</span> <span class="st">&quot;    &#39;chgrp: changing group of ‘some_JHPCE_file_path’: Operation not permitted&#39;&quot;</span></span>
-<span id="cb9-11"><a href="organizing-your-work.html#cb9-11" aria-hidden="true" tabindex="-1"></a>    <span class="bu">echo</span> <span class="st">&quot; or &#39;chmod: changing permissions of ‘some_JHPCE_file_path’: Operation not permitted&#39;.&quot;</span></span>
-<span id="cb9-12"><a href="organizing-your-work.html#cb9-12" aria-hidden="true" tabindex="-1"></a>    <span class="bu">echo</span> <span class="st">&quot;If for many files you are not the owner (creator of), you will get lots of these warning/error messages, this is expected!&quot;</span></span>
-<span id="cb9-13"><a href="organizing-your-work.html#cb9-13" aria-hidden="true" tabindex="-1"></a>    <span class="bu">echo</span> <span class="st">&quot;Error or warnings with another syntax are likely real. ****&quot;</span></span>
-<span id="cb9-14"><a href="organizing-your-work.html#cb9-14" aria-hidden="true" tabindex="-1"></a>    <span class="bu">echo</span> <span class="st">&quot;&quot;</span></span>
-<span id="cb9-15"><a href="organizing-your-work.html#cb9-15" aria-hidden="true" tabindex="-1"></a>    <span class="bu">echo</span> <span class="st">&quot;You will need to re-run this script anytime you upload files to JHPCE through Cyberduck / WinSCP as they break the ACLs.&quot;</span></span>
-<span id="cb9-16"><a href="organizing-your-work.html#cb9-16" aria-hidden="true" tabindex="-1"></a>    <span class="bu">echo</span> <span class="st">&quot;Every new team member on a given project will likely also need to run this script once.&quot;</span></span>
-<span id="cb9-17"><a href="organizing-your-work.html#cb9-17" aria-hidden="true" tabindex="-1"></a>    <span class="bu">echo</span> <span class="st">&quot;&quot;</span></span>
-<span id="cb9-18"><a href="organizing-your-work.html#cb9-18" aria-hidden="true" tabindex="-1"></a>    <span class="bu">echo</span> <span class="st">&quot;For more details about setting permissions at JHPCE using ACLs, please check https://lcolladotor.github.io/bioc_team_ds/organizing-your-work.html#setting-jhpce-file-permissions.&quot;</span></span>
-<span id="cb9-19"><a href="organizing-your-work.html#cb9-19" aria-hidden="true" tabindex="-1"></a>    <span class="bu">echo</span> <span class="st">&quot;&quot;</span></span>
-<span id="cb9-20"><a href="organizing-your-work.html#cb9-20" aria-hidden="true" tabindex="-1"></a>    <span class="bu">echo</span> <span class="st">&quot;This message will be displayed for 90 seconds before the script proceeds.&quot;</span></span>
-<span id="cb9-21"><a href="organizing-your-work.html#cb9-21" aria-hidden="true" tabindex="-1"></a>    <span class="bu">echo</span> <span class="st">&quot;That way you will have time enough to read it and/or copy it.&quot;</span></span>
-<span id="cb9-22"><a href="organizing-your-work.html#cb9-22" aria-hidden="true" tabindex="-1"></a>    <span class="fu">sleep</span> 90</span>
-<span id="cb9-23"><a href="organizing-your-work.html#cb9-23" aria-hidden="true" tabindex="-1"></a>    </span>
-<span id="cb9-24"><a href="organizing-your-work.html#cb9-24" aria-hidden="true" tabindex="-1"></a>    <span class="bu">echo</span> <span class="st">&quot;&quot;</span></span>
-<span id="cb9-25"><a href="organizing-your-work.html#cb9-25" aria-hidden="true" tabindex="-1"></a>    <span class="bu">echo</span> <span class="st">&quot;**** Setting read (R), write (W), and execute (X) permissions for lieber_moods ****&quot;</span></span>
-<span id="cb9-26"><a href="organizing-your-work.html#cb9-26" aria-hidden="true" tabindex="-1"></a>    <span class="fu">sleep</span> 5</span>
-<span id="cb9-27"><a href="organizing-your-work.html#cb9-27" aria-hidden="true" tabindex="-1"></a>    <span class="fu">date</span></span>
-<span id="cb9-28"><a href="organizing-your-work.html#cb9-28" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb9-29"><a href="organizing-your-work.html#cb9-29" aria-hidden="true" tabindex="-1"></a>    <span class="fu">find</span> <span class="va">${1}</span> <span class="at">-user</span> <span class="va">${USER}</span> <span class="at">-type</span> d <span class="at">-exec</span> nfs4_setfacl <span class="at">-a</span> <span class="st">&quot;A:g:lieber_moods@cm.cluster:RWX&quot;</span> {} <span class="dt">\;</span></span>
-<span id="cb9-30"><a href="organizing-your-work.html#cb9-30" aria-hidden="true" tabindex="-1"></a>    <span class="fu">find</span> <span class="va">${1}</span> <span class="at">-user</span> <span class="va">${USER}</span> <span class="at">-type</span> d <span class="at">-exec</span> nfs4_setfacl <span class="at">-a</span> <span class="st">&quot;A:gfdi:lieber_moods@cm.cluster:RWX&quot;</span> {} <span class="dt">\;</span></span>
-<span id="cb9-31"><a href="organizing-your-work.html#cb9-31" aria-hidden="true" tabindex="-1"></a>    <span class="fu">find</span> <span class="va">${1}</span> <span class="at">-user</span> <span class="va">${USER}</span> <span class="at">-type</span> f <span class="at">-exec</span> nfs4_setfacl <span class="at">-a</span> <span class="st">&quot;A:g:lieber_moods@cm.cluster:RW&quot;</span> {} <span class="dt">\;</span></span>
-<span id="cb9-32"><a href="organizing-your-work.html#cb9-32" aria-hidden="true" tabindex="-1"></a>    </span>
-<span id="cb9-33"><a href="organizing-your-work.html#cb9-33" aria-hidden="true" tabindex="-1"></a>    <span class="bu">echo</span> <span class="st">&quot;&quot;</span></span>
-<span id="cb9-34"><a href="organizing-your-work.html#cb9-34" aria-hidden="true" tabindex="-1"></a>    <span class="bu">echo</span> <span class="st">&quot;**** Setting read (R), write (W), and execute (X) permissions for lieber_lcolladotor ****&quot;</span></span>
-<span id="cb9-35"><a href="organizing-your-work.html#cb9-35" aria-hidden="true" tabindex="-1"></a>    <span class="fu">sleep</span> 5</span>
-<span id="cb9-36"><a href="organizing-your-work.html#cb9-36" aria-hidden="true" tabindex="-1"></a>    <span class="fu">date</span></span>
-<span id="cb9-37"><a href="organizing-your-work.html#cb9-37" aria-hidden="true" tabindex="-1"></a>    </span>
-<span id="cb9-38"><a href="organizing-your-work.html#cb9-38" aria-hidden="true" tabindex="-1"></a>    <span class="fu">find</span> <span class="va">${1}</span> <span class="at">-user</span> <span class="va">${USER}</span> <span class="at">-type</span> d <span class="at">-exec</span> nfs4_setfacl <span class="at">-a</span> <span class="st">&quot;A:g:lieber_lcolladotor@cm.cluster:RWX&quot;</span> {} <span class="dt">\;</span></span>
-<span id="cb9-39"><a href="organizing-your-work.html#cb9-39" aria-hidden="true" tabindex="-1"></a>    <span class="fu">find</span> <span class="va">${1}</span> <span class="at">-user</span> <span class="va">${USER}</span> <span class="at">-type</span> d <span class="at">-exec</span> nfs4_setfacl <span class="at">-a</span> <span class="st">&quot;A:gfdi:lieber_lcolladotor@cm.cluster:RWX&quot;</span> {} <span class="dt">\;</span></span>
-<span id="cb9-40"><a href="organizing-your-work.html#cb9-40" aria-hidden="true" tabindex="-1"></a>    <span class="fu">find</span> <span class="va">${1}</span> <span class="at">-user</span> <span class="va">${USER}</span> <span class="at">-type</span> f <span class="at">-exec</span> nfs4_setfacl <span class="at">-a</span> <span class="st">&quot;A:g:lieber_lcolladotor@cm.cluster:RW&quot;</span> {} <span class="dt">\;</span></span>
-<span id="cb9-41"><a href="organizing-your-work.html#cb9-41" aria-hidden="true" tabindex="-1"></a>    </span>
-<span id="cb9-42"><a href="organizing-your-work.html#cb9-42" aria-hidden="true" tabindex="-1"></a>    <span class="bu">echo</span> <span class="st">&quot;&quot;</span> </span>
-<span id="cb9-43"><a href="organizing-your-work.html#cb9-43" aria-hidden="true" tabindex="-1"></a>    <span class="bu">echo</span> <span class="st">&quot;**** Setting read (R) and execute (X) permissions for lieber ****&quot;</span></span>
-<span id="cb9-44"><a href="organizing-your-work.html#cb9-44" aria-hidden="true" tabindex="-1"></a>    <span class="fu">sleep</span> 5</span>
-<span id="cb9-45"><a href="organizing-your-work.html#cb9-45" aria-hidden="true" tabindex="-1"></a>    <span class="fu">date</span></span>
-<span id="cb9-46"><a href="organizing-your-work.html#cb9-46" aria-hidden="true" tabindex="-1"></a>    <span class="fu">find</span> <span class="va">${1}</span> <span class="at">-user</span> <span class="va">${USER}</span> <span class="at">-type</span> d <span class="at">-exec</span> nfs4_setfacl <span class="at">-a</span> <span class="st">&quot;A:g:lieber@cm.cluster:RX&quot;</span> {} <span class="dt">\;</span></span>
-<span id="cb9-47"><a href="organizing-your-work.html#cb9-47" aria-hidden="true" tabindex="-1"></a>    <span class="fu">find</span> <span class="va">${1}</span> <span class="at">-user</span> <span class="va">${USER}</span> <span class="at">-type</span> d <span class="at">-exec</span> nfs4_setfacl <span class="at">-a</span> <span class="st">&quot;A:gfdi:lieber@cm.cluster:RX&quot;</span> {} <span class="dt">\;</span></span>
-<span id="cb9-48"><a href="organizing-your-work.html#cb9-48" aria-hidden="true" tabindex="-1"></a>    <span class="fu">find</span> <span class="va">${1}</span> <span class="at">-user</span> <span class="va">${USER}</span> <span class="at">-type</span> f <span class="at">-exec</span> nfs4_setfacl <span class="at">-a</span> <span class="st">&quot;A:g:lieber@cm.cluster:R&quot;</span> {} <span class="dt">\;</span></span>
-<span id="cb9-49"><a href="organizing-your-work.html#cb9-49" aria-hidden="true" tabindex="-1"></a>    </span>
-<span id="cb9-50"><a href="organizing-your-work.html#cb9-50" aria-hidden="true" tabindex="-1"></a>    <span class="bu">echo</span> <span class="st">&quot;&quot;</span> </span>
-<span id="cb9-51"><a href="organizing-your-work.html#cb9-51" aria-hidden="true" tabindex="-1"></a>    <span class="bu">echo</span> <span class="st">&quot;**** Removing permissions for lieber_marmaypag ****&quot;</span></span>
-<span id="cb9-52"><a href="organizing-your-work.html#cb9-52" aria-hidden="true" tabindex="-1"></a>    <span class="fu">sleep</span> 5</span>
-<span id="cb9-53"><a href="organizing-your-work.html#cb9-53" aria-hidden="true" tabindex="-1"></a>    <span class="fu">date</span></span>
-<span id="cb9-54"><a href="organizing-your-work.html#cb9-54" aria-hidden="true" tabindex="-1"></a>    <span class="fu">find</span> <span class="va">${1}</span> <span class="at">-user</span> <span class="va">${USER}</span> <span class="at">-type</span> d <span class="at">-exec</span> nfs4_setfacl <span class="at">-x</span> <span class="st">&quot;A:g:lieber_marmaypag@cm.cluster:rwaDxtcy&quot;</span> {} <span class="dt">\;</span></span>
-<span id="cb9-55"><a href="organizing-your-work.html#cb9-55" aria-hidden="true" tabindex="-1"></a>    <span class="fu">find</span> <span class="va">${1}</span> <span class="at">-user</span> <span class="va">${USER}</span> <span class="at">-type</span> d <span class="at">-exec</span> nfs4_setfacl <span class="at">-x</span> <span class="st">&quot;A:gfdi:lieber_marmaypag@cm.cluster:rwaDxtcy&quot;</span> {} <span class="dt">\;</span></span>
-<span id="cb9-56"><a href="organizing-your-work.html#cb9-56" aria-hidden="true" tabindex="-1"></a>    <span class="fu">find</span> <span class="va">${1}</span> <span class="at">-user</span> <span class="va">${USER}</span> <span class="at">-type</span> f <span class="at">-exec</span> nfs4_setfacl <span class="at">-x</span> <span class="st">&quot;A:g:lieber_marmaypag@cm.cluster:rwatcy&quot;</span> {} <span class="dt">\;</span></span>
-<span id="cb9-57"><a href="organizing-your-work.html#cb9-57" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb9-58"><a href="organizing-your-work.html#cb9-58" aria-hidden="true" tabindex="-1"></a>    <span class="fu">find</span> <span class="va">${1}</span> <span class="at">-user</span> <span class="va">${USER}</span> <span class="at">-type</span> d <span class="at">-exec</span> nfs4_setfacl <span class="at">-x</span> <span class="st">&quot;A:g:4218:rwaDxtcy&quot;</span> {} <span class="dt">\;</span></span>
-<span id="cb9-59"><a href="organizing-your-work.html#cb9-59" aria-hidden="true" tabindex="-1"></a>    <span class="fu">find</span> <span class="va">${1}</span> <span class="at">-user</span> <span class="va">${USER}</span> <span class="at">-type</span> d <span class="at">-exec</span> nfs4_setfacl <span class="at">-x</span> <span class="st">&quot;A:gfdi:4218:rwaDxtcy&quot;</span> {} <span class="dt">\;</span></span>
-<span id="cb9-60"><a href="organizing-your-work.html#cb9-60" aria-hidden="true" tabindex="-1"></a>    <span class="fu">find</span> <span class="va">${1}</span> <span class="at">-user</span> <span class="va">${USER}</span> <span class="at">-type</span> f <span class="at">-exec</span> nfs4_setfacl <span class="at">-x</span> <span class="st">&quot;A:g:4218:rwatcy&quot;</span> {} <span class="dt">\;</span></span>
-<span id="cb9-61"><a href="organizing-your-work.html#cb9-61" aria-hidden="true" tabindex="-1"></a>    </span>
-<span id="cb9-62"><a href="organizing-your-work.html#cb9-62" aria-hidden="true" tabindex="-1"></a>    <span class="co">## To move away from lieber_jaffe</span></span>
-<span id="cb9-63"><a href="organizing-your-work.html#cb9-63" aria-hidden="true" tabindex="-1"></a>    <span class="bu">echo</span> <span class="st">&quot;&quot;</span></span>
-<span id="cb9-64"><a href="organizing-your-work.html#cb9-64" aria-hidden="true" tabindex="-1"></a>    <span class="cf">if</span> <span class="fu">getent</span> group lieber_moods <span class="kw">|</span> <span class="fu">grep</span> <span class="at">-q</span> <span class="st">&quot;\b</span><span class="va">${USER}</span><span class="st">\b&quot;</span><span class="kw">;</span> <span class="cf">then</span></span>
-<span id="cb9-65"><a href="organizing-your-work.html#cb9-65" aria-hidden="true" tabindex="-1"></a>        <span class="bu">echo</span> <span class="st">&quot;**** Running chgrp lieber_moods ****&quot;</span></span>
-<span id="cb9-66"><a href="organizing-your-work.html#cb9-66" aria-hidden="true" tabindex="-1"></a>        <span class="fu">sleep</span> 5</span>
-<span id="cb9-67"><a href="organizing-your-work.html#cb9-67" aria-hidden="true" tabindex="-1"></a>        <span class="fu">date</span></span>
-<span id="cb9-68"><a href="organizing-your-work.html#cb9-68" aria-hidden="true" tabindex="-1"></a>        <span class="fu">chgrp</span> lieber_moods <span class="at">-R</span> <span class="va">${1}</span></span>
-<span id="cb9-69"><a href="organizing-your-work.html#cb9-69" aria-hidden="true" tabindex="-1"></a>    <span class="cf">elif</span> <span class="fu">getent</span> group lieber_lcolladotor <span class="kw">|</span> <span class="fu">grep</span> <span class="at">-q</span> <span class="st">&quot;\b</span><span class="va">${USER}</span><span class="st">\b&quot;</span><span class="kw">;</span> <span class="cf">then</span></span>
-<span id="cb9-70"><a href="organizing-your-work.html#cb9-70" aria-hidden="true" tabindex="-1"></a>        <span class="bu">echo</span> <span class="st">&quot;**** Running chgrp lieber_lcolladotor ****&quot;</span></span>
-<span id="cb9-71"><a href="organizing-your-work.html#cb9-71" aria-hidden="true" tabindex="-1"></a>        <span class="fu">sleep</span> 5</span>
-<span id="cb9-72"><a href="organizing-your-work.html#cb9-72" aria-hidden="true" tabindex="-1"></a>        <span class="fu">date</span></span>
-<span id="cb9-73"><a href="organizing-your-work.html#cb9-73" aria-hidden="true" tabindex="-1"></a>        <span class="fu">chgrp</span> lieber_lcolladotor <span class="at">-R</span> <span class="va">${1}</span></span>
-<span id="cb9-74"><a href="organizing-your-work.html#cb9-74" aria-hidden="true" tabindex="-1"></a>    <span class="cf">else</span></span>
-<span id="cb9-75"><a href="organizing-your-work.html#cb9-75" aria-hidden="true" tabindex="-1"></a>        <span class="bu">echo</span> <span class="st">&quot;**** Skipping chgrp step ****&quot;</span></span>
-<span id="cb9-76"><a href="organizing-your-work.html#cb9-76" aria-hidden="true" tabindex="-1"></a>    <span class="cf">fi</span></span>
-<span id="cb9-77"><a href="organizing-your-work.html#cb9-77" aria-hidden="true" tabindex="-1"></a>    </span>
-<span id="cb9-78"><a href="organizing-your-work.html#cb9-78" aria-hidden="true" tabindex="-1"></a>    <span class="co">## For setting the group sticky bit</span></span>
-<span id="cb9-79"><a href="organizing-your-work.html#cb9-79" aria-hidden="true" tabindex="-1"></a>    <span class="bu">echo</span> <span class="st">&quot;&quot;</span></span>
-<span id="cb9-80"><a href="organizing-your-work.html#cb9-80" aria-hidden="true" tabindex="-1"></a>    <span class="bu">echo</span> <span class="st">&quot;**** Setting the group sticky bit ****&quot;</span></span>
-<span id="cb9-81"><a href="organizing-your-work.html#cb9-81" aria-hidden="true" tabindex="-1"></a>    <span class="fu">sleep</span> 5</span>
-<span id="cb9-82"><a href="organizing-your-work.html#cb9-82" aria-hidden="true" tabindex="-1"></a>    <span class="fu">date</span></span>
-<span id="cb9-83"><a href="organizing-your-work.html#cb9-83" aria-hidden="true" tabindex="-1"></a>    <span class="fu">find</span> <span class="va">${1}</span> <span class="at">-user</span> <span class="va">${USER}</span> <span class="at">-type</span> d <span class="kw">|</span> <span class="fu">xargs</span> chmod g+s</span>
-<span id="cb9-84"><a href="organizing-your-work.html#cb9-84" aria-hidden="true" tabindex="-1"></a>    </span>
-<span id="cb9-85"><a href="organizing-your-work.html#cb9-85" aria-hidden="true" tabindex="-1"></a>    <span class="co">## Check settings</span></span>
-<span id="cb9-86"><a href="organizing-your-work.html#cb9-86" aria-hidden="true" tabindex="-1"></a>    <span class="bu">echo</span> <span class="st">&quot;&quot;</span></span>
-<span id="cb9-87"><a href="organizing-your-work.html#cb9-87" aria-hidden="true" tabindex="-1"></a>    <span class="bu">echo</span> <span class="st">&quot;**** Checking the nfs4 (ACLs) settings ****&quot;</span></span>
-<span id="cb9-88"><a href="organizing-your-work.html#cb9-88" aria-hidden="true" tabindex="-1"></a>    <span class="fu">sleep</span> 5</span>
-<span id="cb9-89"><a href="organizing-your-work.html#cb9-89" aria-hidden="true" tabindex="-1"></a>    <span class="fu">date</span></span>
-<span id="cb9-90"><a href="organizing-your-work.html#cb9-90" aria-hidden="true" tabindex="-1"></a>    <span class="ex">nfs4_getfacl</span> <span class="va">${1}</span></span>
-<span id="cb9-91"><a href="organizing-your-work.html#cb9-91" aria-hidden="true" tabindex="-1"></a><span class="cf">else</span></span>
-<span id="cb9-92"><a href="organizing-your-work.html#cb9-92" aria-hidden="true" tabindex="-1"></a>    <span class="bu">echo</span> <span class="st">&quot;**** This script can only work on a qrsh / qsub session. It does not work on a login node since it does not have access to the nfs4_setfacl and nfs4_getfacl commands.****&quot;</span></span>
-<span id="cb9-93"><a href="organizing-your-work.html#cb9-93" aria-hidden="true" tabindex="-1"></a><span class="cf">fi</span></span></code></pre></div>
+<div class="sourceCode" id="cb9"><pre class="sourceCode bash"><code class="sourceCode bash"><span id="cb9-1"><a href="organizing-your-work.html#cb9-1" tabindex="-1"></a><span class="co">#!/bin/bash</span></span>
+<span id="cb9-2"><a href="organizing-your-work.html#cb9-2" tabindex="-1"></a></span>
+<span id="cb9-3"><a href="organizing-your-work.html#cb9-3" tabindex="-1"></a><span class="bu">echo</span> <span class="st">&quot;**** Updating permissions for </span><span class="va">$1</span><span class="st"> ****&quot;</span></span>
+<span id="cb9-4"><a href="organizing-your-work.html#cb9-4" tabindex="-1"></a><span class="fu">date</span></span>
+<span id="cb9-5"><a href="organizing-your-work.html#cb9-5" tabindex="-1"></a><span class="bu">echo</span> <span class="st">&quot;&quot;</span></span>
+<span id="cb9-6"><a href="organizing-your-work.html#cb9-6" tabindex="-1"></a></span>
+<span id="cb9-7"><a href="organizing-your-work.html#cb9-7" tabindex="-1"></a><span class="cf">if</span> <span class="kw">[[</span> <span class="va">$HOSTNAME</span> <span class="ot">==</span> compute-<span class="pp">*</span> <span class="kw">]]</span> <span class="kw">||</span> <span class="kw">[[</span> <span class="va">$HOSTNAME</span> <span class="ot">==</span> transfer-<span class="pp">*</span> <span class="kw">]];</span> <span class="cf">then</span></span>
+<span id="cb9-8"><a href="organizing-your-work.html#cb9-8" tabindex="-1"></a>    <span class="bu">echo</span> <span class="st">&quot;**** Note that warning/error messages are expected for files and directories that you are not the owner of.&quot;</span></span>
+<span id="cb9-9"><a href="organizing-your-work.html#cb9-9" tabindex="-1"></a>    <span class="bu">echo</span> <span class="st">&quot;The expected warning/error messages are: &quot;</span></span>
+<span id="cb9-10"><a href="organizing-your-work.html#cb9-10" tabindex="-1"></a>    <span class="bu">echo</span> <span class="st">&quot;    &#39;chgrp: changing group of ‘some_JHPCE_file_path’: Operation not permitted&#39;&quot;</span></span>
+<span id="cb9-11"><a href="organizing-your-work.html#cb9-11" tabindex="-1"></a>    <span class="bu">echo</span> <span class="st">&quot; or &#39;chmod: changing permissions of ‘some_JHPCE_file_path’: Operation not permitted&#39;.&quot;</span></span>
+<span id="cb9-12"><a href="organizing-your-work.html#cb9-12" tabindex="-1"></a>    <span class="bu">echo</span> <span class="st">&quot;If for many files you are not the owner (creator of), you will get lots of these warning/error messages, this is expected!&quot;</span></span>
+<span id="cb9-13"><a href="organizing-your-work.html#cb9-13" tabindex="-1"></a>    <span class="bu">echo</span> <span class="st">&quot;Error or warnings with another syntax are likely real. ****&quot;</span></span>
+<span id="cb9-14"><a href="organizing-your-work.html#cb9-14" tabindex="-1"></a>    <span class="bu">echo</span> <span class="st">&quot;&quot;</span></span>
+<span id="cb9-15"><a href="organizing-your-work.html#cb9-15" tabindex="-1"></a>    <span class="bu">echo</span> <span class="st">&quot;You will need to re-run this script anytime you upload files to JHPCE through Cyberduck / WinSCP as they break the ACLs.&quot;</span></span>
+<span id="cb9-16"><a href="organizing-your-work.html#cb9-16" tabindex="-1"></a>    <span class="bu">echo</span> <span class="st">&quot;Every new team member on a given project will likely also need to run this script once.&quot;</span></span>
+<span id="cb9-17"><a href="organizing-your-work.html#cb9-17" tabindex="-1"></a>    <span class="bu">echo</span> <span class="st">&quot;&quot;</span></span>
+<span id="cb9-18"><a href="organizing-your-work.html#cb9-18" tabindex="-1"></a>    <span class="bu">echo</span> <span class="st">&quot;For more details about setting permissions at JHPCE using ACLs, please check https://lcolladotor.github.io/bioc_team_ds/organizing-your-work.html#setting-jhpce-file-permissions.&quot;</span></span>
+<span id="cb9-19"><a href="organizing-your-work.html#cb9-19" tabindex="-1"></a>    <span class="bu">echo</span> <span class="st">&quot;&quot;</span></span>
+<span id="cb9-20"><a href="organizing-your-work.html#cb9-20" tabindex="-1"></a>    <span class="bu">echo</span> <span class="st">&quot;This message will be displayed for 90 seconds before the script proceeds.&quot;</span></span>
+<span id="cb9-21"><a href="organizing-your-work.html#cb9-21" tabindex="-1"></a>    <span class="bu">echo</span> <span class="st">&quot;That way you will have time enough to read it and/or copy it.&quot;</span></span>
+<span id="cb9-22"><a href="organizing-your-work.html#cb9-22" tabindex="-1"></a>    <span class="fu">sleep</span> 90</span>
+<span id="cb9-23"><a href="organizing-your-work.html#cb9-23" tabindex="-1"></a>    </span>
+<span id="cb9-24"><a href="organizing-your-work.html#cb9-24" tabindex="-1"></a>    <span class="bu">echo</span> <span class="st">&quot;&quot;</span></span>
+<span id="cb9-25"><a href="organizing-your-work.html#cb9-25" tabindex="-1"></a>    <span class="bu">echo</span> <span class="st">&quot;**** Setting read (R), write (W), and execute (X) permissions for lieber_moods ****&quot;</span></span>
+<span id="cb9-26"><a href="organizing-your-work.html#cb9-26" tabindex="-1"></a>    <span class="fu">sleep</span> 5</span>
+<span id="cb9-27"><a href="organizing-your-work.html#cb9-27" tabindex="-1"></a>    <span class="fu">date</span></span>
+<span id="cb9-28"><a href="organizing-your-work.html#cb9-28" tabindex="-1"></a></span>
+<span id="cb9-29"><a href="organizing-your-work.html#cb9-29" tabindex="-1"></a>    <span class="fu">find</span> <span class="va">${1}</span> <span class="at">-user</span> <span class="va">${USER}</span> <span class="at">-type</span> d <span class="at">-exec</span> nfs4_setfacl <span class="at">-a</span> <span class="st">&quot;A:g:lieber_moods@cm.cluster:RWX&quot;</span> {} <span class="dt">\;</span></span>
+<span id="cb9-30"><a href="organizing-your-work.html#cb9-30" tabindex="-1"></a>    <span class="fu">find</span> <span class="va">${1}</span> <span class="at">-user</span> <span class="va">${USER}</span> <span class="at">-type</span> d <span class="at">-exec</span> nfs4_setfacl <span class="at">-a</span> <span class="st">&quot;A:gfdi:lieber_moods@cm.cluster:RWX&quot;</span> {} <span class="dt">\;</span></span>
+<span id="cb9-31"><a href="organizing-your-work.html#cb9-31" tabindex="-1"></a>    <span class="fu">find</span> <span class="va">${1}</span> <span class="at">-user</span> <span class="va">${USER}</span> <span class="at">-type</span> f <span class="at">-exec</span> nfs4_setfacl <span class="at">-a</span> <span class="st">&quot;A:g:lieber_moods@cm.cluster:RW&quot;</span> {} <span class="dt">\;</span></span>
+<span id="cb9-32"><a href="organizing-your-work.html#cb9-32" tabindex="-1"></a>    </span>
+<span id="cb9-33"><a href="organizing-your-work.html#cb9-33" tabindex="-1"></a>    <span class="bu">echo</span> <span class="st">&quot;&quot;</span></span>
+<span id="cb9-34"><a href="organizing-your-work.html#cb9-34" tabindex="-1"></a>    <span class="bu">echo</span> <span class="st">&quot;**** Setting read (R), write (W), and execute (X) permissions for lieber_lcolladotor ****&quot;</span></span>
+<span id="cb9-35"><a href="organizing-your-work.html#cb9-35" tabindex="-1"></a>    <span class="fu">sleep</span> 5</span>
+<span id="cb9-36"><a href="organizing-your-work.html#cb9-36" tabindex="-1"></a>    <span class="fu">date</span></span>
+<span id="cb9-37"><a href="organizing-your-work.html#cb9-37" tabindex="-1"></a>    </span>
+<span id="cb9-38"><a href="organizing-your-work.html#cb9-38" tabindex="-1"></a>    <span class="fu">find</span> <span class="va">${1}</span> <span class="at">-user</span> <span class="va">${USER}</span> <span class="at">-type</span> d <span class="at">-exec</span> nfs4_setfacl <span class="at">-a</span> <span class="st">&quot;A:g:lieber_lcolladotor@cm.cluster:RWX&quot;</span> {} <span class="dt">\;</span></span>
+<span id="cb9-39"><a href="organizing-your-work.html#cb9-39" tabindex="-1"></a>    <span class="fu">find</span> <span class="va">${1}</span> <span class="at">-user</span> <span class="va">${USER}</span> <span class="at">-type</span> d <span class="at">-exec</span> nfs4_setfacl <span class="at">-a</span> <span class="st">&quot;A:gfdi:lieber_lcolladotor@cm.cluster:RWX&quot;</span> {} <span class="dt">\;</span></span>
+<span id="cb9-40"><a href="organizing-your-work.html#cb9-40" tabindex="-1"></a>    <span class="fu">find</span> <span class="va">${1}</span> <span class="at">-user</span> <span class="va">${USER}</span> <span class="at">-type</span> f <span class="at">-exec</span> nfs4_setfacl <span class="at">-a</span> <span class="st">&quot;A:g:lieber_lcolladotor@cm.cluster:RW&quot;</span> {} <span class="dt">\;</span></span>
+<span id="cb9-41"><a href="organizing-your-work.html#cb9-41" tabindex="-1"></a>    </span>
+<span id="cb9-42"><a href="organizing-your-work.html#cb9-42" tabindex="-1"></a>    <span class="bu">echo</span> <span class="st">&quot;&quot;</span> </span>
+<span id="cb9-43"><a href="organizing-your-work.html#cb9-43" tabindex="-1"></a>    <span class="bu">echo</span> <span class="st">&quot;**** Setting read (R) and execute (X) permissions for lieber ****&quot;</span></span>
+<span id="cb9-44"><a href="organizing-your-work.html#cb9-44" tabindex="-1"></a>    <span class="fu">sleep</span> 5</span>
+<span id="cb9-45"><a href="organizing-your-work.html#cb9-45" tabindex="-1"></a>    <span class="fu">date</span></span>
+<span id="cb9-46"><a href="organizing-your-work.html#cb9-46" tabindex="-1"></a>    <span class="fu">find</span> <span class="va">${1}</span> <span class="at">-user</span> <span class="va">${USER}</span> <span class="at">-type</span> d <span class="at">-exec</span> nfs4_setfacl <span class="at">-a</span> <span class="st">&quot;A:g:lieber@cm.cluster:RX&quot;</span> {} <span class="dt">\;</span></span>
+<span id="cb9-47"><a href="organizing-your-work.html#cb9-47" tabindex="-1"></a>    <span class="fu">find</span> <span class="va">${1}</span> <span class="at">-user</span> <span class="va">${USER}</span> <span class="at">-type</span> d <span class="at">-exec</span> nfs4_setfacl <span class="at">-a</span> <span class="st">&quot;A:gfdi:lieber@cm.cluster:RX&quot;</span> {} <span class="dt">\;</span></span>
+<span id="cb9-48"><a href="organizing-your-work.html#cb9-48" tabindex="-1"></a>    <span class="fu">find</span> <span class="va">${1}</span> <span class="at">-user</span> <span class="va">${USER}</span> <span class="at">-type</span> f <span class="at">-exec</span> nfs4_setfacl <span class="at">-a</span> <span class="st">&quot;A:g:lieber@cm.cluster:R&quot;</span> {} <span class="dt">\;</span></span>
+<span id="cb9-49"><a href="organizing-your-work.html#cb9-49" tabindex="-1"></a>    </span>
+<span id="cb9-50"><a href="organizing-your-work.html#cb9-50" tabindex="-1"></a>    <span class="bu">echo</span> <span class="st">&quot;&quot;</span> </span>
+<span id="cb9-51"><a href="organizing-your-work.html#cb9-51" tabindex="-1"></a>    <span class="bu">echo</span> <span class="st">&quot;**** Removing permissions for lieber_marmaypag ****&quot;</span></span>
+<span id="cb9-52"><a href="organizing-your-work.html#cb9-52" tabindex="-1"></a>    <span class="fu">sleep</span> 5</span>
+<span id="cb9-53"><a href="organizing-your-work.html#cb9-53" tabindex="-1"></a>    <span class="fu">date</span></span>
+<span id="cb9-54"><a href="organizing-your-work.html#cb9-54" tabindex="-1"></a>    <span class="fu">find</span> <span class="va">${1}</span> <span class="at">-user</span> <span class="va">${USER}</span> <span class="at">-type</span> d <span class="at">-exec</span> nfs4_setfacl <span class="at">-x</span> <span class="st">&quot;A:g:lieber_marmaypag@cm.cluster:rwaDxtcy&quot;</span> {} <span class="dt">\;</span></span>
+<span id="cb9-55"><a href="organizing-your-work.html#cb9-55" tabindex="-1"></a>    <span class="fu">find</span> <span class="va">${1}</span> <span class="at">-user</span> <span class="va">${USER}</span> <span class="at">-type</span> d <span class="at">-exec</span> nfs4_setfacl <span class="at">-x</span> <span class="st">&quot;A:gfdi:lieber_marmaypag@cm.cluster:rwaDxtcy&quot;</span> {} <span class="dt">\;</span></span>
+<span id="cb9-56"><a href="organizing-your-work.html#cb9-56" tabindex="-1"></a>    <span class="fu">find</span> <span class="va">${1}</span> <span class="at">-user</span> <span class="va">${USER}</span> <span class="at">-type</span> f <span class="at">-exec</span> nfs4_setfacl <span class="at">-x</span> <span class="st">&quot;A:g:lieber_marmaypag@cm.cluster:rwatcy&quot;</span> {} <span class="dt">\;</span></span>
+<span id="cb9-57"><a href="organizing-your-work.html#cb9-57" tabindex="-1"></a></span>
+<span id="cb9-58"><a href="organizing-your-work.html#cb9-58" tabindex="-1"></a>    <span class="fu">find</span> <span class="va">${1}</span> <span class="at">-user</span> <span class="va">${USER}</span> <span class="at">-type</span> d <span class="at">-exec</span> nfs4_setfacl <span class="at">-x</span> <span class="st">&quot;A:g:4218:rwaDxtcy&quot;</span> {} <span class="dt">\;</span></span>
+<span id="cb9-59"><a href="organizing-your-work.html#cb9-59" tabindex="-1"></a>    <span class="fu">find</span> <span class="va">${1}</span> <span class="at">-user</span> <span class="va">${USER}</span> <span class="at">-type</span> d <span class="at">-exec</span> nfs4_setfacl <span class="at">-x</span> <span class="st">&quot;A:gfdi:4218:rwaDxtcy&quot;</span> {} <span class="dt">\;</span></span>
+<span id="cb9-60"><a href="organizing-your-work.html#cb9-60" tabindex="-1"></a>    <span class="fu">find</span> <span class="va">${1}</span> <span class="at">-user</span> <span class="va">${USER}</span> <span class="at">-type</span> f <span class="at">-exec</span> nfs4_setfacl <span class="at">-x</span> <span class="st">&quot;A:g:4218:rwatcy&quot;</span> {} <span class="dt">\;</span></span>
+<span id="cb9-61"><a href="organizing-your-work.html#cb9-61" tabindex="-1"></a>    </span>
+<span id="cb9-62"><a href="organizing-your-work.html#cb9-62" tabindex="-1"></a>    <span class="co">## To move away from lieber_jaffe</span></span>
+<span id="cb9-63"><a href="organizing-your-work.html#cb9-63" tabindex="-1"></a>    <span class="bu">echo</span> <span class="st">&quot;&quot;</span></span>
+<span id="cb9-64"><a href="organizing-your-work.html#cb9-64" tabindex="-1"></a>    <span class="cf">if</span> <span class="fu">getent</span> group lieber_moods <span class="kw">|</span> <span class="fu">grep</span> <span class="at">-q</span> <span class="st">&quot;\b</span><span class="va">${USER}</span><span class="st">\b&quot;</span><span class="kw">;</span> <span class="cf">then</span></span>
+<span id="cb9-65"><a href="organizing-your-work.html#cb9-65" tabindex="-1"></a>        <span class="bu">echo</span> <span class="st">&quot;**** Running chgrp lieber_moods ****&quot;</span></span>
+<span id="cb9-66"><a href="organizing-your-work.html#cb9-66" tabindex="-1"></a>        <span class="fu">sleep</span> 5</span>
+<span id="cb9-67"><a href="organizing-your-work.html#cb9-67" tabindex="-1"></a>        <span class="fu">date</span></span>
+<span id="cb9-68"><a href="organizing-your-work.html#cb9-68" tabindex="-1"></a>        <span class="fu">chgrp</span> lieber_moods <span class="at">-R</span> <span class="va">${1}</span></span>
+<span id="cb9-69"><a href="organizing-your-work.html#cb9-69" tabindex="-1"></a>    <span class="cf">elif</span> <span class="fu">getent</span> group lieber_lcolladotor <span class="kw">|</span> <span class="fu">grep</span> <span class="at">-q</span> <span class="st">&quot;\b</span><span class="va">${USER}</span><span class="st">\b&quot;</span><span class="kw">;</span> <span class="cf">then</span></span>
+<span id="cb9-70"><a href="organizing-your-work.html#cb9-70" tabindex="-1"></a>        <span class="bu">echo</span> <span class="st">&quot;**** Running chgrp lieber_lcolladotor ****&quot;</span></span>
+<span id="cb9-71"><a href="organizing-your-work.html#cb9-71" tabindex="-1"></a>        <span class="fu">sleep</span> 5</span>
+<span id="cb9-72"><a href="organizing-your-work.html#cb9-72" tabindex="-1"></a>        <span class="fu">date</span></span>
+<span id="cb9-73"><a href="organizing-your-work.html#cb9-73" tabindex="-1"></a>        <span class="fu">chgrp</span> lieber_lcolladotor <span class="at">-R</span> <span class="va">${1}</span></span>
+<span id="cb9-74"><a href="organizing-your-work.html#cb9-74" tabindex="-1"></a>    <span class="cf">else</span></span>
+<span id="cb9-75"><a href="organizing-your-work.html#cb9-75" tabindex="-1"></a>        <span class="bu">echo</span> <span class="st">&quot;**** Skipping chgrp step ****&quot;</span></span>
+<span id="cb9-76"><a href="organizing-your-work.html#cb9-76" tabindex="-1"></a>    <span class="cf">fi</span></span>
+<span id="cb9-77"><a href="organizing-your-work.html#cb9-77" tabindex="-1"></a>    </span>
+<span id="cb9-78"><a href="organizing-your-work.html#cb9-78" tabindex="-1"></a>    <span class="co">## For setting the group sticky bit</span></span>
+<span id="cb9-79"><a href="organizing-your-work.html#cb9-79" tabindex="-1"></a>    <span class="bu">echo</span> <span class="st">&quot;&quot;</span></span>
+<span id="cb9-80"><a href="organizing-your-work.html#cb9-80" tabindex="-1"></a>    <span class="bu">echo</span> <span class="st">&quot;**** Setting the group sticky bit ****&quot;</span></span>
+<span id="cb9-81"><a href="organizing-your-work.html#cb9-81" tabindex="-1"></a>    <span class="fu">sleep</span> 5</span>
+<span id="cb9-82"><a href="organizing-your-work.html#cb9-82" tabindex="-1"></a>    <span class="fu">date</span></span>
+<span id="cb9-83"><a href="organizing-your-work.html#cb9-83" tabindex="-1"></a>    <span class="fu">find</span> <span class="va">${1}</span> <span class="at">-user</span> <span class="va">${USER}</span> <span class="at">-type</span> d <span class="kw">|</span> <span class="fu">xargs</span> chmod g+s</span>
+<span id="cb9-84"><a href="organizing-your-work.html#cb9-84" tabindex="-1"></a>    </span>
+<span id="cb9-85"><a href="organizing-your-work.html#cb9-85" tabindex="-1"></a>    <span class="co">## Check settings</span></span>
+<span id="cb9-86"><a href="organizing-your-work.html#cb9-86" tabindex="-1"></a>    <span class="bu">echo</span> <span class="st">&quot;&quot;</span></span>
+<span id="cb9-87"><a href="organizing-your-work.html#cb9-87" tabindex="-1"></a>    <span class="bu">echo</span> <span class="st">&quot;**** Checking the nfs4 (ACLs) settings ****&quot;</span></span>
+<span id="cb9-88"><a href="organizing-your-work.html#cb9-88" tabindex="-1"></a>    <span class="fu">sleep</span> 5</span>
+<span id="cb9-89"><a href="organizing-your-work.html#cb9-89" tabindex="-1"></a>    <span class="fu">date</span></span>
+<span id="cb9-90"><a href="organizing-your-work.html#cb9-90" tabindex="-1"></a>    <span class="ex">nfs4_getfacl</span> <span class="va">${1}</span></span>
+<span id="cb9-91"><a href="organizing-your-work.html#cb9-91" tabindex="-1"></a><span class="cf">else</span></span>
+<span id="cb9-92"><a href="organizing-your-work.html#cb9-92" tabindex="-1"></a>    <span class="bu">echo</span> <span class="st">&quot;**** This script can only work on a qrsh / qsub session. It does not work on a login node since it does not have access to the nfs4_setfacl and nfs4_getfacl commands.****&quot;</span></span>
+<span id="cb9-93"><a href="organizing-your-work.html#cb9-93" tabindex="-1"></a><span class="cf">fi</span></span></code></pre></div>
 </div>
 </div>
 </div>
@@ -811,152 +811,152 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <p>Before transferring all the data, we compute the total data size (in TB) of the transfer. We use the <code>-sk --apparent-size</code> options to the <code>du</code> command in order to compute the un-compressed disk size, since some disk systems automatically compress some files, which can lead to different file size calculations across disk systems.</p>
 <p>Once we have listed the owner of all files, we then move the files using <code>rsync</code> which will not preserve the original owner. The owner of all the transferred files (at <code>/dcs04</code>) will be the person who did the transfer. While doing this, we also change the unix group to the new one we want people to use. In this case, <code>lieber_lcolladotor</code> (the original files were most likely under <code>lieber_jaffe</code>). A nice thing about using <code>rsync</code> is that if it fails in the middle of a run, it can be resumed without problems later on.</p>
 <p>Once we have completed the transfer across disks, we move the original files using <code>mv</code> to a <code>trash</code> directory (here <code>trash_qSVA</code>). This frees up the original directory name, which we can then use to create a soft link from the original location to the new location. Creating this soft link (symlink) helps users of the original files locate these files even if we moved them across disks (assuming they still have permissions to read the new files).</p>
-<div class="sourceCode" id="cb11"><pre class="sourceCode bash"><code class="sourceCode bash"><span id="cb11-1"><a href="organizing-your-work.html#cb11-1" aria-hidden="true" tabindex="-1"></a><span class="co">#!/bin/bash</span></span>
-<span id="cb11-2"><a href="organizing-your-work.html#cb11-2" aria-hidden="true" tabindex="-1"></a><span class="co">#$ -cwd</span></span>
-<span id="cb11-3"><a href="organizing-your-work.html#cb11-3" aria-hidden="true" tabindex="-1"></a><span class="co">#$ -l bluejay,mem_free=2G,h_vmem=2G,h_fsize=400G</span></span>
-<span id="cb11-4"><a href="organizing-your-work.html#cb11-4" aria-hidden="true" tabindex="-1"></a><span class="co">#$ -N move_qSVA_dcl01</span></span>
-<span id="cb11-5"><a href="organizing-your-work.html#cb11-5" aria-hidden="true" tabindex="-1"></a><span class="co">#$ -o logs/move_qSVA_dcl01.$TASK_ID.txt</span></span>
-<span id="cb11-6"><a href="organizing-your-work.html#cb11-6" aria-hidden="true" tabindex="-1"></a><span class="co">#$ -e logs/move_qSVA_dcl01.$TASK_ID.txt</span></span>
-<span id="cb11-7"><a href="organizing-your-work.html#cb11-7" aria-hidden="true" tabindex="-1"></a><span class="co">#$ -m e</span></span>
-<span id="cb11-8"><a href="organizing-your-work.html#cb11-8" aria-hidden="true" tabindex="-1"></a><span class="co">#$ -t 1-3</span></span>
-<span id="cb11-9"><a href="organizing-your-work.html#cb11-9" aria-hidden="true" tabindex="-1"></a><span class="co">#$ -tc 2</span></span>
-<span id="cb11-10"><a href="organizing-your-work.html#cb11-10" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb11-11"><a href="organizing-your-work.html#cb11-11" aria-hidden="true" tabindex="-1"></a><span class="bu">echo</span> <span class="st">&quot;**** Job starts ****&quot;</span></span>
-<span id="cb11-12"><a href="organizing-your-work.html#cb11-12" aria-hidden="true" tabindex="-1"></a><span class="fu">date</span></span>
-<span id="cb11-13"><a href="organizing-your-work.html#cb11-13" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb11-14"><a href="organizing-your-work.html#cb11-14" aria-hidden="true" tabindex="-1"></a><span class="bu">echo</span> <span class="st">&quot;**** JHPCE info ****&quot;</span></span>
-<span id="cb11-15"><a href="organizing-your-work.html#cb11-15" aria-hidden="true" tabindex="-1"></a><span class="bu">echo</span> <span class="st">&quot;User: </span><span class="va">${USER}</span><span class="st">&quot;</span></span>
-<span id="cb11-16"><a href="organizing-your-work.html#cb11-16" aria-hidden="true" tabindex="-1"></a><span class="bu">echo</span> <span class="st">&quot;Job id: </span><span class="va">${JOB_ID}</span><span class="st">&quot;</span></span>
-<span id="cb11-17"><a href="organizing-your-work.html#cb11-17" aria-hidden="true" tabindex="-1"></a><span class="bu">echo</span> <span class="st">&quot;Job name: </span><span class="va">${JOB_NAME}</span><span class="st">&quot;</span></span>
-<span id="cb11-18"><a href="organizing-your-work.html#cb11-18" aria-hidden="true" tabindex="-1"></a><span class="bu">echo</span> <span class="st">&quot;Hostname: </span><span class="va">${HOSTNAME}</span><span class="st">&quot;</span></span>
-<span id="cb11-19"><a href="organizing-your-work.html#cb11-19" aria-hidden="true" tabindex="-1"></a><span class="bu">echo</span> <span class="st">&quot;Task id: </span><span class="va">${SGE_TASK_ID}</span><span class="st">&quot;</span></span>
-<span id="cb11-20"><a href="organizing-your-work.html#cb11-20" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb11-21"><a href="organizing-your-work.html#cb11-21" aria-hidden="true" tabindex="-1"></a><span class="co">## List current modules for reproducibility</span></span>
-<span id="cb11-22"><a href="organizing-your-work.html#cb11-22" aria-hidden="true" tabindex="-1"></a><span class="ex">module</span> list</span>
-<span id="cb11-23"><a href="organizing-your-work.html#cb11-23" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb11-24"><a href="organizing-your-work.html#cb11-24" aria-hidden="true" tabindex="-1"></a><span class="co">## Locate directory</span></span>
-<span id="cb11-25"><a href="organizing-your-work.html#cb11-25" aria-hidden="true" tabindex="-1"></a><span class="va">ORIGINALDIR</span><span class="op">=</span><span class="va">$(</span><span class="fu">awk</span> <span class="st">&quot;NR==</span><span class="va">${SGE_TASK_ID}</span><span class="st">&quot;</span> qSVA_dcl01_dirs.txt<span class="va">)</span></span>
-<span id="cb11-26"><a href="organizing-your-work.html#cb11-26" aria-hidden="true" tabindex="-1"></a><span class="bu">echo</span> <span class="st">&quot;Processing sample </span><span class="va">${ORIGINALDIR}</span><span class="st">&quot;</span></span>
-<span id="cb11-27"><a href="organizing-your-work.html#cb11-27" aria-hidden="true" tabindex="-1"></a><span class="fu">date</span></span>
-<span id="cb11-28"><a href="organizing-your-work.html#cb11-28" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb11-29"><a href="organizing-your-work.html#cb11-29" aria-hidden="true" tabindex="-1"></a><span class="va">BASEDIR</span><span class="op">=</span><span class="va">$(</span><span class="fu">basename</span> <span class="va">${ORIGINALDIR})</span></span>
-<span id="cb11-30"><a href="organizing-your-work.html#cb11-30" aria-hidden="true" tabindex="-1"></a><span class="va">ORIGINALHOME</span><span class="op">=</span><span class="va">$(</span><span class="fu">dirname</span> <span class="va">${ORIGINALDIR})</span></span>
-<span id="cb11-31"><a href="organizing-your-work.html#cb11-31" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb11-32"><a href="organizing-your-work.html#cb11-32" aria-hidden="true" tabindex="-1"></a><span class="co">## Determine amount of data to transfer</span></span>
-<span id="cb11-33"><a href="organizing-your-work.html#cb11-33" aria-hidden="true" tabindex="-1"></a><span class="fu">du</span> <span class="at">-sk</span> <span class="at">--apparent-size</span> <span class="va">${ORIGINALDIR}</span>/ <span class="kw">|</span> <span class="fu">awk</span> <span class="st">&#39;{$1=$1/(1024^3); print $1, &quot;TB&quot;;}&#39;</span></span>
-<span id="cb11-34"><a href="organizing-your-work.html#cb11-34" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb11-35"><a href="organizing-your-work.html#cb11-35" aria-hidden="true" tabindex="-1"></a><span class="co">## List owners of all the files in the original path</span></span>
-<span id="cb11-36"><a href="organizing-your-work.html#cb11-36" aria-hidden="true" tabindex="-1"></a><span class="fu">find</span> <span class="va">${ORIGINALDIR}</span>/ <span class="at">-exec</span> ls <span class="at">-l</span> {} <span class="dt">\;</span> <span class="kw">|</span> <span class="fu">grep</span> <span class="at">-v</span> total <span class="kw">|</span> <span class="fu">tr</span> <span class="at">-s</span> <span class="st">&#39; &#39;</span> <span class="kw">|</span> <span class="fu">cut</span> <span class="at">-d</span> <span class="st">&#39; &#39;</span> <span class="at">-f3,9-</span></span>
-<span id="cb11-37"><a href="organizing-your-work.html#cb11-37" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb11-38"><a href="organizing-your-work.html#cb11-38" aria-hidden="true" tabindex="-1"></a><span class="co">## Copy from dcl01 to dcs04</span></span>
-<span id="cb11-39"><a href="organizing-your-work.html#cb11-39" aria-hidden="true" tabindex="-1"></a><span class="fu">rsync</span> <span class="at">-rltgvh</span> <span class="at">--chown</span><span class="op">=</span>:lieber_lcolladotor <span class="va">${ORIGINALDIR}</span>/ /dcs04/lieber/lcolladotor/qSVA_LIBD3080/<span class="va">${BASEDIR}</span>/</span>
-<span id="cb11-40"><a href="organizing-your-work.html#cb11-40" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb11-41"><a href="organizing-your-work.html#cb11-41" aria-hidden="true" tabindex="-1"></a><span class="co">## Label as trash the files that were moved</span></span>
-<span id="cb11-42"><a href="organizing-your-work.html#cb11-42" aria-hidden="true" tabindex="-1"></a><span class="fu">mkdir</span> <span class="at">-p</span> <span class="va">${ORIGINALHOME}</span>/trash_qSVA/</span>
-<span id="cb11-43"><a href="organizing-your-work.html#cb11-43" aria-hidden="true" tabindex="-1"></a><span class="fu">mv</span> <span class="va">${ORIGINALDIR}</span> <span class="va">${ORIGINALHOME}</span>/trash_qSVA/</span>
-<span id="cb11-44"><a href="organizing-your-work.html#cb11-44" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb11-45"><a href="organizing-your-work.html#cb11-45" aria-hidden="true" tabindex="-1"></a><span class="co">## Create link</span></span>
-<span id="cb11-46"><a href="organizing-your-work.html#cb11-46" aria-hidden="true" tabindex="-1"></a><span class="fu">ln</span> <span class="at">-s</span> /dcs04/lieber/lcolladotor/qSVA_LIBD3080/<span class="va">${BASEDIR}</span> <span class="va">${ORIGINALDIR}</span></span>
-<span id="cb11-47"><a href="organizing-your-work.html#cb11-47" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb11-48"><a href="organizing-your-work.html#cb11-48" aria-hidden="true" tabindex="-1"></a><span class="bu">echo</span> <span class="st">&quot;**** Job ends ****&quot;</span></span>
-<span id="cb11-49"><a href="organizing-your-work.html#cb11-49" aria-hidden="true" tabindex="-1"></a><span class="fu">date</span></span>
-<span id="cb11-50"><a href="organizing-your-work.html#cb11-50" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb11-51"><a href="organizing-your-work.html#cb11-51" aria-hidden="true" tabindex="-1"></a><span class="co">## This script was made using sgejobs version 0.99.1</span></span>
-<span id="cb11-52"><a href="organizing-your-work.html#cb11-52" aria-hidden="true" tabindex="-1"></a><span class="co">## available from http://research.libd.org/sgejobs/</span></span></code></pre></div>
+<div class="sourceCode" id="cb11"><pre class="sourceCode bash"><code class="sourceCode bash"><span id="cb11-1"><a href="organizing-your-work.html#cb11-1" tabindex="-1"></a><span class="co">#!/bin/bash</span></span>
+<span id="cb11-2"><a href="organizing-your-work.html#cb11-2" tabindex="-1"></a><span class="co">#$ -cwd</span></span>
+<span id="cb11-3"><a href="organizing-your-work.html#cb11-3" tabindex="-1"></a><span class="co">#$ -l bluejay,mem_free=2G,h_vmem=2G,h_fsize=400G</span></span>
+<span id="cb11-4"><a href="organizing-your-work.html#cb11-4" tabindex="-1"></a><span class="co">#$ -N move_qSVA_dcl01</span></span>
+<span id="cb11-5"><a href="organizing-your-work.html#cb11-5" tabindex="-1"></a><span class="co">#$ -o logs/move_qSVA_dcl01.$TASK_ID.txt</span></span>
+<span id="cb11-6"><a href="organizing-your-work.html#cb11-6" tabindex="-1"></a><span class="co">#$ -e logs/move_qSVA_dcl01.$TASK_ID.txt</span></span>
+<span id="cb11-7"><a href="organizing-your-work.html#cb11-7" tabindex="-1"></a><span class="co">#$ -m e</span></span>
+<span id="cb11-8"><a href="organizing-your-work.html#cb11-8" tabindex="-1"></a><span class="co">#$ -t 1-3</span></span>
+<span id="cb11-9"><a href="organizing-your-work.html#cb11-9" tabindex="-1"></a><span class="co">#$ -tc 2</span></span>
+<span id="cb11-10"><a href="organizing-your-work.html#cb11-10" tabindex="-1"></a></span>
+<span id="cb11-11"><a href="organizing-your-work.html#cb11-11" tabindex="-1"></a><span class="bu">echo</span> <span class="st">&quot;**** Job starts ****&quot;</span></span>
+<span id="cb11-12"><a href="organizing-your-work.html#cb11-12" tabindex="-1"></a><span class="fu">date</span></span>
+<span id="cb11-13"><a href="organizing-your-work.html#cb11-13" tabindex="-1"></a></span>
+<span id="cb11-14"><a href="organizing-your-work.html#cb11-14" tabindex="-1"></a><span class="bu">echo</span> <span class="st">&quot;**** JHPCE info ****&quot;</span></span>
+<span id="cb11-15"><a href="organizing-your-work.html#cb11-15" tabindex="-1"></a><span class="bu">echo</span> <span class="st">&quot;User: </span><span class="va">${USER}</span><span class="st">&quot;</span></span>
+<span id="cb11-16"><a href="organizing-your-work.html#cb11-16" tabindex="-1"></a><span class="bu">echo</span> <span class="st">&quot;Job id: </span><span class="va">${JOB_ID}</span><span class="st">&quot;</span></span>
+<span id="cb11-17"><a href="organizing-your-work.html#cb11-17" tabindex="-1"></a><span class="bu">echo</span> <span class="st">&quot;Job name: </span><span class="va">${JOB_NAME}</span><span class="st">&quot;</span></span>
+<span id="cb11-18"><a href="organizing-your-work.html#cb11-18" tabindex="-1"></a><span class="bu">echo</span> <span class="st">&quot;Hostname: </span><span class="va">${HOSTNAME}</span><span class="st">&quot;</span></span>
+<span id="cb11-19"><a href="organizing-your-work.html#cb11-19" tabindex="-1"></a><span class="bu">echo</span> <span class="st">&quot;Task id: </span><span class="va">${SGE_TASK_ID}</span><span class="st">&quot;</span></span>
+<span id="cb11-20"><a href="organizing-your-work.html#cb11-20" tabindex="-1"></a></span>
+<span id="cb11-21"><a href="organizing-your-work.html#cb11-21" tabindex="-1"></a><span class="co">## List current modules for reproducibility</span></span>
+<span id="cb11-22"><a href="organizing-your-work.html#cb11-22" tabindex="-1"></a><span class="ex">module</span> list</span>
+<span id="cb11-23"><a href="organizing-your-work.html#cb11-23" tabindex="-1"></a></span>
+<span id="cb11-24"><a href="organizing-your-work.html#cb11-24" tabindex="-1"></a><span class="co">## Locate directory</span></span>
+<span id="cb11-25"><a href="organizing-your-work.html#cb11-25" tabindex="-1"></a><span class="va">ORIGINALDIR</span><span class="op">=</span><span class="va">$(</span><span class="fu">awk</span> <span class="st">&quot;NR==</span><span class="va">${SGE_TASK_ID}</span><span class="st">&quot;</span> qSVA_dcl01_dirs.txt<span class="va">)</span></span>
+<span id="cb11-26"><a href="organizing-your-work.html#cb11-26" tabindex="-1"></a><span class="bu">echo</span> <span class="st">&quot;Processing sample </span><span class="va">${ORIGINALDIR}</span><span class="st">&quot;</span></span>
+<span id="cb11-27"><a href="organizing-your-work.html#cb11-27" tabindex="-1"></a><span class="fu">date</span></span>
+<span id="cb11-28"><a href="organizing-your-work.html#cb11-28" tabindex="-1"></a></span>
+<span id="cb11-29"><a href="organizing-your-work.html#cb11-29" tabindex="-1"></a><span class="va">BASEDIR</span><span class="op">=</span><span class="va">$(</span><span class="fu">basename</span> <span class="va">${ORIGINALDIR})</span></span>
+<span id="cb11-30"><a href="organizing-your-work.html#cb11-30" tabindex="-1"></a><span class="va">ORIGINALHOME</span><span class="op">=</span><span class="va">$(</span><span class="fu">dirname</span> <span class="va">${ORIGINALDIR})</span></span>
+<span id="cb11-31"><a href="organizing-your-work.html#cb11-31" tabindex="-1"></a></span>
+<span id="cb11-32"><a href="organizing-your-work.html#cb11-32" tabindex="-1"></a><span class="co">## Determine amount of data to transfer</span></span>
+<span id="cb11-33"><a href="organizing-your-work.html#cb11-33" tabindex="-1"></a><span class="fu">du</span> <span class="at">-sk</span> <span class="at">--apparent-size</span> <span class="va">${ORIGINALDIR}</span>/ <span class="kw">|</span> <span class="fu">awk</span> <span class="st">&#39;{$1=$1/(1024^3); print $1, &quot;TB&quot;;}&#39;</span></span>
+<span id="cb11-34"><a href="organizing-your-work.html#cb11-34" tabindex="-1"></a></span>
+<span id="cb11-35"><a href="organizing-your-work.html#cb11-35" tabindex="-1"></a><span class="co">## List owners of all the files in the original path</span></span>
+<span id="cb11-36"><a href="organizing-your-work.html#cb11-36" tabindex="-1"></a><span class="fu">find</span> <span class="va">${ORIGINALDIR}</span>/ <span class="at">-exec</span> ls <span class="at">-l</span> {} <span class="dt">\;</span> <span class="kw">|</span> <span class="fu">grep</span> <span class="at">-v</span> total <span class="kw">|</span> <span class="fu">tr</span> <span class="at">-s</span> <span class="st">&#39; &#39;</span> <span class="kw">|</span> <span class="fu">cut</span> <span class="at">-d</span> <span class="st">&#39; &#39;</span> <span class="at">-f3,9-</span></span>
+<span id="cb11-37"><a href="organizing-your-work.html#cb11-37" tabindex="-1"></a></span>
+<span id="cb11-38"><a href="organizing-your-work.html#cb11-38" tabindex="-1"></a><span class="co">## Copy from dcl01 to dcs04</span></span>
+<span id="cb11-39"><a href="organizing-your-work.html#cb11-39" tabindex="-1"></a><span class="fu">rsync</span> <span class="at">-rltgvh</span> <span class="at">--chown</span><span class="op">=</span>:lieber_lcolladotor <span class="va">${ORIGINALDIR}</span>/ /dcs04/lieber/lcolladotor/qSVA_LIBD3080/<span class="va">${BASEDIR}</span>/</span>
+<span id="cb11-40"><a href="organizing-your-work.html#cb11-40" tabindex="-1"></a></span>
+<span id="cb11-41"><a href="organizing-your-work.html#cb11-41" tabindex="-1"></a><span class="co">## Label as trash the files that were moved</span></span>
+<span id="cb11-42"><a href="organizing-your-work.html#cb11-42" tabindex="-1"></a><span class="fu">mkdir</span> <span class="at">-p</span> <span class="va">${ORIGINALHOME}</span>/trash_qSVA/</span>
+<span id="cb11-43"><a href="organizing-your-work.html#cb11-43" tabindex="-1"></a><span class="fu">mv</span> <span class="va">${ORIGINALDIR}</span> <span class="va">${ORIGINALHOME}</span>/trash_qSVA/</span>
+<span id="cb11-44"><a href="organizing-your-work.html#cb11-44" tabindex="-1"></a></span>
+<span id="cb11-45"><a href="organizing-your-work.html#cb11-45" tabindex="-1"></a><span class="co">## Create link</span></span>
+<span id="cb11-46"><a href="organizing-your-work.html#cb11-46" tabindex="-1"></a><span class="fu">ln</span> <span class="at">-s</span> /dcs04/lieber/lcolladotor/qSVA_LIBD3080/<span class="va">${BASEDIR}</span> <span class="va">${ORIGINALDIR}</span></span>
+<span id="cb11-47"><a href="organizing-your-work.html#cb11-47" tabindex="-1"></a></span>
+<span id="cb11-48"><a href="organizing-your-work.html#cb11-48" tabindex="-1"></a><span class="bu">echo</span> <span class="st">&quot;**** Job ends ****&quot;</span></span>
+<span id="cb11-49"><a href="organizing-your-work.html#cb11-49" tabindex="-1"></a><span class="fu">date</span></span>
+<span id="cb11-50"><a href="organizing-your-work.html#cb11-50" tabindex="-1"></a></span>
+<span id="cb11-51"><a href="organizing-your-work.html#cb11-51" tabindex="-1"></a><span class="co">## This script was made using sgejobs version 0.99.1</span></span>
+<span id="cb11-52"><a href="organizing-your-work.html#cb11-52" tabindex="-1"></a><span class="co">## available from http://research.libd.org/sgejobs/</span></span></code></pre></div>
 <ul>
 <li><code>update_permissions.sh</code></li>
 </ul>
 <p>By default, directories under <code>/dcs04/lieber/lcolladotor</code> have read, write and execute permissions to the <code>lieber_marmaypag</code> group. Here though, we first remove the permissions to <code>lieber_marmaypag</code>, then we give read and execute permissions to both the <code>lieber</code> and <code>lieber_marmaypag</code> unix user groups.</p>
 <p>We (redundantly) set the group of all files to be <code>lieber_lcolladotor</code> and then set the <em>group sticky bit</em> which preserves the group (<code>lieber_lcolladotor</code> in this case) to any new files created within these directories. Finally, we use <code>nfs4_getfacl</code> to check that the ACLs were set up correctly.</p>
 <p>Note how we use <code>#$ -hold_jid</code> with the same name of the script from the <em>move</em> step earlier (here <code>move_qSVA_dcl01</code>) so we can <code>qsub</code> this script immediately after the <em>move</em> one, but wait for them to finish running before this one starts.</p>
-<div class="sourceCode" id="cb12"><pre class="sourceCode bash"><code class="sourceCode bash"><span id="cb12-1"><a href="organizing-your-work.html#cb12-1" aria-hidden="true" tabindex="-1"></a><span class="co">#!/bin/bash</span></span>
-<span id="cb12-2"><a href="organizing-your-work.html#cb12-2" aria-hidden="true" tabindex="-1"></a><span class="co">#$ -cwd</span></span>
-<span id="cb12-3"><a href="organizing-your-work.html#cb12-3" aria-hidden="true" tabindex="-1"></a><span class="co">#$ -l bluejay,mem_free=2G,h_vmem=2G,h_fsize=400G</span></span>
-<span id="cb12-4"><a href="organizing-your-work.html#cb12-4" aria-hidden="true" tabindex="-1"></a><span class="co">#$ -N update_permissions_qSVA</span></span>
-<span id="cb12-5"><a href="organizing-your-work.html#cb12-5" aria-hidden="true" tabindex="-1"></a><span class="co">#$ -o logs/update_permissions.txt</span></span>
-<span id="cb12-6"><a href="organizing-your-work.html#cb12-6" aria-hidden="true" tabindex="-1"></a><span class="co">#$ -e logs/update_permissions.txt</span></span>
-<span id="cb12-7"><a href="organizing-your-work.html#cb12-7" aria-hidden="true" tabindex="-1"></a><span class="co">#$ -m e</span></span>
-<span id="cb12-8"><a href="organizing-your-work.html#cb12-8" aria-hidden="true" tabindex="-1"></a><span class="co">#$ -hold_jid move_qSVA_dcl01</span></span>
-<span id="cb12-9"><a href="organizing-your-work.html#cb12-9" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb12-10"><a href="organizing-your-work.html#cb12-10" aria-hidden="true" tabindex="-1"></a><span class="bu">echo</span> <span class="st">&quot;**** Job starts ****&quot;</span></span>
-<span id="cb12-11"><a href="organizing-your-work.html#cb12-11" aria-hidden="true" tabindex="-1"></a><span class="fu">date</span></span>
-<span id="cb12-12"><a href="organizing-your-work.html#cb12-12" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb12-13"><a href="organizing-your-work.html#cb12-13" aria-hidden="true" tabindex="-1"></a><span class="bu">echo</span> <span class="st">&quot;**** JHPCE info ****&quot;</span></span>
-<span id="cb12-14"><a href="organizing-your-work.html#cb12-14" aria-hidden="true" tabindex="-1"></a><span class="bu">echo</span> <span class="st">&quot;User: </span><span class="va">${USER}</span><span class="st">&quot;</span></span>
-<span id="cb12-15"><a href="organizing-your-work.html#cb12-15" aria-hidden="true" tabindex="-1"></a><span class="bu">echo</span> <span class="st">&quot;Job id: </span><span class="va">${JOB_ID}</span><span class="st">&quot;</span></span>
-<span id="cb12-16"><a href="organizing-your-work.html#cb12-16" aria-hidden="true" tabindex="-1"></a><span class="bu">echo</span> <span class="st">&quot;Job name: </span><span class="va">${JOB_NAME}</span><span class="st">&quot;</span></span>
-<span id="cb12-17"><a href="organizing-your-work.html#cb12-17" aria-hidden="true" tabindex="-1"></a><span class="bu">echo</span> <span class="st">&quot;Hostname: </span><span class="va">${HOSTNAME}</span><span class="st">&quot;</span></span>
-<span id="cb12-18"><a href="organizing-your-work.html#cb12-18" aria-hidden="true" tabindex="-1"></a><span class="bu">echo</span> <span class="st">&quot;Task id: </span><span class="va">${SGE_TASK_ID}</span><span class="st">&quot;</span></span>
-<span id="cb12-19"><a href="organizing-your-work.html#cb12-19" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb12-20"><a href="organizing-your-work.html#cb12-20" aria-hidden="true" tabindex="-1"></a><span class="co">## List current modules for reproducibility</span></span>
-<span id="cb12-21"><a href="organizing-your-work.html#cb12-21" aria-hidden="true" tabindex="-1"></a><span class="ex">module</span> list</span>
-<span id="cb12-22"><a href="organizing-your-work.html#cb12-22" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb12-23"><a href="organizing-your-work.html#cb12-23" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb12-24"><a href="organizing-your-work.html#cb12-24" aria-hidden="true" tabindex="-1"></a><span class="va">MAINDIR</span><span class="op">=</span><span class="st">&quot;/dcs04/lieber/lcolladotor/qSVA_LIBD3080&quot;</span></span>
-<span id="cb12-25"><a href="organizing-your-work.html#cb12-25" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb12-26"><a href="organizing-your-work.html#cb12-26" aria-hidden="true" tabindex="-1"></a><span class="co">## Remove default permissions</span></span>
-<span id="cb12-27"><a href="organizing-your-work.html#cb12-27" aria-hidden="true" tabindex="-1"></a><span class="fu">find</span> <span class="va">${MAINDIR}</span> <span class="at">-type</span> d <span class="at">-exec</span> nfs4_setfacl <span class="at">-x</span> <span class="st">&quot;A:g:lieber_marmaypag@cm.cluster:rwaDxtcy&quot;</span> {} <span class="dt">\;</span></span>
-<span id="cb12-28"><a href="organizing-your-work.html#cb12-28" aria-hidden="true" tabindex="-1"></a><span class="fu">find</span> <span class="va">${MAINDIR}</span> <span class="at">-type</span> d <span class="at">-exec</span> nfs4_setfacl <span class="at">-x</span> <span class="st">&quot;A:gfdi:lieber_marmaypag@cm.cluster:rwaDxtcy&quot;</span> {} <span class="dt">\;</span></span>
-<span id="cb12-29"><a href="organizing-your-work.html#cb12-29" aria-hidden="true" tabindex="-1"></a><span class="fu">find</span> <span class="va">${MAINDIR}</span> <span class="at">-type</span> f <span class="at">-exec</span> nfs4_setfacl <span class="at">-x</span> <span class="st">&quot;A:g:lieber_marmaypag@cm.cluster:rwatcy&quot;</span> {} <span class="dt">\;</span></span>
-<span id="cb12-30"><a href="organizing-your-work.html#cb12-30" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb12-31"><a href="organizing-your-work.html#cb12-31" aria-hidden="true" tabindex="-1"></a><span class="co">## Set new permissions</span></span>
-<span id="cb12-32"><a href="organizing-your-work.html#cb12-32" aria-hidden="true" tabindex="-1"></a><span class="fu">find</span> <span class="va">${MAINDIR}</span> <span class="at">-type</span> d <span class="at">-exec</span> nfs4_setfacl <span class="at">-a</span> <span class="st">&quot;A:g:lieber@cm.cluster:RX&quot;</span> {} <span class="dt">\;</span></span>
-<span id="cb12-33"><a href="organizing-your-work.html#cb12-33" aria-hidden="true" tabindex="-1"></a><span class="fu">find</span> <span class="va">${MAINDIR}</span> <span class="at">-type</span> d <span class="at">-exec</span> nfs4_setfacl <span class="at">-a</span> <span class="st">&quot;A:gfdi:lieber@cm.cluster:RX&quot;</span> {} <span class="dt">\;</span></span>
-<span id="cb12-34"><a href="organizing-your-work.html#cb12-34" aria-hidden="true" tabindex="-1"></a><span class="fu">find</span> <span class="va">${MAINDIR}</span> <span class="at">-type</span> f <span class="at">-exec</span> nfs4_setfacl <span class="at">-a</span> <span class="st">&quot;A:g:lieber@cm.cluster:R&quot;</span> {} <span class="dt">\;</span></span>
-<span id="cb12-35"><a href="organizing-your-work.html#cb12-35" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb12-36"><a href="organizing-your-work.html#cb12-36" aria-hidden="true" tabindex="-1"></a><span class="fu">find</span> <span class="va">${MAINDIR}</span> <span class="at">-type</span> d <span class="at">-exec</span> nfs4_setfacl <span class="at">-a</span> <span class="st">&quot;A:g:lieber_marmaypag@cm.cluster:RX&quot;</span> {} <span class="dt">\;</span></span>
-<span id="cb12-37"><a href="organizing-your-work.html#cb12-37" aria-hidden="true" tabindex="-1"></a><span class="fu">find</span> <span class="va">${MAINDIR}</span> <span class="at">-type</span> d <span class="at">-exec</span> nfs4_setfacl <span class="at">-a</span> <span class="st">&quot;A:gfdi:lieber_marmaypag@cm.cluster:RX&quot;</span> {} <span class="dt">\;</span></span>
-<span id="cb12-38"><a href="organizing-your-work.html#cb12-38" aria-hidden="true" tabindex="-1"></a><span class="fu">find</span> <span class="va">${MAINDIR}</span> <span class="at">-type</span> f <span class="at">-exec</span> nfs4_setfacl <span class="at">-a</span> <span class="st">&quot;A:g:lieber_marmaypag@cm.cluster:R&quot;</span> {} <span class="dt">\;</span></span>
-<span id="cb12-39"><a href="organizing-your-work.html#cb12-39" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb12-40"><a href="organizing-your-work.html#cb12-40" aria-hidden="true" tabindex="-1"></a><span class="co">## To move away from lieber_jaffe</span></span>
-<span id="cb12-41"><a href="organizing-your-work.html#cb12-41" aria-hidden="true" tabindex="-1"></a><span class="fu">chgrp</span> lieber_lcolladotor <span class="at">-R</span> <span class="va">${MAINDIR}</span></span>
-<span id="cb12-42"><a href="organizing-your-work.html#cb12-42" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb12-43"><a href="organizing-your-work.html#cb12-43" aria-hidden="true" tabindex="-1"></a><span class="co">## For setting the group sticky bit</span></span>
-<span id="cb12-44"><a href="organizing-your-work.html#cb12-44" aria-hidden="true" tabindex="-1"></a><span class="fu">find</span> <span class="va">${MAINDIR}</span> <span class="at">-type</span> d <span class="kw">|</span> <span class="fu">xargs</span> chmod g+s</span>
-<span id="cb12-45"><a href="organizing-your-work.html#cb12-45" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb12-46"><a href="organizing-your-work.html#cb12-46" aria-hidden="true" tabindex="-1"></a><span class="co">## Check settings</span></span>
-<span id="cb12-47"><a href="organizing-your-work.html#cb12-47" aria-hidden="true" tabindex="-1"></a><span class="ex">nfs4_getfacl</span> <span class="va">${MAINDIR}</span></span>
-<span id="cb12-48"><a href="organizing-your-work.html#cb12-48" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb12-49"><a href="organizing-your-work.html#cb12-49" aria-hidden="true" tabindex="-1"></a><span class="bu">echo</span> <span class="st">&quot;**** Job ends ****&quot;</span></span>
-<span id="cb12-50"><a href="organizing-your-work.html#cb12-50" aria-hidden="true" tabindex="-1"></a><span class="fu">date</span></span>
-<span id="cb12-51"><a href="organizing-your-work.html#cb12-51" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb12-52"><a href="organizing-your-work.html#cb12-52" aria-hidden="true" tabindex="-1"></a><span class="co">## This script was made using sgejobs version 0.99.1</span></span>
-<span id="cb12-53"><a href="organizing-your-work.html#cb12-53" aria-hidden="true" tabindex="-1"></a><span class="co">## available from http://research.libd.org/sgejobs/</span></span></code></pre></div>
+<div class="sourceCode" id="cb12"><pre class="sourceCode bash"><code class="sourceCode bash"><span id="cb12-1"><a href="organizing-your-work.html#cb12-1" tabindex="-1"></a><span class="co">#!/bin/bash</span></span>
+<span id="cb12-2"><a href="organizing-your-work.html#cb12-2" tabindex="-1"></a><span class="co">#$ -cwd</span></span>
+<span id="cb12-3"><a href="organizing-your-work.html#cb12-3" tabindex="-1"></a><span class="co">#$ -l bluejay,mem_free=2G,h_vmem=2G,h_fsize=400G</span></span>
+<span id="cb12-4"><a href="organizing-your-work.html#cb12-4" tabindex="-1"></a><span class="co">#$ -N update_permissions_qSVA</span></span>
+<span id="cb12-5"><a href="organizing-your-work.html#cb12-5" tabindex="-1"></a><span class="co">#$ -o logs/update_permissions.txt</span></span>
+<span id="cb12-6"><a href="organizing-your-work.html#cb12-6" tabindex="-1"></a><span class="co">#$ -e logs/update_permissions.txt</span></span>
+<span id="cb12-7"><a href="organizing-your-work.html#cb12-7" tabindex="-1"></a><span class="co">#$ -m e</span></span>
+<span id="cb12-8"><a href="organizing-your-work.html#cb12-8" tabindex="-1"></a><span class="co">#$ -hold_jid move_qSVA_dcl01</span></span>
+<span id="cb12-9"><a href="organizing-your-work.html#cb12-9" tabindex="-1"></a></span>
+<span id="cb12-10"><a href="organizing-your-work.html#cb12-10" tabindex="-1"></a><span class="bu">echo</span> <span class="st">&quot;**** Job starts ****&quot;</span></span>
+<span id="cb12-11"><a href="organizing-your-work.html#cb12-11" tabindex="-1"></a><span class="fu">date</span></span>
+<span id="cb12-12"><a href="organizing-your-work.html#cb12-12" tabindex="-1"></a></span>
+<span id="cb12-13"><a href="organizing-your-work.html#cb12-13" tabindex="-1"></a><span class="bu">echo</span> <span class="st">&quot;**** JHPCE info ****&quot;</span></span>
+<span id="cb12-14"><a href="organizing-your-work.html#cb12-14" tabindex="-1"></a><span class="bu">echo</span> <span class="st">&quot;User: </span><span class="va">${USER}</span><span class="st">&quot;</span></span>
+<span id="cb12-15"><a href="organizing-your-work.html#cb12-15" tabindex="-1"></a><span class="bu">echo</span> <span class="st">&quot;Job id: </span><span class="va">${JOB_ID}</span><span class="st">&quot;</span></span>
+<span id="cb12-16"><a href="organizing-your-work.html#cb12-16" tabindex="-1"></a><span class="bu">echo</span> <span class="st">&quot;Job name: </span><span class="va">${JOB_NAME}</span><span class="st">&quot;</span></span>
+<span id="cb12-17"><a href="organizing-your-work.html#cb12-17" tabindex="-1"></a><span class="bu">echo</span> <span class="st">&quot;Hostname: </span><span class="va">${HOSTNAME}</span><span class="st">&quot;</span></span>
+<span id="cb12-18"><a href="organizing-your-work.html#cb12-18" tabindex="-1"></a><span class="bu">echo</span> <span class="st">&quot;Task id: </span><span class="va">${SGE_TASK_ID}</span><span class="st">&quot;</span></span>
+<span id="cb12-19"><a href="organizing-your-work.html#cb12-19" tabindex="-1"></a></span>
+<span id="cb12-20"><a href="organizing-your-work.html#cb12-20" tabindex="-1"></a><span class="co">## List current modules for reproducibility</span></span>
+<span id="cb12-21"><a href="organizing-your-work.html#cb12-21" tabindex="-1"></a><span class="ex">module</span> list</span>
+<span id="cb12-22"><a href="organizing-your-work.html#cb12-22" tabindex="-1"></a></span>
+<span id="cb12-23"><a href="organizing-your-work.html#cb12-23" tabindex="-1"></a></span>
+<span id="cb12-24"><a href="organizing-your-work.html#cb12-24" tabindex="-1"></a><span class="va">MAINDIR</span><span class="op">=</span><span class="st">&quot;/dcs04/lieber/lcolladotor/qSVA_LIBD3080&quot;</span></span>
+<span id="cb12-25"><a href="organizing-your-work.html#cb12-25" tabindex="-1"></a></span>
+<span id="cb12-26"><a href="organizing-your-work.html#cb12-26" tabindex="-1"></a><span class="co">## Remove default permissions</span></span>
+<span id="cb12-27"><a href="organizing-your-work.html#cb12-27" tabindex="-1"></a><span class="fu">find</span> <span class="va">${MAINDIR}</span> <span class="at">-type</span> d <span class="at">-exec</span> nfs4_setfacl <span class="at">-x</span> <span class="st">&quot;A:g:lieber_marmaypag@cm.cluster:rwaDxtcy&quot;</span> {} <span class="dt">\;</span></span>
+<span id="cb12-28"><a href="organizing-your-work.html#cb12-28" tabindex="-1"></a><span class="fu">find</span> <span class="va">${MAINDIR}</span> <span class="at">-type</span> d <span class="at">-exec</span> nfs4_setfacl <span class="at">-x</span> <span class="st">&quot;A:gfdi:lieber_marmaypag@cm.cluster:rwaDxtcy&quot;</span> {} <span class="dt">\;</span></span>
+<span id="cb12-29"><a href="organizing-your-work.html#cb12-29" tabindex="-1"></a><span class="fu">find</span> <span class="va">${MAINDIR}</span> <span class="at">-type</span> f <span class="at">-exec</span> nfs4_setfacl <span class="at">-x</span> <span class="st">&quot;A:g:lieber_marmaypag@cm.cluster:rwatcy&quot;</span> {} <span class="dt">\;</span></span>
+<span id="cb12-30"><a href="organizing-your-work.html#cb12-30" tabindex="-1"></a></span>
+<span id="cb12-31"><a href="organizing-your-work.html#cb12-31" tabindex="-1"></a><span class="co">## Set new permissions</span></span>
+<span id="cb12-32"><a href="organizing-your-work.html#cb12-32" tabindex="-1"></a><span class="fu">find</span> <span class="va">${MAINDIR}</span> <span class="at">-type</span> d <span class="at">-exec</span> nfs4_setfacl <span class="at">-a</span> <span class="st">&quot;A:g:lieber@cm.cluster:RX&quot;</span> {} <span class="dt">\;</span></span>
+<span id="cb12-33"><a href="organizing-your-work.html#cb12-33" tabindex="-1"></a><span class="fu">find</span> <span class="va">${MAINDIR}</span> <span class="at">-type</span> d <span class="at">-exec</span> nfs4_setfacl <span class="at">-a</span> <span class="st">&quot;A:gfdi:lieber@cm.cluster:RX&quot;</span> {} <span class="dt">\;</span></span>
+<span id="cb12-34"><a href="organizing-your-work.html#cb12-34" tabindex="-1"></a><span class="fu">find</span> <span class="va">${MAINDIR}</span> <span class="at">-type</span> f <span class="at">-exec</span> nfs4_setfacl <span class="at">-a</span> <span class="st">&quot;A:g:lieber@cm.cluster:R&quot;</span> {} <span class="dt">\;</span></span>
+<span id="cb12-35"><a href="organizing-your-work.html#cb12-35" tabindex="-1"></a></span>
+<span id="cb12-36"><a href="organizing-your-work.html#cb12-36" tabindex="-1"></a><span class="fu">find</span> <span class="va">${MAINDIR}</span> <span class="at">-type</span> d <span class="at">-exec</span> nfs4_setfacl <span class="at">-a</span> <span class="st">&quot;A:g:lieber_marmaypag@cm.cluster:RX&quot;</span> {} <span class="dt">\;</span></span>
+<span id="cb12-37"><a href="organizing-your-work.html#cb12-37" tabindex="-1"></a><span class="fu">find</span> <span class="va">${MAINDIR}</span> <span class="at">-type</span> d <span class="at">-exec</span> nfs4_setfacl <span class="at">-a</span> <span class="st">&quot;A:gfdi:lieber_marmaypag@cm.cluster:RX&quot;</span> {} <span class="dt">\;</span></span>
+<span id="cb12-38"><a href="organizing-your-work.html#cb12-38" tabindex="-1"></a><span class="fu">find</span> <span class="va">${MAINDIR}</span> <span class="at">-type</span> f <span class="at">-exec</span> nfs4_setfacl <span class="at">-a</span> <span class="st">&quot;A:g:lieber_marmaypag@cm.cluster:R&quot;</span> {} <span class="dt">\;</span></span>
+<span id="cb12-39"><a href="organizing-your-work.html#cb12-39" tabindex="-1"></a></span>
+<span id="cb12-40"><a href="organizing-your-work.html#cb12-40" tabindex="-1"></a><span class="co">## To move away from lieber_jaffe</span></span>
+<span id="cb12-41"><a href="organizing-your-work.html#cb12-41" tabindex="-1"></a><span class="fu">chgrp</span> lieber_lcolladotor <span class="at">-R</span> <span class="va">${MAINDIR}</span></span>
+<span id="cb12-42"><a href="organizing-your-work.html#cb12-42" tabindex="-1"></a></span>
+<span id="cb12-43"><a href="organizing-your-work.html#cb12-43" tabindex="-1"></a><span class="co">## For setting the group sticky bit</span></span>
+<span id="cb12-44"><a href="organizing-your-work.html#cb12-44" tabindex="-1"></a><span class="fu">find</span> <span class="va">${MAINDIR}</span> <span class="at">-type</span> d <span class="kw">|</span> <span class="fu">xargs</span> chmod g+s</span>
+<span id="cb12-45"><a href="organizing-your-work.html#cb12-45" tabindex="-1"></a></span>
+<span id="cb12-46"><a href="organizing-your-work.html#cb12-46" tabindex="-1"></a><span class="co">## Check settings</span></span>
+<span id="cb12-47"><a href="organizing-your-work.html#cb12-47" tabindex="-1"></a><span class="ex">nfs4_getfacl</span> <span class="va">${MAINDIR}</span></span>
+<span id="cb12-48"><a href="organizing-your-work.html#cb12-48" tabindex="-1"></a></span>
+<span id="cb12-49"><a href="organizing-your-work.html#cb12-49" tabindex="-1"></a><span class="bu">echo</span> <span class="st">&quot;**** Job ends ****&quot;</span></span>
+<span id="cb12-50"><a href="organizing-your-work.html#cb12-50" tabindex="-1"></a><span class="fu">date</span></span>
+<span id="cb12-51"><a href="organizing-your-work.html#cb12-51" tabindex="-1"></a></span>
+<span id="cb12-52"><a href="organizing-your-work.html#cb12-52" tabindex="-1"></a><span class="co">## This script was made using sgejobs version 0.99.1</span></span>
+<span id="cb12-53"><a href="organizing-your-work.html#cb12-53" tabindex="-1"></a><span class="co">## available from http://research.libd.org/sgejobs/</span></span></code></pre></div>
 <ul>
 <li><code>delete_qSVA_dcl01.sh</code></li>
 </ul>
 <p>This script also uses <code>#$ -hold_jid</code> so in theory we could submit it (<code>qsub</code>) immediately after the <em>move</em> script, however, it’s best to wait a few days or weeks before running the script that deletes the original files under <code>trash</code> (here <code>trash_qSVA</code>), to make sure that we are not missing any files or encountered unexpected scenarios when moving files across disks.</p>
-<div class="sourceCode" id="cb13"><pre class="sourceCode bash"><code class="sourceCode bash"><span id="cb13-1"><a href="organizing-your-work.html#cb13-1" aria-hidden="true" tabindex="-1"></a><span class="co">#!/bin/bash</span></span>
-<span id="cb13-2"><a href="organizing-your-work.html#cb13-2" aria-hidden="true" tabindex="-1"></a><span class="co">#$ -cwd</span></span>
-<span id="cb13-3"><a href="organizing-your-work.html#cb13-3" aria-hidden="true" tabindex="-1"></a><span class="co">#$ -l bluejay,mem_free=2G,h_vmem=2G,h_fsize=100G</span></span>
-<span id="cb13-4"><a href="organizing-your-work.html#cb13-4" aria-hidden="true" tabindex="-1"></a><span class="co">#$ -N delete_qSVA_dcl01</span></span>
-<span id="cb13-5"><a href="organizing-your-work.html#cb13-5" aria-hidden="true" tabindex="-1"></a><span class="co">#$ -o logs/delete_qSVA_dcl01.txt</span></span>
-<span id="cb13-6"><a href="organizing-your-work.html#cb13-6" aria-hidden="true" tabindex="-1"></a><span class="co">#$ -e logs/delete_qSVA_dcl01.txt</span></span>
-<span id="cb13-7"><a href="organizing-your-work.html#cb13-7" aria-hidden="true" tabindex="-1"></a><span class="co">#$ -m e</span></span>
-<span id="cb13-8"><a href="organizing-your-work.html#cb13-8" aria-hidden="true" tabindex="-1"></a><span class="co">#$ -hold_jid move_qSVA_dcl01</span></span>
-<span id="cb13-9"><a href="organizing-your-work.html#cb13-9" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb13-10"><a href="organizing-your-work.html#cb13-10" aria-hidden="true" tabindex="-1"></a><span class="bu">echo</span> <span class="st">&quot;**** Job starts ****&quot;</span></span>
-<span id="cb13-11"><a href="organizing-your-work.html#cb13-11" aria-hidden="true" tabindex="-1"></a><span class="fu">date</span></span>
-<span id="cb13-12"><a href="organizing-your-work.html#cb13-12" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb13-13"><a href="organizing-your-work.html#cb13-13" aria-hidden="true" tabindex="-1"></a><span class="bu">echo</span> <span class="st">&quot;**** JHPCE info ****&quot;</span></span>
-<span id="cb13-14"><a href="organizing-your-work.html#cb13-14" aria-hidden="true" tabindex="-1"></a><span class="bu">echo</span> <span class="st">&quot;User: </span><span class="va">${USER}</span><span class="st">&quot;</span></span>
-<span id="cb13-15"><a href="organizing-your-work.html#cb13-15" aria-hidden="true" tabindex="-1"></a><span class="bu">echo</span> <span class="st">&quot;Job id: </span><span class="va">${JOB_ID}</span><span class="st">&quot;</span></span>
-<span id="cb13-16"><a href="organizing-your-work.html#cb13-16" aria-hidden="true" tabindex="-1"></a><span class="bu">echo</span> <span class="st">&quot;Job name: </span><span class="va">${JOB_NAME}</span><span class="st">&quot;</span></span>
-<span id="cb13-17"><a href="organizing-your-work.html#cb13-17" aria-hidden="true" tabindex="-1"></a><span class="bu">echo</span> <span class="st">&quot;Hostname: </span><span class="va">${HOSTNAME}</span><span class="st">&quot;</span></span>
-<span id="cb13-18"><a href="organizing-your-work.html#cb13-18" aria-hidden="true" tabindex="-1"></a><span class="bu">echo</span> <span class="st">&quot;Task id: </span><span class="va">${SGE_TASK_ID}</span><span class="st">&quot;</span></span>
-<span id="cb13-19"><a href="organizing-your-work.html#cb13-19" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb13-20"><a href="organizing-your-work.html#cb13-20" aria-hidden="true" tabindex="-1"></a><span class="co">## List current modules for reproducibility</span></span>
-<span id="cb13-21"><a href="organizing-your-work.html#cb13-21" aria-hidden="true" tabindex="-1"></a><span class="ex">module</span> list</span>
-<span id="cb13-22"><a href="organizing-your-work.html#cb13-22" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb13-23"><a href="organizing-your-work.html#cb13-23" aria-hidden="true" tabindex="-1"></a><span class="co">## Delete dcl01 data</span></span>
-<span id="cb13-24"><a href="organizing-your-work.html#cb13-24" aria-hidden="true" tabindex="-1"></a><span class="fu">rm</span> <span class="at">-fr</span> /dcl01/ajaffe/data/lab/trash_qSVA/</span>
-<span id="cb13-25"><a href="organizing-your-work.html#cb13-25" aria-hidden="true" tabindex="-1"></a><span class="fu">rm</span> <span class="at">-fr</span> /dcl01/lieber/ajaffe/lab/trash_qSVA/</span>
-<span id="cb13-26"><a href="organizing-your-work.html#cb13-26" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb13-27"><a href="organizing-your-work.html#cb13-27" aria-hidden="true" tabindex="-1"></a><span class="bu">echo</span> <span class="st">&quot;**** Job ends ****&quot;</span></span>
-<span id="cb13-28"><a href="organizing-your-work.html#cb13-28" aria-hidden="true" tabindex="-1"></a><span class="fu">date</span></span>
-<span id="cb13-29"><a href="organizing-your-work.html#cb13-29" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb13-30"><a href="organizing-your-work.html#cb13-30" aria-hidden="true" tabindex="-1"></a><span class="co">## This script was made using sgejobs version 0.99.1</span></span>
-<span id="cb13-31"><a href="organizing-your-work.html#cb13-31" aria-hidden="true" tabindex="-1"></a><span class="co">## available from http://research.libd.org/sgejobs/</span></span></code></pre></div>
+<div class="sourceCode" id="cb13"><pre class="sourceCode bash"><code class="sourceCode bash"><span id="cb13-1"><a href="organizing-your-work.html#cb13-1" tabindex="-1"></a><span class="co">#!/bin/bash</span></span>
+<span id="cb13-2"><a href="organizing-your-work.html#cb13-2" tabindex="-1"></a><span class="co">#$ -cwd</span></span>
+<span id="cb13-3"><a href="organizing-your-work.html#cb13-3" tabindex="-1"></a><span class="co">#$ -l bluejay,mem_free=2G,h_vmem=2G,h_fsize=100G</span></span>
+<span id="cb13-4"><a href="organizing-your-work.html#cb13-4" tabindex="-1"></a><span class="co">#$ -N delete_qSVA_dcl01</span></span>
+<span id="cb13-5"><a href="organizing-your-work.html#cb13-5" tabindex="-1"></a><span class="co">#$ -o logs/delete_qSVA_dcl01.txt</span></span>
+<span id="cb13-6"><a href="organizing-your-work.html#cb13-6" tabindex="-1"></a><span class="co">#$ -e logs/delete_qSVA_dcl01.txt</span></span>
+<span id="cb13-7"><a href="organizing-your-work.html#cb13-7" tabindex="-1"></a><span class="co">#$ -m e</span></span>
+<span id="cb13-8"><a href="organizing-your-work.html#cb13-8" tabindex="-1"></a><span class="co">#$ -hold_jid move_qSVA_dcl01</span></span>
+<span id="cb13-9"><a href="organizing-your-work.html#cb13-9" tabindex="-1"></a></span>
+<span id="cb13-10"><a href="organizing-your-work.html#cb13-10" tabindex="-1"></a><span class="bu">echo</span> <span class="st">&quot;**** Job starts ****&quot;</span></span>
+<span id="cb13-11"><a href="organizing-your-work.html#cb13-11" tabindex="-1"></a><span class="fu">date</span></span>
+<span id="cb13-12"><a href="organizing-your-work.html#cb13-12" tabindex="-1"></a></span>
+<span id="cb13-13"><a href="organizing-your-work.html#cb13-13" tabindex="-1"></a><span class="bu">echo</span> <span class="st">&quot;**** JHPCE info ****&quot;</span></span>
+<span id="cb13-14"><a href="organizing-your-work.html#cb13-14" tabindex="-1"></a><span class="bu">echo</span> <span class="st">&quot;User: </span><span class="va">${USER}</span><span class="st">&quot;</span></span>
+<span id="cb13-15"><a href="organizing-your-work.html#cb13-15" tabindex="-1"></a><span class="bu">echo</span> <span class="st">&quot;Job id: </span><span class="va">${JOB_ID}</span><span class="st">&quot;</span></span>
+<span id="cb13-16"><a href="organizing-your-work.html#cb13-16" tabindex="-1"></a><span class="bu">echo</span> <span class="st">&quot;Job name: </span><span class="va">${JOB_NAME}</span><span class="st">&quot;</span></span>
+<span id="cb13-17"><a href="organizing-your-work.html#cb13-17" tabindex="-1"></a><span class="bu">echo</span> <span class="st">&quot;Hostname: </span><span class="va">${HOSTNAME}</span><span class="st">&quot;</span></span>
+<span id="cb13-18"><a href="organizing-your-work.html#cb13-18" tabindex="-1"></a><span class="bu">echo</span> <span class="st">&quot;Task id: </span><span class="va">${SGE_TASK_ID}</span><span class="st">&quot;</span></span>
+<span id="cb13-19"><a href="organizing-your-work.html#cb13-19" tabindex="-1"></a></span>
+<span id="cb13-20"><a href="organizing-your-work.html#cb13-20" tabindex="-1"></a><span class="co">## List current modules for reproducibility</span></span>
+<span id="cb13-21"><a href="organizing-your-work.html#cb13-21" tabindex="-1"></a><span class="ex">module</span> list</span>
+<span id="cb13-22"><a href="organizing-your-work.html#cb13-22" tabindex="-1"></a></span>
+<span id="cb13-23"><a href="organizing-your-work.html#cb13-23" tabindex="-1"></a><span class="co">## Delete dcl01 data</span></span>
+<span id="cb13-24"><a href="organizing-your-work.html#cb13-24" tabindex="-1"></a><span class="fu">rm</span> <span class="at">-fr</span> /dcl01/ajaffe/data/lab/trash_qSVA/</span>
+<span id="cb13-25"><a href="organizing-your-work.html#cb13-25" tabindex="-1"></a><span class="fu">rm</span> <span class="at">-fr</span> /dcl01/lieber/ajaffe/lab/trash_qSVA/</span>
+<span id="cb13-26"><a href="organizing-your-work.html#cb13-26" tabindex="-1"></a></span>
+<span id="cb13-27"><a href="organizing-your-work.html#cb13-27" tabindex="-1"></a><span class="bu">echo</span> <span class="st">&quot;**** Job ends ****&quot;</span></span>
+<span id="cb13-28"><a href="organizing-your-work.html#cb13-28" tabindex="-1"></a><span class="fu">date</span></span>
+<span id="cb13-29"><a href="organizing-your-work.html#cb13-29" tabindex="-1"></a></span>
+<span id="cb13-30"><a href="organizing-your-work.html#cb13-30" tabindex="-1"></a><span class="co">## This script was made using sgejobs version 0.99.1</span></span>
+<span id="cb13-31"><a href="organizing-your-work.html#cb13-31" tabindex="-1"></a><span class="co">## available from http://research.libd.org/sgejobs/</span></span></code></pre></div>
 </div>
 <div id="humanpilot-example" class="section level3 hasAnchor" number="14.4.2">
 <h3><span class="header-section-number">14.4.2</span> HumanPilot example<a href="organizing-your-work.html#humanpilot-example" class="anchor-section" aria-label="Anchor link to header"></a></h3>
@@ -967,64 +967,64 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 </ul>
 <p>This script is similar to the qSVA example, but there is no array job. It was adapted from it, and thus we still specify the <code>ORIGINALDIR</code> environment variable, but we do it manually this time instead of using <code>awk</code> to do so.</p>
 <p>Most of the rest is the same, but here the trash directory is just called <code>trash</code>, as it became easier to do so and explain to JHPCE admins which directories we wanted deleted later on.</p>
-<div class="sourceCode" id="cb14"><pre class="sourceCode bash"><code class="sourceCode bash"><span id="cb14-1"><a href="organizing-your-work.html#cb14-1" aria-hidden="true" tabindex="-1"></a><span class="co">#!/bin/bash</span></span>
-<span id="cb14-2"><a href="organizing-your-work.html#cb14-2" aria-hidden="true" tabindex="-1"></a><span class="co">#$ -cwd</span></span>
-<span id="cb14-3"><a href="organizing-your-work.html#cb14-3" aria-hidden="true" tabindex="-1"></a><span class="co">#$ -l bluejay,mem_free=2G,h_vmem=2G,h_fsize=400G</span></span>
-<span id="cb14-4"><a href="organizing-your-work.html#cb14-4" aria-hidden="true" tabindex="-1"></a><span class="co">#$ -N move_HumanPilot_dcl02</span></span>
-<span id="cb14-5"><a href="organizing-your-work.html#cb14-5" aria-hidden="true" tabindex="-1"></a><span class="co">#$ -o logs/move_HumanPilot_dcl02.txt</span></span>
-<span id="cb14-6"><a href="organizing-your-work.html#cb14-6" aria-hidden="true" tabindex="-1"></a><span class="co">#$ -e logs/move_HumanPilot_dcl02.txt</span></span>
-<span id="cb14-7"><a href="organizing-your-work.html#cb14-7" aria-hidden="true" tabindex="-1"></a><span class="co">#$ -m e</span></span>
-<span id="cb14-8"><a href="organizing-your-work.html#cb14-8" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb14-9"><a href="organizing-your-work.html#cb14-9" aria-hidden="true" tabindex="-1"></a><span class="bu">echo</span> <span class="st">&quot;**** Job starts ****&quot;</span></span>
-<span id="cb14-10"><a href="organizing-your-work.html#cb14-10" aria-hidden="true" tabindex="-1"></a><span class="fu">date</span></span>
-<span id="cb14-11"><a href="organizing-your-work.html#cb14-11" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb14-12"><a href="organizing-your-work.html#cb14-12" aria-hidden="true" tabindex="-1"></a><span class="bu">echo</span> <span class="st">&quot;**** JHPCE info ****&quot;</span></span>
-<span id="cb14-13"><a href="organizing-your-work.html#cb14-13" aria-hidden="true" tabindex="-1"></a><span class="bu">echo</span> <span class="st">&quot;User: </span><span class="va">${USER}</span><span class="st">&quot;</span></span>
-<span id="cb14-14"><a href="organizing-your-work.html#cb14-14" aria-hidden="true" tabindex="-1"></a><span class="bu">echo</span> <span class="st">&quot;Job id: </span><span class="va">${JOB_ID}</span><span class="st">&quot;</span></span>
-<span id="cb14-15"><a href="organizing-your-work.html#cb14-15" aria-hidden="true" tabindex="-1"></a><span class="bu">echo</span> <span class="st">&quot;Job name: </span><span class="va">${JOB_NAME}</span><span class="st">&quot;</span></span>
-<span id="cb14-16"><a href="organizing-your-work.html#cb14-16" aria-hidden="true" tabindex="-1"></a><span class="bu">echo</span> <span class="st">&quot;Hostname: </span><span class="va">${HOSTNAME}</span><span class="st">&quot;</span></span>
-<span id="cb14-17"><a href="organizing-your-work.html#cb14-17" aria-hidden="true" tabindex="-1"></a><span class="bu">echo</span> <span class="st">&quot;Task id: </span><span class="va">${SGE_TASK_ID}</span><span class="st">&quot;</span></span>
-<span id="cb14-18"><a href="organizing-your-work.html#cb14-18" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb14-19"><a href="organizing-your-work.html#cb14-19" aria-hidden="true" tabindex="-1"></a><span class="co">## List current modules for reproducibility</span></span>
-<span id="cb14-20"><a href="organizing-your-work.html#cb14-20" aria-hidden="true" tabindex="-1"></a><span class="ex">module</span> list</span>
-<span id="cb14-21"><a href="organizing-your-work.html#cb14-21" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb14-22"><a href="organizing-your-work.html#cb14-22" aria-hidden="true" tabindex="-1"></a><span class="co">## Locate directory</span></span>
-<span id="cb14-23"><a href="organizing-your-work.html#cb14-23" aria-hidden="true" tabindex="-1"></a><span class="va">ORIGINALDIR</span><span class="op">=</span><span class="st">&quot;/dcl02/lieber/ajaffe/SpatialTranscriptomics/HumanPilot&quot;</span></span>
-<span id="cb14-24"><a href="organizing-your-work.html#cb14-24" aria-hidden="true" tabindex="-1"></a><span class="bu">echo</span> <span class="st">&quot;Processing directory </span><span class="va">${ORIGINALDIR}</span><span class="st">&quot;</span></span>
-<span id="cb14-25"><a href="organizing-your-work.html#cb14-25" aria-hidden="true" tabindex="-1"></a><span class="fu">date</span></span>
-<span id="cb14-26"><a href="organizing-your-work.html#cb14-26" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb14-27"><a href="organizing-your-work.html#cb14-27" aria-hidden="true" tabindex="-1"></a><span class="va">BASEDIR</span><span class="op">=</span><span class="va">$(</span><span class="fu">basename</span> <span class="va">${ORIGINALDIR})</span></span>
-<span id="cb14-28"><a href="organizing-your-work.html#cb14-28" aria-hidden="true" tabindex="-1"></a><span class="va">ORIGINALHOME</span><span class="op">=</span><span class="va">$(</span><span class="fu">dirname</span> <span class="va">${ORIGINALDIR})</span></span>
-<span id="cb14-29"><a href="organizing-your-work.html#cb14-29" aria-hidden="true" tabindex="-1"></a><span class="va">NEWDIR</span><span class="op">=</span><span class="st">&quot;/dcs04/lieber/lcolladotor/with10x_LIBD001/</span><span class="va">${BASEDIR}</span><span class="st">&quot;</span></span>
-<span id="cb14-30"><a href="organizing-your-work.html#cb14-30" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb14-31"><a href="organizing-your-work.html#cb14-31" aria-hidden="true" tabindex="-1"></a><span class="co">## Determine amount of data to transfer</span></span>
-<span id="cb14-32"><a href="organizing-your-work.html#cb14-32" aria-hidden="true" tabindex="-1"></a><span class="fu">du</span> <span class="at">-sk</span> <span class="at">--apparent-size</span> <span class="va">${ORIGINALDIR}</span>/ <span class="kw">|</span> <span class="fu">awk</span> <span class="st">&#39;{$1=$1/(1024^3); print $1, &quot;TB&quot;;}&#39;</span></span>
-<span id="cb14-33"><a href="organizing-your-work.html#cb14-33" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb14-34"><a href="organizing-your-work.html#cb14-34" aria-hidden="true" tabindex="-1"></a><span class="co">## List owners of all the files in the original path</span></span>
-<span id="cb14-35"><a href="organizing-your-work.html#cb14-35" aria-hidden="true" tabindex="-1"></a><span class="fu">find</span> <span class="va">${ORIGINALDIR}</span>/ <span class="at">-exec</span> ls <span class="at">-l</span> {} <span class="dt">\;</span> <span class="kw">|</span> <span class="fu">grep</span> <span class="at">-v</span> total <span class="kw">|</span> <span class="fu">tr</span> <span class="at">-s</span> <span class="st">&#39; &#39;</span> <span class="kw">|</span> <span class="fu">cut</span> <span class="at">-d</span> <span class="st">&#39; &#39;</span> <span class="at">-f3,9-</span></span>
-<span id="cb14-36"><a href="organizing-your-work.html#cb14-36" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb14-37"><a href="organizing-your-work.html#cb14-37" aria-hidden="true" tabindex="-1"></a><span class="co">## Copy from dcl02 to dcs04</span></span>
-<span id="cb14-38"><a href="organizing-your-work.html#cb14-38" aria-hidden="true" tabindex="-1"></a><span class="fu">rsync</span> <span class="at">-rltgvh</span> <span class="at">--chown</span><span class="op">=</span>:lieber_lcolladotor <span class="va">${ORIGINALDIR}</span>/ <span class="va">${NEWDIR}</span>/</span>
-<span id="cb14-39"><a href="organizing-your-work.html#cb14-39" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb14-40"><a href="organizing-your-work.html#cb14-40" aria-hidden="true" tabindex="-1"></a><span class="co">## Label as trash the files that were moved</span></span>
-<span id="cb14-41"><a href="organizing-your-work.html#cb14-41" aria-hidden="true" tabindex="-1"></a><span class="fu">mkdir</span> <span class="at">-p</span> <span class="va">${ORIGINALHOME}</span>/trash/</span>
-<span id="cb14-42"><a href="organizing-your-work.html#cb14-42" aria-hidden="true" tabindex="-1"></a><span class="fu">mv</span> <span class="va">${ORIGINALDIR}</span> <span class="va">${ORIGINALHOME}</span>/trash/</span>
-<span id="cb14-43"><a href="organizing-your-work.html#cb14-43" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb14-44"><a href="organizing-your-work.html#cb14-44" aria-hidden="true" tabindex="-1"></a><span class="co">## Create link</span></span>
-<span id="cb14-45"><a href="organizing-your-work.html#cb14-45" aria-hidden="true" tabindex="-1"></a><span class="fu">ln</span> <span class="at">-s</span> <span class="va">${NEWDIR}</span> <span class="va">${ORIGINALDIR}</span></span>
-<span id="cb14-46"><a href="organizing-your-work.html#cb14-46" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb14-47"><a href="organizing-your-work.html#cb14-47" aria-hidden="true" tabindex="-1"></a><span class="bu">echo</span> <span class="st">&quot;**** Job ends ****&quot;</span></span>
-<span id="cb14-48"><a href="organizing-your-work.html#cb14-48" aria-hidden="true" tabindex="-1"></a><span class="fu">date</span></span>
-<span id="cb14-49"><a href="organizing-your-work.html#cb14-49" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb14-50"><a href="organizing-your-work.html#cb14-50" aria-hidden="true" tabindex="-1"></a><span class="co">## This script was made using sgejobs version 0.99.1</span></span>
-<span id="cb14-51"><a href="organizing-your-work.html#cb14-51" aria-hidden="true" tabindex="-1"></a><span class="co">## available from http://research.libd.org/sgejobs/</span></span></code></pre></div>
+<div class="sourceCode" id="cb14"><pre class="sourceCode bash"><code class="sourceCode bash"><span id="cb14-1"><a href="organizing-your-work.html#cb14-1" tabindex="-1"></a><span class="co">#!/bin/bash</span></span>
+<span id="cb14-2"><a href="organizing-your-work.html#cb14-2" tabindex="-1"></a><span class="co">#$ -cwd</span></span>
+<span id="cb14-3"><a href="organizing-your-work.html#cb14-3" tabindex="-1"></a><span class="co">#$ -l bluejay,mem_free=2G,h_vmem=2G,h_fsize=400G</span></span>
+<span id="cb14-4"><a href="organizing-your-work.html#cb14-4" tabindex="-1"></a><span class="co">#$ -N move_HumanPilot_dcl02</span></span>
+<span id="cb14-5"><a href="organizing-your-work.html#cb14-5" tabindex="-1"></a><span class="co">#$ -o logs/move_HumanPilot_dcl02.txt</span></span>
+<span id="cb14-6"><a href="organizing-your-work.html#cb14-6" tabindex="-1"></a><span class="co">#$ -e logs/move_HumanPilot_dcl02.txt</span></span>
+<span id="cb14-7"><a href="organizing-your-work.html#cb14-7" tabindex="-1"></a><span class="co">#$ -m e</span></span>
+<span id="cb14-8"><a href="organizing-your-work.html#cb14-8" tabindex="-1"></a></span>
+<span id="cb14-9"><a href="organizing-your-work.html#cb14-9" tabindex="-1"></a><span class="bu">echo</span> <span class="st">&quot;**** Job starts ****&quot;</span></span>
+<span id="cb14-10"><a href="organizing-your-work.html#cb14-10" tabindex="-1"></a><span class="fu">date</span></span>
+<span id="cb14-11"><a href="organizing-your-work.html#cb14-11" tabindex="-1"></a></span>
+<span id="cb14-12"><a href="organizing-your-work.html#cb14-12" tabindex="-1"></a><span class="bu">echo</span> <span class="st">&quot;**** JHPCE info ****&quot;</span></span>
+<span id="cb14-13"><a href="organizing-your-work.html#cb14-13" tabindex="-1"></a><span class="bu">echo</span> <span class="st">&quot;User: </span><span class="va">${USER}</span><span class="st">&quot;</span></span>
+<span id="cb14-14"><a href="organizing-your-work.html#cb14-14" tabindex="-1"></a><span class="bu">echo</span> <span class="st">&quot;Job id: </span><span class="va">${JOB_ID}</span><span class="st">&quot;</span></span>
+<span id="cb14-15"><a href="organizing-your-work.html#cb14-15" tabindex="-1"></a><span class="bu">echo</span> <span class="st">&quot;Job name: </span><span class="va">${JOB_NAME}</span><span class="st">&quot;</span></span>
+<span id="cb14-16"><a href="organizing-your-work.html#cb14-16" tabindex="-1"></a><span class="bu">echo</span> <span class="st">&quot;Hostname: </span><span class="va">${HOSTNAME}</span><span class="st">&quot;</span></span>
+<span id="cb14-17"><a href="organizing-your-work.html#cb14-17" tabindex="-1"></a><span class="bu">echo</span> <span class="st">&quot;Task id: </span><span class="va">${SGE_TASK_ID}</span><span class="st">&quot;</span></span>
+<span id="cb14-18"><a href="organizing-your-work.html#cb14-18" tabindex="-1"></a></span>
+<span id="cb14-19"><a href="organizing-your-work.html#cb14-19" tabindex="-1"></a><span class="co">## List current modules for reproducibility</span></span>
+<span id="cb14-20"><a href="organizing-your-work.html#cb14-20" tabindex="-1"></a><span class="ex">module</span> list</span>
+<span id="cb14-21"><a href="organizing-your-work.html#cb14-21" tabindex="-1"></a></span>
+<span id="cb14-22"><a href="organizing-your-work.html#cb14-22" tabindex="-1"></a><span class="co">## Locate directory</span></span>
+<span id="cb14-23"><a href="organizing-your-work.html#cb14-23" tabindex="-1"></a><span class="va">ORIGINALDIR</span><span class="op">=</span><span class="st">&quot;/dcl02/lieber/ajaffe/SpatialTranscriptomics/HumanPilot&quot;</span></span>
+<span id="cb14-24"><a href="organizing-your-work.html#cb14-24" tabindex="-1"></a><span class="bu">echo</span> <span class="st">&quot;Processing directory </span><span class="va">${ORIGINALDIR}</span><span class="st">&quot;</span></span>
+<span id="cb14-25"><a href="organizing-your-work.html#cb14-25" tabindex="-1"></a><span class="fu">date</span></span>
+<span id="cb14-26"><a href="organizing-your-work.html#cb14-26" tabindex="-1"></a></span>
+<span id="cb14-27"><a href="organizing-your-work.html#cb14-27" tabindex="-1"></a><span class="va">BASEDIR</span><span class="op">=</span><span class="va">$(</span><span class="fu">basename</span> <span class="va">${ORIGINALDIR})</span></span>
+<span id="cb14-28"><a href="organizing-your-work.html#cb14-28" tabindex="-1"></a><span class="va">ORIGINALHOME</span><span class="op">=</span><span class="va">$(</span><span class="fu">dirname</span> <span class="va">${ORIGINALDIR})</span></span>
+<span id="cb14-29"><a href="organizing-your-work.html#cb14-29" tabindex="-1"></a><span class="va">NEWDIR</span><span class="op">=</span><span class="st">&quot;/dcs04/lieber/lcolladotor/with10x_LIBD001/</span><span class="va">${BASEDIR}</span><span class="st">&quot;</span></span>
+<span id="cb14-30"><a href="organizing-your-work.html#cb14-30" tabindex="-1"></a></span>
+<span id="cb14-31"><a href="organizing-your-work.html#cb14-31" tabindex="-1"></a><span class="co">## Determine amount of data to transfer</span></span>
+<span id="cb14-32"><a href="organizing-your-work.html#cb14-32" tabindex="-1"></a><span class="fu">du</span> <span class="at">-sk</span> <span class="at">--apparent-size</span> <span class="va">${ORIGINALDIR}</span>/ <span class="kw">|</span> <span class="fu">awk</span> <span class="st">&#39;{$1=$1/(1024^3); print $1, &quot;TB&quot;;}&#39;</span></span>
+<span id="cb14-33"><a href="organizing-your-work.html#cb14-33" tabindex="-1"></a></span>
+<span id="cb14-34"><a href="organizing-your-work.html#cb14-34" tabindex="-1"></a><span class="co">## List owners of all the files in the original path</span></span>
+<span id="cb14-35"><a href="organizing-your-work.html#cb14-35" tabindex="-1"></a><span class="fu">find</span> <span class="va">${ORIGINALDIR}</span>/ <span class="at">-exec</span> ls <span class="at">-l</span> {} <span class="dt">\;</span> <span class="kw">|</span> <span class="fu">grep</span> <span class="at">-v</span> total <span class="kw">|</span> <span class="fu">tr</span> <span class="at">-s</span> <span class="st">&#39; &#39;</span> <span class="kw">|</span> <span class="fu">cut</span> <span class="at">-d</span> <span class="st">&#39; &#39;</span> <span class="at">-f3,9-</span></span>
+<span id="cb14-36"><a href="organizing-your-work.html#cb14-36" tabindex="-1"></a></span>
+<span id="cb14-37"><a href="organizing-your-work.html#cb14-37" tabindex="-1"></a><span class="co">## Copy from dcl02 to dcs04</span></span>
+<span id="cb14-38"><a href="organizing-your-work.html#cb14-38" tabindex="-1"></a><span class="fu">rsync</span> <span class="at">-rltgvh</span> <span class="at">--chown</span><span class="op">=</span>:lieber_lcolladotor <span class="va">${ORIGINALDIR}</span>/ <span class="va">${NEWDIR}</span>/</span>
+<span id="cb14-39"><a href="organizing-your-work.html#cb14-39" tabindex="-1"></a></span>
+<span id="cb14-40"><a href="organizing-your-work.html#cb14-40" tabindex="-1"></a><span class="co">## Label as trash the files that were moved</span></span>
+<span id="cb14-41"><a href="organizing-your-work.html#cb14-41" tabindex="-1"></a><span class="fu">mkdir</span> <span class="at">-p</span> <span class="va">${ORIGINALHOME}</span>/trash/</span>
+<span id="cb14-42"><a href="organizing-your-work.html#cb14-42" tabindex="-1"></a><span class="fu">mv</span> <span class="va">${ORIGINALDIR}</span> <span class="va">${ORIGINALHOME}</span>/trash/</span>
+<span id="cb14-43"><a href="organizing-your-work.html#cb14-43" tabindex="-1"></a></span>
+<span id="cb14-44"><a href="organizing-your-work.html#cb14-44" tabindex="-1"></a><span class="co">## Create link</span></span>
+<span id="cb14-45"><a href="organizing-your-work.html#cb14-45" tabindex="-1"></a><span class="fu">ln</span> <span class="at">-s</span> <span class="va">${NEWDIR}</span> <span class="va">${ORIGINALDIR}</span></span>
+<span id="cb14-46"><a href="organizing-your-work.html#cb14-46" tabindex="-1"></a></span>
+<span id="cb14-47"><a href="organizing-your-work.html#cb14-47" tabindex="-1"></a><span class="bu">echo</span> <span class="st">&quot;**** Job ends ****&quot;</span></span>
+<span id="cb14-48"><a href="organizing-your-work.html#cb14-48" tabindex="-1"></a><span class="fu">date</span></span>
+<span id="cb14-49"><a href="organizing-your-work.html#cb14-49" tabindex="-1"></a></span>
+<span id="cb14-50"><a href="organizing-your-work.html#cb14-50" tabindex="-1"></a><span class="co">## This script was made using sgejobs version 0.99.1</span></span>
+<span id="cb14-51"><a href="organizing-your-work.html#cb14-51" tabindex="-1"></a><span class="co">## available from http://research.libd.org/sgejobs/</span></span></code></pre></div>
 <ul>
 <li><code>update_permissions.sh</code></li>
 </ul>
 <p>This is a much simpler bash script which we didn’t <code>qsub</code> and basically just reminds us of the specific command we used to update the permissions. That way, if anyone asks us what we ran in the future, we know exactly how we updated the permissions.</p>
-<div class="sourceCode" id="cb15"><pre class="sourceCode bash"><code class="sourceCode bash"><span id="cb15-1"><a href="organizing-your-work.html#cb15-1" aria-hidden="true" tabindex="-1"></a><span class="co">#!/bin/bash</span></span>
-<span id="cb15-2"><a href="organizing-your-work.html#cb15-2" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb15-3"><a href="organizing-your-work.html#cb15-3" aria-hidden="true" tabindex="-1"></a><span class="fu">sh</span> /dcs04/lieber/lcolladotor/_jhpce_org_LIBD001/update_permissions_spatialteam.sh /dcs04/lieber/lcolladotor/with10x_LIBD001</span></code></pre></div>
+<div class="sourceCode" id="cb15"><pre class="sourceCode bash"><code class="sourceCode bash"><span id="cb15-1"><a href="organizing-your-work.html#cb15-1" tabindex="-1"></a><span class="co">#!/bin/bash</span></span>
+<span id="cb15-2"><a href="organizing-your-work.html#cb15-2" tabindex="-1"></a></span>
+<span id="cb15-3"><a href="organizing-your-work.html#cb15-3" tabindex="-1"></a><span class="fu">sh</span> /dcs04/lieber/lcolladotor/_jhpce_org_LIBD001/update_permissions_spatialteam.sh /dcs04/lieber/lcolladotor/with10x_LIBD001</span></code></pre></div>
 
 </div>
 </div>
