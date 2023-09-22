@@ -144,7 +144,6 @@ The remaining main Slack channels are:
 * [**libd_dsgs**](https://jhu-genomics.slack.com/archives/C01AJSG6MSA): for the [DSgs-guides](#dsgs-guide-team-members) 
 * [**libd_general**](https://jhu-genomics.slack.com/archives/G01BNQHMTGX): for all current LIBD members that are on the JHU Genomics Slack workspace
 * [**libd_genomics_martinowich**](https://jhu-genomics.slack.com/archives/C015GNM7JSC): a shared channel with the Martinowich lab Slack workspace
-* [**libd_lunchtrain**](https://jhu-genomics.slack.com/archives/CAHTURRT3): for random topics as well as organizing lunch outings ^[Or remote lunch Zoom sessions.] using the `/lunchtrain` Slack command ^[Start typing the command on Slack and you'll see the help menu pop up for this command which specifies the syntax for using `/lunchtrain`.]
 * [**libd_pkgs**](https://jhu-genomics.slack.com/archives/C2G0ZFDSR): for software (mostly R packages) we are making that is not specific to a particular project
 * [**libd_rstats_club**](https://jhu-genomics.slack.com/archives/C9KTKPEGM): for the LIBD rstats club
 
@@ -155,7 +154,6 @@ There are also a set of public channels that we use frequently:
 * [**diversity**](https://jhu-genomics.slack.com/archives/C9HQ7LGJJ)
 * [**funding**](https://jhu-genomics.slack.com/archives/C02R11TTD)
 * [**general**](https://jhu-genomics.slack.com/archives/C029RHR0F)
-* [**genomics_journal_club**](https://jhu-genomics.slack.com/archives/C5L1BUH7A): a student-run journal club
 * [**genomics_seminar**](https://jhu-genomics.slack.com/archives/C08MZFZKJ): [Genomics at JHU seminars](https://twitter.com/GenomicsAtJHU?s=20)
 * [**jhpce**](https://jhu-genomics.slack.com/archives/C074W8800): JHPCE users, though also check the [`bithelp`](#bithelp) and [`bitsupport`](#bitsupport) mailing lists
 * [**jhu_papers**](https://jhu-genomics.slack.com/archives/C9JGFTKT2): where we announce papers with JHU authors
@@ -173,8 +171,7 @@ This is the LIBD Slack workspace used by Keri Martinowich's team. Several of us 
 Some Slack channels of interest here are:
 
 * [**comm_labmeeting**](https://neuralplasticity.slack.com/archives/CLW4ZCDBK): for any communications related to the Martinowich lab meeting
-* [**helpdesk_general_drybench**](https://neuralplasticity.slack.com/archives/C010NFSQS48): a channel that was inspired by [**libd_helpdesk**](https://jhu-genomics.slack.com/archives/CUYHWV7AA) on the JHU Genomics Slack
-* [**helpdesk_figuregeneration_and_manuscriptwriting**](https://neuralplasticity.slack.com/archives/C01AZRVDYDR): it says it all in the name ;)
+* Specific project channels
 
 #### LIBD Neuropathology
 
