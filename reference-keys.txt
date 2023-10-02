@@ -38,6 +38,8 @@ help-us-help-you
 framing-a-question
 useful-information
 sign-up
+leos-team
+more-dsgs-guides
 dsgs-session-reports
 become-a-dsgs-guide
 how-to-ask-for-help
