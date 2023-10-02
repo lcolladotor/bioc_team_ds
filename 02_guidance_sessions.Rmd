@@ -4,12 +4,14 @@
 
 You can think about the _Data Science guidance sessions_ (**DSgs**) as _open office hours_. Also for several of us (Cynthia, Nick, Louise, and Leo), these DSgs'es are part of our job at LIBD. So please don't think that you are imposing in any way: we want to help you! Here are the quick links for signing up:
 
+<center>
 <img src="images/open_office_hours.png">
+</center>
+
+Leo's team:
 
 * Cynthia Soto Cardinault
   - **Sign up** via [Calendly](https://calendly.com/cynthiacardinault/25-min-data-science-guidance-session)
-* Madhavi Tippani
-  - **Sign up** via [Calendly](https://calendly.com/madhavitippani/25-minute-data-science-guidance-session)
 * Nicholas J. Eagles
   - **Sign up** via [Calendly](https://calendly.com/nick-eagles/25-minute-data-science-guidance-session)
 * Louise A. Huuki-Myers
@@ -19,13 +21,18 @@ You can think about the _Data Science guidance sessions_ (**DSgs**) as _open off
 * Leonardo Collado-Torres
   - **Sign up** via [Calendly](https://calendly.com/lcolladotor/ds-guidance)
   
+External to Leo's team:
+
+* Madhavi Tippani
+  - **Sign up** via [Calendly](https://calendly.com/madhavitippani/25-minute-data-science-guidance-session)
+  
 Further below you'll see these links again after we:
 
-* explain the background behind DSgs
-* some rules we have,
-* how you can help us help you,
-* information we might need,
-* which are our research interests and how you can sign up.
+* explain the _background_ behind DSgs
+* some _rules_ we have,
+* how you can _help us help you_,
+* _information we might need_,
+* which are our _research interests_ and how you can sign up.
 
 Finally, if you want to be a DSgs guide and be listed on this page, we have some information for you.
 
@@ -33,7 +40,9 @@ Finally, if you want to be a DSgs guide and be listed on this page, we have some
 
 Data is abundant in many aspects of our research work thanks to high-throughput experimental assays. While some analyses will require a significant amount of time from people who primarily do that type of work, we know that many of us are interested in learning more about working with data. As such, as a team, the [DSgs-guides](#dsgs-guide-team-members) will provide **Data Science guidance sessions** (DSgs).
 
-These are 25 minute sessions where we'll try our best to help you, teach you, troubleshoot with you, and overall guide you as much as we can. **DSgs sessions are particularly helpful** if you want to work on a data problem or gain some data skills **across a period of weeks or months**. Working with data and programming languages can have a steep learning curve and it can feel daunting. As a team, we have trained ourselves to have a common baseline and can help you get familiarized with the concept of a project-oriented workflow. This involves tools such as RStudio, git/GitHub, how to organize your code, how to ask for help, and overall tools to make your work more reproducible. These ideas when put into practice are very helpful for finding why things are not working, as we all inevitably encounter errors in our code and the open source software we rely on. Sometimes we won't know the answer either, but maybe we can help you construct more specific Google search terms.
+These are 25 minute sessions where we'll try our best to help you, teach you, troubleshoot with you, and overall guide you as much as we can. You can think of DSgs as _open office hours_. It is how we contribute to the LIBD's data science capacity growing goals, and for several of us, providing DSgs sessions is part of our job at LIBD.
+
+As with any office hours in a class, **DSgs sessions are particularly helpful** if you want to work on a data problem or gain some data skills **across a period of weeks or months**. They do not work well for last minute requests. Working with data and programming languages can have a steep learning curve and it can feel daunting. As a team, we have trained ourselves to have a common baseline and can help you get familiarized with the concept of a project-oriented workflow. This involves tools such as RStudio, git/GitHub, how to organize your code, how to ask for help, and overall tools to make your work more reproducible. These ideas when put into practice are very helpful for finding why things are not working, as we all inevitably encounter errors in our code and the open source software we rely on. Sometimes we won't know the answer either, but maybe we can help you construct more specific Google search terms.
 
 Check the following slides for some of the initial ideas behind these sessions.
 
@@ -103,11 +112,6 @@ Finally, please sign up for a **maximum of two sessions per week**. This will he
   - Technologies I use: bulk RNA-seq, linux, python, R/WGCNA and github.
   - Learning about: snRNA-seq, multi-omics, snATAC and deconvolution.
   - **Sign up** via [Calendly](https://calendly.com/cynthiacardinault/25-min-data-science-guidance-session)
-* [Madhavi Tippani](https://github.com/madhavitippani) ([BioC Support](https://support.bioconductor.org/u/24319/))
-  - Research interests: spatial transcriptomics, calcium imaging, RNAscope, medical image processing.
-  - Technologies I use: Matlab, R, GitHub, SGE/JHPCE.
-  - Learning about: Machine Learning, spatial transcriptomics, statistical analysis.
-  - **Sign up** via [Calendly](https://calendly.com/madhavitippani/25-minute-data-science-guidance-session)
 * [Nicholas J. Eagles](https://github.com/Nick-Eagles) ([BioC Support](https://support.bioconductor.org/u/24264/))
   - Research interests: bulk/single-cell RNA-seq, spatial transcriptomics, building computational pipelines.
   - Technologies I use: R/Bioconductor, Git, Nextflow, python.
@@ -132,6 +136,14 @@ Note that Hédia can only do DSgs sessions related to the CHESS-BRAIN or qsvaR p
   - Technologies I use: R/Bioconductor, Python, GitHub, Nextflow.
   - Learning about: Functional programming, deconvolution, package development, omics integration.
   - **Sign up** via [Calendly](https://calendly.com/hediatnani/25-min-data-science-guidance-session)
+  
+Here's the list of people outside Leo's team that also provide DSgs sessions:
+
+* [Madhavi Tippani](https://github.com/madhavitippani) ([BioC Support](https://support.bioconductor.org/u/24319/))
+  - Research interests: spatial transcriptomics, calcium imaging, RNAscope, medical image processing.
+  - Technologies I use: Matlab, R, GitHub, SGE/JHPCE.
+  - Learning about: Machine Learning, spatial transcriptomics, statistical analysis.
+  - **Sign up** via [Calendly](https://calendly.com/madhavitippani/25-minute-data-science-guidance-session)
   
 
 ## DSgs session reports
