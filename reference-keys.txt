@@ -31,6 +31,8 @@ food-trucks
 other
 baltimore-life
 data-science-guidance-sessions
+quick-dsgs-sign-up
+background
 interaction-rules
 help-us-help-you
 framing-a-question
