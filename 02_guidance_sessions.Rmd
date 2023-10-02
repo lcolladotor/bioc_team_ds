@@ -21,17 +21,18 @@ Leo's team:
 * Leonardo Collado-Torres
   - **Sign up** via [Calendly](https://calendly.com/lcolladotor/ds-guidance)
   
-External to Leo's team:
+More DSgs guides:
 
 * Madhavi Tippani
   - **Sign up** via [Calendly](https://calendly.com/madhavitippani/25-minute-data-science-guidance-session)
   
 Further below you'll see these links again after we:
 
-* explain the _background_ behind DSgs
+* explain the _background_ behind DSgs,
 * some _rules_ we have,
 * how you can _help us help you_,
-* _information we might need_,
+  - how to _frame a question_,
+  - _information we might need_,
 * which are our _research interests_ and how you can sign up.
 
 Finally, if you want to be a DSgs guide and be listed on this page, we have some information for you.
@@ -104,8 +105,12 @@ If you have a Zoom account, please add the Zoom details to the calendar invitati
 Finally, please sign up for a **maximum of two sessions per week**. This will help us keep the DSgs system fair for everyone to use. Thank you!
 
 <div id="hello" class="greeting message" style="color: red;">
-  <strong>Guides are shown in order of their availability (most to least).</strong> Please try reaching out to multiple people instead of one person for all your questions. Thank you!
+  <strong>Guides are shown in order of their availability (most to least).</strong>
 </div>
+
+Please try reaching out to multiple people instead of one person for all your questions. Thank you!
+
+### Leo's team
 
 * [Cynthia Soto Cardinault](https://github.com/cyntsc) ([BioC Support](https://support.bioconductor.org/u/59591/))
   - Research interests: bulk RNA-seq, workflows, machine learning methodologies.
@@ -128,7 +133,6 @@ Finally, please sign up for a **maximum of two sessions per week**. This will he
   - Learning about: team management, multi-omics.
   - **Sign up** via [Calendly](https://calendly.com/lcolladotor/ds-guidance)
 
-
 Note that Hédia can only do DSgs sessions related to the CHESS-BRAIN or qsvaR projects. She can also do internal team DSgs sessions on any topic.
 
 * [Hédia Tnani](https://github.com/HediaTnani) ([BioC Support](https://support.bioconductor.org/u/56927/))
@@ -137,7 +141,7 @@ Note that Hédia can only do DSgs sessions related to the CHESS-BRAIN or qsvaR p
   - Learning about: Functional programming, deconvolution, package development, omics integration.
   - **Sign up** via [Calendly](https://calendly.com/hediatnani/25-min-data-science-guidance-session)
   
-Here's the list of people outside Leo's team that also provide DSgs sessions:
+### More DSgs guides
 
 * [Madhavi Tippani](https://github.com/madhavitippani) ([BioC Support](https://support.bioconductor.org/u/24319/))
   - Research interests: spatial transcriptomics, calcium imaging, RNAscope, medical image processing.
