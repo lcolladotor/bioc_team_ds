@@ -128,9 +128,9 @@ Please try reaching out to multiple people instead of one person for all your qu
   - Learning about: Bioconductor Package development.
   - **Sign up** via [Calendly](https://calendly.com/lahuuki/25-min-data-science-guidance-session)
 * [Leonardo Collado-Torres](https://github.com/lcolladotor) ([BioC Support](https://support.bioconductor.org/u/6526/))
-  - Research interests: RNA-seq, spatial transcriptomics, un-annotated transcriptome, deconvolution.
+  - Research interests: RNA-seq, spatial transcriptomics, un-annotated transcriptome, deconvolution, multi-omics.
   - Technologies I use: R/Bioconductor, GitHub, SGE/JHPCE.
-  - Learning about: team management, multi-omics.
+  - Learning about: team management, grant applications.
   - **Sign up** via [Calendly](https://calendly.com/lcolladotor/ds-guidance)
 
 Note that Hédia can only do DSgs sessions related to the CHESS-BRAIN or qsvaR projects. She can also do internal team DSgs sessions on any topic.
