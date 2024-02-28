@@ -191,6 +191,8 @@ installed_path <- ifelse(
 installed_path <- "~/R/update_R"
 
 installed <- dir(.libPaths())
+# For JHPCE
+installed <- dir(.libPaths()[1])
 save(installed, file = file.path(installed_path, paste0(Sys.Date(), '-installed.Rdata')))
 ``` 
 
