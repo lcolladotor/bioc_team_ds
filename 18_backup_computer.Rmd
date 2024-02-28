@@ -4,6 +4,10 @@ As most of us use macOS laptop computers, this chapter will mostly be focused on
 
 For backing up your list of R packages you have installed, check the [R setup: R packages](https://lcolladotor.github.io/bioc_team_ds/config-files.html#r-packages) subsection from a previous chapter.
 
+The material described here was presented on the team meeting on 2024-02-28 as shown in the video available below.
+
+<iframe width="560" height="315" src="https://www.youtube.com/embed/3b13yTKItUw?si=lBvom3S1WZQjZuaS" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+
 ## macOS
 
 As some of you know, I have a personal Dropbox account that I pay for myself. You don't have to use Dropbox as we have access to OneDrive through LIBD (1 TB per account). The concepts below apply for any cloud back up service.
