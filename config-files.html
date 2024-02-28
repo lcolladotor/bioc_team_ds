@@ -6,7 +6,7 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge" />
   <title>17 Config files | R/Bioconductor-powered Team Data Science</title>
   <meta name="description" content="17 Config files | R/Bioconductor-powered Team Data Science" />
-  <meta name="generator" content="bookdown 0.35 and GitBook 2.6.7" />
+  <meta name="generator" content="bookdown 0.36 and GitBook 2.6.7" />
 
   <meta property="og:title" content="17 Config files | R/Bioconductor-powered Team Data Science" />
   <meta property="og:type" content="book" />
@@ -442,11 +442,15 @@ Do you want to use <a href="https://twitter.com/Bioconductor?ref_src=twsrc%5Etfw
 </blockquote>
 <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
 <p>So in macOS I use:</p>
+<ul>
+<li>From <a href="https://mac.r-project.org/tools/" class="uri">https://mac.r-project.org/tools/</a>, install <code>Xcode</code> developer tools + <code>GNU Fortran compiler</code>.</li>
+<li>From <a href="https://mac.r-project.org/bin/" class="uri">https://mac.r-project.org/bin/</a>, install all binaries with the following commands:</li>
+</ul>
 <div class="sourceCode" id="cb16"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb16-1"><a href="config-files.html#cb16-1" tabindex="-1"></a><span class="do">## From https://mac.r-project.org/bin/</span></span>
 <span id="cb16-2"><a href="config-files.html#cb16-2" tabindex="-1"></a><span class="co"># sudo R</span></span>
 <span id="cb16-3"><a href="config-files.html#cb16-3" tabindex="-1"></a><span class="fu">source</span>(<span class="st">&quot;https://mac.R-project.org/bin/install.R&quot;</span>)</span>
 <span id="cb16-4"><a href="config-files.html#cb16-4" tabindex="-1"></a><span class="fu">install.libs</span>(<span class="st">&quot;all&quot;</span>)</span></code></pre></div>
-<p>and on winOS I install Rtools (latest version) from <a href="https://cran.r-project.org/bin/windows/Rtools/" class="uri">https://cran.r-project.org/bin/windows/Rtools/</a>.</p>
+<p>On winOS I install Rtools (latest version) from <a href="https://cran.r-project.org/bin/windows/Rtools/" class="uri">https://cran.r-project.org/bin/windows/Rtools/</a>.</p>
 <p>Additional software:</p>
 <ul>
 <li>Both: <a href="https://www.notion.so/desktop">Notion</a>, <a href="https://slack.com/downloads">Slack</a></li>
@@ -500,82 +504,92 @@ Do you want to use <a href="https://twitter.com/Bioconductor?ref_src=twsrc%5Etfw
 <span id="cb17-41"><a href="config-files.html#cb17-41" tabindex="-1"></a>    <span class="st">&quot;recount3&quot;</span>,</span>
 <span id="cb17-42"><a href="config-files.html#cb17-42" tabindex="-1"></a>    <span class="st">&quot;regutools&quot;</span>,</span>
 <span id="cb17-43"><a href="config-files.html#cb17-43" tabindex="-1"></a>    <span class="st">&quot;regionReport&quot;</span>,</span>
-<span id="cb17-44"><a href="config-files.html#cb17-44" tabindex="-1"></a>    <span class="st">&quot;spatialLIBD&quot;</span>,</span>
-<span id="cb17-45"><a href="config-files.html#cb17-45" tabindex="-1"></a>    <span class="st">&quot;TREG&quot;</span></span>
-<span id="cb17-46"><a href="config-files.html#cb17-46" tabindex="-1"></a>), <span class="at">dependencies =</span> <span class="cn">TRUE</span>, <span class="at">update =</span> <span class="cn">FALSE</span>)</span>
-<span id="cb17-47"><a href="config-files.html#cb17-47" tabindex="-1"></a></span>
-<span id="cb17-48"><a href="config-files.html#cb17-48" tabindex="-1"></a><span class="do">## LIBD packages</span></span>
-<span id="cb17-49"><a href="config-files.html#cb17-49" tabindex="-1"></a>remotes<span class="sc">::</span><span class="fu">install_github</span>(<span class="fu">c</span>(</span>
-<span id="cb17-50"><a href="config-files.html#cb17-50" tabindex="-1"></a>    <span class="st">&quot;LieberInstitute/DeconvoBuddies&quot;</span>,</span>
-<span id="cb17-51"><a href="config-files.html#cb17-51" tabindex="-1"></a>    <span class="st">&quot;LieberInstitute/jaffelab&quot;</span>,</span>
-<span id="cb17-52"><a href="config-files.html#cb17-52" tabindex="-1"></a>    <span class="co"># &quot;LieberInstitute/recount.bwtool&quot;, ## Not really used anymore</span></span>
-<span id="cb17-53"><a href="config-files.html#cb17-53" tabindex="-1"></a>    <span class="st">&quot;LieberInstitute/sgejobs&quot;</span>,</span>
-<span id="cb17-54"><a href="config-files.html#cb17-54" tabindex="-1"></a>    <span class="st">&quot;LieberInstitute/shinycsv&quot;</span></span>
-<span id="cb17-55"><a href="config-files.html#cb17-55" tabindex="-1"></a>), <span class="at">dependencies =</span> <span class="cn">TRUE</span>)</span>
-<span id="cb17-56"><a href="config-files.html#cb17-56" tabindex="-1"></a></span>
-<span id="cb17-57"><a href="config-files.html#cb17-57" tabindex="-1"></a><span class="do">## CRAN packages</span></span>
-<span id="cb17-58"><a href="config-files.html#cb17-58" tabindex="-1"></a>remotes<span class="sc">::</span><span class="fu">install_cran</span>(<span class="fu">c</span>(</span>
-<span id="cb17-59"><a href="config-files.html#cb17-59" tabindex="-1"></a>    <span class="st">&quot;ari&quot;</span>,</span>
-<span id="cb17-60"><a href="config-files.html#cb17-60" tabindex="-1"></a>    <span class="st">&quot;available&quot;</span>,</span>
-<span id="cb17-61"><a href="config-files.html#cb17-61" tabindex="-1"></a>    <span class="st">&quot;bookdown&quot;</span>,</span>
-<span id="cb17-62"><a href="config-files.html#cb17-62" tabindex="-1"></a>    <span class="st">&quot;blogdown&quot;</span>,</span>
-<span id="cb17-63"><a href="config-files.html#cb17-63" tabindex="-1"></a>    <span class="st">&quot;clue&quot;</span>,</span>
-<span id="cb17-64"><a href="config-files.html#cb17-64" tabindex="-1"></a>    <span class="st">&quot;corrplot&quot;</span>,</span>
-<span id="cb17-65"><a href="config-files.html#cb17-65" tabindex="-1"></a>    <span class="st">&quot;getopt&quot;</span>,</span>
-<span id="cb17-66"><a href="config-files.html#cb17-66" tabindex="-1"></a>    <span class="st">&quot;ggpubr&quot;</span>,</span>
-<span id="cb17-67"><a href="config-files.html#cb17-67" tabindex="-1"></a>    <span class="st">&quot;ggrepel&quot;</span>,</span>
-<span id="cb17-68"><a href="config-files.html#cb17-68" tabindex="-1"></a>    <span class="st">&quot;ggthemes&quot;</span>,</span>
-<span id="cb17-69"><a href="config-files.html#cb17-69" tabindex="-1"></a>    <span class="st">&quot;googlesheets4&quot;</span>,</span>
-<span id="cb17-70"><a href="config-files.html#cb17-70" tabindex="-1"></a>    <span class="st">&quot;MatrixEQTL&quot;</span>,</span>
-<span id="cb17-71"><a href="config-files.html#cb17-71" tabindex="-1"></a>    <span class="st">&quot;pagedown&quot;</span>,</span>
-<span id="cb17-72"><a href="config-files.html#cb17-72" tabindex="-1"></a>    <span class="st">&quot;patchwork&quot;</span>,</span>
-<span id="cb17-73"><a href="config-files.html#cb17-73" tabindex="-1"></a>    <span class="st">&quot;Polychrome&quot;</span>,</span>
-<span id="cb17-74"><a href="config-files.html#cb17-74" tabindex="-1"></a>    <span class="st">&quot;postcards&quot;</span>,</span>
-<span id="cb17-75"><a href="config-files.html#cb17-75" tabindex="-1"></a>    <span class="st">&quot;reprex&quot;</span>,</span>
-<span id="cb17-76"><a href="config-files.html#cb17-76" tabindex="-1"></a>    <span class="st">&quot;rsconnect&quot;</span>,</span>
-<span id="cb17-77"><a href="config-files.html#cb17-77" tabindex="-1"></a>    <span class="st">&quot;rtweet&quot;</span>,</span>
-<span id="cb17-78"><a href="config-files.html#cb17-78" tabindex="-1"></a>    <span class="st">&quot;tidyverse&quot;</span>,</span>
-<span id="cb17-79"><a href="config-files.html#cb17-79" tabindex="-1"></a>    <span class="st">&quot;xaringan&quot;</span>,</span>
-<span id="cb17-80"><a href="config-files.html#cb17-80" tabindex="-1"></a>    <span class="st">&quot;xaringanthemer&quot;</span>,</span>
-<span id="cb17-81"><a href="config-files.html#cb17-81" tabindex="-1"></a>    <span class="st">&quot;UpSetR&quot;</span>,</span>
-<span id="cb17-82"><a href="config-files.html#cb17-82" tabindex="-1"></a>    <span class="st">&quot;VennDiagram&quot;</span></span>
-<span id="cb17-83"><a href="config-files.html#cb17-83" tabindex="-1"></a>))</span>
-<span id="cb17-84"><a href="config-files.html#cb17-84" tabindex="-1"></a></span>
-<span id="cb17-85"><a href="config-files.html#cb17-85" tabindex="-1"></a><span class="do">## Bioc packages</span></span>
-<span id="cb17-86"><a href="config-files.html#cb17-86" tabindex="-1"></a>BiocManager<span class="sc">::</span><span class="fu">install</span>(<span class="fu">c</span>(</span>
-<span id="cb17-87"><a href="config-files.html#cb17-87" tabindex="-1"></a>    <span class="st">&quot;BayesSpace&quot;</span>,</span>
-<span id="cb17-88"><a href="config-files.html#cb17-88" tabindex="-1"></a>    <span class="st">&quot;BiocCheck&quot;</span>,</span>
-<span id="cb17-89"><a href="config-files.html#cb17-89" tabindex="-1"></a>    <span class="st">&quot;ComplexHeatmap&quot;</span>,</span>
-<span id="cb17-90"><a href="config-files.html#cb17-90" tabindex="-1"></a>    <span class="st">&quot;DO.db&quot;</span>,</span>
-<span id="cb17-91"><a href="config-files.html#cb17-91" tabindex="-1"></a>    <span class="st">&quot;EnhancedVolcano&quot;</span>,</span>
-<span id="cb17-92"><a href="config-files.html#cb17-92" tabindex="-1"></a>    <span class="st">&quot;ExploreModelMatrix&quot;</span>,</span>
-<span id="cb17-93"><a href="config-files.html#cb17-93" tabindex="-1"></a>    <span class="st">&quot;HubPub&quot;</span>,</span>
-<span id="cb17-94"><a href="config-files.html#cb17-94" tabindex="-1"></a>    <span class="st">&quot;iSEE&quot;</span>,</span>
-<span id="cb17-95"><a href="config-files.html#cb17-95" tabindex="-1"></a>    <span class="st">&quot;scater&quot;</span>,</span>
-<span id="cb17-96"><a href="config-files.html#cb17-96" tabindex="-1"></a>    <span class="st">&quot;scran&quot;</span>,</span>
-<span id="cb17-97"><a href="config-files.html#cb17-97" tabindex="-1"></a>    <span class="st">&quot;sva&quot;</span>,</span>
-<span id="cb17-98"><a href="config-files.html#cb17-98" tabindex="-1"></a>    <span class="st">&quot;variancePartition&quot;</span></span>
-<span id="cb17-99"><a href="config-files.html#cb17-99" tabindex="-1"></a>), <span class="at">update =</span> <span class="cn">FALSE</span>)</span>
-<span id="cb17-100"><a href="config-files.html#cb17-100" tabindex="-1"></a></span>
-<span id="cb17-101"><a href="config-files.html#cb17-101" tabindex="-1"></a><span class="do">## GitHub packages</span></span>
-<span id="cb17-102"><a href="config-files.html#cb17-102" tabindex="-1"></a>remotes<span class="sc">::</span><span class="fu">install_github</span>(<span class="fu">c</span>(</span>
-<span id="cb17-103"><a href="config-files.html#cb17-103" tabindex="-1"></a>    <span class="st">&quot;clauswilke/colorblindr&quot;</span>,</span>
-<span id="cb17-104"><a href="config-files.html#cb17-104" tabindex="-1"></a>    <span class="st">&quot;DiseaseNeurogenomics/dreamlet&quot;</span>,</span>
-<span id="cb17-105"><a href="config-files.html#cb17-105" tabindex="-1"></a>    <span class="do">## Install from GitHub due to https://github.com/immunogenomics/harmony/issues/145</span></span>
-<span id="cb17-106"><a href="config-files.html#cb17-106" tabindex="-1"></a>    <span class="st">&quot;immunogenomics/harmony&quot;</span>, </span>
-<span id="cb17-107"><a href="config-files.html#cb17-107" tabindex="-1"></a>    <span class="st">&quot;satijalab/azimuth&quot;</span></span>
-<span id="cb17-108"><a href="config-files.html#cb17-108" tabindex="-1"></a>))</span>
-<span id="cb17-109"><a href="config-files.html#cb17-109" tabindex="-1"></a></span>
-<span id="cb17-110"><a href="config-files.html#cb17-110" tabindex="-1"></a><span class="do">## Related to https://github.com/gusevlab/fusion_twas/issues/14</span></span>
-<span id="cb17-111"><a href="config-files.html#cb17-111" tabindex="-1"></a>remotes<span class="sc">::</span><span class="fu">install_github</span>(</span>
-<span id="cb17-112"><a href="config-files.html#cb17-112" tabindex="-1"></a>    <span class="st">&quot;carbocation/plink2R/plink2R&quot;</span>,</span>
-<span id="cb17-113"><a href="config-files.html#cb17-113" tabindex="-1"></a>    <span class="at">ref =</span> <span class="st">&quot;carbocation-permit-r361&quot;</span></span>
-<span id="cb17-114"><a href="config-files.html#cb17-114" tabindex="-1"></a>)</span>
-<span id="cb17-115"><a href="config-files.html#cb17-115" tabindex="-1"></a></span>
-<span id="cb17-116"><a href="config-files.html#cb17-116" tabindex="-1"></a><span class="do">## Packages I only install at JHPCE</span></span>
-<span id="cb17-117"><a href="config-files.html#cb17-117" tabindex="-1"></a>remotes<span class="sc">::</span><span class="fu">install_github</span>(<span class="fu">c</span>(</span>
-<span id="cb17-118"><a href="config-files.html#cb17-118" tabindex="-1"></a>    <span class="st">&quot;muschellij2/clusterRundown&quot;</span></span>
-<span id="cb17-119"><a href="config-files.html#cb17-119" tabindex="-1"></a>))</span></code></pre></div>
+<span id="cb17-44"><a href="config-files.html#cb17-44" tabindex="-1"></a>    <span class="st">&quot;smokingMouse&quot;</span>,</span>
+<span id="cb17-45"><a href="config-files.html#cb17-45" tabindex="-1"></a>    <span class="st">&quot;spatialLIBD&quot;</span>,</span>
+<span id="cb17-46"><a href="config-files.html#cb17-46" tabindex="-1"></a>    <span class="st">&quot;TREG&quot;</span></span>
+<span id="cb17-47"><a href="config-files.html#cb17-47" tabindex="-1"></a>), <span class="at">dependencies =</span> <span class="cn">TRUE</span>, <span class="at">update =</span> <span class="cn">FALSE</span>)</span>
+<span id="cb17-48"><a href="config-files.html#cb17-48" tabindex="-1"></a></span>
+<span id="cb17-49"><a href="config-files.html#cb17-49" tabindex="-1"></a><span class="do">## LIBD packages</span></span>
+<span id="cb17-50"><a href="config-files.html#cb17-50" tabindex="-1"></a>remotes<span class="sc">::</span><span class="fu">install_github</span>(<span class="fu">c</span>(</span>
+<span id="cb17-51"><a href="config-files.html#cb17-51" tabindex="-1"></a>    <span class="st">&quot;LieberInstitute/DeconvoBuddies&quot;</span>,</span>
+<span id="cb17-52"><a href="config-files.html#cb17-52" tabindex="-1"></a>    <span class="st">&quot;LieberInstitute/jaffelab&quot;</span>,</span>
+<span id="cb17-53"><a href="config-files.html#cb17-53" tabindex="-1"></a>    <span class="co"># &quot;LieberInstitute/recount.bwtool&quot;, ## Not really used anymore</span></span>
+<span id="cb17-54"><a href="config-files.html#cb17-54" tabindex="-1"></a>    <span class="co"># &quot;LieberInstitute/sgejobs&quot;, ## replaced by slurmjobs</span></span>
+<span id="cb17-55"><a href="config-files.html#cb17-55" tabindex="-1"></a>    <span class="st">&quot;LieberInstitute/slurmjobs&quot;</span>,</span>
+<span id="cb17-56"><a href="config-files.html#cb17-56" tabindex="-1"></a>    <span class="st">&quot;LieberInstitute/shinycsv&quot;</span></span>
+<span id="cb17-57"><a href="config-files.html#cb17-57" tabindex="-1"></a>), <span class="at">dependencies =</span> <span class="cn">TRUE</span>)</span>
+<span id="cb17-58"><a href="config-files.html#cb17-58" tabindex="-1"></a></span>
+<span id="cb17-59"><a href="config-files.html#cb17-59" tabindex="-1"></a><span class="do">## CRAN packages</span></span>
+<span id="cb17-60"><a href="config-files.html#cb17-60" tabindex="-1"></a>remotes<span class="sc">::</span><span class="fu">install_cran</span>(<span class="fu">c</span>(</span>
+<span id="cb17-61"><a href="config-files.html#cb17-61" tabindex="-1"></a>    <span class="st">&quot;ari&quot;</span>,</span>
+<span id="cb17-62"><a href="config-files.html#cb17-62" tabindex="-1"></a>    <span class="st">&quot;available&quot;</span>,</span>
+<span id="cb17-63"><a href="config-files.html#cb17-63" tabindex="-1"></a>    <span class="st">&quot;bookdown&quot;</span>,</span>
+<span id="cb17-64"><a href="config-files.html#cb17-64" tabindex="-1"></a>    <span class="st">&quot;blogdown&quot;</span>,</span>
+<span id="cb17-65"><a href="config-files.html#cb17-65" tabindex="-1"></a>    <span class="st">&quot;clue&quot;</span>,</span>
+<span id="cb17-66"><a href="config-files.html#cb17-66" tabindex="-1"></a>    <span class="st">&quot;corrplot&quot;</span>,</span>
+<span id="cb17-67"><a href="config-files.html#cb17-67" tabindex="-1"></a>    <span class="st">&quot;emojifont&quot;</span>,</span>
+<span id="cb17-68"><a href="config-files.html#cb17-68" tabindex="-1"></a>    <span class="st">&quot;gapminder&quot;</span>,</span>
+<span id="cb17-69"><a href="config-files.html#cb17-69" tabindex="-1"></a>    <span class="st">&quot;getopt&quot;</span>,</span>
+<span id="cb17-70"><a href="config-files.html#cb17-70" tabindex="-1"></a>    <span class="st">&quot;ggpubr&quot;</span>,</span>
+<span id="cb17-71"><a href="config-files.html#cb17-71" tabindex="-1"></a>    <span class="st">&quot;ggrepel&quot;</span>,</span>
+<span id="cb17-72"><a href="config-files.html#cb17-72" tabindex="-1"></a>    <span class="st">&quot;ggthemes&quot;</span>,</span>
+<span id="cb17-73"><a href="config-files.html#cb17-73" tabindex="-1"></a>    <span class="st">&quot;googlesheets4&quot;</span>,</span>
+<span id="cb17-74"><a href="config-files.html#cb17-74" tabindex="-1"></a>    <span class="st">&quot;MatrixEQTL&quot;</span>,</span>
+<span id="cb17-75"><a href="config-files.html#cb17-75" tabindex="-1"></a>    <span class="st">&quot;pagedown&quot;</span>,</span>
+<span id="cb17-76"><a href="config-files.html#cb17-76" tabindex="-1"></a>    <span class="st">&quot;palmerpenguins&quot;</span>,</span>
+<span id="cb17-77"><a href="config-files.html#cb17-77" tabindex="-1"></a>    <span class="st">&quot;patchwork&quot;</span>,</span>
+<span id="cb17-78"><a href="config-files.html#cb17-78" tabindex="-1"></a>    <span class="st">&quot;Polychrome&quot;</span>,</span>
+<span id="cb17-79"><a href="config-files.html#cb17-79" tabindex="-1"></a>    <span class="st">&quot;postcards&quot;</span>,</span>
+<span id="cb17-80"><a href="config-files.html#cb17-80" tabindex="-1"></a>    <span class="st">&quot;reprex&quot;</span>,</span>
+<span id="cb17-81"><a href="config-files.html#cb17-81" tabindex="-1"></a>    <span class="st">&quot;rsconnect&quot;</span>,</span>
+<span id="cb17-82"><a href="config-files.html#cb17-82" tabindex="-1"></a>    <span class="st">&quot;rtweet&quot;</span>,</span>
+<span id="cb17-83"><a href="config-files.html#cb17-83" tabindex="-1"></a>    <span class="st">&quot;tidyverse&quot;</span>,</span>
+<span id="cb17-84"><a href="config-files.html#cb17-84" tabindex="-1"></a>    <span class="st">&quot;tidytuesdayR&quot;</span>,</span>
+<span id="cb17-85"><a href="config-files.html#cb17-85" tabindex="-1"></a>    <span class="st">&quot;xaringan&quot;</span>,</span>
+<span id="cb17-86"><a href="config-files.html#cb17-86" tabindex="-1"></a>    <span class="st">&quot;xaringanthemer&quot;</span>,</span>
+<span id="cb17-87"><a href="config-files.html#cb17-87" tabindex="-1"></a>    <span class="st">&quot;UpSetR&quot;</span>,</span>
+<span id="cb17-88"><a href="config-files.html#cb17-88" tabindex="-1"></a>    <span class="st">&quot;VennDiagram&quot;</span>,</span>
+<span id="cb17-89"><a href="config-files.html#cb17-89" tabindex="-1"></a>    <span class="st">&quot;wordcloud&quot;</span></span>
+<span id="cb17-90"><a href="config-files.html#cb17-90" tabindex="-1"></a>))</span>
+<span id="cb17-91"><a href="config-files.html#cb17-91" tabindex="-1"></a></span>
+<span id="cb17-92"><a href="config-files.html#cb17-92" tabindex="-1"></a><span class="do">## Bioc packages</span></span>
+<span id="cb17-93"><a href="config-files.html#cb17-93" tabindex="-1"></a>BiocManager<span class="sc">::</span><span class="fu">install</span>(<span class="fu">c</span>(</span>
+<span id="cb17-94"><a href="config-files.html#cb17-94" tabindex="-1"></a>    <span class="st">&quot;BayesSpace&quot;</span>,</span>
+<span id="cb17-95"><a href="config-files.html#cb17-95" tabindex="-1"></a>    <span class="st">&quot;BiocCheck&quot;</span>,</span>
+<span id="cb17-96"><a href="config-files.html#cb17-96" tabindex="-1"></a>    <span class="st">&quot;ComplexHeatmap&quot;</span>,</span>
+<span id="cb17-97"><a href="config-files.html#cb17-97" tabindex="-1"></a>    <span class="st">&quot;dreamlet&quot;</span>,</span>
+<span id="cb17-98"><a href="config-files.html#cb17-98" tabindex="-1"></a>    <span class="st">&quot;DO.db&quot;</span>,</span>
+<span id="cb17-99"><a href="config-files.html#cb17-99" tabindex="-1"></a>    <span class="st">&quot;EnhancedVolcano&quot;</span>,</span>
+<span id="cb17-100"><a href="config-files.html#cb17-100" tabindex="-1"></a>    <span class="st">&quot;ExploreModelMatrix&quot;</span>,</span>
+<span id="cb17-101"><a href="config-files.html#cb17-101" tabindex="-1"></a>    <span class="st">&quot;HubPub&quot;</span>,</span>
+<span id="cb17-102"><a href="config-files.html#cb17-102" tabindex="-1"></a>    <span class="st">&quot;iSEE&quot;</span>,</span>
+<span id="cb17-103"><a href="config-files.html#cb17-103" tabindex="-1"></a>    <span class="st">&quot;PCAtools&quot;</span>,</span>
+<span id="cb17-104"><a href="config-files.html#cb17-104" tabindex="-1"></a>    <span class="st">&quot;scater&quot;</span>,</span>
+<span id="cb17-105"><a href="config-files.html#cb17-105" tabindex="-1"></a>    <span class="st">&quot;scran&quot;</span>,</span>
+<span id="cb17-106"><a href="config-files.html#cb17-106" tabindex="-1"></a>    <span class="st">&quot;scry&quot;</span>,</span>
+<span id="cb17-107"><a href="config-files.html#cb17-107" tabindex="-1"></a>    <span class="st">&quot;sva&quot;</span>,</span>
+<span id="cb17-108"><a href="config-files.html#cb17-108" tabindex="-1"></a>    <span class="st">&quot;variancePartition&quot;</span></span>
+<span id="cb17-109"><a href="config-files.html#cb17-109" tabindex="-1"></a>), <span class="at">update =</span> <span class="cn">FALSE</span>)</span>
+<span id="cb17-110"><a href="config-files.html#cb17-110" tabindex="-1"></a></span>
+<span id="cb17-111"><a href="config-files.html#cb17-111" tabindex="-1"></a><span class="do">## GitHub packages</span></span>
+<span id="cb17-112"><a href="config-files.html#cb17-112" tabindex="-1"></a>remotes<span class="sc">::</span><span class="fu">install_github</span>(<span class="fu">c</span>(</span>
+<span id="cb17-113"><a href="config-files.html#cb17-113" tabindex="-1"></a>    <span class="st">&quot;clauswilke/colorblindr&quot;</span>,</span>
+<span id="cb17-114"><a href="config-files.html#cb17-114" tabindex="-1"></a>    <span class="st">&quot;MatthewBJane/ThemePark&quot;</span>,</span>
+<span id="cb17-115"><a href="config-files.html#cb17-115" tabindex="-1"></a>    <span class="do">## Install from GitHub due to https://github.com/immunogenomics/harmony/issues/145</span></span>
+<span id="cb17-116"><a href="config-files.html#cb17-116" tabindex="-1"></a>    <span class="st">&quot;immunogenomics/harmony&quot;</span>, </span>
+<span id="cb17-117"><a href="config-files.html#cb17-117" tabindex="-1"></a>    <span class="st">&quot;satijalab/azimuth&quot;</span></span>
+<span id="cb17-118"><a href="config-files.html#cb17-118" tabindex="-1"></a>))</span>
+<span id="cb17-119"><a href="config-files.html#cb17-119" tabindex="-1"></a></span>
+<span id="cb17-120"><a href="config-files.html#cb17-120" tabindex="-1"></a><span class="do">## Related to https://github.com/gusevlab/fusion_twas/issues/14</span></span>
+<span id="cb17-121"><a href="config-files.html#cb17-121" tabindex="-1"></a>remotes<span class="sc">::</span><span class="fu">install_github</span>(</span>
+<span id="cb17-122"><a href="config-files.html#cb17-122" tabindex="-1"></a>    <span class="st">&quot;carbocation/plink2R/plink2R&quot;</span>,</span>
+<span id="cb17-123"><a href="config-files.html#cb17-123" tabindex="-1"></a>    <span class="at">ref =</span> <span class="st">&quot;carbocation-permit-r361&quot;</span></span>
+<span id="cb17-124"><a href="config-files.html#cb17-124" tabindex="-1"></a>)</span>
+<span id="cb17-125"><a href="config-files.html#cb17-125" tabindex="-1"></a></span>
+<span id="cb17-126"><a href="config-files.html#cb17-126" tabindex="-1"></a><span class="do">## Packages I only install at JHPCE</span></span>
+<span id="cb17-127"><a href="config-files.html#cb17-127" tabindex="-1"></a>remotes<span class="sc">::</span><span class="fu">install_github</span>(<span class="fu">c</span>(</span>
+<span id="cb17-128"><a href="config-files.html#cb17-128" tabindex="-1"></a>    <span class="st">&quot;muschellij2/clusterRundown&quot;</span></span>
+<span id="cb17-129"><a href="config-files.html#cb17-129" tabindex="-1"></a>))</span></code></pre></div>
 <div id="previously-installed" class="section level4 hasAnchor" number="17.1.1.1">
 <h4><span class="header-section-number">17.1.1.1</span> Previously installed<a href="config-files.html#previously-installed" class="anchor-section" aria-label="Anchor link to header"></a></h4>
 <p>As I described in <a href="http://lcolladotor.github.io/2017/05/04/updating-r/#.X6ICiIhKguU">my blog post on updating R</a>, I also like to saved my list of currently installed packages.</p>
