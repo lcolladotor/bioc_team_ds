@@ -18,6 +18,9 @@ Here are some of my configuration files for working R and JHPCE.
 
 So in macOS I use:
 
+* From https://mac.r-project.org/tools/, install `Xcode` developer tools + `GNU Fortran compiler`.
+* From https://mac.r-project.org/bin/, install all binaries with the following commands:
+
 ```{r "macos_bin", eval = FALSE}
 ## From https://mac.r-project.org/bin/
 # sudo R
@@ -25,7 +28,7 @@ source("https://mac.R-project.org/bin/install.R")
 install.libs("all")
 ```
 
-and on winOS I install Rtools (latest version) from https://cran.r-project.org/bin/windows/Rtools/.
+On winOS I install Rtools (latest version) from https://cran.r-project.org/bin/windows/Rtools/.
 
 
 Additional software:
@@ -84,6 +87,7 @@ BiocManager::install(c(
     "recount3",
     "regutools",
     "regionReport",
+    "smokingMouse",
     "spatialLIBD",
     "TREG"
 ), dependencies = TRUE, update = FALSE)
@@ -93,7 +97,8 @@ remotes::install_github(c(
     "LieberInstitute/DeconvoBuddies",
     "LieberInstitute/jaffelab",
     # "LieberInstitute/recount.bwtool", ## Not really used anymore
-    "LieberInstitute/sgejobs",
+    # "LieberInstitute/sgejobs", ## replaced by slurmjobs
+    "LieberInstitute/slurmjobs",
     "LieberInstitute/shinycsv"
 ), dependencies = TRUE)
 
@@ -105,6 +110,8 @@ remotes::install_cran(c(
     "blogdown",
     "clue",
     "corrplot",
+    "emojifont",
+    "gapminder",
     "getopt",
     "ggpubr",
     "ggrepel",
@@ -112,6 +119,7 @@ remotes::install_cran(c(
     "googlesheets4",
     "MatrixEQTL",
     "pagedown",
+    "palmerpenguins",
     "patchwork",
     "Polychrome",
     "postcards",
@@ -119,10 +127,12 @@ remotes::install_cran(c(
     "rsconnect",
     "rtweet",
     "tidyverse",
+    "tidytuesdayR",
     "xaringan",
     "xaringanthemer",
     "UpSetR",
-    "VennDiagram"
+    "VennDiagram",
+    "wordcloud"
 ))
 
 ## Bioc packages
@@ -130,13 +140,16 @@ BiocManager::install(c(
     "BayesSpace",
     "BiocCheck",
     "ComplexHeatmap",
+    "dreamlet",
     "DO.db",
     "EnhancedVolcano",
     "ExploreModelMatrix",
     "HubPub",
     "iSEE",
+    "PCAtools",
     "scater",
     "scran",
+    "scry",
     "sva",
     "variancePartition"
 ), update = FALSE)
@@ -144,7 +157,7 @@ BiocManager::install(c(
 ## GitHub packages
 remotes::install_github(c(
     "clauswilke/colorblindr",
-    "DiseaseNeurogenomics/dreamlet",
+    "MatthewBJane/ThemePark",
     ## Install from GitHub due to https://github.com/immunogenomics/harmony/issues/145
     "immunogenomics/harmony", 
     "satijalab/azimuth"
