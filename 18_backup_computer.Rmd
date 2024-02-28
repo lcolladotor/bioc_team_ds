@@ -246,13 +246,13 @@ rsync -av RStudio/config/rstudio ~/.config/
 sh restore_brewfile.sh
 ```
 
-You have to have previously re-installed `TextMate`, `Cyberduck`, `RStudio`, and `Homebrew` manually before running `restore_files.sh`. Of course, you also have to have downloaded your files from your cloud storage service first too.
+You have to have previously re-installed `TextMate`, `Cyberduck`, `RStudio`, and `Homebrew` manually before running `restore_files.sh`. Of course, you also have to have downloaded your files from your cloud storage service first too ^[I have over 300,000 files on Dropbox that I want to have on my computer, so it takes quite a few hours to download everything again].
 
 #### Misc
 
 Similar to the screenshots of the contents of my `/Applications` directory, I have taken screenshots of my Slack Workspaces and Dock bar setup. Just to remember in what order I have things. I also keep around the license files for `Cyberduck`, `Hyberdock`, `Bartender`, `AlfredApp`, and other software that I have paid for before. For `iTerm2`, I have also exported my favorite _profile_ to a JSON file. For `Cyberduck`, you can also drag to a Finder window your `Cyberduck` bookmarks.
 
-Note that some software like `Zotero` and `AlfredApp` have direct options for backing up your Zotero library (via a Zotero account) or your `AlfredApp` preferences. Check if this is the case for any other software you use and for which you'd like to save the preferences you customized.
+Note that some software like `Zotero`, `AlfredApp`, and the `OneTab` Chrome extension have direct options for backing up your Zotero library (via a Zotero account), your `AlfredApp` preferences, or `OneTab` bookmarks. Check if this is the case for any other software you use and for which you'd like to save the preferences you customized.
 
 Ultimately, when you restore a computer from a cloud storage service, you will miss some things you had in your previous computer. Doing so can be intentional if you don't want to keep around software you are actually no longer using. But you have to be conscious about this choice and know well what you'll miss: otherwise you might regret losing some hard to get software or configuration files.
 
