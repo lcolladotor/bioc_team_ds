@@ -153,6 +153,16 @@ sge_request
 bashrc
 bash_profile
 inputrc
+backing-up-your-computer
+macos-1
+time-machine
+cloud
+complementing-your-cloud-backup
+applications
+homebrew-files
+linux-style-config-files
+misc
+winos-1
 how-to-contribute
 github-issues-1
 team-websites
