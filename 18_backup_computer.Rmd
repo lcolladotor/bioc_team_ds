@@ -1,2 +1,263 @@
 # Backing up your computer
 
+As most of us use macOS laptop computers, this chapter will mostly be focused on that operating system. Though contributions for other operating systems are more than welcome.
+
+For backing up your list of R packages you have installed, check the [R setup: R packages](https://lcolladotor.github.io/bioc_team_ds/config-files.html#r-packages) subsection from a previous chapter.
+
+## macOS
+
+As some of you know, I have a personal Dropbox account that I pay for myself. You don't have to use Dropbox as we have access to OneDrive through LIBD (1 TB per account). The concepts below apply for any cloud back up service.
+
+### Time Machine
+
+First of all, I highly encourage you to purchase a USB-C external hard drive with plenty of space (like around 2x your computer's disk space) and use it for [Time Machine backups](https://support.apple.com/en-us/104984). It overall works quite well, though as you increase the files in your computer it'll take longer to run (can be several hours) ^[Note that `git` will create many hidden files under the `.git` directory for a given repository, so if you have local `git clone`s of many repositories, this will greatly increase the number of files in your computer. Backing up lots of small files can take longer than backing up a single large file, depending on disk input/output limits as well as your internet bandwidth download/upload limits.].
+
+A limitation of using Time Machine is how frequently you choose to update it. You could update it as frequently as every hour, which then makes each update fairly small and thus fairly fast. If you do it daily, it might take up to an hour to run. If you do it less frequently, then it'll take up to a whole work day (8 hours) to run. You have to keep this in mind when using Time Machine, as it can be natural to avoid updating it frequently given how long it can take to run. But then if you have an update every month or every couple of months, that means that if you have some kind of failure on your computer, then you are very much not protected and will lose lots of valuable files.
+
+Time Machine is great when you know that you are about to update your machine and want to be able to transfer files to the new one. It can also be quite cost effective as nowadays external storage devices with space for 2 to 5 TB are quite affordable (less than $100 USD), specially when you compare them against the cost of a yearly cloud backup service like Dropbox across multiple years. Of course, external storage devices have their own limitations, such as disk failures as well as the fact that there is only one copy of your device (unlike in the cloud) so if you lose it everything is lost.
+
+### Cloud
+
+Given the limitations with external backup devices, I prefer to use a cloud storage service **in addition** to the external backup device. Dropbox has a [nice website explaining why you'd want to backup your macOS on the cloud](https://experience.dropbox.com/resources/mac-cloud-backup). Basically, it can backup your:
+
+* `~/Desktop`
+* `~/Documents`
+* `~/Downloads`
+
+by copying them to your `~/Dropbox` directory and then making links (aliases; soft links) on your home directory (`~/`) such that other macOS programs won't even notice that the files are actually stored under your `~/Dropbox` directory. Something similar is available from most cloud storage services.
+
+That all sounds great, but then you are going to miss other files and information you are likely interested in. Broadly speaking this would be:
+
+* Your installed software (`/Applications`)
+* Preferences / configuration files for installed software (like your `RStudio` preferences)
+* Linux-style software configuration files (`~/.ssh`, `~/.Rprofile`, etc)
+* Any Linux-style software that you installed (think about [`Homebrew`](https://brew.sh/))
+
+All of the above is actually backed by Time Machine. So that's a big plus for that option. For a cloud-based option to be fully operational, you will have to do some extra work.
+
+### Complementing your cloud backup
+
+On my `~/Dropbox` directory I have a subdirectory called `Mac-files` (aka `~/Dropbox/Mac-files`). There I have copied a few things that make it easier to restore a computer using a cloud storage service.
+
+#### Applications
+
+For my installed software (`/Applications`), I have taken screenshots of the contents of that directory and saved those screenshots on a Slack direct message to myself. Another option is to list contents of your `Applications` directory. Here's my current list.
+
+```bash
+% ls -lh /Applications
+total 0
+drwxr-xr-x  3 leocollado staff  96 Feb 13 16:24  1Password.app
+drwxrwxr-x  6 root       wheel 192 Feb 27 18:59 'Adobe Acrobat DC'
+drwxrwxr-x  5 root       admin 160 Feb 27 18:54 'Adobe Creative Cloud'
+drwxr-xr-x 11 root       wheel 352 Feb 27 18:57 'Adobe Illustrator 2024'
+drwxrwxr-x  5 root       admin 160 Feb 27 19:02 'Adobe Media Encoder 2024'
+drwxr-xr-x  9 root       wheel 288 Feb 27 19:04 'Adobe Photoshop 2024'
+drwxrwxr-x  5 root       admin 160 Feb 27 19:00 'Adobe Premiere Pro 2024'
+drwxrwxr-x  5 root       admin 160 Feb 27 19:02 'Adobe Premiere Rush 2.0'
+drwxr-xr-x  3 leocollado admin  96 Oct 25 05:13 'Alfred 5.app'
+drwxr-xr-x  3 leocollado admin  96 Dec 20 03:53 'Bartender 5.app'
+drwxr-xr-x  3 leocollado staff  96 Jan 11 04:45  Cyberduck.app
+drwxr-xr-x  3 leocollado admin  96 Feb 27 16:42  Dropbox.app
+drwxr-xr-x  3 leocollado admin  96 Feb 13 19:22  Firefox.app
+drwxr-xr-x  3 leocollado staff  96 Feb 27 17:45  Flux.app
+drwxr-xr-x  3 leocollado admin  96 Feb 26 18:13 'Google Chrome.app'
+drwxr-xr-x  3 root       wheel  96 Feb 27 19:46 'Google Docs.app'
+drwxrwxr-x  3 root       wheel  96 Feb 27 19:46 'Google Drive.app'
+drwxr-xr-x  3 root       wheel  96 Feb 27 19:46 'Google Sheets.app'
+drwxr-xr-x  3 root       wheel  96 Feb 27 19:46 'Google Slides.app'
+drwxr-xr-x  3 root       wheel  96 Feb 27 19:38 'Ivanti Secure Access.app'
+drwxr-xr-x  3 root       admin  96 Dec 26 13:42  LogiTune.app
+drwxr-xr-x  3 leocollado admin  96 Oct  9 15:26 'Loupe Browser 7.app'
+drwxr-xr-x  3 root       wheel  96 Feb  5 14:07 'Microsoft Defender.app'
+drwxrwxr-x  3 root       wheel  96 Feb 27 14:00 'Microsoft Excel.app'
+drwxrwxr-x  3 root       wheel  96 Feb 27 14:00 'Microsoft OneNote.app'
+drwxrwxr-x  3 root       wheel  96 Feb 27 14:03 'Microsoft Outlook.app'
+drwxrwxr-x  3 root       wheel  96 Feb 27 14:00 'Microsoft PowerPoint.app'
+drwxr-xr-x  3 root       wheel  96 Feb 27 14:00 'Microsoft Teams classic.app'
+drwxrwxr-x  3 root       wheel  96 Feb 27 14:00 'Microsoft Word.app'
+drwxr-xr-x  3 root       wheel  96 Feb 27 14:00  OneDrive.app
+drwxr-xr-x  3 root       wheel  96 Feb 27 17:12  R.app
+drwxr-xr-x  3 leocollado admin  96 Jan 29 16:57  RStudio.app
+drwxr-xr-x  3 leocollado staff  96 May 25  2020  RSwitch.app
+lrwxr-xr-x  1 root       wheel  54 Feb  2 12:19  Safari.app -> ../System/Cryptexes/App/System/Applications/Safari.app
+drwxr-xr-x  3 leocollado admin  96 Jan 24 17:20  Slack.app
+drwxr-xr-x  3 leocollado staff  96 Feb 15  2021  TextMate.app
+drwxr-xr-x  8 root       wheel 256 Feb 27 18:55  Utilities
+drwxr-xr-x  3 root       wheel  96 Feb 27 14:03 'VIPRE Endpoint Security.app'
+drwxr-xr-x  3 leocollado admin  96 Nov  1 09:48  VLC.app
+drwxr-xr-x  3 root       admin  96 Feb 27 14:07 'WatchGuard Mobile VPN.app'
+drwxr-xr-x  3 leocollado admin  96 Feb 24 14:01  Zotero.app
+drwxr-xr-x  3 root       wheel  96 Dec 31  1969  connectwisecontrol-75da79a526aab2dd.app
+drwxr-xr-x  3 leocollado staff  96 Jan  3 17:31 'iStat Menus.app'
+drwxr-xr-x  3 leocollado staff  96 Dec 18 17:23  iTerm.app
+drwxr-xr-x  4 root       wheel 128 Feb 27 19:43  quarto
+drwxr-xr-x  3 root       wheel  96 Feb 27 15:12  zoom.us.app
+```
+
+Having this information (as a text file or as screenshots) is like having a _recipe_ that you can then remember what are all the things you need to install. However, not all software can be re-installed so easily. 
+
+I have a few applications that I manually backed up by copying them from `/Applications` to `~/Dropbox/Mac-files`. This won't always work for all software, but it can in some cases.
+
+
+#### Homebrew files
+
+At `~/Dropbox/Mac-files` I created a subdirectory called `Root` (aka `~/Dropbox/Mac-files/Root`). There I have four shell scripts, the first one being `update_brewfile.sh` as shown below.
+
+```bash
+#!/bin/bash
+
+# https://tomlankhorst.nl/brew-bundle-restore-backup/
+brew bundle dump
+```
+
+This is only applicable if you use [`Homebrew`](https://brew.sh/) to install software on your computer. When you run it, it will create a file called `Brewfile` that contains the information you would need to have to re-install software managed by `Homebrew`. In my case, my `Brewfile` contains this:
+
+```
+tap "homebrew/bundle"
+tap "homebrew/cask"
+tap "homebrew/core"
+brew "coreutils"
+brew "git"
+brew "git-lfs"
+brew "go"
+brew "hugo"
+brew "libidn2"
+brew "pandoc"
+brew "wget"
+```
+
+To restore your `Homebrew`-managed software, I have second shell script called `restore_homebrew.sh`.
+
+```bash
+#!/bin/bash
+
+## Install homebrew from
+## https://brew.sh/
+
+## Restore homebrew config
+## details: https://tomlankhorst.nl/brew-bundle-restore-backup/
+brew bundle
+```
+
+It works pretty well, though note that I try not to install software with `Homebrew` in general, particularly when it comes to R and being able to compile packages. Check the [R Setup](https://lcolladotor.github.io/bioc_team_ds/config-files.html#r-setup) section for more details on how to install all the binaries you need for compiling R packages.
+
+#### Linux-style config files
+
+At `~/Dropbox/Mac-files/Root` I have a third shell script, this one is called `update_files.sh`. In it, I basically keep track of what Linux-style configuration files I want to back up. I also use it to backup my `RStudio` preferences, `TextMate` bundles, and some other things (Music library, some `Cyberduck` files).
+
+```bash
+#!/bin/bash
+
+# sh update_files.sh
+
+## Created this file on 2020-01-14 in response to
+## https://help.dropbox.com/installs-integrations/sync-uploads/symlinks
+## and
+## ~/Dropbox/Dropbox\ reports/Symlink\ report\ -\ Items\ that\ will\ stop\ syncing.csv
+
+## More options:
+## https://news.ycombinator.com/item?id=20844363
+
+rsync -av ~/.Rhistory .
+rsync -av ~/.Renviron .
+rsync -av ~/.R .
+rsync -av ~/.gists .
+rsync -av ~/.Rprofile .
+rsync -av ~/.gitignore_global .
+rsync -av ~/.ssh .
+rsync -av ~/.Rapp.history .
+rsync -av ~/.rstudio-desktop .
+rsync -av ~/.zshrc .
+rsync -av ~/.zsh_history .
+rsync -av ~/.zprofile .
+rsync -av ~/.gitconfig .
+rsync -av ~/.rtweet_token.rds .
+
+## Older Mac config files: I no longer use these files but maybe you do
+#rsync -av ~/.bashrc .
+#rsync -av ~/.bash_profile .
+#rsync -av ~/.inputrc .
+#rsync -av ~/.bash_history .
+
+rsync -av ~/Music/iTunes/itunes\ library.itl Music/iTunes/
+rsync -av ~/Music/iTunes/itunes\ music\ library.xml Music/iTunes/
+
+mkdir -p Cyberduck
+rsync -av ~/Library/Preferences/ch.sudo.cyberduck.plist Cyberduck/
+
+mkdir -p TextMate
+rsync -av ~/Library/Application\ Support/TextMate/Bundles TextMate/
+
+## https://support.rstudio.com/hc/en-us/articles/200534577-Resetting-RStudio-Desktop-s-State
+mkdir -p RStudio/share
+rsync -av ~/.local/share/rstudio RStudio/share/
+mkdir -p RStudio/config
+rsync -av ~/.config/rstudio RStudio/config/
+
+
+rm Brewfile
+sh update_brewfile.sh
+```
+
+Note that it removes the `Brewfile` and re-runs `update_brewfile.sh` at the end. If you are not using [`Homebrew`](https://brew.sh/), feel free to remove those lines from the script.
+
+A lot of work goes into creating several of these Linux-style configuration files such as your `~/.Rprofile` file for configuring your R sessions ^[See the [R config files](https://lcolladotor.github.io/bioc_team_ds/config-files.html#r-config-files) section for more details.], or your connections to other computers and clusters (saved in your `~/.ssh` directory). To save myself the pain of having to recreate these files, I make sure to save them.
+
+To restore files, the fourth and final shell script is `restore_files.sh`
+
+```bash
+#!/bin/bash
+
+# sh restore_files.sh
+
+## Created this file on 2024-02-27
+## see more info at update_files.sh
+
+rsync -av  .Rhistory ~/
+rsync -av  .Renviron ~/
+rsync -av  .R ~/
+rsync -av  .gists ~/
+rsync -av  .Rprofile ~/
+rsync -av  .gitignore_global ~/
+rsync -av  .ssh ~/
+## Fix ~/.ssh permissions
+chmod -R 700 ~/.ssh
+rsync -av  .Rapp.history ~/
+rsync -av  .rstudio-desktop ~/
+rsync -av  .zshrc ~/
+rsync -av  .zsh_history ~/
+rsync -av  .zprofile ~/
+rsync -av  .gitconfig ~/
+rsync -av  .rtweet_token.rds ~/
+
+## Backed up by Dropbox?
+rsync -av Music/iTunes/itunes\ library.itl ~/Music/iTunes/ 
+rsync -av Music/iTunes/itunes\ music\ library.xml ~/Music/iTunes/ 
+
+rsync -av Cyberduck/ch.sudo.cyberduck.plist ~/Library/Preferences/ch.sudo.cyberduck.plist 
+
+mkdir -p ~/Library/Application\ Support/TextMate/Bundles
+rsync -av  TextMate/Bundles ~/Library/Application\ Support/TextMate/
+
+## https://support.rstudio.com/hc/en-us/articles/200534577-Resetting-RStudio-Desktop-s-State
+rsync -av RStudio/share/rstudio ~/.local/share/
+rsync -av RStudio/config/rstudio ~/.config/
+
+sh restore_brewfile.sh
+```
+
+You have to have previously re-installed `TextMate`, `Cyberduck`, `RStudio`, and `Homebrew` manually before running `restore_files.sh`. Of course, you also have to have downloaded your files from your cloud storage service first too.
+
+#### Misc
+
+Similar to the screenshots of the contents of my `/Applications` directory, I have taken screenshots of my Slack Workspaces and Dock bar setup. Just to remember in what order I have things. I also keep around the license files for `Cyberduck`, `Hyberdock`, `Bartender`, `AlfredApp`, and other software that I have paid for before. For `iTerm2`, I have also exported my favorite _profile_ to a JSON file. For `Cyberduck`, you can also drag to a Finder window your `Cyberduck` bookmarks.
+
+Note that some software like `Zotero` and `AlfredApp` have direct options for backing up your Zotero library (via a Zotero account) or your `AlfredApp` preferences. Check if this is the case for any other software you use and for which you'd like to save the preferences you customized.
+
+Ultimately, when you restore a computer from a cloud storage service, you will miss some things you had in your previous computer. Doing so can be intentional if you don't want to keep around software you are actually no longer using. But you have to be conscious about this choice and know well what you'll miss: otherwise you might regret losing some hard to get software or configuration files.
+
+
+## winOS
+
+Unlike macOS, I don't really bother to have an external storage device backup solution for my winOS computer. That's because I have my work related information on my macOS laptop. However, Linux-style configuration files can be a bit more tricky to locate. Use functions like `usethis::edit_r_environ()` to actually locate these files. Unlike macOS, I manually have backed up (aka copy and pasted) my Linux-style configuration files that I use on my winOS machine to my cloud storage solution (aka `Dropbox/Win-files`).
+
