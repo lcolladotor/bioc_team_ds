@@ -246,7 +246,7 @@ rsync -av RStudio/config/rstudio ~/.config/
 sh restore_brewfile.sh
 ```
 
-You have to have previously re-installed `TextMate`, `Cyberduck`, `RStudio`, and `Homebrew` manually before running `restore_files.sh`. Of course, you also have to have downloaded your files from your cloud storage service first too ^[I have over 300,000 files on Dropbox that I want to have on my computer, so it takes quite a few hours to download everything again].
+You have to have previously re-installed `TextMate`, `Cyberduck`, `RStudio`, and `Homebrew` manually before running `restore_files.sh`. Of course, you also have to have downloaded your files from your cloud storage service first too ^[I have over 300,000 files on Dropbox that I want to have on my computer, so it takes quite a few hours to download everything again.].
 
 #### Misc
 
