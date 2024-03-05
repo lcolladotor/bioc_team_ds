@@ -617,7 +617,7 @@ brew &quot;wget&quot;</code></pre>
 <span id="cb34-13"><a href="backing-up-your-computer.html#cb34-13" tabindex="-1"></a><span class="fu">rsync</span> <span class="at">-av</span>  .gitignore_global ~/</span>
 <span id="cb34-14"><a href="backing-up-your-computer.html#cb34-14" tabindex="-1"></a><span class="fu">rsync</span> <span class="at">-av</span>  .ssh ~/</span>
 <span id="cb34-15"><a href="backing-up-your-computer.html#cb34-15" tabindex="-1"></a><span class="co">## Fix ~/.ssh permissions</span></span>
-<span id="cb34-16"><a href="backing-up-your-computer.html#cb34-16" tabindex="-1"></a><span class="fu">chmod</span> <span class="at">-R</span> 700 ~/.ssh</span>
+<span id="cb34-16"><a href="backing-up-your-computer.html#cb34-16" tabindex="-1"></a><span class="fu">chmod</span> <span class="at">-R</span> 600 ~/.ssh</span>
 <span id="cb34-17"><a href="backing-up-your-computer.html#cb34-17" tabindex="-1"></a><span class="fu">rsync</span> <span class="at">-av</span>  .Rapp.history ~/</span>
 <span id="cb34-18"><a href="backing-up-your-computer.html#cb34-18" tabindex="-1"></a><span class="fu">rsync</span> <span class="at">-av</span>  .rstudio-desktop ~/</span>
 <span id="cb34-19"><a href="backing-up-your-computer.html#cb34-19" tabindex="-1"></a><span class="fu">rsync</span> <span class="at">-av</span>  .zshrc ~/</span>
@@ -641,6 +641,29 @@ brew &quot;wget&quot;</code></pre>
 <span id="cb34-37"><a href="backing-up-your-computer.html#cb34-37" tabindex="-1"></a></span>
 <span id="cb34-38"><a href="backing-up-your-computer.html#cb34-38" tabindex="-1"></a><span class="fu">sh</span> restore_brewfile.sh</span></code></pre></div>
 <p>You have to have previously re-installed <code>TextMate</code>, <code>Cyberduck</code>, <code>RStudio</code>, and <code>Homebrew</code> manually before running <code>restore_files.sh</code>. Of course, you also have to have downloaded your files from your cloud storage service first too <a href="#fn27" class="footnote-ref" id="fnref27"><sup>27</sup></a>.</p>
+<p>As a note on <code>~/.ssh</code> permissions, they have to be restrictive both on your laptop as well as at JHPCE for things to work well. Here are mine:</p>
+<ul>
+<li>Laptop:</li>
+</ul>
+<div class="sourceCode" id="cb35"><pre class="sourceCode bash"><code class="sourceCode bash"><span id="cb35-1"><a href="backing-up-your-computer.html#cb35-1" tabindex="-1"></a><span class="ex">.ssh</span> % ls <span class="at">-lah</span></span>
+<span id="cb35-2"><a href="backing-up-your-computer.html#cb35-2" tabindex="-1"></a><span class="ex">total</span> 64K</span>
+<span id="cb35-3"><a href="backing-up-your-computer.html#cb35-3" tabindex="-1"></a><span class="ex">drwx------</span>  12 leocollado staff  384 Mar  5 09:18 .</span>
+<span id="cb35-4"><a href="backing-up-your-computer.html#cb35-4" tabindex="-1"></a><span class="ex">drwxr-x---+</span> 40 leocollado staff 1.3K Mar  5 09:58 ..</span>
+<span id="cb35-5"><a href="backing-up-your-computer.html#cb35-5" tabindex="-1"></a><span class="ex">-rw-------</span>   1 leocollado staff 1.7K Oct  3 13:20 config</span>
+<span id="cb35-6"><a href="backing-up-your-computer.html#cb35-6" tabindex="-1"></a><span class="ex">-rw-------</span>   1 leocollado staff 1.7K Dec 21  2016 id_rsa</span>
+<span id="cb35-7"><a href="backing-up-your-computer.html#cb35-7" tabindex="-1"></a><span class="ex">-rw-------</span>   1 leocollado staff  433 Dec 21  2016 id_rsa.pub</span>
+<span id="cb35-8"><a href="backing-up-your-computer.html#cb35-8" tabindex="-1"></a><span class="ex">-rw-------</span>   1 leocollado staff  13K Mar  5 09:18 known_hosts</span></code></pre></div>
+<ul>
+<li>JHPCE:</li>
+</ul>
+<div class="sourceCode" id="cb36"><pre class="sourceCode bash"><code class="sourceCode bash"><span id="cb36-1"><a href="backing-up-your-computer.html#cb36-1" tabindex="-1"></a><span class="ex">.ssh</span> $ ls <span class="at">-lah</span></span>
+<span id="cb36-2"><a href="backing-up-your-computer.html#cb36-2" tabindex="-1"></a><span class="ex">total</span> 443K</span>
+<span id="cb36-3"><a href="backing-up-your-computer.html#cb36-3" tabindex="-1"></a><span class="ex">drwx------</span>  2 lcollado biostats        8 Jun 29  2023 .</span>
+<span id="cb36-4"><a href="backing-up-your-computer.html#cb36-4" tabindex="-1"></a><span class="ex">drwx------</span> 51 lcollado biostats       87 Mar  5 09:35 ..</span>
+<span id="cb36-5"><a href="backing-up-your-computer.html#cb36-5" tabindex="-1"></a><span class="ex">-rw-------</span>  1 lcollado biostats     1.5K Dec 21  2016 authorized_keys</span>
+<span id="cb36-6"><a href="backing-up-your-computer.html#cb36-6" tabindex="-1"></a><span class="ex">-rw-r--r--</span>  1 lcollado biostats      515 Mar 18  2022 config</span>
+<span id="cb36-7"><a href="backing-up-your-computer.html#cb36-7" tabindex="-1"></a><span class="ex">-rw-------</span>  1 lcollado lieber_jaffe 453K Jun 29  2023 known_hosts</span></code></pre></div>
+<p>I removed a few files from the output above to just highlight the main files.</p>
 </div>
 <div id="misc" class="section level4 hasAnchor" number="18.1.3.4">
 <h4><span class="header-section-number">18.1.3.4</span> Misc<a href="backing-up-your-computer.html#misc" class="anchor-section" aria-label="Anchor link to header"></a></h4>
