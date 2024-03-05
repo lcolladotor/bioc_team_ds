@@ -225,7 +225,7 @@ rsync -av  .Rprofile ~/
 rsync -av  .gitignore_global ~/
 rsync -av  .ssh ~/
 ## Fix ~/.ssh permissions
-chmod -R 700 ~/.ssh
+chmod -R 600 ~/.ssh
 rsync -av  .Rapp.history ~/
 rsync -av  .rstudio-desktop ~/
 rsync -av  .zshrc ~/
@@ -251,6 +251,35 @@ sh restore_brewfile.sh
 ```
 
 You have to have previously re-installed `TextMate`, `Cyberduck`, `RStudio`, and `Homebrew` manually before running `restore_files.sh`. Of course, you also have to have downloaded your files from your cloud storage service first too ^[I have over 300,000 files on Dropbox that I want to have on my computer, so it takes quite a few hours to download everything again.].
+
+As a note on `~/.ssh` permissions, they have to be restrictive both on your laptop as well as at JHPCE for things to work well. Here are mine:
+
+* Laptop:
+
+```bash
+.ssh % ls -lah
+total 64K
+drwx------  12 leocollado staff  384 Mar  5 09:18 .
+drwxr-x---+ 40 leocollado staff 1.3K Mar  5 09:58 ..
+-rw-------   1 leocollado staff 1.7K Oct  3 13:20 config
+-rw-------   1 leocollado staff 1.7K Dec 21  2016 id_rsa
+-rw-------   1 leocollado staff  433 Dec 21  2016 id_rsa.pub
+-rw-------   1 leocollado staff  13K Mar  5 09:18 known_hosts
+```
+
+* JHPCE:
+
+```bash
+.ssh $ ls -lah
+total 443K
+drwx------  2 lcollado biostats        8 Jun 29  2023 .
+drwx------ 51 lcollado biostats       87 Mar  5 09:35 ..
+-rw-------  1 lcollado biostats     1.5K Dec 21  2016 authorized_keys
+-rw-r--r--  1 lcollado biostats      515 Mar 18  2022 config
+-rw-------  1 lcollado lieber_jaffe 453K Jun 29  2023 known_hosts
+```
+
+I removed a few files from the output above to just highlight the main files.
 
 #### Misc
 
