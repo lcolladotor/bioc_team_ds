@@ -183,9 +183,6 @@ rsync -av ~/.rtweet_token.rds .
 #rsync -av ~/.inputrc .
 #rsync -av ~/.bash_history .
 
-rsync -av ~/Music/iTunes/itunes\ library.itl Music/iTunes/
-rsync -av ~/Music/iTunes/itunes\ music\ library.xml Music/iTunes/
-
 mkdir -p Cyberduck
 rsync -av ~/Library/Preferences/ch.sudo.cyberduck.plist Cyberduck/
 
@@ -233,10 +230,6 @@ rsync -av  .zsh_history ~/
 rsync -av  .zprofile ~/
 rsync -av  .gitconfig ~/
 rsync -av  .rtweet_token.rds ~/
-
-## Backed up by Dropbox?
-rsync -av Music/iTunes/itunes\ library.itl ~/Music/iTunes/ 
-rsync -av Music/iTunes/itunes\ music\ library.xml ~/Music/iTunes/ 
 
 rsync -av Cyberduck/ch.sudo.cyberduck.plist ~/Library/Preferences/ch.sudo.cyberduck.plist 
 
