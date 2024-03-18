@@ -581,24 +581,21 @@ brew &quot;wget&quot;</code></pre>
 <span id="cb33-31"><a href="backing-up-your-computer.html#cb33-31" tabindex="-1"></a><span class="co">#rsync -av ~/.inputrc .</span></span>
 <span id="cb33-32"><a href="backing-up-your-computer.html#cb33-32" tabindex="-1"></a><span class="co">#rsync -av ~/.bash_history .</span></span>
 <span id="cb33-33"><a href="backing-up-your-computer.html#cb33-33" tabindex="-1"></a></span>
-<span id="cb33-34"><a href="backing-up-your-computer.html#cb33-34" tabindex="-1"></a><span class="fu">rsync</span> <span class="at">-av</span> ~/Music/iTunes/itunes\ library.itl Music/iTunes/</span>
-<span id="cb33-35"><a href="backing-up-your-computer.html#cb33-35" tabindex="-1"></a><span class="fu">rsync</span> <span class="at">-av</span> ~/Music/iTunes/itunes\ music\ library.xml Music/iTunes/</span>
+<span id="cb33-34"><a href="backing-up-your-computer.html#cb33-34" tabindex="-1"></a><span class="fu">mkdir</span> <span class="at">-p</span> Cyberduck</span>
+<span id="cb33-35"><a href="backing-up-your-computer.html#cb33-35" tabindex="-1"></a><span class="fu">rsync</span> <span class="at">-av</span> ~/Library/Preferences/ch.sudo.cyberduck.plist Cyberduck/</span>
 <span id="cb33-36"><a href="backing-up-your-computer.html#cb33-36" tabindex="-1"></a></span>
-<span id="cb33-37"><a href="backing-up-your-computer.html#cb33-37" tabindex="-1"></a><span class="fu">mkdir</span> <span class="at">-p</span> Cyberduck</span>
-<span id="cb33-38"><a href="backing-up-your-computer.html#cb33-38" tabindex="-1"></a><span class="fu">rsync</span> <span class="at">-av</span> ~/Library/Preferences/ch.sudo.cyberduck.plist Cyberduck/</span>
+<span id="cb33-37"><a href="backing-up-your-computer.html#cb33-37" tabindex="-1"></a><span class="fu">mkdir</span> <span class="at">-p</span> TextMate</span>
+<span id="cb33-38"><a href="backing-up-your-computer.html#cb33-38" tabindex="-1"></a><span class="fu">rsync</span> <span class="at">-av</span> ~/Library/Application\ Support/TextMate/Bundles TextMate/</span>
 <span id="cb33-39"><a href="backing-up-your-computer.html#cb33-39" tabindex="-1"></a></span>
-<span id="cb33-40"><a href="backing-up-your-computer.html#cb33-40" tabindex="-1"></a><span class="fu">mkdir</span> <span class="at">-p</span> TextMate</span>
-<span id="cb33-41"><a href="backing-up-your-computer.html#cb33-41" tabindex="-1"></a><span class="fu">rsync</span> <span class="at">-av</span> ~/Library/Application\ Support/TextMate/Bundles TextMate/</span>
-<span id="cb33-42"><a href="backing-up-your-computer.html#cb33-42" tabindex="-1"></a></span>
-<span id="cb33-43"><a href="backing-up-your-computer.html#cb33-43" tabindex="-1"></a><span class="co">## https://support.rstudio.com/hc/en-us/articles/200534577-Resetting-RStudio-Desktop-s-State</span></span>
-<span id="cb33-44"><a href="backing-up-your-computer.html#cb33-44" tabindex="-1"></a><span class="fu">mkdir</span> <span class="at">-p</span> RStudio/share</span>
-<span id="cb33-45"><a href="backing-up-your-computer.html#cb33-45" tabindex="-1"></a><span class="fu">rsync</span> <span class="at">-av</span> ~/.local/share/rstudio RStudio/share/</span>
-<span id="cb33-46"><a href="backing-up-your-computer.html#cb33-46" tabindex="-1"></a><span class="fu">mkdir</span> <span class="at">-p</span> RStudio/config</span>
-<span id="cb33-47"><a href="backing-up-your-computer.html#cb33-47" tabindex="-1"></a><span class="fu">rsync</span> <span class="at">-av</span> ~/.config/rstudio RStudio/config/</span>
-<span id="cb33-48"><a href="backing-up-your-computer.html#cb33-48" tabindex="-1"></a></span>
-<span id="cb33-49"><a href="backing-up-your-computer.html#cb33-49" tabindex="-1"></a></span>
-<span id="cb33-50"><a href="backing-up-your-computer.html#cb33-50" tabindex="-1"></a><span class="fu">rm</span> Brewfile</span>
-<span id="cb33-51"><a href="backing-up-your-computer.html#cb33-51" tabindex="-1"></a><span class="fu">sh</span> update_brewfile.sh</span></code></pre></div>
+<span id="cb33-40"><a href="backing-up-your-computer.html#cb33-40" tabindex="-1"></a><span class="co">## https://support.rstudio.com/hc/en-us/articles/200534577-Resetting-RStudio-Desktop-s-State</span></span>
+<span id="cb33-41"><a href="backing-up-your-computer.html#cb33-41" tabindex="-1"></a><span class="fu">mkdir</span> <span class="at">-p</span> RStudio/share</span>
+<span id="cb33-42"><a href="backing-up-your-computer.html#cb33-42" tabindex="-1"></a><span class="fu">rsync</span> <span class="at">-av</span> ~/.local/share/rstudio RStudio/share/</span>
+<span id="cb33-43"><a href="backing-up-your-computer.html#cb33-43" tabindex="-1"></a><span class="fu">mkdir</span> <span class="at">-p</span> RStudio/config</span>
+<span id="cb33-44"><a href="backing-up-your-computer.html#cb33-44" tabindex="-1"></a><span class="fu">rsync</span> <span class="at">-av</span> ~/.config/rstudio RStudio/config/</span>
+<span id="cb33-45"><a href="backing-up-your-computer.html#cb33-45" tabindex="-1"></a></span>
+<span id="cb33-46"><a href="backing-up-your-computer.html#cb33-46" tabindex="-1"></a></span>
+<span id="cb33-47"><a href="backing-up-your-computer.html#cb33-47" tabindex="-1"></a><span class="fu">rm</span> Brewfile</span>
+<span id="cb33-48"><a href="backing-up-your-computer.html#cb33-48" tabindex="-1"></a><span class="fu">sh</span> update_brewfile.sh</span></code></pre></div>
 <p>Note that it removes the <code>Brewfile</code> and re-runs <code>update_brewfile.sh</code> at the end. If you are not using <a href="https://brew.sh/"><code>Homebrew</code></a>, feel free to remove those lines from the script.</p>
 <p>A lot of work goes into creating several of these Linux-style configuration files such as your <code>~/.Rprofile</code> file for configuring your R sessions <a href="#fn26" class="footnote-ref" id="fnref26"><sup>26</sup></a>, or your connections to other computers and clusters (saved in your <code>~/.ssh</code> directory). To save myself the pain of having to recreate these files, I make sure to save them.</p>
 <p>To restore files, the fourth and final shell script is <code>restore_files.sh</code></p>
@@ -626,20 +623,16 @@ brew &quot;wget&quot;</code></pre>
 <span id="cb34-22"><a href="backing-up-your-computer.html#cb34-22" tabindex="-1"></a><span class="fu">rsync</span> <span class="at">-av</span>  .gitconfig ~/</span>
 <span id="cb34-23"><a href="backing-up-your-computer.html#cb34-23" tabindex="-1"></a><span class="fu">rsync</span> <span class="at">-av</span>  .rtweet_token.rds ~/</span>
 <span id="cb34-24"><a href="backing-up-your-computer.html#cb34-24" tabindex="-1"></a></span>
-<span id="cb34-25"><a href="backing-up-your-computer.html#cb34-25" tabindex="-1"></a><span class="co">## Backed up by Dropbox?</span></span>
-<span id="cb34-26"><a href="backing-up-your-computer.html#cb34-26" tabindex="-1"></a><span class="fu">rsync</span> <span class="at">-av</span> Music/iTunes/itunes\ library.itl ~/Music/iTunes/ </span>
-<span id="cb34-27"><a href="backing-up-your-computer.html#cb34-27" tabindex="-1"></a><span class="fu">rsync</span> <span class="at">-av</span> Music/iTunes/itunes\ music\ library.xml ~/Music/iTunes/ </span>
-<span id="cb34-28"><a href="backing-up-your-computer.html#cb34-28" tabindex="-1"></a></span>
-<span id="cb34-29"><a href="backing-up-your-computer.html#cb34-29" tabindex="-1"></a><span class="fu">rsync</span> <span class="at">-av</span> Cyberduck/ch.sudo.cyberduck.plist ~/Library/Preferences/ch.sudo.cyberduck.plist </span>
-<span id="cb34-30"><a href="backing-up-your-computer.html#cb34-30" tabindex="-1"></a></span>
-<span id="cb34-31"><a href="backing-up-your-computer.html#cb34-31" tabindex="-1"></a><span class="fu">mkdir</span> <span class="at">-p</span> ~/Library/Application\ Support/TextMate/Bundles</span>
-<span id="cb34-32"><a href="backing-up-your-computer.html#cb34-32" tabindex="-1"></a><span class="fu">rsync</span> <span class="at">-av</span>  TextMate/Bundles ~/Library/Application\ Support/TextMate/</span>
+<span id="cb34-25"><a href="backing-up-your-computer.html#cb34-25" tabindex="-1"></a><span class="fu">rsync</span> <span class="at">-av</span> Cyberduck/ch.sudo.cyberduck.plist ~/Library/Preferences/ch.sudo.cyberduck.plist </span>
+<span id="cb34-26"><a href="backing-up-your-computer.html#cb34-26" tabindex="-1"></a></span>
+<span id="cb34-27"><a href="backing-up-your-computer.html#cb34-27" tabindex="-1"></a><span class="fu">mkdir</span> <span class="at">-p</span> ~/Library/Application\ Support/TextMate/Bundles</span>
+<span id="cb34-28"><a href="backing-up-your-computer.html#cb34-28" tabindex="-1"></a><span class="fu">rsync</span> <span class="at">-av</span>  TextMate/Bundles ~/Library/Application\ Support/TextMate/</span>
+<span id="cb34-29"><a href="backing-up-your-computer.html#cb34-29" tabindex="-1"></a></span>
+<span id="cb34-30"><a href="backing-up-your-computer.html#cb34-30" tabindex="-1"></a><span class="co">## https://support.rstudio.com/hc/en-us/articles/200534577-Resetting-RStudio-Desktop-s-State</span></span>
+<span id="cb34-31"><a href="backing-up-your-computer.html#cb34-31" tabindex="-1"></a><span class="fu">rsync</span> <span class="at">-av</span> RStudio/share/rstudio ~/.local/share/</span>
+<span id="cb34-32"><a href="backing-up-your-computer.html#cb34-32" tabindex="-1"></a><span class="fu">rsync</span> <span class="at">-av</span> RStudio/config/rstudio ~/.config/</span>
 <span id="cb34-33"><a href="backing-up-your-computer.html#cb34-33" tabindex="-1"></a></span>
-<span id="cb34-34"><a href="backing-up-your-computer.html#cb34-34" tabindex="-1"></a><span class="co">## https://support.rstudio.com/hc/en-us/articles/200534577-Resetting-RStudio-Desktop-s-State</span></span>
-<span id="cb34-35"><a href="backing-up-your-computer.html#cb34-35" tabindex="-1"></a><span class="fu">rsync</span> <span class="at">-av</span> RStudio/share/rstudio ~/.local/share/</span>
-<span id="cb34-36"><a href="backing-up-your-computer.html#cb34-36" tabindex="-1"></a><span class="fu">rsync</span> <span class="at">-av</span> RStudio/config/rstudio ~/.config/</span>
-<span id="cb34-37"><a href="backing-up-your-computer.html#cb34-37" tabindex="-1"></a></span>
-<span id="cb34-38"><a href="backing-up-your-computer.html#cb34-38" tabindex="-1"></a><span class="fu">sh</span> restore_brewfile.sh</span></code></pre></div>
+<span id="cb34-34"><a href="backing-up-your-computer.html#cb34-34" tabindex="-1"></a><span class="fu">sh</span> restore_brewfile.sh</span></code></pre></div>
 <p>You have to have previously re-installed <code>TextMate</code>, <code>Cyberduck</code>, <code>RStudio</code>, and <code>Homebrew</code> manually before running <code>restore_files.sh</code>. Of course, you also have to have downloaded your files from your cloud storage service first too <a href="#fn27" class="footnote-ref" id="fnref27"><sup>27</sup></a>.</p>
 <p>As a note on <code>~/.ssh</code> permissions, they have to be restrictive both on your laptop as well as at JHPCE for things to work well. Here are mine:</p>
 <ul>
