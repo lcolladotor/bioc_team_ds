@@ -136,6 +136,7 @@ onedrive-publication-files
 examples
 revisions
 details
+styling
 authorship
 config-files
 r-setup

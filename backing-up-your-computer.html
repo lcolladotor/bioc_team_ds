@@ -349,6 +349,7 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 </ul></li>
 <li class="chapter" data-level="15.4" data-path="writing-papers.html"><a href="writing-papers.html#revisions"><i class="fa fa-check"></i><b>15.4</b> Revisions</a></li>
 <li class="chapter" data-level="15.5" data-path="writing-papers.html"><a href="writing-papers.html#details"><i class="fa fa-check"></i><b>15.5</b> Details</a></li>
+<li class="chapter" data-level="15.6" data-path="writing-papers.html"><a href="writing-papers.html#styling"><i class="fa fa-check"></i><b>15.6</b> Styling</a></li>
 </ul></li>
 <li class="chapter" data-level="16" data-path="authorship.html"><a href="authorship.html"><i class="fa fa-check"></i><b>16</b> Authorship</a></li>
 <li class="chapter" data-level="17" data-path="config-files.html"><a href="config-files.html"><i class="fa fa-check"></i><b>17</b> Config files</a>
@@ -436,7 +437,7 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <p>As some of you know, I have a personal Dropbox account that I pay for myself. You don’t have to use Dropbox as we have access to OneDrive through LIBD (1 TB per account). The concepts below apply for any cloud back up service.</p>
 <div id="time-machine" class="section level3 hasAnchor" number="18.1.1">
 <h3><span class="header-section-number">18.1.1</span> Time Machine<a href="backing-up-your-computer.html#time-machine" class="anchor-section" aria-label="Anchor link to header"></a></h3>
-<p>First of all, I highly encourage you to purchase a USB-C external hard drive with plenty of space (like around 2x your computer’s disk space) and use it for <a href="https://support.apple.com/en-us/104984">Time Machine backups</a>. It overall works quite well, though as you increase the files in your computer it’ll take longer to run (can be several hours) <a href="#fn25" class="footnote-ref" id="fnref25"><sup>25</sup></a>.</p>
+<p>First of all, I highly encourage you to purchase a USB-C external hard drive with plenty of space (like around 2x your computer’s disk space) and use it for <a href="https://support.apple.com/en-us/104984">Time Machine backups</a>. It overall works quite well, though as you increase the files in your computer it’ll take longer to run (can be several hours) <a href="#fn26" class="footnote-ref" id="fnref26"><sup>26</sup></a>.</p>
 <p>A limitation of using Time Machine is how frequently you choose to update it. You could update it as frequently as every hour, which then makes each update fairly small and thus fairly fast. If you do it daily, it might take up to an hour to run. If you do it less frequently, then it’ll take up to a whole work day (8 hours) to run. You have to keep this in mind when using Time Machine, as it can be natural to avoid updating it frequently given how long it can take to run. But then if you have an update every month or every couple of months, that means that if you have some kind of failure on your computer, then you are very much not protected and will lose lots of valuable files.</p>
 <p>Time Machine is great when you know that you are about to update your machine and want to be able to transfer files to the new one. It can also be quite cost effective as nowadays external storage devices with space for 2 to 5 TB are quite affordable (less than $100 USD), specially when you compare them against the cost of a yearly cloud backup service like Dropbox across multiple years. Of course, external storage devices have their own limitations, such as disk failures as well as the fact that there is only one copy of your device (unlike in the cloud) so if you lose it everything is lost.</p>
 </div>
@@ -597,7 +598,7 @@ brew &quot;wget&quot;</code></pre>
 <span id="cb33-47"><a href="backing-up-your-computer.html#cb33-47" tabindex="-1"></a><span class="fu">rm</span> Brewfile</span>
 <span id="cb33-48"><a href="backing-up-your-computer.html#cb33-48" tabindex="-1"></a><span class="fu">sh</span> update_brewfile.sh</span></code></pre></div>
 <p>Note that it removes the <code>Brewfile</code> and re-runs <code>update_brewfile.sh</code> at the end. If you are not using <a href="https://brew.sh/"><code>Homebrew</code></a>, feel free to remove those lines from the script.</p>
-<p>A lot of work goes into creating several of these Linux-style configuration files such as your <code>~/.Rprofile</code> file for configuring your R sessions <a href="#fn26" class="footnote-ref" id="fnref26"><sup>26</sup></a>, or your connections to other computers and clusters (saved in your <code>~/.ssh</code> directory). To save myself the pain of having to recreate these files, I make sure to save them.</p>
+<p>A lot of work goes into creating several of these Linux-style configuration files such as your <code>~/.Rprofile</code> file for configuring your R sessions <a href="#fn27" class="footnote-ref" id="fnref27"><sup>27</sup></a>, or your connections to other computers and clusters (saved in your <code>~/.ssh</code> directory). To save myself the pain of having to recreate these files, I make sure to save them.</p>
 <p>To restore files, the fourth and final shell script is <code>restore_files.sh</code></p>
 <div class="sourceCode" id="cb34"><pre class="sourceCode bash"><code class="sourceCode bash"><span id="cb34-1"><a href="backing-up-your-computer.html#cb34-1" tabindex="-1"></a><span class="co">#!/bin/bash</span></span>
 <span id="cb34-2"><a href="backing-up-your-computer.html#cb34-2" tabindex="-1"></a></span>
@@ -633,7 +634,7 @@ brew &quot;wget&quot;</code></pre>
 <span id="cb34-32"><a href="backing-up-your-computer.html#cb34-32" tabindex="-1"></a><span class="fu">rsync</span> <span class="at">-av</span> RStudio/config/rstudio ~/.config/</span>
 <span id="cb34-33"><a href="backing-up-your-computer.html#cb34-33" tabindex="-1"></a></span>
 <span id="cb34-34"><a href="backing-up-your-computer.html#cb34-34" tabindex="-1"></a><span class="fu">sh</span> restore_brewfile.sh</span></code></pre></div>
-<p>You have to have previously re-installed <code>TextMate</code>, <code>Cyberduck</code>, <code>RStudio</code>, and <code>Homebrew</code> manually before running <code>restore_files.sh</code>. Of course, you also have to have downloaded your files from your cloud storage service first too <a href="#fn27" class="footnote-ref" id="fnref27"><sup>27</sup></a>.</p>
+<p>You have to have previously re-installed <code>TextMate</code>, <code>Cyberduck</code>, <code>RStudio</code>, and <code>Homebrew</code> manually before running <code>restore_files.sh</code>. Of course, you also have to have downloaded your files from your cloud storage service first too <a href="#fn28" class="footnote-ref" id="fnref28"><sup>28</sup></a>.</p>
 <p>As a note on <code>~/.ssh</code> permissions, they have to be restrictive both on your laptop as well as at JHPCE for things to work well. Here are mine:</p>
 <ul>
 <li>Laptop:</li>
@@ -661,7 +662,7 @@ brew &quot;wget&quot;</code></pre>
 <div id="misc" class="section level4 hasAnchor" number="18.1.3.4">
 <h4><span class="header-section-number">18.1.3.4</span> Misc<a href="backing-up-your-computer.html#misc" class="anchor-section" aria-label="Anchor link to header"></a></h4>
 <p>Similar to the screenshots of the contents of my <code>/Applications</code> directory, I have taken screenshots of my Slack Workspaces and Dock bar setup. Just to remember in what order I have things. I also keep around the license files for <code>Cyberduck</code>, <code>Hyberdock</code>, <code>Bartender</code>, <code>AlfredApp</code>, and other software that I have paid for before. For <code>iTerm2</code>, I have also exported my favorite <em>profile</em> to a JSON file. For <code>Cyberduck</code>, you can also drag to a Finder window your <code>Cyberduck</code> bookmarks.</p>
-<p>Note that some software like <code>Zotero</code>, <code>AlfredApp</code>, and the <code>OneTab</code> Chrome extension have direct options for backing up your Zotero library (via a Zotero account), your <code>AlfredApp</code> preferences, or <code>OneTab</code> bookmarks. Check if this is the case for any other software you use and for which you’d like to save the preferences you customized.</p>
+<p>Note that some software like <code>Zotero</code> + <a href="https://github.com/jlegewie/zotfile"><code>Zotfile</code></a>, <code>AlfredApp</code>, and the <code>OneTab</code> Chrome extension have direct options for backing up your Zotero library (via a Zotero account), your <code>AlfredApp</code> preferences, or <code>OneTab</code> bookmarks. Check if this is the case for any other software you use and for which you’d like to save the preferences you customized.</p>
 <p>Ultimately, when you restore a computer from a cloud storage service, you will miss some things you had in your previous computer. Doing so can be intentional if you don’t want to keep around software you are actually no longer using. But you have to be conscious about this choice and know well what you’ll miss: otherwise you might regret losing some hard to get software or configuration files.</p>
 </div>
 </div>
@@ -674,10 +675,10 @@ brew &quot;wget&quot;</code></pre>
 </div>
 <div class="footnotes">
 <hr />
-<ol start="25">
-<li id="fn25"><p>Note that <code>git</code> will create many hidden files under the <code>.git</code> directory for a given repository, so if you have local <code>git clone</code>s of many repositories, this will greatly increase the number of files in your computer. Backing up lots of small files can take longer than backing up a single large file, depending on disk input/output limits as well as your internet bandwidth download/upload limits.<a href="backing-up-your-computer.html#fnref25" class="footnote-back">↩︎</a></p></li>
-<li id="fn26"><p>See the <a href="https://lcolladotor.github.io/bioc_team_ds/config-files.html#r-config-files">R config files</a> section for more details.<a href="backing-up-your-computer.html#fnref26" class="footnote-back">↩︎</a></p></li>
-<li id="fn27"><p>I have over 300,000 files on Dropbox that I want to have on my computer, so it takes quite a few hours to download everything again.<a href="backing-up-your-computer.html#fnref27" class="footnote-back">↩︎</a></p></li>
+<ol start="26">
+<li id="fn26"><p>Note that <code>git</code> will create many hidden files under the <code>.git</code> directory for a given repository, so if you have local <code>git clone</code>s of many repositories, this will greatly increase the number of files in your computer. Backing up lots of small files can take longer than backing up a single large file, depending on disk input/output limits as well as your internet bandwidth download/upload limits.<a href="backing-up-your-computer.html#fnref26" class="footnote-back">↩︎</a></p></li>
+<li id="fn27"><p>See the <a href="https://lcolladotor.github.io/bioc_team_ds/config-files.html#r-config-files">R config files</a> section for more details.<a href="backing-up-your-computer.html#fnref27" class="footnote-back">↩︎</a></p></li>
+<li id="fn28"><p>I have over 300,000 files on Dropbox that I want to have on my computer, so it takes quite a few hours to download everything again.<a href="backing-up-your-computer.html#fnref28" class="footnote-back">↩︎</a></p></li>
 </ol>
 </div>
 <div class="container">
