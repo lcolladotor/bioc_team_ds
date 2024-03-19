@@ -350,6 +350,7 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <li class="chapter" data-level="15.4" data-path="writing-papers.html"><a href="writing-papers.html#revisions"><i class="fa fa-check"></i><b>15.4</b> Revisions</a></li>
 <li class="chapter" data-level="15.5" data-path="writing-papers.html"><a href="writing-papers.html#details"><i class="fa fa-check"></i><b>15.5</b> Details</a></li>
 <li class="chapter" data-level="15.6" data-path="writing-papers.html"><a href="writing-papers.html#styling"><i class="fa fa-check"></i><b>15.6</b> Styling</a></li>
+<li class="chapter" data-level="15.7" data-path="writing-papers.html"><a href="writing-papers.html#promoting-our-work"><i class="fa fa-check"></i><b>15.7</b> Promoting our work</a></li>
 </ul></li>
 <li class="chapter" data-level="16" data-path="authorship.html"><a href="authorship.html"><i class="fa fa-check"></i><b>16</b> Authorship</a></li>
 <li class="chapter" data-level="17" data-path="config-files.html"><a href="config-files.html"><i class="fa fa-check"></i><b>17</b> Config files</a>
@@ -448,6 +449,7 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <li><code>~/Desktop</code></li>
 <li><code>~/Documents</code></li>
 <li><code>~/Downloads</code></li>
+<li><code>~/Music</code></li>
 </ul>
 <p>by copying them to your <code>~/Dropbox</code> directory and then making links (aliases; soft links) on your home directory (<code>~/</code>) such that other macOS programs won’t even notice that the files are actually stored under your <code>~/Dropbox</code> directory. Something similar is available from most cloud storage services.</p>
 <p>That all sounds great, but then you are going to miss other files and information you are likely interested in. Broadly speaking this would be:</p>
@@ -548,6 +550,13 @@ brew &quot;wget&quot;</code></pre>
 </div>
 <div id="linux-style-config-files" class="section level4 hasAnchor" number="18.1.3.3">
 <h4><span class="header-section-number">18.1.3.3</span> Linux-style config files<a href="backing-up-your-computer.html#linux-style-config-files" class="anchor-section" aria-label="Anchor link to header"></a></h4>
+<blockquote class="twitter-tweet">
+<p lang="en" dir="ltr">
+Tough day, but you know what they say: “Don't cry because it's over. Cry because your laptop is about to be factory reset, and despite saving all the dotfiles and configs, you just know that it's gonna take you forever to get your dev environment right.” 😭
+</p>
+— Mara Averick (<span class="citation">@dataandme</span>) <a href="https://twitter.com/dataandme/status/1674746403535421440?ref_src=twsrc%5Etfw">June 30, 2023</a>
+</blockquote>
+<script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
 <p>At <code>~/Dropbox/Mac-files/Root</code> I have a third shell script, this one is called <code>update_files.sh</code>. In it, I basically keep track of what Linux-style configuration files I want to back up. I also use it to backup my <code>RStudio</code> preferences, <code>TextMate</code> bundles, and some other things (Music library, some <code>Cyberduck</code> files).</p>
 <div class="sourceCode" id="cb33"><pre class="sourceCode bash"><code class="sourceCode bash"><span id="cb33-1"><a href="backing-up-your-computer.html#cb33-1" tabindex="-1"></a><span class="co">#!/bin/bash</span></span>
 <span id="cb33-2"><a href="backing-up-your-computer.html#cb33-2" tabindex="-1"></a></span>

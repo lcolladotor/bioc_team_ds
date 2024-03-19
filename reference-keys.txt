@@ -137,6 +137,7 @@ examples
 revisions
 details
 styling
+promoting-our-work
 authorship
 config-files
 r-setup
