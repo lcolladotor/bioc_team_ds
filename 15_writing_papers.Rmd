@@ -92,3 +92,43 @@ Here are more details:
 
 
 Finally, feel free to sign up for a [Data Science guidance session](#data-science-guidance-sessions) with anyone in the team that recently wrote a paper.
+
+
+## Styling
+
+Google Docs: 
+
+* use `heading 1` for big section names like **Introduction/Background**, **Results**, **Methods**, etc. 
+* use `heading 2` for subsections like specific subsections of the **Results**. Change the styling such that `heading 2` uses an underline.
+
+General styling guides:
+
+* For function names or code elements (such as R object names) use `code font` (Google Docs: `Courier New`). That will make it easier for readers to notice if a word is linked to a coding concept, as function names can sometimes be English verbs / words that someone who is not familiar with them might confuse for actual English words. That is, use this different font to provide context to the readers.
+  * Only specify the non-default arguments of the key functions used. In general, there's no need to spell out the default arguments: the software should document them and readers can find them for specific versions of software we used.
+* Use *italics* for the software names. This context will again help users differentiate software names from actual English words. Think of *recount* versus recount. *recount* is referring to an actual software, whereas [recount refers to the English verb](https://www.merriam-webster.com/dictionary/recount).
+* Show the version number of the software ^[For software with no version numbers but that is available from GitHub, use the SHA from the Git commit identifying the exact version you used. For example, "_SPEAQeasy v51ffb22_" for [this specific version of SPEAQeasy](https://github.com/LieberInstitute/SPEAQeasy/commit/51ffb22f6492e2a9a081e33316fa225c3ea1e530).] such as "_recount3_ v1.12.0". Use just the `v` prefix instead of typing `version`, particularly when word count limits are in play.
+* Cite the software used when the version of it is mentioned (even if was cited previously in a different **Methods** subsection).
+  * Check that you are spelling the software name correctly, particularly as capitalization matters quite a bit: it's not uncommon to find two tools with the same name but different capitalization. Text editors sometimes auto-capitalize the first letter when you start a sentence, even though it should have been lower case. For example: "_recount3_ v1.12.0 was used for this analysis." is correct instead of "_Recount3_ v1.12.0 was used for this analysis.".
+  * For R packages you can use `citation("packageName")` to find the citation information. For Bioconductor packages, you can also see this information at https://bioconductor.org/packages/packageName.
+    * Some packages like `spatialLIBD` might specify more than one citation. You need to manually check which are the correct citation(s) for what you use the package for.
+  * R functions can specify how to cite specific functions. Check the documentation with `?packageName::functionName` to see if such details are specified. See for example `?stats::p.adjust` where you can find that the citation for Benjamini and Hochberg's method multiple testing adjusting via control of the the false discovery rate is from doi:[10.1111/j.2517-6161.1995.tb02031.x](https://doi.org/10.1111/j.2517-6161.1995.tb02031.x).
+* Use the [Oxford comma](https://www.grammarly.com/blog/what-is-the-oxford-comma-and-why-do-people-care-so-much-about-it/) for iterations, such as "hello, hi`,` and goodbye" where `,` highlights the Oxford comma.
+* Do not use words such as _interestingly_, _remarkably_, _surprisingly_ as noted [here](https://www.nature.com/articles/ni1105-1061) and elsewhere. 
+* Do not use synonyms for technical terms. Just stick to one term (and maybe one acronym for that technical term) even if this makes the writing a bit boring. Words have many definitions that are context dependent, and if you try to use many synonyms you are likely going to confuse your readers more, even though your goal might have been to keep the readers entertained. 
+* Be consistent: avoid multiple acronyms on the text and figures for the same concept. Just stick to one and make sure the spelling is consistent throughout the paper: you likely will have to double check if others are editing the paper (or adding figures / tables) and introducing this type of typo.
+* Figure captions should follow a syntax like this:
+  * **Figure 1: Figure title in sentence case.** (**A**) Description of the (A) panel. (**B**) Description of the (B) panel, which could refer back to the (A) panel without using bold.
+  * Note how in the description of **Figure1B** we call back to the (A) panel with regular font, whereas to describe the (**A**) panel we did use a bold font for the letter A. This use of the bold font for the first mention (aka description) of a panel helps readers visually find where the description of each panel starts. Here are some incorrect formats:
+    * **Figure 1.** That is, there was no title for this figure. (**A**) Description of the (A) panel. (**B**) Description of the (B) panel, which could refer back to the (A) panel without using bold.
+    * **Figure 1: Figure title in sentence case.** (A) Description of the (A) panel. (B) Description of the (B) panel, which could refer back to the (A) panel without using bold but now we don't easily know where (A)'s description starts since we have many mentions of (A).
+    * **Figure 1: Figure title in sentence case.** Description of the (A) panel (**A**). Description of the (B) panel, which could refer back to the (A) panel without using bold. But then has more information (**B**). Aka, we no longer know where the description for (B) starts.
+  * Keep the figure titles short: ideally 1 line, max like 1.5 lines long.
+* Supplemental figures or tables should refer back to a main figure and/or table at the end of the descriptions.
+  * Example: "**Supplementary Figure 1: supp fig title.** Supp fig 1 description. Related to **Figure 1**."
+  * Using this "Related to ..." syntax will help users easily build a mental network of how the different display items are related to each other.
+  * On the reverse, main display items can also use a "See also ..." syntax as was the case in the [BrainSEQ Phase II paper](https://doi.org/10.1016/j.neuron.2019.05.013).
+* For supplementary tables, think about it from a reader / user perspective: "is this data that I would like to be able to easily access?" If the answer is yes, then you should add a supplementary table with that information.
+
+
+Let us know if we are missing any styling details that we haven't documented!
+
