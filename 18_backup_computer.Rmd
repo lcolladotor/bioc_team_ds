@@ -27,6 +27,7 @@ Given the limitations with external backup devices, I prefer to use a cloud stor
 * `~/Desktop`
 * `~/Documents`
 * `~/Downloads`
+* `~/Music`
 
 by copying them to your `~/Dropbox` directory and then making links (aliases; soft links) on your home directory (`~/`) such that other macOS programs won't even notice that the files are actually stored under your `~/Dropbox` directory. Something similar is available from most cloud storage services.
 
@@ -146,6 +147,8 @@ brew bundle
 It works pretty well, though note that I try not to install software with `Homebrew` in general, particularly when it comes to R and being able to compile packages. Check the [R Setup](https://lcolladotor.github.io/bioc_team_ds/config-files.html#r-setup) section for more details on how to install all the binaries you need for compiling R packages.
 
 #### Linux-style config files
+
+<blockquote class="twitter-tweet"><p lang="en" dir="ltr">Tough day, but you know what they say: “Don&#39;t cry because it&#39;s over. Cry because your laptop is about to be factory reset, and despite saving all the dotfiles and configs, you just know that it&#39;s gonna take you forever to get your dev environment right.” 😭</p>&mdash; Mara Averick (@dataandme) <a href="https://twitter.com/dataandme/status/1674746403535421440?ref_src=twsrc%5Etfw">June 30, 2023</a></blockquote> <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
 
 At `~/Dropbox/Mac-files/Root` I have a third shell script, this one is called `update_files.sh`. In it, I basically keep track of what Linux-style configuration files I want to back up. I also use it to backup my `RStudio` preferences, `TextMate` bundles, and some other things (Music library, some `Cyberduck` files).
 
