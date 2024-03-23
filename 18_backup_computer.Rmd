@@ -238,6 +238,7 @@ rsync -av Cyberduck/ch.sudo.cyberduck.plist ~/Library/Preferences/ch.sudo.cyberd
 
 mkdir -p ~/Library/Application\ Support/TextMate/Bundles
 rsync -av  TextMate/Bundles ~/Library/Application\ Support/TextMate/
+osascript -e 'tell app "TextMate" to reload bundles'
 
 ## https://support.rstudio.com/hc/en-us/articles/200534577-Resetting-RStudio-Desktop-s-State
 rsync -av RStudio/share/rstudio ~/.local/share/
