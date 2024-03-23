@@ -637,12 +637,13 @@ Tough day, but you know what they say: “Don't cry because it's over. Cry becau
 <span id="cb34-26"><a href="backing-up-your-computer.html#cb34-26" tabindex="-1"></a></span>
 <span id="cb34-27"><a href="backing-up-your-computer.html#cb34-27" tabindex="-1"></a><span class="fu">mkdir</span> <span class="at">-p</span> ~/Library/Application\ Support/TextMate/Bundles</span>
 <span id="cb34-28"><a href="backing-up-your-computer.html#cb34-28" tabindex="-1"></a><span class="fu">rsync</span> <span class="at">-av</span>  TextMate/Bundles ~/Library/Application\ Support/TextMate/</span>
-<span id="cb34-29"><a href="backing-up-your-computer.html#cb34-29" tabindex="-1"></a></span>
-<span id="cb34-30"><a href="backing-up-your-computer.html#cb34-30" tabindex="-1"></a><span class="co">## https://support.rstudio.com/hc/en-us/articles/200534577-Resetting-RStudio-Desktop-s-State</span></span>
-<span id="cb34-31"><a href="backing-up-your-computer.html#cb34-31" tabindex="-1"></a><span class="fu">rsync</span> <span class="at">-av</span> RStudio/share/rstudio ~/.local/share/</span>
-<span id="cb34-32"><a href="backing-up-your-computer.html#cb34-32" tabindex="-1"></a><span class="fu">rsync</span> <span class="at">-av</span> RStudio/config/rstudio ~/.config/</span>
-<span id="cb34-33"><a href="backing-up-your-computer.html#cb34-33" tabindex="-1"></a></span>
-<span id="cb34-34"><a href="backing-up-your-computer.html#cb34-34" tabindex="-1"></a><span class="fu">sh</span> restore_brewfile.sh</span></code></pre></div>
+<span id="cb34-29"><a href="backing-up-your-computer.html#cb34-29" tabindex="-1"></a><span class="ex">osascript</span> <span class="at">-e</span> <span class="st">&#39;tell app &quot;TextMate&quot; to reload bundles&#39;</span></span>
+<span id="cb34-30"><a href="backing-up-your-computer.html#cb34-30" tabindex="-1"></a></span>
+<span id="cb34-31"><a href="backing-up-your-computer.html#cb34-31" tabindex="-1"></a><span class="co">## https://support.rstudio.com/hc/en-us/articles/200534577-Resetting-RStudio-Desktop-s-State</span></span>
+<span id="cb34-32"><a href="backing-up-your-computer.html#cb34-32" tabindex="-1"></a><span class="fu">rsync</span> <span class="at">-av</span> RStudio/share/rstudio ~/.local/share/</span>
+<span id="cb34-33"><a href="backing-up-your-computer.html#cb34-33" tabindex="-1"></a><span class="fu">rsync</span> <span class="at">-av</span> RStudio/config/rstudio ~/.config/</span>
+<span id="cb34-34"><a href="backing-up-your-computer.html#cb34-34" tabindex="-1"></a></span>
+<span id="cb34-35"><a href="backing-up-your-computer.html#cb34-35" tabindex="-1"></a><span class="fu">sh</span> restore_brewfile.sh</span></code></pre></div>
 <p>You have to have previously re-installed <code>TextMate</code>, <code>Cyberduck</code>, <code>RStudio</code>, and <code>Homebrew</code> manually before running <code>restore_files.sh</code>. Of course, you also have to have downloaded your files from your cloud storage service first too <a href="#fn28" class="footnote-ref" id="fnref28"><sup>28</sup></a>.</p>
 <p>As a note on <code>~/.ssh</code> permissions, they have to be restrictive both on your laptop as well as at JHPCE for things to work well. Here are mine:</p>
 <ul>
