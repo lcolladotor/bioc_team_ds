@@ -501,16 +501,6 @@ alias rmi='rm -i'
 # previously in mac: "\h:\W \u\$ "
 export PS1="\[\e[0;33m\]\A \W \$ \[\e[m\]"
 
-# LIDB projects
-alias labold="cd /dcl01/lieber/ajaffe/lab"
-alias lab="cd /dcl01/ajaffe/data/lab"
-
-## 10X genomics
-alias single="cd /dcl01/ajaffe/data/lab/singleCell"
-alias spatialold="cd /dcl02/lieber/ajaffe/SpatialTranscriptomics/HumanPilot"
-alias spatial="cd /dcl02/lieber/ajaffe/SpatialTranscriptomics/LIBD"
-alias matt="cd /dcl01/lieber/ajaffe/Matt/MNT_thesis/snRNAseq/10x_pilot_FINAL"
-
 ## Team home directories
 alias dcl01="cd /dcl01/lieber/lcolladotor"
 alias dcl02="cd /dcl02/lieber/lcolladotor"
@@ -519,15 +509,9 @@ alias dcs05="cd /dcs05/lieber/lcolladotor"
 
 ## Creating modules
 # https://lmod.readthedocs.io/en/latest/050_lua_modulefiles.html
-if [[ -n ${SLURM_CLUSTER_NAME} ]] && echo `hostname` | $(! grep -q "jhpce01|jhpce02|transfer"); then
-    # SLURM
-	alias modsrc="cd /jhpce/shared/libd/core"
-	alias modlua="cd /jhpce/shared/libd/modulefiles"
-else
-    # SGE
-	alias modsrc="cd /jhpce/shared/jhpce/libd"
-	alias modlua="cd /jhpce/shared/jhpce/modulefiles/libd"
-fi
+# SLURM
+alias modsrc="cd /jhpce/shared/libd/core"
+alias modlua="cd /jhpce/shared/libd/modulefiles"
 
 # colors
 # http://norbauer.com/notebooks/code/notes/ls-colors-and-terminal-app
@@ -553,30 +537,21 @@ export LS_COLORS="di=0;32:ln=0;36:so=0;35:pi=0;93:ex=0;31:bd=0;34;46:cd=0;34;43:
 # https://github.com/textmate/rmate
 export RMATE_PORT="SOME_PORT_YOU_CHOOSE"
 
-## Load the git module by default when qrsh/qsub
+## Load commonly used modules by default when using srun/sbatch
 ## thanks to Jiong Yang and John Muschelli
 if [[ $HOSTNAME == compute-* ]] || [[ $HOSTNAME == transfer-* ]]; then
-	if [[ -n ${SLURM_CLUSTER_NAME} ]] && echo `hostname` | $(! grep -q "transfer"); then
-        # SLURM
-	    module use /jhpce/shared/libd/modulefiles
-	    # module load git-status-size/github
-	    # module load git-lfs/2.8.0
-	    module load rmate/1.5.10
-	    # module load conda_R/4.3
-	else
-	    # SGE
-	    module use /jhpce/shared/jhpce/modulefiles/libd
-	    module load git
-	    module load git-status-size/github
-	    module load git-lfs/2.8.0
-	    module load rmate/1.5.10
-	    module load conda_R/4.3
-	fi
+	# SLURM
+	# module use /jhpce/shared/libd/modulefiles
+	module load git-status-size
+	module load git-lfs
+	module load rmate
+	module load conda_R/4.3.x
 fi
 
 ## To deal with running nextflow without requesting much more memory
 ## https://jhpce.jhu.edu/question/why-do-i-get-memory-errors-when-running-java/
-export _JAVA_OPTIONS="-Xms5g -Xmx6g"
+# export _JAVA_OPTIONS="-Xms5g -Xmx6g"
+## Disable for SPEAQeasy
 
 ## From https://twitter.com/fellgernon/status/1258455434073124865?s=20
 ## and https://www.cyberciti.biz/tips/understanding-linux-unix-umask-value-usage.html
