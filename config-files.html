@@ -934,22 +934,31 @@ Thumbs.db</code></pre>
 <span id="cb26-65"><a href="config-files.html#cb26-65" tabindex="-1"></a><span class="co">## Load commonly used modules by default when using srun/sbatch</span></span>
 <span id="cb26-66"><a href="config-files.html#cb26-66" tabindex="-1"></a><span class="co">## thanks to Jiong Yang and John Muschelli</span></span>
 <span id="cb26-67"><a href="config-files.html#cb26-67" tabindex="-1"></a><span class="cf">if</span> <span class="kw">[[</span> <span class="va">$HOSTNAME</span> <span class="ot">==</span> compute-<span class="pp">*</span> <span class="kw">]]</span> <span class="kw">||</span> <span class="kw">[[</span> <span class="va">$HOSTNAME</span> <span class="ot">==</span> transfer-<span class="pp">*</span> <span class="kw">]];</span> <span class="cf">then</span></span>
-<span id="cb26-68"><a href="config-files.html#cb26-68" tabindex="-1"></a>    <span class="co"># SLURM</span></span>
-<span id="cb26-69"><a href="config-files.html#cb26-69" tabindex="-1"></a>    <span class="co"># module use /jhpce/shared/libd/modulefiles</span></span>
-<span id="cb26-70"><a href="config-files.html#cb26-70" tabindex="-1"></a>    <span class="ex">module</span> load git-status-size</span>
-<span id="cb26-71"><a href="config-files.html#cb26-71" tabindex="-1"></a>    <span class="ex">module</span> load git-lfs</span>
-<span id="cb26-72"><a href="config-files.html#cb26-72" tabindex="-1"></a>    <span class="ex">module</span> load rmate</span>
-<span id="cb26-73"><a href="config-files.html#cb26-73" tabindex="-1"></a>    <span class="ex">module</span> load conda_R/4.3.x</span>
-<span id="cb26-74"><a href="config-files.html#cb26-74" tabindex="-1"></a><span class="cf">fi</span></span>
-<span id="cb26-75"><a href="config-files.html#cb26-75" tabindex="-1"></a></span>
-<span id="cb26-76"><a href="config-files.html#cb26-76" tabindex="-1"></a><span class="co">## To deal with running nextflow without requesting much more memory</span></span>
-<span id="cb26-77"><a href="config-files.html#cb26-77" tabindex="-1"></a><span class="co">## https://jhpce.jhu.edu/question/why-do-i-get-memory-errors-when-running-java/</span></span>
-<span id="cb26-78"><a href="config-files.html#cb26-78" tabindex="-1"></a><span class="co"># export _JAVA_OPTIONS=&quot;-Xms5g -Xmx6g&quot;</span></span>
-<span id="cb26-79"><a href="config-files.html#cb26-79" tabindex="-1"></a><span class="co">## Disable for SPEAQeasy</span></span>
+<span id="cb26-68"><a href="config-files.html#cb26-68" tabindex="-1"></a>    <span class="co"># Load SLURM LIBD modules</span></span>
+<span id="cb26-69"><a href="config-files.html#cb26-69" tabindex="-1"></a>    <span class="co">## This command is not needed anymore, though you would need</span></span>
+<span id="cb26-70"><a href="config-files.html#cb26-70" tabindex="-1"></a>    <span class="co">## to use a similar command if you are loading private modules.</span></span>
+<span id="cb26-71"><a href="config-files.html#cb26-71" tabindex="-1"></a>    <span class="co"># module use /jhpce/shared/libd/modulefiles</span></span>
+<span id="cb26-72"><a href="config-files.html#cb26-72" tabindex="-1"></a>    <span class="ex">module</span> load git-status-size</span>
+<span id="cb26-73"><a href="config-files.html#cb26-73" tabindex="-1"></a>    <span class="ex">module</span> load git-lfs</span>
+<span id="cb26-74"><a href="config-files.html#cb26-74" tabindex="-1"></a>    <span class="ex">module</span> load rmate</span>
+<span id="cb26-75"><a href="config-files.html#cb26-75" tabindex="-1"></a><span class="cf">fi</span></span>
+<span id="cb26-76"><a href="config-files.html#cb26-76" tabindex="-1"></a><span class="co">## Only load R on the compute nodes</span></span>
+<span id="cb26-77"><a href="config-files.html#cb26-77" tabindex="-1"></a><span class="cf">if</span> <span class="kw">[[</span> <span class="va">$HOSTNAME</span> <span class="ot">==</span> compute-<span class="pp">*</span> <span class="kw">]]</span> <span class="kw">;</span> <span class="cf">then</span></span>
+<span id="cb26-78"><a href="config-files.html#cb26-78" tabindex="-1"></a>    <span class="ex">module</span> load conda_R/4.3.x</span>
+<span id="cb26-79"><a href="config-files.html#cb26-79" tabindex="-1"></a><span class="cf">fi</span></span>
 <span id="cb26-80"><a href="config-files.html#cb26-80" tabindex="-1"></a></span>
-<span id="cb26-81"><a href="config-files.html#cb26-81" tabindex="-1"></a><span class="co">## From https://twitter.com/fellgernon/status/1258455434073124865?s=20</span></span>
-<span id="cb26-82"><a href="config-files.html#cb26-82" tabindex="-1"></a><span class="co">## and https://www.cyberciti.biz/tips/understanding-linux-unix-umask-value-usage.html</span></span>
-<span id="cb26-83"><a href="config-files.html#cb26-83" tabindex="-1"></a><span class="bu">umask</span> u=rwx,g=rwx,o= <span class="co">## equivalent to umask 007</span></span></code></pre></div>
+<span id="cb26-81"><a href="config-files.html#cb26-81" tabindex="-1"></a><span class="co">## Set an alias to run JHPCE rsrun with X11 support</span></span>
+<span id="cb26-82"><a href="config-files.html#cb26-82" tabindex="-1"></a><span class="co">## Documented at https://jhpce.jhu.edu/slurm/interactive-jobs/#shortcuts</span></span>
+<span id="cb26-83"><a href="config-files.html#cb26-83" tabindex="-1"></a><span class="fu">jsrun()</span> <span class="kw">{</span> <span class="cf">if</span> <span class="bu">[</span> <span class="ot">-z</span> <span class="va">${DISPLAY}</span> <span class="bu">]</span><span class="kw">;</span> <span class="cf">then</span> <span class="ex">/usr/bin/srun</span> <span class="at">--pty</span> <span class="st">&quot;</span><span class="va">$@</span><span class="st">&quot;</span> bash<span class="kw">;</span> <span class="cf">else</span> <span class="ex">/usr/bin/srun</span> <span class="at">--pty</span> <span class="at">--x11</span> <span class="st">&quot;</span><span class="va">$@</span><span class="st">&quot;</span> bash<span class="kw">;</span> <span class="cf">fi</span> <span class="kw">}</span></span>
+<span id="cb26-84"><a href="config-files.html#cb26-84" tabindex="-1"></a></span>
+<span id="cb26-85"><a href="config-files.html#cb26-85" tabindex="-1"></a><span class="co">## To deal with running nextflow without requesting much more memory</span></span>
+<span id="cb26-86"><a href="config-files.html#cb26-86" tabindex="-1"></a><span class="co">## https://jhpce.jhu.edu/question/why-do-i-get-memory-errors-when-running-java/</span></span>
+<span id="cb26-87"><a href="config-files.html#cb26-87" tabindex="-1"></a><span class="co"># export _JAVA_OPTIONS=&quot;-Xms5g -Xmx6g&quot;</span></span>
+<span id="cb26-88"><a href="config-files.html#cb26-88" tabindex="-1"></a><span class="co">## Disable for SPEAQeasy</span></span>
+<span id="cb26-89"><a href="config-files.html#cb26-89" tabindex="-1"></a></span>
+<span id="cb26-90"><a href="config-files.html#cb26-90" tabindex="-1"></a><span class="co">## From https://twitter.com/fellgernon/status/1258455434073124865?s=20</span></span>
+<span id="cb26-91"><a href="config-files.html#cb26-91" tabindex="-1"></a><span class="co">## and https://www.cyberciti.biz/tips/understanding-linux-unix-umask-value-usage.html</span></span>
+<span id="cb26-92"><a href="config-files.html#cb26-92" tabindex="-1"></a><span class="bu">umask</span> u=rwx,g=rwx,o= <span class="co">## equivalent to umask 007</span></span></code></pre></div>
 <p>For more information on <code>rmate</code> and <code>rmote</code> and how it relates to these configuration files, check this video and <a href="https://docs.google.com/document/d/1vj0xa_qZTIgsnooW_9_j44Low1UbSIufnlGXCgL_YCU/edit">companion notes</a>.</p>
 <iframe width="560" height="315" src="https://www.youtube.com/embed/LjWr39C1Z_Q" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen>
 </iframe>
