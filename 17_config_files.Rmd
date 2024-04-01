@@ -502,7 +502,6 @@ alias rmi='rm -i'
 export PS1="\[\e[0;33m\]\A \W \$ \[\e[m\]"
 
 ## Team home directories
-alias dcl01="cd /dcl01/lieber/lcolladotor"
 alias dcl02="cd /dcl02/lieber/lcolladotor"
 alias dcs04="cd /dcs04/lieber/lcolladotor"
 alias dcs05="cd /dcs05/lieber/lcolladotor"
