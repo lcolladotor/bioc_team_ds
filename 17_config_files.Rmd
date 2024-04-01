@@ -539,11 +539,16 @@ export RMATE_PORT="SOME_PORT_YOU_CHOOSE"
 ## Load commonly used modules by default when using srun/sbatch
 ## thanks to Jiong Yang and John Muschelli
 if [[ $HOSTNAME == compute-* ]] || [[ $HOSTNAME == transfer-* ]]; then
-	# SLURM
+	# Load SLURM LIBD modules
+	## This command is not needed anymore, though you would need
+	## to use a similar command if you are loading private modules.
 	# module use /jhpce/shared/libd/modulefiles
 	module load git-status-size
 	module load git-lfs
 	module load rmate
+fi
+## Only load R on the compute nodes
+if [[ $HOSTNAME == compute-* ]] ; then
 	module load conda_R/4.3.x
 fi
 
