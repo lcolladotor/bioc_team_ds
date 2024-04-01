@@ -547,6 +547,10 @@ if [[ $HOSTNAME == compute-* ]] || [[ $HOSTNAME == transfer-* ]]; then
 	module load conda_R/4.3.x
 fi
 
+## Set an alias to run JHPCE rsrun with X11 support
+## Documented at https://jhpce.jhu.edu/slurm/interactive-jobs/#shortcuts
+jsrun() { if [ -z ${DISPLAY} ]; then /usr/bin/srun --pty "$@" bash; else /usr/bin/srun --pty --x11 "$@" bash; fi }
+
 ## To deal with running nextflow without requesting much more memory
 ## https://jhpce.jhu.edu/question/why-do-i-get-memory-errors-when-running-java/
 # export _JAVA_OPTIONS="-Xms5g -Xmx6g"
