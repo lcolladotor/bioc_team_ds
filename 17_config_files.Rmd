@@ -443,27 +443,13 @@ or this other video and [companion notes](https://docs.google.com/document/d/1xv
 
 These videos also talk about GitHub and local git setup on your laptop.
 
-### `~/.sge_request`
+### `~/.slurm/defaults`
 
-This file configures the default SGE requests under `qsub` and `qrsh`.
+This file configures the default SLURM requests under `srun` and `sbatch`. See this [BitHelp thread](https://lists.jh.edu/sympa/arc/bithelp/2024-04/msg00018.html) for more details about this file.
 
 ```{bash, eval = FALSE}
-# Check http://www.biostat.jhsph.edu/bit/cluster-usage.html for more instructions
-#
-# Set defaults for mem_free and h_vmem
--l mem_free=12G,h_vmem=12G
-#
-# Set the standard value for stack size limit
-# (needed for some programs to run properly when h_vmem is set)
--l h_stack=256M
-#
-# Set a default maximum file size that an SGE job can create
--l h_fsize=100G
-# Define my email
--M YOUR_EMAIL@gmail.com
-# To get an email on a job use -m e
-# Keep in mind the limits with sending emails from
-# https://jhpce.jhu.edu/email-qsub
+mem=2G
+mail-user=YOUR_EMAIL@gmail.com
 ```
 
 
