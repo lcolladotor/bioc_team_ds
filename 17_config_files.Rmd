@@ -481,7 +481,7 @@ alias modlua="cd /jhpce/shared/libd/modulefiles"
 # export _JAVA_OPTIONS="-Xms5g -Xmx6g"
 ## Disable for SPEAQeasy
 
-## From https://twitter.com/fellgernon/status/1258455434073124865?s=20
+## From https://twitter.com/lcolladotor/status/1258455434073124865?s=20
 ## and https://www.cyberciti.biz/tips/understanding-linux-unix-umask-value-usage.html
 umask u=rwx,g=rwx,o= ## equivalent to umask 007
 
