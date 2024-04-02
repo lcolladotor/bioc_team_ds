@@ -151,7 +151,7 @@ git-config-files
 gitconfig
 gitignore_global
 jhpce-files
-sge_request
+slurmdefaults
 bashrc
 bash_profile
 inputrc

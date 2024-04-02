@@ -372,7 +372,7 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 </ul></li>
 <li class="chapter" data-level="17.4" data-path="config-files.html"><a href="config-files.html#jhpce-files"><i class="fa fa-check"></i><b>17.4</b> JHPCE files</a>
 <ul>
-<li class="chapter" data-level="17.4.1" data-path="config-files.html"><a href="config-files.html#sge_request"><i class="fa fa-check"></i><b>17.4.1</b> <code>~/.sge_request</code></a></li>
+<li class="chapter" data-level="17.4.1" data-path="config-files.html"><a href="config-files.html#slurmdefaults"><i class="fa fa-check"></i><b>17.4.1</b> <code>~/.slurm/defaults</code></a></li>
 <li class="chapter" data-level="17.4.2" data-path="config-files.html"><a href="config-files.html#bashrc"><i class="fa fa-check"></i><b>17.4.2</b> <code>~/.bashrc</code></a></li>
 <li class="chapter" data-level="17.4.3" data-path="config-files.html"><a href="config-files.html#bash_profile"><i class="fa fa-check"></i><b>17.4.3</b> <code>~/.bash_profile</code></a></li>
 <li class="chapter" data-level="17.4.4" data-path="config-files.html"><a href="config-files.html#inputrc"><i class="fa fa-check"></i><b>17.4.4</b> <code>~/.inputrc</code></a></li>
@@ -844,25 +844,11 @@ Thumbs.db</code></pre>
 <iframe width="560" height="315" src="https://www.youtube.com/embed/5pMVb8I6yXI" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen>
 </iframe>
 <p>These videos also talk about GitHub and local git setup on your laptop.</p>
-<div id="sge_request" class="section level3 hasAnchor" number="17.4.1">
-<h3><span class="header-section-number">17.4.1</span> <code>~/.sge_request</code><a href="config-files.html#sge_request" class="anchor-section" aria-label="Anchor link to header"></a></h3>
-<p>This file configures the default SGE requests under <code>qsub</code> and <code>qrsh</code>.</p>
-<div class="sourceCode" id="cb25"><pre class="sourceCode bash"><code class="sourceCode bash"><span id="cb25-1"><a href="config-files.html#cb25-1" tabindex="-1"></a><span class="co"># Check http://www.biostat.jhsph.edu/bit/cluster-usage.html for more instructions</span></span>
-<span id="cb25-2"><a href="config-files.html#cb25-2" tabindex="-1"></a><span class="co">#</span></span>
-<span id="cb25-3"><a href="config-files.html#cb25-3" tabindex="-1"></a><span class="co"># Set defaults for mem_free and h_vmem</span></span>
-<span id="cb25-4"><a href="config-files.html#cb25-4" tabindex="-1"></a><span class="ex">-l</span> mem_free=12G,h_vmem=12G</span>
-<span id="cb25-5"><a href="config-files.html#cb25-5" tabindex="-1"></a><span class="co">#</span></span>
-<span id="cb25-6"><a href="config-files.html#cb25-6" tabindex="-1"></a><span class="co"># Set the standard value for stack size limit</span></span>
-<span id="cb25-7"><a href="config-files.html#cb25-7" tabindex="-1"></a><span class="co"># (needed for some programs to run properly when h_vmem is set)</span></span>
-<span id="cb25-8"><a href="config-files.html#cb25-8" tabindex="-1"></a><span class="ex">-l</span> h_stack=256M</span>
-<span id="cb25-9"><a href="config-files.html#cb25-9" tabindex="-1"></a><span class="co">#</span></span>
-<span id="cb25-10"><a href="config-files.html#cb25-10" tabindex="-1"></a><span class="co"># Set a default maximum file size that an SGE job can create</span></span>
-<span id="cb25-11"><a href="config-files.html#cb25-11" tabindex="-1"></a><span class="ex">-l</span> h_fsize=100G</span>
-<span id="cb25-12"><a href="config-files.html#cb25-12" tabindex="-1"></a><span class="co"># Define my email</span></span>
-<span id="cb25-13"><a href="config-files.html#cb25-13" tabindex="-1"></a><span class="ex">-M</span> YOUR_EMAIL@gmail.com</span>
-<span id="cb25-14"><a href="config-files.html#cb25-14" tabindex="-1"></a><span class="co"># To get an email on a job use -m e</span></span>
-<span id="cb25-15"><a href="config-files.html#cb25-15" tabindex="-1"></a><span class="co"># Keep in mind the limits with sending emails from</span></span>
-<span id="cb25-16"><a href="config-files.html#cb25-16" tabindex="-1"></a><span class="co"># https://jhpce.jhu.edu/email-qsub</span></span></code></pre></div>
+<div id="slurmdefaults" class="section level3 hasAnchor" number="17.4.1">
+<h3><span class="header-section-number">17.4.1</span> <code>~/.slurm/defaults</code><a href="config-files.html#slurmdefaults" class="anchor-section" aria-label="Anchor link to header"></a></h3>
+<p>This file configures the default SLURM requests under <code>srun</code> and <code>sbatch</code>. See this <a href="https://lists.jh.edu/sympa/arc/bithelp/2024-04/msg00018.html">BitHelp thread</a> for more details about this file.</p>
+<div class="sourceCode" id="cb25"><pre class="sourceCode bash"><code class="sourceCode bash"><span id="cb25-1"><a href="config-files.html#cb25-1" tabindex="-1"></a><span class="va">mem</span><span class="op">=</span>2G</span>
+<span id="cb25-2"><a href="config-files.html#cb25-2" tabindex="-1"></a><span class="ex">mail-user=YOUR_EMAIL@gmail.com</span></span></code></pre></div>
 </div>
 <div id="bashrc" class="section level3 hasAnchor" number="17.4.2">
 <h3><span class="header-section-number">17.4.2</span> <code>~/.bashrc</code><a href="config-files.html#bashrc" class="anchor-section" aria-label="Anchor link to header"></a></h3>
