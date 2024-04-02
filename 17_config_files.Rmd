@@ -504,14 +504,6 @@ shopt -s cmdhist
 # http://superuser.com/questions/384769/alias-rm-rm-i-considered-harmful
 alias rmi='rm -i'
 
-# Change command prompt
-# http://www.cyberciti.biz/tips/howto-linux-unix-bash-shell-setup-prompt.html
-# http://www.cyberciti.biz/faq/bash-shell-change-the-color-of-my-shell-prompt-under-linux-or-unix/
-# https://bbs.archlinux.org/viewtopic.php?id=48910
-# previous in enigma2: "[\u@\h \W]\$ "
-# previously in mac: "\h:\W \u\$ "
-export PS1="\[\e[0;33m\]\A \W \$ \[\e[m\]"
-
 # colors
 # http://norbauer.com/notebooks/code/notes/ls-colors-and-terminal-app
 # used BSD pattern ExGxFxDxBxEgEdxbxgxhxd on http://geoff.greer.fm/lscolors/
@@ -555,6 +547,14 @@ fi
 ## Set an alias to run JHPCE rsrun with X11 support
 ## Documented at https://jhpce.jhu.edu/slurm/interactive-jobs/#shortcuts
 jsrun() { if [ -z ${DISPLAY} ]; then /usr/bin/srun --pty "$@" bash; else /usr/bin/srun --pty --x11 "$@" bash; fi }
+
+# Change command prompt
+# http://www.cyberciti.biz/tips/howto-linux-unix-bash-shell-setup-prompt.html
+# http://www.cyberciti.biz/faq/bash-shell-change-the-color-of-my-shell-prompt-under-linux-or-unix/
+# https://bbs.archlinux.org/viewtopic.php?id=48910
+# previous in enigma2: "[\u@\h \W]\$ "
+# previously in mac: "\h:\W \u\$ "
+export PS1="\[\e[0;33m\]\A \W \$ \[\e[m\]"
 
 ```
 
