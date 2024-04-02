@@ -465,6 +465,31 @@ if [ -f /etc/bashrc ]; then
 	. /etc/bashrc
 fi
 
+## Team home directories
+alias dcl02="cd /dcl02/lieber/lcolladotor"
+alias dcs04="cd /dcs04/lieber/lcolladotor"
+alias dcs05="cd /dcs05/lieber/lcolladotor"
+
+## Creating modules
+# https://lmod.readthedocs.io/en/latest/050_lua_modulefiles.html
+# SLURM
+alias modsrc="cd /jhpce/shared/libd/core"
+alias modlua="cd /jhpce/shared/libd/modulefiles"
+
+## To deal with running nextflow without requesting much more memory
+## https://jhpce.jhu.edu/question/why-do-i-get-memory-errors-when-running-java/
+# export _JAVA_OPTIONS="-Xms5g -Xmx6g"
+## Disable for SPEAQeasy
+
+## From https://twitter.com/fellgernon/status/1258455434073124865?s=20
+## and https://www.cyberciti.biz/tips/understanding-linux-unix-umask-value-usage.html
+umask u=rwx,g=rwx,o= ## equivalent to umask 007
+
+# Exit for non-interactive shells
+# Obtained this information from Geo Pertea
+# as noted at https://lists.jh.edu/sympa/arc/bithelp/2024-04/msg00020.html.
+[[ ${-#*i} != ${-} ]] || return
+
 # User specific aliases and functions
 # Auto-complete command from history
 # http://lindesk.com/2009/04/customize-terminal-configuration-setting-bash-cli-power-user/
@@ -486,17 +511,6 @@ alias rmi='rm -i'
 # previous in enigma2: "[\u@\h \W]\$ "
 # previously in mac: "\h:\W \u\$ "
 export PS1="\[\e[0;33m\]\A \W \$ \[\e[m\]"
-
-## Team home directories
-alias dcl02="cd /dcl02/lieber/lcolladotor"
-alias dcs04="cd /dcs04/lieber/lcolladotor"
-alias dcs05="cd /dcs05/lieber/lcolladotor"
-
-## Creating modules
-# https://lmod.readthedocs.io/en/latest/050_lua_modulefiles.html
-# SLURM
-alias modsrc="cd /jhpce/shared/libd/core"
-alias modlua="cd /jhpce/shared/libd/modulefiles"
 
 # colors
 # http://norbauer.com/notebooks/code/notes/ls-colors-and-terminal-app
@@ -542,14 +556,6 @@ fi
 ## Documented at https://jhpce.jhu.edu/slurm/interactive-jobs/#shortcuts
 jsrun() { if [ -z ${DISPLAY} ]; then /usr/bin/srun --pty "$@" bash; else /usr/bin/srun --pty --x11 "$@" bash; fi }
 
-## To deal with running nextflow without requesting much more memory
-## https://jhpce.jhu.edu/question/why-do-i-get-memory-errors-when-running-java/
-# export _JAVA_OPTIONS="-Xms5g -Xmx6g"
-## Disable for SPEAQeasy
-
-## From https://twitter.com/fellgernon/status/1258455434073124865?s=20
-## and https://www.cyberciti.biz/tips/understanding-linux-unix-umask-value-usage.html
-umask u=rwx,g=rwx,o= ## equivalent to umask 007
 ```
 
 For more information on `rmate` and `rmote` and how it relates to these configuration files, check this video and [companion notes](https://docs.google.com/document/d/1vj0xa_qZTIgsnooW_9_j44Low1UbSIufnlGXCgL_YCU/edit).
