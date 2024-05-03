@@ -613,12 +613,15 @@ Do you want to use <a href="https://twitter.com/Bioconductor?ref_src=twsrc%5Etfw
 <span id="cb18-6"><a href="config-files.html#cb18-6" tabindex="-1"></a>)</span>
 <span id="cb18-7"><a href="config-files.html#cb18-7" tabindex="-1"></a></span>
 <span id="cb18-8"><a href="config-files.html#cb18-8" tabindex="-1"></a><span class="do">## At JHPCE I use:</span></span>
-<span id="cb18-9"><a href="config-files.html#cb18-9" tabindex="-1"></a>installed_path <span class="ot">&lt;-</span> <span class="st">&quot;~/R/update_R&quot;</span></span>
+<span id="cb18-9"><a href="config-files.html#cb18-9" tabindex="-1"></a><span class="co"># installed_path &lt;- &quot;~/R/update_R&quot;</span></span>
 <span id="cb18-10"><a href="config-files.html#cb18-10" tabindex="-1"></a></span>
-<span id="cb18-11"><a href="config-files.html#cb18-11" tabindex="-1"></a>installed <span class="ot">&lt;-</span> <span class="fu">dir</span>(<span class="fu">.libPaths</span>())</span>
-<span id="cb18-12"><a href="config-files.html#cb18-12" tabindex="-1"></a><span class="co"># For JHPCE</span></span>
-<span id="cb18-13"><a href="config-files.html#cb18-13" tabindex="-1"></a>installed <span class="ot">&lt;-</span> <span class="fu">dir</span>(<span class="fu">.libPaths</span>()[<span class="dv">1</span>])</span>
-<span id="cb18-14"><a href="config-files.html#cb18-14" tabindex="-1"></a><span class="fu">save</span>(installed, <span class="at">file =</span> <span class="fu">file.path</span>(installed_path, <span class="fu">paste0</span>(<span class="fu">Sys.Date</span>(), <span class="st">&#39;-installed.Rdata&#39;</span>)))</span></code></pre></div>
+<span id="cb18-11"><a href="config-files.html#cb18-11" tabindex="-1"></a><span class="do">## Locate installed R packages</span></span>
+<span id="cb18-12"><a href="config-files.html#cb18-12" tabindex="-1"></a>installed <span class="ot">&lt;-</span> <span class="fu">dir</span>(<span class="fu">.libPaths</span>())</span>
+<span id="cb18-13"><a href="config-files.html#cb18-13" tabindex="-1"></a><span class="co"># For JHPCE</span></span>
+<span id="cb18-14"><a href="config-files.html#cb18-14" tabindex="-1"></a><span class="co"># installed &lt;- dir(.libPaths()[1])</span></span>
+<span id="cb18-15"><a href="config-files.html#cb18-15" tabindex="-1"></a></span>
+<span id="cb18-16"><a href="config-files.html#cb18-16" tabindex="-1"></a><span class="do">## Save list of installed packages for later use</span></span>
+<span id="cb18-17"><a href="config-files.html#cb18-17" tabindex="-1"></a><span class="fu">save</span>(installed, <span class="at">file =</span> <span class="fu">file.path</span>(installed_path, <span class="fu">paste0</span>(<span class="fu">Sys.Date</span>(), <span class="st">&#39;-installed.Rdata&#39;</span>)))</span></code></pre></div>
 <div class="sourceCode" id="cb19"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb19-1"><a href="config-files.html#cb19-1" tabindex="-1"></a><span class="do">## Load previous &quot;installed&quot; packages</span></span>
 <span id="cb19-2"><a href="config-files.html#cb19-2" tabindex="-1"></a>previous <span class="ot">&lt;-</span> <span class="fu">dir</span>(<span class="at">path =</span> installed_path, <span class="at">pattern =</span> <span class="st">&#39;installed.Rdata&#39;</span>)</span>
 <span id="cb19-3"><a href="config-files.html#cb19-3" tabindex="-1"></a><span class="fu">load</span>(<span class="fu">file.path</span>(installed_path, previous[<span class="fu">length</span>(previous)]), <span class="at">verbose =</span> <span class="cn">TRUE</span>)</span>
