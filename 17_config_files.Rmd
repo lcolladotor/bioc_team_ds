@@ -188,11 +188,14 @@ installed_path <- ifelse(
 )
 
 ## At JHPCE I use:
-installed_path <- "~/R/update_R"
+# installed_path <- "~/R/update_R"
 
+## Locate installed R packages
 installed <- dir(.libPaths())
 # For JHPCE
-installed <- dir(.libPaths()[1])
+# installed <- dir(.libPaths()[1])
+
+## Save list of installed packages for later use
 save(installed, file = file.path(installed_path, paste0(Sys.Date(), '-installed.Rdata')))
 ``` 
 
