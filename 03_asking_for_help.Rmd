@@ -128,7 +128,7 @@ Slack is organized in _Workspaces_. Each of them is either free or payed, depend
 
 #### JHU Genomics Collective
 
-This is our main Slack workspace. Just like `git` commit messages, channels are cheap. The idea is to make one channel per project. Currently, we are adding all team members to each channel even if they are not working on the specific project. Team members not involved in the project should feel free to **mute** the channel. However, by being a part of the channel, they can then see images and code that we are working on, which in some situations can be useful. For example, maybe we figured out how to make a new `plotly` interactive graph in one channel, then others who are curious can get access to that knowledge and incorporate it into their projects.
+This is our main Slack workspace. Just like `git` commit messages, channels are cheap. The idea is to make one channel per project. Sometimes we'll add team members to a channel even if they are not primarily working on the specific project (maybe we have a question we want to ask them or we are working in something similar in another project). Team members not primarily involved in the project should feel free to **mute** the channel. However, by being a part of the channel, they can then see images and code that we are working on, which in some situations can be useful. For example, maybe we figured out how to make a new `plotly` interactive graph in one channel, then others who are curious can get access to that knowledge and incorporate it into their projects.
 
 If you need help use:
 
@@ -150,15 +150,11 @@ The remaining main Slack channels are:
 There are also a set of public channels that we use frequently:
 
 * [**conferences**](https://jhu-genomics.slack.com/archives/C0703QKUN)
-* [**containers**](https://jhu-genomics.slack.com/archives/C8P5AJEFR): `docker`, `singularity`, etc
-* [**diversity**](https://jhu-genomics.slack.com/archives/C9HQ7LGJJ)
-* [**funding**](https://jhu-genomics.slack.com/archives/C02R11TTD)
 * [**general**](https://jhu-genomics.slack.com/archives/C029RHR0F)
 * [**genomics_seminar**](https://jhu-genomics.slack.com/archives/C08MZFZKJ): [Genomics at JHU seminars](https://twitter.com/GenomicsAtJHU?s=20)
 * [**jhpce**](https://jhu-genomics.slack.com/archives/C074W8800): JHPCE users, though also check the [`bithelp`](#bithelp) and [`bitsupport`](#bitsupport) mailing lists
 * [**jhu_papers**](https://jhu-genomics.slack.com/archives/C9JGFTKT2): where we announce papers with JHU authors
 * [**joint_group_meeting**](https://jhu-genomics.slack.com/archives/CC4C0BYGH): a JHU bi-weekly meeting led by Steven Salzberg and JHU colleagues. This is a great meeting to learn about methods work being done across Hopkins for genomics data analysis.
-* [**langmead_rss**](https://jhu-genomics.slack.com/archives/C0BSV0KHT): a channel where Ben Langmead shares papers he's interested in
 * [**r-ladies**](https://jhu-genomics.slack.com/archives/CAV89BNFK)
 * [**random**](https://jhu-genomics.slack.com/archives/C029RHR0H)
 * [**rstats**](https://jhu-genomics.slack.com/archives/C0DAQFGMU): major R announcements and other goodies
@@ -166,12 +162,7 @@ There are also a set of public channels that we use frequently:
 
 #### Martinowich
 
-This is the LIBD Slack workspace used by Keri Martinowich's team. Several of us work closely with her, Kristen Maynard, Stephanie Page and other Martinowich team projects.
-
-Some Slack channels of interest here are:
-
-* [**comm_labmeeting**](https://neuralplasticity.slack.com/archives/CLW4ZCDBK): for any communications related to the Martinowich lab meeting
-* Specific project channels
+This is the LIBD Slack workspace used by the teams led by Keri Martinowich, Kristen Maynard, and Stephanie Page. Several of us work closely with them on some projects.
 
 #### LIBD Neuropathology
 
