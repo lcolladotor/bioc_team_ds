@@ -93,7 +93,7 @@ BiocManager::install(c(
 ), dependencies = TRUE, update = FALSE)
 
 ## LIBD packages
-remotes::install_github(c(
+BiocManager::install(c(
     "LieberInstitute/DeconvoBuddies",
     "LieberInstitute/jaffelab",
     # "LieberInstitute/recount.bwtool", ## Not really used anymore
