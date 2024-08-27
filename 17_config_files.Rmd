@@ -93,13 +93,14 @@ BiocManager::install(c(
 ), dependencies = TRUE, update = FALSE)
 
 ## LIBD packages
-BiocManager::install(c(
+remotes::install_github(c(
     "LieberInstitute/DeconvoBuddies",
     "LieberInstitute/jaffelab",
     # "LieberInstitute/recount.bwtool", ## Not really used anymore
     # "LieberInstitute/sgejobs", ## replaced by slurmjobs
     "LieberInstitute/slurmjobs",
-    "LieberInstitute/shinycsv"
+    "LieberInstitute/shinycsv",
+    "LieberInstitute/visiumStitched"
 ), dependencies = TRUE)
 
 ## CRAN packages
@@ -541,7 +542,7 @@ if [[ $HOSTNAME == compute-* ]] || [[ $HOSTNAME == transfer-* ]]; then
 	module load git-status-size
 	module load git-lfs
 	module load rmate
-	module load conda_R/4.3.x
+	module load conda_R/4.4
 fi
 
 ## Set an alias to run JHPCE rsrun with X11 support
