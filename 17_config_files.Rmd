@@ -171,9 +171,9 @@ remotes::install_github(
 )
 
 ## Packages I only install at JHPCE
-remotes::install_github(c(
-    "muschellij2/clusterRundown"
-))
+# remotes::install_github(c(
+#     "muschellij2/clusterRundown" ## this package was for JHPCE v2. Since 2023 we are using JHPCE v3.
+# ))
 ```
 
 #### Previously installed
