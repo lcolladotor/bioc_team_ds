@@ -99,7 +99,7 @@ remotes::install_github(c(
     # "LieberInstitute/recount.bwtool", ## Not really used anymore
     # "LieberInstitute/sgejobs", ## replaced by slurmjobs
     "LieberInstitute/slurmjobs",
-    "LieberInstitute/shinycsv",
+    # "LieberInstitute/shinycsv", ## Not really used anymore
     "LieberInstitute/visiumStitched"
 ), dependencies = TRUE)
 
