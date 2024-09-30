@@ -345,6 +345,6 @@ See the [conferences/courses of interest](https://docs.google.com/spreadsheets/d
 
 ## Baltimore Life
 
-* ["So you're moving to Baltimore"](https://simplystatistics.org/2013/09/13/so-youre-moving-to-baltimore/) 2013 blog post by [Brian Caffo](www.bcaffo.com).
+* ["So you're moving to Baltimore"](https://simplystatistics.org/posts/2013-09-13-so-youre-moving-to-baltimore/) 2013 blog post by [Brian Caffo](https://sites.google.com/view/bcaffo/home/).
 * The Baltimore Symphony Orchestra has [discount tickets](https://www.bsomusic.org/calendar/special-offers/) which you might be interested in.
 * [Live Baltimore](https://livebaltimore.com/) for relevant information that might be useful prior to buying a home.
