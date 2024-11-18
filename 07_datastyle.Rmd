@@ -1,6 +1,6 @@
 # The Elements of Data Analytic Style 
 
-[Jeff Leek](https://twitter.com/jtleek) is world renowned for his efforts in data science education and become widely known through the [JHU Data Science Specialization Coursera](https://www.coursera.org/specializations/jhu-data-science) courses as well as the [Simply Statitics](https://simplystatistics.org/) blog. Over the years, Jeff has shared his ideas through multiple venues including GitHub repositories such as [`jtleek/reviews`](https://github.com/jtleek/reviews) which provides a guide for reviewing papers.
+[Jeff Leek](https://bsky.app/profile/jtleek.bsky.social) is world renowned for his efforts in data science education and become widely known through the [JHU Data Science Specialization Coursera](https://www.coursera.org/specializations/jhu-data-science) courses as well as the [Simply Statitics](https://simplystatistics.org/) blog. Over the years, Jeff has shared his ideas through multiple venues including GitHub repositories such as [`jtleek/reviews`](https://github.com/jtleek/reviews) which provides a guide for reviewing papers.
 
 Around 2016, Jeff re-organized his ideas related to learning and applying data science to create a book called [**The Elements of Data Analytic Style**](https://leanpub.com/datastyle) that you can buy for a small amount or even get it free through [Leanpub](https://leanpub.com/datastyle). This book is about 90 pages long and is organized in chapters that cover topics such as:
 

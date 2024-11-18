@@ -108,7 +108,7 @@ We use `R` quite a bit, and that's actually how this website was made. Here are 
 * [Using the RStudio Terminal](https://support.rstudio.com/hc/en-us/articles/115010737148-Using-the-RStudio-Terminal).
 * RStudio [cheatsheets](https://www.rstudio.com/resources/cheatsheets/) for many things including regular expressions, `purrr` for functional programming, etc.
 * [Building Tidy Tools workshop materials](https://rstd.io/tidytools19) by Charlotte Wickham and Hadley Wickham for the rstudio 2019 conference. Materials from other workshops is available [here](https://blog.rstudio.com/2019/02/06/rstudio-conf-2019-workshops/).
-* [R Markdown documentation website](https://rmarkdown.rstudio.com/docs/) announced by [Alison Hill](https://twitter.com/apreshill/status/1171290891157307392?s=20).
+* [R Markdown documentation website](https://rmarkdown.rstudio.com/docs/) announced by [Alison Hill](https://bsky.app/profile/apreshill.com) on [this post](https://twitter.com/apreshill/status/1171290891157307392?s=20).
 * [Cookbook for R graphs, 2nd edition](https://r-graphics.org/) with useful `ggplot2` code.
 * [Updating R](http://lcolladotor.github.io/2017/05/04/updating-r/#.XXf3hZNKi50) blog post, though also check more recent resources on the LIBD rstats club Google Sheet.
 * Tutorial for [building R websites](http://www.emilyzabor.com/tutorials/rmarkdown_websites_tutorial.html) by [Emily C Zabor](http://www.emilyzabor.com/). More on R Markdown websites [here](https://bookdown.org/yihui/rmarkdown/rmarkdown-site.html), which is how this website was made.
@@ -123,7 +123,7 @@ We use `R` quite a bit, and that's actually how this website was made. Here are 
 
 ## Team communication
 
-Overall, it's important to ask for help. We try to follow the advice from the [you must try, and then you must ask](https://blogs.akamai.com/2013/10/you-must-try-and-then-you-must-ask.html) blog post. Also try to ask in a Slack channel where others might be able to benefit from your answers in the future. If enough people ask about something, we'll try to write a blog post as [advised here](http://varianceexplained.org/r/start-blog/) by [David Robinson](https://twitter.com/drob). For more details, see the [**"how to ask for help"**](how-to-ask-for-help) page.
+Overall, it's important to ask for help. We try to follow the advice from the [you must try, and then you must ask](https://blogs.akamai.com/2013/10/you-must-try-and-then-you-must-ask.html) blog post. Also try to ask in a Slack channel where others might be able to benefit from your answers in the future. If enough people ask about something, we'll try to write a blog post as [advised here](http://varianceexplained.org/r/start-blog/) by [David Robinson](https://bsky.app/profile/drob.bsky.social). For more details, see the [**"how to ask for help"**](how-to-ask-for-help) page.
 
 ### Zoom
 
@@ -179,7 +179,7 @@ example
 
 * We have a team Google Calendar. Ask Leonardo Collado-Torres via Slack to add you to the calendar with your Google account email address (could be your libd one or could be a gmail account). The calendar is linked to [`#libd_team_lcolladotor`](https://jhu-genomics.slack.com/archives/C01AD6PQHNW) and sends reminders to that channel 30 minutes before an event happens.
 
-### Academic Twitter
+### Academic Bluesky (or X/Twitter)
 
 * [Tackling Twitter as a Graduate Student](https://biomedicalodyssey.blogs.hopkinsmedicine.org/2019/09/tackling-twitter-as-a-graduate-student/) blog post.
 

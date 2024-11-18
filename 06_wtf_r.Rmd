@@ -1,6 +1,6 @@
 # What they forgot to teach you about R
 
-[Jenny Bryan](https://twitter.com/JennyBryan), [Jim Hester](https://twitter.com/jimhester_), [Kara Woo](https://twitter.com/kara_woo) and others have spent a significant amount of effort thinking about organizing R projects and developing tools that facilitate this process. They have written papers describing their ideas, trained others on how to implement their ideas through workshops, and written free books.
+[Jenny Bryan](https://bsky.app/profile/jennybryan.bsky.social), [Jim Hester](https://twitter.com/jimhester_), [Kara Woo](https://bsky.app/profile/karawoo.com) and others have spent a significant amount of effort thinking about organizing R projects and developing tools that facilitate this process. They have written papers describing their ideas, trained others on how to implement their ideas through workshops, and written free books.
 
 Two of the main books related to these ideas are:
 

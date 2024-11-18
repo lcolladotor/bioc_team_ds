@@ -120,7 +120,7 @@ Some mailing lists are very specific to what they serve. There are several of th
 
 ## Slack
 
-Within our team and collaborators, we use [Slack](https://slack.com/) extensively. If you are new to Slack, you might want to read this [blog post](http://lcolladotor.github.io/2018/06/19/using-slack-for-academic-departmental-communication/#.X4nr0NBKguU) that I co-authored with [Stephanie C Hicks](https://twitter.com/stephaniehicks). In that blog post, we talk about some important Slack settings that will make it easier to keep your work-life balance in check.
+Within our team and collaborators, we use [Slack](https://slack.com/) extensively. If you are new to Slack, you might want to read this [blog post](http://lcolladotor.github.io/2018/06/19/using-slack-for-academic-departmental-communication/#.X4nr0NBKguU) that I co-authored with [Stephanie C Hicks](https://bsky.app/profile/stephaniehicks.bsky.social). In that blog post, we talk about some important Slack settings that will make it easier to keep your work-life balance in check.
 
 Slack is organized in _Workspaces_. Each of them is either free or payed, depending on the group. We mostly use the JHU Genomics Collective Slack workspace, which is a payed workspace. Meaning that we have access to all Slack-related goodies, like integrations with GitHub, Google Calendar, Google Docs, email, etc. Below you can find more information about the differnet Slack workspaces we use.
 
