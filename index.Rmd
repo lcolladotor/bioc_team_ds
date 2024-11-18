@@ -61,5 +61,5 @@ With lessons learned from former mentors [Jeffrey T. Leek](https://github.com/jt
 You can find us on Bluesky through the [LIBD rstats club account](https://bsky.app/profile/libdrstats.bsky.social) and our own accounts where we share our work.
 
 <center>
-<a href="https://go.bsky.app/53gy4UP"><img src="https://lcolladotor.github.io/media/LIBD_Data_Science_Team_1__members_and_alumni_Share_Card.png alt = "LIBD Data Science Team 1 Bluesky starter pack" width = "300"></a>
+<a href="https://go.bsky.app/53gy4UP"><img src="https://lcolladotor.github.io/media/LIBD_Data_Science_Team_1__members_and_alumni_Share_Card.png" alt = "LIBD Data Science Team 1 Bluesky starter pack" width = "300"></a>
 </center>
