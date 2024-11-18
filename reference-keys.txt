@@ -12,7 +12,7 @@ zoom
 github
 slack
 team-calendar
-academic-twitter
+academic-bluesky-or-xtwitter
 laptop-setup
 jhpce
 jhpce-account
