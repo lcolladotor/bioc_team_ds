@@ -77,6 +77,7 @@ remotes::install_github("cloudyr/rmote")
 BiocManager::install(c(
     "biocthis",
     "brainflowprobes",
+    "DeconvoBuddies", ## under review at BioC
     "derfinder",
     "derfinderPlot",
     "GenomicState",
@@ -89,7 +90,8 @@ BiocManager::install(c(
     "regionReport",
     "smokingMouse",
     "spatialLIBD",
-    "TREG"
+    "TREG",
+    "visiumStitched" ## accepted at BioC but not yet available from it
 ), dependencies = TRUE, update = FALSE)
 
 ## LIBD packages
