@@ -99,7 +99,6 @@ remotes::install_github(c(
     "LieberInstitute/DeconvoBuddies",
     "LieberInstitute/jaffelab",
     # "LieberInstitute/recount.bwtool", ## Not really used anymore
-    # "LieberInstitute/sgejobs", ## replaced by slurmjobs
     "LieberInstitute/slurmjobs",
     # "LieberInstitute/shinycsv", ## Not really used anymore
     "LieberInstitute/visiumStitched"
