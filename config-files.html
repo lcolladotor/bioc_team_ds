@@ -505,7 +505,7 @@ Do you want to use <a href="https://twitter.com/Bioconductor?ref_src=twsrc%5Etfw
 <span id="cb17-30"><a href="config-files.html#cb17-30" tabindex="-1"></a><span class="do">## Main packages</span></span>
 <span id="cb17-31"><a href="config-files.html#cb17-31" tabindex="-1"></a>BiocManager<span class="sc">::</span><span class="fu">install</span>(<span class="fu">c</span>(</span>
 <span id="cb17-32"><a href="config-files.html#cb17-32" tabindex="-1"></a>    <span class="st">&quot;biocthis&quot;</span>,</span>
-<span id="cb17-33"><a href="config-files.html#cb17-33" tabindex="-1"></a>    <span class="st">&quot;brainflowprobes&quot;</span>,</span>
+<span id="cb17-33"><a href="config-files.html#cb17-33" tabindex="-1"></a>    <span class="st">&quot;DeconvoBuddies&quot;</span>, <span class="do">## under review at BioC</span></span>
 <span id="cb17-34"><a href="config-files.html#cb17-34" tabindex="-1"></a>    <span class="st">&quot;derfinder&quot;</span>,</span>
 <span id="cb17-35"><a href="config-files.html#cb17-35" tabindex="-1"></a>    <span class="st">&quot;derfinderPlot&quot;</span>,</span>
 <span id="cb17-36"><a href="config-files.html#cb17-36" tabindex="-1"></a>    <span class="st">&quot;GenomicState&quot;</span>,</span>
@@ -518,15 +518,15 @@ Do you want to use <a href="https://twitter.com/Bioconductor?ref_src=twsrc%5Etfw
 <span id="cb17-43"><a href="config-files.html#cb17-43" tabindex="-1"></a>    <span class="st">&quot;regionReport&quot;</span>,</span>
 <span id="cb17-44"><a href="config-files.html#cb17-44" tabindex="-1"></a>    <span class="st">&quot;smokingMouse&quot;</span>,</span>
 <span id="cb17-45"><a href="config-files.html#cb17-45" tabindex="-1"></a>    <span class="st">&quot;spatialLIBD&quot;</span>,</span>
-<span id="cb17-46"><a href="config-files.html#cb17-46" tabindex="-1"></a>    <span class="st">&quot;TREG&quot;</span></span>
-<span id="cb17-47"><a href="config-files.html#cb17-47" tabindex="-1"></a>), <span class="at">dependencies =</span> <span class="cn">TRUE</span>, <span class="at">update =</span> <span class="cn">FALSE</span>)</span>
-<span id="cb17-48"><a href="config-files.html#cb17-48" tabindex="-1"></a></span>
-<span id="cb17-49"><a href="config-files.html#cb17-49" tabindex="-1"></a><span class="do">## LIBD packages</span></span>
-<span id="cb17-50"><a href="config-files.html#cb17-50" tabindex="-1"></a>remotes<span class="sc">::</span><span class="fu">install_github</span>(<span class="fu">c</span>(</span>
-<span id="cb17-51"><a href="config-files.html#cb17-51" tabindex="-1"></a>    <span class="st">&quot;LieberInstitute/DeconvoBuddies&quot;</span>,</span>
-<span id="cb17-52"><a href="config-files.html#cb17-52" tabindex="-1"></a>    <span class="st">&quot;LieberInstitute/jaffelab&quot;</span>,</span>
-<span id="cb17-53"><a href="config-files.html#cb17-53" tabindex="-1"></a>    <span class="co"># &quot;LieberInstitute/recount.bwtool&quot;, ## Not really used anymore</span></span>
-<span id="cb17-54"><a href="config-files.html#cb17-54" tabindex="-1"></a>    <span class="co"># &quot;LieberInstitute/sgejobs&quot;, ## replaced by slurmjobs</span></span>
+<span id="cb17-46"><a href="config-files.html#cb17-46" tabindex="-1"></a>    <span class="st">&quot;TREG&quot;</span>,</span>
+<span id="cb17-47"><a href="config-files.html#cb17-47" tabindex="-1"></a>    <span class="st">&quot;visiumStitched&quot;</span> <span class="do">## accepted at BioC but not yet available from it</span></span>
+<span id="cb17-48"><a href="config-files.html#cb17-48" tabindex="-1"></a>), <span class="at">dependencies =</span> <span class="cn">TRUE</span>, <span class="at">update =</span> <span class="cn">FALSE</span>)</span>
+<span id="cb17-49"><a href="config-files.html#cb17-49" tabindex="-1"></a></span>
+<span id="cb17-50"><a href="config-files.html#cb17-50" tabindex="-1"></a><span class="do">## LIBD packages</span></span>
+<span id="cb17-51"><a href="config-files.html#cb17-51" tabindex="-1"></a>remotes<span class="sc">::</span><span class="fu">install_github</span>(<span class="fu">c</span>(</span>
+<span id="cb17-52"><a href="config-files.html#cb17-52" tabindex="-1"></a>    <span class="st">&quot;LieberInstitute/DeconvoBuddies&quot;</span>,</span>
+<span id="cb17-53"><a href="config-files.html#cb17-53" tabindex="-1"></a>    <span class="st">&quot;LieberInstitute/jaffelab&quot;</span>,</span>
+<span id="cb17-54"><a href="config-files.html#cb17-54" tabindex="-1"></a>    <span class="co"># &quot;LieberInstitute/recount.bwtool&quot;, ## Not really used anymore</span></span>
 <span id="cb17-55"><a href="config-files.html#cb17-55" tabindex="-1"></a>    <span class="st">&quot;LieberInstitute/slurmjobs&quot;</span>,</span>
 <span id="cb17-56"><a href="config-files.html#cb17-56" tabindex="-1"></a>    <span class="co"># &quot;LieberInstitute/shinycsv&quot;, ## Not really used anymore</span></span>
 <span id="cb17-57"><a href="config-files.html#cb17-57" tabindex="-1"></a>    <span class="st">&quot;LieberInstitute/visiumStitched&quot;</span></span>
