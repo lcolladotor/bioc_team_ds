@@ -542,7 +542,7 @@ if [[ $HOSTNAME == compute-* ]] || [[ $HOSTNAME == transfer-* ]]; then
 	module load git-status-size
 	module load git-lfs
 	module load rmate
-	module load conda_R/4.4
+	module load conda_R/4.4.x ## for BioC 3.20
 fi
 
 ## Set an alias to run JHPCE rsrun with X11 support
