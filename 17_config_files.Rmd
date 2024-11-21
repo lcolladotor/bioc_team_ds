@@ -76,7 +76,6 @@ remotes::install_github("cloudyr/rmote")
 ## Main packages
 BiocManager::install(c(
     "biocthis",
-    "brainflowprobes",
     "DeconvoBuddies", ## under review at BioC
     "derfinder",
     "derfinderPlot",
