@@ -12,6 +12,8 @@ Leo's team:
 
 * Cynthia Soto Cardinault
   - **Sign up** via [Calendly](https://calendly.com/cynthiacardinault/25-min-data-science-guidance-session)
+* Manisha Barse
+  - **Sign up** via [Calendly](https://calendly.com/manishabarse/25-minute-data-science-guidance-session)
 * Nicholas J. Eagles
   - **Sign up** via [Calendly](https://calendly.com/nick-eagles/25-minute-data-science-guidance-session)
 * Louise A. Huuki-Myers
@@ -115,6 +117,11 @@ Please try reaching out to multiple people instead of one person for all your qu
   - Technologies I use: bulk RNA-seq, linux, python, R/WGCNA and github.
   - Learning about: snRNA-seq, multi-omics, snATAC and deconvolution.
   - **Sign up** via [Calendly](https://calendly.com/cynthiacardinault/25-min-data-science-guidance-session)
+* [Manisha Barse](https://github.com/manishabarse) ([BioC Support](https://support.bioconductor.org/u/59591/))
+  - Research interests: bulk RNA-seq, scRNA-seq, building computational pipelines.
+  - Technologies I use: linux, python, R, github.
+  - Learning about: spatial transcriptomics, coding workflows.
+  - **Sign up** via [Calendly](https://calendly.com/manishabarse/25-minute-data-science-guidance-session)
 * [Nicholas J. Eagles](https://github.com/Nick-Eagles) ([BioC Support](https://support.bioconductor.org/u/24264/))
   - Research interests: bulk/single-cell RNA-seq, spatial transcriptomics, building computational pipelines.
   - Technologies I use: R/Bioconductor, Git, Nextflow, python.
