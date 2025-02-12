@@ -439,11 +439,11 @@ Thumbs.db
 
 To configure your computer with JHPCE, you might want to check this video and [companion notes](https://gist.github.com/lcolladotor/3b1063db30a206835ee7e086c8f037ee) for macOS
 
-<iframe width="560" height="315" src="https://www.youtube.com/embed/UmE1DZe0B8U" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+<iframe width="560" height="315" src="https://www.youtube.com/embed/8tuI-ZAlZ1Y?si=zUg4WLXQbwrtvHOk" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
 
-or this other video and [companion notes](https://docs.google.com/document/d/1xv0X5j7vAvm1FENQFz6Jo47iq5jiDA7tAoXgHG5brlk/edit) for winOS.
+or this other video and [companion notes](https://docs.google.com/document/d/1Lxo1qXSAO2T0lLJUPvJuCBPhP3PJQEFcmrK5tIiqfgc/edit?usp=sharing) for winOS.
 
-<iframe width="560" height="315" src="https://www.youtube.com/embed/5pMVb8I6yXI" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+<iframe width="560" height="315" src="https://www.youtube.com/embed/qtn3eTwFlZI?si=2CQZuqpZuuZ-emHU" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
 
 These videos also talk about GitHub and local git setup on your laptop.
 
