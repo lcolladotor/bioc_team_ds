@@ -11,6 +11,10 @@ On 2020-04-06 I presented at [how to write papers using Google Docs](https://doc
 
 Most recently I presented at the [LIBD rstats club](https://bsky.app/profile/libdrstats.bsky.social) more ideas behind writing papers. Here are the [notes](https://docs.google.com/document/d/1V7hTQvWTurHqEm24Ufz9oVAPQy2ssyDPuPxJm5yills/edit?usp=sharing).
 
+Here's a <2 min video on exporting references from SciWheel.
+
+<iframe width="560" height="315" src="https://www.youtube.com/embed/1ZjHBxTVtk4?si=BtPTLHFI0IQOy_B9" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+
 ## Things to keep in mind
 
 While you'll want to check those videos and notes, a lot of it comes down to being organized and using the right tool for the job.
