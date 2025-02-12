@@ -23,6 +23,10 @@ Welcome to the [**R/Bioconductor-powered Team Data Science**](http://lcolladotor
 
 As a team, we run [Data Science guidance sessions](#data-science-guidance-sessions) where we help others navigate the world of data science. Through those sessions we identify concepts that we might need to explain better and this book is where we concentrate all our knowledge. Thus it is continuously modified and expanded. We often refer others to this specific chapters of this book, which in a way is a gloried collection of bookmarks with some of our own explanations.
 
+Here is a **TLDR** (_too long did not read_) 2025 version of what the team has expertise in analyzing ([slides orchestrated by Louise Huuki-Myers](https://speakerdeck.com/lahuuki/2025-libd-data-science-team-tl-dr)).
+
+<iframe width="560" height="315" src="https://www.youtube.com/embed/alL-g2roXxM?si=Lz5oizXFE0WTUJjL" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+
 ## YouTube {-}
 
 You can find our videos on **YouTube** at [lcolladotor/playlists](https://www.youtube.com/@lcolladotor/playlists). Some of our main video playlists are show below.
