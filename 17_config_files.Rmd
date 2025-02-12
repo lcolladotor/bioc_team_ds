@@ -93,13 +93,12 @@ BiocManager::install(c(
     "visiumStitched" ## accepted at BioC but not yet available from it
 ), dependencies = TRUE, update = FALSE)
 
-## LIBD packages
-remotes::install_github(c(
+## LIBD GitHub packages o
+BiocManager::install(c(
     "LieberInstitute/DeconvoBuddies",
     "LieberInstitute/jaffelab",
-    # "LieberInstitute/recount.bwtool", ## Not really used anymore
     "LieberInstitute/slurmjobs",
-    # "LieberInstitute/shinycsv", ## Not really used anymore
+    "LieberInstitute/spatialLIBD",
     "LieberInstitute/visiumStitched"
 ), dependencies = TRUE)
 
