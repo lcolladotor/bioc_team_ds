@@ -13,6 +13,7 @@ Here are some of my configuration files for working R and JHPCE.
   - Windows: I install the R versions in two different folders and switch them using RStudio's global configuration options
  https://cran.r-project.org/
 * Bioconductor-devel docker image: http://bioconductor.org/help/docker/
+* Air for auto-code formatting in RStudio and other editors: https://posit-dev.github.io/air/editor-rstudio.html
 
 <blockquote class="twitter-tweet"><p lang="en" dir="ltr">Do you want to use <a href="https://twitter.com/Bioconductor?ref_src=twsrc%5Etfw">@Bioconductor</a> 3.15? That means that you’ll need to install R 4.2 on your computer from CRAN <a href="https://t.co/11yTIRMqlC">https://t.co/11yTIRMqlC</a><br><br>For macOS users, you might want to use to install 📦 deps for compiling<br><br>sudo R<br>source(&quot;<a href="https://t.co/ATL1ipla0M">https://t.co/ATL1ipla0M</a>&quot;)<br>install.libs(&quot;all&quot;)<a href="https://twitter.com/hashtag/rstats?src=hash&amp;ref_src=twsrc%5Etfw">#rstats</a> <a href="https://t.co/EXUpWINy5T">https://t.co/EXUpWINy5T</a> <a href="https://t.co/X2HEbY1Znm">pic.twitter.com/X2HEbY1Znm</a></p>&mdash; 🇲🇽 Leonardo Collado-Torres (@lcolladotor) <a href="https://twitter.com/lcolladotor/status/1519665235652579328?ref_src=twsrc%5Etfw">April 28, 2022</a></blockquote> <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
 
@@ -333,6 +334,31 @@ TWITTER_PAT=a_private_file_path
 ### `~/.R/Makevars`
 
 I don't have anything in this file since R 4.0 on my macOS laptop.
+
+### `~/.air.toml`
+
+As noted in the [2025-03-14 Automatic R/Bioconductor code formatting](https://youtu.be/OoVBiO_Oc2k) _LIBD RStats club_ session (check the [notes here](https://docs.google.com/document/d/1g0fc5DNED6Oy4tcspYqzJoRInm4Q4T4XUxwfeO9Hb5A/edit?usp=sharing)), I recommend:
+
+* Use `styler` for auto-styling many files without having to open them one by one
+  * [Example](https://github.com/lcolladotor/biocthis/blob/6ac0f68e12b40056743fe2efe1f482879a08265b/dev/04_update.R#L9-L22 )
+  * Configure your `~/.Rprofile` for `styler` to use `biocthis::bioc_style()` as shown [here](https://github.com/lcolladotor/bioc_team_ds/blob/015e78dd1694c83f6153eaa5e055fff554fa199b/17_config_files.Rmd#L288-L291)
+* Use `Air` for styling code within `RStudio` (or your favorite editor supported by `Air`)
+  * When needed use `# fmt: skip` file or `# fmt: skip` due to [this issue](https://github.com/rstudio/rstudio/issues/15795 )
+  * Use a global (user level) `~/air.toml` file instead of one per project as shown below.
+* Configure `RStudio` to style files on save
+
+`~/air.toml` contents:
+
+```{toml "air", eval = FALSE}
+[format]
+line-width = 80
+indent-width = 4
+indent-style = "space"
+line-ending = "auto"
+persistent-line-breaks = true
+exclude = []
+default-exclude = true
+```
 
 ## Git config files
 
