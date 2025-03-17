@@ -757,15 +757,16 @@ Do you want to use <a href="https://twitter.com/Bioconductor?ref_src=twsrc%5Etfw
 <ul>
 <li>Use <code>styler</code> for auto-styling many files without having to open them one by one
 <ul>
-<li><a href="https://github.com/lcolladotor/biocthis/blob/6ac0f68e12b40056743fe2efe1f482879a08265b/dev/04_update.R#L9-L22">Example</a></li>
-<li>Configure your <code>~/.Rprofile</code> for <code>styler</code> to use <code>biocthis::bioc_style()</code> as shown <a href="https://github.com/lcolladotor/bioc_team_ds/blob/015e78dd1694c83f6153eaa5e055fff554fa199b/17_config_files.Rmd#L288-L291">here</a></li>
+<li><code>biocthis</code> <a href="https://github.com/lcolladotor/biocthis/blob/6ac0f68e12b40056743fe2efe1f482879a08265b/dev/04_update.R#L9-L22"><code>dev/04_update.R</code> example</a>.</li>
+<li><code>spatialDLPFC</code> <a href="https://github.com/LieberInstitute/spatialDLPFC/blob/main/code/update_style.R"><code>code/update_style.R</code> example</a>.</li>
+<li>Configure your <code>~/.Rprofile</code> for <code>styler</code> to use <code>biocthis::bioc_style()</code> as shown <a href="https://github.com/lcolladotor/bioc_team_ds/blob/015e78dd1694c83f6153eaa5e055fff554fa199b/17_config_files.Rmd#L288-L291">here</a>.</li>
 </ul></li>
 <li>Use <code>Air</code> for styling code within <code>RStudio</code> (or your favorite editor supported by <code>Air</code>)
 <ul>
-<li>When needed use <code># fmt: skip</code> file or <code># fmt: skip</code> due to <a href="https://github.com/rstudio/rstudio/issues/15795">this issue</a></li>
+<li>When needed use <code># fmt: skip</code> file or <code># fmt: skip</code> due to <a href="https://github.com/rstudio/rstudio/issues/15795">this issue</a>.</li>
 <li>Use a global (user level) <code>~/air.toml</code> file instead of one per project as shown below.</li>
 </ul></li>
-<li>Configure <code>RStudio</code> to style files on save</li>
+<li>Configure <code>RStudio</code> to style files on save.</li>
 </ul>
 <p><code>~/air.toml</code> contents:</p>
 <div class="sourceCode" id="cb22"><pre class="sourceCode toml"><code class="sourceCode toml"><span id="cb22-1"><a href="config-files.html#cb22-1" tabindex="-1"></a><span class="kw">[format]</span></span>
