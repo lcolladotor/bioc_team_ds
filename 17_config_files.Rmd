@@ -340,12 +340,13 @@ I don't have anything in this file since R 4.0 on my macOS laptop.
 As noted in the [2025-03-14 Automatic R/Bioconductor code formatting](https://youtu.be/OoVBiO_Oc2k) _LIBD RStats club_ session (check the [notes here](https://docs.google.com/document/d/1g0fc5DNED6Oy4tcspYqzJoRInm4Q4T4XUxwfeO9Hb5A/edit?usp=sharing)), I recommend:
 
 * Use `styler` for auto-styling many files without having to open them one by one
-  * [Example](https://github.com/lcolladotor/biocthis/blob/6ac0f68e12b40056743fe2efe1f482879a08265b/dev/04_update.R#L9-L22 )
-  * Configure your `~/.Rprofile` for `styler` to use `biocthis::bioc_style()` as shown [here](https://github.com/lcolladotor/bioc_team_ds/blob/015e78dd1694c83f6153eaa5e055fff554fa199b/17_config_files.Rmd#L288-L291)
+  * `biocthis` [`dev/04_update.R` example](https://github.com/lcolladotor/biocthis/blob/6ac0f68e12b40056743fe2efe1f482879a08265b/dev/04_update.R#L9-L22).
+  * `spatialDLPFC` [`code/update_style.R` example](https://github.com/LieberInstitute/spatialDLPFC/blob/main/code/update_style.R).
+  * Configure your `~/.Rprofile` for `styler` to use `biocthis::bioc_style()` as shown [here](https://github.com/lcolladotor/bioc_team_ds/blob/015e78dd1694c83f6153eaa5e055fff554fa199b/17_config_files.Rmd#L288-L291).
 * Use `Air` for styling code within `RStudio` (or your favorite editor supported by `Air`)
-  * When needed use `# fmt: skip` file or `# fmt: skip` due to [this issue](https://github.com/rstudio/rstudio/issues/15795 )
+  * When needed use `# fmt: skip` file or `# fmt: skip` due to [this issue](https://github.com/rstudio/rstudio/issues/15795).
   * Use a global (user level) `~/air.toml` file instead of one per project as shown below.
-* Configure `RStudio` to style files on save
+* Configure `RStudio` to style files on save.
 
 `~/air.toml` contents:
 
