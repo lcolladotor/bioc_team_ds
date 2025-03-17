@@ -6,7 +6,7 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge" />
   <title>10 Differential expression analysis | R/Bioconductor-powered Team Data Science</title>
   <meta name="description" content="10 Differential expression analysis | R/Bioconductor-powered Team Data Science" />
-  <meta name="generator" content="bookdown 0.36 and GitBook 2.6.7" />
+  <meta name="generator" content="bookdown 0.42 and GitBook 2.6.7" />
 
   <meta property="og:title" content="10 Differential expression analysis | R/Bioconductor-powered Team Data Science" />
   <meta property="og:type" content="book" />
@@ -54,6 +54,7 @@
 
 
 <style type="text/css">
+html { -webkit-text-size-adjust: 100%; }
 pre > code.sourceCode { white-space: pre; position: relative; }
 pre > code.sourceCode > span { display: inline-block; line-height: 1.25; }
 pre > code.sourceCode > span:empty { height: 1.2em; }
@@ -429,7 +430,7 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
             <section class="normal" id="section-">
 <div id="differential-expression-analysis" class="section level1 hasAnchor" number="10">
 <h1><span class="header-section-number">10</span> Differential expression analysis<a href="differential-expression-analysis.html#differential-expression-analysis" class="anchor-section" aria-label="Anchor link to header"></a></h1>
-<p>To learn about differential expression analysis we used the data from the <a href="http://research.libd.org/SPEAQeasy-example/"><code>SPEAQeasy-example</code></a> website we made. This involves work mostly by <a href="https://github.com/Nick-Eagles">Nicholas J. Eagles</a>, <a href="https://github.com/joshstolz">Joshua M. Stolz</a>, and <a href="https://github.com/lahuuki">Louise A. Huuki-Myers</a>. In particular, we followed the set of activities described in detail at <a href="http://research.libd.org/SPEAQeasy-example/bootcamp_intro"><strong>SPEAQeasy-example/bootcamp_intro</strong></a>. There are several Bioconductor <a href="http://bioconductor.org/packages/release/BiocViews.html#___Workflow">workflows</a> that also explain how to do differential expression analyses. However, we used the data from <code>SPEAQeasy-example</code> because it has specific properties that are common to the processed data we generate at LIBD, given that we’ve processed a lot of RNA-seq data using <a href="http://research.libd.org/SPEAQeasy/"><code>SPEAQeasy</code></a>. Having said that, for more in depth explanations, you might want to check the <a href="http://bioconductor.org/packages/release/workflows/vignettes/RNAseq123/inst/doc/limmaWorkflow.html"><code>RNAseq123</code></a> and the <a href="http://bioconductor.org/packages/release/workflows/vignettes/rnaseqGene/inst/doc/rnaseqGene.html"><code>rnaseqGene</code></a> Bioconductor workflows that explain how to use packages such as <em><a href="https://bioconductor.org/packages/3.17/limma">limma</a></em> and <em><a href="https://bioconductor.org/packages/3.17/DESeq2">DESeq2</a></em>.</p>
+<p>To learn about differential expression analysis we used the data from the <a href="http://research.libd.org/SPEAQeasy-example/"><code>SPEAQeasy-example</code></a> website we made. This involves work mostly by <a href="https://github.com/Nick-Eagles">Nicholas J. Eagles</a>, <a href="https://github.com/joshstolz">Joshua M. Stolz</a>, and <a href="https://github.com/lahuuki">Louise A. Huuki-Myers</a>. In particular, we followed the set of activities described in detail at <a href="http://research.libd.org/SPEAQeasy-example/bootcamp_intro"><strong>SPEAQeasy-example/bootcamp_intro</strong></a>. There are several Bioconductor <a href="http://bioconductor.org/packages/release/BiocViews.html#___Workflow">workflows</a> that also explain how to do differential expression analyses. However, we used the data from <code>SPEAQeasy-example</code> because it has specific properties that are common to the processed data we generate at LIBD, given that we’ve processed a lot of RNA-seq data using <a href="http://research.libd.org/SPEAQeasy/"><code>SPEAQeasy</code></a>. Having said that, for more in depth explanations, you might want to check the <a href="http://bioconductor.org/packages/release/workflows/vignettes/RNAseq123/inst/doc/limmaWorkflow.html"><code>RNAseq123</code></a> and the <a href="http://bioconductor.org/packages/release/workflows/vignettes/rnaseqGene/inst/doc/rnaseqGene.html"><code>rnaseqGene</code></a> Bioconductor workflows that explain how to use packages such as <em><a href="https://bioconductor.org/packages/3.20/limma">limma</a></em> and <em><a href="https://bioconductor.org/packages/3.20/DESeq2">DESeq2</a></em>.</p>
 <div id="bootcamp-sessions-2" class="section level2 hasAnchor" number="10.1">
 <h2><span class="header-section-number">10.1</span> Bootcamp sessions<a href="differential-expression-analysis.html#bootcamp-sessions-2" class="anchor-section" aria-label="Anchor link to header"></a></h2>
 <p>Below you can watch the videos of our training sessions.</p>
@@ -530,42 +531,42 @@ var addthis_share = {
 <script>
 gitbook.require(["gitbook"], function(gitbook) {
 gitbook.start({
-"sharing": {
-"github": false,
-"facebook": true,
-"twitter": true,
-"linkedin": false,
-"weibo": false,
-"instapaper": false,
-"vk": false,
-"whatsapp": false,
-"all": ["facebook", "twitter", "linkedin", "weibo", "instapaper"]
-},
-"fontsettings": {
-"theme": "white",
-"family": "sans",
-"size": 2
-},
-"edit": {
-"link": null,
-"text": null
-},
-"history": {
-"link": null,
-"text": null
-},
-"view": {
-"link": null,
-"text": null
-},
-"download": null,
-"search": {
-"engine": "fuse",
-"options": null
-},
-"toc": {
-"collapse": "subsection"
-}
+  "sharing": {
+    "github": false,
+    "facebook": true,
+    "twitter": true,
+    "linkedin": false,
+    "weibo": false,
+    "instapaper": false,
+    "vk": false,
+    "whatsapp": false,
+    "all": ["facebook", "twitter", "linkedin", "weibo", "instapaper"]
+  },
+  "fontsettings": {
+    "theme": "white",
+    "family": "sans",
+    "size": 2
+  },
+  "edit": {
+    "link": null,
+    "text": null
+  },
+  "history": {
+    "link": null,
+    "text": null
+  },
+  "view": {
+    "link": null,
+    "text": null
+  },
+  "download": null,
+  "search": {
+    "engine": "fuse",
+    "options": null
+  },
+  "toc": {
+    "collapse": "subsection"
+  }
 });
 });
 </script>
