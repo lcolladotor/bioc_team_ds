@@ -147,6 +147,7 @@ r-config-files
 rprofile
 renviron
 rmakevars
+air.toml
 git-config-files
 gitconfig
 gitignore_global
