@@ -77,7 +77,7 @@ remotes::install_github("cloudyr/rmote")
 ## Main packages
 BiocManager::install(c(
     "biocthis",
-    "DeconvoBuddies", ## under review at BioC
+    "DeconvoBuddies",
     "derfinder",
     "derfinderPlot",
     "GenomicState",
@@ -91,10 +91,10 @@ BiocManager::install(c(
     "smokingMouse",
     "spatialLIBD",
     "TREG",
-    "visiumStitched" ## accepted at BioC but not yet available from it
+    "visiumStitched"
 ), dependencies = TRUE, update = FALSE)
 
-## LIBD GitHub packages o
+## LIBD GitHub packages
 BiocManager::install(c(
     "LieberInstitute/DeconvoBuddies",
     "LieberInstitute/jaffelab",
@@ -126,7 +126,7 @@ remotes::install_cran(c(
     "postcards",
     "reprex",
     "rsconnect",
-    "rtweet",
+    # "rtweet", ## was removed from CRAN on 2025-04-07 according to https://cran.r-project.org/web/packages/rtweet/index.html
     "tidyverse",
     "tidytuesdayR",
     "xaringan",
@@ -181,19 +181,19 @@ remotes::install_github(
 As I described in [my blog post on updating R](http://lcolladotor.github.io/2017/05/04/updating-r/#.X6ICiIhKguU), I also like to saved my list of currently installed packages.
 
 ```{r "previously_installed", eval = FALSE}
-## Save currently installed packages
+## Locate laptop path for where I save the list
+## of installed packages
 installed_path <- ifelse(
     .Platform$OS.type != "windows",
     "~/Dropbox/Computing/R",
     "C:/Users/fellg/Dropbox/Computing/R"
 )
-
 ## At JHPCE I use:
 # installed_path <- "~/R/update_R"
 
 ## Locate installed R packages
 installed <- dir(.libPaths())
-# For JHPCE
+## For JHPCE:
 # installed <- dir(.libPaths()[1])
 
 ## Save list of installed packages for later use
@@ -208,7 +208,7 @@ load(file.path(installed_path, previous[length(previous)]), verbose = TRUE)
 ## Locate current packages
 current <- dir(.libPaths())
 ## Use the following at JHPCE:
-current <- dir(.libPaths()[1])
+# current <- dir(.libPaths()[1])
 
 ## Missing ones
 installed[!installed %in% current]
@@ -568,7 +568,7 @@ if [[ $HOSTNAME == compute-* ]] || [[ $HOSTNAME == transfer-* ]]; then
 	module load git-status-size
 	module load git-lfs
 	module load rmate
-	module load conda_R/4.4.x ## for BioC 3.20
+	module load conda_R/devel ## for BioC 3.21 as of May 9 2025. This should change soon (whenever Kasper Daniel Hansen has time to create the conda_R/4.5 module)
 fi
 
 ## Set an alias to run JHPCE rsrun with X11 support
