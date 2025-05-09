@@ -6,7 +6,7 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge" />
   <title>17 Config files | R/Bioconductor-powered Team Data Science</title>
   <meta name="description" content="17 Config files | R/Bioconductor-powered Team Data Science" />
-  <meta name="generator" content="bookdown 0.42 and GitBook 2.6.7" />
+  <meta name="generator" content="bookdown 0.43 and GitBook 2.6.7" />
 
   <meta property="og:title" content="17 Config files | R/Bioconductor-powered Team Data Science" />
   <meta property="og:type" content="book" />
@@ -508,7 +508,7 @@ Do you want to use <a href="https://twitter.com/Bioconductor?ref_src=twsrc%5Etfw
 <span id="cb17-30"><a href="config-files.html#cb17-30" tabindex="-1"></a><span class="do">## Main packages</span></span>
 <span id="cb17-31"><a href="config-files.html#cb17-31" tabindex="-1"></a>BiocManager<span class="sc">::</span><span class="fu">install</span>(<span class="fu">c</span>(</span>
 <span id="cb17-32"><a href="config-files.html#cb17-32" tabindex="-1"></a>    <span class="st">&quot;biocthis&quot;</span>,</span>
-<span id="cb17-33"><a href="config-files.html#cb17-33" tabindex="-1"></a>    <span class="st">&quot;DeconvoBuddies&quot;</span>, <span class="do">## under review at BioC</span></span>
+<span id="cb17-33"><a href="config-files.html#cb17-33" tabindex="-1"></a>    <span class="st">&quot;DeconvoBuddies&quot;</span>,</span>
 <span id="cb17-34"><a href="config-files.html#cb17-34" tabindex="-1"></a>    <span class="st">&quot;derfinder&quot;</span>,</span>
 <span id="cb17-35"><a href="config-files.html#cb17-35" tabindex="-1"></a>    <span class="st">&quot;derfinderPlot&quot;</span>,</span>
 <span id="cb17-36"><a href="config-files.html#cb17-36" tabindex="-1"></a>    <span class="st">&quot;GenomicState&quot;</span>,</span>
@@ -522,10 +522,10 @@ Do you want to use <a href="https://twitter.com/Bioconductor?ref_src=twsrc%5Etfw
 <span id="cb17-44"><a href="config-files.html#cb17-44" tabindex="-1"></a>    <span class="st">&quot;smokingMouse&quot;</span>,</span>
 <span id="cb17-45"><a href="config-files.html#cb17-45" tabindex="-1"></a>    <span class="st">&quot;spatialLIBD&quot;</span>,</span>
 <span id="cb17-46"><a href="config-files.html#cb17-46" tabindex="-1"></a>    <span class="st">&quot;TREG&quot;</span>,</span>
-<span id="cb17-47"><a href="config-files.html#cb17-47" tabindex="-1"></a>    <span class="st">&quot;visiumStitched&quot;</span> <span class="do">## accepted at BioC but not yet available from it</span></span>
+<span id="cb17-47"><a href="config-files.html#cb17-47" tabindex="-1"></a>    <span class="st">&quot;visiumStitched&quot;</span></span>
 <span id="cb17-48"><a href="config-files.html#cb17-48" tabindex="-1"></a>), <span class="at">dependencies =</span> <span class="cn">TRUE</span>, <span class="at">update =</span> <span class="cn">FALSE</span>)</span>
 <span id="cb17-49"><a href="config-files.html#cb17-49" tabindex="-1"></a></span>
-<span id="cb17-50"><a href="config-files.html#cb17-50" tabindex="-1"></a><span class="do">## LIBD GitHub packages o</span></span>
+<span id="cb17-50"><a href="config-files.html#cb17-50" tabindex="-1"></a><span class="do">## LIBD GitHub packages</span></span>
 <span id="cb17-51"><a href="config-files.html#cb17-51" tabindex="-1"></a>BiocManager<span class="sc">::</span><span class="fu">install</span>(<span class="fu">c</span>(</span>
 <span id="cb17-52"><a href="config-files.html#cb17-52" tabindex="-1"></a>    <span class="st">&quot;LieberInstitute/DeconvoBuddies&quot;</span>,</span>
 <span id="cb17-53"><a href="config-files.html#cb17-53" tabindex="-1"></a>    <span class="st">&quot;LieberInstitute/jaffelab&quot;</span>,</span>
@@ -557,7 +557,7 @@ Do you want to use <a href="https://twitter.com/Bioconductor?ref_src=twsrc%5Etfw
 <span id="cb17-79"><a href="config-files.html#cb17-79" tabindex="-1"></a>    <span class="st">&quot;postcards&quot;</span>,</span>
 <span id="cb17-80"><a href="config-files.html#cb17-80" tabindex="-1"></a>    <span class="st">&quot;reprex&quot;</span>,</span>
 <span id="cb17-81"><a href="config-files.html#cb17-81" tabindex="-1"></a>    <span class="st">&quot;rsconnect&quot;</span>,</span>
-<span id="cb17-82"><a href="config-files.html#cb17-82" tabindex="-1"></a>    <span class="st">&quot;rtweet&quot;</span>,</span>
+<span id="cb17-82"><a href="config-files.html#cb17-82" tabindex="-1"></a>    <span class="co"># &quot;rtweet&quot;, ## was removed from CRAN on 2025-04-07 according to https://cran.r-project.org/web/packages/rtweet/index.html</span></span>
 <span id="cb17-83"><a href="config-files.html#cb17-83" tabindex="-1"></a>    <span class="st">&quot;tidyverse&quot;</span>,</span>
 <span id="cb17-84"><a href="config-files.html#cb17-84" tabindex="-1"></a>    <span class="st">&quot;tidytuesdayR&quot;</span>,</span>
 <span id="cb17-85"><a href="config-files.html#cb17-85" tabindex="-1"></a>    <span class="st">&quot;xaringan&quot;</span>,</span>
@@ -608,19 +608,19 @@ Do you want to use <a href="https://twitter.com/Bioconductor?ref_src=twsrc%5Etfw
 <div id="previously-installed" class="section level4 hasAnchor" number="17.1.1.1">
 <h4><span class="header-section-number">17.1.1.1</span> Previously installed<a href="config-files.html#previously-installed" class="anchor-section" aria-label="Anchor link to header"></a></h4>
 <p>As I described in <a href="http://lcolladotor.github.io/2017/05/04/updating-r/#.X6ICiIhKguU">my blog post on updating R</a>, I also like to saved my list of currently installed packages.</p>
-<div class="sourceCode" id="cb18"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb18-1"><a href="config-files.html#cb18-1" tabindex="-1"></a><span class="do">## Save currently installed packages</span></span>
-<span id="cb18-2"><a href="config-files.html#cb18-2" tabindex="-1"></a>installed_path <span class="ot">&lt;-</span> <span class="fu">ifelse</span>(</span>
-<span id="cb18-3"><a href="config-files.html#cb18-3" tabindex="-1"></a>    .Platform<span class="sc">$</span>OS.type <span class="sc">!=</span> <span class="st">&quot;windows&quot;</span>,</span>
-<span id="cb18-4"><a href="config-files.html#cb18-4" tabindex="-1"></a>    <span class="st">&quot;~/Dropbox/Computing/R&quot;</span>,</span>
-<span id="cb18-5"><a href="config-files.html#cb18-5" tabindex="-1"></a>    <span class="st">&quot;C:/Users/fellg/Dropbox/Computing/R&quot;</span></span>
-<span id="cb18-6"><a href="config-files.html#cb18-6" tabindex="-1"></a>)</span>
-<span id="cb18-7"><a href="config-files.html#cb18-7" tabindex="-1"></a></span>
+<div class="sourceCode" id="cb18"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb18-1"><a href="config-files.html#cb18-1" tabindex="-1"></a><span class="do">## Locate laptop path for where I save the list</span></span>
+<span id="cb18-2"><a href="config-files.html#cb18-2" tabindex="-1"></a><span class="do">## of installed packages</span></span>
+<span id="cb18-3"><a href="config-files.html#cb18-3" tabindex="-1"></a>installed_path <span class="ot">&lt;-</span> <span class="fu">ifelse</span>(</span>
+<span id="cb18-4"><a href="config-files.html#cb18-4" tabindex="-1"></a>    .Platform<span class="sc">$</span>OS.type <span class="sc">!=</span> <span class="st">&quot;windows&quot;</span>,</span>
+<span id="cb18-5"><a href="config-files.html#cb18-5" tabindex="-1"></a>    <span class="st">&quot;~/Dropbox/Computing/R&quot;</span>,</span>
+<span id="cb18-6"><a href="config-files.html#cb18-6" tabindex="-1"></a>    <span class="st">&quot;C:/Users/fellg/Dropbox/Computing/R&quot;</span></span>
+<span id="cb18-7"><a href="config-files.html#cb18-7" tabindex="-1"></a>)</span>
 <span id="cb18-8"><a href="config-files.html#cb18-8" tabindex="-1"></a><span class="do">## At JHPCE I use:</span></span>
 <span id="cb18-9"><a href="config-files.html#cb18-9" tabindex="-1"></a><span class="co"># installed_path &lt;- &quot;~/R/update_R&quot;</span></span>
 <span id="cb18-10"><a href="config-files.html#cb18-10" tabindex="-1"></a></span>
 <span id="cb18-11"><a href="config-files.html#cb18-11" tabindex="-1"></a><span class="do">## Locate installed R packages</span></span>
 <span id="cb18-12"><a href="config-files.html#cb18-12" tabindex="-1"></a>installed <span class="ot">&lt;-</span> <span class="fu">dir</span>(<span class="fu">.libPaths</span>())</span>
-<span id="cb18-13"><a href="config-files.html#cb18-13" tabindex="-1"></a><span class="co"># For JHPCE</span></span>
+<span id="cb18-13"><a href="config-files.html#cb18-13" tabindex="-1"></a><span class="do">## For JHPCE:</span></span>
 <span id="cb18-14"><a href="config-files.html#cb18-14" tabindex="-1"></a><span class="co"># installed &lt;- dir(.libPaths()[1])</span></span>
 <span id="cb18-15"><a href="config-files.html#cb18-15" tabindex="-1"></a></span>
 <span id="cb18-16"><a href="config-files.html#cb18-16" tabindex="-1"></a><span class="do">## Save list of installed packages for later use</span></span>
@@ -632,7 +632,7 @@ Do you want to use <a href="https://twitter.com/Bioconductor?ref_src=twsrc%5Etfw
 <span id="cb19-5"><a href="config-files.html#cb19-5" tabindex="-1"></a><span class="do">## Locate current packages</span></span>
 <span id="cb19-6"><a href="config-files.html#cb19-6" tabindex="-1"></a>current <span class="ot">&lt;-</span> <span class="fu">dir</span>(<span class="fu">.libPaths</span>())</span>
 <span id="cb19-7"><a href="config-files.html#cb19-7" tabindex="-1"></a><span class="do">## Use the following at JHPCE:</span></span>
-<span id="cb19-8"><a href="config-files.html#cb19-8" tabindex="-1"></a>current <span class="ot">&lt;-</span> <span class="fu">dir</span>(<span class="fu">.libPaths</span>()[<span class="dv">1</span>])</span>
+<span id="cb19-8"><a href="config-files.html#cb19-8" tabindex="-1"></a><span class="co"># current &lt;- dir(.libPaths()[1])</span></span>
 <span id="cb19-9"><a href="config-files.html#cb19-9" tabindex="-1"></a></span>
 <span id="cb19-10"><a href="config-files.html#cb19-10" tabindex="-1"></a><span class="do">## Missing ones</span></span>
 <span id="cb19-11"><a href="config-files.html#cb19-11" tabindex="-1"></a>installed[<span class="sc">!</span>installed <span class="sc">%in%</span> current]</span>
@@ -966,7 +966,7 @@ Thumbs.db</code></pre>
 <span id="cb27-78"><a href="config-files.html#cb27-78" tabindex="-1"></a>    <span class="ex">module</span> load git-status-size</span>
 <span id="cb27-79"><a href="config-files.html#cb27-79" tabindex="-1"></a>    <span class="ex">module</span> load git-lfs</span>
 <span id="cb27-80"><a href="config-files.html#cb27-80" tabindex="-1"></a>    <span class="ex">module</span> load rmate</span>
-<span id="cb27-81"><a href="config-files.html#cb27-81" tabindex="-1"></a>    <span class="ex">module</span> load conda_R/4.4.x <span class="co">## for BioC 3.20</span></span>
+<span id="cb27-81"><a href="config-files.html#cb27-81" tabindex="-1"></a>    <span class="ex">module</span> load conda_R/devel <span class="co">## for BioC 3.21 as of May 9 2025. This should change soon (whenever Kasper Daniel Hansen has time to create the conda_R/4.5 module)</span></span>
 <span id="cb27-82"><a href="config-files.html#cb27-82" tabindex="-1"></a><span class="cf">fi</span></span>
 <span id="cb27-83"><a href="config-files.html#cb27-83" tabindex="-1"></a></span>
 <span id="cb27-84"><a href="config-files.html#cb27-84" tabindex="-1"></a><span class="co">## Set an alias to run JHPCE rsrun with X11 support</span></span>
