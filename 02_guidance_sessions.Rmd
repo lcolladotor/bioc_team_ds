@@ -59,7 +59,7 @@ Our philosophy and overview on the help we provide was described in this video a
 
 In order for DSgs sessions to run smoothly, it's important that we have **clear expectations** of what we'll do. DSgs sessions **are not consulting sessions**. We will help you as much as we can during the session, but after it's over, we won't spend time writing new code for you. That is, we will not take requests for work you need help finishing regardless of how important it is. That's why **we recommend planning ahead** and even having weekly DSgs sessions if you have a deadline in mind instead of approaching us for help the week the project is due. We are most helpful early in a project cycle than at the end.
 
-We understand that you might be stressed or under significant pressure, but please follow our [code of conduct](http://research.libd.org/rstatsclub/#.X4CHhtBKguU) ^[We will update the code of conduct once Bioconductor publishes their latest code of conduct in the Fall of 2020.]. Otherwise, we will forced to stop meeting with you.
+We understand that you might be stressed or under significant pressure, but please follow our [code of conduct](https://research.libd.org/rstatsclub/#coc) ^[We will update the code of conduct once Bioconductor publishes their latest code of conduct in the Fall of 2020.]. Otherwise, we will forced to stop meeting with you.
 
 ## Help us help you
 
