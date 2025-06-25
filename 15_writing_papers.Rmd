@@ -3,7 +3,7 @@
 
 <iframe width="560" height="315" src="https://www.youtube.com/embed/jbXkulDnn9g" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 
-On 2020-04-06 I presented at [how to write papers using Google Docs](https://docs.google.com/document/d/1yumuVwZmpoE_SpcM-9AsU0U6D9R051vU8s_AGhoqh7Y/edit?usp=sharing). The video and notes mostly highlight these tools including [`Sciwheel`](https://twitter.com/Sciwheel) and [`CrossReference`](https://github.com/davidrthorn/cross_reference).
+On 2020-04-06 I presented at [how to write papers using Google Docs](https://docs.google.com/document/d/1yumuVwZmpoE_SpcM-9AsU0U6D9R051vU8s_AGhoqh7Y/edit?usp=sharing). The video and notes mostly highlight these tools including [`Lean Library Workspace`](https://twitter.com/Sciwheel) (formerly `SciWheel` and `F1000Workspace`) and [`CrossReference`](https://github.com/davidrthorn/cross_reference).
 
 
 <iframe width="560" height="315" src="https://www.youtube.com/embed/m6f6D3r1h7U" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
@@ -11,7 +11,7 @@ On 2020-04-06 I presented at [how to write papers using Google Docs](https://doc
 
 Most recently I presented at the [LIBD rstats club](https://bsky.app/profile/libdrstats.bsky.social) more ideas behind writing papers. Here are the [notes](https://docs.google.com/document/d/1V7hTQvWTurHqEm24Ufz9oVAPQy2ssyDPuPxJm5yills/edit?usp=sharing).
 
-Here's a <2 min video on exporting references from SciWheel.
+Here's a <2 min video on exporting references from `Lean Library Workspace` (formerly `SciWheel`).
 
 <iframe width="560" height="315" src="https://www.youtube.com/embed/1ZjHBxTVtk4?si=BtPTLHFI0IQOy_B9" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
 
