@@ -90,7 +90,7 @@ To share code with us,
 
 * Please create a [**`gist`**](https://gist.github.com/) which can be either public or private. In the `gist` include all the commands you ran and the output you got. Or provide the `reprex` code (preferred option).
 * If you are already using GitHub for version controlling your code, then include the **link to the script** you are running.
-* If you have a companion log file at JHPCE, please share the **full path to the log file** ^[You might want to use the `r BiocStyle::Githubpkg("LieberInstitute/sgejogs")` package for helping you create such log files.]
+* If you have a companion log file at JHPCE, please share the **full path to the log file** ^[You might want to use the `r BiocStyle::Githubpkg("LieberInstitute/slurmjobs")` package for helping you create such log files.]
 * Ideally include the R session information which you can generate using `options(width = 120); sessioninfo::session_info()`. This information will be particularly useful for solving issues with cutting edge R/Bioconductor/GitHub packages.
 
 
@@ -127,7 +127,7 @@ Please try reaching out to multiple people instead of one person for all your qu
   - **Sign up** via [Calendly](https://calendly.com/lahuuki/25-min-data-science-guidance-session)
 * [Leonardo Collado-Torres](https://github.com/lcolladotor) ([BioC Support](https://support.bioconductor.org/u/6526/))
   - Research interests: RNA-seq, spatial transcriptomics, un-annotated transcriptome, deconvolution, multi-omics.
-  - Technologies I use: R/Bioconductor, GitHub, SGE/JHPCE.
+  - Technologies I use: R/Bioconductor, GitHub, SLURM/JHPCE.
   - Learning about: team management, grant applications.
   - **Sign up** via [Calendly](https://calendly.com/lcolladotor/ds-guidance)
   
@@ -135,7 +135,7 @@ Please try reaching out to multiple people instead of one person for all your qu
 
 * [Madhavi Tippani](https://github.com/madhavitippani) ([BioC Support](https://support.bioconductor.org/u/24319/))
   - Research interests: spatial transcriptomics, calcium imaging, RNAscope, medical image processing.
-  - Technologies I use: Matlab, R, GitHub, SGE/JHPCE.
+  - Technologies I use: Matlab, R, GitHub, SLURM/JHPCE.
   - Learning about: Machine Learning, spatial transcriptomics, statistical analysis.
   - **Sign up** via [Calendly](https://calendly.com/madhavitippani/25-minute-data-science-guidance-session)
   
