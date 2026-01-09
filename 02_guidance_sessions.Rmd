@@ -2,7 +2,7 @@
 
 ## Quick DSgs sign up
 
-You can think about the _Data Science guidance sessions_ (**DSgs**) as _open office hours_. Also for several of us (Cynthia, Nick, Louise, and Leo), these DSgs'es are part of our job at LIBD. So please don't think that you are imposing in any way: we want to help you! Here are the quick links for signing up:
+You can think about the _Data Science guidance sessions_ (**DSgs**) as _open office hours_. Also for several of us (Nick, Louise, and Leo), these DSgs'es are part of our job at LIBD. So please don't think that you are imposing in any way: we want to help you! Here are the quick links for signing up:
 
 <center>
 <img src="images/open_office_hours.png">
@@ -10,8 +10,6 @@ You can think about the _Data Science guidance sessions_ (**DSgs**) as _open off
 
 Leo's team:
 
-* Cynthia Soto Cardinault
-  - **Sign up** via [Calendly](https://calendly.com/cynthiacardinault/25-min-data-science-guidance-session)
 * Manisha Barse
   - **Sign up** via [Calendly](https://calendly.com/manishabarse/25-minute-data-science-guidance-session)
 * Nicholas J. Eagles
@@ -112,11 +110,6 @@ Please try reaching out to multiple people instead of one person for all your qu
 
 ### Leo's team
 
-* [Cynthia Soto Cardinault](https://github.com/cyntsc) ([BioC Support](https://support.bioconductor.org/u/59591/))
-  - Research interests: bulk RNA-seq, workflows, machine learning methodologies.
-  - Technologies I use: bulk RNA-seq, linux, python, R/WGCNA and github.
-  - Learning about: snRNA-seq, multi-omics, snATAC and deconvolution.
-  - **Sign up** via [Calendly](https://calendly.com/cynthiacardinault/25-min-data-science-guidance-session)
 * [Manisha Barse](https://github.com/manishabarse) ([BioC Support](https://support.bioconductor.org/u/59591/))
   - Research interests: bulk RNA-seq, scRNA-seq, building computational pipelines.
   - Technologies I use: linux, python, R, github.
