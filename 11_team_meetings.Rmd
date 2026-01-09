@@ -65,16 +65,20 @@ On Mondays at 10:30 am everyone meets with Leo sequentially for 30 min to discus
 Here's the list of project meetings and who should attend them:
 
 * Tuesday
-  * [1pm] Moods: Louise, Leo.
+  * [9 am] "NP, MN, ID Group Meeting": check [the schedule](https://docs.google.com/spreadsheets/d/1XE9qpToeeJKwGTWMl5Ci-OWJ1bTlhtgln71Bv3eLTeU/edit?usp=sharing) to identify when our colleagues are presenting updates on the data generation for the projects you are involved, and attend those meetings.
+    * Also everyone should attend the _CORE CONCEPT_ sessions they organize.
+  * [1pm, bi-weekly] Moods: Louise, Leo.
     * Optional: Geo.
-  * [3 pm] Habenula + multi-ome + Fentanyl: Bukola, Cynthia, Daianna, Hédia, Renee, Leo.
-    * Optional: Louise, Nick.
 * Wednesday
   * [9 am] team meeting: everyone.
-  * [1 pm, bi-weekly] CHESS-BRAIN: Geo, Hédia, Leo.
+  * [12 pm, bi-weekly] joint genomic meeting: everyone.
+    * Note that we have the LIBD boardroom reserved and can eat lunch there.
+  * [1 pm, bi-weekly] CHESS-BRAIN: Geo, Nick, Leo.
+  * [3:30 pm] Habenula meeting: Nick, Leo.
 * Thursday:
-  * [9 am] spatial team meeting: Louise, Nick, Leo.
-  * [1 pm, bi-weekly] deconvolution: Louise, Leo.
-  * [1 pm, bi-weekly] NAc spatial: Nick, Leo.
+  * [9 am] LIBD/JHU spatial meeting: everyone.
+  * [10 am] Habenula projectors: Manisha, Leo.
+  * [11 am] team lcolladotor spatial group DSgs: everyone.
+  * [1 pm] Habenula writing meeting: Nick, Leo.
 * Friday
   * [9 am] LIBD rstats club: everyone.
