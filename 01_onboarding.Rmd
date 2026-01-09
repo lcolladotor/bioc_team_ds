@@ -220,7 +220,7 @@ Once you have your JHPCE account, you will want to set up your laptop and JHPCE 
   * One key pair from JHPCE to GitHub.
 * You should edit your JHPCE `~/.bashrc` and create your JHPCE `~/.inputrc` file following the information we have at the ["config files"](#config-files) page. 
   * You might want to do something similar for your macOS `~/.bashrc` file. Though I lately use a `~/.zshrc` file on my macOS computer.
-* You should specify your email on your JHPCE `~/.sge_request` file following the information we have at the ["config files"](#config-files) page.
+* You should specify your email on your JHPCE `~/.slurm/defaults` file following the information we have at the ["config files"](#config-files) page.
 * You should edit your laptop's and JHPCE `~/.gitconfig` files following the information we have at the ["config files"](#config-files) page.
 * We will want to email BitSupport to make sure that your default user group is not `users`, but a more appropriate group such as `lieber_lcolladotor` or `lieber_marmaypag`.
 * You will likely want to configure your laptop & JHPCE to be able to use `rmate` to open JHPCE files from the terminal window in TextMate / Sublime Text / other text editors. This will involve editing your laptop's `~/.ssh/config` as well as your JHPCE's `~/.ssh/config` files. See the video below for more information about this process.
@@ -236,8 +236,8 @@ Now that you have your JHPCE account and can access files, you'll want to get fa
 * [Environment modules](https://jhpce.jhu.edu/knowledge-base/environment-modules/) are useful so you don't have to install some common software from scratch, such as `R` which you can load using `module load conda_R`.
 * Use LIBD modules which you can setup following [these instructions](https://github.com/LieberInstitute/jhpce_module_config#recurrent-usage). [jhpce_mod_source](https://github.com/LieberInstitute/jhpce_mod_source) and [jhpce_module_config](https://github.com/LieberInstitute/jhpce_module_config) are our GitHub repositories for our LIBD modules.
 * [Edit your bashrc file for a nicer terminal experience](http://research.libd.org/rstatsclub/post/edit-your-bashrc-file-for-a-nicer-terminal-experience/#.XXfJQ5NKi50) blog post. See the ["config files"](#config-files) page for the latest common configuration files we use.
-* `r BiocStyle::Githubpkg('LieberInstitute/sgejobs')` ([documentation](http://lieberinstitute.github.io/sgejobs)): contains helper functions for writing and interacting with SGE jobs at JHPCE.
-* [Array and Sequential Cluster Jobs](https://hopstat.wordpress.com/2013/11/05/array-and-sequential-cluster-jobs/). See also `sgejobs::job_single()`.
+* `r BiocStyle::Githubpkg('LieberInstitute/slurmjobs')` ([documentation](http://lieberinstitute.github.io/slurmjobs)): contains helper functions for writing and interacting with SLURM jobs at JHPCE.
+* [Array and Sequential Cluster Jobs](https://hopstat.wordpress.com/2013/11/05/array-and-sequential-cluster-jobs/). See also `slurmjobs::job_single()`.
 * [Setting up your computer for bioinformatics/biostatistics and a compedium of resources](http://lcolladotor.github.io/2012/08/23/setting-up-your-computer-for/#.XXft2pNKi50) 2012 blog post. Includes some Mac and Windows tools.
 * [Login to the cluster, request a node and change to your project directory in a single command](http://lcolladotor.github.io/2013/12/11/quick-cluster-login-to-interactive-session/#.XXft5JNKi50) 2013 blog post.
 * [me: Bad rm, don't delete stuff I didn't want to delete! (rm: well, I do what you tell me to do!)](http://lcolladotor.github.io/2012/11/07/me-bad-rm-dont-delete-stuff-i-didnt-want-to-delete/#.XXft6pNKi50) 2012 blog post.
@@ -296,7 +296,7 @@ For example, you might enjoy the video about Bioconductor or the one on `Summari
 ### Lab software
 
 * `r BiocStyle::Githubpkg('LieberInstitute/jaffelab')` ([documentation](http://lieberinstitute.github.io/jaffelab)): contains several functions we've written over the years that we find helpful for different analyses.
-* `r BiocStyle::Githubpkg('LieberInstitute/sgejobs')` ([documentation](http://lieberinstitute.github.io/sgejobs)): contains helper functions for writing and interacting with SGE jobs at JHPCE. We have several videos on `sgejobs` at the [**rstats club schedule**](https://docs.google.com/spreadsheets/d/1is8dZSd0FZ9Qi1Zvq1uRhm-P1McnJRd_zxdAfCRoMfA/edit?usp=sharing).
+* `r BiocStyle::Githubpkg('LieberInstitute/slurmjobs')` ([documentation](http://lieberinstitute.github.io/slurmjobs)): contains helper functions for writing and interacting with SLURM jobs at JHPCE. We have several videos on `slurmjobs` at the [**rstats club schedule**](https://docs.google.com/spreadsheets/d/1is8dZSd0FZ9Qi1Zvq1uRhm-P1McnJRd_zxdAfCRoMfA/edit?usp=sharing).
 * [jhpce_mod_source](https://github.com/LieberInstitute/jhpce_mod_source) and [jhpce_module_config](https://github.com/LieberInstitute/jhpce_module_config) are our GitHub repositories for our LIBD modules.
 * `r BiocStyle::Githubpkg('LieberInstitute/shinycsv')`: allows interactively exploring a table.
 * `r BiocStyle::Biocpkg('megadepth')` by David Zhang, Christopher Wilks, et al is an R package for dealing with BigWig files. Check also the older `r BiocStyle::Githubpkg('LieberInstitute/recount.bwtool')`.

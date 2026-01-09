@@ -424,30 +424,33 @@ Once we have completed the transfer across disks, we move the original files usi
 
 ```bash
 #!/bin/bash
-#$ -cwd
-#$ -l bluejay,mem_free=2G,h_vmem=2G,h_fsize=400G
-#$ -N move_qSVA_dcl01
-#$ -o logs/move_qSVA_dcl01.$TASK_ID.txt
-#$ -e logs/move_qSVA_dcl01.$TASK_ID.txt
-#$ -m e
-#$ -t 1-3
-#$ -tc 2
+#SBATCH -p shared
+#SBATCH --mem=2G
+#SBATCH --job-name=move_qSVA_dcl01
+#SBATCH -c 1
+#SBATCH -t 1-00:00:00
+#SBATCH -o logs/move_qSVA_dcl01.%a.txt
+#SBATCH -e logs/move_qSVA_dcl01.%a.txt
+#SBATCH --mail-type=ALL
+#SBATCH --array=1-3%2
+
+set -e
 
 echo "**** Job starts ****"
 date
 
 echo "**** JHPCE info ****"
 echo "User: ${USER}"
-echo "Job id: ${JOB_ID}"
-echo "Job name: ${JOB_NAME}"
-echo "Hostname: ${HOSTNAME}"
-echo "Task id: ${SGE_TASK_ID}"
+echo "Job id: ${SLURM_JOB_ID}"
+echo "Job name: ${SLURM_JOB_NAME}"
+echo "Node name: ${HOSTNAME}"
+echo "Task id: ${SLURM_ARRAY_TASK_ID}"
 
 ## List current modules for reproducibility
 module list
 
 ## Locate directory
-ORIGINALDIR=$(awk "NR==${SGE_TASK_ID}" qSVA_dcl01_dirs.txt)
+ORIGINALDIR=$(awk "NR==${SLURM_ARRAY_TASK_ID}" qSVA_dcl01_dirs.txt)
 echo "Processing sample ${ORIGINALDIR}"
 date
 
@@ -473,8 +476,8 @@ ln -s /dcs04/lieber/lcolladotor/qSVA_LIBD3080/${BASEDIR} ${ORIGINALDIR}
 echo "**** Job ends ****"
 date
 
-## This script was made using sgejobs version 0.99.1
-## available from http://research.libd.org/sgejobs/
+## This script was made using slurmjobs version 1.3.0
+## available from http://research.libd.org/slurmjobs/
 ```
 
 * `update_permissions.sh`
@@ -487,23 +490,26 @@ Note how we use `#$ -hold_jid` with the same name of the script from the _move_ 
 
 ```bash
 #!/bin/bash
-#$ -cwd
-#$ -l bluejay,mem_free=2G,h_vmem=2G,h_fsize=400G
-#$ -N update_permissions_qSVA
-#$ -o logs/update_permissions.txt
-#$ -e logs/update_permissions.txt
-#$ -m e
-#$ -hold_jid move_qSVA_dcl01
+#SBATCH -p shared
+#SBATCH --mem=2G
+#SBATCH --job-name=update_permissions_qSVA
+#SBATCH -c 1
+#SBATCH -t 1-00:00:00
+#SBATCH -o logs/update_permissions_qSVA.txt
+#SBATCH -e logs/update_permissions_qSVA.txt
+#SBATCH --mail-type=ALL
+
+set -e
 
 echo "**** Job starts ****"
 date
 
 echo "**** JHPCE info ****"
 echo "User: ${USER}"
-echo "Job id: ${JOB_ID}"
-echo "Job name: ${JOB_NAME}"
-echo "Hostname: ${HOSTNAME}"
-echo "Task id: ${SGE_TASK_ID}"
+echo "Job id: ${SLURM_JOB_ID}"
+echo "Job name: ${SLURM_JOB_NAME}"
+echo "Node name: ${HOSTNAME}"
+echo "Task id: ${SLURM_ARRAY_TASK_ID}"
 
 ## List current modules for reproducibility
 module list
@@ -537,8 +543,8 @@ nfs4_getfacl ${MAINDIR}
 echo "**** Job ends ****"
 date
 
-## This script was made using sgejobs version 0.99.1
-## available from http://research.libd.org/sgejobs/
+## This script was made using slurmjobs version 1.3.0
+## available from http://research.libd.org/slurmjobs/
 ```
 
 * `delete_qSVA_dcl01.sh`
@@ -547,23 +553,26 @@ This script also uses `#$ -hold_jid` so in theory we could submit it (`qsub`) im
 
 ```bash
 #!/bin/bash
-#$ -cwd
-#$ -l bluejay,mem_free=2G,h_vmem=2G,h_fsize=100G
-#$ -N delete_qSVA_dcl01
-#$ -o logs/delete_qSVA_dcl01.txt
-#$ -e logs/delete_qSVA_dcl01.txt
-#$ -m e
-#$ -hold_jid move_qSVA_dcl01
+#SBATCH -p shared
+#SBATCH --mem=2G
+#SBATCH --job-name=delete_qSVA_dcl01
+#SBATCH -c 1
+#SBATCH -t 1-00:00:00
+#SBATCH -o logs/delete_qSVA_dcl01.txt
+#SBATCH -e logs/delete_qSVA_dcl01.txt
+#SBATCH --mail-type=ALL
+
+set -e
 
 echo "**** Job starts ****"
 date
 
 echo "**** JHPCE info ****"
 echo "User: ${USER}"
-echo "Job id: ${JOB_ID}"
-echo "Job name: ${JOB_NAME}"
-echo "Hostname: ${HOSTNAME}"
-echo "Task id: ${SGE_TASK_ID}"
+echo "Job id: ${SLURM_JOB_ID}"
+echo "Job name: ${SLURM_JOB_NAME}"
+echo "Node name: ${HOSTNAME}"
+echo "Task id: ${SLURM_ARRAY_TASK_ID}"
 
 ## List current modules for reproducibility
 module list
@@ -575,8 +584,8 @@ rm -fr /dcl01/lieber/ajaffe/lab/trash_qSVA/
 echo "**** Job ends ****"
 date
 
-## This script was made using sgejobs version 0.99.1
-## available from http://research.libd.org/sgejobs/
+## This script was made using slurmjobs version 1.3.0
+## available from http://research.libd.org/slurmjobs/
 ```
 
 ### HumanPilot example
@@ -594,22 +603,26 @@ Most of the rest is the same, but here the trash directory is just called `trash
 
 ```bash
 #!/bin/bash
-#$ -cwd
-#$ -l bluejay,mem_free=2G,h_vmem=2G,h_fsize=400G
-#$ -N move_HumanPilot_dcl02
-#$ -o logs/move_HumanPilot_dcl02.txt
-#$ -e logs/move_HumanPilot_dcl02.txt
-#$ -m e
+#SBATCH -p shared
+#SBATCH --mem=2G
+#SBATCH --job-name=move_HumanPilot_dcl02
+#SBATCH -c 1
+#SBATCH -t 1-00:00:00
+#SBATCH -o logs/move_HumanPilot_dcl02.txt
+#SBATCH -e logs/move_HumanPilot_dcl02.txt
+#SBATCH --mail-type=ALL
+
+set -e
 
 echo "**** Job starts ****"
 date
 
 echo "**** JHPCE info ****"
 echo "User: ${USER}"
-echo "Job id: ${JOB_ID}"
-echo "Job name: ${JOB_NAME}"
-echo "Hostname: ${HOSTNAME}"
-echo "Task id: ${SGE_TASK_ID}"
+echo "Job id: ${SLURM_JOB_ID}"
+echo "Job name: ${SLURM_JOB_NAME}"
+echo "Node name: ${HOSTNAME}"
+echo "Task id: ${SLURM_ARRAY_TASK_ID}"
 
 ## List current modules for reproducibility
 module list
@@ -642,8 +655,8 @@ ln -s ${NEWDIR} ${ORIGINALDIR}
 echo "**** Job ends ****"
 date
 
-## This script was made using sgejobs version 0.99.1
-## available from http://research.libd.org/sgejobs/
+## This script was made using slurmjobs version 1.3.0
+## available from http://research.libd.org/slurmjobs/
 ```
 
 

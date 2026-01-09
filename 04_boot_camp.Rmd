@@ -37,13 +37,13 @@ This video and [companion notes](https://docs.google.com/document/d/13YPVIalTVM-
 
 ### Submitting jobs at JHPCE
 
-This video on how to use [`sgejobs`](http://research.libd.org/sgejobs/) for submitting jobs at JHPCE could be useful too.
+This video on how to use [`slurmjobs`](http://research.libd.org/slurmjobs/) for submitting jobs at JHPCE could be useful too.
 
-<iframe width="560" height="315" src="https://www.youtube.com/embed/mw5aQFX12wQ" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+<iframe width="560" height="315" src="https://www.youtube.com/embed/pte2qnFonV0?si=MYpgBHkvvb9mHLTw" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
 
-For a more advanced video on setting up bash loops and nested `qsub`s, check this second [`sgejobs`](http://research.libd.org/sgejobs/) video.
+For a more advanced video on setting up nested array jobs and `run_all.sh` scripts using SLURM, check this second [`slurmjobs`](http://research.libd.org/slurmjobs/) video.
 
-<iframe width="560" height="315" src="https://www.youtube.com/embed/0_DvP3n2yLc" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+<iframe width="560" height="315" src="https://www.youtube.com/embed/Sz7LpAC1gsQ?si=4WS8XgXGl1u5J44x" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
 
 If you need to use the GPU queue at JHPCE, then check this video and [companion slides](https://docs.google.com/presentation/d/1u1cHklp1JHPRjaaDOupbBIo0Ty439I2M-SCetgl3Uxk/edit#slide=id.p).
 
