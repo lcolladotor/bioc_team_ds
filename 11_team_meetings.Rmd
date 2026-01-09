@@ -82,3 +82,6 @@ Here's the list of project meetings and who should attend them:
   * [1 pm] Habenula writing meeting: Nick, Leo.
 * Friday
   * [9 am] LIBD rstats club: everyone.
+  * [1 pm, bi-weekly] Habenula HD meeting: Nick, Leo.
+  * [2 pm] DLPFC ASD meeting: Manisha, Leo.
+  
