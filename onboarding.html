@@ -699,11 +699,9 @@ example</code></pre>
 <li><a href="http://lcolladotor.github.io/2014/02/17/colorout/#.XXfu65NKi50">Automatically coloring your R output in the terminal using colorout</a> blog post on <code>colorout</code> which you can access through <a href="https://github.com/jalvesaq/colorout">jalvesaq/colorout</a> nowadays and install with <code>remotes::install_github('jalvesaq/colorout')</code>.</li>
 <li>See <a href="config-files.html#config-files">“config files”</a> page for the latest configuration files <a href="#fn1" class="footnote-ref" id="fnref1"><sup>1</sup></a>.</li>
 </ul>
-<p>There were a lot of miscellaneous things about using JHPCE that might save some confusion if you knew now:</p>
+<p>One miscellaneous thing about using JHPCE to keep in mind:</p>
 <ul>
-<li>there’s a 100G storage limit on your home directory <code>/users/[yourusername]/</code>, which will likely fill up very quickly. Most of us have directories under the <code>/dcs04</code>, <code>/dcl01</code>, and <code>/dcl02</code> filesystems, where there is far more space.</li>
-<li>you generally will want to include the <code>-cwd</code> flag in bash scripts. By default, it will default to dumping output files in your home directory, regardless of where you submit the script.</li>
-<li>for scripts/jobs where you are generating large files, you will need to change the maximum writable file size. This is the <code>h_fsize</code> flag for bash scripts, which defaults to 10G. See <a href="https://jhpce.jhu.edu/knowledge-base/how-to/" class="uri">https://jhpce.jhu.edu/knowledge-base/how-to/</a> for more details.</li>
+<li>there’s a 100G storage limit on your home directory <code>/users/[yourusername]/</code>, which will likely fill up very quickly. Generally, work for a given proect should be done under the project-specific directory (likely on the <code>/dcs04</code> or <code>/dcs05</code> filesystems), where there is far more space.</li>
 </ul>
 </div>
 </div>
