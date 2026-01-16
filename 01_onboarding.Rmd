@@ -245,11 +245,9 @@ Now that you have your JHPCE account and can access files, you'll want to get fa
 * See ["config files"](#config-files) page for the latest configuration files ^[Outdated: Check Leo's JHPCE configuration files [here](https://github.com/lcolladotor/config_jhpce).].
 
 
-There were a lot of miscellaneous things about using JHPCE that might save some confusion if you knew now:
+One miscellaneous thing about using JHPCE to keep in mind:
 
-* there's a 100G storage limit on your home directory `/users/[yourusername]/`, which will likely fill up very quickly. Most of us have directories under the `/dcs04`, `/dcl01`, and `/dcl02` filesystems, where there is far more space.
- * you generally will want to include the `-cwd` flag in bash scripts. By default, it will default to dumping output files in your home directory, regardless of where you submit the script.
-* for scripts/jobs where you are generating large files, you will need to change the maximum writable file size. This is the `h_fsize` flag for bash scripts, which defaults to 10G. See https://jhpce.jhu.edu/knowledge-base/how-to/ for more details.
+* there's a 100G storage limit on your home directory `/users/[yourusername]/`, which will likely fill up very quickly. Generally, work for a given proect should be done under the project-specific directory (likely on the `/dcs04` or `/dcs05` filesystems), where there is far more space.
 
 ### macOS
 
