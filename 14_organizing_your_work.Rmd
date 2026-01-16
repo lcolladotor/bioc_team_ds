@@ -273,7 +273,7 @@ if [[ $HOSTNAME == compute-* ]] || [[ $HOSTNAME == transfer-* ]]; then
 	date
 	nfs4_getfacl ${1}
 else
-	echo "**** This script can only work on a qrsh / qsub session. It does not work on a login node since it does not have access to the nfs4_setfacl and nfs4_getfacl commands.****"
+	echo "**** This script can only work on a compute node. It does not work on a login node since it does not have access to the nfs4_setfacl and nfs4_getfacl commands.****"
 fi
 ```
 
@@ -373,7 +373,7 @@ if [[ $HOSTNAME == compute-* ]] || [[ $HOSTNAME == transfer-* ]]; then
 	date
 	nfs4_getfacl ${1}
 else
-	echo "**** This script can only work on a qrsh / qsub session. It does not work on a login node since it does not have access to the nfs4_setfacl and nfs4_getfacl commands.****"
+	echo "**** This script can only work on a compute node. It does not work on a login node since it does not have access to the nfs4_setfacl and nfs4_getfacl commands.****"
 fi
 ```
 
@@ -387,7 +387,7 @@ When you are moving files from other disks into `/dcs04`, you will likely need u
 * one script for moving files to `/dcs04` with `rsync`
   * We don't use `mv` since it's error prone and can have terrible consequences when it fails mid run.
 * one script for updating the permissions
-  * Even if the script simply runs one of the permissions scripts covered in the earlier section, you might want to have a script you can `qsub` as scripts that update permissions for many files can take hours to run.
+  * Even if the script simply runs one of the permissions scripts covered in the earlier section, you might want to have a script you can `sbatch` as scripts that update permissions for many files can take hours to run.
 * one script for deleting the original files
   * You will likely want to wait a few days / weeks before running this, to make sure that you have successfully moved everything you needed.
   * If you don't have write permissions to all the original files, you will need to request JHPCE's admins to run this for you.
@@ -414,7 +414,7 @@ It contains the full paths to the 3 original directories that were relocated.
 
 * `move_qSVA_dcl01.sh`
 
-It's an array job for 3 tasks which represent the directories (`#$ -t 1:3`). Note the increase of the maximum file size (`h_fsize=400G`), in case we are moving some very large files. To reduce the burden on the network, we only copied 2 directories at a time (`#$ -tc 2`; number of concurrent tasks).
+It's an array job for 3 tasks which represent the directories. To reduce the burden on the network, we only copied 2 directories at a time when specifying the array (`#SBATCH --array=1-3%2`).
 
 Before transferring all the data, we compute the total data size (in TB) of the transfer. We use the `-sk --apparent-size` options to the `du` command in order to compute the un-compressed disk size, since some disk systems automatically compress some files, which can lead to different file size calculations across disk systems.
 
@@ -480,13 +480,23 @@ date
 ## available from http://research.libd.org/slurmjobs/
 ```
 
+In practice, you'll likely want to submit this script as a job and track the job ID:
+
+```
+MOVE_JOB_ID=$(sbatch --parsable move_qSVA_dcl01.sh)
+```
+
+This will allow us to chain together the steps so that the downstream permissions and
+deletion scripts start automatically when the _move_ step finishes.
+
 * `update_permissions.sh`
 
 By default, directories under `/dcs04/lieber/lcolladotor` have read, write and execute permissions to the `lieber_marmaypag` group. Here though, we first remove the permissions to `lieber_marmaypag`, then we give read and execute permissions to both the `lieber` and `lieber_marmaypag` unix user groups.
 
 We (redundantly) set the group of all files to be `lieber_lcolladotor` and then set the _group sticky bit_ which preserves the group (`lieber_lcolladotor` in this case) to any new files created within these directories. Finally, we use `nfs4_getfacl` to check that the ACLs were set up correctly.
 
-Note how we use `#$ -hold_jid` with the same name of the script from the _move_ step earlier (here `move_qSVA_dcl01`) so we can `qsub` this script immediately after the _move_ one, but wait for them to finish running before this one starts.
+Note how we include `--dependency=afterok:${MOVE_JOB_ID}`, which allows this job to be
+submitted immediately, and run automatically only after the _move_ step succeeds.
 
 ```bash
 #!/bin/bash
@@ -498,6 +508,7 @@ Note how we use `#$ -hold_jid` with the same name of the script from the _move_ 
 #SBATCH -o logs/update_permissions_qSVA.txt
 #SBATCH -e logs/update_permissions_qSVA.txt
 #SBATCH --mail-type=ALL
+#SBATCH --dependency=afterok:${MOVE_JOB_ID}
 
 set -e
 
@@ -549,7 +560,7 @@ date
 
 * `delete_qSVA_dcl01.sh`
 
-This script also uses `#$ -hold_jid` so in theory we could submit it (`qsub`) immediately after the _move_ script, however, it's best to wait a few days or weeks before running the script that deletes the original files under `trash` (here `trash_qSVA`), to make sure that we are not missing any files or encountered unexpected scenarios when moving files across disks.
+Note how we include `--dependency=afterok:${MOVE_JOB_ID}` again, which allows this job to be submitted immediately, and run automatically only after the _move_ step succeeds. However, it's probably best to wait a few days or weeks before manually running the script that deletes the original files under `trash` (here `trash_qSVA`), to make sure that we are not missing any files or encountered unexpected scenarios when moving files across disks.
 
 ```bash
 #!/bin/bash
@@ -561,6 +572,7 @@ This script also uses `#$ -hold_jid` so in theory we could submit it (`qsub`) im
 #SBATCH -o logs/delete_qSVA_dcl01.txt
 #SBATCH -e logs/delete_qSVA_dcl01.txt
 #SBATCH --mail-type=ALL
+#SBATCH --dependency=afterok:${MOVE_JOB_ID}
 
 set -e
 
@@ -662,7 +674,7 @@ date
 
 * `update_permissions.sh`
 
-This is a much simpler bash script which we didn't `qsub` and basically just reminds us of the specific command we used to update the permissions. That way, if anyone asks us what we ran in the future, we know exactly how we updated the permissions.
+This is a much simpler bash script which we didn't `sbatch` and basically just reminds us of the specific command we used to update the permissions. That way, if anyone asks us what we ran in the future, we know exactly how we updated the permissions.
 
 ```bash
 #!/bin/bash
