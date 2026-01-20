@@ -43,4 +43,6 @@ Or if you prefer, you can also watch the series of 10 short videos that summariz
 
 <iframe width="560" height="315" src="https://www.youtube.com/embed/JnZNA2w6u90?si=8ZMFer21WgBYy8ge" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
 
+This series of short 10 videos is also available on [LinkedIn](https://www.linkedin.com/posts/lcollado_bootcamp-howtobeamodernscientist-modernscience-activity-7418941483283701760-QdI3?utm_source=share&utm_medium=member_desktop&rcm=ACoAAAVwMEMBomcSUST_hBDdt_hdo02zu-hZLiA) and [Instagram](https://www.instagram.com/p/DTr61t-DvTW/) if you prefer those platforms.
+
 For more information about Jeff's Leanpub materials, check this [link](https://leanpub.com/u/jtleek).
