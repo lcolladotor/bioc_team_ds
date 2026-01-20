@@ -35,6 +35,12 @@ We do everything in this book, though to different degrees. This book is actuall
 
 Below you can watch the video of our training session.
 
-<iframe width="560" height="315" src="https://www.youtube.com/embed/rcX-VyxHEXA" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+<iframe width="560" height="315" src="https://www.youtube.com/embed/93hA-iPWsbs?si=tuX33ZCLVZnj5wgn" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+
+_Note that the [original video](https://youtu.be/rcX-VyxHEXA) was an 1hr 14 min long. The re-edited video shown above is 54 min long after having removed filler words and pauses using Adobe Premier Pro's AI editing features._
+
+Or if you prefer, you can also watch the series of 10 short videos that summarize the above 54 min video. Here's the first short video of the series:
+
+<iframe width="560" height="315" src="https://www.youtube.com/embed/JnZNA2w6u90?si=8ZMFer21WgBYy8ge" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
 
 For more information about Jeff's Leanpub materials, check this [link](https://leanpub.com/u/jtleek).
