@@ -17,7 +17,7 @@ At some point, it might be time for you to move on to a different opportunity. W
   * Ideally: are there companion shell scripts for the R scripts? For example, [`Visium_IF_AD/run_all_post_spaceranger.sh`](https://github.com/LieberInstitute/Visium_IF_AD/blob/master/code/run_all_post_spaceranger.sh).
 * Do we know how much RAM or how many cores are required for each script?
   * Ideally: This can be well documented with the companion shell scripts.
-  * Less ideal but still good: code comments noting the `qrsh` / `qsub` commands used.
+  * Less ideal but still good: code comments noting the `srun` / `sbatch` commands used.
 * Do we know about any JHPCE modules that need to be loaded for running these scripts?
   * Ideally: this can be documented on the companion shell scripts.
 * Do the scripts have comments?

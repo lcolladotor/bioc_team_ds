@@ -586,6 +586,21 @@ jsrun() { if [ -z ${DISPLAY} ]; then /usr/bin/srun --pty "$@" bash; else /usr/bi
 # previously in mac: "\h:\W \u\$ "
 export PS1="\[\e[0;33m\]\A \W \$ \[\e[m\]"
 
+# Exit for noninteractive shells (see https://github.com/lcolladotor/bioc_team_ds/issues/12)
+[[ ${-#*i} != ${-} ]] || return
+
+## Load commonly used modules by default when using srun/sbatch
+## thanks to Jiong Yang and John Muschelli
+if [[ $HOSTNAME == compute-* ]] || [[ $HOSTNAME == transfer-* ]]; then
+	# Load SLURM LIBD modules
+	## This command is not needed anymore, though you would need
+	## to use a similar command if you are loading private modules.
+	# module use /jhpce/shared/libd/modulefiles
+	module load git-status-size
+	module load git-lfs
+	module load rmate
+	module load conda_R/4.5 ## for BioC 3.21 as of Jan 16 2026
+fi
 ```
 
 For more information on `rmate` and `rmote` and how it relates to these configuration files, check this video and [companion notes](https://docs.google.com/document/d/1vj0xa_qZTIgsnooW_9_j44Low1UbSIufnlGXCgL_YCU/edit).
