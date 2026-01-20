@@ -434,7 +434,10 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <div id="r-setup" class="section level2 hasAnchor" number="17.1">
 <h2><span class="header-section-number">17.1</span> R setup<a href="config-files.html#r-setup" class="anchor-section" aria-label="Anchor link to header"></a></h2>
 <ul>
-<li>RStudio Desktop <em>Preview</em> version: <a href="https://rstudio.com/products/rstudio/download/preview/" class="uri">https://rstudio.com/products/rstudio/download/preview/</a></li>
+<li>Positron IDE from <a href="https://positron.posit.co/" class="uri">https://positron.posit.co/</a>
+<ul>
+<li>Previously we used RStudio Desktop <em>Preview</em> version: <a href="https://rstudio.com/products/rstudio/download/preview/" class="uri">https://rstudio.com/products/rstudio/download/preview/</a></li>
+</ul></li>
 <li>R: latest versions that match Bioconductor release and devel
 <ul>
 <li>macOS: you can download the latest “branch” and “devel” from <a href="https://mac.r-project.org/" class="uri">https://mac.r-project.org/</a></li>
@@ -447,7 +450,10 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <a href="https://cran.r-project.org/" class="uri">https://cran.r-project.org/</a></li>
 </ul></li>
 <li>Bioconductor-devel docker image: <a href="http://bioconductor.org/help/docker/" class="uri">http://bioconductor.org/help/docker/</a></li>
-<li>Air for auto-code formatting in RStudio and other editors: <a href="https://posit-dev.github.io/air/editor-rstudio.html" class="uri">https://posit-dev.github.io/air/editor-rstudio.html</a></li>
+<li>Air for auto-code formatting in RStudio and other editors: <a href="https://posit-dev.github.io/air/editor-rstudio.html" class="uri">https://posit-dev.github.io/air/editor-rstudio.html</a>
+<ul>
+<li>See also <a href="https://lcolladotor.github.io/jhustatcomputing/posts/01-welcome/#how-to-get-air-auto-code-formatter" class="uri">https://lcolladotor.github.io/jhustatcomputing/posts/01-welcome/#how-to-get-air-auto-code-formatter</a></li>
+</ul></li>
 </ul>
 <blockquote class="twitter-tweet">
 <p lang="en" dir="ltr">
@@ -761,12 +767,15 @@ Do you want to use <a href="https://twitter.com/Bioconductor?ref_src=twsrc%5Etfw
 <li><code>spatialDLPFC</code> <a href="https://github.com/LieberInstitute/spatialDLPFC/blob/main/code/update_style.R"><code>code/update_style.R</code> example</a>.</li>
 <li>Configure your <code>~/.Rprofile</code> for <code>styler</code> to use <code>biocthis::bioc_style()</code> as shown <a href="https://github.com/lcolladotor/bioc_team_ds/blob/015e78dd1694c83f6153eaa5e055fff554fa199b/17_config_files.Rmd#L288-L291">here</a>.</li>
 </ul></li>
-<li>Use <code>Air</code> for styling code within <code>RStudio</code> (or your favorite editor supported by <code>Air</code>)
+<li>Use <code>Air</code> for styling code within <code>Positron</code> and <code>RStudio</code> (or your favorite editor supported by <code>Air</code>)
 <ul>
 <li>When needed use <code># fmt: skip</code> file or <code># fmt: skip</code> due to <a href="https://github.com/rstudio/rstudio/issues/15795">this issue</a>.</li>
 <li>Use a global (user level) <code>~/air.toml</code> file instead of one per project as shown below.</li>
 </ul></li>
-<li>Configure <code>RStudio</code> to style files on save.</li>
+<li>Configure <code>Positron</code> or <code>RStudio</code> to style files on save.
+<ul>
+<li>For <code>Positron</code> check <a href="https://lcolladotor.github.io/jhustatcomputing/posts/01-welcome/#how-to-get-air-auto-code-formatter" class="uri">https://lcolladotor.github.io/jhustatcomputing/posts/01-welcome/#how-to-get-air-auto-code-formatter</a>.</li>
+</ul></li>
 </ul>
 <p><code>~/air.toml</code> contents:</p>
 <div class="sourceCode" id="cb23"><pre class="sourceCode toml"><code class="sourceCode toml"><span id="cb23-1"><a href="config-files.html#cb23-1" tabindex="-1"></a><span class="kw">[format]</span></span>
@@ -956,33 +965,46 @@ Thumbs.db</code></pre>
 <span id="cb28-68"><a href="config-files.html#cb28-68" tabindex="-1"></a><span class="co"># https://github.com/textmate/rmate</span></span>
 <span id="cb28-69"><a href="config-files.html#cb28-69" tabindex="-1"></a><span class="bu">export</span> <span class="va">RMATE_PORT</span><span class="op">=</span><span class="st">&quot;SOME_PORT_YOU_CHOOSE&quot;</span></span>
 <span id="cb28-70"><a href="config-files.html#cb28-70" tabindex="-1"></a></span>
-<span id="cb28-71"><a href="config-files.html#cb28-71" tabindex="-1"></a><span class="co">## Set an alias to run JHPCE rsrun with X11 support</span></span>
-<span id="cb28-72"><a href="config-files.html#cb28-72" tabindex="-1"></a><span class="co">## Documented at https://jhpce.jhu.edu/slurm/interactive-jobs/#shortcuts</span></span>
-<span id="cb28-73"><a href="config-files.html#cb28-73" tabindex="-1"></a><span class="fu">jsrun()</span> <span class="kw">{</span> <span class="cf">if</span> <span class="bu">[</span> <span class="ot">-z</span> <span class="va">${DISPLAY}</span> <span class="bu">]</span><span class="kw">;</span> <span class="cf">then</span> <span class="ex">/usr/bin/srun</span> <span class="at">--pty</span> <span class="st">&quot;</span><span class="va">$@</span><span class="st">&quot;</span> bash<span class="kw">;</span> <span class="cf">else</span> <span class="ex">/usr/bin/srun</span> <span class="at">--pty</span> <span class="at">--x11</span> <span class="st">&quot;</span><span class="va">$@</span><span class="st">&quot;</span> bash<span class="kw">;</span> <span class="cf">fi</span> <span class="kw">}</span></span>
-<span id="cb28-74"><a href="config-files.html#cb28-74" tabindex="-1"></a></span>
-<span id="cb28-75"><a href="config-files.html#cb28-75" tabindex="-1"></a><span class="co"># Change command prompt</span></span>
-<span id="cb28-76"><a href="config-files.html#cb28-76" tabindex="-1"></a><span class="co"># http://www.cyberciti.biz/tips/howto-linux-unix-bash-shell-setup-prompt.html</span></span>
-<span id="cb28-77"><a href="config-files.html#cb28-77" tabindex="-1"></a><span class="co"># http://www.cyberciti.biz/faq/bash-shell-change-the-color-of-my-shell-prompt-under-linux-or-unix/</span></span>
-<span id="cb28-78"><a href="config-files.html#cb28-78" tabindex="-1"></a><span class="co"># https://bbs.archlinux.org/viewtopic.php?id=48910</span></span>
-<span id="cb28-79"><a href="config-files.html#cb28-79" tabindex="-1"></a><span class="co"># previous in enigma2: &quot;[\u@\h \W]\$ &quot;</span></span>
-<span id="cb28-80"><a href="config-files.html#cb28-80" tabindex="-1"></a><span class="co"># previously in mac: &quot;\h:\W \u\$ &quot;</span></span>
-<span id="cb28-81"><a href="config-files.html#cb28-81" tabindex="-1"></a><span class="bu">export</span> <span class="va">PS1</span><span class="op">=</span><span class="st">&quot;\[\e[0;33m\]\A \W </span><span class="dt">\$</span><span class="st"> \[\e[m\]&quot;</span></span>
-<span id="cb28-82"><a href="config-files.html#cb28-82" tabindex="-1"></a></span>
-<span id="cb28-83"><a href="config-files.html#cb28-83" tabindex="-1"></a><span class="co"># Exit for noninteractive shells (see https://github.com/lcolladotor/bioc_team_ds/issues/12)</span></span>
-<span id="cb28-84"><a href="config-files.html#cb28-84" tabindex="-1"></a><span class="kw">[[</span> <span class="va">${-</span><span class="op">#</span><span class="pp">*</span>i<span class="va">}</span> <span class="ot">!=</span> <span class="va">${-}</span> <span class="kw">]]</span> <span class="kw">||</span> <span class="cf">return</span></span>
-<span id="cb28-85"><a href="config-files.html#cb28-85" tabindex="-1"></a></span>
-<span id="cb28-86"><a href="config-files.html#cb28-86" tabindex="-1"></a><span class="co">## Load commonly used modules by default when using srun/sbatch</span></span>
-<span id="cb28-87"><a href="config-files.html#cb28-87" tabindex="-1"></a><span class="co">## thanks to Jiong Yang and John Muschelli</span></span>
-<span id="cb28-88"><a href="config-files.html#cb28-88" tabindex="-1"></a><span class="cf">if</span> <span class="kw">[[</span> <span class="va">$HOSTNAME</span> <span class="ot">==</span> compute-<span class="pp">*</span> <span class="kw">]]</span> <span class="kw">||</span> <span class="kw">[[</span> <span class="va">$HOSTNAME</span> <span class="ot">==</span> transfer-<span class="pp">*</span> <span class="kw">]];</span> <span class="cf">then</span></span>
-<span id="cb28-89"><a href="config-files.html#cb28-89" tabindex="-1"></a>    <span class="co"># Load SLURM LIBD modules</span></span>
-<span id="cb28-90"><a href="config-files.html#cb28-90" tabindex="-1"></a>    <span class="co">## This command is not needed anymore, though you would need</span></span>
-<span id="cb28-91"><a href="config-files.html#cb28-91" tabindex="-1"></a>    <span class="co">## to use a similar command if you are loading private modules.</span></span>
-<span id="cb28-92"><a href="config-files.html#cb28-92" tabindex="-1"></a>    <span class="co"># module use /jhpce/shared/libd/modulefiles</span></span>
-<span id="cb28-93"><a href="config-files.html#cb28-93" tabindex="-1"></a>    <span class="ex">module</span> load git-status-size</span>
-<span id="cb28-94"><a href="config-files.html#cb28-94" tabindex="-1"></a>    <span class="ex">module</span> load git-lfs</span>
-<span id="cb28-95"><a href="config-files.html#cb28-95" tabindex="-1"></a>    <span class="ex">module</span> load rmate</span>
-<span id="cb28-96"><a href="config-files.html#cb28-96" tabindex="-1"></a>    <span class="ex">module</span> load conda_R/4.5 <span class="co">## for BioC 3.21 as of Jan 16 2026</span></span>
-<span id="cb28-97"><a href="config-files.html#cb28-97" tabindex="-1"></a><span class="cf">fi</span></span></code></pre></div>
+<span id="cb28-71"><a href="config-files.html#cb28-71" tabindex="-1"></a><span class="co">## Load commonly used modules by default when using srun/sbatch</span></span>
+<span id="cb28-72"><a href="config-files.html#cb28-72" tabindex="-1"></a><span class="co">## thanks to Jiong Yang and John Muschelli</span></span>
+<span id="cb28-73"><a href="config-files.html#cb28-73" tabindex="-1"></a><span class="cf">if</span> <span class="kw">[[</span> <span class="va">$HOSTNAME</span> <span class="ot">==</span> compute-<span class="pp">*</span> <span class="kw">]]</span> <span class="kw">||</span> <span class="kw">[[</span> <span class="va">$HOSTNAME</span> <span class="ot">==</span> transfer-<span class="pp">*</span> <span class="kw">]];</span> <span class="cf">then</span></span>
+<span id="cb28-74"><a href="config-files.html#cb28-74" tabindex="-1"></a>    <span class="co"># Load SLURM LIBD modules</span></span>
+<span id="cb28-75"><a href="config-files.html#cb28-75" tabindex="-1"></a>    <span class="co">## This command is not needed anymore, though you would need</span></span>
+<span id="cb28-76"><a href="config-files.html#cb28-76" tabindex="-1"></a>    <span class="co">## to use a similar command if you are loading private modules.</span></span>
+<span id="cb28-77"><a href="config-files.html#cb28-77" tabindex="-1"></a>    <span class="co"># module use /jhpce/shared/libd/modulefiles</span></span>
+<span id="cb28-78"><a href="config-files.html#cb28-78" tabindex="-1"></a>    <span class="ex">module</span> load git-status-size</span>
+<span id="cb28-79"><a href="config-files.html#cb28-79" tabindex="-1"></a>    <span class="ex">module</span> load git-lfs</span>
+<span id="cb28-80"><a href="config-files.html#cb28-80" tabindex="-1"></a>    <span class="ex">module</span> load rmate</span>
+<span id="cb28-81"><a href="config-files.html#cb28-81" tabindex="-1"></a>    <span class="ex">module</span> load conda_R/4.5 <span class="co">## for BioC 3.21</span></span>
+<span id="cb28-82"><a href="config-files.html#cb28-82" tabindex="-1"></a><span class="cf">fi</span></span>
+<span id="cb28-83"><a href="config-files.html#cb28-83" tabindex="-1"></a></span>
+<span id="cb28-84"><a href="config-files.html#cb28-84" tabindex="-1"></a><span class="co">## Set an alias to run JHPCE rsrun with X11 support</span></span>
+<span id="cb28-85"><a href="config-files.html#cb28-85" tabindex="-1"></a><span class="co">## Documented at https://jhpce.jhu.edu/slurm/interactive-jobs/#shortcuts</span></span>
+<span id="cb28-86"><a href="config-files.html#cb28-86" tabindex="-1"></a><span class="fu">jsrun()</span> <span class="kw">{</span> <span class="cf">if</span> <span class="bu">[</span> <span class="ot">-z</span> <span class="va">${DISPLAY}</span> <span class="bu">]</span><span class="kw">;</span> <span class="cf">then</span> <span class="ex">/usr/bin/srun</span> <span class="at">--pty</span> <span class="st">&quot;</span><span class="va">$@</span><span class="st">&quot;</span> bash<span class="kw">;</span> <span class="cf">else</span> <span class="ex">/usr/bin/srun</span> <span class="at">--pty</span> <span class="at">--x11</span> <span class="st">&quot;</span><span class="va">$@</span><span class="st">&quot;</span> bash<span class="kw">;</span> <span class="cf">fi</span> <span class="kw">}</span></span>
+<span id="cb28-87"><a href="config-files.html#cb28-87" tabindex="-1"></a></span>
+<span id="cb28-88"><a href="config-files.html#cb28-88" tabindex="-1"></a><span class="co"># Change command prompt</span></span>
+<span id="cb28-89"><a href="config-files.html#cb28-89" tabindex="-1"></a><span class="co"># http://www.cyberciti.biz/tips/howto-linux-unix-bash-shell-setup-prompt.html</span></span>
+<span id="cb28-90"><a href="config-files.html#cb28-90" tabindex="-1"></a><span class="co"># http://www.cyberciti.biz/faq/bash-shell-change-the-color-of-my-shell-prompt-under-linux-or-unix/</span></span>
+<span id="cb28-91"><a href="config-files.html#cb28-91" tabindex="-1"></a><span class="co"># https://bbs.archlinux.org/viewtopic.php?id=48910</span></span>
+<span id="cb28-92"><a href="config-files.html#cb28-92" tabindex="-1"></a><span class="co"># previous in enigma2: &quot;[\u@\h \W]\$ &quot;</span></span>
+<span id="cb28-93"><a href="config-files.html#cb28-93" tabindex="-1"></a><span class="co"># previously in mac: &quot;\h:\W \u\$ &quot;</span></span>
+<span id="cb28-94"><a href="config-files.html#cb28-94" tabindex="-1"></a><span class="bu">export</span> <span class="va">PS1</span><span class="op">=</span><span class="st">&quot;\[\e[0;33m\]\A \W </span><span class="dt">\$</span><span class="st"> \[\e[m\]&quot;</span></span>
+<span id="cb28-95"><a href="config-files.html#cb28-95" tabindex="-1"></a></span>
+<span id="cb28-96"><a href="config-files.html#cb28-96" tabindex="-1"></a><span class="co"># Exit for noninteractive shells (see https://github.com/lcolladotor/bioc_team_ds/issues/12)</span></span>
+<span id="cb28-97"><a href="config-files.html#cb28-97" tabindex="-1"></a><span class="kw">[[</span> <span class="va">${-</span><span class="op">#</span><span class="pp">*</span>i<span class="va">}</span> <span class="ot">!=</span> <span class="va">${-}</span> <span class="kw">]]</span> <span class="kw">||</span> <span class="cf">return</span></span>
+<span id="cb28-98"><a href="config-files.html#cb28-98" tabindex="-1"></a></span>
+<span id="cb28-99"><a href="config-files.html#cb28-99" tabindex="-1"></a><span class="co">## Load commonly used modules by default when using srun/sbatch</span></span>
+<span id="cb28-100"><a href="config-files.html#cb28-100" tabindex="-1"></a><span class="co">## thanks to Jiong Yang and John Muschelli</span></span>
+<span id="cb28-101"><a href="config-files.html#cb28-101" tabindex="-1"></a><span class="cf">if</span> <span class="kw">[[</span> <span class="va">$HOSTNAME</span> <span class="ot">==</span> compute-<span class="pp">*</span> <span class="kw">]]</span> <span class="kw">||</span> <span class="kw">[[</span> <span class="va">$HOSTNAME</span> <span class="ot">==</span> transfer-<span class="pp">*</span> <span class="kw">]];</span> <span class="cf">then</span></span>
+<span id="cb28-102"><a href="config-files.html#cb28-102" tabindex="-1"></a>    <span class="co"># Load SLURM LIBD modules</span></span>
+<span id="cb28-103"><a href="config-files.html#cb28-103" tabindex="-1"></a>    <span class="co">## This command is not needed anymore, though you would need</span></span>
+<span id="cb28-104"><a href="config-files.html#cb28-104" tabindex="-1"></a>    <span class="co">## to use a similar command if you are loading private modules.</span></span>
+<span id="cb28-105"><a href="config-files.html#cb28-105" tabindex="-1"></a>    <span class="co"># module use /jhpce/shared/libd/modulefiles</span></span>
+<span id="cb28-106"><a href="config-files.html#cb28-106" tabindex="-1"></a>    <span class="ex">module</span> load git-status-size</span>
+<span id="cb28-107"><a href="config-files.html#cb28-107" tabindex="-1"></a>    <span class="ex">module</span> load git-lfs</span>
+<span id="cb28-108"><a href="config-files.html#cb28-108" tabindex="-1"></a>    <span class="ex">module</span> load rmate</span>
+<span id="cb28-109"><a href="config-files.html#cb28-109" tabindex="-1"></a>    <span class="ex">module</span> load conda_R/4.5 <span class="co">## for BioC 3.21 as of Jan 16 2026</span></span>
+<span id="cb28-110"><a href="config-files.html#cb28-110" tabindex="-1"></a><span class="cf">fi</span></span></code></pre></div>
 <p>For more information on <code>rmate</code> and <code>rmote</code> and how it relates to these configuration files, check this video and <a href="https://docs.google.com/document/d/1vj0xa_qZTIgsnooW_9_j44Low1UbSIufnlGXCgL_YCU/edit">companion notes</a>.</p>
 <iframe width="560" height="315" src="https://www.youtube.com/embed/LjWr39C1Z_Q" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen>
 </iframe>
