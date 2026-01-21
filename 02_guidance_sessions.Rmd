@@ -116,9 +116,9 @@ Please try reaching out to multiple people instead of one person for all your qu
   - Learning about: spatial transcriptomics, coding workflows.
   - **Sign up** via [Calendly](https://calendly.com/manishabarse/25-minute-data-science-guidance-session)
 * [Nicholas J. Eagles](https://github.com/Nick-Eagles) ([BioC Support](https://support.bioconductor.org/u/24264/))
-  - Research interests: bulk/single-cell RNA-seq, spatial transcriptomics, building computational pipelines.
-  - Technologies I use: R/Bioconductor, Git, Nextflow, python.
-  - Learning about: data visualization, deep learning.
+  - Research interests: spatial transcriptomics, building computational pipelines, data visualization.
+  - Technologies I use: R/Bioconductor, Git, Nextflow, Python.
+  - Learning about: deep learning, LLMs for data science.
   - **Sign up** via [Calendly](https://calendly.com/nick-eagles/25-minute-data-science-guidance-session)
 * [Louise A. Huuki-Myers](https://github.com/lahuuki) ([BioC Support](https://support.bioconductor.org/u/24238/))
   - Research interests: bulk and single cell RNA-seq, spatial transcriptomics, RNA scope data, DEGs, data visualization.
