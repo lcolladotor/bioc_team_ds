@@ -34,7 +34,7 @@ The function call and the associated error message are frequently not informativ
 
 Use the `r BiocStyle::CRANpkg("reprex")` package for making small reproducible examples. Check our LIBD rstats club session on `reprex` to learn more about it.
 
-<iframe width="560" height="315" src="https://www.youtube.com/embed/8bBo3B7N8YQ" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+<iframe width="560" height="315" src="https://www.youtube.com/embed/LfUFxHFhXTE?si=K8wxSbrNZIj2BplM" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
 
 ### Use Markdown syntax
 
