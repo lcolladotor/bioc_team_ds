@@ -116,7 +116,8 @@ We use `R` quite a bit, and that's actually how this website was made. Here are 
 * [R Markdown documentation website](https://rmarkdown.rstudio.com/docs/) announced by [Alison Hill](https://bsky.app/profile/apreshill.com) on [this post](https://twitter.com/apreshill/status/1171290891157307392?s=20).
 * [Cookbook for R graphs, 2nd edition](https://r-graphics.org/) with useful `ggplot2` code.
 * [Updating R](http://lcolladotor.github.io/2017/05/04/updating-r/#.XXf3hZNKi50) blog post, though also check more recent resources on the LIBD rstats club Google Sheet.
-* Tutorial for [building R websites](http://www.emilyzabor.com/tutorials/rmarkdown_websites_tutorial.html) by [Emily C Zabor](http://www.emilyzabor.com/). More on R Markdown websites [here](https://bookdown.org/yihui/rmarkdown/rmarkdown-site.html), which is how this website was made.
+* Tutorial for [building R websites](http://www.emilyzabor.com/tutorials/rmarkdown_websites_tutorial.html) by [Emily C Zabor](http://www.emilyzabor.com/). More on R Markdown websites [here](https://bookdown.org/yihui/rmarkdown/rmarkdown-site.html), which is how this website was made.  
+* [slurmjobs](https://research.libd.org/slurmjobs/) R package writen by Nick Eagles, provides helper functions for interacting with SLURM-managed high-performance-computing environments from R   
 
 ### `python`
 
