@@ -15,7 +15,7 @@ slack
 team-calendar
 academic-bluesky-or-xtwitter
 laptop-setup
-jhpce
+jhpce-1
 jhpce-account
 jhpce-setup
 jhpce-info
@@ -56,7 +56,7 @@ rstudio-community-website
 github-1
 github-issues
 mailing-lists
-jhpce-1
+jhpce-2
 bithelp
 bitsupport
 bioc-devel
