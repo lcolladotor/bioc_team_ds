@@ -561,19 +561,6 @@ export LS_COLORS="di=0;32:ln=0;36:so=0;35:pi=0;93:ex=0;31:bd=0;34;46:cd=0;34;43:
 # https://github.com/textmate/rmate
 export RMATE_PORT="SOME_PORT_YOU_CHOOSE"
 
-## Load commonly used modules by default when using srun/sbatch
-## thanks to Jiong Yang and John Muschelli
-if [[ $HOSTNAME == compute-* ]] || [[ $HOSTNAME == transfer-* ]]; then
-	# Load SLURM LIBD modules
-	## This command is not needed anymore, though you would need
-	## to use a similar command if you are loading private modules.
-	# module use /jhpce/shared/libd/modulefiles
-	module load git-status-size
-	module load git-lfs
-	module load rmate
-	module load conda_R/4.5 ## for BioC 3.21
-fi
-
 ## Set an alias to run JHPCE rsrun with X11 support
 ## Documented at https://jhpce.jhu.edu/slurm/interactive-jobs/#shortcuts
 jsrun() { if [ -z ${DISPLAY} ]; then /usr/bin/srun --pty "$@" bash; else /usr/bin/srun --pty --x11 "$@" bash; fi }
