@@ -466,7 +466,17 @@ Thumbs.db
 
 ## JHPCE files
 
-To configure your computer with JHPCE, you might want to check this video and [companion notes](https://gist.github.com/lcolladotor/3b1063db30a206835ee7e086c8f037ee) for macOS
+### Older Set Up
+
+In the following set of videos, the set-up process for coding at JHPCE (and
+locally) is documented. These videos and notes walk through setting up SSH
+keys, git, R, as well as RStudio + either WinSCP or CyberDuck. In the newer
+set-up, RStudio + WinSCP/CyberDuck can replaced with Positron, a single
+fully integrated code editor (with additional AI features). However, the
+original video/notes still include relevant set-up details necessary even with
+the new set-up.
+
+For MacOS check this video and [companion notes](https://gist.github.com/lcolladotor/3b1063db30a206835ee7e086c8f037ee):
 
 <iframe width="560" height="315" src="https://www.youtube.com/embed/8tuI-ZAlZ1Y?si=zUg4WLXQbwrtvHOk" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
 
@@ -474,7 +484,14 @@ or this other video and [companion notes](https://docs.google.com/document/d/1Lx
 
 <iframe width="560" height="315" src="https://www.youtube.com/embed/qtn3eTwFlZI?si=2CQZuqpZuuZ-emHU" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
 
-These videos also talk about GitHub and local git setup on your laptop.
+### Positron Set Up
+
+After setting up the appropriate SSH keys, the Positron IDE can be used for coding at JHPCE. In contrast with RStudio, Positron can directly see the remote filesystem at JHPCE, plot interactively, and leverage additional AI features.
+
+Check out [these notes](https://docs.google.com/document/d/1lGbZfl-FjrzQXnVsJKIEMTN8ecnFNzE0M0zKFNnVCCA/edit?usp=sharing)
+as well as the instructional video:
+
+<iframe width="560" height="315" src="https://www.youtube.com/embed/CnmaJG8VPp8" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
 
 ### `~/.slurm/defaults`
 
