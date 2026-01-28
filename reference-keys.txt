@@ -2,6 +2,7 @@ onboarding
 basic-work-expectations
 background-knowledge
 rna-seq
+single-cell-rna-seq-and-spatial-trasncriptomics
 dnam
 commonly-used-software
 bash-and-linux
