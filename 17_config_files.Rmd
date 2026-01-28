@@ -491,7 +491,7 @@ After setting up the appropriate SSH keys, the Positron IDE can be used for codi
 Check out [these notes](https://docs.google.com/document/d/1lGbZfl-FjrzQXnVsJKIEMTN8ecnFNzE0M0zKFNnVCCA/edit?usp=sharing)
 as well as the instructional video:
 
-<iframe width="560" height="315" src="https://www.youtube.com/embed/CnmaJG8VPp8" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+<iframe width="560" height="315" src="https://www.youtube.com/embed/CnmaJG8VPp8?si=4jke5ysJVyNarcSL" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
 
 ### `~/.slurm/defaults`
 
