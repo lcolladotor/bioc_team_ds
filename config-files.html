@@ -378,10 +378,12 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 </ul></li>
 <li class="chapter" data-level="17.4" data-path="config-files.html"><a href="config-files.html#jhpce-files"><i class="fa fa-check"></i><b>17.4</b> JHPCE files</a>
 <ul>
-<li class="chapter" data-level="17.4.1" data-path="config-files.html"><a href="config-files.html#slurmdefaults"><i class="fa fa-check"></i><b>17.4.1</b> <code>~/.slurm/defaults</code></a></li>
-<li class="chapter" data-level="17.4.2" data-path="config-files.html"><a href="config-files.html#bashrc"><i class="fa fa-check"></i><b>17.4.2</b> <code>~/.bashrc</code></a></li>
-<li class="chapter" data-level="17.4.3" data-path="config-files.html"><a href="config-files.html#bash_profile"><i class="fa fa-check"></i><b>17.4.3</b> <code>~/.bash_profile</code></a></li>
-<li class="chapter" data-level="17.4.4" data-path="config-files.html"><a href="config-files.html#inputrc"><i class="fa fa-check"></i><b>17.4.4</b> <code>~/.inputrc</code></a></li>
+<li class="chapter" data-level="17.4.1" data-path="config-files.html"><a href="config-files.html#older-set-up"><i class="fa fa-check"></i><b>17.4.1</b> Older Set Up</a></li>
+<li class="chapter" data-level="17.4.2" data-path="config-files.html"><a href="config-files.html#positron-set-up"><i class="fa fa-check"></i><b>17.4.2</b> Positron Set Up</a></li>
+<li class="chapter" data-level="17.4.3" data-path="config-files.html"><a href="config-files.html#slurmdefaults"><i class="fa fa-check"></i><b>17.4.3</b> <code>~/.slurm/defaults</code></a></li>
+<li class="chapter" data-level="17.4.4" data-path="config-files.html"><a href="config-files.html#bashrc"><i class="fa fa-check"></i><b>17.4.4</b> <code>~/.bashrc</code></a></li>
+<li class="chapter" data-level="17.4.5" data-path="config-files.html"><a href="config-files.html#bash_profile"><i class="fa fa-check"></i><b>17.4.5</b> <code>~/.bash_profile</code></a></li>
+<li class="chapter" data-level="17.4.6" data-path="config-files.html"><a href="config-files.html#inputrc"><i class="fa fa-check"></i><b>17.4.6</b> <code>~/.inputrc</code></a></li>
 </ul></li>
 </ul></li>
 <li class="chapter" data-level="18" data-path="backing-up-your-computer.html"><a href="backing-up-your-computer.html"><i class="fa fa-check"></i><b>18</b> Backing up your computer</a>
@@ -883,21 +885,38 @@ Thumbs.db</code></pre>
 </div>
 <div id="jhpce-files" class="section level2 hasAnchor" number="17.4">
 <h2><span class="header-section-number">17.4</span> JHPCE files<a href="config-files.html#jhpce-files" class="anchor-section" aria-label="Anchor link to header"></a></h2>
-<p>To configure your computer with JHPCE, you might want to check this video and <a href="https://gist.github.com/lcolladotor/3b1063db30a206835ee7e086c8f037ee">companion notes</a> for macOS</p>
+<div id="older-set-up" class="section level3 hasAnchor" number="17.4.1">
+<h3><span class="header-section-number">17.4.1</span> Older Set Up<a href="config-files.html#older-set-up" class="anchor-section" aria-label="Anchor link to header"></a></h3>
+<p>In the following set of videos, the set-up process for coding at JHPCE (and
+locally) is documented. These videos and notes walk through setting up SSH
+keys, git, R, as well as RStudio + either WinSCP or CyberDuck. In the newer
+set-up, RStudio + WinSCP/CyberDuck can replaced with Positron, a single
+fully integrated code editor (with additional AI features). However, the
+original video/notes still include relevant set-up details necessary even with
+the new set-up.</p>
+<p>For MacOS check this video and <a href="https://gist.github.com/lcolladotor/3b1063db30a206835ee7e086c8f037ee">companion notes</a>:</p>
 <iframe width="560" height="315" src="https://www.youtube.com/embed/8tuI-ZAlZ1Y?si=zUg4WLXQbwrtvHOk" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen>
 </iframe>
 <p>or this other video and <a href="https://docs.google.com/document/d/1Lxo1qXSAO2T0lLJUPvJuCBPhP3PJQEFcmrK5tIiqfgc/edit?usp=sharing">companion notes</a> for winOS.</p>
 <iframe width="560" height="315" src="https://www.youtube.com/embed/qtn3eTwFlZI?si=2CQZuqpZuuZ-emHU" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen>
 </iframe>
-<p>These videos also talk about GitHub and local git setup on your laptop.</p>
-<div id="slurmdefaults" class="section level3 hasAnchor" number="17.4.1">
-<h3><span class="header-section-number">17.4.1</span> <code>~/.slurm/defaults</code><a href="config-files.html#slurmdefaults" class="anchor-section" aria-label="Anchor link to header"></a></h3>
+</div>
+<div id="positron-set-up" class="section level3 hasAnchor" number="17.4.2">
+<h3><span class="header-section-number">17.4.2</span> Positron Set Up<a href="config-files.html#positron-set-up" class="anchor-section" aria-label="Anchor link to header"></a></h3>
+<p>After setting up the appropriate SSH keys, the Positron IDE can be used for coding at JHPCE. In contrast with RStudio, Positron can directly see the remote filesystem at JHPCE, plot interactively, and leverage additional AI features.</p>
+<p>Check out <a href="https://docs.google.com/document/d/1lGbZfl-FjrzQXnVsJKIEMTN8ecnFNzE0M0zKFNnVCCA/edit?usp=sharing">these notes</a>
+as well as the instructional video:</p>
+<iframe width="560" height="315" src="https://www.youtube.com/embed/CnmaJG8VPp8" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen>
+</iframe>
+</div>
+<div id="slurmdefaults" class="section level3 hasAnchor" number="17.4.3">
+<h3><span class="header-section-number">17.4.3</span> <code>~/.slurm/defaults</code><a href="config-files.html#slurmdefaults" class="anchor-section" aria-label="Anchor link to header"></a></h3>
 <p>This file configures the default SLURM requests under <code>srun</code> and <code>sbatch</code>. See this <a href="https://lists.jh.edu/sympa/arc/bithelp/2024-04/msg00018.html">BitHelp thread</a> for more details about this file.</p>
 <div class="sourceCode" id="cb27"><pre class="sourceCode bash"><code class="sourceCode bash"><span id="cb27-1"><a href="config-files.html#cb27-1" tabindex="-1"></a><span class="va">mem</span><span class="op">=</span>2G</span>
 <span id="cb27-2"><a href="config-files.html#cb27-2" tabindex="-1"></a><span class="ex">mail-user=YOUR_EMAIL@gmail.com</span></span></code></pre></div>
 </div>
-<div id="bashrc" class="section level3 hasAnchor" number="17.4.2">
-<h3><span class="header-section-number">17.4.2</span> <code>~/.bashrc</code><a href="config-files.html#bashrc" class="anchor-section" aria-label="Anchor link to header"></a></h3>
+<div id="bashrc" class="section level3 hasAnchor" number="17.4.4">
+<h3><span class="header-section-number">17.4.4</span> <code>~/.bashrc</code><a href="config-files.html#bashrc" class="anchor-section" aria-label="Anchor link to header"></a></h3>
 <p>This is the main configuration file for JHPCE, but it’s really for any linux system. Some of the commands have to change when working on macOS.</p>
 <div class="sourceCode" id="cb28"><pre class="sourceCode bash"><code class="sourceCode bash"><span id="cb28-1"><a href="config-files.html#cb28-1" tabindex="-1"></a><span class="co"># .bashrc</span></span>
 <span id="cb28-2"><a href="config-files.html#cb28-2" tabindex="-1"></a></span>
@@ -969,52 +988,39 @@ Thumbs.db</code></pre>
 <span id="cb28-68"><a href="config-files.html#cb28-68" tabindex="-1"></a><span class="co"># https://github.com/textmate/rmate</span></span>
 <span id="cb28-69"><a href="config-files.html#cb28-69" tabindex="-1"></a><span class="bu">export</span> <span class="va">RMATE_PORT</span><span class="op">=</span><span class="st">&quot;SOME_PORT_YOU_CHOOSE&quot;</span></span>
 <span id="cb28-70"><a href="config-files.html#cb28-70" tabindex="-1"></a></span>
-<span id="cb28-71"><a href="config-files.html#cb28-71" tabindex="-1"></a><span class="co">## Load commonly used modules by default when using srun/sbatch</span></span>
-<span id="cb28-72"><a href="config-files.html#cb28-72" tabindex="-1"></a><span class="co">## thanks to Jiong Yang and John Muschelli</span></span>
-<span id="cb28-73"><a href="config-files.html#cb28-73" tabindex="-1"></a><span class="cf">if</span> <span class="kw">[[</span> <span class="va">$HOSTNAME</span> <span class="ot">==</span> compute-<span class="pp">*</span> <span class="kw">]]</span> <span class="kw">||</span> <span class="kw">[[</span> <span class="va">$HOSTNAME</span> <span class="ot">==</span> transfer-<span class="pp">*</span> <span class="kw">]];</span> <span class="cf">then</span></span>
-<span id="cb28-74"><a href="config-files.html#cb28-74" tabindex="-1"></a>    <span class="co"># Load SLURM LIBD modules</span></span>
-<span id="cb28-75"><a href="config-files.html#cb28-75" tabindex="-1"></a>    <span class="co">## This command is not needed anymore, though you would need</span></span>
-<span id="cb28-76"><a href="config-files.html#cb28-76" tabindex="-1"></a>    <span class="co">## to use a similar command if you are loading private modules.</span></span>
-<span id="cb28-77"><a href="config-files.html#cb28-77" tabindex="-1"></a>    <span class="co"># module use /jhpce/shared/libd/modulefiles</span></span>
-<span id="cb28-78"><a href="config-files.html#cb28-78" tabindex="-1"></a>    <span class="ex">module</span> load git-status-size</span>
-<span id="cb28-79"><a href="config-files.html#cb28-79" tabindex="-1"></a>    <span class="ex">module</span> load git-lfs</span>
-<span id="cb28-80"><a href="config-files.html#cb28-80" tabindex="-1"></a>    <span class="ex">module</span> load rmate</span>
-<span id="cb28-81"><a href="config-files.html#cb28-81" tabindex="-1"></a>    <span class="ex">module</span> load conda_R/4.5 <span class="co">## for BioC 3.21</span></span>
-<span id="cb28-82"><a href="config-files.html#cb28-82" tabindex="-1"></a><span class="cf">fi</span></span>
-<span id="cb28-83"><a href="config-files.html#cb28-83" tabindex="-1"></a></span>
-<span id="cb28-84"><a href="config-files.html#cb28-84" tabindex="-1"></a><span class="co">## Set an alias to run JHPCE rsrun with X11 support</span></span>
-<span id="cb28-85"><a href="config-files.html#cb28-85" tabindex="-1"></a><span class="co">## Documented at https://jhpce.jhu.edu/slurm/interactive-jobs/#shortcuts</span></span>
-<span id="cb28-86"><a href="config-files.html#cb28-86" tabindex="-1"></a><span class="fu">jsrun()</span> <span class="kw">{</span> <span class="cf">if</span> <span class="bu">[</span> <span class="ot">-z</span> <span class="va">${DISPLAY}</span> <span class="bu">]</span><span class="kw">;</span> <span class="cf">then</span> <span class="ex">/usr/bin/srun</span> <span class="at">--pty</span> <span class="st">&quot;</span><span class="va">$@</span><span class="st">&quot;</span> bash<span class="kw">;</span> <span class="cf">else</span> <span class="ex">/usr/bin/srun</span> <span class="at">--pty</span> <span class="at">--x11</span> <span class="st">&quot;</span><span class="va">$@</span><span class="st">&quot;</span> bash<span class="kw">;</span> <span class="cf">fi</span> <span class="kw">}</span></span>
-<span id="cb28-87"><a href="config-files.html#cb28-87" tabindex="-1"></a></span>
-<span id="cb28-88"><a href="config-files.html#cb28-88" tabindex="-1"></a><span class="co"># Change command prompt</span></span>
-<span id="cb28-89"><a href="config-files.html#cb28-89" tabindex="-1"></a><span class="co"># http://www.cyberciti.biz/tips/howto-linux-unix-bash-shell-setup-prompt.html</span></span>
-<span id="cb28-90"><a href="config-files.html#cb28-90" tabindex="-1"></a><span class="co"># http://www.cyberciti.biz/faq/bash-shell-change-the-color-of-my-shell-prompt-under-linux-or-unix/</span></span>
-<span id="cb28-91"><a href="config-files.html#cb28-91" tabindex="-1"></a><span class="co"># https://bbs.archlinux.org/viewtopic.php?id=48910</span></span>
-<span id="cb28-92"><a href="config-files.html#cb28-92" tabindex="-1"></a><span class="co"># previous in enigma2: &quot;[\u@\h \W]\$ &quot;</span></span>
-<span id="cb28-93"><a href="config-files.html#cb28-93" tabindex="-1"></a><span class="co"># previously in mac: &quot;\h:\W \u\$ &quot;</span></span>
-<span id="cb28-94"><a href="config-files.html#cb28-94" tabindex="-1"></a><span class="bu">export</span> <span class="va">PS1</span><span class="op">=</span><span class="st">&quot;\[\e[0;33m\]\A \W </span><span class="dt">\$</span><span class="st"> \[\e[m\]&quot;</span></span>
-<span id="cb28-95"><a href="config-files.html#cb28-95" tabindex="-1"></a></span>
-<span id="cb28-96"><a href="config-files.html#cb28-96" tabindex="-1"></a><span class="co"># Exit for noninteractive shells (see https://github.com/lcolladotor/bioc_team_ds/issues/12)</span></span>
-<span id="cb28-97"><a href="config-files.html#cb28-97" tabindex="-1"></a><span class="kw">[[</span> <span class="va">${-</span><span class="op">#</span><span class="pp">*</span>i<span class="va">}</span> <span class="ot">!=</span> <span class="va">${-}</span> <span class="kw">]]</span> <span class="kw">||</span> <span class="cf">return</span></span>
-<span id="cb28-98"><a href="config-files.html#cb28-98" tabindex="-1"></a></span>
-<span id="cb28-99"><a href="config-files.html#cb28-99" tabindex="-1"></a><span class="co">## Load commonly used modules by default when using srun/sbatch</span></span>
-<span id="cb28-100"><a href="config-files.html#cb28-100" tabindex="-1"></a><span class="co">## thanks to Jiong Yang and John Muschelli</span></span>
-<span id="cb28-101"><a href="config-files.html#cb28-101" tabindex="-1"></a><span class="cf">if</span> <span class="kw">[[</span> <span class="va">$HOSTNAME</span> <span class="ot">==</span> compute-<span class="pp">*</span> <span class="kw">]]</span> <span class="kw">||</span> <span class="kw">[[</span> <span class="va">$HOSTNAME</span> <span class="ot">==</span> transfer-<span class="pp">*</span> <span class="kw">]];</span> <span class="cf">then</span></span>
-<span id="cb28-102"><a href="config-files.html#cb28-102" tabindex="-1"></a>    <span class="co"># Load SLURM LIBD modules</span></span>
-<span id="cb28-103"><a href="config-files.html#cb28-103" tabindex="-1"></a>    <span class="co">## This command is not needed anymore, though you would need</span></span>
-<span id="cb28-104"><a href="config-files.html#cb28-104" tabindex="-1"></a>    <span class="co">## to use a similar command if you are loading private modules.</span></span>
-<span id="cb28-105"><a href="config-files.html#cb28-105" tabindex="-1"></a>    <span class="co"># module use /jhpce/shared/libd/modulefiles</span></span>
-<span id="cb28-106"><a href="config-files.html#cb28-106" tabindex="-1"></a>    <span class="ex">module</span> load git-status-size</span>
-<span id="cb28-107"><a href="config-files.html#cb28-107" tabindex="-1"></a>    <span class="ex">module</span> load git-lfs</span>
-<span id="cb28-108"><a href="config-files.html#cb28-108" tabindex="-1"></a>    <span class="ex">module</span> load rmate</span>
-<span id="cb28-109"><a href="config-files.html#cb28-109" tabindex="-1"></a>    <span class="ex">module</span> load conda_R/4.5 <span class="co">## for BioC 3.21 as of Jan 16 2026</span></span>
-<span id="cb28-110"><a href="config-files.html#cb28-110" tabindex="-1"></a><span class="cf">fi</span></span></code></pre></div>
+<span id="cb28-71"><a href="config-files.html#cb28-71" tabindex="-1"></a><span class="co">## Set an alias to run JHPCE rsrun with X11 support</span></span>
+<span id="cb28-72"><a href="config-files.html#cb28-72" tabindex="-1"></a><span class="co">## Documented at https://jhpce.jhu.edu/slurm/interactive-jobs/#shortcuts</span></span>
+<span id="cb28-73"><a href="config-files.html#cb28-73" tabindex="-1"></a><span class="fu">jsrun()</span> <span class="kw">{</span> <span class="cf">if</span> <span class="bu">[</span> <span class="ot">-z</span> <span class="va">${DISPLAY}</span> <span class="bu">]</span><span class="kw">;</span> <span class="cf">then</span> <span class="ex">/usr/bin/srun</span> <span class="at">--pty</span> <span class="st">&quot;</span><span class="va">$@</span><span class="st">&quot;</span> bash<span class="kw">;</span> <span class="cf">else</span> <span class="ex">/usr/bin/srun</span> <span class="at">--pty</span> <span class="at">--x11</span> <span class="st">&quot;</span><span class="va">$@</span><span class="st">&quot;</span> bash<span class="kw">;</span> <span class="cf">fi</span> <span class="kw">}</span></span>
+<span id="cb28-74"><a href="config-files.html#cb28-74" tabindex="-1"></a></span>
+<span id="cb28-75"><a href="config-files.html#cb28-75" tabindex="-1"></a><span class="co"># Change command prompt</span></span>
+<span id="cb28-76"><a href="config-files.html#cb28-76" tabindex="-1"></a><span class="co"># http://www.cyberciti.biz/tips/howto-linux-unix-bash-shell-setup-prompt.html</span></span>
+<span id="cb28-77"><a href="config-files.html#cb28-77" tabindex="-1"></a><span class="co"># http://www.cyberciti.biz/faq/bash-shell-change-the-color-of-my-shell-prompt-under-linux-or-unix/</span></span>
+<span id="cb28-78"><a href="config-files.html#cb28-78" tabindex="-1"></a><span class="co"># https://bbs.archlinux.org/viewtopic.php?id=48910</span></span>
+<span id="cb28-79"><a href="config-files.html#cb28-79" tabindex="-1"></a><span class="co"># previous in enigma2: &quot;[\u@\h \W]\$ &quot;</span></span>
+<span id="cb28-80"><a href="config-files.html#cb28-80" tabindex="-1"></a><span class="co"># previously in mac: &quot;\h:\W \u\$ &quot;</span></span>
+<span id="cb28-81"><a href="config-files.html#cb28-81" tabindex="-1"></a><span class="bu">export</span> <span class="va">PS1</span><span class="op">=</span><span class="st">&quot;\[\e[0;33m\]\A \W </span><span class="dt">\$</span><span class="st"> \[\e[m\]&quot;</span></span>
+<span id="cb28-82"><a href="config-files.html#cb28-82" tabindex="-1"></a></span>
+<span id="cb28-83"><a href="config-files.html#cb28-83" tabindex="-1"></a><span class="co"># Exit for noninteractive shells (see https://github.com/lcolladotor/bioc_team_ds/issues/12)</span></span>
+<span id="cb28-84"><a href="config-files.html#cb28-84" tabindex="-1"></a><span class="kw">[[</span> <span class="va">${-</span><span class="op">#</span><span class="pp">*</span>i<span class="va">}</span> <span class="ot">!=</span> <span class="va">${-}</span> <span class="kw">]]</span> <span class="kw">||</span> <span class="cf">return</span></span>
+<span id="cb28-85"><a href="config-files.html#cb28-85" tabindex="-1"></a></span>
+<span id="cb28-86"><a href="config-files.html#cb28-86" tabindex="-1"></a><span class="co">## Load commonly used modules by default when using srun/sbatch</span></span>
+<span id="cb28-87"><a href="config-files.html#cb28-87" tabindex="-1"></a><span class="co">## thanks to Jiong Yang and John Muschelli</span></span>
+<span id="cb28-88"><a href="config-files.html#cb28-88" tabindex="-1"></a><span class="cf">if</span> <span class="kw">[[</span> <span class="va">$HOSTNAME</span> <span class="ot">==</span> compute-<span class="pp">*</span> <span class="kw">]]</span> <span class="kw">||</span> <span class="kw">[[</span> <span class="va">$HOSTNAME</span> <span class="ot">==</span> transfer-<span class="pp">*</span> <span class="kw">]];</span> <span class="cf">then</span></span>
+<span id="cb28-89"><a href="config-files.html#cb28-89" tabindex="-1"></a>    <span class="co"># Load SLURM LIBD modules</span></span>
+<span id="cb28-90"><a href="config-files.html#cb28-90" tabindex="-1"></a>    <span class="co">## This command is not needed anymore, though you would need</span></span>
+<span id="cb28-91"><a href="config-files.html#cb28-91" tabindex="-1"></a>    <span class="co">## to use a similar command if you are loading private modules.</span></span>
+<span id="cb28-92"><a href="config-files.html#cb28-92" tabindex="-1"></a>    <span class="co"># module use /jhpce/shared/libd/modulefiles</span></span>
+<span id="cb28-93"><a href="config-files.html#cb28-93" tabindex="-1"></a>    <span class="ex">module</span> load git-status-size</span>
+<span id="cb28-94"><a href="config-files.html#cb28-94" tabindex="-1"></a>    <span class="ex">module</span> load git-lfs</span>
+<span id="cb28-95"><a href="config-files.html#cb28-95" tabindex="-1"></a>    <span class="ex">module</span> load rmate</span>
+<span id="cb28-96"><a href="config-files.html#cb28-96" tabindex="-1"></a>    <span class="ex">module</span> load conda_R/4.5 <span class="co">## for BioC 3.21 as of Jan 16 2026</span></span>
+<span id="cb28-97"><a href="config-files.html#cb28-97" tabindex="-1"></a><span class="cf">fi</span></span></code></pre></div>
 <p>For more information on <code>rmate</code> and <code>rmote</code> and how it relates to these configuration files, check this video and <a href="https://docs.google.com/document/d/1vj0xa_qZTIgsnooW_9_j44Low1UbSIufnlGXCgL_YCU/edit">companion notes</a>.</p>
 <iframe width="560" height="315" src="https://www.youtube.com/embed/LjWr39C1Z_Q" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen>
 </iframe>
 </div>
-<div id="bash_profile" class="section level3 hasAnchor" number="17.4.3">
-<h3><span class="header-section-number">17.4.3</span> <code>~/.bash_profile</code><a href="config-files.html#bash_profile" class="anchor-section" aria-label="Anchor link to header"></a></h3>
+<div id="bash_profile" class="section level3 hasAnchor" number="17.4.5">
+<h3><span class="header-section-number">17.4.5</span> <code>~/.bash_profile</code><a href="config-files.html#bash_profile" class="anchor-section" aria-label="Anchor link to header"></a></h3>
 <p>This file is basically empty, since all the information is contained in the <code>~/.bashrc</code>. That was the recommended setup a few years ago when I asked JHPCE’s admins.</p>
 <div class="sourceCode" id="cb29"><pre class="sourceCode bash"><code class="sourceCode bash"><span id="cb29-1"><a href="config-files.html#cb29-1" tabindex="-1"></a><span class="co"># .bash_profile</span></span>
 <span id="cb29-2"><a href="config-files.html#cb29-2" tabindex="-1"></a></span>
@@ -1023,8 +1029,8 @@ Thumbs.db</code></pre>
 <span id="cb29-5"><a href="config-files.html#cb29-5" tabindex="-1"></a>    <span class="bu">.</span> ~/.bashrc</span>
 <span id="cb29-6"><a href="config-files.html#cb29-6" tabindex="-1"></a><span class="cf">fi</span></span></code></pre></div>
 </div>
-<div id="inputrc" class="section level3 hasAnchor" number="17.4.4">
-<h3><span class="header-section-number">17.4.4</span> <code>~/.inputrc</code><a href="config-files.html#inputrc" class="anchor-section" aria-label="Anchor link to header"></a></h3>
+<div id="inputrc" class="section level3 hasAnchor" number="17.4.6">
+<h3><span class="header-section-number">17.4.6</span> <code>~/.inputrc</code><a href="config-files.html#inputrc" class="anchor-section" aria-label="Anchor link to header"></a></h3>
 <p>Useful for altering the behavior of the up and down arrow keys. See the companion lines on the <code>~/.bashrc</code> file.</p>
 <div class="sourceCode" id="cb30"><pre class="sourceCode bash"><code class="sourceCode bash"><span id="cb30-1"><a href="config-files.html#cb30-1" tabindex="-1"></a><span class="co">#Page up/page down</span></span>
 <span id="cb30-2"><a href="config-files.html#cb30-2" tabindex="-1"></a><span class="st">&quot;\e[B&quot;</span><span class="ex">:</span> history-search-forward</span>
