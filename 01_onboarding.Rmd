@@ -62,7 +62,12 @@ Below is a list of papers that might provide some useful background information 
 * [Systematic evaluation of spliced alignment programs for RNA-seq data](https://www.nature.com/articles/nmeth.2722)
 * [Assessment of transcript reconstruction methods for RNA-seq](https://www.nature.com/articles/nmeth.2714)
 * [Transcriptome and genome sequencing uncovers functional variation in humans](https://www.nature.com/articles/nature12531)
-* [Reproducibility of high-throughput mRNA and small RNA sequencing across laboratories](https://www.nature.com/articles/nbt.2702)
+* [Reproducibility of high-throughput mRNA and small RNA sequencing across laboratories](https://www.nature.com/articles/nbt.2702)  
+
+### Single Cell RNA-seq and Spatial Trasncriptomics  
+
+* [Human Pilot Visium](https://doi.org/10.1038/s41593-020-00787-0)  
+* [Single Nucleus RNA-seq across human brain](https://www.cell.com/neuron/fulltext/S0896-6273(21)00655-3)  
 
 ### DNAm
 
@@ -111,7 +116,8 @@ We use `R` quite a bit, and that's actually how this website was made. Here are 
 * [R Markdown documentation website](https://rmarkdown.rstudio.com/docs/) announced by [Alison Hill](https://bsky.app/profile/apreshill.com) on [this post](https://twitter.com/apreshill/status/1171290891157307392?s=20).
 * [Cookbook for R graphs, 2nd edition](https://r-graphics.org/) with useful `ggplot2` code.
 * [Updating R](http://lcolladotor.github.io/2017/05/04/updating-r/#.XXf3hZNKi50) blog post, though also check more recent resources on the LIBD rstats club Google Sheet.
-* Tutorial for [building R websites](http://www.emilyzabor.com/tutorials/rmarkdown_websites_tutorial.html) by [Emily C Zabor](http://www.emilyzabor.com/). More on R Markdown websites [here](https://bookdown.org/yihui/rmarkdown/rmarkdown-site.html), which is how this website was made.
+* Tutorial for [building R websites](http://www.emilyzabor.com/tutorials/rmarkdown_websites_tutorial.html) by [Emily C Zabor](http://www.emilyzabor.com/). More on R Markdown websites [here](https://bookdown.org/yihui/rmarkdown/rmarkdown-site.html), which is how this website was made.  
+* [slurmjobs](https://research.libd.org/slurmjobs/) R package writen by Nick Eagles, provides helper functions for interacting with SLURM-managed high-performance-computing environments from R   
 
 ### `python`
 
