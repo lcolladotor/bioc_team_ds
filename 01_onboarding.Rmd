@@ -62,7 +62,12 @@ Below is a list of papers that might provide some useful background information 
 * [Systematic evaluation of spliced alignment programs for RNA-seq data](https://www.nature.com/articles/nmeth.2722)
 * [Assessment of transcript reconstruction methods for RNA-seq](https://www.nature.com/articles/nmeth.2714)
 * [Transcriptome and genome sequencing uncovers functional variation in humans](https://www.nature.com/articles/nature12531)
-* [Reproducibility of high-throughput mRNA and small RNA sequencing across laboratories](https://www.nature.com/articles/nbt.2702)
+* [Reproducibility of high-throughput mRNA and small RNA sequencing across laboratories](https://www.nature.com/articles/nbt.2702)  
+
+### Single Cell RNA-seq and Spatial Trasncriptomics  
+
+* [Human Pilot Visium](https://doi.org/10.1038/s41593-020-00787-0)  
+* [Single Nucleus RNA-seq across human brain](https://www.cell.com/neuron/fulltext/S0896-6273(21)00655-3)  
 
 ### DNAm
 
