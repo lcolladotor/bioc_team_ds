@@ -110,7 +110,7 @@ Please try reaching out to multiple people instead of one person for all your qu
 
 ### Leo's team
 
-* [Manisha Barse](https://github.com/manishabarse) ([BioC Support](https://support.bioconductor.org/u/59591/))
+* [Manisha Barse](https://github.com/manishabarse) ([BioC Support](https://support.bioconductor.org/u/78612/))
   - Research interests: bulk RNA-seq, scRNA-seq, building computational pipelines.
   - Technologies I use: linux, python, R, github.
   - Learning about: spatial transcriptomics, coding workflows.

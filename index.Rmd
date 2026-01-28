@@ -31,13 +31,28 @@ Here is a **TLDR** (_too long did not read_) 2025 version of what the team has e
 
 You can find our videos on **YouTube** at [lcolladotor/playlists](https://www.youtube.com/@lcolladotor/playlists). Some of our main video playlists are show below.
 
+### Shorts (clips) {-}
+
+These are short videos that typically showcase highlights from our full length videos. These shorts are generally formatted in vertical 9:16 format, so they are easier to watch on your phone. You can also find these short videos on [Instagram](https://www.instagram.com/lcolladotor/), and sometimes on [BlueSky](https://bsky.app/profile/libdrstats.bsky.social) and [LinkedIn](https://www.linkedin.com/in/lcollado/).
+
+<iframe width="560" height="315" src="https://www.youtube.com/embed/videoseries?list=PLNNI62fcZPdBE-ztu3_rFebgP8pNrmNNs" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+
 ### LIBD rstats club {-}
+
+The full LIBD RStats schedule is available [here](https://docs.google.com/spreadsheets/d/1is8dZSd0FZ9Qi1Zvq1uRhm-P1McnJRd_zxdAfCRoMfA/edit?usp=sharing). This format is much easier to search, if you'd like to find a specific video.
 
 <iframe width="560" height="315" src="https://www.youtube.com/embed/videoseries?list=PLNNI62fcZPdB3G8Nl87gUlAQTEe2EH5K4" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 
 ### Team journal club {-}
 
+The full team meeting schedule is available [here](https://docs.google.com/spreadsheets/d/1r6552ySisg7_KpmJmChOvLHVWdMmss3bncEf2jqIM9k/edit?usp=sharing). This format is much easier to search, if you'd like to find a specific video.
+
 <iframe width="560" height="315" src="https://www.youtube.com/embed/videoseries?list=PLNNI62fcZPdANO2noI0o5xPfr3vWeg0bR" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+
+### JHPCE {-}
+
+<iframe width="560" height="315" src="https://www.youtube.com/embed/videoseries?list=PLNNI62fcZPdAslHFllqv0-2iZqby1h0CV" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+
 
 ### LIBD and team bootcamps {-}
 
@@ -67,3 +82,10 @@ You can find us on Bluesky through the [LIBD rstats club account](https://bsky.a
 <center>
 <a href="https://go.bsky.app/53gy4UP"><img src="https://lcolladotor.github.io/media/LIBD_Data_Science_Team_1__members_and_alumni_Share_Card.png" alt = "LIBD Data Science Team 1 Bluesky starter pack" width = "300"></a>
 </center>
+
+## Donate {-}
+
+If you are interested in donating, you can do so through:
+
+* Donate to the team and/or LIBD through [LIBD's ways to give](https://www.libd.org/ways-to-give/)
+* Donate to Leo directly via [GitHub sponsors](https://github.com/sponsors/lcolladotor)
