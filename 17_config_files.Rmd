@@ -486,7 +486,7 @@ or this other video and [companion notes](https://docs.google.com/document/d/1Lx
 
 ### Positron Set Up
 
-After setting up the appropriate SSH keys, the Positron IDE can be used for coding at JHPCE. In contrast with RStudio, Positron can directly see the remote filesystem at JHPCE, plot interactively, and leverage additional AI features.
+After setting up the appropriate SSH keys, the Positron IDE can be used for coding at JHPCE. In contrast with the previously recommended RStudio set-up, Positron can directly see the remote filesystem at JHPCE, plot interactively, and leverage additional AI features (note a number of coding set-ups are possible at JHPCE, including use of the RStudio web app which also allows seamless integration with the remote filesystem, but we see Positron as the best all-around option).
 
 Check out [these notes](https://docs.google.com/document/d/1lGbZfl-FjrzQXnVsJKIEMTN8ecnFNzE0M0zKFNnVCCA/edit?usp=sharing)
 as well as the instructional video:
