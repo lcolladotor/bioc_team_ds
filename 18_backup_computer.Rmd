@@ -287,13 +287,21 @@ As a note on `~/.ssh` permissions, they have to be restrictive both on your lapt
 
 ```bash
 .ssh % ls -lah
-total 64K
-drwx------  12 leocollado staff  384 Mar  5 09:18 .
-drwxr-x---+ 40 leocollado staff 1.3K Mar  5 09:58 ..
--rw-------   1 leocollado staff 1.7K Oct  3 13:20 config
--rw-------   1 leocollado staff 1.7K Dec 21  2016 id_rsa
--rw-------   1 leocollado staff  433 Dec 21  2016 id_rsa.pub
--rw-------   1 leocollado staff  13K Mar  5 09:18 known_hosts
+total 68K
+drwx------ 14 leocollado staff  448 May  1 10:42 .
+drwxr-x--- 63 leocollado staff 2.0K Jul 28 16:05 ..
+drwx------  4 leocollado staff  128 Jul 24 09:06 agent
+-rw-------  1 leocollado staff 2.5K May  1 09:42 config
+-rw-------  1 leocollado staff  668 Jan 31  2013 id_dsa
+-rw-------  1 leocollado staff  684 Jul 24  2016 id_dsa_pub_putty
+-rw-------  1 leocollado staff  806 Jul 24  2016 id_dsa.ppk
+-rw-------  1 leocollado staff  631 Jan 31  2013 id_dsa.pub
+-rw-------  1 leocollado staff 1.7K Dec 21  2016 id_rsa
+-rw-------  1 leocollado staff 1.5K Jul 24  2016 id_rsa.ppk
+-rw-------  1 leocollado staff  433 Dec 21  2016 id_rsa.pub
+-rw-------  1 leocollado staff  15K Aug 20  2025 known_hosts
+-rw-------  1 leocollado staff  14K Aug 20  2025 known_hosts.old
+-rwx------  1 leocollado staff  110 May  1 09:52 proxy_positron_nc.sh
 ```
 
 * JHPCE:
