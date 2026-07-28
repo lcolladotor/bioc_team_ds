@@ -183,6 +183,8 @@ At `~/Dropbox/Mac-files/Root` I have a third shell script, this one is called `u
 
 # sh update_files.sh
 
+## Last updated: 2026-07-28
+
 ## Created this file on 2020-01-14 in response to
 ## https://help.dropbox.com/installs-integrations/sync-uploads/symlinks
 ## and
