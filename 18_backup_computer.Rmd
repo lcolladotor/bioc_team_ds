@@ -244,6 +244,12 @@ osascript -e 'tell app "TextMate" to reload bundles'
 rsync -av RStudio/share/rstudio ~/.local/share/
 rsync -av RStudio/config/rstudio ~/.config/
 
+## https://positron.posit.co/troubleshooting.html
+mkdir -p Positron
+rsync -av ~/Library/Application\ Support/Positron Positron/
+mkdir -p .positron
+rsync -av ~/.positron .positron/
+
 sh restore_brewfile.sh
 ```
 
