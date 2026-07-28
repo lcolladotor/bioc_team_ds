@@ -6,7 +6,7 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge" />
   <title>18 Backing up your computer | R/Bioconductor-powered Team Data Science</title>
   <meta name="description" content="18 Backing up your computer | R/Bioconductor-powered Team Data Science" />
-  <meta name="generator" content="bookdown 0.46 and GitBook 2.6.7" />
+  <meta name="generator" content="bookdown 0.47 and GitBook 2.6.7" />
 
   <meta property="og:title" content="18 Backing up your computer | R/Bioconductor-powered Team Data Science" />
   <meta property="og:type" content="book" />
@@ -477,52 +477,78 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <p>For my installed software (<code>/Applications</code>), I have taken screenshots of the contents of that directory and saved those screenshots on a Slack direct message to myself. Another option is to list contents of your <code>Applications</code> directory. Here’s my current list.</p>
 <div class="sourceCode" id="cb31"><pre class="sourceCode bash"><code class="sourceCode bash"><span id="cb31-1"><a href="backing-up-your-computer.html#cb31-1" tabindex="-1"></a><span class="ex">%</span> ls <span class="at">-lh</span> /Applications</span>
 <span id="cb31-2"><a href="backing-up-your-computer.html#cb31-2" tabindex="-1"></a><span class="ex">total</span> 0</span>
-<span id="cb31-3"><a href="backing-up-your-computer.html#cb31-3" tabindex="-1"></a><span class="ex">drwxr-xr-x</span>  3 leocollado staff  96 Feb 13 16:24  1Password.app</span>
-<span id="cb31-4"><a href="backing-up-your-computer.html#cb31-4" tabindex="-1"></a><span class="ex">drwxrwxr-x</span>  6 root       wheel 192 Feb 27 18:59 <span class="st">&#39;Adobe Acrobat DC&#39;</span></span>
-<span id="cb31-5"><a href="backing-up-your-computer.html#cb31-5" tabindex="-1"></a><span class="ex">drwxrwxr-x</span>  5 root       admin 160 Feb 27 18:54 <span class="st">&#39;Adobe Creative Cloud&#39;</span></span>
-<span id="cb31-6"><a href="backing-up-your-computer.html#cb31-6" tabindex="-1"></a><span class="ex">drwxr-xr-x</span> 11 root       wheel 352 Feb 27 18:57 <span class="st">&#39;Adobe Illustrator 2024&#39;</span></span>
-<span id="cb31-7"><a href="backing-up-your-computer.html#cb31-7" tabindex="-1"></a><span class="ex">drwxrwxr-x</span>  5 root       admin 160 Feb 27 19:02 <span class="st">&#39;Adobe Media Encoder 2024&#39;</span></span>
-<span id="cb31-8"><a href="backing-up-your-computer.html#cb31-8" tabindex="-1"></a><span class="ex">drwxr-xr-x</span>  9 root       wheel 288 Feb 27 19:04 <span class="st">&#39;Adobe Photoshop 2024&#39;</span></span>
-<span id="cb31-9"><a href="backing-up-your-computer.html#cb31-9" tabindex="-1"></a><span class="ex">drwxrwxr-x</span>  5 root       admin 160 Feb 27 19:00 <span class="st">&#39;Adobe Premiere Pro 2024&#39;</span></span>
-<span id="cb31-10"><a href="backing-up-your-computer.html#cb31-10" tabindex="-1"></a><span class="ex">drwxrwxr-x</span>  5 root       admin 160 Feb 27 19:02 <span class="st">&#39;Adobe Premiere Rush 2.0&#39;</span></span>
-<span id="cb31-11"><a href="backing-up-your-computer.html#cb31-11" tabindex="-1"></a><span class="ex">drwxr-xr-x</span>  3 leocollado admin  96 Oct 25 05:13 <span class="st">&#39;Alfred 5.app&#39;</span></span>
-<span id="cb31-12"><a href="backing-up-your-computer.html#cb31-12" tabindex="-1"></a><span class="ex">drwxr-xr-x</span>  3 leocollado admin  96 Dec 20 03:53 <span class="st">&#39;Bartender 5.app&#39;</span></span>
-<span id="cb31-13"><a href="backing-up-your-computer.html#cb31-13" tabindex="-1"></a><span class="ex">drwxr-xr-x</span>  3 leocollado staff  96 Jan 11 04:45  Cyberduck.app</span>
-<span id="cb31-14"><a href="backing-up-your-computer.html#cb31-14" tabindex="-1"></a><span class="ex">drwxr-xr-x</span>  3 leocollado admin  96 Feb 27 16:42  Dropbox.app</span>
-<span id="cb31-15"><a href="backing-up-your-computer.html#cb31-15" tabindex="-1"></a><span class="ex">drwxr-xr-x</span>  3 leocollado admin  96 Feb 13 19:22  Firefox.app</span>
-<span id="cb31-16"><a href="backing-up-your-computer.html#cb31-16" tabindex="-1"></a><span class="ex">drwxr-xr-x</span>  3 leocollado staff  96 Feb 27 17:45  Flux.app</span>
-<span id="cb31-17"><a href="backing-up-your-computer.html#cb31-17" tabindex="-1"></a><span class="ex">drwxr-xr-x</span>  3 leocollado admin  96 Feb 26 18:13 <span class="st">&#39;Google Chrome.app&#39;</span></span>
-<span id="cb31-18"><a href="backing-up-your-computer.html#cb31-18" tabindex="-1"></a><span class="ex">drwxr-xr-x</span>  3 root       wheel  96 Feb 27 19:46 <span class="st">&#39;Google Docs.app&#39;</span></span>
-<span id="cb31-19"><a href="backing-up-your-computer.html#cb31-19" tabindex="-1"></a><span class="ex">drwxrwxr-x</span>  3 root       wheel  96 Feb 27 19:46 <span class="st">&#39;Google Drive.app&#39;</span></span>
-<span id="cb31-20"><a href="backing-up-your-computer.html#cb31-20" tabindex="-1"></a><span class="ex">drwxr-xr-x</span>  3 root       wheel  96 Feb 27 19:46 <span class="st">&#39;Google Sheets.app&#39;</span></span>
-<span id="cb31-21"><a href="backing-up-your-computer.html#cb31-21" tabindex="-1"></a><span class="ex">drwxr-xr-x</span>  3 root       wheel  96 Feb 27 19:46 <span class="st">&#39;Google Slides.app&#39;</span></span>
-<span id="cb31-22"><a href="backing-up-your-computer.html#cb31-22" tabindex="-1"></a><span class="ex">drwxr-xr-x</span>  3 root       wheel  96 Feb 27 19:38 <span class="st">&#39;Ivanti Secure Access.app&#39;</span></span>
-<span id="cb31-23"><a href="backing-up-your-computer.html#cb31-23" tabindex="-1"></a><span class="ex">drwxr-xr-x</span>  3 root       admin  96 Dec 26 13:42  LogiTune.app</span>
-<span id="cb31-24"><a href="backing-up-your-computer.html#cb31-24" tabindex="-1"></a><span class="ex">drwxr-xr-x</span>  3 leocollado admin  96 Oct  9 15:26 <span class="st">&#39;Loupe Browser 7.app&#39;</span></span>
-<span id="cb31-25"><a href="backing-up-your-computer.html#cb31-25" tabindex="-1"></a><span class="ex">drwxr-xr-x</span>  3 root       wheel  96 Feb  5 14:07 <span class="st">&#39;Microsoft Defender.app&#39;</span></span>
-<span id="cb31-26"><a href="backing-up-your-computer.html#cb31-26" tabindex="-1"></a><span class="ex">drwxrwxr-x</span>  3 root       wheel  96 Feb 27 14:00 <span class="st">&#39;Microsoft Excel.app&#39;</span></span>
-<span id="cb31-27"><a href="backing-up-your-computer.html#cb31-27" tabindex="-1"></a><span class="ex">drwxrwxr-x</span>  3 root       wheel  96 Feb 27 14:00 <span class="st">&#39;Microsoft OneNote.app&#39;</span></span>
-<span id="cb31-28"><a href="backing-up-your-computer.html#cb31-28" tabindex="-1"></a><span class="ex">drwxrwxr-x</span>  3 root       wheel  96 Feb 27 14:03 <span class="st">&#39;Microsoft Outlook.app&#39;</span></span>
-<span id="cb31-29"><a href="backing-up-your-computer.html#cb31-29" tabindex="-1"></a><span class="ex">drwxrwxr-x</span>  3 root       wheel  96 Feb 27 14:00 <span class="st">&#39;Microsoft PowerPoint.app&#39;</span></span>
-<span id="cb31-30"><a href="backing-up-your-computer.html#cb31-30" tabindex="-1"></a><span class="ex">drwxr-xr-x</span>  3 root       wheel  96 Feb 27 14:00 <span class="st">&#39;Microsoft Teams classic.app&#39;</span></span>
-<span id="cb31-31"><a href="backing-up-your-computer.html#cb31-31" tabindex="-1"></a><span class="ex">drwxrwxr-x</span>  3 root       wheel  96 Feb 27 14:00 <span class="st">&#39;Microsoft Word.app&#39;</span></span>
-<span id="cb31-32"><a href="backing-up-your-computer.html#cb31-32" tabindex="-1"></a><span class="ex">drwxr-xr-x</span>  3 root       wheel  96 Feb 27 14:00  OneDrive.app</span>
-<span id="cb31-33"><a href="backing-up-your-computer.html#cb31-33" tabindex="-1"></a><span class="ex">drwxr-xr-x</span>  3 root       wheel  96 Feb 27 17:12  R.app</span>
-<span id="cb31-34"><a href="backing-up-your-computer.html#cb31-34" tabindex="-1"></a><span class="ex">drwxr-xr-x</span>  3 leocollado admin  96 Jan 29 16:57  RStudio.app</span>
-<span id="cb31-35"><a href="backing-up-your-computer.html#cb31-35" tabindex="-1"></a><span class="ex">drwxr-xr-x</span>  3 leocollado staff  96 May 25  2020  RSwitch.app</span>
-<span id="cb31-36"><a href="backing-up-your-computer.html#cb31-36" tabindex="-1"></a><span class="ex">lrwxr-xr-x</span>  1 root       wheel  54 Feb  2 12:19  Safari.app <span class="at">-</span><span class="op">&gt;</span> ../System/Cryptexes/App/System/Applications/Safari.app</span>
-<span id="cb31-37"><a href="backing-up-your-computer.html#cb31-37" tabindex="-1"></a><span class="ex">drwxr-xr-x</span>  3 leocollado admin  96 Jan 24 17:20  Slack.app</span>
-<span id="cb31-38"><a href="backing-up-your-computer.html#cb31-38" tabindex="-1"></a><span class="ex">drwxr-xr-x</span>  3 leocollado staff  96 Feb 15  2021  TextMate.app</span>
-<span id="cb31-39"><a href="backing-up-your-computer.html#cb31-39" tabindex="-1"></a><span class="ex">drwxr-xr-x</span>  8 root       wheel 256 Feb 27 18:55  Utilities</span>
-<span id="cb31-40"><a href="backing-up-your-computer.html#cb31-40" tabindex="-1"></a><span class="ex">drwxr-xr-x</span>  3 root       wheel  96 Feb 27 14:03 <span class="st">&#39;VIPRE Endpoint Security.app&#39;</span></span>
-<span id="cb31-41"><a href="backing-up-your-computer.html#cb31-41" tabindex="-1"></a><span class="ex">drwxr-xr-x</span>  3 leocollado admin  96 Nov  1 09:48  VLC.app</span>
-<span id="cb31-42"><a href="backing-up-your-computer.html#cb31-42" tabindex="-1"></a><span class="ex">drwxr-xr-x</span>  3 root       admin  96 Feb 27 14:07 <span class="st">&#39;WatchGuard Mobile VPN.app&#39;</span></span>
-<span id="cb31-43"><a href="backing-up-your-computer.html#cb31-43" tabindex="-1"></a><span class="ex">drwxr-xr-x</span>  3 leocollado admin  96 Feb 24 14:01  Zotero.app</span>
-<span id="cb31-44"><a href="backing-up-your-computer.html#cb31-44" tabindex="-1"></a><span class="ex">drwxr-xr-x</span>  3 root       wheel  96 Dec 31  1969  connectwisecontrol-75da79a526aab2dd.app</span>
-<span id="cb31-45"><a href="backing-up-your-computer.html#cb31-45" tabindex="-1"></a><span class="ex">drwxr-xr-x</span>  3 leocollado staff  96 Jan  3 17:31 <span class="st">&#39;iStat Menus.app&#39;</span></span>
-<span id="cb31-46"><a href="backing-up-your-computer.html#cb31-46" tabindex="-1"></a><span class="ex">drwxr-xr-x</span>  3 leocollado staff  96 Dec 18 17:23  iTerm.app</span>
-<span id="cb31-47"><a href="backing-up-your-computer.html#cb31-47" tabindex="-1"></a><span class="ex">drwxr-xr-x</span>  4 root       wheel 128 Feb 27 19:43  quarto</span>
-<span id="cb31-48"><a href="backing-up-your-computer.html#cb31-48" tabindex="-1"></a><span class="ex">drwxr-xr-x</span>  3 root       wheel  96 Feb 27 15:12  zoom.us.app</span></code></pre></div>
+<span id="cb31-3"><a href="backing-up-your-computer.html#cb31-3" tabindex="-1"></a><span class="ex">drwxr-xr-x</span>  3 leocollado staff  96 Jul  1 21:28  1Password.app</span>
+<span id="cb31-4"><a href="backing-up-your-computer.html#cb31-4" tabindex="-1"></a><span class="ex">drwxrwxr-x</span>  6 root       wheel 192 Jul 23 14:20 <span class="st">&#39;Adobe Acrobat DC&#39;</span></span>
+<span id="cb31-5"><a href="backing-up-your-computer.html#cb31-5" tabindex="-1"></a><span class="ex">drwxrwxr-x</span> 10 root       admin 320 Aug 13  2025 <span class="st">&#39;Adobe After Effects 2024&#39;</span></span>
+<span id="cb31-6"><a href="backing-up-your-computer.html#cb31-6" tabindex="-1"></a><span class="ex">drwxrwxr-x</span> 10 root       admin 320 Jun 21 11:00 <span class="st">&#39;Adobe After Effects 2025&#39;</span></span>
+<span id="cb31-7"><a href="backing-up-your-computer.html#cb31-7" tabindex="-1"></a><span class="ex">drwxrwxr-x</span> 10 root       admin 320 Jun 21 10:56 <span class="st">&#39;Adobe After Effects 2026&#39;</span></span>
+<span id="cb31-8"><a href="backing-up-your-computer.html#cb31-8" tabindex="-1"></a><span class="ex">drwxrwxr-x</span>  7 root       admin 224 Jun 17 08:40 <span class="st">&#39;Adobe Creative Cloud&#39;</span></span>
+<span id="cb31-9"><a href="backing-up-your-computer.html#cb31-9" tabindex="-1"></a><span class="ex">drwxr-xr-x</span> 11 root       wheel 352 Sep 18  2025 <span class="st">&#39;Adobe Illustrator 2024&#39;</span></span>
+<span id="cb31-10"><a href="backing-up-your-computer.html#cb31-10" tabindex="-1"></a><span class="ex">drwxr-xr-x</span> 11 root       wheel 352 Jul  2 14:42 <span class="st">&#39;Adobe Illustrator 2025&#39;</span></span>
+<span id="cb31-11"><a href="backing-up-your-computer.html#cb31-11" tabindex="-1"></a><span class="ex">drwxr-xr-x</span> 11 root       wheel 352 Jun 29 14:36 <span class="st">&#39;Adobe Illustrator 2026&#39;</span></span>
+<span id="cb31-12"><a href="backing-up-your-computer.html#cb31-12" tabindex="-1"></a><span class="ex">drwxrwxr-x</span>  5 root       admin 160 Jul 28 07:34 <span class="st">&#39;Adobe Media Encoder (Beta)&#39;</span></span>
+<span id="cb31-13"><a href="backing-up-your-computer.html#cb31-13" tabindex="-1"></a><span class="ex">drwxrwxr-x</span>  5 root       admin 160 Apr  4  2025 <span class="st">&#39;Adobe Media Encoder 2024&#39;</span></span>
+<span id="cb31-14"><a href="backing-up-your-computer.html#cb31-14" tabindex="-1"></a><span class="ex">drwxrwxr-x</span>  5 root       admin 160 Jun 21 11:02 <span class="st">&#39;Adobe Media Encoder 2025&#39;</span></span>
+<span id="cb31-15"><a href="backing-up-your-computer.html#cb31-15" tabindex="-1"></a><span class="ex">drwxrwxr-x</span>  5 root       admin 160 Jul 28 11:18 <span class="st">&#39;Adobe Media Encoder 2026&#39;</span></span>
+<span id="cb31-16"><a href="backing-up-your-computer.html#cb31-16" tabindex="-1"></a><span class="ex">drwxr-xr-x</span>  9 root       wheel 288 Jun 21 10:53 <span class="st">&#39;Adobe Photoshop 2026&#39;</span></span>
+<span id="cb31-17"><a href="backing-up-your-computer.html#cb31-17" tabindex="-1"></a><span class="ex">drwxrwxr-x</span>  5 root       admin 160 Jul 28 07:24 <span class="st">&#39;Adobe Premiere Pro (Beta)&#39;</span></span>
+<span id="cb31-18"><a href="backing-up-your-computer.html#cb31-18" tabindex="-1"></a><span class="ex">drwxrwxr-x</span>  5 root       admin 160 Aug 13  2025 <span class="st">&#39;Adobe Premiere Pro 2024&#39;</span></span>
+<span id="cb31-19"><a href="backing-up-your-computer.html#cb31-19" tabindex="-1"></a><span class="ex">drwxrwxr-x</span>  5 root       admin 160 Jun 21 09:54 <span class="st">&#39;Adobe Premiere Pro 2025&#39;</span></span>
+<span id="cb31-20"><a href="backing-up-your-computer.html#cb31-20" tabindex="-1"></a><span class="ex">drwxrwxr-x</span>  5 root       admin 160 Jun 21 09:49 <span class="st">&#39;Adobe Premiere Pro 2026&#39;</span></span>
+<span id="cb31-21"><a href="backing-up-your-computer.html#cb31-21" tabindex="-1"></a><span class="ex">drwxrwxr-x</span>  5 root       admin 160 Feb 27  2024 <span class="st">&#39;Adobe Premiere Rush 2.0&#39;</span></span>
+<span id="cb31-22"><a href="backing-up-your-computer.html#cb31-22" tabindex="-1"></a><span class="ex">drwxr-xr-x</span>  3 leocollado staff  96 Apr  1 09:37 <span class="st">&#39;Alfred 5.app&#39;</span></span>
+<span id="cb31-23"><a href="backing-up-your-computer.html#cb31-23" tabindex="-1"></a><span class="ex">drwxr-xr-x</span>  3 leocollado admin  96 Jan 19  2026 <span class="st">&#39;Bartender 5.app&#39;</span></span>
+<span id="cb31-24"><a href="backing-up-your-computer.html#cb31-24" tabindex="-1"></a><span class="ex">drwxr-xr-x</span>  3 leocollado admin  96 May 25 15:56 <span class="st">&#39;Bartender 6.app&#39;</span></span>
+<span id="cb31-25"><a href="backing-up-your-computer.html#cb31-25" tabindex="-1"></a><span class="ex">drwxr-xr-x</span>  3 root       wheel  96 Jul 12 05:47  connectwisecontrol-75da79a526aab2dd.app</span>
+<span id="cb31-26"><a href="backing-up-your-computer.html#cb31-26" tabindex="-1"></a><span class="ex">drwxr-xr-x</span>  3 leocollado staff  96 May  1 10:55  Cyberduck.app</span>
+<span id="cb31-27"><a href="backing-up-your-computer.html#cb31-27" tabindex="-1"></a><span class="ex">drwxr-xr-x</span> 14 leocollado admin 448 Jul 28 14:51  Cytoscape_v3.10.4</span>
+<span id="cb31-28"><a href="backing-up-your-computer.html#cb31-28" tabindex="-1"></a><span class="ex">drwxr-xr-x</span>  3 leocollado admin  96 Jul 23 10:05  Dropbox.app</span>
+<span id="cb31-29"><a href="backing-up-your-computer.html#cb31-29" tabindex="-1"></a><span class="ex">drwxrwxr-x</span>  3 leocollado admin  96 Feb 14 04:04  Firefox.app</span>
+<span id="cb31-30"><a href="backing-up-your-computer.html#cb31-30" tabindex="-1"></a><span class="ex">drwxr-xr-x</span>  3 leocollado staff  96 Feb 27  2024  Flux.app</span>
+<span id="cb31-31"><a href="backing-up-your-computer.html#cb31-31" tabindex="-1"></a><span class="ex">drwxrwxr-x</span>  3 leocollado admin  96 Jun  5  2024 <span class="st">&#39;Google Chrome.app&#39;</span></span>
+<span id="cb31-32"><a href="backing-up-your-computer.html#cb31-32" tabindex="-1"></a><span class="ex">drwxr-xr-x</span>  3 root       wheel  96 Jul 15 10:29 <span class="st">&#39;Google Docs.app&#39;</span></span>
+<span id="cb31-33"><a href="backing-up-your-computer.html#cb31-33" tabindex="-1"></a><span class="ex">drwxrwxr-x</span>  3 root       wheel  96 Jul 15 10:29 <span class="st">&#39;Google Drive.app&#39;</span></span>
+<span id="cb31-34"><a href="backing-up-your-computer.html#cb31-34" tabindex="-1"></a><span class="ex">drwxr-xr-x</span>  3 root       wheel  96 Jul 15 10:29 <span class="st">&#39;Google Sheets.app&#39;</span></span>
+<span id="cb31-35"><a href="backing-up-your-computer.html#cb31-35" tabindex="-1"></a><span class="ex">drwxr-xr-x</span>  3 root       wheel  96 Jul 15 10:29 <span class="st">&#39;Google Slides.app&#39;</span></span>
+<span id="cb31-36"><a href="backing-up-your-computer.html#cb31-36" tabindex="-1"></a><span class="ex">drwxr-xr-x</span>  3 leocollado staff  96 Sep  9  2024 <span class="st">&#39;iStat Menus 6.app&#39;</span></span>
+<span id="cb31-37"><a href="backing-up-your-computer.html#cb31-37" tabindex="-1"></a><span class="ex">drwxr-xr-x</span>  3 leocollado staff  96 Nov 11  2025 <span class="st">&#39;iStat Menus.app&#39;</span></span>
+<span id="cb31-38"><a href="backing-up-your-computer.html#cb31-38" tabindex="-1"></a><span class="ex">drwxr-xr-x</span>  3 leocollado staff  96 Jun  3 10:43  iTerm.app</span>
+<span id="cb31-39"><a href="backing-up-your-computer.html#cb31-39" tabindex="-1"></a><span class="ex">drwxr-xr-x</span>  3 root       wheel  96 May 28  2025 <span class="st">&#39;Ivanti Secure Access.app&#39;</span></span>
+<span id="cb31-40"><a href="backing-up-your-computer.html#cb31-40" tabindex="-1"></a><span class="ex">drwxr-xr-x</span>  3 root       admin  96 May 27 04:50 <span class="st">&#39;Logi Tune.app&#39;</span></span>
+<span id="cb31-41"><a href="backing-up-your-computer.html#cb31-41" tabindex="-1"></a><span class="ex">drwxr-xr-x</span>  3 leocollado admin  96 Oct 23  2024 <span class="st">&#39;Loupe Browser 8.app&#39;</span></span>
+<span id="cb31-42"><a href="backing-up-your-computer.html#cb31-42" tabindex="-1"></a><span class="ex">drwxr-xr-x</span> 17 root       admin 544 Jul 12  2024 <span class="st">&#39;Maxon Cinema 4D 2024&#39;</span></span>
+<span id="cb31-43"><a href="backing-up-your-computer.html#cb31-43" tabindex="-1"></a><span class="ex">drwxr-xr-x</span> 16 root       admin 512 Nov 18  2025 <span class="st">&#39;Maxon Cinema 4D 2025&#39;</span></span>
+<span id="cb31-44"><a href="backing-up-your-computer.html#cb31-44" tabindex="-1"></a><span class="ex">drwxr-xr-x</span> 18 root       admin 576 Jun 21 10:56 <span class="st">&#39;Maxon Cinema 4D 2026&#39;</span></span>
+<span id="cb31-45"><a href="backing-up-your-computer.html#cb31-45" tabindex="-1"></a><span class="ex">drwxr-xr-x</span>  3 root       wheel  96 May  8 16:21 <span class="st">&#39;Microsoft Defender Shim.app&#39;</span></span>
+<span id="cb31-46"><a href="backing-up-your-computer.html#cb31-46" tabindex="-1"></a><span class="ex">drwxrwxr-x</span>  3 root       wheel  96 Jul 23 10:19 <span class="st">&#39;Microsoft Excel.app&#39;</span></span>
+<span id="cb31-47"><a href="backing-up-your-computer.html#cb31-47" tabindex="-1"></a><span class="ex">drwxrwxr-x</span>  3 root       wheel  96 Jul 28 15:50 <span class="st">&#39;Microsoft OneNote.app&#39;</span></span>
+<span id="cb31-48"><a href="backing-up-your-computer.html#cb31-48" tabindex="-1"></a><span class="ex">drwxrwxr-x</span>  3 root       wheel  96 Jul 24 09:13 <span class="st">&#39;Microsoft Outlook.app&#39;</span></span>
+<span id="cb31-49"><a href="backing-up-your-computer.html#cb31-49" tabindex="-1"></a><span class="ex">drwxrwxr-x</span>  3 root       wheel  96 Jul 28 15:50 <span class="st">&#39;Microsoft PowerPoint.app&#39;</span></span>
+<span id="cb31-50"><a href="backing-up-your-computer.html#cb31-50" tabindex="-1"></a><span class="ex">drwxr-xr-x</span>  3 root       wheel  96 Jul 21 15:17 <span class="st">&#39;Microsoft Teams.app&#39;</span></span>
+<span id="cb31-51"><a href="backing-up-your-computer.html#cb31-51" tabindex="-1"></a><span class="ex">drwxrwxr-x</span>  3 root       wheel  96 Jul 28 15:51 <span class="st">&#39;Microsoft Word.app&#39;</span></span>
+<span id="cb31-52"><a href="backing-up-your-computer.html#cb31-52" tabindex="-1"></a><span class="ex">drwxr-xr-x</span>  3 leocollado admin  96 Jun 14  2021 <span class="st">&#39;NDA GUID Client.app&#39;</span></span>
+<span id="cb31-53"><a href="backing-up-your-computer.html#cb31-53" tabindex="-1"></a><span class="ex">drwxr-xr-x</span>  3 leocollado admin  96 Apr 21 15:45  OBS.app</span>
+<span id="cb31-54"><a href="backing-up-your-computer.html#cb31-54" tabindex="-1"></a><span class="ex">drwxr-xr-x</span>  3 leocollado admin  96 Jul 12 12:08  Ollama.app</span>
+<span id="cb31-55"><a href="backing-up-your-computer.html#cb31-55" tabindex="-1"></a><span class="ex">drwxr-xr-x</span>  3 root       wheel  96 Jul 24 13:23  OneDrive.app</span>
+<span id="cb31-56"><a href="backing-up-your-computer.html#cb31-56" tabindex="-1"></a><span class="ex">drwxr-xr-x</span>  3 leocollado staff  96 Dec 31  1979  Positron.app</span>
+<span id="cb31-57"><a href="backing-up-your-computer.html#cb31-57" tabindex="-1"></a><span class="ex">drwxr-xr-x</span>  3 leocollado admin  96 Mar 28  2025 <span class="st">&#39;Prism 10.app&#39;</span></span>
+<span id="cb31-58"><a href="backing-up-your-computer.html#cb31-58" tabindex="-1"></a><span class="ex">drwxr-xr-x</span>  4 root       wheel 128 Feb 27  2024  quarto</span>
+<span id="cb31-59"><a href="backing-up-your-computer.html#cb31-59" tabindex="-1"></a><span class="ex">drwxr-xr-x</span>  3 root       wheel  96 Feb  1 21:03  R.app</span>
+<span id="cb31-60"><a href="backing-up-your-computer.html#cb31-60" tabindex="-1"></a><span class="ex">drwxr-xr-x</span>  3 leocollado staff  96 Apr 28 10:22  RescueTime.app</span>
+<span id="cb31-61"><a href="backing-up-your-computer.html#cb31-61" tabindex="-1"></a><span class="ex">drwxr-xr-x</span>  3 leocollado admin  96 Jan  4  2026  RStudio.app</span>
+<span id="cb31-62"><a href="backing-up-your-computer.html#cb31-62" tabindex="-1"></a><span class="ex">drwxr-xr-x</span>  3 leocollado staff  96 May 25  2020  RSwitch.app</span>
+<span id="cb31-63"><a href="backing-up-your-computer.html#cb31-63" tabindex="-1"></a><span class="ex">lrwxr-xr-x</span>  1 root       wheel  54 Jun 24 22:29  Safari.app <span class="at">-</span><span class="op">&gt;</span> ../System/Cryptexes/App/System/Applications/Safari.app</span>
+<span id="cb31-64"><a href="backing-up-your-computer.html#cb31-64" tabindex="-1"></a><span class="ex">drwxr-xr-x</span>  3 leocollado staff  96 Jul 15 21:23  Slack.app</span>
+<span id="cb31-65"><a href="backing-up-your-computer.html#cb31-65" tabindex="-1"></a><span class="ex">drwxr-xr-x</span>  3 leocollado staff  96 Apr 12 00:19  Spotify.app</span>
+<span id="cb31-66"><a href="backing-up-your-computer.html#cb31-66" tabindex="-1"></a><span class="ex">drwxr-xr-x</span>  3 leocollado staff  96 Feb 15  2021  TextMate.app</span>
+<span id="cb31-67"><a href="backing-up-your-computer.html#cb31-67" tabindex="-1"></a><span class="ex">drwxr-xr-x</span>  9 root       wheel 288 Jul 21 06:22  Utilities</span>
+<span id="cb31-68"><a href="backing-up-your-computer.html#cb31-68" tabindex="-1"></a><span class="ex">drwxr-xr-x</span>  3 root       wheel  96 Mar 23 10:57 <span class="st">&#39;VIPRE Endpoint Security.app&#39;</span></span>
+<span id="cb31-69"><a href="backing-up-your-computer.html#cb31-69" tabindex="-1"></a><span class="ex">drwxr-xr-x</span>  3 root       admin  96 Mar  6 13:25  VipreEndpoint</span>
+<span id="cb31-70"><a href="backing-up-your-computer.html#cb31-70" tabindex="-1"></a><span class="ex">drwxr-xr-x</span>  3 leocollado admin  96 Aug 20  2025 <span class="st">&#39;Visual Studio Code.app&#39;</span></span>
+<span id="cb31-71"><a href="backing-up-your-computer.html#cb31-71" tabindex="-1"></a><span class="ex">drwxr-xr-x</span>  3 leocollado admin  96 Jan 18  2026  VLC.app</span>
+<span id="cb31-72"><a href="backing-up-your-computer.html#cb31-72" tabindex="-1"></a><span class="ex">drwxr-xr-x</span>  3 root       admin  96 Feb 27  2024 <span class="st">&#39;WatchGuard Mobile VPN.app&#39;</span></span>
+<span id="cb31-73"><a href="backing-up-your-computer.html#cb31-73" tabindex="-1"></a><span class="ex">drwxr-xr-x</span>  3 root       admin  96 Jun 29 14:59  zoom.us.app</span>
+<span id="cb31-74"><a href="backing-up-your-computer.html#cb31-74" tabindex="-1"></a><span class="ex">drwxrwxr-x</span>  3 leocollado admin  96 Jun 10 09:26  Zotero.app</span></code></pre></div>
 <p>Having this information (as a text file or as screenshots) is like having a <em>recipe</em> that you can then remember what are all the things you need to install. However, not all software can be re-installed so easily.</p>
 <p>I have a few applications that I manually backed up by copying them from <code>/Applications</code> to <code>~/Dropbox/Mac-files</code>. This won’t always work for all software, but it can in some cases.</p>
 </div>
@@ -570,50 +596,52 @@ Tough day, but you know what they say: “Don't cry because it's over. Cry becau
 <span id="cb35-2"><a href="backing-up-your-computer.html#cb35-2" tabindex="-1"></a></span>
 <span id="cb35-3"><a href="backing-up-your-computer.html#cb35-3" tabindex="-1"></a><span class="co"># sh update_files.sh</span></span>
 <span id="cb35-4"><a href="backing-up-your-computer.html#cb35-4" tabindex="-1"></a></span>
-<span id="cb35-5"><a href="backing-up-your-computer.html#cb35-5" tabindex="-1"></a><span class="co">## Created this file on 2020-01-14 in response to</span></span>
-<span id="cb35-6"><a href="backing-up-your-computer.html#cb35-6" tabindex="-1"></a><span class="co">## https://help.dropbox.com/installs-integrations/sync-uploads/symlinks</span></span>
-<span id="cb35-7"><a href="backing-up-your-computer.html#cb35-7" tabindex="-1"></a><span class="co">## and</span></span>
-<span id="cb35-8"><a href="backing-up-your-computer.html#cb35-8" tabindex="-1"></a><span class="co">## ~/Dropbox/Dropbox\ reports/Symlink\ report\ -\ Items\ that\ will\ stop\ syncing.csv</span></span>
-<span id="cb35-9"><a href="backing-up-your-computer.html#cb35-9" tabindex="-1"></a></span>
-<span id="cb35-10"><a href="backing-up-your-computer.html#cb35-10" tabindex="-1"></a><span class="co">## More options:</span></span>
-<span id="cb35-11"><a href="backing-up-your-computer.html#cb35-11" tabindex="-1"></a><span class="co">## https://news.ycombinator.com/item?id=20844363</span></span>
-<span id="cb35-12"><a href="backing-up-your-computer.html#cb35-12" tabindex="-1"></a></span>
-<span id="cb35-13"><a href="backing-up-your-computer.html#cb35-13" tabindex="-1"></a><span class="fu">rsync</span> <span class="at">-av</span> ~/.Rhistory .</span>
-<span id="cb35-14"><a href="backing-up-your-computer.html#cb35-14" tabindex="-1"></a><span class="fu">rsync</span> <span class="at">-av</span> ~/.Renviron .</span>
-<span id="cb35-15"><a href="backing-up-your-computer.html#cb35-15" tabindex="-1"></a><span class="fu">rsync</span> <span class="at">-av</span> ~/.R .</span>
-<span id="cb35-16"><a href="backing-up-your-computer.html#cb35-16" tabindex="-1"></a><span class="fu">rsync</span> <span class="at">-av</span> ~/.gists .</span>
-<span id="cb35-17"><a href="backing-up-your-computer.html#cb35-17" tabindex="-1"></a><span class="fu">rsync</span> <span class="at">-av</span> ~/.Rprofile .</span>
-<span id="cb35-18"><a href="backing-up-your-computer.html#cb35-18" tabindex="-1"></a><span class="fu">rsync</span> <span class="at">-av</span> ~/.gitignore_global .</span>
-<span id="cb35-19"><a href="backing-up-your-computer.html#cb35-19" tabindex="-1"></a><span class="fu">rsync</span> <span class="at">-av</span> ~/.ssh .</span>
-<span id="cb35-20"><a href="backing-up-your-computer.html#cb35-20" tabindex="-1"></a><span class="fu">rsync</span> <span class="at">-av</span> ~/.Rapp.history .</span>
-<span id="cb35-21"><a href="backing-up-your-computer.html#cb35-21" tabindex="-1"></a><span class="fu">rsync</span> <span class="at">-av</span> ~/.rstudio-desktop .</span>
-<span id="cb35-22"><a href="backing-up-your-computer.html#cb35-22" tabindex="-1"></a><span class="fu">rsync</span> <span class="at">-av</span> ~/.zshrc .</span>
-<span id="cb35-23"><a href="backing-up-your-computer.html#cb35-23" tabindex="-1"></a><span class="fu">rsync</span> <span class="at">-av</span> ~/.zsh_history .</span>
-<span id="cb35-24"><a href="backing-up-your-computer.html#cb35-24" tabindex="-1"></a><span class="fu">rsync</span> <span class="at">-av</span> ~/.zprofile .</span>
-<span id="cb35-25"><a href="backing-up-your-computer.html#cb35-25" tabindex="-1"></a><span class="fu">rsync</span> <span class="at">-av</span> ~/.gitconfig .</span>
-<span id="cb35-26"><a href="backing-up-your-computer.html#cb35-26" tabindex="-1"></a><span class="fu">rsync</span> <span class="at">-av</span> ~/.rtweet_token.rds .</span>
-<span id="cb35-27"><a href="backing-up-your-computer.html#cb35-27" tabindex="-1"></a></span>
-<span id="cb35-28"><a href="backing-up-your-computer.html#cb35-28" tabindex="-1"></a><span class="co">## Older Mac config files: I no longer use these files but maybe you do</span></span>
-<span id="cb35-29"><a href="backing-up-your-computer.html#cb35-29" tabindex="-1"></a><span class="co">#rsync -av ~/.bashrc .</span></span>
-<span id="cb35-30"><a href="backing-up-your-computer.html#cb35-30" tabindex="-1"></a><span class="co">#rsync -av ~/.bash_profile .</span></span>
-<span id="cb35-31"><a href="backing-up-your-computer.html#cb35-31" tabindex="-1"></a><span class="co">#rsync -av ~/.inputrc .</span></span>
-<span id="cb35-32"><a href="backing-up-your-computer.html#cb35-32" tabindex="-1"></a><span class="co">#rsync -av ~/.bash_history .</span></span>
-<span id="cb35-33"><a href="backing-up-your-computer.html#cb35-33" tabindex="-1"></a></span>
-<span id="cb35-34"><a href="backing-up-your-computer.html#cb35-34" tabindex="-1"></a><span class="fu">mkdir</span> <span class="at">-p</span> Cyberduck</span>
-<span id="cb35-35"><a href="backing-up-your-computer.html#cb35-35" tabindex="-1"></a><span class="fu">rsync</span> <span class="at">-av</span> ~/Library/Preferences/ch.sudo.cyberduck.plist Cyberduck/</span>
-<span id="cb35-36"><a href="backing-up-your-computer.html#cb35-36" tabindex="-1"></a></span>
-<span id="cb35-37"><a href="backing-up-your-computer.html#cb35-37" tabindex="-1"></a><span class="fu">mkdir</span> <span class="at">-p</span> TextMate</span>
-<span id="cb35-38"><a href="backing-up-your-computer.html#cb35-38" tabindex="-1"></a><span class="fu">rsync</span> <span class="at">-av</span> ~/Library/Application\ Support/TextMate/Bundles TextMate/</span>
-<span id="cb35-39"><a href="backing-up-your-computer.html#cb35-39" tabindex="-1"></a></span>
-<span id="cb35-40"><a href="backing-up-your-computer.html#cb35-40" tabindex="-1"></a><span class="co">## https://support.rstudio.com/hc/en-us/articles/200534577-Resetting-RStudio-Desktop-s-State</span></span>
-<span id="cb35-41"><a href="backing-up-your-computer.html#cb35-41" tabindex="-1"></a><span class="fu">mkdir</span> <span class="at">-p</span> RStudio/share</span>
-<span id="cb35-42"><a href="backing-up-your-computer.html#cb35-42" tabindex="-1"></a><span class="fu">rsync</span> <span class="at">-av</span> ~/.local/share/rstudio RStudio/share/</span>
-<span id="cb35-43"><a href="backing-up-your-computer.html#cb35-43" tabindex="-1"></a><span class="fu">mkdir</span> <span class="at">-p</span> RStudio/config</span>
-<span id="cb35-44"><a href="backing-up-your-computer.html#cb35-44" tabindex="-1"></a><span class="fu">rsync</span> <span class="at">-av</span> ~/.config/rstudio RStudio/config/</span>
-<span id="cb35-45"><a href="backing-up-your-computer.html#cb35-45" tabindex="-1"></a></span>
-<span id="cb35-46"><a href="backing-up-your-computer.html#cb35-46" tabindex="-1"></a></span>
-<span id="cb35-47"><a href="backing-up-your-computer.html#cb35-47" tabindex="-1"></a><span class="fu">rm</span> Brewfile</span>
-<span id="cb35-48"><a href="backing-up-your-computer.html#cb35-48" tabindex="-1"></a><span class="fu">sh</span> update_brewfile.sh</span></code></pre></div>
+<span id="cb35-5"><a href="backing-up-your-computer.html#cb35-5" tabindex="-1"></a><span class="co">## Last updated: 2026-07-28</span></span>
+<span id="cb35-6"><a href="backing-up-your-computer.html#cb35-6" tabindex="-1"></a></span>
+<span id="cb35-7"><a href="backing-up-your-computer.html#cb35-7" tabindex="-1"></a><span class="co">## Created this file on 2020-01-14 in response to</span></span>
+<span id="cb35-8"><a href="backing-up-your-computer.html#cb35-8" tabindex="-1"></a><span class="co">## https://help.dropbox.com/installs-integrations/sync-uploads/symlinks</span></span>
+<span id="cb35-9"><a href="backing-up-your-computer.html#cb35-9" tabindex="-1"></a><span class="co">## and</span></span>
+<span id="cb35-10"><a href="backing-up-your-computer.html#cb35-10" tabindex="-1"></a><span class="co">## ~/Dropbox/Dropbox\ reports/Symlink\ report\ -\ Items\ that\ will\ stop\ syncing.csv</span></span>
+<span id="cb35-11"><a href="backing-up-your-computer.html#cb35-11" tabindex="-1"></a></span>
+<span id="cb35-12"><a href="backing-up-your-computer.html#cb35-12" tabindex="-1"></a><span class="co">## More options:</span></span>
+<span id="cb35-13"><a href="backing-up-your-computer.html#cb35-13" tabindex="-1"></a><span class="co">## https://news.ycombinator.com/item?id=20844363</span></span>
+<span id="cb35-14"><a href="backing-up-your-computer.html#cb35-14" tabindex="-1"></a></span>
+<span id="cb35-15"><a href="backing-up-your-computer.html#cb35-15" tabindex="-1"></a><span class="fu">rsync</span> <span class="at">-av</span> ~/.Rhistory .</span>
+<span id="cb35-16"><a href="backing-up-your-computer.html#cb35-16" tabindex="-1"></a><span class="fu">rsync</span> <span class="at">-av</span> ~/.Renviron .</span>
+<span id="cb35-17"><a href="backing-up-your-computer.html#cb35-17" tabindex="-1"></a><span class="fu">rsync</span> <span class="at">-av</span> ~/.R .</span>
+<span id="cb35-18"><a href="backing-up-your-computer.html#cb35-18" tabindex="-1"></a><span class="fu">rsync</span> <span class="at">-av</span> ~/.gists .</span>
+<span id="cb35-19"><a href="backing-up-your-computer.html#cb35-19" tabindex="-1"></a><span class="fu">rsync</span> <span class="at">-av</span> ~/.Rprofile .</span>
+<span id="cb35-20"><a href="backing-up-your-computer.html#cb35-20" tabindex="-1"></a><span class="fu">rsync</span> <span class="at">-av</span> ~/.gitignore_global .</span>
+<span id="cb35-21"><a href="backing-up-your-computer.html#cb35-21" tabindex="-1"></a><span class="fu">rsync</span> <span class="at">-av</span> ~/.ssh .</span>
+<span id="cb35-22"><a href="backing-up-your-computer.html#cb35-22" tabindex="-1"></a><span class="fu">rsync</span> <span class="at">-av</span> ~/.Rapp.history .</span>
+<span id="cb35-23"><a href="backing-up-your-computer.html#cb35-23" tabindex="-1"></a><span class="fu">rsync</span> <span class="at">-av</span> ~/.rstudio-desktop .</span>
+<span id="cb35-24"><a href="backing-up-your-computer.html#cb35-24" tabindex="-1"></a><span class="fu">rsync</span> <span class="at">-av</span> ~/.zshrc .</span>
+<span id="cb35-25"><a href="backing-up-your-computer.html#cb35-25" tabindex="-1"></a><span class="fu">rsync</span> <span class="at">-av</span> ~/.zsh_history .</span>
+<span id="cb35-26"><a href="backing-up-your-computer.html#cb35-26" tabindex="-1"></a><span class="fu">rsync</span> <span class="at">-av</span> ~/.zprofile .</span>
+<span id="cb35-27"><a href="backing-up-your-computer.html#cb35-27" tabindex="-1"></a><span class="fu">rsync</span> <span class="at">-av</span> ~/.gitconfig .</span>
+<span id="cb35-28"><a href="backing-up-your-computer.html#cb35-28" tabindex="-1"></a><span class="fu">rsync</span> <span class="at">-av</span> ~/.rtweet_token.rds .</span>
+<span id="cb35-29"><a href="backing-up-your-computer.html#cb35-29" tabindex="-1"></a></span>
+<span id="cb35-30"><a href="backing-up-your-computer.html#cb35-30" tabindex="-1"></a><span class="co">## Older Mac config files: I no longer use these files but maybe you do</span></span>
+<span id="cb35-31"><a href="backing-up-your-computer.html#cb35-31" tabindex="-1"></a><span class="co">#rsync -av ~/.bashrc .</span></span>
+<span id="cb35-32"><a href="backing-up-your-computer.html#cb35-32" tabindex="-1"></a><span class="co">#rsync -av ~/.bash_profile .</span></span>
+<span id="cb35-33"><a href="backing-up-your-computer.html#cb35-33" tabindex="-1"></a><span class="co">#rsync -av ~/.inputrc .</span></span>
+<span id="cb35-34"><a href="backing-up-your-computer.html#cb35-34" tabindex="-1"></a><span class="co">#rsync -av ~/.bash_history .</span></span>
+<span id="cb35-35"><a href="backing-up-your-computer.html#cb35-35" tabindex="-1"></a></span>
+<span id="cb35-36"><a href="backing-up-your-computer.html#cb35-36" tabindex="-1"></a><span class="fu">mkdir</span> <span class="at">-p</span> Cyberduck</span>
+<span id="cb35-37"><a href="backing-up-your-computer.html#cb35-37" tabindex="-1"></a><span class="fu">rsync</span> <span class="at">-av</span> ~/Library/Preferences/ch.sudo.cyberduck.plist Cyberduck/</span>
+<span id="cb35-38"><a href="backing-up-your-computer.html#cb35-38" tabindex="-1"></a></span>
+<span id="cb35-39"><a href="backing-up-your-computer.html#cb35-39" tabindex="-1"></a><span class="fu">mkdir</span> <span class="at">-p</span> TextMate</span>
+<span id="cb35-40"><a href="backing-up-your-computer.html#cb35-40" tabindex="-1"></a><span class="fu">rsync</span> <span class="at">-av</span> ~/Library/Application\ Support/TextMate/Bundles TextMate/</span>
+<span id="cb35-41"><a href="backing-up-your-computer.html#cb35-41" tabindex="-1"></a></span>
+<span id="cb35-42"><a href="backing-up-your-computer.html#cb35-42" tabindex="-1"></a><span class="co">## https://support.rstudio.com/hc/en-us/articles/200534577-Resetting-RStudio-Desktop-s-State</span></span>
+<span id="cb35-43"><a href="backing-up-your-computer.html#cb35-43" tabindex="-1"></a><span class="fu">mkdir</span> <span class="at">-p</span> RStudio/share</span>
+<span id="cb35-44"><a href="backing-up-your-computer.html#cb35-44" tabindex="-1"></a><span class="fu">rsync</span> <span class="at">-av</span> ~/.local/share/rstudio RStudio/share/</span>
+<span id="cb35-45"><a href="backing-up-your-computer.html#cb35-45" tabindex="-1"></a><span class="fu">mkdir</span> <span class="at">-p</span> RStudio/config</span>
+<span id="cb35-46"><a href="backing-up-your-computer.html#cb35-46" tabindex="-1"></a><span class="fu">rsync</span> <span class="at">-av</span> ~/.config/rstudio RStudio/config/</span>
+<span id="cb35-47"><a href="backing-up-your-computer.html#cb35-47" tabindex="-1"></a></span>
+<span id="cb35-48"><a href="backing-up-your-computer.html#cb35-48" tabindex="-1"></a></span>
+<span id="cb35-49"><a href="backing-up-your-computer.html#cb35-49" tabindex="-1"></a><span class="fu">rm</span> Brewfile</span>
+<span id="cb35-50"><a href="backing-up-your-computer.html#cb35-50" tabindex="-1"></a><span class="fu">sh</span> update_brewfile.sh</span></code></pre></div>
 <p>Note that it removes the <code>Brewfile</code> and re-runs <code>update_brewfile.sh</code> at the end. If you are not using <a href="https://brew.sh/"><code>Homebrew</code></a>, feel free to remove those lines from the script.</p>
 <p>A lot of work goes into creating several of these Linux-style configuration files such as your <code>~/.Rprofile</code> file for configuring your R sessions <a href="#fn27" class="footnote-ref" id="fnref27"><sup>27</sup></a>, or your connections to other computers and clusters (saved in your <code>~/.ssh</code> directory). To save myself the pain of having to recreate these files, I make sure to save them.</p>
 <p>To restore files, the fourth and final shell script is <code>restore_files.sh</code></p>
@@ -651,20 +679,34 @@ Tough day, but you know what they say: “Don't cry because it's over. Cry becau
 <span id="cb36-32"><a href="backing-up-your-computer.html#cb36-32" tabindex="-1"></a><span class="fu">rsync</span> <span class="at">-av</span> RStudio/share/rstudio ~/.local/share/</span>
 <span id="cb36-33"><a href="backing-up-your-computer.html#cb36-33" tabindex="-1"></a><span class="fu">rsync</span> <span class="at">-av</span> RStudio/config/rstudio ~/.config/</span>
 <span id="cb36-34"><a href="backing-up-your-computer.html#cb36-34" tabindex="-1"></a></span>
-<span id="cb36-35"><a href="backing-up-your-computer.html#cb36-35" tabindex="-1"></a><span class="fu">sh</span> restore_brewfile.sh</span></code></pre></div>
+<span id="cb36-35"><a href="backing-up-your-computer.html#cb36-35" tabindex="-1"></a><span class="co">## https://positron.posit.co/troubleshooting.html</span></span>
+<span id="cb36-36"><a href="backing-up-your-computer.html#cb36-36" tabindex="-1"></a><span class="fu">mkdir</span> <span class="at">-p</span> Positron</span>
+<span id="cb36-37"><a href="backing-up-your-computer.html#cb36-37" tabindex="-1"></a><span class="fu">rsync</span> <span class="at">-av</span> ~/Library/Application\ Support/Positron Positron/</span>
+<span id="cb36-38"><a href="backing-up-your-computer.html#cb36-38" tabindex="-1"></a><span class="fu">mkdir</span> <span class="at">-p</span> .positron</span>
+<span id="cb36-39"><a href="backing-up-your-computer.html#cb36-39" tabindex="-1"></a><span class="fu">rsync</span> <span class="at">-av</span> ~/.positron .positron/</span>
+<span id="cb36-40"><a href="backing-up-your-computer.html#cb36-40" tabindex="-1"></a></span>
+<span id="cb36-41"><a href="backing-up-your-computer.html#cb36-41" tabindex="-1"></a><span class="fu">sh</span> restore_brewfile.sh</span></code></pre></div>
 <p>You have to have previously re-installed <code>TextMate</code>, <code>Cyberduck</code>, <code>RStudio</code>, and <code>Homebrew</code> manually before running <code>restore_files.sh</code>. Of course, you also have to have downloaded your files from your cloud storage service first too <a href="#fn28" class="footnote-ref" id="fnref28"><sup>28</sup></a>.</p>
 <p>As a note on <code>~/.ssh</code> permissions, they have to be restrictive both on your laptop as well as at JHPCE for things to work well. Here are mine:</p>
 <ul>
 <li>Laptop:</li>
 </ul>
 <div class="sourceCode" id="cb37"><pre class="sourceCode bash"><code class="sourceCode bash"><span id="cb37-1"><a href="backing-up-your-computer.html#cb37-1" tabindex="-1"></a><span class="ex">.ssh</span> % ls <span class="at">-lah</span></span>
-<span id="cb37-2"><a href="backing-up-your-computer.html#cb37-2" tabindex="-1"></a><span class="ex">total</span> 64K</span>
-<span id="cb37-3"><a href="backing-up-your-computer.html#cb37-3" tabindex="-1"></a><span class="ex">drwx------</span>  12 leocollado staff  384 Mar  5 09:18 .</span>
-<span id="cb37-4"><a href="backing-up-your-computer.html#cb37-4" tabindex="-1"></a><span class="ex">drwxr-x---+</span> 40 leocollado staff 1.3K Mar  5 09:58 ..</span>
-<span id="cb37-5"><a href="backing-up-your-computer.html#cb37-5" tabindex="-1"></a><span class="ex">-rw-------</span>   1 leocollado staff 1.7K Oct  3 13:20 config</span>
-<span id="cb37-6"><a href="backing-up-your-computer.html#cb37-6" tabindex="-1"></a><span class="ex">-rw-------</span>   1 leocollado staff 1.7K Dec 21  2016 id_rsa</span>
-<span id="cb37-7"><a href="backing-up-your-computer.html#cb37-7" tabindex="-1"></a><span class="ex">-rw-------</span>   1 leocollado staff  433 Dec 21  2016 id_rsa.pub</span>
-<span id="cb37-8"><a href="backing-up-your-computer.html#cb37-8" tabindex="-1"></a><span class="ex">-rw-------</span>   1 leocollado staff  13K Mar  5 09:18 known_hosts</span></code></pre></div>
+<span id="cb37-2"><a href="backing-up-your-computer.html#cb37-2" tabindex="-1"></a><span class="ex">total</span> 68K</span>
+<span id="cb37-3"><a href="backing-up-your-computer.html#cb37-3" tabindex="-1"></a><span class="ex">drwx------</span> 14 leocollado staff  448 May  1 10:42 .</span>
+<span id="cb37-4"><a href="backing-up-your-computer.html#cb37-4" tabindex="-1"></a><span class="ex">drwxr-x---</span> 63 leocollado staff 2.0K Jul 28 16:05 ..</span>
+<span id="cb37-5"><a href="backing-up-your-computer.html#cb37-5" tabindex="-1"></a><span class="ex">drwx------</span>  4 leocollado staff  128 Jul 24 09:06 agent</span>
+<span id="cb37-6"><a href="backing-up-your-computer.html#cb37-6" tabindex="-1"></a><span class="ex">-rw-------</span>  1 leocollado staff 2.5K May  1 09:42 config</span>
+<span id="cb37-7"><a href="backing-up-your-computer.html#cb37-7" tabindex="-1"></a><span class="ex">-rw-------</span>  1 leocollado staff  668 Jan 31  2013 id_dsa</span>
+<span id="cb37-8"><a href="backing-up-your-computer.html#cb37-8" tabindex="-1"></a><span class="ex">-rw-------</span>  1 leocollado staff  684 Jul 24  2016 id_dsa_pub_putty</span>
+<span id="cb37-9"><a href="backing-up-your-computer.html#cb37-9" tabindex="-1"></a><span class="ex">-rw-------</span>  1 leocollado staff  806 Jul 24  2016 id_dsa.ppk</span>
+<span id="cb37-10"><a href="backing-up-your-computer.html#cb37-10" tabindex="-1"></a><span class="ex">-rw-------</span>  1 leocollado staff  631 Jan 31  2013 id_dsa.pub</span>
+<span id="cb37-11"><a href="backing-up-your-computer.html#cb37-11" tabindex="-1"></a><span class="ex">-rw-------</span>  1 leocollado staff 1.7K Dec 21  2016 id_rsa</span>
+<span id="cb37-12"><a href="backing-up-your-computer.html#cb37-12" tabindex="-1"></a><span class="ex">-rw-------</span>  1 leocollado staff 1.5K Jul 24  2016 id_rsa.ppk</span>
+<span id="cb37-13"><a href="backing-up-your-computer.html#cb37-13" tabindex="-1"></a><span class="ex">-rw-------</span>  1 leocollado staff  433 Dec 21  2016 id_rsa.pub</span>
+<span id="cb37-14"><a href="backing-up-your-computer.html#cb37-14" tabindex="-1"></a><span class="ex">-rw-------</span>  1 leocollado staff  15K Aug 20  2025 known_hosts</span>
+<span id="cb37-15"><a href="backing-up-your-computer.html#cb37-15" tabindex="-1"></a><span class="ex">-rw-------</span>  1 leocollado staff  14K Aug 20  2025 known_hosts.old</span>
+<span id="cb37-16"><a href="backing-up-your-computer.html#cb37-16" tabindex="-1"></a><span class="ex">-rwx------</span>  1 leocollado staff  110 May  1 09:52 proxy_positron_nc.sh</span></code></pre></div>
 <ul>
 <li>JHPCE:</li>
 </ul>
