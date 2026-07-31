@@ -38,7 +38,7 @@ Additional software:
 
 - Both: [Notion](https://www.notion.so/desktop), [Slack](https://slack.com/downloads)
 - Windows: [WinSCP](https://sourceforge.net/projects/winscp/), [Git bash](https://gitforwindows.org/), [PuTTY](https://www.putty.org/), [Notepad++](https://notepad-plus-plus.org/downloads/), [NppToR](https://sourceforge.net/projects/npptor/)
-- macOS: [Cyberduck](https://cyberduck.io/), [iTerm2](https://www.iterm2.com/), [Alfred](https://www.alfredapp.com/), [TextMate2](https://macromates.com/download)
+- macOS: [Cyberduck](https://cyberduck.io/), [iTerm2](https://www.iterm2.com/), [Alfred](https://www.alfredapp.com/)
 
 You might also be interested in checking out our older [onboarding setup materials](http://research.libd.org/jaffe_onboarding/setup.html).
 
@@ -66,15 +66,13 @@ remotes::install_cran(c(
 ))
 
 ## Laptop R profile packages (not needed at JHPCE)
-remotes::install_github(c(
-    "gadenbuie/rsthemes"
-))
+install.packages(
+  "rsthemes",
+  repos = c(gadenbuie = 'https://gadenbuie.r-universe.dev', getOption("repos"))
+)
 remotes::install_cran("suncalc")
 rsthemes::install_rsthemes(include_base16 = TRUE)
-remotes::install_github("gadenbuie/xaringanExtra")
-
-## JHPCE R profile packages
-remotes::install_github("cloudyr/rmote")
+remotes::install_cran("xaringanExtra")
 
 ## Main packages
 BiocManager::install(c(
@@ -570,14 +568,6 @@ export LS_COLORS="di=0;32:ln=0;36:so=0;35:pi=0;93:ex=0;31:bd=0;34;46:cd=0;34;43:
 #export CLICOLOR=1
 #export LSCOLORS="ExGxFxDxBxEgEdxbxgxhxd"
 
-## For setup:
-# http://erniemiller.org/2011/12/12/textmate-2-rmate-awesome/
-## For laptop config:
-# http://jonsimpson.co.uk/log/2011/rmate-ssh-remoteforward
-## rmate port
-# https://github.com/textmate/rmate
-export RMATE_PORT="SOME_PORT_YOU_CHOOSE"
-
 ## Set an alias to run JHPCE rsrun with X11 support
 ## Documented at https://jhpce.jhu.edu/slurm/interactive-jobs/#shortcuts
 jsrun() { if [ -z ${DISPLAY} ]; then /usr/bin/srun --pty "$@" bash; else /usr/bin/srun --pty --x11 "$@" bash; fi }
@@ -602,14 +592,9 @@ if [[ $HOSTNAME == compute-* ]] || [[ $HOSTNAME == transfer-* ]]; then
 	# module use /jhpce/shared/libd/modulefiles
 	module load git-status-size
 	module load git-lfs
-	module load rmate
 	module load conda_R/4.5 ## for BioC 3.21 as of Jan 16 2026
 fi
 ```
-
-For more information on `rmate` and `rmote` and how it relates to these configuration files, check this video and [companion notes](https://docs.google.com/document/d/1vj0xa_qZTIgsnooW_9_j44Low1UbSIufnlGXCgL_YCU/edit).
-
-<iframe width="560" height="315" src="https://www.youtube.com/embed/LjWr39C1Z_Q" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 
 ### `~/.bash_profile`
 
