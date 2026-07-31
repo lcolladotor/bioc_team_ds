@@ -343,7 +343,7 @@ I removed a few files from the output above to just highlight the main files.
 
 #### Misc
 
-Similar to the screenshots of the contents of my `/Applications` directory, I have taken screenshots of my Slack Workspaces and Dock bar setup. Just to remember in what order I have things. I also keep around the license files for `Cyberduck`, `Hyberdock`, `Bartender`, `AlfredApp`, and other software that I have paid for before. For `iTerm2`, I have also exported my favorite _profile_ to a JSON file. For `Cyberduck`, you can also drag to a Finder window your `Cyberduck` bookmarks.
+Similar to the screenshots of the contents of my `/Applications` directory, I have taken screenshots of my Slack Workspaces and Dock bar setup. Just to remember in what order I have things. I also keep around the license files for `Cyberduck`, `Bartender`, `AlfredApp`, and other software that I have paid for before. For `iTerm2`, I have also exported my favorite _profile_ to a JSON file. For `Cyberduck`, you can also drag to a Finder window your `Cyberduck` bookmarks.
 
 Note that some software like `Zotero`, `AlfredApp`, and the `OneTab` Chrome extension have direct options for backing up your Zotero library (via a Zotero account), your `AlfredApp` preferences, or `OneTab` bookmarks. Check if this is the case for any other software you use and for which you'd like to save the preferences you customized.
 

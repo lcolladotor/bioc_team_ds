@@ -38,7 +38,7 @@ Additional software:
 
 - Both: [Notion](https://www.notion.so/desktop), [Slack](https://slack.com/downloads)
 - Windows: [WinSCP](https://sourceforge.net/projects/winscp/), [Git bash](https://gitforwindows.org/), [PuTTY](https://www.putty.org/), [Notepad++](https://notepad-plus-plus.org/downloads/), [NppToR](https://sourceforge.net/projects/npptor/)
-- macOS: [Cyberduck](https://cyberduck.io/), [iTerm2](https://www.iterm2.com/), [Alfred](https://www.alfredapp.com/)
+- macOS: [Cyberduck](https://cyberduck.io/), [iTerm2](https://www.iterm2.com/), [Alfred](https://www.alfredapp.com/), [DockDoor](https://dockdoor.net/)
 
 You might also be interested in checking out our older [onboarding setup materials](http://research.libd.org/jaffe_onboarding/setup.html).
 
