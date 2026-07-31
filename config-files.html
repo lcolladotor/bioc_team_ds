@@ -796,7 +796,7 @@ Do you want to use <a href="https://twitter.com/Bioconductor?ref_src=twsrc%5Etfw
 <h2><span class="header-section-number">17.3</span> Git config files<a href="config-files.html#git-config-files" class="anchor-section" aria-label="Anchor link to header"></a></h2>
 <div id="gitconfig" class="section level3 hasAnchor" number="17.3.1">
 <h3><span class="header-section-number">17.3.1</span> <code>~/.gitconfig</code><a href="config-files.html#gitconfig" class="anchor-section" aria-label="Anchor link to header"></a></h3>
-<p>Edit it with <code>usethis::edit_git_config()</code>.</p>
+<p>Edit it with <code>usethis::edit_git_config()</code>. Note that this will configure <code>git</code> to use <code>Positron</code> as your editor for commit messages.</p>
 <pre><code>[user]
     name = lcolladotor
     email = lcolladotor@gmail.com
@@ -814,8 +814,9 @@ Do you want to use <a href="https://twitter.com/Bioconductor?ref_src=twsrc%5Etfw
     directory = *
 [core]
     ignorecase = true
+    editor = positron --wait
 </code></pre>
-<p>On my laptop the end is a little different given that I do use a <code>~/.gitignore_global</code> file there and use TextMate as my text editor for commit messages.</p>
+<p>On my laptop the end is a little different given that I do use a <code>~/.gitignore_global</code> file there.</p>
 <pre><code>[core]
     ignorecase = true
     excludesfile = ~/.gitignore_global
@@ -927,83 +928,84 @@ as well as the instructional video:</p>
 <span id="cb28-9"><a href="config-files.html#cb28-9" tabindex="-1"></a><span class="bu">alias</span> dcl02=<span class="st">&quot;cd /dcl02/lieber/lcolladotor&quot;</span></span>
 <span id="cb28-10"><a href="config-files.html#cb28-10" tabindex="-1"></a><span class="bu">alias</span> dcs04=<span class="st">&quot;cd /dcs04/lieber/lcolladotor&quot;</span></span>
 <span id="cb28-11"><a href="config-files.html#cb28-11" tabindex="-1"></a><span class="bu">alias</span> dcs05=<span class="st">&quot;cd /dcs05/lieber/lcolladotor&quot;</span></span>
-<span id="cb28-12"><a href="config-files.html#cb28-12" tabindex="-1"></a></span>
-<span id="cb28-13"><a href="config-files.html#cb28-13" tabindex="-1"></a><span class="co">## Creating modules</span></span>
-<span id="cb28-14"><a href="config-files.html#cb28-14" tabindex="-1"></a><span class="co"># https://lmod.readthedocs.io/en/latest/050_lua_modulefiles.html</span></span>
-<span id="cb28-15"><a href="config-files.html#cb28-15" tabindex="-1"></a><span class="co"># SLURM</span></span>
-<span id="cb28-16"><a href="config-files.html#cb28-16" tabindex="-1"></a><span class="bu">alias</span> modsrc=<span class="st">&quot;cd /jhpce/shared/libd/core&quot;</span></span>
-<span id="cb28-17"><a href="config-files.html#cb28-17" tabindex="-1"></a><span class="bu">alias</span> modlua=<span class="st">&quot;cd /jhpce/shared/libd/modulefiles&quot;</span></span>
-<span id="cb28-18"><a href="config-files.html#cb28-18" tabindex="-1"></a></span>
-<span id="cb28-19"><a href="config-files.html#cb28-19" tabindex="-1"></a><span class="co">## To deal with running nextflow without requesting much more memory</span></span>
-<span id="cb28-20"><a href="config-files.html#cb28-20" tabindex="-1"></a><span class="co">## https://jhpce.jhu.edu/question/why-do-i-get-memory-errors-when-running-java/</span></span>
-<span id="cb28-21"><a href="config-files.html#cb28-21" tabindex="-1"></a><span class="co"># export _JAVA_OPTIONS=&quot;-Xms5g -Xmx6g&quot;</span></span>
-<span id="cb28-22"><a href="config-files.html#cb28-22" tabindex="-1"></a><span class="co">## Disable for SPEAQeasy</span></span>
-<span id="cb28-23"><a href="config-files.html#cb28-23" tabindex="-1"></a></span>
-<span id="cb28-24"><a href="config-files.html#cb28-24" tabindex="-1"></a><span class="co">## From https://twitter.com/lcolladotor/status/1258455434073124865?s=20</span></span>
-<span id="cb28-25"><a href="config-files.html#cb28-25" tabindex="-1"></a><span class="co">## and https://www.cyberciti.biz/tips/understanding-linux-unix-umask-value-usage.html</span></span>
-<span id="cb28-26"><a href="config-files.html#cb28-26" tabindex="-1"></a><span class="bu">umask</span> u=rwx,g=rwx,o= <span class="co">## equivalent to umask 007</span></span>
-<span id="cb28-27"><a href="config-files.html#cb28-27" tabindex="-1"></a></span>
-<span id="cb28-28"><a href="config-files.html#cb28-28" tabindex="-1"></a><span class="co"># Exit for non-interactive shells</span></span>
-<span id="cb28-29"><a href="config-files.html#cb28-29" tabindex="-1"></a><span class="co"># Obtained this information from Geo Pertea</span></span>
-<span id="cb28-30"><a href="config-files.html#cb28-30" tabindex="-1"></a><span class="co"># as noted at https://lists.jh.edu/sympa/arc/bithelp/2024-04/msg00020.html.</span></span>
-<span id="cb28-31"><a href="config-files.html#cb28-31" tabindex="-1"></a><span class="kw">[[</span> <span class="va">${-</span><span class="op">#</span><span class="pp">*</span>i<span class="va">}</span> <span class="ot">!=</span> <span class="va">${-}</span> <span class="kw">]]</span> <span class="kw">||</span> <span class="cf">return</span></span>
-<span id="cb28-32"><a href="config-files.html#cb28-32" tabindex="-1"></a></span>
-<span id="cb28-33"><a href="config-files.html#cb28-33" tabindex="-1"></a><span class="co"># User specific aliases and functions</span></span>
-<span id="cb28-34"><a href="config-files.html#cb28-34" tabindex="-1"></a><span class="co"># Auto-complete command from history</span></span>
-<span id="cb28-35"><a href="config-files.html#cb28-35" tabindex="-1"></a><span class="co"># http://lindesk.com/2009/04/customize-terminal-configuration-setting-bash-cli-power-user/</span></span>
-<span id="cb28-36"><a href="config-files.html#cb28-36" tabindex="-1"></a><span class="bu">export</span> <span class="va">INPUTRC</span><span class="op">=</span>~/.inputrc</span>
-<span id="cb28-37"><a href="config-files.html#cb28-37" tabindex="-1"></a><span class="co"># http://www.biostat.jhsph.edu/~afisher/ComputingClub/webfiles/KasperHansenPres/IntermediateUnix.pdf</span></span>
-<span id="cb28-38"><a href="config-files.html#cb28-38" tabindex="-1"></a><span class="co"># https://unix.stackexchange.com/questions/48713/how-can-i-remove-duplicates-in-my-bash-history-preserving-order</span></span>
-<span id="cb28-39"><a href="config-files.html#cb28-39" tabindex="-1"></a><span class="bu">export</span> <span class="va">HISTCONTROL</span><span class="op">=</span>ignoreboth:erasedups</span>
-<span id="cb28-40"><a href="config-files.html#cb28-40" tabindex="-1"></a><span class="bu">export</span> <span class="va">HISTSIZE</span><span class="op">=</span>20000</span>
-<span id="cb28-41"><a href="config-files.html#cb28-41" tabindex="-1"></a><span class="bu">shopt</span> <span class="at">-s</span> histappend</span>
-<span id="cb28-42"><a href="config-files.html#cb28-42" tabindex="-1"></a><span class="bu">shopt</span> <span class="at">-s</span> cmdhist</span>
-<span id="cb28-43"><a href="config-files.html#cb28-43" tabindex="-1"></a></span>
-<span id="cb28-44"><a href="config-files.html#cb28-44" tabindex="-1"></a><span class="co"># http://superuser.com/questions/384769/alias-rm-rm-i-considered-harmful</span></span>
-<span id="cb28-45"><a href="config-files.html#cb28-45" tabindex="-1"></a><span class="bu">alias</span> rmi=<span class="st">&#39;rm -i&#39;</span></span>
-<span id="cb28-46"><a href="config-files.html#cb28-46" tabindex="-1"></a></span>
-<span id="cb28-47"><a href="config-files.html#cb28-47" tabindex="-1"></a><span class="co"># colors</span></span>
-<span id="cb28-48"><a href="config-files.html#cb28-48" tabindex="-1"></a><span class="co"># http://norbauer.com/notebooks/code/notes/ls-colors-and-terminal-app</span></span>
-<span id="cb28-49"><a href="config-files.html#cb28-49" tabindex="-1"></a><span class="co"># used BSD pattern ExGxFxDxBxEgEdxbxgxhxd on http://geoff.greer.fm/lscolors/</span></span>
-<span id="cb28-50"><a href="config-files.html#cb28-50" tabindex="-1"></a><span class="co"># that tool does not specify the colors, which I did by looking manually at</span></span>
-<span id="cb28-51"><a href="config-files.html#cb28-51" tabindex="-1"></a><span class="co"># http://blog.twistedcode.org/2008/04/lscolors-explained.html</span></span>
-<span id="cb28-52"><a href="config-files.html#cb28-52" tabindex="-1"></a><span class="co"># and the norbauer.com site previously mentioned</span></span>
-<span id="cb28-53"><a href="config-files.html#cb28-53" tabindex="-1"></a><span class="bu">alias</span> ls=<span class="st">&quot;ls --color=auto&quot;</span></span>
-<span id="cb28-54"><a href="config-files.html#cb28-54" tabindex="-1"></a><span class="co">#export LS_COLORS=&quot;di=1;34;40:ln=1;36;40:so=1;35;40:pi=1;93;40:ex=1;31;40:bd=1;34;46:cd=1;34;43:su=0;41:sg=0;46:tw=0;47:ow=0;43&quot;</span></span>
-<span id="cb28-55"><a href="config-files.html#cb28-55" tabindex="-1"></a><span class="co">## After switching to RStudio:</span></span>
-<span id="cb28-56"><a href="config-files.html#cb28-56" tabindex="-1"></a><span class="co"># https://askubuntu.com/questions/466198/how-do-i-change-the-color-for-directories-with-ls-in-the-console</span></span>
-<span id="cb28-57"><a href="config-files.html#cb28-57" tabindex="-1"></a><span class="bu">export</span> <span class="va">LS_COLORS</span><span class="op">=</span><span class="st">&quot;di=0;32:ln=0;36:so=0;35:pi=0;93:ex=0;31:bd=0;34;46:cd=0;34;43:su=0;41:sg=0;46:tw=0;47:ow=0;43:fi=0;33&quot;</span></span>
-<span id="cb28-58"><a href="config-files.html#cb28-58" tabindex="-1"></a></span>
-<span id="cb28-59"><a href="config-files.html#cb28-59" tabindex="-1"></a><span class="co"># Uncomment below for Mac and comment the two previous commands</span></span>
-<span id="cb28-60"><a href="config-files.html#cb28-60" tabindex="-1"></a><span class="co">#export CLICOLOR=1</span></span>
-<span id="cb28-61"><a href="config-files.html#cb28-61" tabindex="-1"></a><span class="co">#export LSCOLORS=&quot;ExGxFxDxBxEgEdxbxgxhxd&quot;</span></span>
-<span id="cb28-62"><a href="config-files.html#cb28-62" tabindex="-1"></a></span>
-<span id="cb28-63"><a href="config-files.html#cb28-63" tabindex="-1"></a><span class="co">## Set an alias to run JHPCE rsrun with X11 support</span></span>
-<span id="cb28-64"><a href="config-files.html#cb28-64" tabindex="-1"></a><span class="co">## Documented at https://jhpce.jhu.edu/slurm/interactive-jobs/#shortcuts</span></span>
-<span id="cb28-65"><a href="config-files.html#cb28-65" tabindex="-1"></a><span class="fu">jsrun()</span> <span class="kw">{</span> <span class="cf">if</span> <span class="bu">[</span> <span class="ot">-z</span> <span class="va">${DISPLAY}</span> <span class="bu">]</span><span class="kw">;</span> <span class="cf">then</span> <span class="ex">/usr/bin/srun</span> <span class="at">--pty</span> <span class="st">&quot;</span><span class="va">$@</span><span class="st">&quot;</span> bash<span class="kw">;</span> <span class="cf">else</span> <span class="ex">/usr/bin/srun</span> <span class="at">--pty</span> <span class="at">--x11</span> <span class="st">&quot;</span><span class="va">$@</span><span class="st">&quot;</span> bash<span class="kw">;</span> <span class="cf">fi</span> <span class="kw">}</span></span>
-<span id="cb28-66"><a href="config-files.html#cb28-66" tabindex="-1"></a></span>
-<span id="cb28-67"><a href="config-files.html#cb28-67" tabindex="-1"></a><span class="co"># Change command prompt</span></span>
-<span id="cb28-68"><a href="config-files.html#cb28-68" tabindex="-1"></a><span class="co"># http://www.cyberciti.biz/tips/howto-linux-unix-bash-shell-setup-prompt.html</span></span>
-<span id="cb28-69"><a href="config-files.html#cb28-69" tabindex="-1"></a><span class="co"># http://www.cyberciti.biz/faq/bash-shell-change-the-color-of-my-shell-prompt-under-linux-or-unix/</span></span>
-<span id="cb28-70"><a href="config-files.html#cb28-70" tabindex="-1"></a><span class="co"># https://bbs.archlinux.org/viewtopic.php?id=48910</span></span>
-<span id="cb28-71"><a href="config-files.html#cb28-71" tabindex="-1"></a><span class="co"># previous in enigma2: &quot;[\u@\h \W]\$ &quot;</span></span>
-<span id="cb28-72"><a href="config-files.html#cb28-72" tabindex="-1"></a><span class="co"># previously in mac: &quot;\h:\W \u\$ &quot;</span></span>
-<span id="cb28-73"><a href="config-files.html#cb28-73" tabindex="-1"></a><span class="bu">export</span> <span class="va">PS1</span><span class="op">=</span><span class="st">&quot;\[\e[0;33m\]\A \W </span><span class="dt">\$</span><span class="st"> \[\e[m\]&quot;</span></span>
-<span id="cb28-74"><a href="config-files.html#cb28-74" tabindex="-1"></a></span>
-<span id="cb28-75"><a href="config-files.html#cb28-75" tabindex="-1"></a><span class="co"># Exit for noninteractive shells (see https://github.com/lcolladotor/bioc_team_ds/issues/12)</span></span>
-<span id="cb28-76"><a href="config-files.html#cb28-76" tabindex="-1"></a><span class="kw">[[</span> <span class="va">${-</span><span class="op">#</span><span class="pp">*</span>i<span class="va">}</span> <span class="ot">!=</span> <span class="va">${-}</span> <span class="kw">]]</span> <span class="kw">||</span> <span class="cf">return</span></span>
-<span id="cb28-77"><a href="config-files.html#cb28-77" tabindex="-1"></a></span>
-<span id="cb28-78"><a href="config-files.html#cb28-78" tabindex="-1"></a><span class="co">## Load commonly used modules by default when using srun/sbatch</span></span>
-<span id="cb28-79"><a href="config-files.html#cb28-79" tabindex="-1"></a><span class="co">## thanks to Jiong Yang and John Muschelli</span></span>
-<span id="cb28-80"><a href="config-files.html#cb28-80" tabindex="-1"></a><span class="cf">if</span> <span class="kw">[[</span> <span class="va">$HOSTNAME</span> <span class="ot">==</span> compute-<span class="pp">*</span> <span class="kw">]]</span> <span class="kw">||</span> <span class="kw">[[</span> <span class="va">$HOSTNAME</span> <span class="ot">==</span> transfer-<span class="pp">*</span> <span class="kw">]];</span> <span class="cf">then</span></span>
-<span id="cb28-81"><a href="config-files.html#cb28-81" tabindex="-1"></a>    <span class="co"># Load SLURM LIBD modules</span></span>
-<span id="cb28-82"><a href="config-files.html#cb28-82" tabindex="-1"></a>    <span class="co">## This command is not needed anymore, though you would need</span></span>
-<span id="cb28-83"><a href="config-files.html#cb28-83" tabindex="-1"></a>    <span class="co">## to use a similar command if you are loading private modules.</span></span>
-<span id="cb28-84"><a href="config-files.html#cb28-84" tabindex="-1"></a>    <span class="co"># module use /jhpce/shared/libd/modulefiles</span></span>
-<span id="cb28-85"><a href="config-files.html#cb28-85" tabindex="-1"></a>    <span class="ex">module</span> load git-status-size</span>
-<span id="cb28-86"><a href="config-files.html#cb28-86" tabindex="-1"></a>    <span class="ex">module</span> load git-lfs</span>
-<span id="cb28-87"><a href="config-files.html#cb28-87" tabindex="-1"></a>    <span class="ex">module</span> load conda_R/4.5 <span class="co">## for BioC 3.21 as of Jan 16 2026</span></span>
-<span id="cb28-88"><a href="config-files.html#cb28-88" tabindex="-1"></a><span class="cf">fi</span></span></code></pre></div>
+<span id="cb28-12"><a href="config-files.html#cb28-12" tabindex="-1"></a><span class="bu">alias</span> dcs07=<span class="st">&quot;cd /dcs07/lieber/lcolladotor&quot;</span></span>
+<span id="cb28-13"><a href="config-files.html#cb28-13" tabindex="-1"></a></span>
+<span id="cb28-14"><a href="config-files.html#cb28-14" tabindex="-1"></a><span class="co">## Creating modules</span></span>
+<span id="cb28-15"><a href="config-files.html#cb28-15" tabindex="-1"></a><span class="co"># https://lmod.readthedocs.io/en/latest/050_lua_modulefiles.html</span></span>
+<span id="cb28-16"><a href="config-files.html#cb28-16" tabindex="-1"></a><span class="co"># SLURM</span></span>
+<span id="cb28-17"><a href="config-files.html#cb28-17" tabindex="-1"></a><span class="bu">alias</span> modsrc=<span class="st">&quot;cd /jhpce/shared/libd/core&quot;</span></span>
+<span id="cb28-18"><a href="config-files.html#cb28-18" tabindex="-1"></a><span class="bu">alias</span> modlua=<span class="st">&quot;cd /jhpce/shared/libd/modulefiles&quot;</span></span>
+<span id="cb28-19"><a href="config-files.html#cb28-19" tabindex="-1"></a></span>
+<span id="cb28-20"><a href="config-files.html#cb28-20" tabindex="-1"></a><span class="co">## To deal with running nextflow without requesting much more memory</span></span>
+<span id="cb28-21"><a href="config-files.html#cb28-21" tabindex="-1"></a><span class="co">## https://jhpce.jhu.edu/question/why-do-i-get-memory-errors-when-running-java/</span></span>
+<span id="cb28-22"><a href="config-files.html#cb28-22" tabindex="-1"></a><span class="co"># export _JAVA_OPTIONS=&quot;-Xms5g -Xmx6g&quot;</span></span>
+<span id="cb28-23"><a href="config-files.html#cb28-23" tabindex="-1"></a><span class="co">## Disable for SPEAQeasy</span></span>
+<span id="cb28-24"><a href="config-files.html#cb28-24" tabindex="-1"></a></span>
+<span id="cb28-25"><a href="config-files.html#cb28-25" tabindex="-1"></a><span class="co">## From https://twitter.com/lcolladotor/status/1258455434073124865?s=20</span></span>
+<span id="cb28-26"><a href="config-files.html#cb28-26" tabindex="-1"></a><span class="co">## and https://www.cyberciti.biz/tips/understanding-linux-unix-umask-value-usage.html</span></span>
+<span id="cb28-27"><a href="config-files.html#cb28-27" tabindex="-1"></a><span class="bu">umask</span> u=rwx,g=rwx,o= <span class="co">## equivalent to umask 007</span></span>
+<span id="cb28-28"><a href="config-files.html#cb28-28" tabindex="-1"></a></span>
+<span id="cb28-29"><a href="config-files.html#cb28-29" tabindex="-1"></a><span class="co"># Exit for non-interactive shells</span></span>
+<span id="cb28-30"><a href="config-files.html#cb28-30" tabindex="-1"></a><span class="co"># Obtained this information from Geo Pertea</span></span>
+<span id="cb28-31"><a href="config-files.html#cb28-31" tabindex="-1"></a><span class="co"># as noted at https://lists.jh.edu/sympa/arc/bithelp/2024-04/msg00020.html.</span></span>
+<span id="cb28-32"><a href="config-files.html#cb28-32" tabindex="-1"></a><span class="kw">[[</span> <span class="va">${-</span><span class="op">#</span><span class="pp">*</span>i<span class="va">}</span> <span class="ot">!=</span> <span class="va">${-}</span> <span class="kw">]]</span> <span class="kw">||</span> <span class="cf">return</span></span>
+<span id="cb28-33"><a href="config-files.html#cb28-33" tabindex="-1"></a></span>
+<span id="cb28-34"><a href="config-files.html#cb28-34" tabindex="-1"></a><span class="co"># User specific aliases and functions</span></span>
+<span id="cb28-35"><a href="config-files.html#cb28-35" tabindex="-1"></a><span class="co"># Auto-complete command from history</span></span>
+<span id="cb28-36"><a href="config-files.html#cb28-36" tabindex="-1"></a><span class="co"># http://lindesk.com/2009/04/customize-terminal-configuration-setting-bash-cli-power-user/</span></span>
+<span id="cb28-37"><a href="config-files.html#cb28-37" tabindex="-1"></a><span class="bu">export</span> <span class="va">INPUTRC</span><span class="op">=</span>~/.inputrc</span>
+<span id="cb28-38"><a href="config-files.html#cb28-38" tabindex="-1"></a><span class="co"># http://www.biostat.jhsph.edu/~afisher/ComputingClub/webfiles/KasperHansenPres/IntermediateUnix.pdf</span></span>
+<span id="cb28-39"><a href="config-files.html#cb28-39" tabindex="-1"></a><span class="co"># https://unix.stackexchange.com/questions/48713/how-can-i-remove-duplicates-in-my-bash-history-preserving-order</span></span>
+<span id="cb28-40"><a href="config-files.html#cb28-40" tabindex="-1"></a><span class="bu">export</span> <span class="va">HISTCONTROL</span><span class="op">=</span>ignoreboth:erasedups</span>
+<span id="cb28-41"><a href="config-files.html#cb28-41" tabindex="-1"></a><span class="bu">export</span> <span class="va">HISTSIZE</span><span class="op">=</span>20000</span>
+<span id="cb28-42"><a href="config-files.html#cb28-42" tabindex="-1"></a><span class="bu">shopt</span> <span class="at">-s</span> histappend</span>
+<span id="cb28-43"><a href="config-files.html#cb28-43" tabindex="-1"></a><span class="bu">shopt</span> <span class="at">-s</span> cmdhist</span>
+<span id="cb28-44"><a href="config-files.html#cb28-44" tabindex="-1"></a></span>
+<span id="cb28-45"><a href="config-files.html#cb28-45" tabindex="-1"></a><span class="co"># http://superuser.com/questions/384769/alias-rm-rm-i-considered-harmful</span></span>
+<span id="cb28-46"><a href="config-files.html#cb28-46" tabindex="-1"></a><span class="bu">alias</span> rmi=<span class="st">&#39;rm -i&#39;</span></span>
+<span id="cb28-47"><a href="config-files.html#cb28-47" tabindex="-1"></a></span>
+<span id="cb28-48"><a href="config-files.html#cb28-48" tabindex="-1"></a><span class="co"># colors</span></span>
+<span id="cb28-49"><a href="config-files.html#cb28-49" tabindex="-1"></a><span class="co"># http://norbauer.com/notebooks/code/notes/ls-colors-and-terminal-app</span></span>
+<span id="cb28-50"><a href="config-files.html#cb28-50" tabindex="-1"></a><span class="co"># used BSD pattern ExGxFxDxBxEgEdxbxgxhxd on http://geoff.greer.fm/lscolors/</span></span>
+<span id="cb28-51"><a href="config-files.html#cb28-51" tabindex="-1"></a><span class="co"># that tool does not specify the colors, which I did by looking manually at</span></span>
+<span id="cb28-52"><a href="config-files.html#cb28-52" tabindex="-1"></a><span class="co"># http://blog.twistedcode.org/2008/04/lscolors-explained.html</span></span>
+<span id="cb28-53"><a href="config-files.html#cb28-53" tabindex="-1"></a><span class="co"># and the norbauer.com site previously mentioned</span></span>
+<span id="cb28-54"><a href="config-files.html#cb28-54" tabindex="-1"></a><span class="bu">alias</span> ls=<span class="st">&quot;ls --color=auto&quot;</span></span>
+<span id="cb28-55"><a href="config-files.html#cb28-55" tabindex="-1"></a><span class="co">#export LS_COLORS=&quot;di=1;34;40:ln=1;36;40:so=1;35;40:pi=1;93;40:ex=1;31;40:bd=1;34;46:cd=1;34;43:su=0;41:sg=0;46:tw=0;47:ow=0;43&quot;</span></span>
+<span id="cb28-56"><a href="config-files.html#cb28-56" tabindex="-1"></a><span class="co">## After switching to RStudio:</span></span>
+<span id="cb28-57"><a href="config-files.html#cb28-57" tabindex="-1"></a><span class="co"># https://askubuntu.com/questions/466198/how-do-i-change-the-color-for-directories-with-ls-in-the-console</span></span>
+<span id="cb28-58"><a href="config-files.html#cb28-58" tabindex="-1"></a><span class="bu">export</span> <span class="va">LS_COLORS</span><span class="op">=</span><span class="st">&quot;di=0;32:ln=0;36:so=0;35:pi=0;93:ex=0;31:bd=0;34;46:cd=0;34;43:su=0;41:sg=0;46:tw=0;47:ow=0;43:fi=0;33&quot;</span></span>
+<span id="cb28-59"><a href="config-files.html#cb28-59" tabindex="-1"></a></span>
+<span id="cb28-60"><a href="config-files.html#cb28-60" tabindex="-1"></a><span class="co"># Uncomment below for Mac and comment the two previous commands</span></span>
+<span id="cb28-61"><a href="config-files.html#cb28-61" tabindex="-1"></a><span class="co">#export CLICOLOR=1</span></span>
+<span id="cb28-62"><a href="config-files.html#cb28-62" tabindex="-1"></a><span class="co">#export LSCOLORS=&quot;ExGxFxDxBxEgEdxbxgxhxd&quot;</span></span>
+<span id="cb28-63"><a href="config-files.html#cb28-63" tabindex="-1"></a></span>
+<span id="cb28-64"><a href="config-files.html#cb28-64" tabindex="-1"></a><span class="co">## Set an alias to run JHPCE rsrun with X11 support</span></span>
+<span id="cb28-65"><a href="config-files.html#cb28-65" tabindex="-1"></a><span class="co">## Documented at https://jhpce.jhu.edu/slurm/interactive-jobs/#shortcuts</span></span>
+<span id="cb28-66"><a href="config-files.html#cb28-66" tabindex="-1"></a><span class="fu">jsrun()</span> <span class="kw">{</span> <span class="cf">if</span> <span class="bu">[</span> <span class="ot">-z</span> <span class="va">${DISPLAY}</span> <span class="bu">]</span><span class="kw">;</span> <span class="cf">then</span> <span class="ex">/usr/bin/srun</span> <span class="at">--pty</span> <span class="st">&quot;</span><span class="va">$@</span><span class="st">&quot;</span> bash<span class="kw">;</span> <span class="cf">else</span> <span class="ex">/usr/bin/srun</span> <span class="at">--pty</span> <span class="at">--x11</span> <span class="st">&quot;</span><span class="va">$@</span><span class="st">&quot;</span> bash<span class="kw">;</span> <span class="cf">fi</span> <span class="kw">}</span></span>
+<span id="cb28-67"><a href="config-files.html#cb28-67" tabindex="-1"></a></span>
+<span id="cb28-68"><a href="config-files.html#cb28-68" tabindex="-1"></a><span class="co"># Change command prompt</span></span>
+<span id="cb28-69"><a href="config-files.html#cb28-69" tabindex="-1"></a><span class="co"># http://www.cyberciti.biz/tips/howto-linux-unix-bash-shell-setup-prompt.html</span></span>
+<span id="cb28-70"><a href="config-files.html#cb28-70" tabindex="-1"></a><span class="co"># http://www.cyberciti.biz/faq/bash-shell-change-the-color-of-my-shell-prompt-under-linux-or-unix/</span></span>
+<span id="cb28-71"><a href="config-files.html#cb28-71" tabindex="-1"></a><span class="co"># https://bbs.archlinux.org/viewtopic.php?id=48910</span></span>
+<span id="cb28-72"><a href="config-files.html#cb28-72" tabindex="-1"></a><span class="co"># previous in enigma2: &quot;[\u@\h \W]\$ &quot;</span></span>
+<span id="cb28-73"><a href="config-files.html#cb28-73" tabindex="-1"></a><span class="co"># previously in mac: &quot;\h:\W \u\$ &quot;</span></span>
+<span id="cb28-74"><a href="config-files.html#cb28-74" tabindex="-1"></a><span class="bu">export</span> <span class="va">PS1</span><span class="op">=</span><span class="st">&quot;\[\e[0;33m\]\A \W </span><span class="dt">\$</span><span class="st"> \[\e[m\]&quot;</span></span>
+<span id="cb28-75"><a href="config-files.html#cb28-75" tabindex="-1"></a></span>
+<span id="cb28-76"><a href="config-files.html#cb28-76" tabindex="-1"></a><span class="co"># Exit for noninteractive shells (see https://github.com/lcolladotor/bioc_team_ds/issues/12)</span></span>
+<span id="cb28-77"><a href="config-files.html#cb28-77" tabindex="-1"></a><span class="kw">[[</span> <span class="va">${-</span><span class="op">#</span><span class="pp">*</span>i<span class="va">}</span> <span class="ot">!=</span> <span class="va">${-}</span> <span class="kw">]]</span> <span class="kw">||</span> <span class="cf">return</span></span>
+<span id="cb28-78"><a href="config-files.html#cb28-78" tabindex="-1"></a></span>
+<span id="cb28-79"><a href="config-files.html#cb28-79" tabindex="-1"></a><span class="co">## Load commonly used modules by default when using srun/sbatch</span></span>
+<span id="cb28-80"><a href="config-files.html#cb28-80" tabindex="-1"></a><span class="co">## thanks to Jiong Yang and John Muschelli</span></span>
+<span id="cb28-81"><a href="config-files.html#cb28-81" tabindex="-1"></a><span class="cf">if</span> <span class="kw">[[</span> <span class="va">$HOSTNAME</span> <span class="ot">==</span> compute-<span class="pp">*</span> <span class="kw">]]</span> <span class="kw">||</span> <span class="kw">[[</span> <span class="va">$HOSTNAME</span> <span class="ot">==</span> transfer-<span class="pp">*</span> <span class="kw">]];</span> <span class="cf">then</span></span>
+<span id="cb28-82"><a href="config-files.html#cb28-82" tabindex="-1"></a>    <span class="co"># Load SLURM LIBD modules</span></span>
+<span id="cb28-83"><a href="config-files.html#cb28-83" tabindex="-1"></a>    <span class="co">## This command is not needed anymore, though you would need</span></span>
+<span id="cb28-84"><a href="config-files.html#cb28-84" tabindex="-1"></a>    <span class="co">## to use a similar command if you are loading private modules.</span></span>
+<span id="cb28-85"><a href="config-files.html#cb28-85" tabindex="-1"></a>    <span class="co"># module use /jhpce/shared/libd/modulefiles</span></span>
+<span id="cb28-86"><a href="config-files.html#cb28-86" tabindex="-1"></a>    <span class="ex">module</span> load git-status-size</span>
+<span id="cb28-87"><a href="config-files.html#cb28-87" tabindex="-1"></a>    <span class="ex">module</span> load git-lfs</span>
+<span id="cb28-88"><a href="config-files.html#cb28-88" tabindex="-1"></a>    <span class="ex">module</span> load conda_R/4.5 <span class="co">## for BioC 3.21 as of Jan 16 2026</span></span>
+<span id="cb28-89"><a href="config-files.html#cb28-89" tabindex="-1"></a><span class="cf">fi</span></span></code></pre></div>
 </div>
 <div id="bash_profile" class="section level3 hasAnchor" number="17.4.5">
 <h3><span class="header-section-number">17.4.5</span> <code>~/.bash_profile</code><a href="config-files.html#bash_profile" class="anchor-section" aria-label="Anchor link to header"></a></h3>
