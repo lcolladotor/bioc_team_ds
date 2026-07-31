@@ -142,18 +142,45 @@ brew bundle dump
 
 This is only applicable if you use [`Homebrew`](https://brew.sh/) to install software on your computer. When you run it, it will create a file called `Brewfile` that contains the information you would need to have to re-install software managed by `Homebrew`. In my case, my `Brewfile` contains this:
 
-```
-tap "homebrew/bundle"
-tap "homebrew/cask"
-tap "homebrew/core"
+```bash
+# Software library to render fonts
+brew "freetype"
+# GNU File, Shell, and Text utilities
 brew "coreutils"
+# Cryptography and SSL/TLS Toolkit
+brew "openssl@3"
+# General-purpose data compression with high compression ratio
+brew "xz"
+# Get a file from an HTTP, HTTPS or FTP server
+brew "curl"
+# GitHub command-line tool
+brew "gh"
+# Distributed revision control system
 brew "git"
+# Git extension for versioning large files
 brew "git-lfs"
+# Open source programming language to build simple/reliable/efficient software
 brew "go"
-brew "hugo"
+# OpenType text shaping engine
+brew "harfbuzz"
+# C library of Git core methods that is re-entrant and linkable
+brew "libgit2"
+# International domain name library (IDNA2008, Punycode and TR46)
 brew "libidn2"
+# Swiss-army knife of markup format conversion
 brew "pandoc"
+# Package compiler and linker metadata toolkit
+brew "pkgconf"
+# Library for command-line editing
+brew "readline"
+# Command-line interface for SQLite
+brew "sqlite"
+# Tool Command Language
+brew "tcl-tk"
+# Internet file retriever
 brew "wget"
+# General-purpose lossless data-compression library
+brew "zlib"
 ```
 
 To restore your `Homebrew`-managed software, I have second shell script called `restore_homebrew.sh`.
