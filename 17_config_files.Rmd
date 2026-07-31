@@ -367,7 +367,7 @@ default-exclude = true
 
 ### `~/.gitconfig`
 
-Edit it with `usethis::edit_git_config()`.
+Edit it with `usethis::edit_git_config()`. Note that this will configure `git` to use `Positron` as your editor for commit messages.
 
 ```
 [user]
@@ -387,10 +387,11 @@ Edit it with `usethis::edit_git_config()`.
 	directory = *
 [core]
 	ignorecase = true
+	editor = positron --wait
 
 ```
 
-On my laptop the end is a little different given that I do use a `~/.gitignore_global` file there and use TextMate as my text editor for commit messages.
+On my laptop the end is a little different given that I do use a `~/.gitignore_global` file there.
 
 ```
 [core]
