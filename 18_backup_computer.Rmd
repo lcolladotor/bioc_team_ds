@@ -114,7 +114,6 @@ drwxr-xr-x  3 leocollado staff  96 May 25  2020  RSwitch.app
 lrwxr-xr-x  1 root       wheel  54 Jun 24 22:29  Safari.app -> ../System/Cryptexes/App/System/Applications/Safari.app
 drwxr-xr-x  3 leocollado staff  96 Jul 15 21:23  Slack.app
 drwxr-xr-x  3 leocollado staff  96 Apr 12 00:19  Spotify.app
-drwxr-xr-x  3 leocollado staff  96 Feb 15  2021  TextMate.app
 drwxr-xr-x  9 root       wheel 288 Jul 21 06:22  Utilities
 drwxr-xr-x  3 root       wheel  96 Mar 23 10:57 'VIPRE Endpoint Security.app'
 drwxr-xr-x  3 root       admin  96 Mar  6 13:25  VipreEndpoint
