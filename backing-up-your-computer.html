@@ -559,17 +559,44 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <span id="cb32-3"><a href="backing-up-your-computer.html#cb32-3" tabindex="-1"></a><span class="co"># https://tomlankhorst.nl/brew-bundle-restore-backup/</span></span>
 <span id="cb32-4"><a href="backing-up-your-computer.html#cb32-4" tabindex="-1"></a><span class="ex">brew</span> bundle dump</span></code></pre></div>
 <p>This is only applicable if you use <a href="https://brew.sh/"><code>Homebrew</code></a> to install software on your computer. When you run it, it will create a file called <code>Brewfile</code> that contains the information you would need to have to re-install software managed by <code>Homebrew</code>. In my case, my <code>Brewfile</code> contains this:</p>
-<pre><code>tap &quot;homebrew/bundle&quot;
-tap &quot;homebrew/cask&quot;
-tap &quot;homebrew/core&quot;
-brew &quot;coreutils&quot;
-brew &quot;git&quot;
-brew &quot;git-lfs&quot;
-brew &quot;go&quot;
-brew &quot;hugo&quot;
-brew &quot;libidn2&quot;
-brew &quot;pandoc&quot;
-brew &quot;wget&quot;</code></pre>
+<div class="sourceCode" id="cb33"><pre class="sourceCode bash"><code class="sourceCode bash"><span id="cb33-1"><a href="backing-up-your-computer.html#cb33-1" tabindex="-1"></a><span class="co"># Software library to render fonts</span></span>
+<span id="cb33-2"><a href="backing-up-your-computer.html#cb33-2" tabindex="-1"></a><span class="ex">brew</span> <span class="st">&quot;freetype&quot;</span></span>
+<span id="cb33-3"><a href="backing-up-your-computer.html#cb33-3" tabindex="-1"></a><span class="co"># GNU File, Shell, and Text utilities</span></span>
+<span id="cb33-4"><a href="backing-up-your-computer.html#cb33-4" tabindex="-1"></a><span class="ex">brew</span> <span class="st">&quot;coreutils&quot;</span></span>
+<span id="cb33-5"><a href="backing-up-your-computer.html#cb33-5" tabindex="-1"></a><span class="co"># Cryptography and SSL/TLS Toolkit</span></span>
+<span id="cb33-6"><a href="backing-up-your-computer.html#cb33-6" tabindex="-1"></a><span class="ex">brew</span> <span class="st">&quot;openssl@3&quot;</span></span>
+<span id="cb33-7"><a href="backing-up-your-computer.html#cb33-7" tabindex="-1"></a><span class="co"># General-purpose data compression with high compression ratio</span></span>
+<span id="cb33-8"><a href="backing-up-your-computer.html#cb33-8" tabindex="-1"></a><span class="ex">brew</span> <span class="st">&quot;xz&quot;</span></span>
+<span id="cb33-9"><a href="backing-up-your-computer.html#cb33-9" tabindex="-1"></a><span class="co"># Get a file from an HTTP, HTTPS or FTP server</span></span>
+<span id="cb33-10"><a href="backing-up-your-computer.html#cb33-10" tabindex="-1"></a><span class="ex">brew</span> <span class="st">&quot;curl&quot;</span></span>
+<span id="cb33-11"><a href="backing-up-your-computer.html#cb33-11" tabindex="-1"></a><span class="co"># GitHub command-line tool</span></span>
+<span id="cb33-12"><a href="backing-up-your-computer.html#cb33-12" tabindex="-1"></a><span class="ex">brew</span> <span class="st">&quot;gh&quot;</span></span>
+<span id="cb33-13"><a href="backing-up-your-computer.html#cb33-13" tabindex="-1"></a><span class="co"># Distributed revision control system</span></span>
+<span id="cb33-14"><a href="backing-up-your-computer.html#cb33-14" tabindex="-1"></a><span class="ex">brew</span> <span class="st">&quot;git&quot;</span></span>
+<span id="cb33-15"><a href="backing-up-your-computer.html#cb33-15" tabindex="-1"></a><span class="co"># Git extension for versioning large files</span></span>
+<span id="cb33-16"><a href="backing-up-your-computer.html#cb33-16" tabindex="-1"></a><span class="ex">brew</span> <span class="st">&quot;git-lfs&quot;</span></span>
+<span id="cb33-17"><a href="backing-up-your-computer.html#cb33-17" tabindex="-1"></a><span class="co"># Open source programming language to build simple/reliable/efficient software</span></span>
+<span id="cb33-18"><a href="backing-up-your-computer.html#cb33-18" tabindex="-1"></a><span class="ex">brew</span> <span class="st">&quot;go&quot;</span></span>
+<span id="cb33-19"><a href="backing-up-your-computer.html#cb33-19" tabindex="-1"></a><span class="co"># OpenType text shaping engine</span></span>
+<span id="cb33-20"><a href="backing-up-your-computer.html#cb33-20" tabindex="-1"></a><span class="ex">brew</span> <span class="st">&quot;harfbuzz&quot;</span></span>
+<span id="cb33-21"><a href="backing-up-your-computer.html#cb33-21" tabindex="-1"></a><span class="co"># C library of Git core methods that is re-entrant and linkable</span></span>
+<span id="cb33-22"><a href="backing-up-your-computer.html#cb33-22" tabindex="-1"></a><span class="ex">brew</span> <span class="st">&quot;libgit2&quot;</span></span>
+<span id="cb33-23"><a href="backing-up-your-computer.html#cb33-23" tabindex="-1"></a><span class="co"># International domain name library (IDNA2008, Punycode and TR46)</span></span>
+<span id="cb33-24"><a href="backing-up-your-computer.html#cb33-24" tabindex="-1"></a><span class="ex">brew</span> <span class="st">&quot;libidn2&quot;</span></span>
+<span id="cb33-25"><a href="backing-up-your-computer.html#cb33-25" tabindex="-1"></a><span class="co"># Swiss-army knife of markup format conversion</span></span>
+<span id="cb33-26"><a href="backing-up-your-computer.html#cb33-26" tabindex="-1"></a><span class="ex">brew</span> <span class="st">&quot;pandoc&quot;</span></span>
+<span id="cb33-27"><a href="backing-up-your-computer.html#cb33-27" tabindex="-1"></a><span class="co"># Package compiler and linker metadata toolkit</span></span>
+<span id="cb33-28"><a href="backing-up-your-computer.html#cb33-28" tabindex="-1"></a><span class="ex">brew</span> <span class="st">&quot;pkgconf&quot;</span></span>
+<span id="cb33-29"><a href="backing-up-your-computer.html#cb33-29" tabindex="-1"></a><span class="co"># Library for command-line editing</span></span>
+<span id="cb33-30"><a href="backing-up-your-computer.html#cb33-30" tabindex="-1"></a><span class="ex">brew</span> <span class="st">&quot;readline&quot;</span></span>
+<span id="cb33-31"><a href="backing-up-your-computer.html#cb33-31" tabindex="-1"></a><span class="co"># Command-line interface for SQLite</span></span>
+<span id="cb33-32"><a href="backing-up-your-computer.html#cb33-32" tabindex="-1"></a><span class="ex">brew</span> <span class="st">&quot;sqlite&quot;</span></span>
+<span id="cb33-33"><a href="backing-up-your-computer.html#cb33-33" tabindex="-1"></a><span class="co"># Tool Command Language</span></span>
+<span id="cb33-34"><a href="backing-up-your-computer.html#cb33-34" tabindex="-1"></a><span class="ex">brew</span> <span class="st">&quot;tcl-tk&quot;</span></span>
+<span id="cb33-35"><a href="backing-up-your-computer.html#cb33-35" tabindex="-1"></a><span class="co"># Internet file retriever</span></span>
+<span id="cb33-36"><a href="backing-up-your-computer.html#cb33-36" tabindex="-1"></a><span class="ex">brew</span> <span class="st">&quot;wget&quot;</span></span>
+<span id="cb33-37"><a href="backing-up-your-computer.html#cb33-37" tabindex="-1"></a><span class="co"># General-purpose lossless data-compression library</span></span>
+<span id="cb33-38"><a href="backing-up-your-computer.html#cb33-38" tabindex="-1"></a><span class="ex">brew</span> <span class="st">&quot;zlib&quot;</span></span></code></pre></div>
 <p>To restore your <code>Homebrew</code>-managed software, I have second shell script called <code>restore_homebrew.sh</code>.</p>
 <div class="sourceCode" id="cb34"><pre class="sourceCode bash"><code class="sourceCode bash"><span id="cb34-1"><a href="backing-up-your-computer.html#cb34-1" tabindex="-1"></a><span class="co">#!/bin/bash</span></span>
 <span id="cb34-2"><a href="backing-up-your-computer.html#cb34-2" tabindex="-1"></a></span>
