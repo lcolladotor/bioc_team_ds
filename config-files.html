@@ -482,7 +482,7 @@ Do you want to use <a href="https://twitter.com/Bioconductor?ref_src=twsrc%5Etfw
 <ul>
 <li>Both: <a href="https://www.notion.so/desktop">Notion</a>, <a href="https://slack.com/downloads">Slack</a></li>
 <li>Windows: <a href="https://sourceforge.net/projects/winscp/">WinSCP</a>, <a href="https://gitforwindows.org/">Git bash</a>, <a href="https://www.putty.org/">PuTTY</a>, <a href="https://notepad-plus-plus.org/downloads/">Notepad++</a>, <a href="https://sourceforge.net/projects/npptor/">NppToR</a></li>
-<li>macOS: <a href="https://cyberduck.io/">Cyberduck</a>, <a href="https://www.iterm2.com/">iTerm2</a>, <a href="https://www.alfredapp.com/">Alfred</a>, <a href="https://macromates.com/download">TextMate2</a></li>
+<li>macOS: <a href="https://cyberduck.io/">Cyberduck</a>, <a href="https://www.iterm2.com/">iTerm2</a>, <a href="https://www.alfredapp.com/">Alfred</a></li>
 </ul>
 <p>You might also be interested in checking out our older <a href="http://research.libd.org/jaffe_onboarding/setup.html">onboarding setup materials</a>.</p>
 <div id="r-packages" class="section level3 hasAnchor" number="17.1.1">
@@ -507,116 +507,114 @@ Do you want to use <a href="https://twitter.com/Bioconductor?ref_src=twsrc%5Etfw
 <span id="cb18-17"><a href="config-files.html#cb18-17" tabindex="-1"></a>))</span>
 <span id="cb18-18"><a href="config-files.html#cb18-18" tabindex="-1"></a></span>
 <span id="cb18-19"><a href="config-files.html#cb18-19" tabindex="-1"></a><span class="do">## Laptop R profile packages (not needed at JHPCE)</span></span>
-<span id="cb18-20"><a href="config-files.html#cb18-20" tabindex="-1"></a>remotes<span class="sc">::</span><span class="fu">install_github</span>(<span class="fu">c</span>(</span>
-<span id="cb18-21"><a href="config-files.html#cb18-21" tabindex="-1"></a>    <span class="st">&quot;gadenbuie/rsthemes&quot;</span></span>
-<span id="cb18-22"><a href="config-files.html#cb18-22" tabindex="-1"></a>))</span>
-<span id="cb18-23"><a href="config-files.html#cb18-23" tabindex="-1"></a>remotes<span class="sc">::</span><span class="fu">install_cran</span>(<span class="st">&quot;suncalc&quot;</span>)</span>
-<span id="cb18-24"><a href="config-files.html#cb18-24" tabindex="-1"></a>rsthemes<span class="sc">::</span><span class="fu">install_rsthemes</span>(<span class="at">include_base16 =</span> <span class="cn">TRUE</span>)</span>
-<span id="cb18-25"><a href="config-files.html#cb18-25" tabindex="-1"></a>remotes<span class="sc">::</span><span class="fu">install_github</span>(<span class="st">&quot;gadenbuie/xaringanExtra&quot;</span>)</span>
-<span id="cb18-26"><a href="config-files.html#cb18-26" tabindex="-1"></a></span>
-<span id="cb18-27"><a href="config-files.html#cb18-27" tabindex="-1"></a><span class="do">## JHPCE R profile packages</span></span>
-<span id="cb18-28"><a href="config-files.html#cb18-28" tabindex="-1"></a>remotes<span class="sc">::</span><span class="fu">install_github</span>(<span class="st">&quot;cloudyr/rmote&quot;</span>)</span>
-<span id="cb18-29"><a href="config-files.html#cb18-29" tabindex="-1"></a></span>
-<span id="cb18-30"><a href="config-files.html#cb18-30" tabindex="-1"></a><span class="do">## Main packages</span></span>
-<span id="cb18-31"><a href="config-files.html#cb18-31" tabindex="-1"></a>BiocManager<span class="sc">::</span><span class="fu">install</span>(<span class="fu">c</span>(</span>
-<span id="cb18-32"><a href="config-files.html#cb18-32" tabindex="-1"></a>    <span class="st">&quot;biocthis&quot;</span>,</span>
-<span id="cb18-33"><a href="config-files.html#cb18-33" tabindex="-1"></a>    <span class="st">&quot;DeconvoBuddies&quot;</span>,</span>
-<span id="cb18-34"><a href="config-files.html#cb18-34" tabindex="-1"></a>    <span class="st">&quot;derfinder&quot;</span>,</span>
-<span id="cb18-35"><a href="config-files.html#cb18-35" tabindex="-1"></a>    <span class="st">&quot;derfinderPlot&quot;</span>,</span>
-<span id="cb18-36"><a href="config-files.html#cb18-36" tabindex="-1"></a>    <span class="st">&quot;GenomicState&quot;</span>,</span>
-<span id="cb18-37"><a href="config-files.html#cb18-37" tabindex="-1"></a>    <span class="st">&quot;megadepth&quot;</span>,</span>
-<span id="cb18-38"><a href="config-files.html#cb18-38" tabindex="-1"></a>    <span class="st">&quot;qsvaR&quot;</span>,</span>
-<span id="cb18-39"><a href="config-files.html#cb18-39" tabindex="-1"></a>    <span class="st">&quot;recount&quot;</span>,</span>
-<span id="cb18-40"><a href="config-files.html#cb18-40" tabindex="-1"></a>    <span class="st">&quot;recountWorkflow&quot;</span>,</span>
-<span id="cb18-41"><a href="config-files.html#cb18-41" tabindex="-1"></a>    <span class="st">&quot;recount3&quot;</span>,</span>
-<span id="cb18-42"><a href="config-files.html#cb18-42" tabindex="-1"></a>    <span class="st">&quot;regutools&quot;</span>,</span>
-<span id="cb18-43"><a href="config-files.html#cb18-43" tabindex="-1"></a>    <span class="st">&quot;regionReport&quot;</span>,</span>
-<span id="cb18-44"><a href="config-files.html#cb18-44" tabindex="-1"></a>    <span class="st">&quot;smokingMouse&quot;</span>,</span>
-<span id="cb18-45"><a href="config-files.html#cb18-45" tabindex="-1"></a>    <span class="st">&quot;spatialLIBD&quot;</span>,</span>
-<span id="cb18-46"><a href="config-files.html#cb18-46" tabindex="-1"></a>    <span class="st">&quot;TREG&quot;</span>,</span>
-<span id="cb18-47"><a href="config-files.html#cb18-47" tabindex="-1"></a>    <span class="st">&quot;visiumStitched&quot;</span></span>
-<span id="cb18-48"><a href="config-files.html#cb18-48" tabindex="-1"></a>), <span class="at">dependencies =</span> <span class="cn">TRUE</span>, <span class="at">update =</span> <span class="cn">FALSE</span>)</span>
-<span id="cb18-49"><a href="config-files.html#cb18-49" tabindex="-1"></a></span>
-<span id="cb18-50"><a href="config-files.html#cb18-50" tabindex="-1"></a><span class="do">## LIBD GitHub packages</span></span>
-<span id="cb18-51"><a href="config-files.html#cb18-51" tabindex="-1"></a>BiocManager<span class="sc">::</span><span class="fu">install</span>(<span class="fu">c</span>(</span>
-<span id="cb18-52"><a href="config-files.html#cb18-52" tabindex="-1"></a>    <span class="st">&quot;LieberInstitute/DeconvoBuddies&quot;</span>,</span>
-<span id="cb18-53"><a href="config-files.html#cb18-53" tabindex="-1"></a>    <span class="st">&quot;LieberInstitute/jaffelab&quot;</span>,</span>
-<span id="cb18-54"><a href="config-files.html#cb18-54" tabindex="-1"></a>    <span class="st">&quot;LieberInstitute/slurmjobs&quot;</span>,</span>
-<span id="cb18-55"><a href="config-files.html#cb18-55" tabindex="-1"></a>    <span class="st">&quot;LieberInstitute/spatialLIBD&quot;</span>,</span>
-<span id="cb18-56"><a href="config-files.html#cb18-56" tabindex="-1"></a>    <span class="st">&quot;LieberInstitute/visiumStitched&quot;</span></span>
-<span id="cb18-57"><a href="config-files.html#cb18-57" tabindex="-1"></a>), <span class="at">dependencies =</span> <span class="cn">TRUE</span>)</span>
-<span id="cb18-58"><a href="config-files.html#cb18-58" tabindex="-1"></a></span>
-<span id="cb18-59"><a href="config-files.html#cb18-59" tabindex="-1"></a><span class="do">## CRAN packages</span></span>
-<span id="cb18-60"><a href="config-files.html#cb18-60" tabindex="-1"></a>remotes<span class="sc">::</span><span class="fu">install_cran</span>(<span class="fu">c</span>(</span>
-<span id="cb18-61"><a href="config-files.html#cb18-61" tabindex="-1"></a>    <span class="st">&quot;ari&quot;</span>,</span>
-<span id="cb18-62"><a href="config-files.html#cb18-62" tabindex="-1"></a>    <span class="st">&quot;available&quot;</span>,</span>
-<span id="cb18-63"><a href="config-files.html#cb18-63" tabindex="-1"></a>    <span class="st">&quot;bookdown&quot;</span>,</span>
-<span id="cb18-64"><a href="config-files.html#cb18-64" tabindex="-1"></a>    <span class="st">&quot;blogdown&quot;</span>,</span>
-<span id="cb18-65"><a href="config-files.html#cb18-65" tabindex="-1"></a>    <span class="st">&quot;clue&quot;</span>,</span>
-<span id="cb18-66"><a href="config-files.html#cb18-66" tabindex="-1"></a>    <span class="st">&quot;corrplot&quot;</span>,</span>
-<span id="cb18-67"><a href="config-files.html#cb18-67" tabindex="-1"></a>    <span class="st">&quot;emojifont&quot;</span>,</span>
-<span id="cb18-68"><a href="config-files.html#cb18-68" tabindex="-1"></a>    <span class="st">&quot;gapminder&quot;</span>,</span>
-<span id="cb18-69"><a href="config-files.html#cb18-69" tabindex="-1"></a>    <span class="st">&quot;getopt&quot;</span>,</span>
-<span id="cb18-70"><a href="config-files.html#cb18-70" tabindex="-1"></a>    <span class="st">&quot;ggpubr&quot;</span>,</span>
-<span id="cb18-71"><a href="config-files.html#cb18-71" tabindex="-1"></a>    <span class="st">&quot;ggrepel&quot;</span>,</span>
-<span id="cb18-72"><a href="config-files.html#cb18-72" tabindex="-1"></a>    <span class="st">&quot;ggthemes&quot;</span>,</span>
-<span id="cb18-73"><a href="config-files.html#cb18-73" tabindex="-1"></a>    <span class="st">&quot;googlesheets4&quot;</span>,</span>
-<span id="cb18-74"><a href="config-files.html#cb18-74" tabindex="-1"></a>    <span class="st">&quot;MatrixEQTL&quot;</span>,</span>
-<span id="cb18-75"><a href="config-files.html#cb18-75" tabindex="-1"></a>    <span class="st">&quot;pagedown&quot;</span>,</span>
-<span id="cb18-76"><a href="config-files.html#cb18-76" tabindex="-1"></a>    <span class="st">&quot;palmerpenguins&quot;</span>,</span>
-<span id="cb18-77"><a href="config-files.html#cb18-77" tabindex="-1"></a>    <span class="st">&quot;patchwork&quot;</span>,</span>
-<span id="cb18-78"><a href="config-files.html#cb18-78" tabindex="-1"></a>    <span class="st">&quot;Polychrome&quot;</span>,</span>
-<span id="cb18-79"><a href="config-files.html#cb18-79" tabindex="-1"></a>    <span class="st">&quot;postcards&quot;</span>,</span>
-<span id="cb18-80"><a href="config-files.html#cb18-80" tabindex="-1"></a>    <span class="st">&quot;reprex&quot;</span>,</span>
-<span id="cb18-81"><a href="config-files.html#cb18-81" tabindex="-1"></a>    <span class="st">&quot;rsconnect&quot;</span>,</span>
-<span id="cb18-82"><a href="config-files.html#cb18-82" tabindex="-1"></a>    <span class="co"># &quot;rtweet&quot;, ## was removed from CRAN on 2025-04-07 according to https://cran.r-project.org/web/packages/rtweet/index.html</span></span>
-<span id="cb18-83"><a href="config-files.html#cb18-83" tabindex="-1"></a>    <span class="st">&quot;tidyverse&quot;</span>,</span>
-<span id="cb18-84"><a href="config-files.html#cb18-84" tabindex="-1"></a>    <span class="st">&quot;tidytuesdayR&quot;</span>,</span>
-<span id="cb18-85"><a href="config-files.html#cb18-85" tabindex="-1"></a>    <span class="st">&quot;xaringan&quot;</span>,</span>
-<span id="cb18-86"><a href="config-files.html#cb18-86" tabindex="-1"></a>    <span class="st">&quot;xaringanthemer&quot;</span>,</span>
-<span id="cb18-87"><a href="config-files.html#cb18-87" tabindex="-1"></a>    <span class="st">&quot;UpSetR&quot;</span>,</span>
-<span id="cb18-88"><a href="config-files.html#cb18-88" tabindex="-1"></a>    <span class="st">&quot;VennDiagram&quot;</span>,</span>
-<span id="cb18-89"><a href="config-files.html#cb18-89" tabindex="-1"></a>    <span class="st">&quot;wordcloud&quot;</span></span>
-<span id="cb18-90"><a href="config-files.html#cb18-90" tabindex="-1"></a>))</span>
-<span id="cb18-91"><a href="config-files.html#cb18-91" tabindex="-1"></a></span>
-<span id="cb18-92"><a href="config-files.html#cb18-92" tabindex="-1"></a><span class="do">## Bioc packages</span></span>
-<span id="cb18-93"><a href="config-files.html#cb18-93" tabindex="-1"></a>BiocManager<span class="sc">::</span><span class="fu">install</span>(<span class="fu">c</span>(</span>
-<span id="cb18-94"><a href="config-files.html#cb18-94" tabindex="-1"></a>    <span class="st">&quot;BayesSpace&quot;</span>,</span>
-<span id="cb18-95"><a href="config-files.html#cb18-95" tabindex="-1"></a>    <span class="st">&quot;BiocCheck&quot;</span>,</span>
-<span id="cb18-96"><a href="config-files.html#cb18-96" tabindex="-1"></a>    <span class="st">&quot;ComplexHeatmap&quot;</span>,</span>
-<span id="cb18-97"><a href="config-files.html#cb18-97" tabindex="-1"></a>    <span class="st">&quot;dreamlet&quot;</span>,</span>
-<span id="cb18-98"><a href="config-files.html#cb18-98" tabindex="-1"></a>    <span class="st">&quot;DO.db&quot;</span>,</span>
-<span id="cb18-99"><a href="config-files.html#cb18-99" tabindex="-1"></a>    <span class="st">&quot;EnhancedVolcano&quot;</span>,</span>
-<span id="cb18-100"><a href="config-files.html#cb18-100" tabindex="-1"></a>    <span class="st">&quot;ExploreModelMatrix&quot;</span>,</span>
-<span id="cb18-101"><a href="config-files.html#cb18-101" tabindex="-1"></a>    <span class="st">&quot;HubPub&quot;</span>,</span>
-<span id="cb18-102"><a href="config-files.html#cb18-102" tabindex="-1"></a>    <span class="st">&quot;iSEE&quot;</span>,</span>
-<span id="cb18-103"><a href="config-files.html#cb18-103" tabindex="-1"></a>    <span class="st">&quot;PCAtools&quot;</span>,</span>
-<span id="cb18-104"><a href="config-files.html#cb18-104" tabindex="-1"></a>    <span class="st">&quot;scater&quot;</span>,</span>
-<span id="cb18-105"><a href="config-files.html#cb18-105" tabindex="-1"></a>    <span class="st">&quot;scran&quot;</span>,</span>
-<span id="cb18-106"><a href="config-files.html#cb18-106" tabindex="-1"></a>    <span class="st">&quot;scry&quot;</span>,</span>
-<span id="cb18-107"><a href="config-files.html#cb18-107" tabindex="-1"></a>    <span class="st">&quot;sva&quot;</span>,</span>
-<span id="cb18-108"><a href="config-files.html#cb18-108" tabindex="-1"></a>    <span class="st">&quot;variancePartition&quot;</span></span>
-<span id="cb18-109"><a href="config-files.html#cb18-109" tabindex="-1"></a>), <span class="at">update =</span> <span class="cn">FALSE</span>)</span>
-<span id="cb18-110"><a href="config-files.html#cb18-110" tabindex="-1"></a></span>
-<span id="cb18-111"><a href="config-files.html#cb18-111" tabindex="-1"></a><span class="do">## GitHub packages</span></span>
-<span id="cb18-112"><a href="config-files.html#cb18-112" tabindex="-1"></a>remotes<span class="sc">::</span><span class="fu">install_github</span>(<span class="fu">c</span>(</span>
-<span id="cb18-113"><a href="config-files.html#cb18-113" tabindex="-1"></a>    <span class="st">&quot;clauswilke/colorblindr&quot;</span>,</span>
-<span id="cb18-114"><a href="config-files.html#cb18-114" tabindex="-1"></a>    <span class="st">&quot;MatthewBJane/ThemePark&quot;</span>,</span>
-<span id="cb18-115"><a href="config-files.html#cb18-115" tabindex="-1"></a>    <span class="do">## Install from GitHub due to https://github.com/immunogenomics/harmony/issues/145</span></span>
-<span id="cb18-116"><a href="config-files.html#cb18-116" tabindex="-1"></a>    <span class="st">&quot;immunogenomics/harmony&quot;</span>, </span>
-<span id="cb18-117"><a href="config-files.html#cb18-117" tabindex="-1"></a>    <span class="st">&quot;satijalab/azimuth&quot;</span></span>
-<span id="cb18-118"><a href="config-files.html#cb18-118" tabindex="-1"></a>))</span>
-<span id="cb18-119"><a href="config-files.html#cb18-119" tabindex="-1"></a></span>
-<span id="cb18-120"><a href="config-files.html#cb18-120" tabindex="-1"></a><span class="do">## Related to https://github.com/gusevlab/fusion_twas/issues/14</span></span>
-<span id="cb18-121"><a href="config-files.html#cb18-121" tabindex="-1"></a>remotes<span class="sc">::</span><span class="fu">install_github</span>(</span>
-<span id="cb18-122"><a href="config-files.html#cb18-122" tabindex="-1"></a>    <span class="st">&quot;carbocation/plink2R/plink2R&quot;</span>,</span>
-<span id="cb18-123"><a href="config-files.html#cb18-123" tabindex="-1"></a>    <span class="at">ref =</span> <span class="st">&quot;carbocation-permit-r361&quot;</span></span>
-<span id="cb18-124"><a href="config-files.html#cb18-124" tabindex="-1"></a>)</span>
-<span id="cb18-125"><a href="config-files.html#cb18-125" tabindex="-1"></a></span>
-<span id="cb18-126"><a href="config-files.html#cb18-126" tabindex="-1"></a><span class="do">## Packages I only install at JHPCE</span></span>
-<span id="cb18-127"><a href="config-files.html#cb18-127" tabindex="-1"></a><span class="co"># remotes::install_github(c(</span></span>
-<span id="cb18-128"><a href="config-files.html#cb18-128" tabindex="-1"></a><span class="co">#     &quot;muschellij2/clusterRundown&quot; ## this package was for JHPCE v2. Since 2023 we are using JHPCE v3.</span></span>
-<span id="cb18-129"><a href="config-files.html#cb18-129" tabindex="-1"></a><span class="co"># ))</span></span></code></pre></div>
+<span id="cb18-20"><a href="config-files.html#cb18-20" tabindex="-1"></a><span class="fu">install.packages</span>(</span>
+<span id="cb18-21"><a href="config-files.html#cb18-21" tabindex="-1"></a>  <span class="st">&quot;rsthemes&quot;</span>,</span>
+<span id="cb18-22"><a href="config-files.html#cb18-22" tabindex="-1"></a>  <span class="at">repos =</span> <span class="fu">c</span>(<span class="at">gadenbuie =</span> <span class="st">&#39;https://gadenbuie.r-universe.dev&#39;</span>, <span class="fu">getOption</span>(<span class="st">&quot;repos&quot;</span>))</span>
+<span id="cb18-23"><a href="config-files.html#cb18-23" tabindex="-1"></a>)</span>
+<span id="cb18-24"><a href="config-files.html#cb18-24" tabindex="-1"></a>remotes<span class="sc">::</span><span class="fu">install_cran</span>(<span class="st">&quot;suncalc&quot;</span>)</span>
+<span id="cb18-25"><a href="config-files.html#cb18-25" tabindex="-1"></a>rsthemes<span class="sc">::</span><span class="fu">install_rsthemes</span>(<span class="at">include_base16 =</span> <span class="cn">TRUE</span>)</span>
+<span id="cb18-26"><a href="config-files.html#cb18-26" tabindex="-1"></a>remotes<span class="sc">::</span><span class="fu">install_cran</span>(<span class="st">&quot;xaringanExtra&quot;</span>)</span>
+<span id="cb18-27"><a href="config-files.html#cb18-27" tabindex="-1"></a></span>
+<span id="cb18-28"><a href="config-files.html#cb18-28" tabindex="-1"></a><span class="do">## Main packages</span></span>
+<span id="cb18-29"><a href="config-files.html#cb18-29" tabindex="-1"></a>BiocManager<span class="sc">::</span><span class="fu">install</span>(<span class="fu">c</span>(</span>
+<span id="cb18-30"><a href="config-files.html#cb18-30" tabindex="-1"></a>    <span class="st">&quot;biocthis&quot;</span>,</span>
+<span id="cb18-31"><a href="config-files.html#cb18-31" tabindex="-1"></a>    <span class="st">&quot;DeconvoBuddies&quot;</span>,</span>
+<span id="cb18-32"><a href="config-files.html#cb18-32" tabindex="-1"></a>    <span class="st">&quot;derfinder&quot;</span>,</span>
+<span id="cb18-33"><a href="config-files.html#cb18-33" tabindex="-1"></a>    <span class="st">&quot;derfinderPlot&quot;</span>,</span>
+<span id="cb18-34"><a href="config-files.html#cb18-34" tabindex="-1"></a>    <span class="st">&quot;GenomicState&quot;</span>,</span>
+<span id="cb18-35"><a href="config-files.html#cb18-35" tabindex="-1"></a>    <span class="st">&quot;megadepth&quot;</span>,</span>
+<span id="cb18-36"><a href="config-files.html#cb18-36" tabindex="-1"></a>    <span class="st">&quot;qsvaR&quot;</span>,</span>
+<span id="cb18-37"><a href="config-files.html#cb18-37" tabindex="-1"></a>    <span class="st">&quot;recount&quot;</span>,</span>
+<span id="cb18-38"><a href="config-files.html#cb18-38" tabindex="-1"></a>    <span class="st">&quot;recountWorkflow&quot;</span>,</span>
+<span id="cb18-39"><a href="config-files.html#cb18-39" tabindex="-1"></a>    <span class="st">&quot;recount3&quot;</span>,</span>
+<span id="cb18-40"><a href="config-files.html#cb18-40" tabindex="-1"></a>    <span class="st">&quot;regutools&quot;</span>,</span>
+<span id="cb18-41"><a href="config-files.html#cb18-41" tabindex="-1"></a>    <span class="st">&quot;regionReport&quot;</span>,</span>
+<span id="cb18-42"><a href="config-files.html#cb18-42" tabindex="-1"></a>    <span class="st">&quot;smokingMouse&quot;</span>,</span>
+<span id="cb18-43"><a href="config-files.html#cb18-43" tabindex="-1"></a>    <span class="st">&quot;spatialLIBD&quot;</span>,</span>
+<span id="cb18-44"><a href="config-files.html#cb18-44" tabindex="-1"></a>    <span class="st">&quot;TREG&quot;</span>,</span>
+<span id="cb18-45"><a href="config-files.html#cb18-45" tabindex="-1"></a>    <span class="st">&quot;visiumStitched&quot;</span></span>
+<span id="cb18-46"><a href="config-files.html#cb18-46" tabindex="-1"></a>), <span class="at">dependencies =</span> <span class="cn">TRUE</span>, <span class="at">update =</span> <span class="cn">FALSE</span>)</span>
+<span id="cb18-47"><a href="config-files.html#cb18-47" tabindex="-1"></a></span>
+<span id="cb18-48"><a href="config-files.html#cb18-48" tabindex="-1"></a><span class="do">## LIBD GitHub packages</span></span>
+<span id="cb18-49"><a href="config-files.html#cb18-49" tabindex="-1"></a>BiocManager<span class="sc">::</span><span class="fu">install</span>(<span class="fu">c</span>(</span>
+<span id="cb18-50"><a href="config-files.html#cb18-50" tabindex="-1"></a>    <span class="st">&quot;LieberInstitute/DeconvoBuddies&quot;</span>,</span>
+<span id="cb18-51"><a href="config-files.html#cb18-51" tabindex="-1"></a>    <span class="st">&quot;LieberInstitute/jaffelab&quot;</span>,</span>
+<span id="cb18-52"><a href="config-files.html#cb18-52" tabindex="-1"></a>    <span class="st">&quot;LieberInstitute/slurmjobs&quot;</span>,</span>
+<span id="cb18-53"><a href="config-files.html#cb18-53" tabindex="-1"></a>    <span class="st">&quot;LieberInstitute/spatialLIBD&quot;</span>,</span>
+<span id="cb18-54"><a href="config-files.html#cb18-54" tabindex="-1"></a>    <span class="st">&quot;LieberInstitute/visiumStitched&quot;</span></span>
+<span id="cb18-55"><a href="config-files.html#cb18-55" tabindex="-1"></a>), <span class="at">dependencies =</span> <span class="cn">TRUE</span>)</span>
+<span id="cb18-56"><a href="config-files.html#cb18-56" tabindex="-1"></a></span>
+<span id="cb18-57"><a href="config-files.html#cb18-57" tabindex="-1"></a><span class="do">## CRAN packages</span></span>
+<span id="cb18-58"><a href="config-files.html#cb18-58" tabindex="-1"></a>remotes<span class="sc">::</span><span class="fu">install_cran</span>(<span class="fu">c</span>(</span>
+<span id="cb18-59"><a href="config-files.html#cb18-59" tabindex="-1"></a>    <span class="st">&quot;ari&quot;</span>,</span>
+<span id="cb18-60"><a href="config-files.html#cb18-60" tabindex="-1"></a>    <span class="st">&quot;available&quot;</span>,</span>
+<span id="cb18-61"><a href="config-files.html#cb18-61" tabindex="-1"></a>    <span class="st">&quot;bookdown&quot;</span>,</span>
+<span id="cb18-62"><a href="config-files.html#cb18-62" tabindex="-1"></a>    <span class="st">&quot;blogdown&quot;</span>,</span>
+<span id="cb18-63"><a href="config-files.html#cb18-63" tabindex="-1"></a>    <span class="st">&quot;clue&quot;</span>,</span>
+<span id="cb18-64"><a href="config-files.html#cb18-64" tabindex="-1"></a>    <span class="st">&quot;corrplot&quot;</span>,</span>
+<span id="cb18-65"><a href="config-files.html#cb18-65" tabindex="-1"></a>    <span class="st">&quot;emojifont&quot;</span>,</span>
+<span id="cb18-66"><a href="config-files.html#cb18-66" tabindex="-1"></a>    <span class="st">&quot;gapminder&quot;</span>,</span>
+<span id="cb18-67"><a href="config-files.html#cb18-67" tabindex="-1"></a>    <span class="st">&quot;getopt&quot;</span>,</span>
+<span id="cb18-68"><a href="config-files.html#cb18-68" tabindex="-1"></a>    <span class="st">&quot;ggpubr&quot;</span>,</span>
+<span id="cb18-69"><a href="config-files.html#cb18-69" tabindex="-1"></a>    <span class="st">&quot;ggrepel&quot;</span>,</span>
+<span id="cb18-70"><a href="config-files.html#cb18-70" tabindex="-1"></a>    <span class="st">&quot;ggthemes&quot;</span>,</span>
+<span id="cb18-71"><a href="config-files.html#cb18-71" tabindex="-1"></a>    <span class="st">&quot;googlesheets4&quot;</span>,</span>
+<span id="cb18-72"><a href="config-files.html#cb18-72" tabindex="-1"></a>    <span class="st">&quot;MatrixEQTL&quot;</span>,</span>
+<span id="cb18-73"><a href="config-files.html#cb18-73" tabindex="-1"></a>    <span class="st">&quot;pagedown&quot;</span>,</span>
+<span id="cb18-74"><a href="config-files.html#cb18-74" tabindex="-1"></a>    <span class="st">&quot;palmerpenguins&quot;</span>,</span>
+<span id="cb18-75"><a href="config-files.html#cb18-75" tabindex="-1"></a>    <span class="st">&quot;patchwork&quot;</span>,</span>
+<span id="cb18-76"><a href="config-files.html#cb18-76" tabindex="-1"></a>    <span class="st">&quot;Polychrome&quot;</span>,</span>
+<span id="cb18-77"><a href="config-files.html#cb18-77" tabindex="-1"></a>    <span class="st">&quot;postcards&quot;</span>,</span>
+<span id="cb18-78"><a href="config-files.html#cb18-78" tabindex="-1"></a>    <span class="st">&quot;reprex&quot;</span>,</span>
+<span id="cb18-79"><a href="config-files.html#cb18-79" tabindex="-1"></a>    <span class="st">&quot;rsconnect&quot;</span>,</span>
+<span id="cb18-80"><a href="config-files.html#cb18-80" tabindex="-1"></a>    <span class="co"># &quot;rtweet&quot;, ## was removed from CRAN on 2025-04-07 according to https://cran.r-project.org/web/packages/rtweet/index.html</span></span>
+<span id="cb18-81"><a href="config-files.html#cb18-81" tabindex="-1"></a>    <span class="st">&quot;tidyverse&quot;</span>,</span>
+<span id="cb18-82"><a href="config-files.html#cb18-82" tabindex="-1"></a>    <span class="st">&quot;tidytuesdayR&quot;</span>,</span>
+<span id="cb18-83"><a href="config-files.html#cb18-83" tabindex="-1"></a>    <span class="st">&quot;xaringan&quot;</span>,</span>
+<span id="cb18-84"><a href="config-files.html#cb18-84" tabindex="-1"></a>    <span class="st">&quot;xaringanthemer&quot;</span>,</span>
+<span id="cb18-85"><a href="config-files.html#cb18-85" tabindex="-1"></a>    <span class="st">&quot;UpSetR&quot;</span>,</span>
+<span id="cb18-86"><a href="config-files.html#cb18-86" tabindex="-1"></a>    <span class="st">&quot;VennDiagram&quot;</span>,</span>
+<span id="cb18-87"><a href="config-files.html#cb18-87" tabindex="-1"></a>    <span class="st">&quot;wordcloud&quot;</span></span>
+<span id="cb18-88"><a href="config-files.html#cb18-88" tabindex="-1"></a>))</span>
+<span id="cb18-89"><a href="config-files.html#cb18-89" tabindex="-1"></a></span>
+<span id="cb18-90"><a href="config-files.html#cb18-90" tabindex="-1"></a><span class="do">## Bioc packages</span></span>
+<span id="cb18-91"><a href="config-files.html#cb18-91" tabindex="-1"></a>BiocManager<span class="sc">::</span><span class="fu">install</span>(<span class="fu">c</span>(</span>
+<span id="cb18-92"><a href="config-files.html#cb18-92" tabindex="-1"></a>    <span class="st">&quot;BayesSpace&quot;</span>,</span>
+<span id="cb18-93"><a href="config-files.html#cb18-93" tabindex="-1"></a>    <span class="st">&quot;BiocCheck&quot;</span>,</span>
+<span id="cb18-94"><a href="config-files.html#cb18-94" tabindex="-1"></a>    <span class="st">&quot;ComplexHeatmap&quot;</span>,</span>
+<span id="cb18-95"><a href="config-files.html#cb18-95" tabindex="-1"></a>    <span class="st">&quot;dreamlet&quot;</span>,</span>
+<span id="cb18-96"><a href="config-files.html#cb18-96" tabindex="-1"></a>    <span class="st">&quot;DO.db&quot;</span>,</span>
+<span id="cb18-97"><a href="config-files.html#cb18-97" tabindex="-1"></a>    <span class="st">&quot;EnhancedVolcano&quot;</span>,</span>
+<span id="cb18-98"><a href="config-files.html#cb18-98" tabindex="-1"></a>    <span class="st">&quot;ExploreModelMatrix&quot;</span>,</span>
+<span id="cb18-99"><a href="config-files.html#cb18-99" tabindex="-1"></a>    <span class="st">&quot;HubPub&quot;</span>,</span>
+<span id="cb18-100"><a href="config-files.html#cb18-100" tabindex="-1"></a>    <span class="st">&quot;iSEE&quot;</span>,</span>
+<span id="cb18-101"><a href="config-files.html#cb18-101" tabindex="-1"></a>    <span class="st">&quot;PCAtools&quot;</span>,</span>
+<span id="cb18-102"><a href="config-files.html#cb18-102" tabindex="-1"></a>    <span class="st">&quot;scater&quot;</span>,</span>
+<span id="cb18-103"><a href="config-files.html#cb18-103" tabindex="-1"></a>    <span class="st">&quot;scran&quot;</span>,</span>
+<span id="cb18-104"><a href="config-files.html#cb18-104" tabindex="-1"></a>    <span class="st">&quot;scry&quot;</span>,</span>
+<span id="cb18-105"><a href="config-files.html#cb18-105" tabindex="-1"></a>    <span class="st">&quot;sva&quot;</span>,</span>
+<span id="cb18-106"><a href="config-files.html#cb18-106" tabindex="-1"></a>    <span class="st">&quot;variancePartition&quot;</span></span>
+<span id="cb18-107"><a href="config-files.html#cb18-107" tabindex="-1"></a>), <span class="at">update =</span> <span class="cn">FALSE</span>)</span>
+<span id="cb18-108"><a href="config-files.html#cb18-108" tabindex="-1"></a></span>
+<span id="cb18-109"><a href="config-files.html#cb18-109" tabindex="-1"></a><span class="do">## GitHub packages</span></span>
+<span id="cb18-110"><a href="config-files.html#cb18-110" tabindex="-1"></a>remotes<span class="sc">::</span><span class="fu">install_github</span>(<span class="fu">c</span>(</span>
+<span id="cb18-111"><a href="config-files.html#cb18-111" tabindex="-1"></a>    <span class="st">&quot;clauswilke/colorblindr&quot;</span>,</span>
+<span id="cb18-112"><a href="config-files.html#cb18-112" tabindex="-1"></a>    <span class="st">&quot;MatthewBJane/ThemePark&quot;</span>,</span>
+<span id="cb18-113"><a href="config-files.html#cb18-113" tabindex="-1"></a>    <span class="do">## Install from GitHub due to https://github.com/immunogenomics/harmony/issues/145</span></span>
+<span id="cb18-114"><a href="config-files.html#cb18-114" tabindex="-1"></a>    <span class="st">&quot;immunogenomics/harmony&quot;</span>, </span>
+<span id="cb18-115"><a href="config-files.html#cb18-115" tabindex="-1"></a>    <span class="st">&quot;satijalab/azimuth&quot;</span></span>
+<span id="cb18-116"><a href="config-files.html#cb18-116" tabindex="-1"></a>))</span>
+<span id="cb18-117"><a href="config-files.html#cb18-117" tabindex="-1"></a></span>
+<span id="cb18-118"><a href="config-files.html#cb18-118" tabindex="-1"></a><span class="do">## Related to https://github.com/gusevlab/fusion_twas/issues/14</span></span>
+<span id="cb18-119"><a href="config-files.html#cb18-119" tabindex="-1"></a>remotes<span class="sc">::</span><span class="fu">install_github</span>(</span>
+<span id="cb18-120"><a href="config-files.html#cb18-120" tabindex="-1"></a>    <span class="st">&quot;carbocation/plink2R/plink2R&quot;</span>,</span>
+<span id="cb18-121"><a href="config-files.html#cb18-121" tabindex="-1"></a>    <span class="at">ref =</span> <span class="st">&quot;carbocation-permit-r361&quot;</span></span>
+<span id="cb18-122"><a href="config-files.html#cb18-122" tabindex="-1"></a>)</span>
+<span id="cb18-123"><a href="config-files.html#cb18-123" tabindex="-1"></a></span>
+<span id="cb18-124"><a href="config-files.html#cb18-124" tabindex="-1"></a><span class="do">## Packages I only install at JHPCE</span></span>
+<span id="cb18-125"><a href="config-files.html#cb18-125" tabindex="-1"></a><span class="co"># remotes::install_github(c(</span></span>
+<span id="cb18-126"><a href="config-files.html#cb18-126" tabindex="-1"></a><span class="co">#     &quot;muschellij2/clusterRundown&quot; ## this package was for JHPCE v2. Since 2023 we are using JHPCE v3.</span></span>
+<span id="cb18-127"><a href="config-files.html#cb18-127" tabindex="-1"></a><span class="co"># ))</span></span></code></pre></div>
 <div id="previously-installed" class="section level4 hasAnchor" number="17.1.1.1">
 <h4><span class="header-section-number">17.1.1.1</span> Previously installed<a href="config-files.html#previously-installed" class="anchor-section" aria-label="Anchor link to header"></a></h4>
 <p>As I described in <a href="http://lcolladotor.github.io/2017/05/04/updating-r/#.X6ICiIhKguU">my blog post on updating R</a>, I also like to saved my list of currently installed packages.</p>
@@ -980,44 +978,32 @@ as well as the instructional video:</p>
 <span id="cb28-60"><a href="config-files.html#cb28-60" tabindex="-1"></a><span class="co">#export CLICOLOR=1</span></span>
 <span id="cb28-61"><a href="config-files.html#cb28-61" tabindex="-1"></a><span class="co">#export LSCOLORS=&quot;ExGxFxDxBxEgEdxbxgxhxd&quot;</span></span>
 <span id="cb28-62"><a href="config-files.html#cb28-62" tabindex="-1"></a></span>
-<span id="cb28-63"><a href="config-files.html#cb28-63" tabindex="-1"></a><span class="co">## For setup:</span></span>
-<span id="cb28-64"><a href="config-files.html#cb28-64" tabindex="-1"></a><span class="co"># http://erniemiller.org/2011/12/12/textmate-2-rmate-awesome/</span></span>
-<span id="cb28-65"><a href="config-files.html#cb28-65" tabindex="-1"></a><span class="co">## For laptop config:</span></span>
-<span id="cb28-66"><a href="config-files.html#cb28-66" tabindex="-1"></a><span class="co"># http://jonsimpson.co.uk/log/2011/rmate-ssh-remoteforward</span></span>
-<span id="cb28-67"><a href="config-files.html#cb28-67" tabindex="-1"></a><span class="co">## rmate port</span></span>
-<span id="cb28-68"><a href="config-files.html#cb28-68" tabindex="-1"></a><span class="co"># https://github.com/textmate/rmate</span></span>
-<span id="cb28-69"><a href="config-files.html#cb28-69" tabindex="-1"></a><span class="bu">export</span> <span class="va">RMATE_PORT</span><span class="op">=</span><span class="st">&quot;SOME_PORT_YOU_CHOOSE&quot;</span></span>
-<span id="cb28-70"><a href="config-files.html#cb28-70" tabindex="-1"></a></span>
-<span id="cb28-71"><a href="config-files.html#cb28-71" tabindex="-1"></a><span class="co">## Set an alias to run JHPCE rsrun with X11 support</span></span>
-<span id="cb28-72"><a href="config-files.html#cb28-72" tabindex="-1"></a><span class="co">## Documented at https://jhpce.jhu.edu/slurm/interactive-jobs/#shortcuts</span></span>
-<span id="cb28-73"><a href="config-files.html#cb28-73" tabindex="-1"></a><span class="fu">jsrun()</span> <span class="kw">{</span> <span class="cf">if</span> <span class="bu">[</span> <span class="ot">-z</span> <span class="va">${DISPLAY}</span> <span class="bu">]</span><span class="kw">;</span> <span class="cf">then</span> <span class="ex">/usr/bin/srun</span> <span class="at">--pty</span> <span class="st">&quot;</span><span class="va">$@</span><span class="st">&quot;</span> bash<span class="kw">;</span> <span class="cf">else</span> <span class="ex">/usr/bin/srun</span> <span class="at">--pty</span> <span class="at">--x11</span> <span class="st">&quot;</span><span class="va">$@</span><span class="st">&quot;</span> bash<span class="kw">;</span> <span class="cf">fi</span> <span class="kw">}</span></span>
+<span id="cb28-63"><a href="config-files.html#cb28-63" tabindex="-1"></a><span class="co">## Set an alias to run JHPCE rsrun with X11 support</span></span>
+<span id="cb28-64"><a href="config-files.html#cb28-64" tabindex="-1"></a><span class="co">## Documented at https://jhpce.jhu.edu/slurm/interactive-jobs/#shortcuts</span></span>
+<span id="cb28-65"><a href="config-files.html#cb28-65" tabindex="-1"></a><span class="fu">jsrun()</span> <span class="kw">{</span> <span class="cf">if</span> <span class="bu">[</span> <span class="ot">-z</span> <span class="va">${DISPLAY}</span> <span class="bu">]</span><span class="kw">;</span> <span class="cf">then</span> <span class="ex">/usr/bin/srun</span> <span class="at">--pty</span> <span class="st">&quot;</span><span class="va">$@</span><span class="st">&quot;</span> bash<span class="kw">;</span> <span class="cf">else</span> <span class="ex">/usr/bin/srun</span> <span class="at">--pty</span> <span class="at">--x11</span> <span class="st">&quot;</span><span class="va">$@</span><span class="st">&quot;</span> bash<span class="kw">;</span> <span class="cf">fi</span> <span class="kw">}</span></span>
+<span id="cb28-66"><a href="config-files.html#cb28-66" tabindex="-1"></a></span>
+<span id="cb28-67"><a href="config-files.html#cb28-67" tabindex="-1"></a><span class="co"># Change command prompt</span></span>
+<span id="cb28-68"><a href="config-files.html#cb28-68" tabindex="-1"></a><span class="co"># http://www.cyberciti.biz/tips/howto-linux-unix-bash-shell-setup-prompt.html</span></span>
+<span id="cb28-69"><a href="config-files.html#cb28-69" tabindex="-1"></a><span class="co"># http://www.cyberciti.biz/faq/bash-shell-change-the-color-of-my-shell-prompt-under-linux-or-unix/</span></span>
+<span id="cb28-70"><a href="config-files.html#cb28-70" tabindex="-1"></a><span class="co"># https://bbs.archlinux.org/viewtopic.php?id=48910</span></span>
+<span id="cb28-71"><a href="config-files.html#cb28-71" tabindex="-1"></a><span class="co"># previous in enigma2: &quot;[\u@\h \W]\$ &quot;</span></span>
+<span id="cb28-72"><a href="config-files.html#cb28-72" tabindex="-1"></a><span class="co"># previously in mac: &quot;\h:\W \u\$ &quot;</span></span>
+<span id="cb28-73"><a href="config-files.html#cb28-73" tabindex="-1"></a><span class="bu">export</span> <span class="va">PS1</span><span class="op">=</span><span class="st">&quot;\[\e[0;33m\]\A \W </span><span class="dt">\$</span><span class="st"> \[\e[m\]&quot;</span></span>
 <span id="cb28-74"><a href="config-files.html#cb28-74" tabindex="-1"></a></span>
-<span id="cb28-75"><a href="config-files.html#cb28-75" tabindex="-1"></a><span class="co"># Change command prompt</span></span>
-<span id="cb28-76"><a href="config-files.html#cb28-76" tabindex="-1"></a><span class="co"># http://www.cyberciti.biz/tips/howto-linux-unix-bash-shell-setup-prompt.html</span></span>
-<span id="cb28-77"><a href="config-files.html#cb28-77" tabindex="-1"></a><span class="co"># http://www.cyberciti.biz/faq/bash-shell-change-the-color-of-my-shell-prompt-under-linux-or-unix/</span></span>
-<span id="cb28-78"><a href="config-files.html#cb28-78" tabindex="-1"></a><span class="co"># https://bbs.archlinux.org/viewtopic.php?id=48910</span></span>
-<span id="cb28-79"><a href="config-files.html#cb28-79" tabindex="-1"></a><span class="co"># previous in enigma2: &quot;[\u@\h \W]\$ &quot;</span></span>
-<span id="cb28-80"><a href="config-files.html#cb28-80" tabindex="-1"></a><span class="co"># previously in mac: &quot;\h:\W \u\$ &quot;</span></span>
-<span id="cb28-81"><a href="config-files.html#cb28-81" tabindex="-1"></a><span class="bu">export</span> <span class="va">PS1</span><span class="op">=</span><span class="st">&quot;\[\e[0;33m\]\A \W </span><span class="dt">\$</span><span class="st"> \[\e[m\]&quot;</span></span>
-<span id="cb28-82"><a href="config-files.html#cb28-82" tabindex="-1"></a></span>
-<span id="cb28-83"><a href="config-files.html#cb28-83" tabindex="-1"></a><span class="co"># Exit for noninteractive shells (see https://github.com/lcolladotor/bioc_team_ds/issues/12)</span></span>
-<span id="cb28-84"><a href="config-files.html#cb28-84" tabindex="-1"></a><span class="kw">[[</span> <span class="va">${-</span><span class="op">#</span><span class="pp">*</span>i<span class="va">}</span> <span class="ot">!=</span> <span class="va">${-}</span> <span class="kw">]]</span> <span class="kw">||</span> <span class="cf">return</span></span>
-<span id="cb28-85"><a href="config-files.html#cb28-85" tabindex="-1"></a></span>
-<span id="cb28-86"><a href="config-files.html#cb28-86" tabindex="-1"></a><span class="co">## Load commonly used modules by default when using srun/sbatch</span></span>
-<span id="cb28-87"><a href="config-files.html#cb28-87" tabindex="-1"></a><span class="co">## thanks to Jiong Yang and John Muschelli</span></span>
-<span id="cb28-88"><a href="config-files.html#cb28-88" tabindex="-1"></a><span class="cf">if</span> <span class="kw">[[</span> <span class="va">$HOSTNAME</span> <span class="ot">==</span> compute-<span class="pp">*</span> <span class="kw">]]</span> <span class="kw">||</span> <span class="kw">[[</span> <span class="va">$HOSTNAME</span> <span class="ot">==</span> transfer-<span class="pp">*</span> <span class="kw">]];</span> <span class="cf">then</span></span>
-<span id="cb28-89"><a href="config-files.html#cb28-89" tabindex="-1"></a>    <span class="co"># Load SLURM LIBD modules</span></span>
-<span id="cb28-90"><a href="config-files.html#cb28-90" tabindex="-1"></a>    <span class="co">## This command is not needed anymore, though you would need</span></span>
-<span id="cb28-91"><a href="config-files.html#cb28-91" tabindex="-1"></a>    <span class="co">## to use a similar command if you are loading private modules.</span></span>
-<span id="cb28-92"><a href="config-files.html#cb28-92" tabindex="-1"></a>    <span class="co"># module use /jhpce/shared/libd/modulefiles</span></span>
-<span id="cb28-93"><a href="config-files.html#cb28-93" tabindex="-1"></a>    <span class="ex">module</span> load git-status-size</span>
-<span id="cb28-94"><a href="config-files.html#cb28-94" tabindex="-1"></a>    <span class="ex">module</span> load git-lfs</span>
-<span id="cb28-95"><a href="config-files.html#cb28-95" tabindex="-1"></a>    <span class="ex">module</span> load rmate</span>
-<span id="cb28-96"><a href="config-files.html#cb28-96" tabindex="-1"></a>    <span class="ex">module</span> load conda_R/4.5 <span class="co">## for BioC 3.21 as of Jan 16 2026</span></span>
-<span id="cb28-97"><a href="config-files.html#cb28-97" tabindex="-1"></a><span class="cf">fi</span></span></code></pre></div>
-<p>For more information on <code>rmate</code> and <code>rmote</code> and how it relates to these configuration files, check this video and <a href="https://docs.google.com/document/d/1vj0xa_qZTIgsnooW_9_j44Low1UbSIufnlGXCgL_YCU/edit">companion notes</a>.</p>
-<iframe width="560" height="315" src="https://www.youtube.com/embed/LjWr39C1Z_Q" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen>
-</iframe>
+<span id="cb28-75"><a href="config-files.html#cb28-75" tabindex="-1"></a><span class="co"># Exit for noninteractive shells (see https://github.com/lcolladotor/bioc_team_ds/issues/12)</span></span>
+<span id="cb28-76"><a href="config-files.html#cb28-76" tabindex="-1"></a><span class="kw">[[</span> <span class="va">${-</span><span class="op">#</span><span class="pp">*</span>i<span class="va">}</span> <span class="ot">!=</span> <span class="va">${-}</span> <span class="kw">]]</span> <span class="kw">||</span> <span class="cf">return</span></span>
+<span id="cb28-77"><a href="config-files.html#cb28-77" tabindex="-1"></a></span>
+<span id="cb28-78"><a href="config-files.html#cb28-78" tabindex="-1"></a><span class="co">## Load commonly used modules by default when using srun/sbatch</span></span>
+<span id="cb28-79"><a href="config-files.html#cb28-79" tabindex="-1"></a><span class="co">## thanks to Jiong Yang and John Muschelli</span></span>
+<span id="cb28-80"><a href="config-files.html#cb28-80" tabindex="-1"></a><span class="cf">if</span> <span class="kw">[[</span> <span class="va">$HOSTNAME</span> <span class="ot">==</span> compute-<span class="pp">*</span> <span class="kw">]]</span> <span class="kw">||</span> <span class="kw">[[</span> <span class="va">$HOSTNAME</span> <span class="ot">==</span> transfer-<span class="pp">*</span> <span class="kw">]];</span> <span class="cf">then</span></span>
+<span id="cb28-81"><a href="config-files.html#cb28-81" tabindex="-1"></a>    <span class="co"># Load SLURM LIBD modules</span></span>
+<span id="cb28-82"><a href="config-files.html#cb28-82" tabindex="-1"></a>    <span class="co">## This command is not needed anymore, though you would need</span></span>
+<span id="cb28-83"><a href="config-files.html#cb28-83" tabindex="-1"></a>    <span class="co">## to use a similar command if you are loading private modules.</span></span>
+<span id="cb28-84"><a href="config-files.html#cb28-84" tabindex="-1"></a>    <span class="co"># module use /jhpce/shared/libd/modulefiles</span></span>
+<span id="cb28-85"><a href="config-files.html#cb28-85" tabindex="-1"></a>    <span class="ex">module</span> load git-status-size</span>
+<span id="cb28-86"><a href="config-files.html#cb28-86" tabindex="-1"></a>    <span class="ex">module</span> load git-lfs</span>
+<span id="cb28-87"><a href="config-files.html#cb28-87" tabindex="-1"></a>    <span class="ex">module</span> load conda_R/4.5 <span class="co">## for BioC 3.21 as of Jan 16 2026</span></span>
+<span id="cb28-88"><a href="config-files.html#cb28-88" tabindex="-1"></a><span class="cf">fi</span></span></code></pre></div>
 </div>
 <div id="bash_profile" class="section level3 hasAnchor" number="17.4.5">
 <h3><span class="header-section-number">17.4.5</span> <code>~/.bash_profile</code><a href="config-files.html#bash_profile" class="anchor-section" aria-label="Anchor link to header"></a></h3>
