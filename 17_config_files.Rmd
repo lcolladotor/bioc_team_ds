@@ -251,6 +251,7 @@ options(blogdown.author = 'L. Collado-Torres')
 options(blogdown.ext = '.Rmd')
 options(blogdown.insertimage.usebaseurl = TRUE)
 options(blogdown.method = "markdown")
+options(blogdown.hugo.version = "0.122.0")
 
 ## From RStudio::conf 2019 Building Tidy Tools
 if (interactive()) {
