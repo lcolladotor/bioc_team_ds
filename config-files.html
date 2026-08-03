@@ -681,75 +681,76 @@ Do you want to use <a href="https://twitter.com/Bioconductor?ref_src=twsrc%5Etfw
 <span id="cb21-13"><a href="config-files.html#cb21-13" tabindex="-1"></a><span class="fu">options</span>(<span class="at">blogdown.ext =</span> <span class="st">&#39;.Rmd&#39;</span>)</span>
 <span id="cb21-14"><a href="config-files.html#cb21-14" tabindex="-1"></a><span class="fu">options</span>(<span class="at">blogdown.insertimage.usebaseurl =</span> <span class="cn">TRUE</span>)</span>
 <span id="cb21-15"><a href="config-files.html#cb21-15" tabindex="-1"></a><span class="fu">options</span>(<span class="at">blogdown.method =</span> <span class="st">&quot;markdown&quot;</span>)</span>
-<span id="cb21-16"><a href="config-files.html#cb21-16" tabindex="-1"></a></span>
-<span id="cb21-17"><a href="config-files.html#cb21-17" tabindex="-1"></a><span class="do">## From RStudio::conf 2019 Building Tidy Tools</span></span>
-<span id="cb21-18"><a href="config-files.html#cb21-18" tabindex="-1"></a><span class="cf">if</span> (<span class="fu">interactive</span>()) {</span>
-<span id="cb21-19"><a href="config-files.html#cb21-19" tabindex="-1"></a>    <span class="fu">suppressMessages</span>(<span class="fu">require</span>(<span class="st">&quot;devtools&quot;</span>))</span>
-<span id="cb21-20"><a href="config-files.html#cb21-20" tabindex="-1"></a>    <span class="fu">suppressMessages</span>(<span class="fu">require</span>(<span class="st">&quot;usethis&quot;</span>))</span>
-<span id="cb21-21"><a href="config-files.html#cb21-21" tabindex="-1"></a>    <span class="fu">suppressMessages</span>(<span class="fu">require</span>(<span class="st">&quot;testthat&quot;</span>))</span>
-<span id="cb21-22"><a href="config-files.html#cb21-22" tabindex="-1"></a>    </span>
-<span id="cb21-23"><a href="config-files.html#cb21-23" tabindex="-1"></a>    <span class="fu">options</span>(</span>
-<span id="cb21-24"><a href="config-files.html#cb21-24" tabindex="-1"></a>        <span class="at">warnPartialMatchArgs =</span> <span class="cn">TRUE</span>,</span>
-<span id="cb21-25"><a href="config-files.html#cb21-25" tabindex="-1"></a>        <span class="at">warnPartialMatchDollar =</span> <span class="cn">TRUE</span>,</span>
-<span id="cb21-26"><a href="config-files.html#cb21-26" tabindex="-1"></a>        <span class="at">warnPartialMatchAttr =</span> <span class="cn">TRUE</span></span>
-<span id="cb21-27"><a href="config-files.html#cb21-27" tabindex="-1"></a>    )</span>
-<span id="cb21-28"><a href="config-files.html#cb21-28" tabindex="-1"></a>}</span>
-<span id="cb21-29"><a href="config-files.html#cb21-29" tabindex="-1"></a></span>
-<span id="cb21-30"><a href="config-files.html#cb21-30" tabindex="-1"></a><span class="do">## https://blog.rstudio.com/2013/06/10/rstudio-cran-mirror/</span></span>
-<span id="cb21-31"><a href="config-files.html#cb21-31" tabindex="-1"></a><span class="fu">options</span>(<span class="at">repos =</span> <span class="fu">c</span>(<span class="at">CRAN =</span> <span class="st">&quot;https://cloud.r-project.org/&quot;</span>))</span>
-<span id="cb21-32"><a href="config-files.html#cb21-32" tabindex="-1"></a></span>
-<span id="cb21-33"><a href="config-files.html#cb21-33" tabindex="-1"></a><span class="do">## For usethis::use_git()</span></span>
-<span id="cb21-34"><a href="config-files.html#cb21-34" tabindex="-1"></a><span class="fu">options</span>(<span class="at">usethis.protocol =</span> <span class="st">&quot;ssh&quot;</span>)</span>
-<span id="cb21-35"><a href="config-files.html#cb21-35" tabindex="-1"></a></span>
-<span id="cb21-36"><a href="config-files.html#cb21-36" tabindex="-1"></a><span class="do">## For usethis</span></span>
-<span id="cb21-37"><a href="config-files.html#cb21-37" tabindex="-1"></a><span class="fu">options</span>(</span>
-<span id="cb21-38"><a href="config-files.html#cb21-38" tabindex="-1"></a>    <span class="at">usethis.full_name =</span> <span class="st">&quot;Leonardo Collado-Torres&quot;</span>,</span>
-<span id="cb21-39"><a href="config-files.html#cb21-39" tabindex="-1"></a>    <span class="at">usethis.description =</span> <span class="fu">list</span>(</span>
-<span id="cb21-40"><a href="config-files.html#cb21-40" tabindex="-1"></a>        <span class="st">`</span><span class="at">Authors@R</span><span class="st">`</span> <span class="ot">=</span> <span class="st">&#39;c(</span></span>
-<span id="cb21-41"><a href="config-files.html#cb21-41" tabindex="-1"></a><span class="st">    person(&quot;Leonardo&quot;, &quot;Collado-Torres&quot;, role = c(&quot;aut&quot;, &quot;cre&quot;),</span></span>
-<span id="cb21-42"><a href="config-files.html#cb21-42" tabindex="-1"></a><span class="st">    email = &quot;lcolladotor@gmail.com&quot;, comment = c(ORCID = &quot;0000-0003-2140-308X&quot;))</span></span>
-<span id="cb21-43"><a href="config-files.html#cb21-43" tabindex="-1"></a><span class="st">    )&#39;</span></span>
-<span id="cb21-44"><a href="config-files.html#cb21-44" tabindex="-1"></a>    )</span>
-<span id="cb21-45"><a href="config-files.html#cb21-45" tabindex="-1"></a>)</span>
-<span id="cb21-46"><a href="config-files.html#cb21-46" tabindex="-1"></a></span>
-<span id="cb21-47"><a href="config-files.html#cb21-47" tabindex="-1"></a><span class="do">## For biocthis</span></span>
-<span id="cb21-48"><a href="config-files.html#cb21-48" tabindex="-1"></a><span class="fu">options</span>(<span class="st">&quot;biocthis.pkgdown&quot;</span> <span class="ot">=</span> <span class="cn">TRUE</span>)</span>
-<span id="cb21-49"><a href="config-files.html#cb21-49" tabindex="-1"></a><span class="fu">options</span>(<span class="st">&quot;biocthis.testthat&quot;</span> <span class="ot">=</span> <span class="cn">TRUE</span>)</span>
-<span id="cb21-50"><a href="config-files.html#cb21-50" tabindex="-1"></a></span>
-<span id="cb21-51"><a href="config-files.html#cb21-51" tabindex="-1"></a><span class="do">## For the styler addin</span></span>
-<span id="cb21-52"><a href="config-files.html#cb21-52" tabindex="-1"></a><span class="co"># Affects the output of: styler:::get_addins_style_transformer_name()</span></span>
-<span id="cb21-53"><a href="config-files.html#cb21-53" tabindex="-1"></a><span class="co"># https://github.com/r-lib/styler/blob/acfb42acc2e558e7b57ef133f1470df78b5093fd/R/addins.R#L183</span></span>
-<span id="cb21-54"><a href="config-files.html#cb21-54" tabindex="-1"></a><span class="fu">options</span>(<span class="st">&quot;styler.addins_style_transformer&quot;</span> <span class="ot">=</span> <span class="st">&quot;biocthis::bioc_style()&quot;</span>)</span>
-<span id="cb21-55"><a href="config-files.html#cb21-55" tabindex="-1"></a></span>
-<span id="cb21-56"><a href="config-files.html#cb21-56" tabindex="-1"></a><span class="do">## From https://www.garrickadenbuie.com/project/rsthemes/</span></span>
-<span id="cb21-57"><a href="config-files.html#cb21-57" tabindex="-1"></a><span class="cf">if</span> (<span class="fu">interactive</span>() <span class="sc">&amp;&amp;</span> <span class="fu">requireNamespace</span>(<span class="st">&quot;rsthemes&quot;</span>, <span class="at">quietly =</span> <span class="cn">TRUE</span>)) {</span>
-<span id="cb21-58"><a href="config-files.html#cb21-58" tabindex="-1"></a>    <span class="co"># Set preferred themes if not handled elsewhere..</span></span>
-<span id="cb21-59"><a href="config-files.html#cb21-59" tabindex="-1"></a>    rsthemes<span class="sc">::</span><span class="fu">set_theme_light</span>(<span class="st">&quot;base16 Monokai {rsthemes}&quot;</span>)  <span class="co"># light theme</span></span>
-<span id="cb21-60"><a href="config-files.html#cb21-60" tabindex="-1"></a>    rsthemes<span class="sc">::</span><span class="fu">set_theme_dark</span>(<span class="st">&quot;base16 Pop {rsthemes}&quot;</span>) <span class="co"># dark theme</span></span>
-<span id="cb21-61"><a href="config-files.html#cb21-61" tabindex="-1"></a>    rsthemes<span class="sc">::</span><span class="fu">set_theme_favorite</span>(<span class="fu">c</span>(</span>
-<span id="cb21-62"><a href="config-files.html#cb21-62" tabindex="-1"></a>        <span class="st">&quot;base16 Monokai {rsthemes}&quot;</span>,</span>
-<span id="cb21-63"><a href="config-files.html#cb21-63" tabindex="-1"></a>        <span class="st">&quot;base16 Pop {rsthemes}&quot;</span>,</span>
-<span id="cb21-64"><a href="config-files.html#cb21-64" tabindex="-1"></a>        <span class="st">&quot;base16 Brewer {rsthemes}&quot;</span>,</span>
-<span id="cb21-65"><a href="config-files.html#cb21-65" tabindex="-1"></a>        <span class="st">&quot;One Dark {rsthemes}&quot;</span>,</span>
-<span id="cb21-66"><a href="config-files.html#cb21-66" tabindex="-1"></a>        <span class="st">&quot;Solarized Light {rsthemes}&quot;</span></span>
-<span id="cb21-67"><a href="config-files.html#cb21-67" tabindex="-1"></a>    ))</span>
-<span id="cb21-68"><a href="config-files.html#cb21-68" tabindex="-1"></a></span>
-<span id="cb21-69"><a href="config-files.html#cb21-69" tabindex="-1"></a>    <span class="co"># Whenever the R session restarts inside RStudio...</span></span>
-<span id="cb21-70"><a href="config-files.html#cb21-70" tabindex="-1"></a>    <span class="fu">setHook</span>(<span class="st">&quot;rstudio.sessionInit&quot;</span>, <span class="cf">function</span>(isNewSession) {</span>
-<span id="cb21-71"><a href="config-files.html#cb21-71" tabindex="-1"></a>        <span class="co"># Automatically choose the correct theme based on time of day</span></span>
-<span id="cb21-72"><a href="config-files.html#cb21-72" tabindex="-1"></a>        <span class="do">## Used rsthemes::geolocate() once</span></span>
-<span id="cb21-73"><a href="config-files.html#cb21-73" tabindex="-1"></a>        rsthemes<span class="sc">::</span><span class="fu">use_theme_auto</span>(<span class="at">lat =</span> <span class="fl">39.2891</span>, <span class="at">lon =</span> <span class="sc">-</span><span class="fl">76.5583</span>)</span>
-<span id="cb21-74"><a href="config-files.html#cb21-74" tabindex="-1"></a>    }, <span class="at">action =</span> <span class="st">&quot;append&quot;</span>)</span>
-<span id="cb21-75"><a href="config-files.html#cb21-75" tabindex="-1"></a>}</span>
-<span id="cb21-76"><a href="config-files.html#cb21-76" tabindex="-1"></a></span>
-<span id="cb21-77"><a href="config-files.html#cb21-77" tabindex="-1"></a><span class="do">## From https://twitter.com/hadleywickham/status/1113542388033699840</span></span>
-<span id="cb21-78"><a href="config-files.html#cb21-78" tabindex="-1"></a><span class="cf">if</span>(<span class="fu">interactive</span>()) {</span>
-<span id="cb21-79"><a href="config-files.html#cb21-79" tabindex="-1"></a>    <span class="cf">if</span> (<span class="sc">!</span><span class="fu">requireNamespace</span>(<span class="st">&quot;prompt&quot;</span>, <span class="at">quietly =</span> <span class="cn">TRUE</span>)) {</span>
-<span id="cb21-80"><a href="config-files.html#cb21-80" tabindex="-1"></a>        <span class="fu">cat</span>(<span class="st">&#39;To install prompt use: remotes::install_github(&quot;gaborcsardi/prompt&quot;)</span><span class="sc">\n</span><span class="st">&#39;</span>)</span>
-<span id="cb21-81"><a href="config-files.html#cb21-81" tabindex="-1"></a>    } <span class="cf">else</span> {</span>
-<span id="cb21-82"><a href="config-files.html#cb21-82" tabindex="-1"></a>        prompt<span class="sc">::</span><span class="fu">set_prompt</span>(prompt<span class="sc">::</span>prompt_git)</span>
-<span id="cb21-83"><a href="config-files.html#cb21-83" tabindex="-1"></a>    }</span>
-<span id="cb21-84"><a href="config-files.html#cb21-84" tabindex="-1"></a>}</span></code></pre></div>
+<span id="cb21-16"><a href="config-files.html#cb21-16" tabindex="-1"></a><span class="fu">options</span>(<span class="at">blogdown.hugo.version =</span> <span class="st">&quot;0.122.0&quot;</span>)</span>
+<span id="cb21-17"><a href="config-files.html#cb21-17" tabindex="-1"></a></span>
+<span id="cb21-18"><a href="config-files.html#cb21-18" tabindex="-1"></a><span class="do">## From RStudio::conf 2019 Building Tidy Tools</span></span>
+<span id="cb21-19"><a href="config-files.html#cb21-19" tabindex="-1"></a><span class="cf">if</span> (<span class="fu">interactive</span>()) {</span>
+<span id="cb21-20"><a href="config-files.html#cb21-20" tabindex="-1"></a>    <span class="fu">suppressMessages</span>(<span class="fu">require</span>(<span class="st">&quot;devtools&quot;</span>))</span>
+<span id="cb21-21"><a href="config-files.html#cb21-21" tabindex="-1"></a>    <span class="fu">suppressMessages</span>(<span class="fu">require</span>(<span class="st">&quot;usethis&quot;</span>))</span>
+<span id="cb21-22"><a href="config-files.html#cb21-22" tabindex="-1"></a>    <span class="fu">suppressMessages</span>(<span class="fu">require</span>(<span class="st">&quot;testthat&quot;</span>))</span>
+<span id="cb21-23"><a href="config-files.html#cb21-23" tabindex="-1"></a>    </span>
+<span id="cb21-24"><a href="config-files.html#cb21-24" tabindex="-1"></a>    <span class="fu">options</span>(</span>
+<span id="cb21-25"><a href="config-files.html#cb21-25" tabindex="-1"></a>        <span class="at">warnPartialMatchArgs =</span> <span class="cn">TRUE</span>,</span>
+<span id="cb21-26"><a href="config-files.html#cb21-26" tabindex="-1"></a>        <span class="at">warnPartialMatchDollar =</span> <span class="cn">TRUE</span>,</span>
+<span id="cb21-27"><a href="config-files.html#cb21-27" tabindex="-1"></a>        <span class="at">warnPartialMatchAttr =</span> <span class="cn">TRUE</span></span>
+<span id="cb21-28"><a href="config-files.html#cb21-28" tabindex="-1"></a>    )</span>
+<span id="cb21-29"><a href="config-files.html#cb21-29" tabindex="-1"></a>}</span>
+<span id="cb21-30"><a href="config-files.html#cb21-30" tabindex="-1"></a></span>
+<span id="cb21-31"><a href="config-files.html#cb21-31" tabindex="-1"></a><span class="do">## https://blog.rstudio.com/2013/06/10/rstudio-cran-mirror/</span></span>
+<span id="cb21-32"><a href="config-files.html#cb21-32" tabindex="-1"></a><span class="fu">options</span>(<span class="at">repos =</span> <span class="fu">c</span>(<span class="at">CRAN =</span> <span class="st">&quot;https://cloud.r-project.org/&quot;</span>))</span>
+<span id="cb21-33"><a href="config-files.html#cb21-33" tabindex="-1"></a></span>
+<span id="cb21-34"><a href="config-files.html#cb21-34" tabindex="-1"></a><span class="do">## For usethis::use_git()</span></span>
+<span id="cb21-35"><a href="config-files.html#cb21-35" tabindex="-1"></a><span class="fu">options</span>(<span class="at">usethis.protocol =</span> <span class="st">&quot;ssh&quot;</span>)</span>
+<span id="cb21-36"><a href="config-files.html#cb21-36" tabindex="-1"></a></span>
+<span id="cb21-37"><a href="config-files.html#cb21-37" tabindex="-1"></a><span class="do">## For usethis</span></span>
+<span id="cb21-38"><a href="config-files.html#cb21-38" tabindex="-1"></a><span class="fu">options</span>(</span>
+<span id="cb21-39"><a href="config-files.html#cb21-39" tabindex="-1"></a>    <span class="at">usethis.full_name =</span> <span class="st">&quot;Leonardo Collado-Torres&quot;</span>,</span>
+<span id="cb21-40"><a href="config-files.html#cb21-40" tabindex="-1"></a>    <span class="at">usethis.description =</span> <span class="fu">list</span>(</span>
+<span id="cb21-41"><a href="config-files.html#cb21-41" tabindex="-1"></a>        <span class="st">`</span><span class="at">Authors@R</span><span class="st">`</span> <span class="ot">=</span> <span class="st">&#39;c(</span></span>
+<span id="cb21-42"><a href="config-files.html#cb21-42" tabindex="-1"></a><span class="st">    person(&quot;Leonardo&quot;, &quot;Collado-Torres&quot;, role = c(&quot;aut&quot;, &quot;cre&quot;),</span></span>
+<span id="cb21-43"><a href="config-files.html#cb21-43" tabindex="-1"></a><span class="st">    email = &quot;lcolladotor@gmail.com&quot;, comment = c(ORCID = &quot;0000-0003-2140-308X&quot;))</span></span>
+<span id="cb21-44"><a href="config-files.html#cb21-44" tabindex="-1"></a><span class="st">    )&#39;</span></span>
+<span id="cb21-45"><a href="config-files.html#cb21-45" tabindex="-1"></a>    )</span>
+<span id="cb21-46"><a href="config-files.html#cb21-46" tabindex="-1"></a>)</span>
+<span id="cb21-47"><a href="config-files.html#cb21-47" tabindex="-1"></a></span>
+<span id="cb21-48"><a href="config-files.html#cb21-48" tabindex="-1"></a><span class="do">## For biocthis</span></span>
+<span id="cb21-49"><a href="config-files.html#cb21-49" tabindex="-1"></a><span class="fu">options</span>(<span class="st">&quot;biocthis.pkgdown&quot;</span> <span class="ot">=</span> <span class="cn">TRUE</span>)</span>
+<span id="cb21-50"><a href="config-files.html#cb21-50" tabindex="-1"></a><span class="fu">options</span>(<span class="st">&quot;biocthis.testthat&quot;</span> <span class="ot">=</span> <span class="cn">TRUE</span>)</span>
+<span id="cb21-51"><a href="config-files.html#cb21-51" tabindex="-1"></a></span>
+<span id="cb21-52"><a href="config-files.html#cb21-52" tabindex="-1"></a><span class="do">## For the styler addin</span></span>
+<span id="cb21-53"><a href="config-files.html#cb21-53" tabindex="-1"></a><span class="co"># Affects the output of: styler:::get_addins_style_transformer_name()</span></span>
+<span id="cb21-54"><a href="config-files.html#cb21-54" tabindex="-1"></a><span class="co"># https://github.com/r-lib/styler/blob/acfb42acc2e558e7b57ef133f1470df78b5093fd/R/addins.R#L183</span></span>
+<span id="cb21-55"><a href="config-files.html#cb21-55" tabindex="-1"></a><span class="fu">options</span>(<span class="st">&quot;styler.addins_style_transformer&quot;</span> <span class="ot">=</span> <span class="st">&quot;biocthis::bioc_style()&quot;</span>)</span>
+<span id="cb21-56"><a href="config-files.html#cb21-56" tabindex="-1"></a></span>
+<span id="cb21-57"><a href="config-files.html#cb21-57" tabindex="-1"></a><span class="do">## From https://www.garrickadenbuie.com/project/rsthemes/</span></span>
+<span id="cb21-58"><a href="config-files.html#cb21-58" tabindex="-1"></a><span class="cf">if</span> (<span class="fu">interactive</span>() <span class="sc">&amp;&amp;</span> <span class="fu">requireNamespace</span>(<span class="st">&quot;rsthemes&quot;</span>, <span class="at">quietly =</span> <span class="cn">TRUE</span>)) {</span>
+<span id="cb21-59"><a href="config-files.html#cb21-59" tabindex="-1"></a>    <span class="co"># Set preferred themes if not handled elsewhere..</span></span>
+<span id="cb21-60"><a href="config-files.html#cb21-60" tabindex="-1"></a>    rsthemes<span class="sc">::</span><span class="fu">set_theme_light</span>(<span class="st">&quot;base16 Monokai {rsthemes}&quot;</span>)  <span class="co"># light theme</span></span>
+<span id="cb21-61"><a href="config-files.html#cb21-61" tabindex="-1"></a>    rsthemes<span class="sc">::</span><span class="fu">set_theme_dark</span>(<span class="st">&quot;base16 Pop {rsthemes}&quot;</span>) <span class="co"># dark theme</span></span>
+<span id="cb21-62"><a href="config-files.html#cb21-62" tabindex="-1"></a>    rsthemes<span class="sc">::</span><span class="fu">set_theme_favorite</span>(<span class="fu">c</span>(</span>
+<span id="cb21-63"><a href="config-files.html#cb21-63" tabindex="-1"></a>        <span class="st">&quot;base16 Monokai {rsthemes}&quot;</span>,</span>
+<span id="cb21-64"><a href="config-files.html#cb21-64" tabindex="-1"></a>        <span class="st">&quot;base16 Pop {rsthemes}&quot;</span>,</span>
+<span id="cb21-65"><a href="config-files.html#cb21-65" tabindex="-1"></a>        <span class="st">&quot;base16 Brewer {rsthemes}&quot;</span>,</span>
+<span id="cb21-66"><a href="config-files.html#cb21-66" tabindex="-1"></a>        <span class="st">&quot;One Dark {rsthemes}&quot;</span>,</span>
+<span id="cb21-67"><a href="config-files.html#cb21-67" tabindex="-1"></a>        <span class="st">&quot;Solarized Light {rsthemes}&quot;</span></span>
+<span id="cb21-68"><a href="config-files.html#cb21-68" tabindex="-1"></a>    ))</span>
+<span id="cb21-69"><a href="config-files.html#cb21-69" tabindex="-1"></a></span>
+<span id="cb21-70"><a href="config-files.html#cb21-70" tabindex="-1"></a>    <span class="co"># Whenever the R session restarts inside RStudio...</span></span>
+<span id="cb21-71"><a href="config-files.html#cb21-71" tabindex="-1"></a>    <span class="fu">setHook</span>(<span class="st">&quot;rstudio.sessionInit&quot;</span>, <span class="cf">function</span>(isNewSession) {</span>
+<span id="cb21-72"><a href="config-files.html#cb21-72" tabindex="-1"></a>        <span class="co"># Automatically choose the correct theme based on time of day</span></span>
+<span id="cb21-73"><a href="config-files.html#cb21-73" tabindex="-1"></a>        <span class="do">## Used rsthemes::geolocate() once</span></span>
+<span id="cb21-74"><a href="config-files.html#cb21-74" tabindex="-1"></a>        rsthemes<span class="sc">::</span><span class="fu">use_theme_auto</span>(<span class="at">lat =</span> <span class="fl">39.2891</span>, <span class="at">lon =</span> <span class="sc">-</span><span class="fl">76.5583</span>)</span>
+<span id="cb21-75"><a href="config-files.html#cb21-75" tabindex="-1"></a>    }, <span class="at">action =</span> <span class="st">&quot;append&quot;</span>)</span>
+<span id="cb21-76"><a href="config-files.html#cb21-76" tabindex="-1"></a>}</span>
+<span id="cb21-77"><a href="config-files.html#cb21-77" tabindex="-1"></a></span>
+<span id="cb21-78"><a href="config-files.html#cb21-78" tabindex="-1"></a><span class="do">## From https://twitter.com/hadleywickham/status/1113542388033699840</span></span>
+<span id="cb21-79"><a href="config-files.html#cb21-79" tabindex="-1"></a><span class="cf">if</span>(<span class="fu">interactive</span>()) {</span>
+<span id="cb21-80"><a href="config-files.html#cb21-80" tabindex="-1"></a>    <span class="cf">if</span> (<span class="sc">!</span><span class="fu">requireNamespace</span>(<span class="st">&quot;prompt&quot;</span>, <span class="at">quietly =</span> <span class="cn">TRUE</span>)) {</span>
+<span id="cb21-81"><a href="config-files.html#cb21-81" tabindex="-1"></a>        <span class="fu">cat</span>(<span class="st">&#39;To install prompt use: remotes::install_github(&quot;gaborcsardi/prompt&quot;)</span><span class="sc">\n</span><span class="st">&#39;</span>)</span>
+<span id="cb21-82"><a href="config-files.html#cb21-82" tabindex="-1"></a>    } <span class="cf">else</span> {</span>
+<span id="cb21-83"><a href="config-files.html#cb21-83" tabindex="-1"></a>        prompt<span class="sc">::</span><span class="fu">set_prompt</span>(prompt<span class="sc">::</span>prompt_git)</span>
+<span id="cb21-84"><a href="config-files.html#cb21-84" tabindex="-1"></a>    }</span>
+<span id="cb21-85"><a href="config-files.html#cb21-85" tabindex="-1"></a>}</span></code></pre></div>
 </div>
 <div id="renviron" class="section level3 hasAnchor" number="17.2.2">
 <h3><span class="header-section-number">17.2.2</span> <code>~/.Renviron</code><a href="config-files.html#renviron" class="anchor-section" aria-label="Anchor link to header"></a></h3>
