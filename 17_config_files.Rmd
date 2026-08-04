@@ -597,6 +597,10 @@ if [[ $HOSTNAME == compute-* ]] || [[ $HOSTNAME == transfer-* ]]; then
 	module load git-lfs
 	module load conda_R/4.5 ## for BioC 3.21 as of Jan 16 2026
 fi
+
+## For python:
+export PATH="~/.local/bin:$PATH"
+
 ```
 
 ### `~/.bash_profile`
