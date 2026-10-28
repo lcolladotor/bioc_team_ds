@@ -49,15 +49,19 @@ jhpce $ tree -a
 │       │       └── 01_img_process.sh
 │       ├── plots
 │       │   └── 02_another_analysis
-│       │       └── hello.pdf
+│       │       └── 02_plot_hello
+│       │           └── hello.pdf
 │       ├── processed-data
 │       │   ├── 01_some_analysis
-│       │   │   └── some_file.Rdata
+│       │   │   └── 01_some_code
+│       │   │       └── some_file.Rdata
 │       │   ├── 02_another_analysis
-│       │   │   └── some_data.Rdata
+│       │   │   └── 01_initial_code
+│       │   │       └── some_data.Rdata
 │       │   └── 03_image_processing
-│       │       ├── sample1_processed.tiff
-│       │       └── sample2_processed.tiff
+│       │       └── 01_img_process
+│       │           ├── sample1_processed.tiff
+│       │           └── sample2_processed.tiff
 │       ├── repositoryName.Rproj
 │       └── raw-data
 │           ├── FASTQ
@@ -76,8 +80,6 @@ jhpce $ tree -a
     │   └── raw-data
     ├── projectHello_grantRANDOM14515
     └── projectTest_grantRANDOM0123
-
-24 directories, 19 files
 ```
 
 In this example, `/group_home_disk1/projectName_grantNumber` has been backed up across JHPCE disks to `/group_home_disk2/backup_projectName_grantNumber`. Not shown in this view above, the backup will not be group-writable unlike the original location. For some projects we might just backup the `raw-data`, for others we'll back up the `code`, `plots` and `processed-data`. `/group_home_disk2` also contains it's own unique projects that are not backed up at `/group_home_disk1` (`projectHello_grantRANDOM14515` and `projectTest_grantRANDOM0123`).
@@ -85,11 +87,11 @@ In this example, `/group_home_disk1/projectName_grantNumber` has been backed up 
 `/group_home_disk1/projectName_grantNumber` has several components.
 
 * `.git`: it is version controlled at that level using Git.
-* `.gitignore`: specifies what files to ignore. Typically, `raw-data` and `processed-data`. It could also ignore `plots` though smaller plots could be version controlled using `git add -f` (`-f` forces Git to version that file even if it's ignored in a `.gitignore` file).
+* `.gitignore`: specifies what files to ignore. Typically, `raw-data` and large files (>25MB) in `processed-data`. It could also ignore `plots` though smaller plots could be version controlled using `git add -f` (`-f` forces Git to version that file even if it's ignored in a `.gitignore` file).
 * `README.md`: describes the project and some main features of the project. It should include the JHPCE location for the project as noted in the project documentation further below.
 * `code`: contains directories that are ordered by using a two digit leading ID (or three if the project is huge).
   - `01_some_analysis` and `02_another_analysis`: contain scripts also using a two digit leading ID to help organize the files in the order they should be used for re-generating the processed data and plots.
-* `plots`: contains a directory matching the directory names used in `code` such that it is clear what code generate what plot. Here for `plots/02_another_analysis/hello.pdf` we can identify that the code for this plot lives at `code/02_another_analysis/02_plot_hello.R`.
+* `plots`: contains a directory matching the directory names used in `code` such that it is clear what code generate what plot. Here for `plots/02_another_analysis/02_plot_hello/hello.pdf` we can identify that the code for this plot lives at `code/02_another_analysis/02_plot_hello.R`.
 * `processed-data`: also contains a directory matching the directory names used in `code`.
 * `raw-data`: contains the raw data for the project. If the raw data is backed up elsewhere, then we can use symbolic links to point to the location of the data. For example, `/group_home_disk1/projectName_grantNumber/repositoryName/raw-data/FASTQ` could be a soft link to `/dcl02/lieber/ajaffe/Nina/Joel_R01/Year1/fastq`. This will be helpful to differentiate what is the raw data our group is responsible for backing up against the raw data the LIBD RNA-seq core facility or other entities are responsible for backing up. It also contains the sample phenotype information such as `/group_home_disk1/projectName_grantNumber/repositoryName/raw-data/sample_phenotype.csv` that is required for any analyses of the raw data.
 * `repositoryName`.Rproj` an RStudio project file, which makes it easier to write R code.
